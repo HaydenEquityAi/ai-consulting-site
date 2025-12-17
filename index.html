@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloa - AI Consultancy and Development Firm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Figtree', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+ <!-- NAVBAR -->
+ <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+ <div class="max-w-7xl mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <a href="/" class="text-2xl font-medium tracking-tight text-black">aloa</a>
+ <div class="hidden md:flex items-center gap-8">
+ <a href="/case-studies" class="text-sm text-gray-700 hover:text-black transition-colors">Case Studies</a>
+ <div class="relative group">
+ <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+ AI Development
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ <div class="absolute left-0 top-full mt-3 w-[540px] bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+ <div class="grid grid-cols-2 gap-8 p-6">
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
+ <div class="space-y-3">
+ <a href="/industries-healthcare" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="9" />
+ <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+ </svg>
+ <span>Healthcare</span>
+ </a>
+ <a href="/industries-real-estate" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 10l8-6 8 6" />
+ <path d="M6 10v8h12v-8" />
+ <path d="M10 18v-4h4v4" />
+ </svg>
+ <span>Real Estate</span>
+ </a>
+ <a href="/industries-finance" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 15l4-4 3 3 6-6" />
+ <path d="M4 19h16" />
+ </svg>
+ <span>Finance</span>
+ </a>
+ <a href="/industries-construction" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 13l8-8 3 3-8 8H4v-3z" />
+ <path d="M13 5l2-2 3 3-2 2" />
+ <path d="M7 16h10" />
+ </svg>
+ <span>Construction</span>
+ </a>
+ <a href="/industries-energy" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M13 2L6 14h6l-1 8 7-12h-6z" />
+ </svg>
+ <span>Energy</span>
+ </a>
+ <a href="/industries" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all industries &rarr;</span>
+ </a>
+ </div>
+ </div>
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Services</p>
+ <div class="space-y-3">
+ <a href="/services-ai-machine-learning" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 4v16" />
+ <path d="M8 8v2m0 4v2" />
+ <path d="M16 8v2m0 4v2" />
+ <path d="M4 12h4m8 0h4" />
+ </svg>
+ <span>AI &amp; Machine Learning</span>
+ </a>
+ <a href="/services-ai-consulting" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 15v4a2 2 0 0 1-2 2h-5l-4 2v-2H5a2 2 0 0 1-2-2v-4" />
+ <path d="M7 9a5 5 0 1 1 10 0v3a5 5 0 1 1-10 0V9z" />
+ </svg>
+ <span>AI Consulting</span>
+ </a>
+ <a href="/services-digital-transformation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="4" y="5" width="16" height="14" rx="2" />
+ <path d="M9 9h6" />
+ <path d="M9 13h4" />
+ </svg>
+ <span>Digital Transformation</span>
+ </a>
+ <a href="/services-workflow-automation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 9h9l-2-2m2 2-2 2" />
+ <path d="M20 15h-9l2 2m-2-2 2-2" />
+ <path d="M12 7V5m0 14v-2" />
+ </svg>
+ <span>Workflow Automation</span>
+ </a>
+ <a href="/services-internal-tooling" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 3l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L6.2 7.2l4-.6z" />
+ </svg>
+ <span>Internal Tooling</span>
+ </a>
+ <a href="/services" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all services &rarr;</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="relative group">
+ <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+ Resources
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ <div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+ <div class="p-4 space-y-3">
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 4h14v16H5z" />
+ <path d="M9 8h6" />
+ <path d="M9 12h6" />
+ <path d="M9 16h3" />
+ </svg>
+ <span>Blog</span>
+ </a>
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 6h16M4 12h16M4 18h10" />
+ </svg>
+ <span>Guides</span>
+ </a>
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M6 5h9l3 3v11H6z" />
+ <path d="M9 13h6" />
+ <path d="M9 17h6" />
+ <path d="M9 9h3" />
+ </svg>
+ <span>Templates</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ <a href="/contact" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+ </div>
+ <button id="mobile-menu-btn" class="md:hidden p-2">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+ </svg>
+ </button>
+ </div>
+ </div>
+ </nav>
+
+ <main>
+ <!-- HERO SECTION -->
+ <section class="hero-gradient pt-32 pb-16 px-6">
+ <div class="max-w-6xl mx-auto">
+ <h1 class="text-center text-4xl md:text-5xl lg:text-[56px] leading-[1.1] tracking-[-1px] mb-16">
+ <span class="">Aloa is an AI consultancy and development firm,</span><br>
+ <span class="">bringing companies into the </span>
+ <span class=" bg-gradient-to-r from-purple-400 via-pink-400 to-pink-300 bg-clip-text text-transparent">AI future</span>
+ <span class="">.</span>
+ </h1>
+ <div class="grid md:grid-cols-2 gap-6">
+ <div class="feature-card rounded-2xl overflow-hidden h-[450px] bg-gray-900 relative">
+ <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/30 via-teal-500/20 to-orange-500/30"></div>
+ <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-400/40 via-transparent to-transparent"></div>
+ <div class="feature-card-content h-full flex flex-col items-center justify-center text-center p-8">
+ <h2 class="text-3xl md:text-4xl text-white mb-6 leading-tight">We build custom AI tools for businesses</h2>
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/30 hover:bg-white/30 transition-colors">Learn more about our services</a>
+ </div>
+ </div>
+ <div class="feature-card rounded-2xl overflow-hidden h-[450px] bg-gray-800 relative">
+ <div class="absolute inset-0 bg-gradient-to-b from-gray-600/50 via-green-900/30 to-gray-800/50"></div>
+ <div class="feature-card-content h-full flex flex-col items-center justify-center text-center p-8">
+ <h2 class="text-3xl md:text-4xl text-white mb-6 leading-tight">We help thousands of people learn about AI</h2>
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/30 hover:bg-white/30 transition-colors">Explore our resources</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- AI DEVELOPMENT FIRM SECTION -->
+ <section class="py-20 bg-black text-white">
+ <div class="max-w-6xl mx-auto px-6">
+ <div class="text-center mb-12">
+ <h2 class="text-4xl md:text-5xl lg:text-[56px] leading-[1.1] tracking-[-1px] mb-6">
+ <span class=" text-white">Aloa </span>
+ <span class=" bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">(the AI development firm)</span>
+ </h2>
+ <p class="text-lg text-gray-300 max-w-3xl mx-auto">We build custom AI solutions and automated workflows so companies can focus on what they do best, not how they do it.</p>
+ </div>
+ <p class="text-center text-gray-400 text-sm mb-8">250+ Clients served and counting...</p>
+ 
+ <!-- Logo Marquee -->
+ <div class="relative overflow-hidden mb-16 py-6">
+ <div class="flex animate-marquee">
+ <div class="flex items-center gap-16 px-8">
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">RXR</div>
+ <div class="text-gray-500 font-medium text-lg whitespace-nowrap">[bracketology]</div>
+ <div class="text-gray-500 font-medium text-sm whitespace-nowrap">University of Colorado</div>
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">edged</div>
+ <div class="text-gray-500 font-medium text-sm whitespace-nowrap">Amazigh Partner</div>
+ <div class="text-gray-500 font-medium text-lg whitespace-nowrap">PepCare</div>
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">ARKSTONE</div>
+ </div>
+ <div class="flex items-center gap-16 px-8">
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">RXR</div>
+ <div class="text-gray-500 font-medium text-lg whitespace-nowrap">[bracketology]</div>
+ <div class="text-gray-500 font-medium text-sm whitespace-nowrap">University of Colorado</div>
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">edged</div>
+ <div class="text-gray-500 font-medium text-sm whitespace-nowrap">Amazigh Partner</div>
+ <div class="text-gray-500 font-medium text-lg whitespace-nowrap">PepCare</div>
+ <div class="text-gray-500 font-medium text-xl whitespace-nowrap">ARKSTONE</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Service Cards -->
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">Agentic AI</h3>
+ <p class="text-gray-400 text-sm mb-4">Our team specializes in developing agentic AI solutions that enhance business efficiency, optimize workflows, and improve customer interactions.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">Computer Vision</h3>
+ <p class="text-gray-400 text-sm mb-4">Transform your processes with Computer Vision technology. Automate quality control, reduce errors, and maintain high standards with less reliance on manual inspections.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">Generative AI</h3>
+ <p class="text-gray-400 text-sm mb-4">Automate content creation, enhance user experiences, and cut production costs. Harness the power of AI to produce high-quality, original content at scale.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">LLM Fine Tuning</h3>
+ <p class="text-gray-400 text-sm mb-4">Enhance your AI's capabilities by fine-tuning large language models. Tailor interactions to better meet your specific business needs.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">Natural Language Processing</h3>
+ <p class="text-gray-400 text-sm mb-4">Analyze and extract key information from unstructured text like emails and social media. Identify trends and sentiments to drive data-driven decisions.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="service-card bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-3">Retrieval Augmented Generation</h3>
+ <p class="text-gray-400 text-sm mb-4">Optimize your large language models with Retrieval-Augmented Generation (RAG). Enhance accuracy, relevancy, and trust in your AI-driven solutions.</p>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- SOLUTIONS FOR EVERY INDUSTRY -->
+ <section class="py-20 bg-black text-white">
+ <div class="max-w-6xl mx-auto px-6">
+ <h2 class="text-3xl md:text-4xl text-center mb-12">Solutions for every industry</h2>
+ <div class="grid md:grid-cols-3 gap-6 mb-10">
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-4">Healthcare</h3>
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Medical imaging analysis</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Patient data processing</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automated documentation</li>
+ </ul>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-4">Finance</h3>
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Fraud detection systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automated risk assessment</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Market prediction models</li>
+ </ul>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h3 class="text-xl font-normal mb-4">Brick & Mortar</h3>
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Inventory optimization</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Personal recommendations</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Demand forecasting</li>
+ </ul>
+ <a href="#" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ <div class="text-center">
+ <a href="#" class="inline-flex items-center text-white text-sm hover:text-gray-300 transition-colors">Explore all industries <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ </section>
+
+ <!-- HOW WE WORK -->
+ <section class="py-20 bg-black text-white">
+ <div class="max-w-4xl mx-auto px-6">
+ <h2 class="text-3xl md:text-4xl text-center mb-12">How we work</h2>
+ <div class="grid md:grid-cols-3 gap-8">
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h4 class="text-xl font-normal mb-3">Consultative Approach</h4>
+ <p class="text-gray-400 text-sm">We start by understanding your business needs, objectives, and challenges to design tailored AI solutions that deliver maximum value.</p>
+ </div>
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h4 class="text-xl font-normal mb-3">Proof of Concept</h4>
+ <p class="text-gray-400 text-sm">We validate ideas quickly with working prototypes, ensuring alignment with your needs before scaling to full implementation.</p>
+ </div>
+ <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
+ <h4 class="text-xl font-normal mb-3">Full-Scale Development</h4>
+ <p class="text-gray-400 text-sm">Our team builds robust AI solutions that integrate seamlessly with your existing systems and workflows, with ongoing support.</p>
+ </div>
+ </div>
+ <div class="text-center mt-12">
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-white text-black text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Work with us</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- RESEARCH AND EDUCATION HUB -->
+ <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+ <div class="max-w-6xl mx-auto px-6">
+ <div class="text-center mb-12">
+ <h2 class="text-4xl md:text-5xl lg:text-[56px] leading-[1.1] tracking-[-1px] mb-6">
+ <span class=" text-black">Aloa </span>
+ <span class=" bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">(the research and education hub)</span>
+ </h2>
+ <p class="text-lg text-gray-600 max-w-3xl mx-auto">We move AI forward by building in public: sharing insights, research, and real-world lessons with our community.</p>
+ </div>
+ <div class="grid md:grid-cols-2 gap-12 items-start">
+ <div>
+ <h3 class="text-2xl mb-4">Publishing our learnings</h3>
+ <p class="text-gray-600 mb-4">As we build and innovate, we share our insights, discoveries, and methodologies with the broader community. Our goal is to empower businesses and developers with the knowledge they need to harness AI effectively.</p>
+ <p class="text-gray-600">Through detailed guides, case studies, and technical deep-dives, we demystify complex AI concepts and provide practical implementation strategies that you can apply to your own projects.</p>
+ </div>
+ <div class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 rounded-2xl p-8">
+ <h4 class="text-lg font-semibold mb-4">Why we share our knowledge</h4>
+ <ul class="space-y-3">
+ <li class="flex items-start gap-2 text-gray-700"><span class="text-gray-400">•</span>To accelerate innovation across industries</li>
+ <li class="flex items-start gap-2 text-gray-700"><span class="text-gray-400">•</span>To promote ethical and responsible AI development</li>
+ <li class="flex items-start gap-2 text-gray-700"><span class="text-gray-400">•</span>To build a community of practice around AI implementation</li>
+ <li class="flex items-start gap-2 text-gray-700"><span class="text-gray-400">•</span>To help demystify AI for businesses of all sizes</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- TUTORIALS AND GUIDES -->
+ <section class="py-20 bg-white">
+ <div class="max-w-6xl mx-auto px-6">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl mb-4">Latest AI tutorials & guides</h2>
+ <p class="text-gray-600 max-w-2xl mx-auto">Videos from our co-founder Chris on building AI apps, using AI to code and general thoughts on the future of software development.</p>
+ </div>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div class="group">
+ <div class="relative rounded-2xl overflow-hidden bg-gray-100 aspect-video mb-4">
+ <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-teal-500 flex items-center justify-center">
+ <div class="text-white text-center p-6">
+ <div class="text-lg font-bold mb-2">Choosing the right</div>
+ <div class="text-2xl font-bold">AI Model</div>
+ <div class="flex gap-2 mt-4 justify-center flex-wrap">
+ <span class="px-2 py-1 bg-white/20 rounded text-xs">Deepgram</span>
+ <span class="px-2 py-1 bg-white/20 rounded text-xs">aws</span>
+ <span class="px-2 py-1 bg-white/20 rounded text-xs">Whisper</span>
+ </div>
+ </div>
+ </div>
+ <div class="absolute inset-0 flex items-center justify-center">
+ <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+ <svg class="w-6 h-6 text-gray-800 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+ </div>
+ </div>
+ </div>
+ <h3 class="text-xl font-semibold mb-2">Building an AI Medical Transcription App</h3>
+ <p class="text-gray-600 text-sm">In this first video of our HIPAA-compliant medical AI assistant series, I reveal which AI transcription model performed best with challenging medical terminology. Watch as we compare Eleven Labs, OpenAI, AWS, and Deepgram to find the solution that achieved 75% accuracy while costing 23X LESS than competitors.</p>
+ </div>
+ <div class="group">
+ <div class="relative rounded-2xl overflow-hidden bg-gray-100 aspect-video mb-4">
+ <div class="absolute inset-0 bg-gradient-to-br from-red-500 via-orange-400 to-yellow-400 flex items-center justify-center">
+ <div class="text-white text-center p-6">
+ <div class="text-2xl font-bold mb-2">DON'T</div>
+ <div class="text-lg font-bold">Use This</div>
+ </div>
+ </div>
+ <div class="absolute inset-0 flex items-center justify-center">
+ <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+ <svg class="w-6 h-6 text-gray-800 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+ </div>
+ </div>
+ </div>
+ <h3 class="text-xl font-semibold mb-2">How to make any AI model safe for healthcare</h3>
+ <p class="text-gray-600 text-sm">Is HIPAA compliance stopping you from using Claude, GPT-4, or Gemini in your healthcare projects? In this video, I reveal the "secret" that 95% of healthcare companies don't know: how to make almost ANY AI model HIPAA compliant through cloud provider hosting.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- FEATURED EDUCATIONAL CONTENT -->
+ <section class="py-20 bg-white">
+ <div class="max-w-6xl mx-auto px-6">
+ <h2 class="text-3xl md:text-4xl text-center mb-12">Featured educational content</h2>
+ <div class="grid md:grid-cols-3 gap-6 mb-10">
+ <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 via-orange-50 to-white relative h-80">
+ <div class="absolute inset-0 p-6 flex flex-col justify-between">
+ <div>
+ <div class="text-xs text-gray-500 mb-1">RETRIEVAL-</div>
+ <div class="text-xs text-gray-500 mb-1">AUGMENTED</div>
+ <div class="text-xs text-gray-500 mb-4">GENERATION</div>
+ <div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg text-xs text-gray-600">RAG combines LLMs with external data sources for more accurate and contextual AI responses.</div>
+ </div>
+ <div class="mt-auto">
+ <h3 class="text-lg font-semibold text-gray-900 mb-2">The Reality of RAG</h3>
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+ <span class="text-sm text-gray-600">Finney Koshy</span>
+ </div>
+ <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 via-yellow-50 to-white relative h-80">
+ <div class="absolute inset-0 p-6 flex flex-col justify-between">
+ <div>
+ <div class="text-xs text-gray-500 mb-4">Thomas Larsen, Eli Lilland, Romeo Dean</div>
+ <svg class="w-full h-20" viewBox="0 0 200 80"><path d="M 0 60 Q 50 40 100 30 T 200 15" stroke="#d97706" stroke-width="2" fill="none" /><circle cx="100" cy="30" r="4" fill="#d97706" /></svg>
+ </div>
+ <div class="mt-auto">
+ <h3 class="text-lg font-semibold text-gray-900 mb-2">AI 2027: A Non-Technical Founder's Review</h3>
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+ <span class="text-sm text-gray-600">David Pawlan</span>
+ </div>
+ <a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 relative h-80">
+ <div class="absolute inset-0 p-6 flex flex-col justify-between">
+ <div class="flex justify-end gap-2">
+ <div class="text-green-400 text-xs font-mono">deepseek</div>
+ <div class="text-emerald-400 text-xs font-mono">ChatGPT</div>
+ </div>
+ <div class="mt-auto">
+ <h3 class="text-lg font-semibold text-white mb-2">AI Model Selection: The Overlooked Secret to Better AI Content Creation</h3>
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+ <span class="text-sm text-gray-300">Finney Koshy</span>
+ </div>
+ <a href="#" class="inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="text-center">
+ <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-gray-400 hover:bg-gray-50 transition-colors">View all resources</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- NEWSLETTER -->
+ <section class="py-20 bg-white">
+ <div class="max-w-2xl mx-auto px-6">
+ <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-3xl p-10 text-center shadow-sm">
+ <h2 class="text-2xl md:text-3xl mb-4">Join our AI newsletter</h2>
+ <p class="text-gray-600 mb-8">Get the latest AI news, research insights, and practical implementation guides delivered to your inbox daily.</p>
+ <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+ <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
+ <button type="submit" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Subscribe</button>
+ </form>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <!-- FOOTER -->
+ <footer class="relative">
+ <div class="relative h-[400px] overflow-hidden">
+ <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+ <div class="absolute inset-0 bg-black/40"></div>
+ <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+ <span class="text-[150px] md:text-[250px] text-white/10 tracking-tight">aloa</span>
+ </div>
+ <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+ <div class="grid md:grid-cols-2 gap-12">
+ <div>
+ <p class=" text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+ </div>
+ <div class="flex justify-end">
+ <div class="space-y-3">
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Marketing</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Pricing</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Locations</a>
+ </div>
+ </div>
+ </div>
+ <div class="flex items-end justify-between">
+ <div class="text-2xl font-medium text-white">aloa</div>
+ <div class="text-sm text-white/60">© 2025 Aloa</div>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

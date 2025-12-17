@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy AI Development Services - Aloa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Figtree', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white">
+
+ <!-- NAVBAR -->
+ <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+ <div class="max-w-7xl mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <a href="/" class="text-2xl font-medium tracking-tight text-black">aloa</a>
+ <div class="hidden md:flex items-center gap-8">
+ <a href="/case-studies" class="text-sm text-gray-700 hover:text-black transition-colors">Case Studies</a>
+ <div class="relative group">
+ <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+ AI Development
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ <div class="absolute left-0 top-full mt-3 w-[540px] bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+ <div class="grid grid-cols-2 gap-8 p-6">
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
+ <div class="space-y-3">
+ <a href="/industries-healthcare" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="9" />
+ <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+ </svg>
+ <span>Healthcare</span>
+ </a>
+ <a href="/industries-real-estate" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 10l8-6 8 6" />
+ <path d="M6 10v8h12v-8" />
+ <path d="M10 18v-4h4v4" />
+ </svg>
+ <span>Real Estate</span>
+ </a>
+ <a href="/industries-finance" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 15l4-4 3 3 6-6" />
+ <path d="M4 19h16" />
+ </svg>
+ <span>Finance</span>
+ </a>
+ <a href="/industries-construction" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 13l8-8 3 3-8 8H4v-3z" />
+ <path d="M13 5l2-2 3 3-2 2" />
+ <path d="M7 16h10" />
+ </svg>
+ <span>Construction</span>
+ </a>
+ <a href="/industries-energy" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M13 2L6 14h6l-1 8 7-12h-6z" />
+ </svg>
+ <span>Energy</span>
+ </a>
+ <a href="/industries" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all industries &rarr;</span>
+ </a>
+ </div>
+ </div>
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Services</p>
+ <div class="space-y-3">
+ <a href="/services-ai-machine-learning" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 4v16" />
+ <path d="M8 8v2m0 4v2" />
+ <path d="M16 8v2m0 4v2" />
+ <path d="M4 12h4m8 0h4" />
+ </svg>
+ <span>AI &amp; Machine Learning</span>
+ </a>
+ <a href="/services-ai-consulting" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 15v4a2 2 0 0 1-2 2h-5l-4 2v-2H5a2 2 0 0 1-2-2v-4" />
+ <path d="M7 9a5 5 0 1 1 10 0v3a5 5 0 1 1-10 0V9z" />
+ </svg>
+ <span>AI Consulting</span>
+ </a>
+ <a href="/services-digital-transformation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="4" y="5" width="16" height="14" rx="2" />
+ <path d="M9 9h6" />
+ <path d="M9 13h4" />
+ </svg>
+ <span>Digital Transformation</span>
+ </a>
+ <a href="/services-workflow-automation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 9h9l-2-2m2 2-2 2" />
+ <path d="M20 15h-9l2 2m-2-2 2-2" />
+ <path d="M12 7V5m0 14v-2" />
+ </svg>
+ <span>Workflow Automation</span>
+ </a>
+ <a href="/services-internal-tooling" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 3l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L6.2 7.2l4-.6z" />
+ </svg>
+ <span>Internal Tooling</span>
+ </a>
+ <a href="/services" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all services &rarr;</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="relative group">
+ <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+ Resources
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ <div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+ <div class="p-4 space-y-3">
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 4h14v16H5z" />
+ <path d="M9 8h6" />
+ <path d="M9 12h6" />
+ <path d="M9 16h3" />
+ </svg>
+ <span>Blog</span>
+ </a>
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 6h16M4 12h16M4 18h10" />
+ </svg>
+ <span>Guides</span>
+ </a>
+ <a href="#" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M6 5h9l3 3v11H6z" />
+ <path d="M9 13h6" />
+ <path d="M9 17h6" />
+ <path d="M9 9h3" />
+ </svg>
+ <span>Templates</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ <a href="/contact" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+ </div>
+ <button id="mobile-menu-btn" class="md:hidden p-2">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+ </svg>
+ </button>
+ </div>
+ </div>
+ </nav>
+
+ <main>
+ <!-- HERO SECTION WITH ENERGY GRID -->
+ <section class="hero-energy min-h-screen flex items-center relative">
+ <!-- Energy grid visualization -->
+ <div class="absolute inset-0">
+ <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+ <!-- Power transmission lines -->
+ <g stroke="#34d399" fill="none" stroke-width="2">
+ <!-- Main transmission tower 1 -->
+ <line x1="100" y1="700" x2="100" y2="300"/>
+ <line x1="80" y1="700" x2="100" y2="400"/>
+ <line x1="120" y1="700" x2="100" y2="400"/>
+ <!-- Cross arms -->
+ <line x1="50" y1="320" x2="150" y2="320"/>
+ <line x1="60" y1="380" x2="140" y2="380"/>
+ <!-- Insulators -->
+ <circle cx="50" cy="320" r="5"/>
+ <circle cx="150" cy="320" r="5"/>
+ <circle cx="60" cy="380" r="5"/>
+ <circle cx="140" cy="380" r="5"/>
+ 
+ <!-- Main transmission tower 2 -->
+ <line x1="400" y1="700" x2="400" y2="300"/>
+ <line x1="380" y1="700" x2="400" y2="400"/>
+ <line x1="420" y1="700" x2="400" y2="400"/>
+ <line x1="350" y1="320" x2="450" y2="320"/>
+ <line x1="360" y1="380" x2="440" y2="380"/>
+ <circle cx="350" cy="320" r="5"/>
+ <circle cx="450" cy="320" r="5"/>
+ 
+ <!-- Power lines connecting towers -->
+ <path d="M150 320 Q275 280 350 320" stroke-width="1"/>
+ <path d="M140 380 Q270 340 360 380" stroke-width="1"/>
+ <path d="M50 320 Q-50 300 -100 320" stroke-width="1"/>
+ </g>
+ 
+ <!-- Wind Turbines -->
+ <g stroke="#34d399" fill="none" stroke-width="1.5">
+ <!-- Turbine 1 -->
+ <line x1="600" y1="700" x2="600" y2="400"/>
+ <circle cx="600" cy="390" r="15"/>
+ <line x1="600" y1="390" x2="600" y2="300"/>
+ <line x1="600" y1="390" x2="680" y2="450"/>
+ <line x1="600" y1="390" x2="520" y2="450"/>
+ 
+ <!-- Turbine 2 -->
+ <line x1="720" y1="700" x2="720" y2="450"/>
+ <circle cx="720" cy="440" r="12"/>
+ <line x1="720" y1="440" x2="720" y2="360"/>
+ <line x1="720" y1="440" x2="790" y2="490"/>
+ <line x1="720" y1="440" x2="650" y2="490"/>
+ 
+ <!-- Turbine 3 -->
+ <line x1="830" y1="700" x2="830" y2="420"/>
+ <circle cx="830" cy="410" r="14"/>
+ <line x1="830" y1="410" x2="830" y2="320"/>
+ <line x1="830" y1="410" x2="910" y2="470"/>
+ <line x1="830" y1="410" x2="750" y2="470"/>
+ </g>
+ 
+ <!-- Solar Panel Array -->
+ <g stroke="#34d399" fill="none" stroke-width="1">
+ <!-- Panel row 1 -->
+ <rect x="950" y="500" width="60" height="40" transform="rotate(-20 980 520)"/>
+ <rect x="1020" y="500" width="60" height="40" transform="rotate(-20 1050 520)"/>
+ <rect x="1090" y="500" width="60" height="40" transform="rotate(-20 1120 520)"/>
+ <!-- Panel row 2 -->
+ <rect x="950" y="560" width="60" height="40" transform="rotate(-20 980 580)"/>
+ <rect x="1020" y="560" width="60" height="40" transform="rotate(-20 1050 580)"/>
+ <rect x="1090" y="560" width="60" height="40" transform="rotate(-20 1120 580)"/>
+ <!-- Panel row 3 -->
+ <rect x="950" y="620" width="60" height="40" transform="rotate(-20 980 640)"/>
+ <rect x="1020" y="620" width="60" height="40" transform="rotate(-20 1050 640)"/>
+ <rect x="1090" y="620" width="60" height="40" transform="rotate(-20 1120 640)"/>
+ <!-- Grid lines on panels -->
+ <line x1="960" y1="510" x2="1000" y2="510" transform="rotate(-20 980 520)"/>
+ <line x1="960" y1="520" x2="1000" y2="520" transform="rotate(-20 980 520)"/>
+ </g>
+ 
+ <!-- Power substation -->
+ <g stroke="#34d399" fill="none" stroke-width="1">
+ <rect x="200" y="550" width="120" height="80"/>
+ <!-- Transformer -->
+ <rect x="220" y="570" width="30" height="40"/>
+ <rect x="270" y="570" width="30" height="40"/>
+ <!-- Connections -->
+ <line x1="235" y1="550" x2="235" y2="520"/>
+ <line x1="285" y1="550" x2="285" y2="520"/>
+ <line x1="235" y1="520" x2="285" y2="520"/>
+ <!-- Busbar -->
+ <line x1="200" y1="580" x2="180" y2="580"/>
+ <line x1="320" y1="580" x2="350" y2="580"/>
+ </g>
+ 
+ <!-- Energy flow lines (animated feel) -->
+ <g stroke="#34d399" fill="none" stroke-width="0.5" stroke-dasharray="5,5">
+ <path d="M450 320 Q550 250 600 390"/>
+ <path d="M720 440 Q800 400 830 410"/>
+ <path d="M950 550 Q900 500 830 410"/>
+ <line x1="320" y1="580" x2="600" y2="700"/>
+ </g>
+ 
+ <!-- Smart meter / IoT device -->
+ <g stroke="#34d399" fill="none" stroke-width="1">
+ <rect x="500" y="600" width="40" height="50"/>
+ <circle cx="520" cy="615" r="8"/>
+ <line x1="510" y1="635" x2="530" y2="635"/>
+ <line x1="510" y1="640" x2="530" y2="640"/>
+ <!-- Signal waves -->
+ <path d="M545 610 Q555 605 545 600" stroke-width="0.5"/>
+ <path d="M550 612 Q565 605 550 598" stroke-width="0.5"/>
+ </g>
+ 
+ <!-- Ground line -->
+ <line x1="0" y1="700" x2="1200" y2="700" stroke="#34d399" stroke-width="2"/>
+ 
+ <!-- Grid pattern -->
+ <g stroke="#34d399" stroke-width="0.2" opacity="0.3">
+ <line x1="0" y1="100" x2="1200" y2="100"/>
+ <line x1="0" y1="200" x2="1200" y2="200"/>
+ <line x1="0" y1="300" x2="1200" y2="300"/>
+ <line x1="0" y1="400" x2="1200" y2="400"/>
+ <line x1="0" y1="500" x2="1200" y2="500"/>
+ <line x1="0" y1="600" x2="1200" y2="600"/>
+ <line x1="100" y1="0" x2="100" y2="800"/>
+ <line x1="200" y1="0" x2="200" y2="800"/>
+ <line x1="300" y1="0" x2="300" y2="800"/>
+ <line x1="400" y1="0" x2="400" y2="800"/>
+ <line x1="500" y1="0" x2="500" y2="800"/>
+ <line x1="600" y1="0" x2="600" y2="800"/>
+ <line x1="700" y1="0" x2="700" y2="800"/>
+ <line x1="800" y1="0" x2="800" y2="800"/>
+ <line x1="900" y1="0" x2="900" y2="800"/>
+ <line x1="1000" y1="0" x2="1000" y2="800"/>
+ <line x1="1100" y1="0" x2="1100" y2="800"/>
+ </g>
+ </svg>
+ 
+ <!-- Overlay -->
+ <div class="absolute inset-0 bg-emerald-900/30"></div>
+ </div>
+ 
+ <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+ <div class="max-w-2xl">
+ <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+ <span class="">Energy</span><br>
+ <span class="">AI Development Services</span>
+ </h1>
+ <p class="text-lg text-white/70 mb-8">
+ We bring the expertise of former Google and Amazon engineers to deliver production-ready energy AI systems that optimize grid operations, accelerate renewable adoption, and reduce operational costs.
+ </p>
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-emerald-500 text-white text-sm font-medium rounded-full hover:bg-emerald-600 transition-colors">
+ Learn more
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- REAL-WORLD EXPERIENCES -->
+ <section class="py-20 px-6 bg-white">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-8">Real-world experiences</p>
+ 
+ <!-- Featured Testimonial -->
+ <div class="grid md:grid-cols-2 gap-0 mb-8 rounded-2xl overflow-hidden border border-gray-200">
+ <!-- Left - Logo -->
+ <div class="bg-gradient-to-br from-emerald-200 via-green-200 to-teal-200 p-12 flex items-center justify-center">
+ <div class="text-center">
+ <h3 class="text-3xl font-bold text-emerald-800">GridWise</h3>
+ <p class="text-emerald-700 text-sm mt-2">Energy Solutions</p>
+ </div>
+ </div>
+ <!-- Right - Quote -->
+ <div class="p-8 md:p-12 flex flex-col justify-center">
+ <p class="text-gray-600 mb-6 leading-relaxed">
+ "Aloa's AI platform helped us reduce grid outages by 40% through predictive maintenance. Their team understood the complexity of utility operations and delivered a solution that our field teams actually use every day."
+ </p>
+ <div class="flex items-center gap-3">
+ <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+ <span class="text-emerald-600 font-semibold text-sm">SL</span>
+ </div>
+ <div>
+ <div class="font-semibold text-sm">Sarah Liu</div>
+ <div class="text-xs text-gray-500">Chief Technology Officer</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Case Study Cards -->
+ <div class="grid md:grid-cols-2 gap-6 mb-12">
+ <!-- Renewable Forecasting -->
+ <div class="case-card border border-gray-200 rounded-xl p-6">
+ <div class="flex items-center gap-2 mb-6">
+ <div class="w-8 h-8 bg-emerald-500 rounded flex items-center justify-center">
+ <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+ </svg>
+ </div>
+ <span class="font-semibold">SolarPredict</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Machine learning system that forecasts solar generation with 95% accuracy up to 72 hours ahead, enabling better grid balancing and reducing curtailment by 25%.
+ </p>
+ <a href="#" class="inline-flex items-center text-sm text-emerald-600 hover:text-emerald-700">
+ Read case study
+ <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+ </svg>
+ </a>
+ </div>
+
+ <!-- Grid Optimization -->
+ <div class="case-card border border-gray-200 rounded-xl p-6">
+ <div class="flex items-center gap-2 mb-6">
+ <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center">
+ <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+ </svg>
+ </div>
+ <span class="font-semibold">GridOptimizer</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Real-time demand response platform that uses AI to balance load across the grid, reducing peak demand charges by 30% for participating utilities.
+ </p>
+ <a href="#" class="inline-flex items-center text-sm text-emerald-600 hover:text-emerald-700">
+ Read case study
+ <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+
+ <!-- Additional Logos -->
+ <div class="text-center mb-8">
+ <p class="text-sm text-gray-500 mb-6">plus some more</p>
+ <div class="flex flex-wrap items-center justify-center gap-12">
+ <span class="text-gray-400 font-medium text-xl">NextEra Energy</span>
+ <span class="text-gray-400 font-medium text-xl">Duke Energy</span>
+ <span class="text-gray-400 font-medium text-xl">Enel</span>
+ <span class="text-gray-400 font-medium text-sm">Ørsted</span>
+ <span class="text-gray-400 font-medium text-sm">Iberdrola</span>
+ </div>
+ </div>
+
+ <div class="text-center">
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-emerald-500 text-white text-sm font-medium rounded-full hover:bg-emerald-600 transition-colors">
+ Get Started
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- HOW WE WORK -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">How we work</p>
+ 
+ <div class="space-y-12">
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="text-gray-400 font-medium">Step 1: Discover</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">We start by understanding your energy infrastructure, operational challenges, and strategic goals—whether you're optimizing grid reliability, integrating renewables, or reducing carbon emissions.</p>
+ </div>
+ </div>
+ 
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="text-gray-400 font-medium">Step 2: Research</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">Our team evaluates the latest energy-specific AI models, SCADA integrations, and IoT platforms to design solutions that work with your existing infrastructure and regulatory requirements.</p>
+ </div>
+ </div>
+ 
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="text-gray-400 font-medium">Step 3: Build</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">We deliver production-ready systems that integrate with your EMS, SCADA, and asset management platforms—ensuring cybersecurity compliance and operational reliability from day one.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ENERGY AI MODELS AND APPLICATIONS -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">Energy AI models and applications</p>
+ 
+ <div class="grid md:grid-cols-2 gap-16 mb-16">
+ <!-- Load Forecasting -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-8">Load Forecasting</h3>
+ <div class="flex justify-center gap-6">
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M12 2L2 7v10l10 5 10-5V7l-10-5z"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">Prophet</div>
+ <div class="text-xs text-gray-400">(Meta)</div>
+ </div>
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
+ <rect x="3" y="3" width="18" height="18" rx="3"/>
+ <path d="M7 12h10M12 7v10" stroke="white" stroke-width="2"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">DeepAR</div>
+ <div class="text-xs text-gray-400">(AWS)</div>
+ </div>
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8" viewBox="0 0 24 24">
+ <circle cx="6" cy="6" r="2" fill="#4285F4"/>
+ <circle cx="12" cy="6" r="2" fill="#EA4335"/>
+ <circle cx="18" cy="6" r="2" fill="#FBBC05"/>
+ <circle cx="6" cy="12" r="2" fill="#34A853"/>
+ <circle cx="12" cy="12" r="2" fill="#4285F4"/>
+ <circle cx="18" cy="12" r="2" fill="#EA4335"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">TFT</div>
+ <div class="text-xs text-gray-400">(Google)</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Renewable Generation -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-8">Renewable Generation Prediction</h3>
+ <div class="flex justify-center gap-6">
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="currentColor">
+ <circle cx="12" cy="12" r="5"/>
+ <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">SolarGPT</div>
+ <div class="text-xs text-gray-400">Irradiance Forecast</div>
+ </div>
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-cyan-500" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M12 2L8 8h3v14h2V8h3L12 2z"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">WindML</div>
+ <div class="text-xs text-gray-400">Wind Prediction</div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="grid md:grid-cols-2 gap-16">
+ <!-- Predictive Maintenance -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-8">Predictive Maintenance</h3>
+ <div class="flex justify-center gap-6">
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+ <circle cx="12" cy="12" r="10"/>
+ <path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">Azure IoT</div>
+ <div class="text-xs text-gray-400">(Microsoft)</div>
+ </div>
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="currentColor">
+ <rect x="3" y="3" width="7" height="7" rx="1"/>
+ <rect x="14" y="3" width="7" height="7" rx="1"/>
+ <rect x="3" y="14" width="7" height="7" rx="1"/>
+ <rect x="14" y="14" width="7" height="7" rx="1"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">Uptake</div>
+ <div class="text-xs text-gray-400">Asset Analytics</div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Grid Optimization -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-8">Grid Optimization</h3>
+ <div class="flex justify-center gap-6">
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-emerald-500" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">AutoGrid</div>
+ <div class="text-xs text-gray-400">Flex Platform</div>
+ </div>
+ <div class="tech-icon text-center">
+ <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
+ <svg class="w-8 h-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor">
+ <circle cx="12" cy="12" r="10"/>
+ <circle cx="12" cy="12" r="6" fill="white"/>
+ <circle cx="12" cy="12" r="2"/>
+ </svg>
+ </div>
+ <div class="text-xs font-medium">GridEdge</div>
+ <div class="text-xs text-gray-400">DER Management</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- COMPLIANCE SECTION -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">Put your mind at ease and let us take care of compliance</p>
+ 
+ <div class="space-y-12">
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="font-semibold text-gray-900">NERC CIP</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">We build AI solutions that comply with NERC Critical Infrastructure Protection standards, ensuring your energy systems meet cybersecurity requirements for bulk electric system operations.</p>
+ </div>
+ </div>
+ 
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="font-semibold text-gray-900">FERC Regulations</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">Our systems are designed to support FERC compliance requirements, including market transparency, reliability standards, and fair access to transmission systems.</p>
+ </div>
+ </div>
+ 
+ <div class="grid md:grid-cols-4 gap-8 items-start">
+ <div class="font-semibold text-gray-900">EPA Standards</div>
+ <div class="md:col-span-3">
+ <p class="text-gray-600">We help you meet EPA environmental regulations with AI-powered emissions monitoring, carbon tracking, and sustainability reporting tools that ensure compliance and support your ESG goals.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ENERGY AI SOLUTIONS WE OFFER -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">Energy AI solutions we offer (and more)</p>
+ 
+ <div class="grid md:grid-cols-4 gap-6 mb-12">
+ <!-- Load Forecasting -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Load Forecasting</h4>
+ <p class="text-xs text-gray-500">Predict energy demand with high accuracy using weather data, historical patterns, and economic indicators.</p>
+ </div>
+
+ <!-- Renewable Optimization -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Renewable Optimization</h4>
+ <p class="text-xs text-gray-500">Maximize solar and wind generation through AI-driven forecasting and dispatch optimization.</p>
+ </div>
+
+ <!-- Predictive Maintenance -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Predictive Maintenance</h4>
+ <p class="text-xs text-gray-500">Reduce downtime and extend asset life with AI-powered condition monitoring and failure prediction.</p>
+ </div>
+
+ <!-- Grid Balancing -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Grid Balancing</h4>
+ <p class="text-xs text-gray-500">Real-time optimization of generation, storage, and demand to maintain grid stability and reduce costs.</p>
+ </div>
+
+ <!-- Demand Response -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Demand Response</h4>
+ <p class="text-xs text-gray-500">Intelligent load management that engages customers and reduces peak demand automatically.</p>
+ </div>
+
+ <!-- Carbon Tracking -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Carbon Tracking</h4>
+ <p class="text-xs text-gray-500">Monitor and report emissions across your operations with automated carbon accounting and ESG reporting.</p>
+ </div>
+
+ <!-- Battery Optimization -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Battery Optimization</h4>
+ <p class="text-xs text-gray-500">Maximize energy storage ROI with AI-driven charging/discharging strategies and degradation prediction.</p>
+ </div>
+
+ <!-- Outage Prediction -->
+ <div class="solution-card border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+ </svg>
+ </div>
+ <h4 class="font-semibold text-sm mb-2">Outage Prediction</h4>
+ <p class="text-xs text-gray-500">Predict equipment failures and weather-related outages before they happen to improve reliability.</p>
+ </div>
+ </div>
+
+ <div class="text-center">
+ <a href="#" class="inline-flex items-center px-6 py-3 bg-emerald-500 text-white text-sm font-medium rounded-full hover:bg-emerald-600 transition-colors">
+ Get Started
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- FAQ -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">Frequently asked questions</p>
+ 
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">How can AI improve grid reliability and reduce outages?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">What's the ROI of implementing AI for renewable energy forecasting?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">Can AI integrate with our existing SCADA and EMS systems?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">How does AI help with NERC CIP compliance?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">What data is needed to implement energy AI solutions?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+
+ <div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer">
+ <p class="font-medium text-center mb-4">How can AI support our decarbonization and ESG goals?</p>
+ <div class="flex justify-center">
+ <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+ </svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- LEARN MORE FROM OUR EXPERTS -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-12">Learn more from our experts</p>
+ 
+ <div class="grid md:grid-cols-3 gap-6 mb-12">
+ <!-- Article 1 -->
+ <div class="article-card rounded-xl overflow-hidden">
+ <div class="h-48 bg-gradient-to-br from-emerald-400 via-green-500 to-teal-500 p-6 relative">
+ <h4 class="text-xl font-bold text-white leading-tight">AI-Powered<br>Grid Management</h4>
+ <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-6 h-6 bg-white/20 rounded-full"></div>
+ <span class="text-white text-xs">Finney Koshy</span>
+ </div>
+ <a href="#" class="text-white text-xs flex items-center gap-1">
+ Read more
+ <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+ <div class="p-4 border border-t-0 border-gray-200 rounded-b-xl">
+ <p class="text-sm font-medium">How Utilities Are Using AI to Balance the Grid</p>
+ </div>
+ </div>
+
+ <!-- Article 2 -->
+ <div class="article-card rounded-xl overflow-hidden">
+ <div class="h-48 bg-gradient-to-br from-yellow-200 via-amber-300 to-orange-300 p-6 relative">
+ <div class="flex items-center gap-2 mb-2">
+ <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+ <circle cx="12" cy="12" r="5"/>
+ <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/>
+ </svg>
+ </div>
+ <p class="text-yellow-800 text-sm font-medium">Solar + AI = Smarter Generation</p>
+ <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-6 h-6 bg-yellow-600/30 rounded-full"></div>
+ <span class="text-yellow-800 text-xs">David Pawlan</span>
+ </div>
+ <a href="#" class="text-yellow-800 text-xs flex items-center gap-1">
+ Read more
+ <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+ <div class="p-4 border border-t-0 border-gray-200 rounded-b-xl">
+ <p class="text-sm font-medium">Maximizing Solar ROI with Predictive Analytics</p>
+ </div>
+ </div>
+
+ <!-- Article 3 -->
+ <div class="article-card rounded-xl overflow-hidden">
+ <div class="h-48 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 p-6 relative">
+ <div class="flex items-center gap-2 mb-4">
+ <svg class="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+ <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+ </svg>
+ <span class="text-emerald-400 text-sm font-bold">Energy Storage</span>
+ </div>
+ <p class="text-white/70 text-sm">Optimizing batteries with machine learning</p>
+ <div class="absolute bottom-4 left-6 right-6 flex items-center justify-between">
+ <div class="flex items-center gap-2">
+ <div class="w-6 h-6 bg-white/20 rounded-full"></div>
+ <span class="text-white text-xs">Finney Koshy</span>
+ </div>
+ <a href="#" class="text-white text-xs flex items-center gap-1">
+ Read more
+ <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+ </svg>
+ </a>
+ </div>
+ </div>
+ <div class="p-4 border border-t-0 border-gray-200 rounded-b-xl">
+ <p class="text-sm font-medium">The Future of Battery Storage Optimization</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="text-center">
+ <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-50 transition-colors">
+ View all resources
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- NEWSLETTER -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-2xl mx-auto">
+ <div class="bg-gray-50 rounded-2xl p-12 text-center">
+ <h2 class="text-2xl mb-4">Join our AI newsletter</h2>
+ <p class="text-gray-600 mb-8">
+ Get the latest AI news, research insights, and practical implementation guides delivered to your inbox daily.
+ </p>
+ <div class="flex gap-2 max-w-md mx-auto">
+ <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+ <button class="px-6 py-3 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">
+ Subscribe
+ </button>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <!-- FOOTER -->
+ <footer class="relative">
+ <div class="relative h-[400px] overflow-hidden">
+ <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+ <div class="absolute inset-0 bg-black/40"></div>
+ <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+ <span class="text-[150px] md:text-[250px] text-white/10 tracking-tight">aloa</span>
+ </div>
+ <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+ <div class="grid md:grid-cols-2 gap-12">
+ <div>
+ <p class=" text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+ </div>
+ <div class="flex justify-end">
+ <div class="space-y-3">
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Marketing</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Pricing</a>
+ <a href="#" class="block text-white/80 hover:text-white transition-colors">Locations</a>
+ </div>
+ </div>
+ </div>
+ <div class="flex items-end justify-between">
+ <div class="text-2xl font-medium text-white">aloa</div>
+ <div class="text-sm text-white/60">© 2025 Aloa</div>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
