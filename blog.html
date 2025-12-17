@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Resources - AI Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Aloa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -24,78 +23,433 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .article-card {
+      transition: all 0.3s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    
+    .category-tag {
+      transition: all 0.2s ease;
+    }
+    .category-tag:hover {
+      background: #3b82f6;
+      color: white;
+    }
+    .category-tag.active {
+      background: #3b82f6;
+      color: white;
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-6 py-4">
-    <div class="flex items-center justify-between">
-      <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/case-studies" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Case Studies</a>
-        <a href="/ai-development" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">AI Development</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
-        <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
+        <div class="hidden md:flex items-center gap-8">
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              Case Studies
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 11l3 3L22 4" />
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                  </svg>
+                  <span>All Case Studies</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                  <span>By Industry</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                  </svg>
+                  <span>By Service</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              AI Development
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6">
+              <div class="grid grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Industries</h4>
+                  <div class="space-y-3">
+                    <a href="/industries-healthcare" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>❤️</span> Healthcare
+                    </a>
+                    <a href="/industries-real-estate" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏠</span> Real Estate
+                    </a>
+                    <a href="/industries-finance" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💰</span> Finance
+                    </a>
+                    <a href="/industries-construction" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏗️</span> Construction
+                    </a>
+                    <a href="/industries-energy" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚡</span> Energy
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+                  <div class="space-y-3">
+                    <a href="/services-ai-machine-learning" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🤖</span> AI & Machine Learning
+                    </a>
+                    <a href="/services-ai-consulting" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💡</span> AI Consulting
+                    </a>
+                    <a href="/services-digital-transformation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🔄</span> Digital Transformation
+                    </a>
+                    <a href="/services-workflow-automation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚙️</span> Workflow Automation
+                    </a>
+                    <a href="/services-internal-tooling" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🛠️</span> Internal Tooling
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-blue-600 font-medium transition-colors">
+              Resources
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Resources Dropdown -->
+            <div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/blog" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 4h14v16H5z" />
+                    <path d="M9 8h6" />
+                    <path d="M9 12h6" />
+                    <path d="M9 16h3" />
+                  </svg>
+                  <span>Blog</span>
+                </a>
+                <a href="/tools" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Tools</span>
+                </a>
+                <a href="/glossary" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <span>Glossary</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main>
-  <!-- HERO SECTION -->
-  <section class="pt-32 pb-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] mb-6">
-        Blog
-      </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        <!-- Add description here -->
-      </p>
-    </div>
-  </section>
+  <main class="pt-24">
+    <!-- HERO -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-medium mb-4">Blog & Resources</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Practical guides, industry insights, and tutorials to help you implement AI effectively in your business.
+        </p>
+      </div>
+    </section>
 
-  <!-- CONTENT SECTION -->
-  <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <!-- Add your blog posts here -->
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="relative">
-  <div class="relative h-[400px] overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <span class="text-[150px] md:text-[250px] font-serif text-white/10 tracking-tight">aloa</span>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <p class="font-serif text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+    <!-- CATEGORY FILTERS -->
+    <section class="py-4 px-6 bg-white border-b border-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-wrap gap-3 justify-center">
+          <button class="category-tag active px-4 py-2 text-sm rounded-full border border-gray-200">All</button>
+          <button class="category-tag px-4 py-2 text-sm rounded-full border border-gray-200">Implementation Guides</button>
+          <button class="category-tag px-4 py-2 text-sm rounded-full border border-gray-200">Industry Trends</button>
+          <button class="category-tag px-4 py-2 text-sm rounded-full border border-gray-200">How-To Tutorials</button>
+          <button class="category-tag px-4 py-2 text-sm rounded-full border border-gray-200">Case Studies</button>
         </div>
-        <div class="flex justify-end">
-          <div class="space-y-3">
-            <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
-            <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
-            <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="py-12 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <p class="text-sm text-gray-500 mb-6">Featured</p>
+        <a href="#" class="article-card block bg-white rounded-2xl overflow-hidden border border-gray-100">
+          <div class="grid md:grid-cols-2">
+            <div class="h-64 md:h-auto bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 flex items-center justify-center p-8">
+              <div class="text-center">
+                <div class="text-6xl mb-4">🚀</div>
+                <div class="text-white/80 text-sm">Implementation Guide</div>
+              </div>
+            </div>
+            <div class="p-8 flex flex-col justify-center">
+              <span class="text-blue-500 text-sm font-medium mb-2">Implementation Guide</span>
+              <h2 class="text-2xl font-semibold mb-4">The Complete Guide to Implementing AI in Your Business</h2>
+              <p class="text-gray-600 mb-6">A step-by-step framework for identifying opportunities, building your first AI solution, and scaling across your organization. From strategy to production.</p>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+                <div>
+                  <div class="font-medium text-sm">Your Name</div>
+                  <div class="text-gray-500 text-xs">Dec 15, 2024 · 12 min read</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ARTICLE GRID -->
+    <section class="py-12 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <p class="text-sm text-gray-500 mb-6">Latest articles</p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Article 1 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center">
+              <div class="text-4xl">📊</div>
+            </div>
+            <div class="p-6">
+              <span class="text-orange-500 text-xs font-medium">Industry Trends</span>
+              <h3 class="font-semibold mt-2 mb-3">AI Trends to Watch in 2025: What's Actually Useful for Business</h3>
+              <p class="text-gray-500 text-sm mb-4">Cutting through the hype to identify which AI advancements will deliver real ROI this year.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Dec 12, 2024</span>
+                <span>8 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
+              <div class="text-4xl">🔧</div>
+            </div>
+            <div class="p-6">
+              <span class="text-green-500 text-xs font-medium">How-To Tutorial</span>
+              <h3 class="font-semibold mt-2 mb-3">Building Your First RAG System: A Practical Tutorial</h3>
+              <p class="text-gray-500 text-sm mb-4">Learn how to build a retrieval-augmented generation system from scratch with real code examples.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Dec 8, 2024</span>
+                <span>15 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-purple-400 to-violet-500 flex items-center justify-center">
+              <div class="text-4xl">💼</div>
+            </div>
+            <div class="p-6">
+              <span class="text-purple-500 text-xs font-medium">Case Study</span>
+              <h3 class="font-semibold mt-2 mb-3">How We Reduced Document Processing Time by 80%</h3>
+              <p class="text-gray-500 text-sm mb-4">A detailed look at our AI implementation for a financial services client.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Dec 5, 2024</span>
+                <span>6 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
+              <div class="text-4xl">🎯</div>
+            </div>
+            <div class="p-6">
+              <span class="text-blue-500 text-xs font-medium">Implementation Guide</span>
+              <h3 class="font-semibold mt-2 mb-3">Choosing the Right AI Model for Your Use Case</h3>
+              <p class="text-gray-500 text-sm mb-4">GPT-4, Claude, Gemini, open source? A framework for making the right choice.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Nov 28, 2024</span>
+                <span>10 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
+              <div class="text-4xl">⚡</div>
+            </div>
+            <div class="p-6">
+              <span class="text-rose-500 text-xs font-medium">How-To Tutorial</span>
+              <h3 class="font-semibold mt-2 mb-3">Automating Your Workflow with AI: 5 Quick Wins</h3>
+              <p class="text-gray-500 text-sm mb-4">Simple automations you can implement this week without writing code.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Nov 22, 2024</span>
+                <span>7 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6 -->
+          <a href="#" class="article-card bg-white rounded-xl overflow-hidden border border-gray-100">
+            <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+              <div class="text-4xl">🔐</div>
+            </div>
+            <div class="p-6">
+              <span class="text-gray-500 text-xs font-medium">Industry Trends</span>
+              <h3 class="font-semibold mt-2 mb-3">AI Security Best Practices for Enterprise</h3>
+              <p class="text-gray-500 text-sm mb-4">How to implement AI safely while protecting sensitive data and maintaining compliance.</p>
+              <div class="flex items-center justify-between text-xs text-gray-400">
+                <span>Nov 15, 2024</span>
+                <span>9 min read</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center mt-12">
+          <button class="px-8 py-3 border border-gray-300 rounded-full text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+            Load more articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER RESOURCES -->
+    <section class="py-16 px-6 bg-white border-t border-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-medium mb-8 text-center">More Resources</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          
+          <a href="/tools" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50/30 transition-all">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">Recommended Tools</div>
+              <div class="text-sm text-gray-500">Curated AI tools we use and recommend</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="/glossary" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-green-300 hover:bg-green-50/30 transition-all">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">AI Glossary</div>
+              <div class="text-sm text-gray-500">Key terms and definitions explained</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-16 px-6 bg-gray-50">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-2xl p-12 text-center">
+          <h2 class="text-2xl font-medium mb-4">Subscribe to our newsletter</h2>
+          <p class="text-gray-600 mb-8">
+            Get the latest AI insights, tutorials, and industry updates delivered to your inbox weekly.
+          </p>
+          <form class="flex gap-2 max-w-md mx-auto">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <button type="submit" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">
+              Subscribe
+            </button>
+          </form>
+          <p class="text-xs text-gray-400 mt-4">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative">
+    <div class="relative h-[400px] overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">aloa</span>
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <p class="text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+          </div>
+          <div class="flex justify-end">
+            <div class="space-y-3">
+              <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+              <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+              <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Blog</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex items-end justify-between">
-        <div class="text-2xl font-medium text-white">aloa</div>
-        <div class="text-sm text-white/60">© 2025 Aloa</div>
+        <div class="flex items-end justify-between">
+          <div class="text-2xl font-medium text-white">aloa</div>
+          <div class="text-sm text-white/60">© 2025 Aloa</div>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <script>
+    // Category filter functionality
+    document.querySelectorAll('.category-tag').forEach(tag => {
+      tag.addEventListener('click', function() {
+        document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        // In a real implementation, this would filter the articles
+      });
+    });
+  </script>
 
 </body>
 </html>
-

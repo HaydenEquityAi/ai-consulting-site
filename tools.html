@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommended AI Tools - AI Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools - Aloa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -24,78 +23,626 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .tool-card {
+      transition: all 0.3s ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-6 py-4">
-    <div class="flex items-center justify-between">
-      <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/case-studies" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Case Studies</a>
-        <a href="/ai-development" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">AI Development</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
-        <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
+        <div class="hidden md:flex items-center gap-8">
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              Case Studies
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 11l3 3L22 4" />
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                  </svg>
+                  <span>All Case Studies</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                  <span>By Industry</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                  </svg>
+                  <span>By Service</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              AI Development
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6">
+              <div class="grid grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Industries</h4>
+                  <div class="space-y-3">
+                    <a href="/industries-healthcare" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>❤️</span> Healthcare
+                    </a>
+                    <a href="/industries-real-estate" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏠</span> Real Estate
+                    </a>
+                    <a href="/industries-finance" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💰</span> Finance
+                    </a>
+                    <a href="/industries-construction" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏗️</span> Construction
+                    </a>
+                    <a href="/industries-energy" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚡</span> Energy
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+                  <div class="space-y-3">
+                    <a href="/services-ai-machine-learning" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🤖</span> AI & Machine Learning
+                    </a>
+                    <a href="/services-ai-consulting" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💡</span> AI Consulting
+                    </a>
+                    <a href="/services-digital-transformation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🔄</span> Digital Transformation
+                    </a>
+                    <a href="/services-workflow-automation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚙️</span> Workflow Automation
+                    </a>
+                    <a href="/services-internal-tooling" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🛠️</span> Internal Tooling
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-blue-600 font-medium transition-colors">
+              Resources
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/blog" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 4h14v16H5z" />
+                    <path d="M9 8h6" />
+                    <path d="M9 12h6" />
+                    <path d="M9 16h3" />
+                  </svg>
+                  <span>Blog</span>
+                </a>
+                <a href="/tools" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Tools</span>
+                </a>
+                <a href="/glossary" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <span>Glossary</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main>
-  <!-- HERO SECTION -->
-  <section class="pt-32 pb-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] mb-6">
-        Tools
-      </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        <!-- Add description here -->
-      </p>
-    </div>
-  </section>
+  <main class="pt-24">
+    <!-- HERO -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-medium mb-4">Recommended AI Tools</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          A curated list of AI tools we use and recommend. Updated regularly as the landscape evolves.
+        </p>
+      </div>
+    </section>
 
-  <!-- CONTENT SECTION -->
-  <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <!-- Add your tools here -->
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="relative">
-  <div class="relative h-[400px] overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <span class="text-[150px] md:text-[250px] font-serif text-white/10 tracking-tight">aloa</span>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <p class="font-serif text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+    <!-- LLMs & CHAT -->
+    <section class="py-12 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+            <span class="text-xl">💬</span>
+          </div>
+          <h2 class="text-xl font-semibold">LLMs & Chat Interfaces</h2>
         </div>
-        <div class="flex justify-end">
-          <div class="space-y-3">
-            <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
-            <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
-            <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- ChatGPT -->
+          <a href="https://chat.openai.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🟢</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">ChatGPT</h3>
+                <span class="text-xs text-gray-500">OpenAI</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">The most popular AI assistant. Great for general tasks, coding, writing, and analysis.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Claude -->
+          <a href="https://claude.ai" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🟠</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Claude</h3>
+                <span class="text-xs text-gray-500">Anthropic</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Excellent for long-form content, nuanced analysis, and coding. Our go-to for complex tasks.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Gemini -->
+          <a href="https://gemini.google.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🔵</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Gemini</h3>
+                <span class="text-xs text-gray-500">Google</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Great multimodal capabilities. Integrates well with Google Workspace and search.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Perplexity -->
+          <a href="https://perplexity.ai" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🔍</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Perplexity</h3>
+                <span class="text-xs text-gray-500">Perplexity AI</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">AI-powered search with citations. Perfect for research and fact-checking.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODING & DEVELOPMENT -->
+    <section class="py-12 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+            <span class="text-xl">👨‍💻</span>
+          </div>
+          <h2 class="text-xl font-semibold">Coding & Development</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Cursor -->
+          <a href="https://cursor.sh" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">⌘</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Cursor</h3>
+                <span class="text-xs text-gray-500">AI Code Editor</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">AI-native code editor. Best for pair programming with AI. Our daily driver.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- GitHub Copilot -->
+          <a href="https://github.com/features/copilot" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🐙</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">GitHub Copilot</h3>
+                <span class="text-xs text-gray-500">GitHub / Microsoft</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">AI pair programmer that integrates with VS Code, JetBrains, and more.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full">Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Replit -->
+          <a href="https://replit.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">R</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Replit</h3>
+                <span class="text-xs text-gray-500">Browser IDE</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Browser-based IDE with AI assistant. Great for quick prototypes and collaboration.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- v0 -->
+          <a href="https://v0.dev" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">v0</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">v0 by Vercel</h3>
+                <span class="text-xs text-gray-500">UI Generator</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Generate UI components from text descriptions. Outputs React/Tailwind code.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTOMATION & WORKFLOWS -->
+    <section class="py-12 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+            <span class="text-xl">⚡</span>
+          </div>
+          <h2 class="text-xl font-semibold">Automation & Workflows</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- n8n -->
+          <a href="https://n8n.io" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                <span class="text-red-600 font-bold">n8n</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">n8n</h3>
+                <span class="text-xs text-gray-500">Workflow Automation</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Open-source workflow automation. More flexible than Zapier, self-hostable.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Make -->
+          <a href="https://make.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">M</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Make</h3>
+                <span class="text-xs text-gray-500">Visual Automation</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Visual automation platform. Great for complex multi-step workflows.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Zapier -->
+          <a href="https://zapier.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">Z</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Zapier</h3>
+                <span class="text-xs text-gray-500">No-Code Automation</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Most popular automation tool. Huge app library, easy to use for beginners.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE & VIDEO -->
+    <section class="py-12 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center">
+            <span class="text-xl">🎨</span>
+          </div>
+          <h2 class="text-xl font-semibold">Image & Video Generation</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Midjourney -->
+          <a href="https://midjourney.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">⛵</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Midjourney</h3>
+                <span class="text-xs text-gray-500">Image Generation</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Best image quality overall. Excellent for artistic and professional imagery.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full">Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- DALL-E -->
+          <a href="https://openai.com/dall-e-3" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🖼️</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">DALL-E 3</h3>
+                <span class="text-xs text-gray-500">OpenAI</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Great text understanding. Built into ChatGPT Plus. Best for quick iterations.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full">Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Runway -->
+          <a href="https://runway.ml" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🎬</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Runway</h3>
+                <span class="text-xs text-gray-500">Video Generation</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Leading AI video generation. Gen-2 produces impressive short clips.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA & ANALYTICS -->
+    <section class="py-12 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+            <span class="text-xl">📊</span>
+          </div>
+          <h2 class="text-xl font-semibold">Data & Analytics</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Supabase -->
+          <a href="https://supabase.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg font-bold">S</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Supabase</h3>
+                <span class="text-xs text-gray-500">Backend Platform</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Open-source Firebase alternative. Postgres database with vector support for AI.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- Pinecone -->
+          <a href="https://pinecone.io" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                <span class="text-white text-lg">🌲</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">Pinecone</h3>
+                <span class="text-xs text-gray-500">Vector Database</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Leading vector database for RAG applications. Essential for semantic search.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Free + Paid</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+
+          <!-- LangChain -->
+          <a href="https://langchain.com" target="_blank" class="tool-card bg-white rounded-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
+                <span class="text-2xl">🦜</span>
+              </div>
+              <div>
+                <h3 class="font-semibold">LangChain</h3>
+                <span class="text-xs text-gray-500">LLM Framework</span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Framework for building LLM applications. Chains, agents, and RAG made easier.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Open Source</span>
+              <span class="text-blue-500 text-sm">Visit →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER RESOURCES -->
+    <section class="py-16 px-6 bg-white border-t border-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-medium mb-8 text-center">More Resources</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          
+          <a href="/blog" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50/30 transition-all">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">Blog & Articles</div>
+              <div class="text-sm text-gray-500">Guides, tutorials, and insights</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="/glossary" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-green-300 hover:bg-green-50/30 transition-all">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">AI Glossary</div>
+              <div class="text-sm text-gray-500">Key terms and definitions</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-16 px-6 bg-gray-50">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-2xl p-12 text-center">
+          <h2 class="text-2xl font-medium mb-4">Get tool recommendations</h2>
+          <p class="text-gray-600 mb-8">
+            We'll let you know when we discover new tools worth trying.
+          </p>
+          <form class="flex gap-2 max-w-md mx-auto">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <button type="submit" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative">
+    <div class="relative h-[400px] overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">aloa</span>
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <p class="text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+          </div>
+          <div class="flex justify-end">
+            <div class="space-y-3">
+              <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+              <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+              <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Blog</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex items-end justify-between">
-        <div class="text-2xl font-medium text-white">aloa</div>
-        <div class="text-sm text-white/60">© 2025 Aloa</div>
+        <div class="flex items-end justify-between">
+          <div class="text-2xl font-medium text-white">aloa</div>
+          <div class="text-sm text-white/60">© 2025 Aloa</div>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
-

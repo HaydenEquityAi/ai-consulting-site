@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Glossary - AI Consulting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glossary - Aloa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -24,78 +23,588 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .term-card {
+      transition: all 0.2s ease;
+    }
+    .term-card:hover {
+      background: #f9fafb;
+    }
+    
+    .letter-nav a {
+      transition: all 0.2s ease;
+    }
+    .letter-nav a:hover {
+      background: #3b82f6;
+      color: white;
+    }
+    .letter-nav a.active {
+      background: #3b82f6;
+      color: white;
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-6 py-4">
-    <div class="flex items-center justify-between">
-      <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="/case-studies" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Case Studies</a>
-        <a href="/ai-development" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">AI Development</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
-        <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
+        <div class="hidden md:flex items-center gap-8">
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              Case Studies
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 11l3 3L22 4" />
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                  </svg>
+                  <span>All Case Studies</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
+                  <span>By Industry</span>
+                </a>
+                <a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                  </svg>
+                  <span>By Service</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              AI Development
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6">
+              <div class="grid grid-cols-2 gap-8">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Industries</h4>
+                  <div class="space-y-3">
+                    <a href="/industries-healthcare" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>❤️</span> Healthcare
+                    </a>
+                    <a href="/industries-real-estate" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏠</span> Real Estate
+                    </a>
+                    <a href="/industries-finance" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💰</span> Finance
+                    </a>
+                    <a href="/industries-construction" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🏗️</span> Construction
+                    </a>
+                    <a href="/industries-energy" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚡</span> Energy
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-900 mb-4">Services</h4>
+                  <div class="space-y-3">
+                    <a href="/services-ai-machine-learning" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🤖</span> AI & Machine Learning
+                    </a>
+                    <a href="/services-ai-consulting" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>💡</span> AI Consulting
+                    </a>
+                    <a href="/services-digital-transformation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🔄</span> Digital Transformation
+                    </a>
+                    <a href="/services-workflow-automation" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>⚙️</span> Workflow Automation
+                    </a>
+                    <a href="/services-internal-tooling" class="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                      <span>🛠️</span> Internal Tooling
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 text-sm text-blue-600 font-medium transition-colors">
+              Resources
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+              <div class="p-4 space-y-3">
+                <a href="/blog" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 4h14v16H5z" />
+                    <path d="M9 8h6" />
+                    <path d="M9 12h6" />
+                    <path d="M9 16h3" />
+                  </svg>
+                  <span>Blog</span>
+                </a>
+                <a href="/tools" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>Tools</span>
+                </a>
+                <a href="/glossary" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+                  <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <span>Glossary</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main>
-  <!-- HERO SECTION -->
-  <section class="pt-32 pb-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] mb-6">
-        Glossary
-      </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        <!-- Add description here -->
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTENT SECTION -->
-  <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <!-- Add your glossary terms here -->
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="relative">
-  <div class="relative h-[400px] overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <span class="text-[150px] md:text-[250px] font-serif text-white/10 tracking-tight">aloa</span>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <p class="font-serif text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+  <main class="pt-24">
+    <!-- HERO -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-medium mb-4">AI Glossary</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+          Key AI terms and concepts explained in plain language. Bookmark this page for reference.
+        </p>
+        
+        <!-- Search -->
+        <div class="max-w-md mx-auto relative">
+          <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input 
+            type="text" 
+            id="search-input"
+            placeholder="Search terms..." 
+            class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
         </div>
-        <div class="flex justify-end">
-          <div class="space-y-3">
-            <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
-            <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
-            <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+      </div>
+    </section>
+
+    <!-- LETTER NAVIGATION -->
+    <section class="py-4 px-6 bg-gray-50 border-y border-gray-100 sticky top-[73px] z-40">
+      <div class="max-w-4xl mx-auto">
+        <div class="letter-nav flex flex-wrap justify-center gap-2">
+          <a href="#A" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">A</a>
+          <a href="#B" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">B</a>
+          <a href="#C" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">C</a>
+          <a href="#D" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">D</a>
+          <a href="#E" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">E</a>
+          <a href="#F" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">F</a>
+          <a href="#G" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">G</a>
+          <a href="#H" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">H</a>
+          <a href="#I" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">I</a>
+          <a href="#L" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">L</a>
+          <a href="#M" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">M</a>
+          <a href="#N" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">N</a>
+          <a href="#P" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">P</a>
+          <a href="#R" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">R</a>
+          <a href="#S" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">S</a>
+          <a href="#T" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">T</a>
+          <a href="#V" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">V</a>
+          <a href="#Z" class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-gray-600">Z</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY CONTENT -->
+    <section class="py-12 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- A -->
+        <div id="A" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">A</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Agentic AI</h3>
+              <p class="text-gray-600">AI systems that can take autonomous actions to accomplish goals, make decisions, and interact with external systems without constant human intervention. Examples include AI agents that can browse the web, write code, or manage workflows.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">API (Application Programming Interface)</h3>
+              <p class="text-gray-600">A set of protocols that allows different software applications to communicate. In AI, APIs let developers integrate AI capabilities (like ChatGPT) into their own applications.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Artificial General Intelligence (AGI)</h3>
+              <p class="text-gray-600">Hypothetical AI that can understand, learn, and apply intelligence to any intellectual task that a human can. Current AI is "narrow" (good at specific tasks), not general.</p>
+            </div>
           </div>
         </div>
+
+        <!-- C -->
+        <div id="C" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">C</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Chain of Thought (CoT)</h3>
+              <p class="text-gray-600">A prompting technique where you ask the AI to explain its reasoning step-by-step. This often improves accuracy on complex problems by forcing the model to "think through" the solution.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Chatbot</h3>
+              <p class="text-gray-600">A software application that simulates human conversation through text or voice. Modern AI chatbots use large language models to generate human-like responses.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Computer Vision</h3>
+              <p class="text-gray-600">AI technology that enables computers to interpret and understand visual information from images and videos. Used in applications like facial recognition, object detection, and medical imaging.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Context Window</h3>
+              <p class="text-gray-600">The maximum amount of text (measured in tokens) that an AI model can process at once. Larger context windows allow models to reference more information in a single conversation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- D -->
+        <div id="D" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">D</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Deep Learning</h3>
+              <p class="text-gray-600">A subset of machine learning using neural networks with many layers. It's the technology behind most modern AI breakthroughs, including image recognition and language models.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Diffusion Model</h3>
+              <p class="text-gray-600">A type of generative AI that creates images by gradually removing noise from random data. Used by tools like Midjourney, DALL-E, and Stable Diffusion.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- E -->
+        <div id="E" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">E</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Embeddings</h3>
+              <p class="text-gray-600">Numerical representations of data (text, images, etc.) that capture semantic meaning. Similar concepts have similar embeddings, enabling semantic search and RAG applications.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Edge AI</h3>
+              <p class="text-gray-600">AI processing that happens locally on a device (phone, camera, sensor) rather than in the cloud. Provides faster responses and works without internet connectivity.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- F -->
+        <div id="F" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">F</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Fine-tuning</h3>
+              <p class="text-gray-600">The process of further training a pre-trained AI model on specific data to customize it for a particular task or domain. Common for adapting LLMs to specialized use cases.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Foundation Model</h3>
+              <p class="text-gray-600">Large AI models trained on broad data that can be adapted to many different tasks. Examples include GPT-4, Claude, and Llama. They serve as the "foundation" for various applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- G -->
+        <div id="G" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">G</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Generative AI</h3>
+              <p class="text-gray-600">AI that creates new content—text, images, audio, video, or code—based on patterns learned from training data. ChatGPT and Midjourney are examples of generative AI.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">GPT (Generative Pre-trained Transformer)</h3>
+              <p class="text-gray-600">A type of large language model architecture developed by OpenAI. The "T" stands for Transformer, the neural network architecture that powers most modern LLMs.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Grounding</h3>
+              <p class="text-gray-600">Connecting AI outputs to real-world data or facts to improve accuracy and reduce hallucinations. RAG is a common grounding technique.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- H -->
+        <div id="H" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">H</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Hallucination</h3>
+              <p class="text-gray-600">When an AI generates false or fabricated information that sounds plausible but isn't true. A significant challenge with LLMs that can be mitigated through RAG and careful prompting.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- I -->
+        <div id="I" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">I</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Inference</h3>
+              <p class="text-gray-600">The process of using a trained AI model to make predictions or generate outputs. When you ask ChatGPT a question, the response is generated through inference.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- L -->
+        <div id="L" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">L</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Large Language Model (LLM)</h3>
+              <p class="text-gray-600">AI models trained on massive amounts of text data that can understand and generate human language. GPT-4, Claude, and Gemini are all LLMs.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Latency</h3>
+              <p class="text-gray-600">The time delay between sending a request to an AI system and receiving a response. Lower latency means faster responses, which is important for real-time applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- M -->
+        <div id="M" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">M</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Machine Learning (ML)</h3>
+              <p class="text-gray-600">A type of AI where computers learn patterns from data rather than being explicitly programmed. ML powers recommendations, predictions, and pattern recognition.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Model</h3>
+              <p class="text-gray-600">In AI, a model is a program that has been trained on data to recognize patterns and make predictions. Different models are optimized for different tasks.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Multimodal AI</h3>
+              <p class="text-gray-600">AI that can process and generate multiple types of content—text, images, audio, video—within the same model. GPT-4V and Gemini are multimodal models.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- N -->
+        <div id="N" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">N</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Natural Language Processing (NLP)</h3>
+              <p class="text-gray-600">AI technology that enables computers to understand, interpret, and generate human language. Powers chatbots, translation, sentiment analysis, and text summarization.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Neural Network</h3>
+              <p class="text-gray-600">A computing system inspired by the human brain, consisting of interconnected nodes (neurons) that process information. The foundation of modern deep learning.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- P -->
+        <div id="P" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">P</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Prompt</h3>
+              <p class="text-gray-600">The input text you give to an AI model to get a response. The quality of your prompt significantly affects the quality of the AI's output.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Prompt Engineering</h3>
+              <p class="text-gray-600">The practice of crafting effective prompts to get better results from AI models. Includes techniques like few-shot examples, chain of thought, and role-playing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- R -->
+        <div id="R" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">R</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">RAG (Retrieval-Augmented Generation)</h3>
+              <p class="text-gray-600">A technique that enhances LLM responses by first retrieving relevant information from a knowledge base, then using that information to generate more accurate, grounded responses.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Reinforcement Learning from Human Feedback (RLHF)</h3>
+              <p class="text-gray-600">A training technique where human feedback is used to improve AI behavior. This is how models like ChatGPT are trained to be helpful and avoid harmful outputs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- S -->
+        <div id="S" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">S</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Semantic Search</h3>
+              <p class="text-gray-600">Search that understands the meaning and intent behind queries rather than just matching keywords. Uses embeddings to find conceptually similar content.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">System Prompt</h3>
+              <p class="text-gray-600">Hidden instructions given to an AI model that define its behavior, personality, or capabilities. Sets the context before the user's conversation begins.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- T -->
+        <div id="T" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">T</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Temperature</h3>
+              <p class="text-gray-600">A parameter that controls how random or creative an AI's responses are. Higher temperature = more creative/random. Lower temperature = more focused/deterministic.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Token</h3>
+              <p class="text-gray-600">The basic unit of text that AI models process—roughly 4 characters or 3/4 of a word in English. Pricing and context limits are usually measured in tokens.</p>
+            </div>
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Transformer</h3>
+              <p class="text-gray-600">The neural network architecture behind modern LLMs. Introduced in 2017, it uses "attention" mechanisms to understand relationships between words in text.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- V -->
+        <div id="V" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">V</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Vector Database</h3>
+              <p class="text-gray-600">A database optimized for storing and searching embeddings (vectors). Essential for RAG applications and semantic search. Examples include Pinecone and Weaviate.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Z -->
+        <div id="Z" class="mb-12">
+          <h2 class="text-2xl font-bold text-blue-600 mb-6 pb-2 border-b border-gray-200">Z</h2>
+          <div class="space-y-6">
+            <div class="term-card p-4 rounded-lg">
+              <h3 class="font-semibold text-lg mb-2">Zero-shot Learning</h3>
+              <p class="text-gray-600">When an AI performs a task without any specific examples—just from its general training. Contrasts with "few-shot" learning where you provide examples in the prompt.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="flex items-end justify-between">
-        <div class="text-2xl font-medium text-white">aloa</div>
-        <div class="text-sm text-white/60">© 2025 Aloa</div>
+    </section>
+
+    <!-- OTHER RESOURCES -->
+    <section class="py-16 px-6 bg-gray-50 border-t border-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-medium mb-8 text-center">More Resources</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          
+          <a href="/blog" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50/30 transition-all bg-white">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">Blog & Articles</div>
+              <div class="text-sm text-gray-500">Guides, tutorials, and insights</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="/tools" class="flex items-center gap-4 p-6 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50/30 transition-all bg-white">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold">Recommended Tools</div>
+              <div class="text-sm text-gray-500">Curated AI tools we use</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative">
+    <div class="relative h-[400px] overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">aloa</span>
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <p class="text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+          </div>
+          <div class="flex justify-end">
+            <div class="space-y-3">
+              <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+              <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+              <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-end justify-between">
+          <div class="text-2xl font-medium text-white">aloa</div>
+          <div class="text-sm text-white/60">© 2025 Aloa</div>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const termCards = document.querySelectorAll('.term-card');
+    const letterSections = document.querySelectorAll('[id]');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      
+      termCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(query) || description.includes(query)) {
+          card.style.display = 'block';
+          card.closest('[id]').style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Hide empty letter sections
+      document.querySelectorAll('.mb-12').forEach(section => {
+        const visibleCards = section.querySelectorAll('.term-card[style="display: block"], .term-card:not([style])');
+        const hiddenCards = section.querySelectorAll('.term-card[style="display: none"]');
+        
+        if (query && hiddenCards.length === section.querySelectorAll('.term-card').length) {
+          section.style.display = 'none';
+        } else {
+          section.style.display = 'block';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
-
