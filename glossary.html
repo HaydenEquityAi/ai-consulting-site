@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary - Aloa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Figtree', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">aloa</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/case-studies" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Case Studies</a>
+        <a href="/ai-development" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">AI Development</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
+        <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO SECTION -->
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] mb-6">
+        Glossary
+      </h1>
+      <p class="text-lg text-gray-600 mb-8">
+        <!-- Add description here -->
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <section class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Add your glossary terms here -->
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="relative">
+  <div class="relative h-[400px] overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <span class="text-[150px] md:text-[250px] font-serif text-white/10 tracking-tight">aloa</span>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="font-serif text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+        </div>
+        <div class="flex justify-end">
+          <div class="space-y-3">
+            <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+            <a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+            <a href="/work-with-us" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+            <a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+            <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+            <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Aloa Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-end justify-between">
+        <div class="text-2xl font-medium text-white">aloa</div>
+        <div class="text-sm text-white/60">© 2025 Aloa</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
