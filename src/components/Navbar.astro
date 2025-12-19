@@ -244,28 +244,47 @@
 </nav>
 
 <script is:inline>
-document.addEventListener('DOMContentLoaded', function() {
-  const btn = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
-  const iconOpen = document.getElementById('menu-icon-open');
-  const iconClose = document.getElementById('menu-icon-close');
-  
-  if (btn) {
-    btn.onclick = function(e) {
+(function() {
+  function initMobileMenu() {
+    var btn = document.getElementById('mobile-menu-button');
+    var menu = document.getElementById('mobile-menu');
+    var iconOpen = document.getElementById('menu-icon-open');
+    var iconClose = document.getElementById('menu-icon-close');
+    
+    if (!btn || !menu) {
+      return;
+    }
+    
+    btn.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
       
-      if (menu) {
-        menu.classList.toggle('hidden');
-      }
+      menu.classList.toggle('hidden');
+      
       if (iconOpen && iconClose) {
         iconOpen.classList.toggle('hidden');
         iconClose.classList.toggle('hidden');
       }
-      
-      console.log('Menu clicked, hidden:', menu && menu.classList.contains('hidden'));
-    };
+    });
+    
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+        if (iconOpen && iconClose) {
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      }
+    });
   }
-});
+  
+  // Run immediately if DOM is ready, otherwise wait
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
 </script>
 
