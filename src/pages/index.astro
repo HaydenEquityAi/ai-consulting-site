@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import Layout from "../layouts/Layout.astro";
+---
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aloa - AI Consultancy and Development Firm</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Figtree', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Figtree', system-ui, sans-serif; }
-  </style>
-</head>
-<body class="overflow-x-hidden">
-
- <!-- NAVBAR -->
+<Layout title="Aloa - AI Consultancy and Development Firm">
+<main>
  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
  <div class="max-w-7xl mx-auto px-6 py-4">
  <div class="flex items-center justify-between">
@@ -722,9 +697,8 @@
     });
   });
 </script>
-
-</body>
-</html>
+</main>
+</Layout>
 
 
 
