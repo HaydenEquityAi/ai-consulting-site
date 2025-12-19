@@ -1,1 +1,13 @@
-{"cleanUrls": true, "trailingSlash": false}
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "astro",
+  "rewrites": [
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog/:slug"
+    }
+  ]
+}
