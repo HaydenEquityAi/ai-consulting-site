@@ -186,12 +186,118 @@
         </div>
         <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
       </div>
-      <button id="mobile-menu-btn" class="md:hidden p-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <button id="mobile-menu-button" class="md:hidden p-2" aria-label="Toggle menu">
+        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
   </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-white border-b border-gray-100 shadow-lg z-40">
+    <div class="max-w-7xl mx-auto px-6 py-6 space-y-4">
+      <!-- Case Studies -->
+      <div class="space-y-2">
+        <a href="/case-studies" class="block text-sm text-gray-700 hover:text-black transition-colors py-2">Case Studies</a>
+        <div class="pl-4 space-y-2 border-l border-gray-200">
+          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">All Case Studies</a>
+          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">By Industry</a>
+          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">By Service</a>
+        </div>
+      </div>
+      
+      <!-- AI Development -->
+      <div class="space-y-2">
+        <a href="/ai-development" class="block text-sm text-gray-700 hover:text-black transition-colors py-2">AI Development</a>
+        <div class="pl-4 space-y-2 border-l border-gray-200">
+          <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">Industries</p>
+          <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors">Healthcare</a>
+          <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors">Real Estate</a>
+          <a href="/industries-finance" class="block text-sm text-gray-600 hover:text-black transition-colors">Finance</a>
+          <a href="/industries-construction" class="block text-sm text-gray-600 hover:text-black transition-colors">Construction</a>
+          <a href="/industries-energy" class="block text-sm text-gray-600 hover:text-black transition-colors">Energy</a>
+          <p class="text-xs uppercase tracking-wide text-gray-500 mb-2 mt-4">Services</p>
+          <a href="/services-ai-machine-learning" class="block text-sm text-gray-600 hover:text-black transition-colors">AI & Machine Learning</a>
+          <a href="/services-ai-consulting" class="block text-sm text-gray-600 hover:text-black transition-colors">AI Consulting</a>
+          <a href="/services-digital-transformation" class="block text-sm text-gray-600 hover:text-black transition-colors">Digital Transformation</a>
+          <a href="/services-workflow-automation" class="block text-sm text-gray-600 hover:text-black transition-colors">Workflow Automation</a>
+          <a href="/services-internal-tooling" class="block text-sm text-gray-600 hover:text-black transition-colors">Internal Tooling</a>
+        </div>
+      </div>
+      
+      <!-- Resources -->
+      <div class="space-y-2">
+        <div class="text-sm text-gray-700 py-2">Resources</div>
+        <div class="pl-4 space-y-2 border-l border-gray-200">
+          <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors">Blog</a>
+          <a href="/tools" class="block text-sm text-gray-600 hover:text-black transition-colors">Tools</a>
+          <a href="/glossary" class="block text-sm text-gray-600 hover:text-black transition-colors">Glossary</a>
+        </div>
+      </div>
+      
+      <!-- Work With Us Button -->
+      <a href="/work-with-us" class="block w-full text-center px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors mt-4">Work With Us</a>
+    </div>
+  </div>
 </nav>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIconOpen = document.getElementById('menu-icon-open');
+  const menuIconClose = document.getElementById('menu-icon-close');
+  
+  function toggleMenu() {
+    if (mobileMenu && menuIconOpen && menuIconClose) {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+        menuIconClose.classList.remove('hidden');
+      }
+    }
+  }
+  
+  function closeMenu() {
+    if (mobileMenu && menuIconOpen && menuIconClose) {
+      mobileMenu.classList.add('hidden');
+      menuIconOpen.classList.remove('hidden');
+      menuIconClose.classList.add('hidden');
+    }
+  }
+  
+  // Toggle menu on button click
+  menuButton?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+  
+  // Close menu when clicking on a link
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileMenu && menuButton && !mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+</script>
 
