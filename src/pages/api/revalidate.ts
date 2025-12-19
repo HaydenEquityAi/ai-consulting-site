@@ -1,5 +1,8 @@
 // On-demand revalidation endpoint
 // Call this endpoint to trigger a rebuild when new posts are published
+// Note: This requires SSR. For static sites, use platform-specific webhooks instead.
+
+export const prerender = false;
 
 export async function GET({ request }: { request: Request }) {
   const authHeader = request.headers.get('authorization');
