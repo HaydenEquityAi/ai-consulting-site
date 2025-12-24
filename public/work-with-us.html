@@ -36,10 +36,10 @@
 <body class="overflow-x-hidden bg-white">
 
   <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-      <div class="flex items-center justify-between">
-        <a href="/" class="text-2xl font-medium tracking-tight text-blue-600">intelio</a>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="/" class="text-2xl font-medium tracking-tight text-black">intelio</a>
         <div class="hidden md:flex items-center gap-8">
           <div class="relative group">
 <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
@@ -75,7 +75,7 @@ Case Studies
 </div>
 </div>
           <div class="relative group">
-            <a href="/ai-development" class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="/ai-development" class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
               AI Development
               <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -187,7 +187,7 @@ Case Studies
  </div>
  <a href="/enterprise-ai" class="text-sm text-gray-700 hover:text-black transition-colors">Enterprise AI</a>
  <div class="relative group">
- <button class="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+ <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
  Resources
               <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -221,11 +221,51 @@ Case Studies
               </div>
             </div>
           </div>
-          <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
-        </div>
+        <a href="/work-with-us.html" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+      </div>
+      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
+        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-white border-b border-gray-100 shadow-lg z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-4">
+    <!-- Case Studies -->
+    <div class="space-y-2">
+      <div class="text-sm text-gray-700 py-2 font-medium">Case Studies</div>
+      <div class="pl-4 space-y-2 border-l border-gray-200">
+        <a href="/case-studies.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">All Case Studies</a>
+        <a href="/case-studies.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">By Industry</a>
+        <a href="/case-studies.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">By Service</a>
       </div>
     </div>
-  </nav>
+    <!-- AI Development -->
+    <div class="space-y-2">
+      <a href="/ai-development.html" class="block text-sm text-gray-700 hover:text-black transition-colors py-2 font-medium min-h-[44px] flex items-center">AI Development</a>
+    </div>
+    <!-- Enterprise AI -->
+    <div class="space-y-2">
+      <a href="/enterprise-ai.html" class="block text-sm text-gray-700 hover:text-black transition-colors py-2 font-medium min-h-[44px] flex items-center">Enterprise AI</a>
+    </div>
+    <!-- Resources -->
+    <div class="space-y-2">
+      <div class="text-sm text-gray-700 py-2 font-medium">Resources</div>
+      <div class="pl-4 space-y-2 border-l border-gray-200">
+        <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Blog</a>
+        <a href="/tools.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Tools</a>
+        <a href="/glossary.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Glossary</a>
+      </div>
+    </div>
+    <!-- Work With Us Button -->
+    <a href="/work-with-us.html" class="block w-full text-center px-5 py-3 min-h-[44px] bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors mt-4 flex items-center justify-center">Work With Us</a>
+  </div>
+</div>
 
   <main class="pt-24">
     <!-- HERO -->
@@ -594,6 +634,63 @@ Case Studies
       }
     });
   </script>
+
+<script>
+  (function() {
+    function initMobileMenu() {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      
+      if (!btn || !menu) {
+        return;
+      }
+      
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        menu.classList.toggle('hidden');
+        
+        if (iconOpen && iconClose) {
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        }
+      });
+      
+      // Close when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        }
+      });
+      
+      // Close menu when a link is clicked
+      var menuLinks = menu.querySelectorAll('a');
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+      });
+    }
+    
+    // Run immediately if DOM is ready, otherwise wait
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+      initMobileMenu();
+    }
+  })();
+</script>
 
 </body>
 </html>
