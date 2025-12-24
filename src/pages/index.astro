@@ -642,11 +642,17 @@ Resources
  </main>
 
  <!-- FOOTER -->
- <footer class="bg-gray-800 border-t border-gray-700">
- <div class="max-w-6xl mx-auto px-6 py-16">
- <div class="grid md:grid-cols-2 gap-12 mb-12">
+ <footer class="relative">
+ <div class="relative h-[400px] overflow-hidden">
+ <div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+ <div class="absolute inset-0 bg-black/40"></div>
+ <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+ <span class="text-[150px] md:text-[250px] text-white/10 tracking-tight">intelio</span>
+ </div>
+ <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
+ <div class="grid md:grid-cols-2 gap-12">
  <div>
- <p class="text-2xl text-white leading-relaxed">Helping humanity<br>step into the future.</p>
+ <p class="text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
  </div>
  <div class="flex justify-end">
  <div class="space-y-3">
@@ -662,9 +668,10 @@ Resources
  </div>
  </div>
  </div>
- <div class="flex items-end justify-between pt-8 border-t border-gray-700">
+ <div class="flex items-end justify-between">
  <div class="text-2xl font-medium text-white">intelio</div>
  <div class="text-sm text-white/60">© 2025 Intelio</div>
+ </div>
  </div>
  </div>
  </footer>
