@@ -205,8 +205,11 @@ Resources
         
         <!-- AI Development with ALL sub-options -->
         <div class="py-2">
-          <p class="text-sm font-medium text-gray-700 mb-2">AI Development</p>
-          <div class="pl-4 space-y-2 border-l border-gray-200">
+          <button type="button" class="ai-dev-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            AI Development
+            <span class="ai-dev-icon text-xs">+</span>
+          </button>
+          <div class="ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
             <p class="text-xs uppercase text-gray-500 mb-2">Industries</p>
             <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Healthcare</a>
             <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Real Estate</a>
@@ -229,8 +232,11 @@ Resources
         
         <!-- Resources with sub-options -->
         <div class="py-2">
-          <p class="text-sm font-medium text-gray-700 mb-2">Resources</p>
-          <div class="pl-4 space-y-2 border-l border-gray-200">
+          <button type="button" class="resources-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            Resources
+            <span class="resources-icon text-xs">+</span>
+          </button>
+          <div class="resources-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
             <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Blog</a>
             <a href="/tools.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Tools</a>
             <a href="/glossary.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Glossary</a>
@@ -859,6 +865,42 @@ Resources
       document.addEventListener('DOMContentLoaded', initMobileMenu);
     } else {
       initMobileMenu();
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    // AI Development toggle
+    var aiDevToggle = document.querySelector('.ai-dev-toggle');
+    var aiDevSubmenu = document.querySelector('.ai-dev-submenu');
+    var aiDevIcon = document.querySelector('.ai-dev-icon');
+    
+    if (aiDevToggle && aiDevSubmenu) {
+      aiDevToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        aiDevSubmenu.classList.toggle('hidden');
+        if (aiDevIcon) {
+          aiDevIcon.textContent = aiDevSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+    
+    // Resources toggle
+    var resourcesToggle = document.querySelector('.resources-toggle');
+    var resourcesSubmenu = document.querySelector('.resources-submenu');
+    var resourcesIcon = document.querySelector('.resources-icon');
+    
+    if (resourcesToggle && resourcesSubmenu) {
+      resourcesToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        resourcesSubmenu.classList.toggle('hidden');
+        if (resourcesIcon) {
+          resourcesIcon.textContent = resourcesSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
     }
   })();
 </script>
