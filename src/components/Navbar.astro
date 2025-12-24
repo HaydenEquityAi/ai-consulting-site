@@ -187,105 +187,53 @@
         </div>
         <a href="/work-with-us" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
       </div>
-      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
-        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <button type="button" id="mobile-menu-btn" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
   </div>
   
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-white border-b border-gray-100 shadow-lg z-40">
-    <div class="max-w-7xl mx-auto px-6 py-6 space-y-4">
-      <!-- Case Studies -->
-      <div class="space-y-2">
-        <a href="/case-studies" class="block text-sm text-gray-700 hover:text-black transition-colors py-2">Case Studies</a>
-        <div class="pl-4 space-y-2 border-l border-gray-200">
-          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">All Case Studies</a>
-          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">By Industry</a>
-          <a href="/case-studies" class="block text-sm text-gray-600 hover:text-black transition-colors">By Service</a>
-        </div>
-      </div>
-      
-      <!-- AI Development -->
-      <div class="space-y-2">
-        <a href="/ai-development" class="block text-sm text-gray-700 hover:text-black transition-colors py-2">AI Development</a>
-        <div class="pl-4 space-y-2 border-l border-gray-200">
-          <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">Industries</p>
-          <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors">Healthcare</a>
-          <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors">Real Estate</a>
-          <a href="/industries-finance" class="block text-sm text-gray-600 hover:text-black transition-colors">Finance</a>
-          <a href="/industries-construction" class="block text-sm text-gray-600 hover:text-black transition-colors">Construction</a>
-          <a href="/industries-energy" class="block text-sm text-gray-600 hover:text-black transition-colors">Energy</a>
-          <p class="text-xs uppercase tracking-wide text-gray-500 mb-2 mt-4">Services</p>
-          <a href="/services-ai-machine-learning" class="block text-sm text-gray-600 hover:text-black transition-colors">AI & Machine Learning</a>
-          <a href="/services-ai-consulting" class="block text-sm text-gray-600 hover:text-black transition-colors">AI Consulting</a>
-          <a href="/services-digital-transformation" class="block text-sm text-gray-600 hover:text-black transition-colors">Digital Transformation</a>
-          <a href="/services-workflow-automation" class="block text-sm text-gray-600 hover:text-black transition-colors">Workflow Automation</a>
-          <a href="/services-internal-tooling" class="block text-sm text-gray-600 hover:text-black transition-colors">Internal Tooling</a>
-        </div>
-      </div>
-      
-      <!-- Resources -->
-      <div class="space-y-2">
-        <div class="text-sm text-gray-700 py-2">Resources</div>
-        <div class="pl-4 space-y-2 border-l border-gray-200">
-          <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors">Blog</a>
-          <a href="/tools" class="block text-sm text-gray-600 hover:text-black transition-colors">Tools</a>
-          <a href="/glossary" class="block text-sm text-gray-600 hover:text-black transition-colors">Glossary</a>
-        </div>
-      </div>
-      
-      <!-- Work With Us Button -->
-      <a href="/work-with-us" class="block w-full text-center px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors mt-4">Work With Us</a>
-    </div>
+  <div id="mobile-menu" class="hidden md:hidden fixed top-[73px] left-0 right-0 bg-white border-b border-gray-100 shadow-lg z-40">
+    <nav class="flex flex-col p-4 gap-4">
+      <a href="/case-studies.html" class="text-gray-700 hover:text-black transition-colors py-2">Case Studies</a>
+      <a href="/ai-development.html" class="text-gray-700 hover:text-black transition-colors py-2">AI Development</a>
+      <a href="/enterprise-ai.html" class="text-gray-700 hover:text-black transition-colors py-2">Enterprise AI</a>
+      <a href="/blog" class="text-gray-700 hover:text-black transition-colors py-2">Resources</a>
+      <a href="/work-with-us.html" class="bg-black text-white px-5 py-2.5 rounded-full text-center hover:bg-gray-800 transition-colors">Work With Us</a>
+    </nav>
   </div>
 </nav>
 
 <script is:inline>
-(function() {
-  function initMobileMenu() {
-    var btn = document.getElementById('mobile-menu-button');
-    var menu = document.getElementById('mobile-menu');
-    var iconOpen = document.getElementById('menu-icon-open');
-    var iconClose = document.getElementById('menu-icon-close');
-    
-    if (!btn || !menu) {
-      return;
-    }
-    
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      menu.classList.toggle('hidden');
-      
-      if (iconOpen && iconClose) {
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-      }
-    });
-    
-    // Close when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!menu.contains(e.target) && !btn.contains(e.target)) {
-        menu.classList.add('hidden');
-        if (iconOpen && iconClose) {
-          iconOpen.classList.remove('hidden');
-          iconClose.classList.add('hidden');
+  (function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      // Toggle menu on button click
+      mobileMenuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when clicking a link
+      const menuLinks = mobileMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
         }
-      }
-    });
-  }
-  
-  // Run immediately if DOM is ready, otherwise wait
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMobileMenu);
-  } else {
-    initMobileMenu();
-  }
-})();
+      });
+    }
+  })();
 </script>
 
