@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Integration - intelio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Figtree', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="/" class="text-2xl font-medium tracking-tight text-black">intelio</a>
+<div class="hidden md:flex items-center gap-8">
+ <div class="relative group">
+<button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+Case Studies
+<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+</button>
+<div class="absolute left-0 top-full mt-3 w-64 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+<div class="p-4 space-y-3">
+<a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M9 11l3 3L22 4" />
+<path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+</svg>
+<span>All Case Studies</span>
+</a>
+<a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 2L2 7l10 5 10-5-10-5z" />
+<path d="M2 17l10 5 10-5" />
+<path d="M2 12l10 5 10-5" />
+</svg>
+<span>By Industry</span>
+</a>
+<a href="/case-studies" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+</svg>
+<span>By Service</span>
+</a>
+</div>
+</div>
+</div>
+ <div class="relative group">
+ <a href="/ai-development" class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+ AI Development
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </a>
+ <div class="absolute right-0 top-full mt-3 w-[540px] bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+ <div class="grid grid-cols-2 gap-8 p-6">
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
+ <div class="space-y-3">
+ <a href="/industries-healthcare" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="9" />
+ <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+ </svg>
+ <span>Healthcare</span>
+ </a>
+ <a href="/industries-real-estate" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 10l8-6 8 6" />
+ <path d="M6 10v8h12v-8" />
+ <path d="M10 18v-4h4v4" />
+ </svg>
+ <span>Real Estate</span>
+ </a>
+ <a href="/industries-finance" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 15l4-4 3 3 6-6" />
+ <path d="M4 19h16" />
+ </svg>
+ <span>Finance</span>
+ </a>
+ <a href="/industries-construction" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 13l8-8 3 3-8 8H4v-3z" />
+ <path d="M13 5l2-2 3 3-2 2" />
+ <path d="M7 16h10" />
+ </svg>
+ <span>Construction</span>
+ </a>
+ <a href="/industries-energy" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M13 2L6 14h6l-1 8 7-12h-6z" />
+ </svg>
+ <span>Energy</span>
+ </a>
+ <a href="/industries" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all industries &rarr;</span>
+ </a>
+ </div>
+ </div>
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Services</p>
+ <div class="space-y-3">
+ <a href="/services-ai-machine-learning" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 4v16" />
+ <path d="M8 8v2m0 4v2" />
+ <path d="M16 8v2m0 4v2" />
+ <path d="M4 12h4m8 0h4" />
+ </svg>
+ <span>AI &amp; Machine Learning</span>
+ </a>
+ <a href="/services-ai-consulting" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 15v4a2 2 0 0 1-2 2h-5l-4 2v-2H5a2 2 0 0 1-2-2v-4" />
+ <path d="M7 9a5 5 0 1 1 10 0v3a5 5 0 1 1-10 0V9z" />
+ </svg>
+ <span>AI Consulting</span>
+ </a>
+ <a href="/services-digital-transformation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="4" y="5" width="16" height="14" rx="2" />
+ <path d="M9 9h6" />
+ <path d="M9 13h4" />
+ </svg>
+ <span>Digital Transformation</span>
+ </a>
+ <a href="/services-workflow-automation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 9h9l-2-2m2 2-2 2" />
+ <path d="M20 15h-9l2 2m-2-2 2-2" />
+ <path d="M12 7V5m0 14v-2" />
+ </svg>
+ <span>Workflow Automation</span>
+ </a>
+ <a href="/services-internal-tooling" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 3l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L6.2 7.2l4-.6z" />
+ </svg>
+ <span>Internal Tooling</span>
+ </a>
+ <a href="/services" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all services &rarr;</span>
+ </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="/microsoft-intelligence" class="text-sm text-gray-700 hover:text-black transition-colors">Enterprise AI</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black transition-colors">
+Resources
+<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+</button>
+<div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+<div class="p-4 space-y-3">
+<a href="/blog" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 4h14v16H5z" />
+<path d="M9 8h6" />
+<path d="M9 12h6" />
+<path d="M9 16h3" />
+</svg>
+<span>Blog</span>
+</a>
+<a href="/tools" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<span>Tools</span>
+</a>
+<a href="/glossary" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<span>Glossary</span>
+</a>
+</div>
+</div>
+</div>
+        <a href="/work-with-us.html" class="px-5 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+      </div>
+      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
+        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+      <nav class="flex flex-col gap-4 pt-4">
+        <a href="/case-studies.html" class="block py-2 text-sm text-gray-700 hover:text-black transition-colors min-h-[44px] flex items-center">Case Studies</a>
+        
+        <!-- AI Development with ALL sub-options -->
+        <div class="py-2">
+          <button type="button" class="ai-dev-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            AI Development
+            <span class="ai-dev-icon text-xs">+</span>
+          </button>
+          <div class="ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <p class="text-xs uppercase text-gray-500 mb-2">Industries</p>
+            <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Healthcare</a>
+            <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Real Estate</a>
+            <a href="/industries-finance" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Finance</a>
+            <a href="/industries-construction" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Construction</a>
+            <a href="/industries-energy" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Energy</a>
+            <a href="/industries" class="block text-sm text-blue-600 hover:text-blue-700 transition-colors py-2 min-h-[44px] flex items-center">Explore all industries →</a>
+            
+            <p class="text-xs uppercase text-gray-500 mb-2 mt-4">Services</p>
+            <a href="/services-ai-machine-learning" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI & Machine Learning</a>
+            <a href="/services-ai-consulting" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI Consulting</a>
+            <a href="/services-digital-transformation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Digital Transformation</a>
+            <a href="/services-workflow-automation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Workflow Automation</a>
+            <a href="/services-internal-tooling" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Internal Tooling</a>
+            <a href="/services" class="block text-sm text-blue-600 hover:text-blue-700 transition-colors py-2 min-h-[44px] flex items-center">Explore all services →</a>
+          </div>
+        </div>
+        
+        <a href="/microsoft-intelligence.html" class="block py-2 text-sm text-gray-700 hover:text-black transition-colors min-h-[44px] flex items-center">Enterprise AI</a>
+        
+        <!-- Resources with sub-options -->
+        <div class="py-2">
+          <button type="button" class="resources-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            Resources
+            <span class="resources-icon text-xs">+</span>
+          </button>
+          <div class="resources-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Blog</a>
+            <a href="/tools.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Tools</a>
+            <a href="/glossary.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Glossary</a>
+          </div>
+        </div>
+        
+        <a href="/work-with-us.html" class="block py-3 mt-4 bg-black text-white text-sm text-center rounded-full hover:bg-gray-800 transition-colors min-h-[44px] flex items-center justify-center">Work With Us</a>
+      </nav>
+    </div>
+  </div>
+</nav>
+
+ <main>
+ <!-- HERO SECTION -->
+ <section class="pt-32 pb-16 px-6">
+ <div class="max-w-6xl mx-auto">
+ <div class="max-w-2xl">
+ <h1 class="text-5xl md:text-6xl leading-[1.1] tracking-[-1px] mb-6">
+ <span class="">Enterprise AI</span><br>
+ <span class=" bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent">Integration</span>
+ </h1>
+ <p class="text-lg text-gray-600 mb-4">
+ We integrate Microsoft AI directly into the systems you already run—Microsoft 365, Dynamics, Power Platform, and Azure—so work happens faster, decisions improve, and your people gain leverage.
+ </p>
+ <p class="text-lg text-gray-600 mb-8">
+ No rip-and-replace. No experimental platforms. Just operational intelligence embedded where work already happens.
+ </p>
+ <div class="flex items-center gap-4">
+ <a href="/work-with-us.html" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+ Get Started
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+ </svg>
+ </a>
+ <a href="#approach" class="text-blue-500 text-sm font-medium hover:text-blue-600 transition-colors">
+ See Our Approach
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- TRANSFORMATION SECTION -->
+ <section class="py-16 px-6 bg-gray-50">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">The transformation</p>
+ <h2 class="text-3xl md:text-4xl font-semibold mb-12">From Static to Dynamic Enterprise</h2>
+ 
+ <div class="grid md:grid-cols-2 gap-6 mb-8">
+ <!-- Static Enterprise Card -->
+ <div class="border border-gray-200 rounded-xl p-6 bg-white">
+ <h3 class="text-xl font-semibold mb-4 text-gray-900">Static Enterprise (Today)</h3>
+ <ul class="space-y-3">
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Data stored in systems, manually retrieved</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Information siloed by department</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Reports generated on request</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Decisions based on what we remember to ask</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Tools do what we tell them</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-gray-400 mt-1">•</span>
+ <span>Expertise walks out the door with employees</span>
+ </li>
+ </ul>
+ </div>
+ 
+ <!-- Dynamic Enterprise Card -->
+ <div class="border border-blue-200 rounded-xl p-6 bg-blue-50/30">
+ <h3 class="text-xl font-semibold mb-4 text-gray-900">Dynamic Enterprise (Tomorrow)</h3>
+ <ul class="space-y-3">
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Intelligence embedded in systems, proactively surfaced</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Knowledge connected across the organization</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Insights delivered automatically when relevant</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Decisions informed by everything you know</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Tools anticipate what you need</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <span class="text-blue-500 mt-1">•</span>
+ <span>Institutional knowledge captured and accessible</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ 
+ <p class="text-gray-600 max-w-3xl">
+ This transformation doesn't require replacing your existing systems. It means adding intelligence to them—making your ERP smarter, making SharePoint searchable in natural language, making every employee more capable through AI assistance.
+ </p>
+ </div>
+ </section>
+
+ <!-- THREE PILLARS SECTION -->
+ <section id="approach" class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">Our approach</p>
+ <div class="grid md:grid-cols-3 gap-6">
+ <!-- Card 1 -->
+ <div class="border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+ <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+ <line x1="12" y1="22.08" x2="12" y2="12" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-semibold mb-3">Integrate Intelligence</h3>
+ <p class="text-gray-600 text-sm">
+ We embed AI directly into Microsoft 365, Dynamics 365, Power Platform, and Azure—using the tools already licensed and approved in your tenant. No new platforms. No parallel systems.
+ </p>
+ </div>
+ 
+ <!-- Card 2 -->
+ <div class="border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <line x1="12" y1="5" x2="12" y2="19" />
+ <line x1="5" y1="12" x2="19" y2="12" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-semibold mb-3">Automate to Elevate</h3>
+ <p class="text-gray-600 text-sm">
+ We eliminate repetitive work across email, documents, approvals, data entry, and reporting—so your teams spend time on judgment, strategy, and execution. AI becomes leverage, not disruption.
+ </p>
+ </div>
+ 
+ <!-- Card 3 -->
+ <div class="border border-gray-200 rounded-xl p-6">
+ <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-semibold mb-3">Decide with Confidence</h3>
+ <p class="text-gray-600 text-sm">
+ We surface the right information at the moment of decision—inside Teams, Outlook, CRM, and operational workflows. Less noise. Faster clarity. Decisions backed by context, not dashboards.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- MICROSOFT AI TOOLS SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <div class="mb-16">
+ <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Microsoft AI tools we integrate</h2>
+ <div class="w-16 h-1 bg-blue-500 mb-6"></div>
+ </div>
+ 
+ <div class="grid md:grid-cols-3 gap-8">
+ <!-- CORE ENTERPRISE TOOLS -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-2">Core Enterprise Tools</h3>
+ <div class="w-12 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+ <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
+ <!-- Microsoft 365 Copilot -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+ <rect x="4" y="4" width="7" height="7" fill="#F25022"/>
+ <rect x="13" y="4" width="7" height="7" fill="#7FBA00"/>
+ <rect x="4" y="13" width="7" height="7" fill="#00A4EF"/>
+ <rect x="13" y="13" width="7" height="7" fill="#FFB900"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Microsoft 365 Copilot</span>
+ </div>
+ <!-- Azure OpenAI Service -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Azure OpenAI Service</span>
+ </div>
+ <!-- Copilot Studio -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Copilot Studio</span>
+ </div>
+ <!-- Power Platform AI -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M13 2L6 14h6l-1 8 7-12h-6z"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Power Platform AI</span>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- BUSINESS APPLICATION AI -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-2">Business Application AI</h3>
+ <div class="w-12 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+ <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
+ <!-- Dynamics 365 Copilot -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+ <rect x="4" y="4" width="7" height="7" fill="#F25022"/>
+ <rect x="13" y="4" width="7" height="7" fill="#7FBA00"/>
+ <rect x="4" y="13" width="7" height="7" fill="#00A4EF"/>
+ <rect x="13" y="13" width="7" height="7" fill="#FFB900"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Dynamics 365 Copilot</span>
+ </div>
+ <!-- Microsoft Security Copilot -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+ <path d="M9 12l2 2 4-4"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Security Copilot</span>
+ </div>
+ <!-- Copilot in Word -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M5 4h14v16H5z"/>
+ <path d="M9 8h6M9 12h6M9 16h3" fill="white"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Copilot in Office</span>
+ </div>
+ <!-- Copilot in Teams -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Copilot in Teams</span>
+ </div>
+ <!-- Copilot in Outlook -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Copilot in Outlook</span>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- DEVELOPER & CUSTOM AI -->
+ <div>
+ <h3 class="text-lg font-semibold text-center mb-2">Developer & Custom AI</h3>
+ <div class="w-12 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+ <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+ <!-- Azure AI Foundry -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+ <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Azure AI Foundry</span>
+ </div>
+ <!-- Azure AI Search -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <circle cx="11" cy="11" r="8"/>
+ <path d="M21 21l-4.35-4.35"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Azure AI Search</span>
+ </div>
+ <!-- Semantic Kernel -->
+ <div class="flex flex-col items-center">
+ <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+ <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+ <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+ <line x1="12" y1="22.08" x2="12" y2="12"/>
+ </svg>
+ </div>
+ <span class="text-xs text-gray-600 text-center">Semantic Kernel</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <p class="text-center text-sm text-gray-500 mt-12 max-w-2xl mx-auto">
+ intelio specializes in integrating Microsoft's comprehensive AI stack—navigating 125+ Microsoft AI products to embed intelligence where your enterprise already works.
+ </p>
+ </div>
+ </section>
+
+ <!-- THE PROBLEM SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">The challenge</p>
+ <h2 class="text-3xl md:text-4xl font-semibold mb-6">The AI Paradox</h2>
+ <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+ Enterprises have already invested millions in Microsoft—Microsoft 365, Dynamics 365, Power Platform, Azure. Microsoft has now embedded AI across every layer of that stack. Yet most organizations are stuck: overwhelmed by announcements, unclear on what's real, and unsure how to turn AI on without breaking security, governance, or operations.
+ </p>
+ 
+ <!-- Stats Row -->
+ <div class="grid md:grid-cols-3 gap-8 mb-12 text-center">
+ <div>
+ <div class="text-4xl font-bold text-blue-500 mb-2">400+</div>
+ <div class="text-sm text-gray-600">New Copilot features in the last year</div>
+ </div>
+ <div>
+ <div class="text-4xl font-bold text-blue-500 mb-2">&lt;20%</div>
+ <div class="text-sm text-gray-600">Active AI usage even after deployment</div>
+ </div>
+ <div>
+ <div class="text-4xl font-bold text-blue-500 mb-2">$0</div>
+ <div class="text-sm text-gray-600">ROI captured without proper adoption</div>
+ </div>
+ </div>
+ 
+ <!-- Two Column Comparison -->
+ <div class="grid md:grid-cols-2 gap-8">
+ <!-- Left Column -->
+ <div>
+ <h3 class="text-xl font-semibold mb-4">What They Think They Need</h3>
+ <ul class="space-y-3">
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span>An AI strategy deck</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span>A centralized data warehouse</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span>A custom AI platform</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span>More dashboards and reports</span>
+ </li>
+ </ul>
+ </div>
+ 
+ <!-- Right Column -->
+ <div>
+ <h3 class="text-xl font-semibold mb-4">What They Actually Need</h3>
+ <ul class="space-y-3">
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span>AI embedded into tools employees already use</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span>Secure access to existing data sources</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span>Automated workflows that reduce manual work</span>
+ </li>
+ <li class="flex items-start gap-3 text-gray-600">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span>Insights delivered inside daily operations</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- THREE HORIZONS SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">The three horizons of value</p>
+ <div class="grid md:grid-cols-3 gap-8">
+ <!-- Card 1 -->
+ <div class="relative">
+ <div class="text-6xl font-bold text-gray-200 mb-4">01</div>
+ <h3 class="text-2xl font-semibold mb-2">ACTIVATE</h3>
+ <p class="text-sm text-gray-500 mb-3">Immediate Value</p>
+ <p class="text-gray-600 text-sm">
+ Enable the AI capabilities already included in your Microsoft licenses. We focus on adoption, security alignment, and real usage—so value appears in weeks, not quarters.
+ </p>
+ <div class="absolute top-0 right-0 mt-8">
+ <svg class="w-8 h-8 text-gray-300 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+ </svg>
+ </div>
+ </div>
+ 
+ <!-- Card 2 -->
+ <div class="relative">
+ <div class="text-6xl font-bold text-gray-200 mb-4">02</div>
+ <h3 class="text-2xl font-semibold mb-2">AUTOMATE</h3>
+ <p class="text-sm text-gray-500 mb-3">Operational Value</p>
+ <p class="text-gray-600 text-sm">
+ Embed intelligence into operational workflows using Copilot Studio, Power Platform, and Azure AI. Manual work disappears. Processes run with minimal human intervention.
+ </p>
+ <div class="absolute top-0 right-0 mt-8">
+ <svg class="w-8 h-8 text-gray-300 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+ </svg>
+ </div>
+ </div>
+ 
+ <!-- Card 3 -->
+ <div>
+ <div class="text-6xl font-bold text-gray-200 mb-4">03</div>
+ <h3 class="text-2xl font-semibold mb-2">DECIDE</h3>
+ <p class="text-sm text-gray-500 mb-3">Strategic Value</p>
+ <p class="text-gray-600 text-sm">
+ Deliver intelligence at the point of action—security operations, leadership decisions, and operational oversight. AI becomes a decision-support system, not just a productivity tool.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- WHAT WE DO / DON'T DO SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">Our focus</p>
+ <div class="grid md:grid-cols-2 gap-12">
+ <!-- Left Column -->
+ <div>
+ <h3 class="text-xl font-semibold mb-6">We Do</h3>
+ <ul class="space-y-4">
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Integrate AI into Microsoft 365, Dynamics 365, Power Platform, and Azure</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Automate document handling, email workflows, approvals, and data entry</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Build AI agents that answer questions and take action</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Securely connect AI to your existing data sources</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Train teams to work effectively with AI inside their daily tools</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-600">Track ROI, adoption, and operational impact</span>
+ </li>
+ </ul>
+ </div>
+ 
+ <!-- Right Column -->
+ <div>
+ <h3 class="text-xl font-semibold mb-6">We Don't</h3>
+ <ul class="space-y-4">
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span class="text-gray-600">Build custom dashboards when Power BI already exists</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span class="text-gray-600">Create new databases when Dataverse, SQL, or Fabric are available</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span class="text-gray-600">Deploy AI that lives outside real workflows</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span class="text-gray-600">Replace your existing systems</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <svg class="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+ </svg>
+ <span class="text-gray-600">Implement AI without a business outcome</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- DIFFERENTIATORS SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <p class="text-sm text-gray-500 mb-4">What makes us different</p>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="border border-gray-200 rounded-xl p-6">
+ <h3 class="text-xl font-semibold mb-4">Integration, Not Creation</h3>
+ <p class="text-gray-600 text-sm italic">
+ "We don't introduce new platforms. We make the platforms you already rely on intelligent."
+ </p>
+ </div>
+ <div class="border border-gray-200 rounded-xl p-6">
+ <h3 class="text-xl font-semibold mb-4">Elevation, Not Replacement</h3>
+ <p class="text-gray-600 text-sm italic">
+ "AI absorbs repetitive work so your people can focus on judgment, leadership, and execution."
+ </p>
+ </div>
+ <div class="border border-gray-200 rounded-xl p-6">
+ <h3 class="text-xl font-semibold mb-4">Practitioners, Not Advisors</h3>
+ <p class="text-gray-600 text-sm italic">
+ "We design, build, and deploy inside real enterprise environments. No theory. No slide decks."
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- CTA SECTION -->
+ <section class="py-16 px-6 border-t border-gray-100">
+ <div class="max-w-4xl mx-auto text-center">
+ <h2 class="text-3xl md:text-4xl font-semibold mb-4">Ready to activate the AI you already own?</h2>
+ <p class="text-lg text-gray-600 mb-8">Let's integrate intelligence into your Microsoft ecosystem.</p>
+ <a href="/work-with-us.html" class="inline-flex items-center px-8 py-4 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+ Work With Us
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+ </svg>
+ </a>
+ </div>
+ </section>
+
+ <!-- NEWSLETTER -->
+ <section class="py-20 bg-white">
+ <div class="max-w-2xl mx-auto px-6">
+ <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-3xl p-10 text-center shadow-sm">
+ <h2 class="text-2xl md:text-3xl mb-4">Join our AI newsletter</h2>
+ <p class="text-gray-600 mb-8">Get the latest AI news, research insights, and practical implementation guides delivered to your inbox daily.</p>
+ <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+ <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
+ <button type="submit" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Subscribe</button>
+ </form>
+ </div>
+ </div>
+ </section>
+</main>
+
+<script>
+  (function() {
+    function initMobileMenu() {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      
+      if (!btn || !menu) {
+        return;
+      }
+      
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        menu.classList.toggle('hidden');
+        
+        if (iconOpen && iconClose) {
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        }
+      });
+      
+      // Close when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        }
+      });
+      
+      // Close menu when a link is clicked
+      var menuLinks = menu.querySelectorAll('a');
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+      });
+    }
+    
+    // Run immediately if DOM is ready, otherwise wait
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+      initMobileMenu();
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    // AI Development toggle
+    var aiDevToggle = document.querySelector('.ai-dev-toggle');
+    var aiDevSubmenu = document.querySelector('.ai-dev-submenu');
+    var aiDevIcon = document.querySelector('.ai-dev-icon');
+    
+    if (aiDevToggle && aiDevSubmenu) {
+      aiDevToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        aiDevSubmenu.classList.toggle('hidden');
+        if (aiDevIcon) {
+          aiDevIcon.textContent = aiDevSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+    
+    // Resources toggle
+    var resourcesToggle = document.querySelector('.resources-toggle');
+    var resourcesSubmenu = document.querySelector('.resources-submenu');
+    var resourcesIcon = document.querySelector('.resources-icon');
+    
+    if (resourcesToggle && resourcesSubmenu) {
+      resourcesToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        resourcesSubmenu.classList.toggle('hidden');
+        if (resourcesIcon) {
+          resourcesIcon.textContent = resourcesSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+  })();
+</script>
+
+<!-- FOOTER -->
+<footer class="relative">
+<div class="relative h-[500px] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="text-[150px] md:text-[250px] text-white/25 tracking-tight">intelio</span>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto px-6 py-24 h-full flex flex-col justify-between">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+<div>
+<p class="text-xl sm:text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+</div>
+<div class="flex justify-start md:justify-end">
+<div class="space-y-2 sm:space-y-3">
+<a href="/case-studies.html" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+<a href="/work-with-us.html" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+<a href="https://agencyai.ai" class="block text-white/80 hover:text-white transition-colors">Marketing</a>
+<a href="/blog" class="block text-white/80 hover:text-white transition-colors">intelio Blog</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">Pricing</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">Locations</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-6 pb-8 gap-4">
+<div class="text-xl sm:text-2xl font-medium text-white">intelio</div>
+<div class="text-xs sm:text-sm text-white/60">© 2025 intelio</div>
+</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
