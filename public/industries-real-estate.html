@@ -24,6 +24,12 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .hero-realestate {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 30%, #2563eb 60%, #3b82f6 100%);
+      position: relative;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
@@ -221,6 +227,18 @@ Resources
  </nav>
 
  <main>
+ <!-- POSITIONING STATEMENT -->
+ <section class="py-16 px-6 bg-white border-b border-gray-100">
+ <div class="max-w-4xl mx-auto text-center">
+ <p class="text-xl md:text-2xl text-gray-900 leading-relaxed mb-4">
+ intelio designs and deploys production-ready AI systems for real estate organizations across commercial brokerage, residential brokerage, and property management.
+ </p>
+ <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+ We specialize in areas where information complexity, operational scale, and compliance make generic software fall short.
+ </p>
+ </div>
+ </section>
+
  <!-- HERO SECTION WITH WIREFRAME BUILDINGS -->
  <section class="hero-realestate min-h-screen flex items-center relative">
  <!-- Wireframe building visualization -->
@@ -340,7 +358,7 @@ Resources
  <p class="text-lg text-white/70 mb-8">
  Production-ready real estate AI systems built by our experienced engineers and architects, tailored to your organization.
  </p>
- <a href="#" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+ <a href="#commercial" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
  Learn more
  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -476,99 +494,6 @@ Resources
  </div>
  </section>
 
- <!-- REAL ESTATE AI MODELS AND APPLICATIONS -->
- <section class="py-20 px-6 bg-white border-t border-gray-100">
- <div class="max-w-6xl mx-auto">
- <p class="text-sm text-gray-500 mb-12">Real Estate AI models and applications</p>
- 
- <div class="grid md:grid-cols-3 gap-12">
- <!-- Property Valuation -->
- <div>
- <h3 class="text-lg font-semibold text-center mb-8">Property Valuation</h3>
- <div class="flex justify-center gap-6">
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
- <path d="M12 2L2 7v13h20V7l-10-5z"/>
- <path d="M7 22V12h4v10M13 22V12h4v10" fill="white" stroke="currentColor" stroke-width="0.5"/>
- </svg>
- </div>
- <div class="text-xs font-medium">HouseCanary</div>
- <div class="text-xs text-gray-400">AVM</div>
- </div>
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8" viewBox="0 0 24 24">
- <rect x="4" y="4" width="6" height="6" fill="#4285F4"/>
- <rect x="14" y="4" width="6" height="6" fill="#34A853"/>
- <rect x="4" y="14" width="6" height="6" fill="#FBBC05"/>
- <rect x="14" y="14" width="6" height="6" fill="#EA4335"/>
- </svg>
- </div>
- <div class="text-xs font-medium">LightGBM</div>
- <div class="text-xs text-gray-400">(Regression Tasks)</div>
- </div>
- </div>
- </div>
-
- <!-- Location Analysis -->
- <div>
- <h3 class="text-lg font-semibold text-center mb-8">Location Analysis</h3>
- <div class="flex justify-center gap-6">
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="currentColor">
- <circle cx="12" cy="12" r="8"/>
- <circle cx="12" cy="12" r="4" fill="white"/>
- <circle cx="12" cy="12" r="2"/>
- </svg>
- </div>
- <div class="text-xs font-medium">Placer</div>
- <div class="text-xs text-gray-400"></div>
- </div>
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8" viewBox="0 0 24 24">
- <circle cx="8" cy="12" r="4" fill="#FF6B35"/>
- <circle cx="14" cy="8" r="4" fill="#4ECDC4"/>
- <circle cx="14" cy="16" r="4" fill="#45B7D1"/>
- </svg>
- </div>
- <div class="text-xs font-medium">Restb</div>
- <div class="text-xs text-gray-400"></div>
- </div>
- </div>
- </div>
-
- <!-- Computer Vision Property Analysis -->
- <div>
- <h3 class="text-lg font-semibold text-center mb-8">Computer Vision Property Analysis</h3>
- <div class="flex justify-center gap-6">
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
- <circle cx="12" cy="12" r="10"/>
- <path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" fill="none"/>
- </svg>
- </div>
- <div class="text-xs font-medium">Roboflow</div>
- <div class="text-xs text-gray-400"></div>
- </div>
- <div class="tech-icon text-center">
- <div class="w-16 h-16 mx-auto mb-2 bg-white border border-gray-200 rounded-xl flex items-center justify-center shadow-sm">
- <svg class="w-8 h-8" viewBox="0 0 24 24">
- <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" fill="#22c55e"/>
- <polygon points="12,6 17,9 17,15 12,18 7,15 7,9" fill="#f97316"/>
- </svg>
- </div>
- <div class="text-xs font-medium">UrbanFootprint</div>
- <div class="text-xs text-gray-400"></div>
- </div>
- </div>
- </div>
- </div>
- </div>
- </section>
 
  <!-- COMPLIANCE SECTION -->
  <section class="py-20 px-6 bg-white border-t border-gray-100">
@@ -600,109 +525,257 @@ Resources
  </div>
  </section>
 
- <!-- REAL ESTATE AI SOLUTIONS WE OFFER -->
+ <!-- COMMERCIAL REAL ESTATE BROKERAGE -->
+ <section id="commercial" class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Commercial Real Estate Brokerage</h2>
+ <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+ The opportunity in CRE is information advantage and speed. Firms that underwrite faster, see risks earlier, and move decisively outperform.
+ </p>
+ <p class="text-base text-gray-600 italic mb-12">
+ Designed for institutional, owner-operator, and investment-driven brokerage environments.
+ </p>
+ 
+ <div class="mb-12">
+ <h3 class="text-xl font-semibold text-gray-900 mb-6">Core Systems We Build:</h3>
+ 
+ <div class="space-y-8">
+ <!-- Deal Underwriting & Valuation Models -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Deal Underwriting & Valuation Models</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Automated NOI, cash flow, IRR, and cap rate analysis</li>
+ <li>Rent roll normalization and scenario modeling</li>
+ <li>Hold vs. sell and value-add decision support</li>
+ <li>Comparable sales and lease comp intelligence</li>
+ </ul>
+ </div>
+
+ <!-- Market & Location Intelligence -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Market & Location Intelligence</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Trade area demand analysis</li>
+ <li>Competitive supply and absorption modeling</li>
+ <li>Submarket trend detection (office, retail, industrial, multifamily)</li>
+ <li>Site selection analytics</li>
+ </ul>
+ </div>
+
+ <!-- Lease & Document Intelligence -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Lease & Document Intelligence</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Lease abstraction (critical dates, escalations, CAMs, options)</li>
+ <li>Due diligence document analysis (PSAs, estoppels, surveys)</li>
+ <li>Offering memorandum (OM) analysis and summarization</li>
+ <li>Searchable intelligence layers for transaction data rooms</li>
+ </ul>
+ </div>
+
+ <!-- Deal Pipeline & Brokerage Operations -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Deal Pipeline & Brokerage Operations</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Deal pipeline analytics and forecasting</li>
+ <li>CRM intelligence for brokers and investment teams</li>
+ <li>Competitive intelligence dashboards</li>
+ <li>Internal knowledge bases (searchable past deals, lessons learned)</li>
+ </ul>
+ </div>
+
+ <!-- Portfolio & Asset Strategy -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Portfolio & Asset Strategy</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Portfolio-level risk modeling</li>
+ <li>Tenant concentration and rollover risk analysis</li>
+ <li>Capital planning and disposition timing insights</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- RESIDENTIAL REAL ESTATE BROKERAGE -->
  <section class="py-20 px-6 bg-white border-t border-gray-100">
  <div class="max-w-6xl mx-auto">
- <p class="text-sm text-gray-500 mb-12">Real Estate AI solutions we offer (and more)</p>
+ <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Residential Real Estate Brokerage</h2>
+ <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+ The challenge in residential is velocity and scale. Teams that automate workflow friction while maintaining quality and compliance win.
+ </p>
+ <p class="text-base text-gray-600 italic mb-12">
+ Built for high-volume teams, brokerages, and transaction-heavy platforms.
+ </p>
  
- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
- <!-- Property Valuation -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Property Valuation</h4>
- <p class="text-base text-gray-500 leading-relaxed">Instant, data-driven property appraisals for residential and commercial real estate.</p>
- </div>
-
- <!-- Lease Management -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Lease Management</h4>
- <p class="text-base text-gray-500 leading-relaxed">Automate lease tracking, payment processing, and compliance for property managers and landlords.</p>
+ <div class="mb-12">
+ <h3 class="text-xl font-semibold text-gray-900 mb-6">Core Systems We Build:</h3>
+ 
+ <div class="space-y-8">
+ <!-- Lead Intelligence & Conversion -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Lead Intelligence & Conversion</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Lead scoring and intent detection</li>
+ <li>Automated follow-up and engagement workflows</li>
+ <li>Agent routing based on fit and performance</li>
+ <li>Buyer/seller lifecycle management</li>
+ </ul>
  </div>
 
- <!-- Market Analysis -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Market Analysis</h4>
- <p class="text-base text-gray-500 leading-relaxed">Analyze market trends, pricing, and demand with AI-powered analytics for smarter investment decisions.</p>
- </div>
-
- <!-- Document Automation -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Document Automation</h4>
- <p class="text-base text-gray-500 leading-relaxed">Automate extraction, classification, and processing of real estate documents with AI-powered IDP solutions.</p>
+ <!-- Pricing & Market Strategy -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Pricing & Market Strategy</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Automated valuation models (AVMs)</li>
+ <li>Pricing strategy recommendations based on market conditions</li>
+ <li>Market velocity and demand indicators</li>
+ <li>Listing performance forecasting</li>
+ </ul>
  </div>
 
- <!-- Virtual Tours -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Virtual Tours</h4>
- <p class="text-base text-gray-500 leading-relaxed">Create immersive, AI-driven virtual property tours for buyers and renters.</p>
- </div>
-
- <!-- Lead Scoring -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Lead Scoring</h4>
- <p class="text-base text-gray-500 leading-relaxed">Prioritize and qualify leads with AI-powered scoring models for real estate sales and rentals.</p>
+ <!-- Transaction Workflow Automation -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Transaction Workflow Automation</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Transaction status tracking and milestone alerts</li>
+ <li>Document processing and validation</li>
+ <li>Audit-ready transaction records and compliance tracking</li>
+ <li>Escrow and closing timeline automation</li>
+ </ul>
  </div>
 
- <!-- Portfolio Optimization -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Portfolio Optimization</h4>
- <p class="text-base text-gray-500 leading-relaxed">Optimize real estate investment portfolios with predictive analytics and risk assessment tools.</p>
- </div>
-
- <!-- Intelligent Document Processing -->
-<div class="solution-card border border-gray-200 rounded-xl p-8 min-h-[380px]">
-<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-5">
-<svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
- </svg>
- </div>
- <h4 class="font-semibold text-lg mb-3">Intelligent Document Processing</h4>
- <p class="text-base text-gray-500 leading-relaxed">Automate extraction, classification, and processing of real estate documents with AI-powered IDP solutions.</p>
- </div>
+ <!-- Client Experience Automation -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Client Experience Automation</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Client-facing assistants for buyers and sellers (FAQ, support automation)</li>
+ <li>Real-time updates during escrow and closing</li>
+ <li>Post-close follow-up and retention workflows</li>
+ <li>Proactive communication at key transaction milestones</li>
+ </ul>
  </div>
 
- <div class="text-center">
- <a href="/work-with-us.html" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
- Get Started
- <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
- <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
- </svg>
- </a>
+ <!-- Listing & Marketing Intelligence -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Listing & Marketing Intelligence</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Listing description optimization</li>
+ <li>Photo and media analysis</li>
+ <li>Virtual tours and enhanced property presentations</li>
+ <li>Campaign performance analytics and ROI tracking</li>
+ </ul>
  </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- PROPERTY MANAGEMENT -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Property Management</h2>
+ <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+ The edge in property management is operational efficiency and compliance. Owners and operators that reduce friction, improve visibility, and create institutional systems grow margins.
+ </p>
+ <p class="text-base text-gray-600 italic mb-12">
+ Applicable across residential, commercial, and multifamily portfolios.
+ </p>
+ 
+ <div class="mb-12">
+ <h3 class="text-xl font-semibold text-gray-900 mb-6">Core Systems We Build:</h3>
+ 
+ <div class="space-y-8">
+ <!-- Lease & Tenant Intelligence -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Lease & Tenant Intelligence</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Lease abstraction and lifecycle tracking</li>
+ <li>Rent escalations and renewal forecasting</li>
+ <li>Tenant communication automation</li>
+ <li>Delinquency risk prediction</li>
+ </ul>
+ </div>
+
+ <!-- Maintenance & Operations -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Maintenance & Operations</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Maintenance request triage and prioritization</li>
+ <li>Predictive maintenance modeling</li>
+ <li>Vendor performance analytics</li>
+ <li>Work order automation and routing</li>
+ </ul>
+ </div>
+
+ <!-- Financial & Portfolio Analytics -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Financial & Portfolio Analytics</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Budget variance detection and alerts</li>
+ <li>Expense anomaly monitoring</li>
+ <li>Portfolio performance dashboards</li>
+ <li>Asset-level KPI reporting</li>
+ </ul>
+ </div>
+
+ <!-- Compliance & Risk Management -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Compliance & Risk Management</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Fair Housing-aware tenant screening logic</li>
+ <li>Audit-ready documentation workflows</li>
+ <li>Policy and procedure enforcement</li>
+ <li>Regulatory change monitoring and alerts</li>
+ </ul>
+ </div>
+
+ <!-- Operational Automation -->
+ <div>
+ <h3 class="text-lg font-semibold text-gray-900 mb-4">Operational Automation</h3>
+ <ul class="list-disc list-inside space-y-2 text-gray-700">
+ <li>Knowledge bases for property staff</li>
+ <li>Internal systems for managers and operations teams</li>
+ <li>Standard operating procedure (SOP) automation</li>
+ <li>Staff training and onboarding systems</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- HOW INTELIO BUILDS -->
+ <section class="py-20 px-6 bg-white border-t border-gray-100">
+ <div class="max-w-6xl mx-auto">
+ <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">HOW INTELIO BUILDS</h2>
+ <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+ What separates intelio from off-the-shelf proptech vendors and AI agencies:
+ </p>
+ 
+ <ul class="space-y-6 text-gray-700">
+ <li class="flex items-start gap-4">
+ <span class="text-blue-500 font-semibold mt-1">•</span>
+ <span><strong class="text-gray-900">Custom systems architecture</strong> — Purpose-built for your business model, not multi-tenant SaaS templates</span>
+ </li>
+ <li class="flex items-start gap-4">
+ <span class="text-blue-500 font-semibold mt-1">•</span>
+ <span><strong class="text-gray-900">Intelligence layers on proprietary data</strong> — Systems that learn from your deals, transactions, and operations</span>
+ </li>
+ <li class="flex items-start gap-4">
+ <span class="text-blue-500 font-semibold mt-1">•</span>
+ <span><strong class="text-gray-900">Integration with existing infrastructure</strong> — Seamless connection to your CRMs, PMS, accounting platforms, and deal management systems</span>
+ </li>
+ <li class="flex items-start gap-4">
+ <span class="text-blue-500 font-semibold mt-1">•</span>
+ <span><strong class="text-gray-900">Compliance and governance by design</strong> — Fair Housing compliance, data governance, and audit readiness built in from day one</span>
+ </li>
+ <li class="flex items-start gap-4">
+ <span class="text-blue-500 font-semibold mt-1">•</span>
+ <span><strong class="text-gray-900">Production-ready systems that scale</strong> — Not prototypes or demos. Systems that handle real transaction volume and complexity</span>
+ </li>
+ </ul>
  </div>
  </section>
 
