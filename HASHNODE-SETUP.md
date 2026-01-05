@@ -96,3 +96,4 @@ To enable on-demand revalidation when new posts are published:
 - Each post gets its own URL: `/blog/[slug]`
 - Category filtering works client-side on the blog listing page
 
+
