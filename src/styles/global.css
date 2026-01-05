@@ -18,4 +18,81 @@
   }
 }
 
+@layer components {
+  /* Enhanced Card Styles - Increased padding, height, and spacing */
+  .solution-card,
+  .capability-card,
+  .service-card {
+    padding: 2rem 2.5rem; /* 32px 40px - increased from 24px */
+    min-height: 380px; /* increased from ~250-300px */
+    transition: all 0.3s ease;
+  }
+  
+  .solution-card h4,
+  .capability-card h4,
+  .service-card h4 {
+    font-size: 1.25rem; /* 20px - increased from ~18px */
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+  
+  .solution-card p,
+  .capability-card p,
+  .service-card p {
+    font-size: 0.9375rem; /* 15px - increased from 14px */
+    line-height: 1.6;
+  }
+  
+  /* Case Study Cards */
+  .project-card {
+    min-height: 450px; /* increased from 350-400px */
+    padding: 2rem 2.5rem; /* 32px 40px - increased from 24px */
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem; /* 24px - increased from 20-22px */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card p {
+    font-size: 0.9375rem; /* 15px - increased from 12-14px */
+    line-height: 1.6;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    min-height: 450px; /* increased from 400px */
+  }
+  
+  .feature-card-content {
+    padding: 2.5rem 3rem; /* 40px 48px - increased from 32px */
+  }
+  
+  .feature-card h2 {
+    font-size: 1.75rem; /* 28px - increased from 24px */
+    line-height: 1.3;
+  }
+  
+  /* Industry Cards */
+  .industry-card {
+    min-height: 400px; /* increased from ~300px */
+  }
+  
+  .industry-card-content {
+    padding: 2.5rem 3rem; /* 40px 48px - increased from 32px */
+  }
+  
+  /* Grid spacing - increased gaps */
+  .card-grid {
+    gap: 2rem; /* 32px - increased from 16-24px */
+  }
+  
+  @media (min-width: 768px) {
+    .card-grid {
+      gap: 2.5rem; /* 40px on larger screens */
+    }
+  }
+}
+
 
