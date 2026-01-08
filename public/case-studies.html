@@ -68,48 +68,66 @@
     }
 
     /* Accordion card styles */
-    .accordion-card {
-      transition: min-height 0.4s ease-out;
+    .accordion-item {
+      transition: all 0.3s ease-out;
       cursor: pointer;
+      border-bottom: 1px solid #e5e7eb;
     }
-    .accordion-card.collapsed {
-      min-height: 280px;
+    .accordion-item:hover {
+      background-color: #f9fafb;
     }
-    .accordion-card.expanded {
-      min-height: 450px;
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      min-height: 70px;
+      transition: background-color 0.2s ease;
     }
-    .accordion-expandable {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
-      margin-top: 0;
-      margin-bottom: 0;
+    .accordion-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
     }
-    .accordion-expandable.expanded {
-      max-height: 1000px;
-      opacity: 1;
-      margin-top: 1rem;
-      margin-bottom: 0;
+    .accordion-accent-bar {
+      width: 4px;
+      height: 100%;
+      min-height: 50px;
+      flex-shrink: 0;
+    }
+    .accordion-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0;
     }
     .accordion-chevron {
       transition: transform 0.3s ease;
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       flex-shrink: 0;
+      color: #6b7280;
     }
-    .accordion-card.expanded .accordion-chevron {
+    .accordion-item.expanded .accordion-chevron {
       transform: rotate(180deg);
+      color: #111827;
     }
-    .objective-preview {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+    .accordion-content {
+      max-height: 0;
       overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+      padding: 0 24px;
     }
-    .accordion-card.expanded .objective-preview {
-      display: block;
-      -webkit-line-clamp: unset;
+    .accordion-content.expanded {
+      max-height: 2000px;
+      opacity: 1;
+      padding: 0 24px 24px 24px;
+    }
+    .accordion-content-inner {
+      padding-left: 20px;
+      padding-top: 16px;
     }
   </style>
 </head>
@@ -349,28 +367,29 @@ Resources
           <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">Deep technical expertise for enterprise clients. Real-world implementations that drive measurable business value.</p>
         </div>
         
-        <!-- BUSINESS CAPABILITIES GRID -->
+        <!-- BUSINESS CAPABILITIES ACCORDION -->
         <div class="mb-20">
           <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-8 text-center">Business Capabilities</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="max-w-5xl mx-auto bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
             
-            <!-- Card 1: End-to-End Business Enablement -->
-            <div class="accordion-card collapsed bg-white border-2 border-blue-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-1')">
-              <div class="h-2 bg-blue-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                    <line x1="12" y1="22.08" x2="12" y2="12" />
-                  </svg>
+            <!-- Item 1: End-to-End Business Enablement -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-1')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-blue-500"></div>
+                  <h3 class="accordion-title">End-to-End Business Enablement</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">End-to-End Business Enablement</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Unify fragmented workflows across marketing, sales, CRM, and operations to create seamless business processes.</p>
-                
-                <div id="expandable-1" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-1" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Unify fragmented workflows across marketing, sales, CRM, and operations to create seamless business processes.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -409,31 +428,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-blue-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 2: Revenue Enablement & Business Development -->
-            <div class="accordion-card collapsed bg-white border-2 border-green-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-2')">
-              <div class="h-2 bg-green-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
+            <!-- Item 2: Revenue Enablement & Business Development -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-2')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-green-500"></div>
+                  <h3 class="accordion-title">Revenue Enablement & Business Development</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Revenue Enablement & Business Development</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Accelerate revenue growth through intelligent prospect identification, relationship management, and deal acceleration.</p>
-                
-                <div id="expandable-2" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-2" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Accelerate revenue growth through intelligent prospect identification, relationship management, and deal acceleration.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -472,32 +487,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-green-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 3: CRM Intelligence & Sales Operations -->
-            <div class="accordion-card collapsed bg-white border-2 border-purple-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-3')">
-              <div class="h-2 bg-purple-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
+            <!-- Item 3: CRM Intelligence & Sales Operations -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-3')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-purple-500"></div>
+                  <h3 class="accordion-title">CRM Intelligence & Sales Operations</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">CRM Intelligence & Sales Operations</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Transform CRM from a data repository into an intelligent system that guides sales strategy and execution.</p>
-                
-                <div id="expandable-3" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-3" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Transform CRM from a data repository into an intelligent system that guides sales strategy and execution.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -536,33 +546,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-purple-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 4: Marketing Operations & Content Enablement -->
-            <div class="accordion-card collapsed bg-white border-2 border-indigo-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-4')">
-              <div class="h-2 bg-indigo-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                    <line x1="9" y1="3" x2="9" y2="21" />
-                    <line x1="3" y1="9" x2="21" y2="9" />
-                  </svg>
+            <!-- Item 4: Marketing Operations & Content Enablement -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-4')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-indigo-500"></div>
+                  <h3 class="accordion-title">Marketing Operations & Content Enablement</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Marketing Operations & Content Enablement</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Scale content creation and marketing operations while maintaining quality and brand consistency.</p>
-                
-                <div id="expandable-4" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-4" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Scale content creation and marketing operations while maintaining quality and brand consistency.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -601,32 +605,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-indigo-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 5: Tax, Accounting & Financial Process Automation -->
-            <div class="accordion-card collapsed bg-white border-2 border-amber-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-5')">
-              <div class="h-2 bg-amber-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 4h14v16H5z" />
-                    <path d="M9 8h6M9 12h6M9 16h3" />
-                  </svg>
+            <!-- Item 5: Tax, Accounting & Financial Process Automation -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-5')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-amber-500"></div>
+                  <h3 class="accordion-title">Tax, Accounting & Financial Process Automation</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Tax, Accounting & Financial Process Automation</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Automate financial workflows to reduce errors, accelerate reporting, and ensure compliance.</p>
-                
-                <div id="expandable-5" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-5" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Automate financial workflows to reduce errors, accelerate reporting, and ensure compliance.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -665,34 +664,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-amber-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 6: Calendar, Email & Workflow Orchestration -->
-            <div class="accordion-card collapsed bg-white border-2 border-cyan-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-6')">
-              <div class="h-2 bg-cyan-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                    <line x1="16" y1="2" x2="16" y2="6" />
-                    <line x1="8" y1="2" x2="8" y2="6" />
-                    <line x1="3" y1="10" x2="21" y2="10" />
-                  </svg>
+            <!-- Item 6: Calendar, Email & Workflow Orchestration -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-6')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-cyan-500"></div>
+                  <h3 class="accordion-title">Calendar, Email & Workflow Orchestration</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Calendar, Email & Workflow Orchestration</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Eliminate manual coordination tasks and optimize time allocation across teams and priorities.</p>
-                
-                <div id="expandable-6" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-6" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Eliminate manual coordination tasks and optimize time allocation across teams and priorities.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -731,35 +723,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-cyan-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 7: Document Review & Analysis -->
-            <div class="accordion-card collapsed bg-white border-2 border-teal-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-7')">
-              <div class="h-2 bg-teal-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                    <polyline points="14 2 14 8 20 8" />
-                    <line x1="16" y1="13" x2="8" y2="13" />
-                    <line x1="16" y1="17" x2="8" y2="17" />
-                    <polyline points="10 9 9 9 8 9" />
-                  </svg>
+            <!-- Item 7: Document Review & Analysis -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-7')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-teal-500"></div>
+                  <h3 class="accordion-title">Document Review & Analysis</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Document Review & Analysis</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Extract insights, identify risks, and automate document processing across contracts, reports, and communications.</p>
-                
-                <div id="expandable-7" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-7" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Extract insights, identify risks, and automate document processing across contracts, reports, and communications.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -798,32 +782,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-teal-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 8: Transaction Analysis, OMs & BOV Support -->
-            <div class="accordion-card collapsed bg-white border-2 border-orange-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-8')">
-              <div class="h-2 bg-orange-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 15l4-4 3 3 6-6" />
-                    <path d="M4 19h16" />
-                  </svg>
+            <!-- Item 8: Transaction Analysis, OMs & BOV Support -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-8')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-orange-500"></div>
+                  <h3 class="accordion-title">Transaction Analysis, OMs & BOV Support</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Transaction Analysis, OMs & BOV Support</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Accelerate deal execution through automated underwriting, valuation, and document production.</p>
-                
-                <div id="expandable-8" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-8" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Accelerate deal execution through automated underwriting, valuation, and document production.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -862,31 +841,27 @@ Resources
                     </ul>
                   </div>
                 </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-orange-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
               </div>
             </div>
 
-            <!-- Card 9: Executive & Management Intelligence -->
-            <div class="accordion-card collapsed bg-white border-2 border-red-200 rounded-2xl overflow-hidden flex flex-col shadow-sm" onclick="toggleAccordionCard(this, 'expandable-9')">
-              <div class="h-2 bg-red-500"></div>
-              <div class="p-6 flex-1 flex flex-col">
-                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg class="w-12 h-12 text-red-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
+            <!-- Item 9: Executive & Management Intelligence -->
+            <div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-9')">
+              <div class="accordion-header">
+                <div class="accordion-header-left">
+                  <div class="accordion-accent-bar bg-red-500"></div>
+                  <h3 class="accordion-title">Executive & Management Intelligence</h3>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Executive & Management Intelligence</h3>
-                <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
-                <p class="text-gray-700 text-sm mb-4 leading-relaxed objective-preview">Provide leadership with real-time insights and decision support across all business functions.</p>
-                
-                <div id="expandable-9" class="accordion-expandable">
-                  <div class="mb-4">
+                <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <div id="content-9" class="accordion-content">
+                <div class="accordion-content-inner">
+                  <div class="mb-6">
+                    <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Provide leadership with real-time insights and decision support across all business functions.</p>
+                  </div>
+                  <div class="mb-6">
                     <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
                     <ul class="space-y-1.5">
                       <li class="flex items-start gap-2 text-gray-700 text-sm">
@@ -924,13 +899,6 @@ Resources
                       </li>
                     </ul>
                   </div>
-                </div>
-                
-                <div class="mt-auto pt-4 flex items-center justify-center gap-2 text-red-600 text-sm font-medium">
-                  <span class="expand-text">Show more</span>
-                  <svg class="accordion-chevron text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -1217,25 +1185,22 @@ Resources
     })();
 
     // Accordion card toggle function
-    function toggleAccordionCard(cardElement, expandableId) {
-      const expandable = document.getElementById(expandableId);
-      if (!expandable) return;
+    function toggleAccordionItem(itemElement, contentId) {
+      const content = document.getElementById(contentId);
+      if (!content) return;
       
-      const isExpanded = cardElement.classList.contains('expanded');
-      const expandText = cardElement.querySelector('.expand-text');
+      const isExpanded = itemElement.classList.contains('expanded');
       
       if (isExpanded) {
         // Collapse
-        cardElement.classList.remove('expanded');
-        cardElement.classList.add('collapsed');
-        expandable.classList.remove('expanded');
-        if (expandText) expandText.textContent = 'Show more';
+        itemElement.classList.remove('expanded');
+        itemElement.classList.add('collapsed');
+        content.classList.remove('expanded');
       } else {
         // Expand
-        cardElement.classList.remove('collapsed');
-        cardElement.classList.add('expanded');
-        expandable.classList.add('expanded');
-        if (expandText) expandText.textContent = 'Show less';
+        itemElement.classList.remove('collapsed');
+        itemElement.classList.add('expanded');
+        content.classList.add('expanded');
       }
     }
   </script>
