@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Solutions Across Industries - intelio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .hero-industries {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 30%, #2563eb 60%, #3b82f6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="/" class="text-3xl font-medium tracking-tight text-black">intelio</a>
+<div class="hidden md:flex items-center gap-8">
+ <a href="/case-studies.html" class="text-base text-gray-700 hover:text-black transition-colors">Case Studies</a>
+<div class="relative group">
+<a href="/ai-development" class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
+AI Development
+<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+</a>
+<div class="absolute right-0 top-full mt-3 w-[540px] bg-white rounded-2xl shadow-xl shadow-gray-200/60 border border-gray-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out">
+<div class="grid grid-cols-2 gap-8 p-6">
+<div>
+<p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
+<div class="space-y-3">
+<a href="/industries-real-estate.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 10l8-6 8 6" />
+<path d="M6 10v8h12v-8" />
+<path d="M10 18v-4h4v4" />
+</svg>
+<span>Real Estate</span>
+</a>
+<a href="/industries-healthcare.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="12" cy="12" r="9" />
+<path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+<span>Healthcare</span>
+</a>
+<a href="/industries-finance.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 15l4-4 3 3 6-6" />
+<path d="M4 19h16" />
+</svg>
+<span>Finance</span>
+</a>
+<a href="/industries-construction.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 13l8-8 3 3-8 8H4v-3z" />
+<path d="M13 5l2-2 3 3-2 2" />
+<path d="M7 16h10" />
+</svg>
+<span>Construction</span>
+</a>
+<a href="/industries-energy.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M13 2L6 14h6l-1 8 7-12h-6z" />
+</svg>
+<span>Energy</span>
+</a>
+<a href="/industries.html" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 12h14" />
+<path d="M13 6l6 6-6 6" />
+</svg>
+<span>Explore all industries &rarr;</span>
+</a>
+</div>
+</div>
+<div>
+<p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Services</p>
+<div class="space-y-3">
+<a href="/services-ai-machine-learning.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 4v16" />
+<path d="M8 8v2m0 4v2" />
+<path d="M16 8v2m0 4v2" />
+<path d="M4 12h4m8 0h4" />
+</svg>
+<span>AI &amp; Machine Learning</span>
+</a>
+<a href="/services-ai-consulting.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 15v4a2 2 0 0 1-2 2h-5l-4 2v-2H5a2 2 0 0 1-2-2v-4" />
+<path d="M7 9a5 5 0 1 1 10 0v3a5 5 0 1 1-10 0V9z" />
+</svg>
+<span>AI Consulting</span>
+</a>
+<a href="/services-digital-transformation.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<rect x="4" y="5" width="16" height="14" rx="2" />
+<path d="M9 9h6" />
+<path d="M9 13h4" />
+</svg>
+<span>Digital Transformation</span>
+</a>
+<a href="/services-workflow-automation.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 9h9l-2-2m2 2-2 2" />
+<path d="M20 15h-9l2 2m-2-2 2-2" />
+<path d="M12 7V5m0 14v-2" />
+</svg>
+<span>Workflow Automation</span>
+</a>
+<a href="/services-internal-tooling.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 3l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L6.2 7.2l4-.6z" />
+</svg>
+<span>Internal Tooling</span>
+</a>
+<a href="/services.html" class="flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">
+<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 12h14" />
+<path d="M13 6l6 6-6 6" />
+</svg>
+<span>Explore all services &rarr;</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+        <a href="/work-with-us.html" class="px-5 py-2.5 bg-black text-white text-base font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
+</div>
+</div>
+<button id="mobile-menu-btn" class="md:hidden p-2">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+ </svg>
+ </button>
+ </div>
+ </div>
+ </nav>
+
+ <!-- MOBILE MENU -->
+ <div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-white pt-20 pb-6 px-6 overflow-y-auto">
+ <div class="space-y-6">
+ <a href="/case-studies.html" class="block text-base text-gray-700 hover:text-black transition-colors">Case Studies</a>
+ <a href="/ai-development.html" class="block text-base text-gray-700 hover:text-black transition-colors">AI Development</a>
+ <a href="/enterprise-ai.html" class="block text-base text-gray-700 hover:text-black transition-colors">Enterprise AI</a>
+ <a href="/microsoft-intelligence.html" class="block text-base text-gray-700 hover:text-black transition-colors">Microsoft Intelligence</a>
+ <a href="/work-with-us.html" class="block text-base text-gray-700 hover:text-black transition-colors">Work With Us</a>
+ </div>
+ </div>
+
+<main>
+<!-- HERO SECTION -->
+<section class="hero-industries min-h-[600px] flex items-center relative pt-32">
+<div class="absolute inset-0">
+<svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<g stroke="#ffffff" fill="none" stroke-width="0.5">
+<line x1="0" y1="100" x2="1200" y2="100"/>
+<line x1="0" y1="200" x2="1200" y2="200"/>
+<line x1="0" y1="300" x2="1200" y2="300"/>
+<line x1="0" y1="400" x2="1200" y2="400"/>
+<line x1="0" y1="500" x2="1200" y2="500"/>
+<line x1="0" y1="600" x2="1200" y2="600"/>
+<line x1="0" y1="700" x2="1200" y2="700"/>
+<line x1="100" y1="0" x2="100" y2="800"/>
+<line x1="200" y1="0" x2="200" y2="800"/>
+<line x1="300" y1="0" x2="300" y2="800"/>
+<line x1="400" y1="0" x2="400" y2="800"/>
+<line x1="500" y1="0" x2="500" y2="800"/>
+<line x1="600" y1="0" x2="600" y2="800"/>
+<line x1="700" y1="0" x2="700" y2="800"/>
+<line x1="800" y1="0" x2="800" y2="800"/>
+<line x1="900" y1="0" x2="900" y2="800"/>
+<line x1="1000" y1="0" x2="1000" y2="800"/>
+<line x1="1100" y1="0" x2="1100" y2="800"/>
+</g>
+</svg>
+<div class="absolute inset-0 bg-blue-900/20"></div>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+<span class="">AI Solutions</span><br>
+<span class="bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent">Across Industries</span>
+</h1>
+<p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+Enterprise-grade AI systems tailored to your industry. Explore how we deliver custom intelligence for real estate, healthcare, finance, construction, and energy.
+</p>
+</div>
+</div>
+</section>
+
+<!-- INDUSTRIES GRID -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Real Estate -->
+<a href="/industries-real-estate.html" class="group industry-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+<div class="p-8 md:p-10 min-h-[350px] flex flex-col">
+<div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+<svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Real Estate AI Development</h3>
+<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Production-ready AI systems for commercial real estate, residential real estate, and property management. Drive faster underwriting, intelligent lead conversion, and operational efficiency.</p>
+<span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+Explore Real Estate AI
+<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</span>
+</div>
+</a>
+
+<!-- Card 2: Healthcare -->
+<a href="/industries-healthcare.html" class="group industry-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+<div class="p-8 md:p-10 min-h-[350px] flex flex-col">
+<div class="w-20 h-20 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition-colors">
+<svg class="w-12 h-12 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Healthcare AI Development</h3>
+<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Custom AI solutions for patient outcomes, clinical operations, and administrative efficiency. Secure, compliant, and built for healthcare workflows.</p>
+<span class="inline-flex items-center text-emerald-600 font-medium group-hover:text-emerald-700">
+Explore Healthcare AI
+<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</span>
+</div>
+</a>
+
+<!-- Card 3: Finance -->
+<a href="/industries-finance.html" class="group industry-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="h-2 bg-gradient-to-r from-amber-500 to-yellow-600"></div>
+<div class="p-8 md:p-10 min-h-[350px] flex flex-col">
+<div class="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
+<svg class="w-12 h-12 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Finance AI Development</h3>
+<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Document intelligence, compliance automation, and decision support for financial services. Risk management and operational excellence through custom AI.</p>
+<span class="inline-flex items-center text-amber-600 font-medium group-hover:text-amber-700">
+Explore Finance AI
+<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</span>
+</div>
+</a>
+
+<!-- Card 4: Construction -->
+<a href="/industries-construction.html" class="group industry-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="h-2 bg-gradient-to-r from-orange-500 to-red-600"></div>
+<div class="p-8 md:p-10 min-h-[350px] flex flex-col">
+<div class="w-20 h-20 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-100 transition-colors">
+<svg class="w-12 h-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Construction AI Development</h3>
+<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Site safety, project optimization, and predictive maintenance for construction operations. Real-time intelligence for field and office.</p>
+<span class="inline-flex items-center text-orange-600 font-medium group-hover:text-orange-700">
+Explore Construction AI
+<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</span>
+</div>
+</a>
+
+<!-- Card 5: Energy -->
+<a href="/industries-energy.html" class="group industry-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="h-2 bg-gradient-to-r from-emerald-400 to-green-600"></div>
+<div class="p-8 md:p-10 min-h-[350px] flex flex-col">
+<div class="w-20 h-20 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition-colors">
+<svg class="w-12 h-12 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Energy AI Development</h3>
+<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Production forecasting, asset optimization, and predictive maintenance for oil, gas, minerals, and power operations. Compliance-ready systems.</p>
+<span class="inline-flex items-center text-emerald-600 font-medium group-hover:text-emerald-700">
+Explore Energy AI
+<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="py-20 px-6 bg-white">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Not sure which solution fits your needs?</h2>
+<p class="text-lg text-gray-600 mb-8">Start your intelligence assessment and discover how AI can drive measurable impact for your organization.</p>
+<a href="/work-with-us.html" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-base font-medium rounded-full hover:bg-blue-700 transition-colors">
+Start an Intelligence Assessment
+<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</a>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="relative">
+<div class="relative h-[500px] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="text-[150px] md:text-[250px] text-white/25 tracking-tight">intelio</span>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto px-6 py-24 h-full flex flex-col justify-between">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+<div>
+<p class="text-xl sm:text-2xl text-white/90 leading-relaxed">Helping humanity<br>step into the future.</p>
+</div>
+<div class="flex justify-start md:justify-end">
+<div class="space-y-2 sm:space-y-3">
+<a href="/case-studies.html" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">Careers</a>
+<a href="/work-with-us.html" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
+<a href="https://agencyai.ai" class="block text-white/80 hover:text-white transition-colors">Marketing</a>
+<a href="/blog" class="block text-white/80 hover:text-white transition-colors">intelio Blog</a>
+<a href="/pricing.html" class="block text-white/80 hover:text-white transition-colors">Pricing</a>
+<a href="#" class="block text-white/80 hover:text-white transition-colors">Locations</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-6 pb-8 gap-4">
+<div class="text-xl sm:text-2xl font-medium text-white">intelio</div>
+<div class="text-xs sm:text-sm text-white/60">© 2025 intelio</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+  (function() {
+    const hamburger = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
+
