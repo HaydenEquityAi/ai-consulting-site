@@ -23,20 +23,20 @@ import Layout from "../layouts/Layout.astro";
  <div>
  <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
  <div class="space-y-3">
- <a href="/industries-healthcare" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
- <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
- <circle cx="12" cy="12" r="9" />
- <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
- </svg>
- <span>Healthcare</span>
- </a>
- <a href="/industries-real-estate" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <a href="/industries-real-estate" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
  <path d="M4 10l8-6 8 6" />
  <path d="M6 10v8h12v-8" />
  <path d="M10 18v-4h4v4" />
  </svg>
  <span>Real Estate</span>
+ </a>
+ <a href="/industries-healthcare" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="9" />
+ <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+ </svg>
+ <span>Healthcare</span>
  </a>
  <a href="/industries-finance" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
  <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -207,8 +207,8 @@ Resources
           </button>
           <div class="ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
             <p class="text-xs uppercase text-gray-500 mb-2">Industries</p>
-            <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Healthcare</a>
             <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Real Estate</a>
+            <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Healthcare</a>
             <a href="/industries-finance" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Finance</a>
             <a href="/industries-construction" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Construction</a>
             <a href="/industries-energy" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Energy</a>
@@ -424,12 +424,21 @@ Resources
  <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-8 sm:mb-12 px-4">Solutions for every industry</h2>
  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
  <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
- <h3 class="text-lg sm:text-xl font-normal mb-3 sm:mb-4">Healthcare</h3>
+ <h3 class="text-lg sm:text-xl font-normal mb-3 sm:mb-4">Real Estate</h3>
  <ul class="space-y-2 mb-4">
- <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Medical imaging analysis</li>
- <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Patient data processing</li>
- <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automated documentation</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Deal underwriting & valuation</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lead intelligence & conversion</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lease & document intelligence</li>
  </ul>
+            <a href="/industries-real-estate.html" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
+          </div>
+          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
+            <h3 class="text-lg sm:text-xl font-normal mb-3 sm:mb-4">Healthcare</h3>
+            <ul class="space-y-2 mb-4">
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Medical imaging analysis</li>
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Patient data processing</li>
+              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automated documentation</li>
+            </ul>
             <a href="/industries-healthcare.html" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
           </div>
           <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
@@ -440,15 +449,6 @@ Resources
               <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Market prediction models</li>
             </ul>
             <a href="/industries-finance.html" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-3 sm:mb-4">Real Estate</h3>
-            <ul class="space-y-2 mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Deal underwriting & valuation</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lead intelligence & conversion</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lease & document intelligence</li>
-            </ul>
-            <a href="/industries-real-estate.html" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
           </div>
           <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
             <h3 class="text-lg sm:text-xl font-normal mb-3 sm:mb-4">Construction</h3>
@@ -479,18 +479,21 @@ Resources
  <section class="py-12 sm:py-16 md:py-20 bg-black text-white">
  <div class="max-w-4xl mx-auto px-4 sm:px-6">
  <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-8 sm:mb-12 px-4">How we work</h2>
- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
- <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
- <h4 class="text-xl font-normal mb-3">Consultative Approach</h4>
- <p class="text-gray-400 text-sm">We start by understanding your business needs, objectives, and challenges to design tailored AI solutions that deliver maximum value.</p>
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+ <div class="bg-black/30 border border-white/10 p-8 sm:p-10 md:p-12 rounded-xl min-h-[350px] sm:min-h-[380px] md:min-h-[400px] flex flex-col">
+ <div class="text-6xl sm:text-7xl md:text-8xl font-bold text-white/20 mb-4 sm:mb-6">01</div>
+ <h4 class="text-2xl sm:text-3xl font-normal mb-4 sm:mb-6">Consultative Approach</h4>
+ <p class="text-gray-400 text-base sm:text-lg leading-relaxed">We start by understanding your business needs, objectives, and challenges to design tailored AI solutions that deliver maximum value.</p>
  </div>
- <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
- <h4 class="text-xl font-normal mb-3">Proof of Concept</h4>
- <p class="text-gray-400 text-sm">We validate ideas quickly with working prototypes, ensuring alignment with your needs before scaling to full implementation.</p>
+ <div class="bg-black/30 border border-white/10 p-8 sm:p-10 md:p-12 rounded-xl min-h-[350px] sm:min-h-[380px] md:min-h-[400px] flex flex-col">
+ <div class="text-6xl sm:text-7xl md:text-8xl font-bold text-white/20 mb-4 sm:mb-6">02</div>
+ <h4 class="text-2xl sm:text-3xl font-normal mb-4 sm:mb-6">Proof of Concept</h4>
+ <p class="text-gray-400 text-base sm:text-lg leading-relaxed">We validate ideas quickly with working prototypes, ensuring alignment with your needs before scaling to full implementation.</p>
  </div>
- <div class="bg-black/30 border border-white/10 p-6 rounded-xl">
- <h4 class="text-xl font-normal mb-3">Full-Scale Development</h4>
- <p class="text-gray-400 text-sm">Our team builds robust AI solutions that integrate seamlessly with your existing systems and workflows, with ongoing support.</p>
+ <div class="bg-black/30 border border-white/10 p-8 sm:p-10 md:p-12 rounded-xl min-h-[350px] sm:min-h-[380px] md:min-h-[400px] flex flex-col">
+ <div class="text-6xl sm:text-7xl md:text-8xl font-bold text-white/20 mb-4 sm:mb-6">03</div>
+ <h4 class="text-2xl sm:text-3xl font-normal mb-4 sm:mb-6">Full-Scale Development</h4>
+ <p class="text-gray-400 text-base sm:text-lg leading-relaxed">Our team builds robust AI solutions that integrate seamlessly with your existing systems and workflows, with ongoing support.</p>
  </div>
  </div>
         <div class="text-center mt-8 sm:mt-12 px-4">
