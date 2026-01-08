@@ -66,6 +66,35 @@
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
+
+    /* Collapsible sections */
+    .collapsible-content {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 1;
+    }
+    .collapsible-content.collapsed {
+      max-height: 0;
+      opacity: 0;
+      margin-bottom: 0;
+    }
+    .collapsible-toggle {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .collapsible-chevron {
+      transition: transform 0.3s ease;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+    .collapsible-toggle.collapsed .collapsible-chevron {
+      transform: rotate(-90deg);
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-gray-50">
@@ -323,40 +352,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">End-to-End Business Enablement</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Unify fragmented workflows across marketing, sales, CRM, and operations to create seamless business processes.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-blue-500 mt-0.5">•</span>
-                    <span>AI-driven lead generation and prospect research</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-blue-500 mt-0.5">•</span>
-                    <span>CRM automation and pipeline intelligence</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-blue-500 mt-0.5">•</span>
-                    <span>Document analysis and reporting workflows</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-blue-500 mt-0.5">•</span>
-                    <span>Executive summaries and decision support</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Reduced operational friction across teams</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved revenue visibility</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster, more consistent decision-making</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-1')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-1" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-blue-500 mt-0.5">•</span>
+                      <span>AI-driven lead generation and prospect research</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-blue-500 mt-0.5">•</span>
+                      <span>CRM automation and pipeline intelligence</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-blue-500 mt-0.5">•</span>
+                      <span>Document analysis and reporting workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-blue-500 mt-0.5">•</span>
+                      <span>Executive summaries and decision support</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-1')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-1" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Reduced operational friction across teams</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved revenue visibility</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster, more consistent decision-making</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -372,40 +415,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Revenue Enablement & Business Development</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Accelerate revenue growth through intelligent prospect identification, relationship management, and deal acceleration.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-500 mt-0.5">•</span>
-                    <span>Intelligent prospect research and qualification</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-500 mt-0.5">•</span>
-                    <span>Automated outreach and follow-up workflows</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-500 mt-0.5">•</span>
-                    <span>Pipeline forecasting and risk analysis</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-500 mt-0.5">•</span>
-                    <span>Relationship mapping and engagement tracking</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Increased pipeline velocity</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Higher conversion rates</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved sales team productivity</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-2')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-2" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-500 mt-0.5">•</span>
+                      <span>Intelligent prospect research and qualification</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-500 mt-0.5">•</span>
+                      <span>Automated outreach and follow-up workflows</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-500 mt-0.5">•</span>
+                      <span>Pipeline forecasting and risk analysis</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-500 mt-0.5">•</span>
+                      <span>Relationship mapping and engagement tracking</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-2')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-2" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Increased pipeline velocity</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Higher conversion rates</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved sales team productivity</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -422,40 +479,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">CRM Intelligence & Sales Operations</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Transform CRM from a data repository into an intelligent system that guides sales strategy and execution.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-purple-500 mt-0.5">•</span>
-                    <span>Automated data enrichment and hygiene</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-purple-500 mt-0.5">•</span>
-                    <span>Predictive pipeline analytics</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-purple-500 mt-0.5">•</span>
-                    <span>Intelligent activity prioritization</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-purple-500 mt-0.5">•</span>
-                    <span>Automated reporting and insights</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Better sales forecasting accuracy</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Reduced manual CRM maintenance</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Data-driven sales strategy</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-3')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-3" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-purple-500 mt-0.5">•</span>
+                      <span>Automated data enrichment and hygiene</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-purple-500 mt-0.5">•</span>
+                      <span>Predictive pipeline analytics</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-purple-500 mt-0.5">•</span>
+                      <span>Intelligent activity prioritization</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-purple-500 mt-0.5">•</span>
+                      <span>Automated reporting and insights</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-3')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-3" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Better sales forecasting accuracy</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Reduced manual CRM maintenance</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Data-driven sales strategy</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -473,40 +544,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Marketing Operations & Content Enablement</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Scale content creation and marketing operations while maintaining quality and brand consistency.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-indigo-500 mt-0.5">•</span>
-                    <span>AI-powered content generation and optimization</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-indigo-500 mt-0.5">•</span>
-                    <span>Campaign performance analysis and insights</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-indigo-500 mt-0.5">•</span>
-                    <span>Audience segmentation and targeting</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-indigo-500 mt-0.5">•</span>
-                    <span>Automated A/B testing and optimization</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster content production cycles</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved campaign ROI</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Consistent brand messaging</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-4')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-4" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-indigo-500 mt-0.5">•</span>
+                      <span>AI-powered content generation and optimization</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-indigo-500 mt-0.5">•</span>
+                      <span>Campaign performance analysis and insights</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-indigo-500 mt-0.5">•</span>
+                      <span>Audience segmentation and targeting</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-indigo-500 mt-0.5">•</span>
+                      <span>Automated A/B testing and optimization</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-4')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-4" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster content production cycles</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved campaign ROI</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Consistent brand messaging</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -523,40 +608,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Tax, Accounting & Financial Process Automation</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Automate financial workflows to reduce errors, accelerate reporting, and ensure compliance.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-amber-500 mt-0.5">•</span>
-                    <span>Automated document ingestion and classification</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-amber-500 mt-0.5">•</span>
-                    <span>AI-assisted tax review and reporting</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-amber-500 mt-0.5">•</span>
-                    <span>Financial statement analysis and reconciliation</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-amber-500 mt-0.5">•</span>
-                    <span>Audit-ready financial summaries</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Shortened close and reporting cycles</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Reduced manual workload</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved accuracy and defensibility</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-5')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-5" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-amber-500 mt-0.5">•</span>
+                      <span>Automated document ingestion and classification</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-amber-500 mt-0.5">•</span>
+                      <span>AI-assisted tax review and reporting</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-amber-500 mt-0.5">•</span>
+                      <span>Financial statement analysis and reconciliation</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-amber-500 mt-0.5">•</span>
+                      <span>Audit-ready financial summaries</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-5')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-5" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Shortened close and reporting cycles</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Reduced manual workload</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved accuracy and defensibility</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -575,40 +674,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Calendar, Email & Workflow Orchestration</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Eliminate manual coordination tasks and optimize time allocation across teams and priorities.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-cyan-500 mt-0.5">•</span>
-                    <span>Intelligent meeting scheduling and coordination</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-cyan-500 mt-0.5">•</span>
-                    <span>Email triage and response automation</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-cyan-500 mt-0.5">•</span>
-                    <span>Workflow routing and task assignment</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-cyan-500 mt-0.5">•</span>
-                    <span>Priority-based time allocation</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Reduced administrative overhead</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster response times</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Better time management</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-6')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-6" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-cyan-500 mt-0.5">•</span>
+                      <span>Intelligent meeting scheduling and coordination</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-cyan-500 mt-0.5">•</span>
+                      <span>Email triage and response automation</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-cyan-500 mt-0.5">•</span>
+                      <span>Workflow routing and task assignment</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-cyan-500 mt-0.5">•</span>
+                      <span>Priority-based time allocation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-6')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-6" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Reduced administrative overhead</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster response times</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Better time management</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -628,40 +741,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Document Review & Analysis</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Extract insights, identify risks, and automate document processing across contracts, reports, and communications.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-teal-500 mt-0.5">•</span>
-                    <span>Automated document classification and extraction</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-teal-500 mt-0.5">•</span>
-                    <span>Contract analysis and risk identification</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-teal-500 mt-0.5">•</span>
-                    <span>Compliance checking and validation</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-teal-500 mt-0.5">•</span>
-                    <span>Intelligent summarization and reporting</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster document processing</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Reduced review time</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Consistent risk identification</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-7')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-7" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-teal-500 mt-0.5">•</span>
+                      <span>Automated document classification and extraction</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-teal-500 mt-0.5">•</span>
+                      <span>Contract analysis and risk identification</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-teal-500 mt-0.5">•</span>
+                      <span>Compliance checking and validation</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-teal-500 mt-0.5">•</span>
+                      <span>Intelligent summarization and reporting</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-7')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-7" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster document processing</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Reduced review time</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Consistent risk identification</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -678,40 +805,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Transaction Analysis, OMs & BOV Support</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Accelerate deal execution through automated underwriting, valuation, and document production.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-orange-500 mt-0.5">•</span>
-                    <span>AI-assisted underwriting and scenario analysis</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-orange-500 mt-0.5">•</span>
-                    <span>Comparable analysis and valuation support</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-orange-500 mt-0.5">•</span>
-                    <span>Automated OM and BOV drafting</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-orange-500 mt-0.5">•</span>
-                    <span>Due diligence document analysis</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster deal evaluation cycles</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>More consistent assumptions and outputs</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved quality of client-facing materials</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-8')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-8" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-orange-500 mt-0.5">•</span>
+                      <span>AI-assisted underwriting and scenario analysis</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-orange-500 mt-0.5">•</span>
+                      <span>Comparable analysis and valuation support</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-orange-500 mt-0.5">•</span>
+                      <span>Automated OM and BOV drafting</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-orange-500 mt-0.5">•</span>
+                      <span>Due diligence document analysis</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-8')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-8" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster deal evaluation cycles</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>More consistent assumptions and outputs</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved quality of client-facing materials</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -727,40 +868,54 @@ Resources
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Executive & Management Intelligence</h3>
                 <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
                 <p class="text-gray-700 text-sm mb-4 leading-relaxed">Provide leadership with real-time insights and decision support across all business functions.</p>
-                <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
-                <ul class="space-y-1.5 mb-4">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-red-500 mt-0.5">•</span>
-                    <span>Automated executive dashboards and summaries</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-red-500 mt-0.5">•</span>
-                    <span>Predictive analytics and trend analysis</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-red-500 mt-0.5">•</span>
-                    <span>Risk assessment and opportunity identification</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-red-500 mt-0.5">•</span>
-                    <span>Strategic decision support systems</span>
-                  </li>
-                </ul>
-                <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
-                <ul class="space-y-1.5">
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Faster strategic decision-making</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Improved visibility across operations</span>
-                  </li>
-                  <li class="flex items-start gap-2 text-gray-700 text-sm">
-                    <span class="text-green-600 mt-0.5">✓</span>
-                    <span>Data-driven leadership insights</span>
-                  </li>
-                </ul>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'capabilities-9')">
+                  <p class="text-xs font-medium text-gray-500">Capabilities:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="capabilities-9" class="collapsible-content mb-4">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-red-500 mt-0.5">•</span>
+                      <span>Automated executive dashboards and summaries</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-red-500 mt-0.5">•</span>
+                      <span>Predictive analytics and trend analysis</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-red-500 mt-0.5">•</span>
+                      <span>Risk assessment and opportunity identification</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-red-500 mt-0.5">•</span>
+                      <span>Strategic decision support systems</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="collapsible-toggle mb-2" onclick="toggleSection(this, 'impact-9')">
+                  <p class="text-xs font-medium text-gray-500">Business Impact:</p>
+                  <svg class="collapsible-chevron text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <div id="impact-9" class="collapsible-content">
+                  <ul class="space-y-1.5">
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Faster strategic decision-making</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Improved visibility across operations</span>
+                    </li>
+                    <li class="flex items-start gap-2 text-gray-700 text-sm">
+                      <span class="text-green-600 mt-0.5">✓</span>
+                      <span>Data-driven leadership insights</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -1045,6 +1200,24 @@ Resources
         initMobileMenu();
       }
     })();
+
+    // Collapsible section toggle function
+    function toggleSection(toggleElement, contentId) {
+      const content = document.getElementById(contentId);
+      if (!content) return;
+      
+      const isCollapsed = content.classList.contains('collapsed');
+      
+      if (isCollapsed) {
+        // Expand
+        content.classList.remove('collapsed');
+        toggleElement.classList.remove('collapsed');
+      } else {
+        // Collapse
+        content.classList.add('collapsed');
+        toggleElement.classList.add('collapsed');
+      }
+    }
   </script>
 
 </body>
