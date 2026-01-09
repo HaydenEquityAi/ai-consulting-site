@@ -24,6 +24,14 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    /* Video background styles */
+    .hero-finance video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
@@ -221,128 +229,24 @@ Resources
  </nav>
 
  <main>
- <!-- HERO SECTION WITH TRADING TERMINAL -->
- <section class="hero-finance min-h-screen flex items-center relative">
- <!-- Trading terminal visualization -->
- <div class="absolute inset-0">
- <!-- Room/Monitor frame effect -->
- <div class="absolute top-8 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl">
- <div class="bg-gray-800 rounded-t-xl p-1">
- <div class="bg-gray-900 rounded-t-lg h-4"></div>
- </div>
- </div>
- 
- <!-- Trading screen simulation -->
- <svg class="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
- <!-- Left panel - Price list -->
- <g transform="translate(50, 150)">
- <rect x="0" y="0" width="150" height="400" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
- <text x="10" y="25" fill="#58a6ff" font-size="10">CAKE/USDT</text>
- <text x="120" y="25" fill="#3fb950" font-size="8">23.188</text>
- <line x1="0" y1="35" x2="150" y2="35" stroke="#30363d" stroke-width="0.5"/>
- <!-- Price rows -->
- <text x="10" y="50" fill="#8b949e" font-size="8">0.00</text>
- <text x="80" y="50" fill="#f85149" font-size="8">8.139</text>
- <text x="10" y="65" fill="#8b949e" font-size="8">5.67%</text>
- <text x="80" y="65" fill="#3fb950" font-size="8">139.58</text>
- <text x="10" y="80" fill="#8b949e" font-size="8">8.87</text>
- <text x="80" y="80" fill="#f85149" font-size="8">4.20</text>
- <text x="10" y="95" fill="#8b949e" font-size="8">23.188</text>
- <text x="80" y="95" fill="#8b949e" font-size="8">33.46</text>
- <!-- More rows -->
- <text x="10" y="115" fill="#8b949e" font-size="8">38.21</text>
- <text x="10" y="130" fill="#8b949e" font-size="8">33.148</text>
- <text x="10" y="145" fill="#8b949e" font-size="8">23.71</text>
- <text x="10" y="160" fill="#8b949e" font-size="8">23.748</text>
- <text x="10" y="175" fill="#8b949e" font-size="8">23.119</text>
- <text x="10" y="190" fill="#8b949e" font-size="8">33.118</text>
- </g>
- 
- <!-- Center chart area -->
- <g transform="translate(220, 150)">
- <rect x="0" y="0" width="500" height="350" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
- <!-- Chart header -->
- <text x="10" y="25" fill="#c9d1d9" font-size="12">CAKE/USDT</text>
- <text x="150" y="25" fill="#3fb950" font-size="10">22.101 C72.28x</text>
- <!-- Candlestick chart simulation -->
- <g transform="translate(20, 50)">
- <!-- Green candles -->
- <rect x="20" y="80" width="8" height="60" fill="#3fb950"/>
- <rect x="40" y="70" width="8" height="80" fill="#3fb950"/>
- <rect x="60" y="90" width="8" height="50" fill="#f85149"/>
- <rect x="80" y="60" width="8" height="90" fill="#3fb950"/>
- <rect x="100" y="75" width="8" height="70" fill="#3fb950"/>
- <rect x="120" y="85" width="8" height="55" fill="#f85149"/>
- <rect x="140" y="50" width="8" height="100" fill="#3fb950"/>
- <rect x="160" y="65" width="8" height="80" fill="#3fb950"/>
- <rect x="180" y="95" width="8" height="45" fill="#f85149"/>
- <rect x="200" y="55" width="8" height="95" fill="#3fb950"/>
- <rect x="220" y="70" width="8" height="75" fill="#f85149"/>
- <rect x="240" y="40" width="8" height="110" fill="#3fb950"/>
- <rect x="260" y="60" width="8" height="85" fill="#3fb950"/>
- <rect x="280" y="80" width="8" height="60" fill="#f85149"/>
- <rect x="300" y="45" width="8" height="105" fill="#3fb950"/>
- <!-- Volume bars -->
- <rect x="20" y="200" width="8" height="30" fill="#3fb95040"/>
- <rect x="40" y="190" width="8" height="40" fill="#3fb95040"/>
- <rect x="60" y="205" width="8" height="25" fill="#f8514940"/>
- <rect x="80" y="180" width="8" height="50" fill="#3fb95040"/>
- <rect x="100" y="195" width="8" height="35" fill="#3fb95040"/>
- </g>
- <!-- Price axis -->
- <text x="470" y="80" fill="#8b949e" font-size="8">+17%</text>
- <text x="470" y="120" fill="#8b949e" font-size="8">+3.71%</text>
- <text x="470" y="160" fill="#8b949e" font-size="8">0.00%</text>
- <text x="470" y="200" fill="#8b949e" font-size="8">-2.45%</text>
- </g>
- 
- <!-- Right panel - Order book -->
- <g transform="translate(740, 150)">
- <rect x="0" y="0" width="200" height="400" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
- <text x="10" y="25" fill="#c9d1d9" font-size="10">TradingView</text>
- <text x="150" y="25" fill="#8b949e" font-size="8">Depth</text>
- <!-- Order rows -->
- <text x="10" y="50" fill="#f85149" font-size="8">23.188</text>
- <text x="80" y="50" fill="#8b949e" font-size="8">0.00500000</text>
- <text x="10" y="65" fill="#f85149" font-size="8">23.175</text>
- <text x="80" y="65" fill="#8b949e" font-size="8">4.267</text>
- <text x="10" y="80" fill="#f85149" font-size="8">23.171</text>
- <text x="80" y="80" fill="#8b949e" font-size="8">89.371</text>
- <text x="10" y="95" fill="#f85149" font-size="8">23.168</text>
- <text x="80" y="95" fill="#8b949e" font-size="8">4.88</text>
- <!-- Green section -->
- <text x="10" y="120" fill="#3fb950" font-size="8">23.155</text>
- <text x="80" y="120" fill="#8b949e" font-size="8">21.11</text>
- <text x="10" y="135" fill="#3fb950" font-size="8">23.148</text>
- <text x="80" y="135" fill="#8b949e" font-size="8">35.07</text>
- <text x="10" y="150" fill="#3fb950" font-size="8">23.139</text>
- <text x="80" y="150" fill="#8b949e" font-size="8">37.29</text>
- </g>
- 
- <!-- Far right panel - My Trades -->
- <g transform="translate(960, 150)">
- <rect x="0" y="0" width="180" height="400" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
- <text x="10" y="25" fill="#c9d1d9" font-size="10">Market Trades</text>
- <text x="120" y="25" fill="#8b949e" font-size="8">My Trades</text>
- <!-- Trade rows -->
- <text x="10" y="50" fill="#3fb950" font-size="8">23.155</text>
- <text x="70" y="50" fill="#8b949e" font-size="8">18,000</text>
- <text x="130" y="50" fill="#8b949e" font-size="8">09:12:03</text>
- <text x="10" y="65" fill="#f85149" font-size="8">23.148</text>
- <text x="70" y="65" fill="#8b949e" font-size="8">2,400</text>
- <text x="130" y="65" fill="#8b949e" font-size="8">09:12:01</text>
- <text x="10" y="80" fill="#3fb950" font-size="8">23.160</text>
- <text x="70" y="80" fill="#8b949e" font-size="8">5,600</text>
- <text x="130" y="80" fill="#8b949e" font-size="8">09:11:58</text>
- </g>
- 
- <!-- Person silhouette hint -->
- <ellipse cx="600" cy="650" rx="80" ry="120" fill="#1a1a2e" opacity="0.8"/>
- </svg>
- 
- <!-- Overlay -->
- <div class="absolute inset-0 bg-black/40"></div>
- </div>
+ <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+ <section class="hero-finance min-h-screen flex items-center relative overflow-hidden">
+   <!-- Video Background -->
+   <video 
+     autoplay 
+     loop 
+     muted 
+     playsinline
+     class="absolute inset-0 w-full h-full object-cover"
+     style="z-index: 0;"
+   >
+     <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+     <!-- Fallback gradient if video doesn't load -->
+     <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900"></div>
+   </video>
+   
+   <!-- Dark Overlay for text readability -->
+   <div class="absolute inset-0 bg-black/30 z-[1]"></div>
  
  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
  <div class="max-w-2xl">
