@@ -362,10 +362,19 @@ Resources
   }
 
   /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
+    }
+  }
+
   @media (max-width: 768px) {
     .logo-carousel-slide {
       gap: 2.5rem;
       padding: 0 1.5rem;
+    }
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
     }
   }
 
@@ -373,6 +382,9 @@ Resources
     .logo-carousel-slide {
       gap: 2rem;
       padding: 0 1rem;
+    }
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
     }
   }
 
