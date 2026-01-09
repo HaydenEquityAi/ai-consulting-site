@@ -84,6 +84,32 @@
       min-height: 70px;
       transition: background-color 0.2s ease;
     }
+    
+    /* Mobile responsive accordion */
+    @media (max-width: 768px) {
+      .accordion-header {
+        padding: 16px 20px;
+        min-height: 60px;
+      }
+      .accordion-title {
+        font-size: 1rem;
+      }
+      .accordion-content {
+        padding: 0 20px;
+      }
+      .accordion-content.expanded {
+        padding: 0 20px 20px 20px;
+      }
+      .accordion-content-inner {
+        padding-left: 16px;
+        padding-top: 12px;
+      }
+      .accordion-chevron {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+      }
+    }
     .accordion-header-left {
       display: flex;
       align-items: center;
