@@ -499,18 +499,35 @@ Explore Solutions
  </div>
 
 <!-- AI in Healthcare - Full Width -->
-<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 mb-6">
-<div class="absolute inset-0 bg-gradient-to-r from-cyan-900/20 to-teal-900/20"></div>
-<div class="industry-card-content h-full flex flex-col justify-end p-12">
-<h3 class="text-3xl text-white mb-5">AI in Healthcare</h3>
-<p class="text-gray-300 text-base mb-6 max-w-lg leading-relaxed">
- AI is transforming healthcare with predictive diagnostics, personalized medicine, automated medical imaging, and streamlined patient workflows.
- </p>
- <a href="/industries-healthcare" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
- Explore
- </a>
- </div>
- </div>
+<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 mb-6 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/DNA_Helix_Animation_Generation.mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-cyan-900/35 to-teal-900/35 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="industry-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">AI in Healthcare</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-lg leading-relaxed">
+     AI is transforming healthcare with predictive diagnostics, personalized medicine, automated medical imaging, and streamlined patient workflows.
+    </p>
+     <a href="/industries-healthcare" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
+</div>
 
 <!-- Bottom Row -->
 <div class="grid md:grid-cols-2 gap-10">
