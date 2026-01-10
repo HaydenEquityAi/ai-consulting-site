@@ -35,6 +35,14 @@
       overflow: hidden;
     }
     
+    /* Video background styles for industry cards */
+    .industry-card video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
     /* Accordion card styles */
     .accordion-item {
       transition: all 0.3s ease-out;
@@ -459,18 +467,35 @@ Explore Solutions
  </div>
 
 <!-- AI in Finance -->
-<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-<div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
-<div class="industry-card-content h-full flex flex-col justify-end p-12">
-<h3 class="text-3xl text-white mb-5">AI in Finance</h3>
-<p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
- AI powers fraud detection, algorithmic trading, risk assessment, customer service automation, and real-time financial analytics.
- </p>
- <a href="/industries-finance" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
- Explore
- </a>
- </div>
- </div>
+<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-purple-900/40 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="industry-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">AI in Finance</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     AI powers fraud detection, algorithmic trading, risk assessment, customer service automation, and real-time financial analytics.
+    </p>
+     <a href="/industries-finance" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
+</div>
  </div>
 
 <!-- AI in Healthcare - Full Width -->
