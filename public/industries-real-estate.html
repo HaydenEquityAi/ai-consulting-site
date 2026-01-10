@@ -30,6 +30,33 @@
       position: relative;
       overflow: hidden;
     }
+    
+    /* Video background styles */
+    .hero-realestate video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    /* Mobile responsive improvements */
+    @media (max-width: 768px) {
+      .hero-realestate {
+        min-height: 70vh;
+      }
+      .hero-realestate h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      .hero-realestate p {
+        font-size: 1rem;
+      }
+      .hero-realestate a {
+        min-height: 44px;
+        padding: 12px 24px;
+        font-size: 0.875rem;
+      }
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
@@ -227,123 +254,32 @@ Resources
  </nav>
 
  <main>
- <!-- HERO SECTION -->
- <section class="hero-realestate min-h-[600px] flex items-center relative pt-32">
- <!-- Wireframe building visualization -->
- <div class="absolute inset-0">
- <svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
- <!-- Building 1 - Left tall building -->
- <g stroke="#ffffff" fill="none" stroke-width="0.5">
- <rect x="50" y="200" width="120" height="500"/>
- <line x1="50" y1="250" x2="170" y2="250"/>
- <line x1="50" y1="300" x2="170" y2="300"/>
- <line x1="50" y1="350" x2="170" y2="350"/>
- <line x1="50" y1="400" x2="170" y2="400"/>
- <line x1="50" y1="450" x2="170" y2="450"/>
- <line x1="50" y1="500" x2="170" y2="500"/>
- <line x1="50" y1="550" x2="170" y2="550"/>
- <line x1="50" y1="600" x2="170" y2="600"/>
- <line x1="50" y1="650" x2="170" y2="650"/>
- <line x1="90" y1="200" x2="90" y2="700"/>
- <line x1="130" y1="200" x2="130" y2="700"/>
- <!-- Window details -->
- <rect x="60" y="210" width="20" height="30"/>
- <rect x="90" y="210" width="20" height="30"/>
- <rect x="120" y="210" width="20" height="30"/>
- </g>
+ <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+ <section class="hero-realestate min-h-screen flex items-center relative overflow-hidden">
+   <!-- Video Background -->
+   <video 
+     autoplay 
+     loop 
+     muted 
+     playsinline
+     class="absolute inset-0 w-full h-full object-cover"
+     style="z-index: 0;"
+   >
+     <source src="/logos/real-estate-hero.mp4" type="video/mp4">
+     <!-- Fallback gradient if video doesn't load -->
+     <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900"></div>
+   </video>
+   
+   <!-- Dark Overlay for text readability -->
+   <div class="absolute inset-0 bg-black/30 z-[1]"></div>
  
- <!-- Building 2 - Center tall tower -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.5">
- <rect x="500" y="100" width="200" height="600"/>
- <line x1="500" y1="150" x2="700" y2="150"/>
- <line x1="500" y1="200" x2="700" y2="200"/>
- <line x1="500" y1="250" x2="700" y2="250"/>
- <line x1="500" y1="300" x2="700" y2="300"/>
- <line x1="500" y1="350" x2="700" y2="350"/>
- <line x1="500" y1="400" x2="700" y2="400"/>
- <line x1="500" y1="450" x2="700" y2="450"/>
- <line x1="500" y1="500" x2="700" y2="500"/>
- <line x1="500" y1="550" x2="700" y2="550"/>
- <line x1="500" y1="600" x2="700" y2="600"/>
- <line x1="500" y1="650" x2="700" y2="650"/>
- <line x1="550" y1="100" x2="550" y2="700"/>
- <line x1="600" y1="100" x2="600" y2="700"/>
- <line x1="650" y1="100" x2="650" y2="700"/>
- <!-- Dotted center line -->
- <line x1="600" y1="100" x2="600" y2="700" stroke-dasharray="5,5"/>
- </g>
- 
- <!-- Building 3 - Right building -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.5">
- <rect x="900" y="250" width="150" height="450"/>
- <line x1="900" y1="300" x2="1050" y2="300"/>
- <line x1="900" y1="350" x2="1050" y2="350"/>
- <line x1="900" y1="400" x2="1050" y2="400"/>
- <line x1="900" y1="450" x2="1050" y2="450"/>
- <line x1="900" y1="500" x2="1050" y2="500"/>
- <line x1="900" y1="550" x2="1050" y2="550"/>
- <line x1="900" y1="600" x2="1050" y2="600"/>
- <line x1="900" y1="650" x2="1050" y2="650"/>
- <line x1="950" y1="250" x2="950" y2="700"/>
- <line x1="1000" y1="250" x2="1000" y2="700"/>
- </g>
- 
- <!-- Building 4 - Far right tower -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.5">
- <rect x="1080" y="180" width="100" height="520"/>
- <line x1="1080" y1="230" x2="1180" y2="230"/>
- <line x1="1080" y1="280" x2="1180" y2="280"/>
- <line x1="1080" y1="330" x2="1180" y2="330"/>
- <line x1="1080" y1="380" x2="1180" y2="380"/>
- <line x1="1080" y1="430" x2="1180" y2="430"/>
- <line x1="1080" y1="480" x2="1180" y2="480"/>
- <line x1="1080" y1="530" x2="1180" y2="530"/>
- <line x1="1080" y1="580" x2="1180" y2="580"/>
- <line x1="1080" y1="630" x2="1180" y2="630"/>
- <line x1="1130" y1="180" x2="1130" y2="700"/>
- </g>
- 
- <!-- Small building left -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.5">
- <rect x="200" y="400" width="100" height="300"/>
- <line x1="200" y1="450" x2="300" y2="450"/>
- <line x1="200" y1="500" x2="300" y2="500"/>
- <line x1="200" y1="550" x2="300" y2="550"/>
- <line x1="200" y1="600" x2="300" y2="600"/>
- <line x1="200" y1="650" x2="300" y2="650"/>
- <line x1="250" y1="400" x2="250" y2="700"/>
- </g>
- 
- <!-- Ground level/platform -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.5">
- <line x1="0" y1="700" x2="1200" y2="700"/>
- <rect x="400" y="680" width="400" height="20"/>
- <!-- Platform details -->
- <ellipse cx="450" cy="720" rx="30" ry="10"/>
- <ellipse cx="550" cy="720" rx="30" ry="10"/>
- <ellipse cx="650" cy="720" rx="30" ry="10"/>
- <ellipse cx="750" cy="720" rx="30" ry="10"/>
- </g>
- 
- <!-- Connecting lines/bridges -->
- <g stroke="#94a3b8" fill="none" stroke-width="0.3">
- <line x1="170" y1="450" x2="200" y2="450"/>
- <line x1="300" y1="500" x2="500" y2="400"/>
- <line x1="700" y1="350" x2="900" y2="400"/>
- </g>
- </svg>
- 
- <!-- Overlay -->
- <div class="absolute inset-0 bg-blue-900/20"></div>
- </div>
- 
- <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+ <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 md:pt-32">
  <div class="max-w-2xl">
-<h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-4 sm:mb-6">
 <span class="">Real Estate</span><br>
 <span class="">AI Development Services</span>
 </h1>
- <a href="#commercial" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+ <a href="#commercial" class="inline-flex items-center justify-center min-h-[44px] px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
  Learn more
  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
