@@ -439,32 +439,35 @@ Explore Solutions
 <!-- Industry Cards Grid -->
 <div class="grid md:grid-cols-2 gap-10 mb-6">
 <!-- AI in Real Estate -->
-<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
-<div class="absolute inset-0 opacity-30">
-<!-- Wireframe building pattern -->
-<svg class="absolute right-0 bottom-0 w-64 h-64 text-blue-400/30" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="0.5">
-<rect x="60" y="40" width="80" height="140" />
-<line x1="60" y1="60" x2="140" y2="60" />
-<line x1="60" y1="80" x2="140" y2="80" />
-<line x1="60" y1="100" x2="140" y2="100" />
-<line x1="60" y1="120" x2="140" y2="120" />
-<line x1="60" y1="140" x2="140" y2="140" />
-<line x1="60" y1="160" x2="140" y2="160" />
-<line x1="80" y1="40" x2="80" y2="180" />
-<line x1="100" y1="40" x2="100" y2="180" />
-<line x1="120" y1="40" x2="120" y2="180" />
-</svg>
+<div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/real-estate-hero.mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-indigo-900/40 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="industry-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">AI in Real Estate</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     AI enables property valuation, predictive market analysis, intelligent search, virtual tours, and automated document processing for real estate professionals.
+    </p>
+     <a href="/industries-real-estate" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
 </div>
-<div class="industry-card-content h-full flex flex-col justify-end p-12">
-<h3 class="text-3xl text-white mb-5">AI in Real Estate</h3>
-<p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
- AI enables property valuation, predictive market analysis, intelligent search, virtual tours, and automated document processing for real estate professionals.
- </p>
- <a href="/industries-real-estate" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
- Explore
- </a>
- </div>
- </div>
 
 <!-- AI in Finance -->
 <div class="industry-card rounded-2xl h-[400px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
