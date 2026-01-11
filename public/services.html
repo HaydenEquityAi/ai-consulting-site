@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Services & Solutions - intelio</title>
+  <title>Explore All Services - intelio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,6 +29,84 @@
       background: #ffffff;
       position: relative;
       overflow: hidden;
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Video background styles for service cards */
+    .service-card video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    /* Accordion card styles */
+    .accordion-item {
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+    .accordion-item:hover {
+      background-color: #f9fafb;
+    }
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      min-height: 70px;
+      transition: background-color 0.2s ease;
+    }
+    .accordion-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+    .accordion-accent-bar {
+      width: 4px;
+      height: 100%;
+      min-height: 50px;
+      flex-shrink: 0;
+    }
+    .accordion-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0;
+    }
+    .accordion-chevron {
+      transition: transform 0.3s ease;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: #6b7280;
+    }
+    .accordion-item.expanded .accordion-chevron {
+      transform: rotate(180deg);
+      color: #111827;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+      padding: 0 24px;
+    }
+    .accordion-content.expanded {
+      max-height: 2000px;
+      opacity: 1;
+      padding: 0 24px 24px 24px;
+    }
+    .accordion-content-inner {
+      padding-left: 20px;
+      padding-top: 16px;
     }
   </style>
 </head>
@@ -288,10 +366,10 @@ Resources
 <div class="max-w-2xl text-left">
 <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] mb-6 text-left">
 <span class="text-black">Explore All</span><br>
-<span class="text-purple-600">Services</span>
+<span class="text-blue-600">Services</span>
 </h1>
 <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed text-left">
-Custom AI development, enterprise intelligence architecture, and Microsoft ecosystem integration. Discover the services that drive measurable business impact.
+Enterprise-grade AI services built by experienced engineers and architects. We deliver production-ready solutions tailored to your business needs.
 </p>
 <div class="flex items-center gap-4 justify-start">
 <a href="/work-with-us.html" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
@@ -300,201 +378,497 @@ Get Started
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 </svg>
 </a>
-<a href="#services-grid" class="text-gray-700 text-sm font-medium hover:text-gray-900 transition-colors">
-Explore Services
+<a href="#solutions" class="text-gray-700 text-sm font-medium hover:text-gray-900 transition-colors">
+Explore Solutions
 </a>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SERVICES GRID -->
-<section id="services-grid" class="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-<!-- Card 1: Agentic AI -->
-<a href="/ai-development.html#agentic-ai" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
-<svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-</svg>
-</div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Agentic AI Development</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">AI agents that autonomously execute complex workflows. Enhance business efficiency, optimize processes, and improve customer interactions.</p>
-<span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700 min-h-[44px]">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
+<!-- IMPLEMENTING SERVICES ACROSS BUSINESS -->
+<section class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-8">Implementing services across business</p>
 
-<!-- Card 2: Computer Vision -->
-<a href="/ai-development.html#computer-vision" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-100 transition-colors">
-<svg class="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-</svg>
+<!-- Service Cards Grid -->
+<div class="grid md:grid-cols-2 gap-10 mb-6">
+<!-- AI & Machine Learning -->
+<div class="service-card rounded-2xl h-[400px] bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/ai-machine-learning-hero.mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/40 to-purple-900/40 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="service-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">AI & Machine Learning</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     Custom AI/ML solutions for your business needs, from predictive analytics to automation and intelligent decision-making.
+    </p>
+     <a href="/services-ai-machine-learning" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
 </div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Computer Vision Solutions</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Transform processes with Computer Vision technology. Automate quality control, reduce errors, and maintain high standards with less reliance on manual inspections.</p>
-<span class="inline-flex items-center text-purple-600 font-medium group-hover:text-purple-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
 
-<!-- Card 3: Generative AI -->
-<a href="/ai-development.html#generative-ai" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-100 transition-colors">
-<svg class="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-</svg>
+<!-- AI Consulting -->
+<div class="service-card rounded-2xl h-[400px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+  <!-- Video Background - using workflow video as placeholder -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/AI_Workflow_Animation_Generation.mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-purple-900/40 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="service-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">AI Consulting</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     Expert guidance on AI strategy, implementation, and best practices for your organization.
+    </p>
+     <a href="/services-ai-consulting" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
 </div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Generative AI Solutions</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Automate content creation, enhance user experiences, and cut production costs. Harness the power of AI to produce high-quality, original content at scale.</p>
-<span class="inline-flex items-center text-yellow-600 font-medium group-hover:text-yellow-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
 </div>
-</a>
 
-<!-- Card 4: LLM Fine Tuning -->
-<a href="/ai-development.html#llm-fine-tuning" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-green-500 to-emerald-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-colors">
-<svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-</svg>
+<!-- Digital Transformation - Full Width -->
+<div class="service-card rounded-2xl h-[400px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 mb-6 relative overflow-hidden">
+  <!-- Video Background - using workflow video as placeholder -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/AI_Workflow_Animation_Generation.mp4" type="video/mp4">
+    <!-- Fallback gradient if video doesn't load -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-r from-cyan-900/35 to-teal-900/35 z-[1]"></div>
+  
+  <!-- Content -->
+  <div class="service-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">Digital Transformation</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-lg leading-relaxed">
+     Modernize your business with AI-driven digital transformation and process optimization.
+    </p>
+     <a href="/services-digital-transformation" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+     </a>
+  </div>
 </div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">LLM Fine Tuning</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Enhance your AI's capabilities by fine-tuning large language models. Tailor interactions to better meet your specific business needs.</p>
-<span class="inline-flex items-center text-green-600 font-medium group-hover:text-green-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
 
-<!-- Card 5: Natural Language Processing -->
-<a href="/ai-development.html#nlp" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-indigo-500 to-blue-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-100 transition-colors">
-<svg class="w-12 h-12 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h10m-7 4h7M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-</svg>
+<!-- Bottom Row -->
+<div class="grid md:grid-cols-2 gap-10">
+<!-- Workflow Automation -->
+<div class="service-card rounded-2xl h-[400px] bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/AI_Workflow_Animation_Generation.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-[1]"></div>
+  
+  <div class="service-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">Workflow Automation</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     Automate repetitive tasks and workflows with intelligent AI solutions that save time and reduce errors.
+    </p>
+    <a href="/services-workflow-automation" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+    </a>
+  </div>
 </div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Natural Language Processing</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Analyze and extract key information from unstructured text like emails and social media. Identify trends and sentiments to drive data-driven decisions.</p>
-<span class="inline-flex items-center text-indigo-600 font-medium group-hover:text-indigo-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
 
-<!-- Card 6: Retrieval Augmented Generation -->
-<a href="/ai-development.html#rag" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-100 transition-colors">
-<svg class="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-</svg>
+<!-- Internal Tooling -->
+<div class="service-card rounded-2xl h-[400px] bg-gradient-to-br from-gray-700 via-gray-600 to-gray-800 relative overflow-hidden">
+  <!-- Video Background -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+    style="z-index: 0;"
+  >
+    <source src="/logos/internal-tooling.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-[1]"></div>
+  
+  <div class="service-card-content h-full flex flex-col justify-end p-12 relative z-[2]">
+    <h3 class="text-3xl text-white mb-5">Internal Tooling</h3>
+    <p class="text-gray-300 text-base mb-6 max-w-md leading-relaxed">
+     Build custom internal tools powered by AI to streamline operations and boost productivity.
+    </p>
+    <a href="/services-internal-tooling" class="inline-flex items-center px-5 py-2.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-lg border border-white/20 hover:bg-white/20 transition-colors w-fit">
+     Explore
+    </a>
+  </div>
 </div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Retrieval Augmented Generation (RAG)</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Optimize your large language models with Retrieval Augmented Generation (RAG). Enhance accuracy, relevancy, and trust in your AI-driven solutions.</p>
-<span class="inline-flex items-center text-teal-600 font-medium group-hover:text-teal-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
-
-<!-- Card 7: Enterprise AI -->
-<a href="/enterprise-ai.html" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-slate-600 to-gray-700"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-slate-100 transition-colors">
-<svg class="w-12 h-12 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-</svg>
-</div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise AI Architecture</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Intelligence integrated directly into your business systems. Custom architecture for governance, security, and enterprise-grade reliability.</p>
-<span class="inline-flex items-center text-slate-600 font-medium group-hover:text-slate-700">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
-
-<!-- Card 8: Microsoft Intelligence -->
-<a href="/microsoft-intelligence.html" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-blue-600 to-blue-700"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
-<svg class="w-12 h-12 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-<path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/>
-</svg>
-</div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Microsoft AI Integration</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">Custom AI systems that live inside the Microsoft ecosystem. Integrate intelligence into 365, Dynamics, Power Platform, and Azure without disruption.</p>
-<span class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700 min-h-[44px]">
-Learn More
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
-
-<!-- Card 9: Custom Business Solutions -->
-<a href="/case-studies.html" class="group service-card bg-white border-2 border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-<div class="h-2 bg-gradient-to-r from-amber-500 to-orange-500"></div>
-<div class="p-6 sm:p-8 md:p-10 min-h-[320px] sm:min-h-[350px] flex flex-col">
-<div class="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-100 transition-colors">
-<svg class="w-12 h-12 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-</svg>
-</div>
-<h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Business Solutions</h3>
-<p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">End-to-end AI systems designed around your specific business outcomes. From revenue enablement to operations optimization.</p>
-<span class="inline-flex items-center text-amber-600 font-medium group-hover:text-amber-700">
-See Examples
-<svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-</svg>
-</span>
-</div>
-</a>
 </div>
 </div>
 </section>
+
+<!-- AI MODELS WE SPECIALIZE IN -->
+<section class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-12">AI models we specialize in</p>
+
+<div class="grid md:grid-cols-2 gap-16">
+<!-- Foundation AI Models -->
+<div>
+<h3 class="text-lg font-semibold text-center mb-2">Foundation AI Models</h3>
+<div class="w-12 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+<div class="grid grid-cols-3 gap-6">
+<!-- ChatGPT -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/ChatGPT logo.svg" alt="ChatGPT" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">ChatGPT</span>
+</div>
+<!-- Claude -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/Claude.BbQ028DO.svg" alt="Claude" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">Claude</span>
+</div>
+<!-- Gemini -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/Gemini.BZ4KVBF2.svg" alt="Gemini" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">Gemini</span>
+</div>
+<!-- Llama -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/Llama.CqmvnEs7.svg" alt="Llama" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">Llama</span>
+</div>
+<!-- Mistral -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/Mistral.CFPMBmCs.svg" alt="Mistral" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">Mistral</span>
+</div>
+<!-- Falcon -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<svg class="w-8 h-8 text-amber-600" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2L4 12l8 10 8-10L12 2z"/>
+</svg>
+</div>
+<span class="text-sm text-gray-600">Falcon</span>
+</div>
+<!-- Cohere -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<svg class="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="currentColor">
+<circle cx="12" cy="12" r="10"/>
+</svg>
+</div>
+<span class="text-sm text-gray-600">Cohere</span>
+</div>
+<!-- DeepSeek -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/deepseek-logo.png" alt="DeepSeek" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">DeepSeek</span>
+</div>
+<!-- Grok -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2">
+<img src="/logos/grok-logo.png" alt="Grok" class="w-12 h-12 object-contain">
+</div>
+<span class="text-sm text-gray-600">Grok</span>
+</div>
+</div>
+</div>
+
+<!-- Specialized AI Models -->
+<div>
+<h3 class="text-lg font-semibold text-center mb-2">Specialized AI Models</h3>
+<div class="w-12 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+<div class="grid grid-cols-3 gap-6">
+<!-- Vicuna -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2L2 7l10 5 10-5-10-5z"/>
+</svg>
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-purple-100 text-purple-600 text-[10px] rounded">Chat</span>
+</div>
+<span class="text-sm text-gray-600">Vicuna</span>
+</div>
+<!-- Replit -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/replit-logo.png" alt="Replit" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-orange-100 text-orange-600 text-[10px] rounded">Code</span>
+</div>
+<span class="text-sm text-gray-600">Replit</span>
+</div>
+<!-- Midjourney -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/midjourney-logo.png" alt="Midjourney" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-amber-100 text-amber-600 text-[10px] rounded">Image</span>
+</div>
+<span class="text-sm text-gray-600">Midjourney</span>
+</div>
+<!-- Stable Diffusion -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/dalle-e-logo.png" alt="Stable Diffusion" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-purple-100 text-purple-600 text-[10px] rounded">Image</span>
+</div>
+<span class="text-sm text-gray-600">Stable</span>
+</div>
+<!-- Deepgram -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<svg class="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+</svg>
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-green-100 text-green-600 text-[10px] rounded">🎤</span>
+</div>
+<span class="text-sm text-gray-600">Deepgram</span>
+</div>
+<!-- Whisper -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/ChatGPT logo.svg" alt="Whisper" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-teal-100 text-teal-600 text-[10px] rounded">🎤</span>
+</div>
+<span class="text-sm text-gray-600">Whisper</span>
+</div>
+<!-- Perplexity -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/perplexity-logo.png" alt="Perplexity" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-blue-100 text-blue-600 text-[10px] rounded">🔍</span>
+</div>
+<span class="text-sm text-gray-600">Perplexity</span>
+</div>
+<!-- Runway -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/runway-logo.png" alt="Runway" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-red-100 text-red-600 text-[10px] rounded">Video</span>
+</div>
+<span class="text-sm text-gray-600">Runway</span>
+</div>
+<!-- Sora -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-2 relative">
+<img src="/logos/ChatGPT logo.svg" alt="Sora" class="w-12 h-12 object-contain">
+<span class="absolute -top-1 -right-1 px-1.5 py-0.5 bg-gray-200 text-gray-600 text-[10px] rounded">Video</span>
+</div>
+<span class="text-sm text-gray-600">Sora</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- REAL-WORLD EXPERIENCES -->
+<section class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-8">Real-world experiences</p>
+
+<!-- Client Logos - Infinite Scroll -->
+<div class="logo-marquee-container mb-12" id="marquee-6">
+  <div class="logo-marquee-track">
+    <!-- First set of logos -->
+    <div class="logo-marquee-item">
+      <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+    </div>
+    <!-- Duplicate set for seamless loop -->
+    <div class="logo-marquee-item">
+      <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+    </div>
+    <div class="logo-marquee-item">
+      <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.logo-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  animation: logo-scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.logo-marquee-container:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-marquee-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.logo-marquee-item:hover {
+  opacity: 1;
+}
+
+.logo-marquee-img {
+  height: 120px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-marquee-img {
+    height: 100px;
+    max-width: 160px;
+  }
+  .logo-marquee-track {
+    gap: 1.25rem;
+    animation: logo-scroll 40s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-marquee-img {
+    height: 80px;
+    max-width: 140px;
+  }
+  .logo-marquee-track {
+    gap: 1rem;
+    animation: logo-scroll 40s linear infinite;
+  }
+}
+</style>
+
+ <!-- Work With Us CTA -->
+ <div class="text-center">
+ <a href="/work-with-us.html" class="inline-flex items-center px-8 py-4 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+ Work with us
+ <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+ </svg>
+ </a>
+ </div>
+ </div>
+ </section>
 
 <!-- SERVICE CATEGORIES -->
 <section class="py-16 px-6 bg-gray-50">
@@ -594,6 +968,1107 @@ See Examples
 </div>
 </section>
 
+<!-- OUR AI SOLUTIONS -->
+<section id="solutions" class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-8">Our Services</p>
+
+<!-- Solutions Grid -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- AI/ML -->
+<div class="solution-card border border-gray-200 rounded-xl p-12 min-h-[450px]">
+<div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+</svg>
+</div>
+<h4 class="font-semibold text-2xl mb-5">Artificial Intelligence & Machine Learning</h4>
+<p class="text-lg text-gray-500 leading-relaxed">Custom AI/ML solutions for your business needs, from predictive analytics to automation.</p>
+</div>
+
+<!-- AI Consulting -->
+<div class="solution-card border border-gray-200 rounded-xl p-12 min-h-[450px]">
+<div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+</svg>
+</div>
+<h4 class="font-semibold text-2xl mb-5">AI Consulting</h4>
+<p class="text-lg text-gray-500 leading-relaxed">Expert guidance on AI strategy, implementation, and best practices for your organization.</p>
+</div>
+
+<!-- Digital Transformation -->
+<div class="solution-card border border-gray-200 rounded-xl p-12 min-h-[450px]">
+<div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+</svg>
+</div>
+<h4 class="font-semibold text-2xl mb-5">Digital Transformation</h4>
+<p class="text-lg text-gray-500 leading-relaxed">Modernize your business with AI-driven digital transformation and process optimization.</p>
+</div>
+
+<!-- Internal Tooling -->
+<div class="solution-card border border-gray-200 rounded-xl p-12 min-h-[450px]">
+<div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+</svg>
+</div>
+<h4 class="font-semibold text-2xl mb-5">Internal Tooling</h4>
+<p class="text-lg text-gray-500 leading-relaxed">Build custom internal tools powered by AI to streamline operations and boost productivity.</p>
+</div>
+
+<!-- Workflow Automation -->
+<div class="solution-card border border-gray-200 rounded-xl p-12 min-h-[450px]">
+<div class="w-20 h-20 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+<svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+</svg>
+</div>
+<h4 class="font-semibold text-2xl mb-5">Workflow Automation</h4>
+<p class="text-lg text-gray-500 leading-relaxed">Automate repetitive tasks and workflows with intelligent AI solutions.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OUR AI IMPLEMENTATIONS -->
+<section class="py-20 px-6 border-t border-gray-100 bg-gray-50">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">Our Service Implementations</h2>
+<p class="text-lg text-gray-600 mb-16 leading-relaxed">
+Deep technical expertise for enterprise clients. Real-world implementations that drive measurable business value.
+</p>
+
+<!-- BUSINESS CAPABILITIES -->
+<div class="mb-20">
+<h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-12">Business Capabilities</h3>
+<div class="max-w-5xl mx-auto bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+
+<!-- Item 1: End-to-End Business Enablement -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-1')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-blue-500"></div>
+      <h3 class="accordion-title">End-to-End Business Enablement</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-1" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Unify fragmented workflows across marketing, sales, CRM, and operations to improve efficiency and leadership visibility.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-blue-500 mt-0.5">•</span>
+            <span>AI-driven lead generation and prospect research</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-blue-500 mt-0.5">•</span>
+            <span>CRM automation and pipeline intelligence</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-blue-500 mt-0.5">•</span>
+            <span>Document analysis and reporting workflows</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-blue-500 mt-0.5">•</span>
+            <span>Executive summaries and decision support</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Reduced operational friction across teams</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved revenue visibility</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Faster, more consistent decision-making</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 2: Revenue Enablement & Business Development -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-2')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-green-500"></div>
+      <h3 class="accordion-title">Revenue Enablement & Business Development</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-2" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Accelerate revenue growth through intelligent lead generation, pipeline optimization, and sales process automation.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-500 mt-0.5">•</span>
+            <span>Intelligent lead scoring and qualification</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-500 mt-0.5">•</span>
+            <span>Automated prospect research and enrichment</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-500 mt-0.5">•</span>
+            <span>Pipeline forecasting and opportunity analysis</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-500 mt-0.5">•</span>
+            <span>Sales activity tracking and performance insights</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Increased conversion rates and deal velocity</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved sales team productivity</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 3: CRM Intelligence & Sales Operations -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-3')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-purple-500"></div>
+      <h3 class="accordion-title">CRM Intelligence & Sales Operations</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-3" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Transform CRM data into actionable intelligence for better sales performance and customer relationship management.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-purple-500 mt-0.5">•</span>
+            <span>Automated data entry and record enrichment</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-purple-500 mt-0.5">•</span>
+            <span>Pipeline health monitoring and alerts</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-purple-500 mt-0.5">•</span>
+            <span>Customer interaction analysis and insights</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-purple-500 mt-0.5">•</span>
+            <span>Sales forecasting and trend analysis</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>More accurate sales forecasts</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Reduced manual CRM maintenance</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Enhanced sales team effectiveness</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 4: Marketing Operations & Content Enablement -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-4')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-orange-500"></div>
+      <h3 class="accordion-title">Marketing Operations & Content Enablement</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-4" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Streamline marketing workflows and enhance content creation through AI-powered automation and intelligence.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-orange-500 mt-0.5">•</span>
+            <span>Content generation and optimization</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-orange-500 mt-0.5">•</span>
+            <span>Campaign performance analysis</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-orange-500 mt-0.5">•</span>
+            <span>Audience segmentation and targeting</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-orange-500 mt-0.5">•</span>
+            <span>Marketing attribution and ROI tracking</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Faster content production cycles</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved marketing ROI and efficiency</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 5: Tax, Accounting & Financial Process Automation -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-5')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-red-500"></div>
+      <h3 class="accordion-title">Tax, Accounting & Financial Process Automation</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-5" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Automate financial workflows to reduce manual effort, accelerate reporting, and improve accuracy.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-red-500 mt-0.5">•</span>
+            <span>Automated document ingestion and classification</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-red-500 mt-0.5">•</span>
+            <span>AI-assisted tax review and reporting</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-red-500 mt-0.5">•</span>
+            <span>Financial data extraction and reconciliation</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-red-500 mt-0.5">•</span>
+            <span>Audit-ready financial summaries</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Shortened close and reporting cycles</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Reduced manual workload</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved accuracy and defensibility</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 6: Calendar, Email & Workflow Orchestration -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-6')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-teal-500"></div>
+      <h3 class="accordion-title">Calendar, Email & Workflow Orchestration</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-6" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Orchestrate complex workflows across calendar, email, and task management systems for seamless operations.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-teal-500 mt-0.5">•</span>
+            <span>Intelligent calendar scheduling and optimization</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-teal-500 mt-0.5">•</span>
+            <span>Email triage and automated responses</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-teal-500 mt-0.5">•</span>
+            <span>Workflow automation and task routing</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-teal-500 mt-0.5">•</span>
+            <span>Meeting preparation and follow-up automation</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Reduced administrative overhead</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved time management and productivity</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 7: Document Review & Analysis -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-7')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-indigo-500"></div>
+      <h3 class="accordion-title">Document Review & Analysis</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-7" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Extract insights and automate document processing workflows to accelerate decision-making.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-indigo-500 mt-0.5">•</span>
+            <span>Automated document classification and extraction</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-indigo-500 mt-0.5">•</span>
+            <span>Contract and legal document analysis</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-indigo-500 mt-0.5">•</span>
+            <span>Intelligent summarization and key point extraction</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-indigo-500 mt-0.5">•</span>
+            <span>Searchable knowledge bases from document archives</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Faster document processing and review</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved accuracy and consistency</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 8: Transaction Analysis, OMs & BOV Support -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-8')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-amber-500"></div>
+      <h3 class="accordion-title">Transaction Analysis, OMs & BOV Support</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-8" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Accelerate deal execution through AI-assisted underwriting, valuation, and document production.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-amber-500 mt-0.5">•</span>
+            <span>AI-assisted underwriting and scenario analysis</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-amber-500 mt-0.5">•</span>
+            <span>Comparable analysis and valuation support</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-amber-500 mt-0.5">•</span>
+            <span>Automated OM and BOV drafting</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-amber-500 mt-0.5">•</span>
+            <span>Deal pipeline analytics and forecasting</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Faster deal evaluation cycles</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>More consistent assumptions and outputs</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved quality of client-facing materials</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Item 9: Executive & Management Intelligence -->
+<div class="accordion-item collapsed" onclick="toggleAccordionItem(this, 'content-9')">
+  <div class="accordion-header">
+    <div class="accordion-header-left">
+      <div class="accordion-accent-bar bg-gray-600"></div>
+      <h3 class="accordion-title">Executive & Management Intelligence</h3>
+    </div>
+    <svg class="accordion-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <div id="content-9" class="accordion-content">
+    <div class="accordion-content-inner">
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Objective:</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Provide leadership with actionable insights and decision support through intelligent data aggregation and analysis.</p>
+      </div>
+      <div class="mb-6">
+        <p class="text-xs font-medium text-gray-500 mb-2">Capabilities:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-gray-600 mt-0.5">•</span>
+            <span>Executive dashboards and KPI monitoring</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-gray-600 mt-0.5">•</span>
+            <span>Automated business intelligence reports</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-gray-600 mt-0.5">•</span>
+            <span>Predictive analytics and trend forecasting</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-gray-600 mt-0.5">•</span>
+            <span>Strategic decision support and recommendations</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs font-medium text-gray-500 mb-2">Business Impact:</p>
+        <ul class="space-y-1.5">
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Faster, data-driven decision-making</span>
+          </li>
+          <li class="flex items-start gap-2 text-gray-700 text-sm">
+            <span class="text-green-600 mt-0.5">✓</span>
+            <span>Improved strategic visibility</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- SELECTED ENGAGEMENTS -->
+<div class="mt-20">
+<h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-12">Selected Engagements</h3>
+<div class="space-y-8">
+
+<!-- Engagement 1: End-to-End Business Enablement -->
+<div class="bg-white rounded-xl border border-gray-200 p-12 min-h-[450px]">
+<div class="flex items-start gap-6 mb-6">
+<div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+<svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+</svg>
+</div>
+<div class="flex-1">
+<p class="text-sm text-gray-500 mb-2">Client Profile</p>
+<p class="text-base font-medium text-gray-700 mb-6">Professional services firm</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Challenge</p>
+<p class="text-gray-600 mb-8 leading-relaxed">Fragmented workflows across marketing, sales, CRM, and operations resulted in inefficiency and limited leadership visibility.</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Solution</p>
+<ul class="space-y-3 mb-8 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-blue-500 mt-1">•</span>
+<span>AI-driven lead generation and prospect research</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-blue-500 mt-1">•</span>
+<span>CRM automation and pipeline intelligence</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-blue-500 mt-1">•</span>
+<span>Document analysis and reporting workflows</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-blue-500 mt-1">•</span>
+<span>Executive summaries and decision support</span>
+</li>
+</ul>
+<p class="text-lg font-semibold text-gray-900 mb-4">Outcome</p>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Reduced operational friction across teams</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Improved revenue visibility</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Faster, more consistent decision-making across the business lifecycle</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Engagement 2: Transaction Analysis & Deal Execution -->
+<div class="bg-white rounded-xl border border-gray-200 p-12 min-h-[450px]">
+<div class="flex items-start gap-6 mb-6">
+<div class="w-16 h-16 bg-amber-50 rounded-xl flex items-center justify-center flex-shrink-0">
+<svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+</svg>
+</div>
+<div class="flex-1">
+<p class="text-sm text-gray-500 mb-2">Client Profile</p>
+<p class="text-base font-medium text-gray-700 mb-6">Commercial real estate advisory platform</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Challenge</p>
+<p class="text-gray-600 mb-8 leading-relaxed">Manual underwriting, valuation, and document production slowed deal velocity and introduced inconsistency.</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Solution</p>
+<ul class="space-y-3 mb-8 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-amber-500 mt-1">•</span>
+<span>AI-assisted underwriting and scenario analysis</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-amber-500 mt-1">•</span>
+<span>Comparable analysis and valuation support</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-amber-500 mt-1">•</span>
+<span>Automated OM and BOV drafting</span>
+</li>
+</ul>
+<p class="text-lg font-semibold text-gray-900 mb-4">Outcome</p>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Faster deal evaluation cycles</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>More consistent assumptions and outputs</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Improved quality of client-facing materials</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Engagement 3: Financial, Tax & Compliance Automation -->
+<div class="bg-white rounded-xl border border-gray-200 p-12 min-h-[450px]">
+<div class="flex items-start gap-6 mb-6">
+<div class="w-16 h-16 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+<svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+</svg>
+</div>
+<div class="flex-1">
+<p class="text-sm text-gray-500 mb-2">Client Profile</p>
+<p class="text-base font-medium text-gray-700 mb-6">Multi-entity operating company</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Challenge</p>
+<p class="text-gray-600 mb-8 leading-relaxed">Manual accounting and tax workflows increased cost and extended reporting timelines.</p>
+<p class="text-lg font-semibold text-gray-900 mb-4">Solution</p>
+<ul class="space-y-3 mb-8 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-red-500 mt-1">•</span>
+<span>Automated document ingestion and classification</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 mt-1">•</span>
+<span>AI-assisted tax review and reporting</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 mt-1">•</span>
+<span>Audit-ready financial summaries</span>
+</li>
+</ul>
+<p class="text-lg font-semibold text-gray-900 mb-4">Outcome</p>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Shortened close and reporting cycles</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Reduced manual workload</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-green-500 mt-1">✓</span>
+<span>Improved accuracy and defensibility of financial outputs</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Closing Statement -->
+<div class="mt-16 text-center">
+<p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+We apply AI where it materially improves how organizations operate — across teams, functions, and the full business lifecycle.
+</p>
+</div>
+</div>
+</section>
+
+<!-- intelio AS YOUR PARTNER - PROCESS -->
+<section class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-8">intelio as your custom AI solutions partner</p>
+
+<!-- Process Steps -->
+<div class="grid md:grid-cols-4 gap-6 mb-8">
+<!-- Discovery -->
+<div class="border border-blue-200 rounded-xl p-7 max-h-[350px] flex flex-col relative">
+<div class="flex items-start justify-between mb-2">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+</svg>
+</div>
+<span class="text-5xl font-light text-gray-200">01</span>
+</div>
+<h4 class="font-semibold text-xl mb-2">Discovery</h4>
+<p class="text-base text-gray-500 leading-normal flex-grow">We start by understanding your business, data, and goals. Our team analyzes your challenges and opportunities to identify the highest-impact AI use cases and define a clear project roadmap.</p>
+<!-- Arrow -->
+<div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+<svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+</svg>
+</div>
+</div>
+
+<!-- Design -->
+<div class="border border-blue-200 rounded-xl p-7 max-h-[350px] flex flex-col relative">
+<div class="flex items-start justify-between mb-2">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+</div>
+<span class="text-5xl font-light text-gray-200">02</span>
+</div>
+<h4 class="font-semibold text-xl mb-2">Design</h4>
+<p class="text-base text-gray-500 leading-normal flex-grow">We architect the solution, select the right models and technologies, and design user flows. This phase ensures the AI system is robust, scalable, and tailored to your business requirements.</p>
+<!-- Arrow -->
+<div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+<svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+</svg>
+</div>
+</div>
+
+<!-- Prototype -->
+<div class="border border-blue-200 rounded-xl p-7 max-h-[350px] flex flex-col relative">
+<div class="flex items-start justify-between mb-2">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+</svg>
+</div>
+<span class="text-5xl font-light text-gray-200">03</span>
+</div>
+<h4 class="font-semibold text-xl mb-2">Prototype</h4>
+<p class="text-base text-gray-500 leading-normal flex-grow">We rapidly build and test a working prototype, validating the approach with real data and user feedback. This step reduces risk and ensures the solution meets your needs before full-scale development.</p>
+<!-- Arrow -->
+<div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+<svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+</svg>
+</div>
+</div>
+
+<!-- Production -->
+<div class="border border-blue-200 rounded-xl p-7 max-h-[350px] flex flex-col">
+<div class="flex items-start justify-between mb-2">
+<div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+</div>
+<span class="text-5xl font-light text-gray-200">04</span>
+</div>
+<h4 class="font-semibold text-xl mb-2">Production</h4>
+<p class="text-base text-gray-500 leading-normal flex-grow">We deploy the AI solution to production, integrate it with your systems, and monitor performance. Our team provides ongoing support and optimization to ensure long-term success and ROI.</p>
+</div>
+</div>
+
+<!-- Work With Us CTA -->
+<div class="text-center">
+<a href="/work-with-us.html" class="inline-flex items-center px-8 py-4 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+Work with us
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</svg>
+</a>
+</div>
+</div>
+</section>
+
+<!-- RESEARCH. EDUCATE. BUILD. -->
+<section class="py-16 px-6">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl md:text-5xl mb-6">Research. Educate. Build.</h2>
+<p class="text-lg text-gray-600 mb-12">
+We obsess over continuous innovation. We're constantly researching new technologies, educating the world on our findings, and bringing best practices to our Clients.
+</p>
+
+<div class="border-t border-gray-200 pt-12 space-y-12">
+<!-- Research -->
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-lg font-medium">Research.</h3>
+</div>
+<div class="md:col-span-3">
+<p class="text-gray-600">
+Clients come to us with real business problems, whether broken workflows, inefficiencies, or ideas they can't quite build. Our first step is simple: listen, research, and dig deep. We dive into the technology ourselves, understanding the landscape before we take development steps.
+</p>
+</div>
+</div>
+
+<!-- Educate -->
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-lg font-medium">Educate.</h3>
+</div>
+<div class="md:col-span-3">
+<p class="text-gray-600">
+While solving real problems for our clients, we uncover insights that go far beyond any one project. We're committed to advancing the field of AI by turning those learnings into research, educational content, and open resources for the broader community.
+</p>
+</div>
+</div>
+
+<!-- Build -->
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-lg font-medium">Build.</h3>
+</div>
+<div class="md:col-span-3">
+<p class="text-gray-600">
+We don't just share what we learn, we apply it. The insights from our research fuel proprietary solutions tailored to each client, helping them stay ahead with AI that's practical, powerful, and built to solve real-world challenges. Each Client work is proprietary and confidential.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="py-16 px-6">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl mb-12">Frequently Asked Questions</h2>
+
+<div class="border-t border-gray-200 pt-12">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- FAQ 1 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">How do I integrate AI into my existing business processes?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+We help you identify areas where AI can add value, then design and build custom solutions that fit your workflows. From automation to smarter data use, our team guides you through strategy, prototyping, and development to ensure a smooth AI integration.
+</div>
+</div>
+
+<!-- FAQ 2 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">How to identify AI applications that match my business needs?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+We start by learning how your business works, where the bottlenecks are, and what goals you're aiming for. From there, we help you uncover high-impact AI use cases, like automating tasks, improving customer insights, or optimizing operations that align with your strategy and deliver measurable results.
+</div>
+</div>
+
+<!-- FAQ 3 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">Can AI solutions be integrated with existing workflows without major disruptions?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+Yes, and that's exactly how we approach it at intelio. We design custom AI solutions to fit into your current processes, not replace them. Our goal is to enhance what's already working, with minimal friction and maximum impact so your team can keep moving while gaining new capabilities.
+</div>
+</div>
+
+<!-- FAQ 4 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">How can I leverage AI to stay competitive in a rapidly changing market?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+AI helps you move faster, make smarter decisions, and deliver better experiences. Whether it's automating repetitive work, personalizing customer interactions, or uncovering insights from your data, we help you find the right AI applications that give you a real edge.
+</div>
+</div>
+
+<!-- FAQ 5 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">What is the process for developing a proof of concept for an AI solution before full-scale implementation?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+At intelio, we start by understanding your goals and defining a clear problem to solve. We then create a simple, scalable prototype to test the core idea, validating its feasibility, performance, and potential impact. This helps you assess whether the solution is worth scaling with minimal risk and upfront investment.
+</div>
+</div>
+
+<!-- FAQ 6 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">How do I choose the right AI development partner for my business needs?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+Look for a partner with proven experience, clear communication, and a collaborative approach. At intelio, we combine deep technical expertise with a consultative process, we don't just build, we help you define what to build and why.
+</div>
+</div>
+
+<!-- FAQ 7 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">Where can I find case studies on AI implementation success?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+Visit our <a href="/case-studies" class="text-blue-500 hover:text-blue-600 underline">AI Case Studies</a> to explore real-world examples of AI implementation success across various industries.
+</div>
+</div>
+
+<!-- FAQ 8 -->
+<div class="faq-card border border-gray-200 rounded-xl p-6 cursor-pointer transition-all duration-300">
+<p class="faq-question font-medium text-sm text-center mb-4 transition-colors">What kind of AI training resources are available for my team?</p>
+<div class="flex justify-center mb-4">
+<svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+</svg>
+</div>
+<div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+While we don't offer standalone AI training courses, we do offer guidance on how to use AI and showcase our experience using and discovering AI tools and technologies in our <a href="/blog" class="text-blue-500 hover:text-blue-600 underline">AI Academy</a>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURED EDUCATIONAL CONTENT -->
+<section class="py-16 px-6 border-t border-gray-100">
+<div class="max-w-6xl mx-auto">
+<p class="text-sm text-gray-500 mb-8">Featured educational content</p>
+
+<div class="grid md:grid-cols-3 gap-6 mb-10">
+<!-- Article 1 -->
+<div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 via-orange-50 to-white relative h-80">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div>
+<div class="text-xs text-gray-500 mb-1">RETRIEVAL-</div>
+<div class="text-xs text-gray-500 mb-1">AUGMENTED</div>
+<div class="text-xs text-gray-500 mb-4">GENERATION</div>
+<div class="bg-white/80 backdrop-blur-sm p-3 rounded-lg text-xs text-gray-600">RAG combines LLMs with external data sources for more accurate and contextual AI responses.</div>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">The Reality of RAG</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+<span class="text-sm text-gray-600">Finney Koshy</span>
+</div>
+<a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Article 2 -->
+<div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 via-yellow-50 to-white relative h-80">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div>
+<div class="text-xs text-gray-500 mb-4">Thomas Larsen, Eli Lilland, Romeo Dean</div>
+<svg class="w-full h-20" viewBox="0 0 200 80"><path d="M 0 60 Q 50 40 100 30 T 200 15" stroke="#d97706" stroke-width="2" fill="none"/><circle cx="100" cy="30" r="4" fill="#d97706"/></svg>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">AI 2027: A Non-Technical Founder's Review</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+<span class="text-sm text-gray-600">David Pawlan</span>
+</div>
+<a href="#" class="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Article 3 -->
+<div class="group rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 relative h-80">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div class="flex justify-end gap-2">
+<div class="text-green-400 text-xs font-mono">deepseek</div>
+<div class="text-emerald-400 text-xs font-mono">ChatGPT</div>
+</div>
+<div class="mt-auto">
+<h3 class="text-lg font-semibold text-white mb-2">AI Model Selection: The Overlooked Secret to Better AI Content Creation</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-gray-500 rounded-full"></div>
+<span class="text-sm text-gray-300">Finney Koshy</span>
+</div>
+<a href="#" class="inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors">Read more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text-center">
+<a href="#" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-gray-400 hover:bg-gray-50 transition-colors">View all resources</a>
+</div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-20 bg-white">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-3xl p-12 md:p-16 text-center shadow-sm">
+<h2 class="text-3xl md:text-4xl mb-6">Join our AI newsletter</h2>
+<p class="text-lg text-gray-600 mb-10">Get the latest AI news, research insights, and practical implementation guides delivered to your inbox daily.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 min-h-[52px] border border-gray-300 rounded-full text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" required>
+<button type="submit" class="px-8 py-4 min-h-[52px] bg-black text-white text-base font-medium rounded-full hover:bg-gray-800 transition-colors">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+
 <!-- FOOTER CTA -->
 <section class="py-20 px-6 bg-white">
 <div class="max-w-4xl mx-auto text-center">
@@ -609,6 +2084,51 @@ Start an Intelligence Assessment
 </section>
 
 </main>
+
+<script>
+  document.querySelectorAll('.faq-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const isOpen = this.classList.contains('faq-open');
+      // Close all other cards
+      document.querySelectorAll('.faq-card').forEach(c => {
+        c.classList.remove('faq-open');
+        c.querySelector('.faq-answer')?.classList.add('hidden');
+        c.querySelector('.faq-chevron')?.classList.remove('rotate-180');
+        c.classList.remove('border-blue-500');
+        c.querySelector('.faq-question')?.classList.remove('text-blue-500');
+      });
+      // Toggle current card
+      if (!isOpen) {
+        this.classList.add('faq-open', 'border-blue-500');
+        this.querySelector('.faq-answer')?.classList.remove('hidden');
+        this.querySelector('.faq-chevron')?.classList.add('rotate-180');
+        this.querySelector('.faq-question')?.classList.add('text-blue-500');
+      }
+    });
+  });
+</script>
+
+<script>
+  // Accordion card toggle function
+  function toggleAccordionItem(itemElement, contentId) {
+    const content = document.getElementById(contentId);
+    if (!content) return;
+    
+    const isExpanded = itemElement.classList.contains('expanded');
+    
+    if (isExpanded) {
+      // Collapse
+      itemElement.classList.remove('expanded');
+      itemElement.classList.add('collapsed');
+      content.classList.remove('expanded');
+    } else {
+      // Expand
+      itemElement.classList.remove('collapsed');
+      itemElement.classList.add('expanded');
+      content.classList.add('expanded');
+    }
+  }
+</script>
 
 <!-- FOOTER -->
 <footer class="relative">
