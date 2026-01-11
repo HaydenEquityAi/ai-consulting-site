@@ -24,6 +24,33 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    /* Video background styles */
+    .hero-energy video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    /* Mobile responsive improvements */
+    @media (max-width: 768px) {
+      .hero-energy {
+        min-height: 70vh;
+      }
+      .hero-energy h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+      .hero-energy p {
+        font-size: 1rem;
+      }
+      .hero-energy a {
+        min-height: 44px;
+        padding: 12px 24px;
+        font-size: 0.875rem;
+      }
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
@@ -225,146 +252,24 @@ Resources
  </nav>
 
  <main>
- <!-- HERO SECTION WITH ENERGY GRID -->
- <section class="hero-energy min-h-screen flex items-center relative">
- <!-- Energy grid visualization -->
- <div class="absolute inset-0">
- <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
- <!-- Power transmission lines -->
- <g stroke="#34d399" fill="none" stroke-width="2">
- <!-- Main transmission tower 1 -->
- <line x1="100" y1="700" x2="100" y2="300"/>
- <line x1="80" y1="700" x2="100" y2="400"/>
- <line x1="120" y1="700" x2="100" y2="400"/>
- <!-- Cross arms -->
- <line x1="50" y1="320" x2="150" y2="320"/>
- <line x1="60" y1="380" x2="140" y2="380"/>
- <!-- Insulators -->
- <circle cx="50" cy="320" r="5"/>
- <circle cx="150" cy="320" r="5"/>
- <circle cx="60" cy="380" r="5"/>
- <circle cx="140" cy="380" r="5"/>
- 
- <!-- Main transmission tower 2 -->
- <line x1="400" y1="700" x2="400" y2="300"/>
- <line x1="380" y1="700" x2="400" y2="400"/>
- <line x1="420" y1="700" x2="400" y2="400"/>
- <line x1="350" y1="320" x2="450" y2="320"/>
- <line x1="360" y1="380" x2="440" y2="380"/>
- <circle cx="350" cy="320" r="5"/>
- <circle cx="450" cy="320" r="5"/>
- 
- <!-- Power lines connecting towers -->
- <path d="M150 320 Q275 280 350 320" stroke-width="1"/>
- <path d="M140 380 Q270 340 360 380" stroke-width="1"/>
- <path d="M50 320 Q-50 300 -100 320" stroke-width="1"/>
- </g>
- 
- <!-- Wind Turbines -->
- <g stroke="#34d399" fill="none" stroke-width="1.5">
- <!-- Turbine 1 -->
- <line x1="600" y1="700" x2="600" y2="400"/>
- <circle cx="600" cy="390" r="15"/>
- <line x1="600" y1="390" x2="600" y2="300"/>
- <line x1="600" y1="390" x2="680" y2="450"/>
- <line x1="600" y1="390" x2="520" y2="450"/>
- 
- <!-- Turbine 2 -->
- <line x1="720" y1="700" x2="720" y2="450"/>
- <circle cx="720" cy="440" r="12"/>
- <line x1="720" y1="440" x2="720" y2="360"/>
- <line x1="720" y1="440" x2="790" y2="490"/>
- <line x1="720" y1="440" x2="650" y2="490"/>
- 
- <!-- Turbine 3 -->
- <line x1="830" y1="700" x2="830" y2="420"/>
- <circle cx="830" cy="410" r="14"/>
- <line x1="830" y1="410" x2="830" y2="320"/>
- <line x1="830" y1="410" x2="910" y2="470"/>
- <line x1="830" y1="410" x2="750" y2="470"/>
- </g>
- 
- <!-- Solar Panel Array -->
- <g stroke="#34d399" fill="none" stroke-width="1">
- <!-- Panel row 1 -->
- <rect x="950" y="500" width="60" height="40" transform="rotate(-20 980 520)"/>
- <rect x="1020" y="500" width="60" height="40" transform="rotate(-20 1050 520)"/>
- <rect x="1090" y="500" width="60" height="40" transform="rotate(-20 1120 520)"/>
- <!-- Panel row 2 -->
- <rect x="950" y="560" width="60" height="40" transform="rotate(-20 980 580)"/>
- <rect x="1020" y="560" width="60" height="40" transform="rotate(-20 1050 580)"/>
- <rect x="1090" y="560" width="60" height="40" transform="rotate(-20 1120 580)"/>
- <!-- Panel row 3 -->
- <rect x="950" y="620" width="60" height="40" transform="rotate(-20 980 640)"/>
- <rect x="1020" y="620" width="60" height="40" transform="rotate(-20 1050 640)"/>
- <rect x="1090" y="620" width="60" height="40" transform="rotate(-20 1120 640)"/>
- <!-- Grid lines on panels -->
- <line x1="960" y1="510" x2="1000" y2="510" transform="rotate(-20 980 520)"/>
- <line x1="960" y1="520" x2="1000" y2="520" transform="rotate(-20 980 520)"/>
- </g>
- 
- <!-- Power substation -->
- <g stroke="#34d399" fill="none" stroke-width="1">
- <rect x="200" y="550" width="120" height="80"/>
- <!-- Transformer -->
- <rect x="220" y="570" width="30" height="40"/>
- <rect x="270" y="570" width="30" height="40"/>
- <!-- Connections -->
- <line x1="235" y1="550" x2="235" y2="520"/>
- <line x1="285" y1="550" x2="285" y2="520"/>
- <line x1="235" y1="520" x2="285" y2="520"/>
- <!-- Busbar -->
- <line x1="200" y1="580" x2="180" y2="580"/>
- <line x1="320" y1="580" x2="350" y2="580"/>
- </g>
- 
- <!-- Energy flow lines (animated feel) -->
- <g stroke="#34d399" fill="none" stroke-width="0.5" stroke-dasharray="5,5">
- <path d="M450 320 Q550 250 600 390"/>
- <path d="M720 440 Q800 400 830 410"/>
- <path d="M950 550 Q900 500 830 410"/>
- <line x1="320" y1="580" x2="600" y2="700"/>
- </g>
- 
- <!-- Smart meter / IoT device -->
- <g stroke="#34d399" fill="none" stroke-width="1">
- <rect x="500" y="600" width="40" height="50"/>
- <circle cx="520" cy="615" r="8"/>
- <line x1="510" y1="635" x2="530" y2="635"/>
- <line x1="510" y1="640" x2="530" y2="640"/>
- <!-- Signal waves -->
- <path d="M545 610 Q555 605 545 600" stroke-width="0.5"/>
- <path d="M550 612 Q565 605 550 598" stroke-width="0.5"/>
- </g>
- 
- <!-- Ground line -->
- <line x1="0" y1="700" x2="1200" y2="700" stroke="#34d399" stroke-width="2"/>
- 
- <!-- Grid pattern -->
- <g stroke="#34d399" stroke-width="0.2" opacity="0.3">
- <line x1="0" y1="100" x2="1200" y2="100"/>
- <line x1="0" y1="200" x2="1200" y2="200"/>
- <line x1="0" y1="300" x2="1200" y2="300"/>
- <line x1="0" y1="400" x2="1200" y2="400"/>
- <line x1="0" y1="500" x2="1200" y2="500"/>
- <line x1="0" y1="600" x2="1200" y2="600"/>
- <line x1="100" y1="0" x2="100" y2="800"/>
- <line x1="200" y1="0" x2="200" y2="800"/>
- <line x1="300" y1="0" x2="300" y2="800"/>
- <line x1="400" y1="0" x2="400" y2="800"/>
- <line x1="500" y1="0" x2="500" y2="800"/>
- <line x1="600" y1="0" x2="600" y2="800"/>
- <line x1="700" y1="0" x2="700" y2="800"/>
- <line x1="800" y1="0" x2="800" y2="800"/>
- <line x1="900" y1="0" x2="900" y2="800"/>
- <line x1="1000" y1="0" x2="1000" y2="800"/>
- <line x1="1100" y1="0" x2="1100" y2="800"/>
- </g>
- </svg>
- 
- <!-- Overlay -->
- <div class="absolute inset-0 bg-emerald-900/30"></div>
- </div>
+ <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+ <section class="hero-energy min-h-screen flex items-center relative overflow-hidden">
+   <!-- Video Background -->
+   <video 
+     autoplay 
+     loop 
+     muted 
+     playsinline
+     class="absolute inset-0 w-full h-full object-cover"
+     style="z-index: 0;"
+   >
+     <source src="/logos/Wind_Energy_Animation_Generation.mp4" type="video/mp4">
+     <!-- Fallback gradient if video doesn't load -->
+     <div class="absolute inset-0 bg-gradient-to-br from-teal-700 via-emerald-600 to-cyan-800"></div>
+   </video>
+   
+   <!-- Dark Overlay for text readability -->
+   <div class="absolute inset-0 bg-black/30 z-[1]"></div>
  
  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
  <div class="max-w-2xl">
