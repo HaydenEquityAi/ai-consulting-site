@@ -24,6 +24,25 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Figtree', system-ui, sans-serif; }
+    
+    .hero-consulting {
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-consulting video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-consulting video {
+        object-position: center;
+      }
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
@@ -264,41 +283,24 @@ Enterprise AI
 </div>
 
  <main>
- <!-- HERO SECTION WITH BOARDROOM BACKGROUND -->
- <section class="hero-consulting min-h-screen flex items-center relative">
- <!-- Boardroom scene simulation -->
- <div class="absolute inset-0">
- <!-- Window light effects -->
- <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-100/10 to-transparent"></div>
- <div class="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-amber-100/5 to-transparent"></div>
- <!-- Overlay for text readability -->
- <div class="absolute inset-0 bg-black/50"></div>
- <!-- Meeting room silhouettes -->
- <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent"></div>
- </div>
-
- <!-- Presentation screen mockup -->
- <div class="absolute top-1/4 right-1/4 w-80 h-48 bg-slate-800 rounded-lg border border-slate-600 opacity-40 hidden lg:block">
- <div class="p-4 grid grid-cols-2 gap-2">
- <div class="h-16 bg-slate-700/50 rounded flex items-center justify-center">
- <svg class="w-8 h-8 text-blue-400/50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
- <circle cx="12" cy="12" r="8" stroke-width="1"/>
- <circle cx="12" cy="12" r="4" stroke-width="1"/>
- </svg>
- </div>
- <div class="h-16 bg-slate-700/50 rounded flex items-center justify-center">
- <svg class="w-8 h-8 text-cyan-400/50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
- <path d="M3 3v18h18" stroke-width="1"/>
- <path d="M7 14l4-4 4 4 5-5" stroke-width="1"/>
- </svg>
- </div>
- <div class="col-span-2 h-12 bg-slate-700/50 rounded flex items-center justify-center gap-2">
- <div class="w-4 h-4 rounded-full bg-blue-400/30"></div>
- <div class="w-4 h-4 rounded-full bg-cyan-400/30"></div>
- <div class="w-4 h-4 rounded-full bg-teal-400/30"></div>
- </div>
- </div>
- </div>
+ <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+ <section class="hero-consulting min-h-screen flex items-center relative overflow-hidden">
+   <!-- Video Background -->
+   <video 
+     autoplay 
+     loop 
+     muted 
+     playsinline
+     class="absolute inset-0 w-full h-full object-cover"
+     style="z-index: 0;"
+   >
+     <source src="/logos/Wireframe_City_Animation_Generation.mp4" type="video/mp4">
+     <!-- Fallback gradient if video doesn't load -->
+     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+   </video>
+   
+   <!-- Dark Overlay for text readability -->
+   <div class="absolute inset-0 bg-black/30 z-[1]"></div>
  
  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
  <div class="max-w-2xl">
