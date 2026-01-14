@@ -156,13 +156,6 @@
       padding-top: 16px;
     }
     
-    /* Dropdown visibility on hover */
-    nav .group:hover > div[class*="absolute"] {
-      opacity: 1 !important;
-      visibility: visible !important;
-      pointer-events: auto !important;
-    }
-
     /* Mobile menu toggle */
     #mobile-menu {
       max-height: 0;
@@ -200,35 +193,80 @@
     }
 
     /* CRITICAL: Fix blurry dropdowns - use hardware acceleration and remove opacity transitions */
+    nav .group {
+      position: relative;
+      overflow: visible !important;
+    }
+    
     nav .group > div[class*="absolute"] {
       z-index: 9999 !important;
       position: absolute;
-      top: 100% !important;
-      left: 0;
-      margin-top: 0.5rem;
-      transform: translateZ(0);
-      -webkit-transform: translateZ(0);
+      display: none !important;
+      transform: translateZ(0) scale(1);
+      -webkit-transform: translateZ(0) scale(1);
       will-change: transform;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
-      image-rendering: -webkit-optimize-contrast;
-    }
-
-    /* Remove blur from transitions - use instant visibility instead */
-    nav .group > div[class*="absolute"].opacity-0 {
-      opacity: 0 !important;
+      image-rendering: crisp-edges;
+      filter: none !important;
+      opacity: 1 !important;
+      transition: none !important;
       visibility: hidden !important;
       pointer-events: none !important;
-      transition: none !important;
+      margin-top: 0 !important;
+      top: calc(100% - 0.5rem) !important;
+      padding-top: 0.75rem !important;
+    }
+    
+    /* HUGE invisible bridge that extends way up to catch mouse - covers entire gap */
+    nav .group > div[class*="absolute"]::before {
+      content: '';
+      position: absolute;
+      top: -0.75rem;
+      left: -50px;
+      right: -50px;
+      width: calc(100% + 100px);
+      height: 1rem;
+      background: transparent;
+      z-index: 10001;
+      pointer-events: auto !important;
     }
 
+    /* Show dropdown when hovering over the group (button/link) */
     nav .group:hover > div[class*="absolute"] {
-      opacity: 1 !important;
+      display: block !important;
       visibility: visible !important;
       pointer-events: auto !important;
+      opacity: 1 !important;
       transition: none !important;
+      filter: none !important;
+    }
+    
+    /* CRITICAL: Keep dropdown open when hovering over the dropdown itself */
+    nav .group > div[class*="absolute"]:hover {
+      display: block !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      opacity: 1 !important;
+    }
+    
+    /* When hovering over bridge, keep dropdown visible */
+    nav .group:hover > div[class*="absolute"]::before {
+      pointer-events: auto !important;
+      display: block !important;
+    }
+    
+    nav .group > div[class*="absolute"]:hover::before {
+      pointer-events: auto !important;
+      display: block !important;
+    }
+    
+    /* Ensure all content inside dropdown is interactive */
+    nav .group > div[class*="absolute"] * {
+      pointer-events: auto;
     }
   </style>
 </head>
@@ -248,7 +286,7 @@
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
  </svg>
  </a>
-<div class="absolute right-0 top-full w-[800px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="absolute right-0 top-full w-[800px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
 <div class="grid grid-cols-3 gap-8 p-6">
 <a href="/ai-development.html" class="group/col hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
 <h3 class="text-lg font-bold text-blue-600 mb-2 group-hover/col:text-blue-700 transition-colors">intelio Custom AI Development</h3>
@@ -362,7 +400,7 @@ Enterprise AI
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
 </button>
-<div class="absolute left-0 top-full w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="absolute left-0 top-full w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
 <div class="p-4 space-y-3">
 <a href="/enterprise-ai.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
 <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -391,7 +429,7 @@ Resources
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 </svg>
 </button>
-<div class="absolute left-0 top-full w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="absolute left-0 top-full w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
 <div class="p-4 space-y-3">
 <a href="/blog" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
 <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
