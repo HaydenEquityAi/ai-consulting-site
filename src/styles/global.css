@@ -125,10 +125,11 @@
     filter: none !important;
     opacity: 1 !important;
     transition: none !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
+  /* Show dropdown when hovering over the group (button/link) */
   nav .group:hover > div[class*="absolute"] {
     display: block !important;
     visibility: visible !important;
@@ -139,7 +140,8 @@
   }
   
   /* CRITICAL: Keep dropdown open when hovering over the dropdown itself */
-  nav .group > div[class*="absolute"]:hover {
+  nav .group > div[class*="absolute"]:hover,
+  nav .group:hover > div[class*="absolute"] {
     display: block !important;
     visibility: visible !important;
     pointer-events: auto !important;
@@ -150,11 +152,18 @@
   nav .group > div[class*="absolute"]::before {
     content: '';
     position: absolute;
-    top: -0.5rem;
+    top: -0.75rem;
     left: 0;
     right: 0;
-    height: 0.5rem;
+    height: 0.75rem;
     background: transparent;
+    z-index: 10000;
+    pointer-events: auto;
+  }
+  
+  /* Ensure dropdown stays visible when mouse is over any part of it */
+  nav .group > div[class*="absolute"] * {
+    pointer-events: auto;
   }
 }
 
