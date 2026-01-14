@@ -139,8 +139,28 @@
       white-space: nowrap;
     }
 
-    nav div[class*="flex"] {
-      overflow: hidden;
+    /* Dropdown fixes - prevent clipping and blur */
+    nav {
+      overflow: visible !important;
+    }
+
+    nav > div {
+      overflow: visible !important;
+    }
+
+    nav .group {
+      position: relative;
+    }
+
+    nav .group > div[class*="absolute"] {
+      z-index: 9999 !important;
+      position: absolute;
+      top: 100% !important;
+      left: 0;
+      margin-top: 0.5rem;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
     }
   </style>
 </head>
@@ -174,7 +194,7 @@
           </button>
           
           <!-- Dropdown Menu -->
-          <div class="absolute left-0 mt-0 w-96 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full pt-2">
+          <div class="absolute left-0 w-96 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
             <div class="p-6 grid grid-cols-3 gap-8">
               
               <!-- Column 1: Main Service -->
@@ -220,7 +240,7 @@
             </svg>
           </button>
           
-          <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full pt-2">
+          <div class="absolute left-0 w-64 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
             <div class="p-4 space-y-2">
               <a href="/microsoft-intelligence" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Microsoft Intelligence</a>
               <a href="/copilot-integration" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Copilot Integration</a>
@@ -237,7 +257,7 @@
             </svg>
           </button>
           
-          <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full pt-2">
+          <div class="absolute left-0 w-56 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
             <div class="p-4 space-y-2">
               <a href="/blog" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Blog</a>
               <a href="/guides" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Guides</a>

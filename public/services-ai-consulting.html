@@ -56,8 +56,28 @@
       white-space: nowrap;
     }
 
-    nav div[class*="flex"] {
-      overflow: hidden;
+    /* Dropdown fixes - prevent clipping and blur */
+    nav {
+      overflow: visible !important;
+    }
+
+    nav > div {
+      overflow: visible !important;
+    }
+
+    nav .group {
+      position: relative;
+    }
+
+    nav .group > div[class*="absolute"] {
+      z-index: 9999 !important;
+      position: absolute;
+      top: 100% !important;
+      left: 0;
+      margin-top: 0.5rem;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
     }
   </style>
 </head>
