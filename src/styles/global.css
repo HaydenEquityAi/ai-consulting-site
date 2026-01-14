@@ -127,6 +127,21 @@
     transition: none !important;
     visibility: hidden !important;
     pointer-events: none !important;
+    margin-top: 0.75rem !important;
+  }
+  
+  /* Add invisible bridge above dropdown to catch mouse movement and prevent hover loss */
+  nav .group > div[class*="absolute"]::before {
+    content: '';
+    position: absolute;
+    top: -0.75rem;
+    left: -10%;
+    right: -10%;
+    width: 120%;
+    height: 0.75rem;
+    background: transparent;
+    z-index: 10001;
+    pointer-events: auto;
   }
 
   /* Show dropdown when hovering over the group (button/link) */
@@ -140,30 +155,27 @@
   }
   
   /* CRITICAL: Keep dropdown open when hovering over the dropdown itself */
-  nav .group > div[class*="absolute"]:hover,
-  nav .group:hover > div[class*="absolute"] {
+  nav .group > div[class*="absolute"]:hover {
     display: block !important;
     visibility: visible !important;
     pointer-events: auto !important;
     opacity: 1 !important;
   }
   
-  /* Add invisible bridge between button and dropdown to prevent flicker */
-  nav .group > div[class*="absolute"]::before {
-    content: '';
-    position: absolute;
-    top: -0.75rem;
-    left: 0;
-    right: 0;
-    height: 0.75rem;
-    background: transparent;
-    z-index: 10000;
+  /* Keep parent group hovered when hovering over dropdown */
+  nav .group:has(> div[class*="absolute"]:hover) {
+    /* This keeps the group in hover state */
+  }
+  
+  
+  /* Ensure all content inside dropdown is interactive */
+  nav .group > div[class*="absolute"] * {
     pointer-events: auto;
   }
   
-  /* Ensure dropdown stays visible when mouse is over any part of it */
-  nav .group > div[class*="absolute"] * {
-    pointer-events: auto;
+  /* Override any mt-3 or margin-top that creates gap */
+  nav .group > div[class*="absolute"][class*="mt-"] {
+    margin-top: 0 !important;
   }
 }
 
