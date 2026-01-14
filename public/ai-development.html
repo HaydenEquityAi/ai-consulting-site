@@ -126,6 +126,22 @@
     #mobile-menu.active {
       max-height: 500px;
     }
+    
+    /* Fix flexbox wrapping - keep nav items in one horizontal line */
+    nav .flex {
+      flex-wrap: nowrap !important;
+      white-space: nowrap;
+      min-width: 0;
+    }
+
+    nav a, nav button {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    nav div[class*="flex"] {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="overflow-x-hidden bg-white">
