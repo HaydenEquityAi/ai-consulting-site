@@ -109,11 +109,12 @@
       padding-top: 16px;
     }
     
-    /* Dropdown visibility on hover */
+    /* Dropdown visibility on hover - NO TRANSITIONS to prevent blur */
     nav .group:hover > div[class*="absolute"] {
       opacity: 1 !important;
       visibility: visible !important;
       pointer-events: auto !important;
+      transition: none !important;
     }
 
     /* Mobile menu toggle */
@@ -152,15 +153,36 @@
       position: relative;
     }
 
+    /* CRITICAL: Fix blurry dropdowns - use hardware acceleration and remove opacity transitions */
     nav .group > div[class*="absolute"] {
       z-index: 9999 !important;
       position: absolute;
       top: 100% !important;
       left: 0;
       margin-top: 0.5rem;
-      will-change: opacity, transform;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      will-change: transform;
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Remove blur from transitions - use instant visibility instead */
+    nav .group > div[class*="absolute"].opacity-0 {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      transition: none !important;
+    }
+
+    nav .group:hover > div[class*="absolute"] {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      transition: none !important;
     }
   </style>
 </head>
@@ -194,7 +216,7 @@
           </button>
           
           <!-- Dropdown Menu -->
-          <div class="absolute left-0 w-96 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
+          <div class="absolute left-0 w-96 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
             <div class="p-6 grid grid-cols-3 gap-8">
               
               <!-- Column 1: Main Service -->
@@ -240,7 +262,7 @@
             </svg>
           </button>
           
-          <div class="absolute left-0 w-64 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
+          <div class="absolute left-0 w-64 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
             <div class="p-4 space-y-2">
               <a href="/microsoft-intelligence" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Microsoft Intelligence</a>
               <a href="/copilot-integration" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Copilot Integration</a>
@@ -257,7 +279,7 @@
             </svg>
           </button>
           
-          <div class="absolute left-0 w-56 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full mt-2 z-[9999]">
+          <div class="absolute left-0 w-56 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
             <div class="p-4 space-y-2">
               <a href="/blog" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Blog</a>
               <a href="/guides" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Guides</a>
