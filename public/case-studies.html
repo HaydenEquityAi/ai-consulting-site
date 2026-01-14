@@ -234,130 +234,257 @@
 </head>
 <body class="overflow-x-hidden bg-gray-50">
 
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-4">
-    <div class="flex items-center justify-between h-16">
-      
-      <!-- LOGO (left) -->
-      <a href="/" class="text-3xl font-medium text-black flex-shrink-0">
-        intelio
-      </a>
-      
-      <!-- DESKTOP NAV (center) -->
-      <div class="hidden md:flex items-center gap-8 flex-1 justify-center ml-12">
-        
-        <!-- Case Studies Link -->
-        <a href="/case-studies" class="text-sm text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-          Case Studies
-        </a>
-        
-        <!-- AI Development Dropdown -->
-        <div class="relative group">
-          <button class="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            AI Development
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          <!-- Dropdown Menu -->
-          <div class="absolute left-0 w-96 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-            <div class="p-6 grid grid-cols-3 gap-8">
-              
-              <!-- Column 1: Main Service -->
-              <div>
-                <h3 class="font-semibold text-black mb-2">intelio Custom AI</h3>
-                <p class="text-sm text-gray-600">We build custom AI solutions and automated workflows so companies can focus on what they do best, not how they do it.</p>
-                <a href="/ai-development" class="text-sm text-blue-600 hover:text-blue-700 mt-3 inline-block">Learn more →</a>
-              </div>
-              
-              <!-- Column 2: Industries -->
-              <div>
-                <h4 class="font-semibold text-gray-900 mb-4 text-sm">Industries</h4>
-                <ul class="space-y-3">
-                  <li><a href="/industries-real-estate" class="text-sm text-gray-700 hover:text-black">Real Estate</a></li>
-                  <li><a href="/industries-healthcare" class="text-sm text-gray-700 hover:text-black">Healthcare</a></li>
-                  <li><a href="/industries-finance" class="text-sm text-gray-700 hover:text-black">Finance</a></li>
-                  <li><a href="/industries-construction" class="text-sm text-gray-700 hover:text-black">Construction</a></li>
-                  <li><a href="/industries-energy" class="text-sm text-gray-700 hover:text-black">Energy</a></li>
-                </ul>
-              </div>
-              
-              <!-- Column 3: Services -->
-              <div>
-                <h4 class="font-semibold text-gray-900 mb-4 text-sm">Services</h4>
-                <ul class="space-y-3">
-                  <li><a href="/services/agentic-ai" class="text-sm text-gray-700 hover:text-black">Agentic AI</a></li>
-                  <li><a href="/services/computer-vision" class="text-sm text-gray-700 hover:text-black">Computer Vision</a></li>
-                  <li><a href="/services/generative-ai" class="text-sm text-gray-700 hover:text-black">Generative AI</a></li>
-                  <li><a href="/services/nlp" class="text-sm text-gray-700 hover:text-black">NLP</a></li>
-                  <li><a href="/services/rag" class="text-sm text-gray-700 hover:text-black">RAG</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Enterprise AI Dropdown -->
-        <div class="relative group">
-          <button class="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            Enterprise AI
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          <div class="absolute left-0 w-64 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-            <div class="p-4 space-y-2">
-              <a href="/microsoft-intelligence" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Microsoft Intelligence</a>
-              <a href="/copilot-integration" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Copilot Integration</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Resources Dropdown -->
-        <div class="relative group">
-          <button class="flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            Resources
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          <div class="absolute left-0 w-56 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible top-full mt-2 z-[9999]" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-            <div class="p-4 space-y-2">
-              <a href="/blog" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Blog</a>
-              <a href="/guides" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Guides</a>
-              <a href="/pricing" class="block text-sm text-gray-700 hover:text-black p-2 rounded hover:bg-gray-50">Pricing</a>
-            </div>
-          </div>
-        </div>
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<a href="/" class="text-3xl font-medium tracking-tight text-black">intelio</a>
+<div class="hidden md:flex items-center gap-8">
+ <a href="/case-studies" class="text-base text-gray-700 hover:text-black transition-colors">Case Studies</a>
+ <div class="relative group">
+ <a href="/ai-development" class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
+ AI Development
+ <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </a>
+<div class="absolute right-0 top-full mt-3 w-[800px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="grid grid-cols-3 gap-8 p-6">
+<a href="/ai-development.html" class="group/col hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
+<h3 class="text-lg font-bold text-blue-600 mb-2 group-hover/col:text-blue-700 transition-colors">intelio Custom AI Development</h3>
+<p class="text-sm text-gray-600 leading-relaxed">We build custom AI solutions and automated workflows so companies can focus on what they do best, not how they do it.</p>
+</a>
+<div>
+<p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Industries</p>
+ <div class="space-y-3">
+ <a href="/industries-real-estate" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 10l8-6 8 6" />
+ <path d="M6 10v8h12v-8" />
+ <path d="M10 18v-4h4v4" />
+ </svg>
+ <span>Real Estate</span>
+ </a>
+ <a href="/industries-healthcare" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+ <circle cx="12" cy="12" r="9" />
+ <path d="M12 8v4m0 0l2 2m-2-2l-2 2" stroke-linecap="round" stroke-linejoin="round" />
+ </svg>
+ <span>Healthcare</span>
+ </a>
+ <a href="/industries-finance" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 15l4-4 3 3 6-6" />
+ <path d="M4 19h16" />
+ </svg>
+ <span>Finance</span>
+ </a>
+ <a href="/industries-construction" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 13l8-8 3 3-8 8H4v-3z" />
+ <path d="M13 5l2-2 3 3-2 2" />
+ <path d="M7 16h10" />
+ </svg>
+ <span>Construction</span>
+ </a>
+ <a href="/industries-energy" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M13 2L6 14h6l-1 8 7-12h-6z" />
+ </svg>
+ <span>Energy</span>
+ </a>
+ <a href="/industries" class="flex items-center gap-2 text-base text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all industries &rarr;</span>
+ </a>
+ </div>
+ </div>
+ <div>
+ <p class="text-xs uppercase tracking-[0.08em] text-gray-500 mb-3">Services</p>
+ <div class="space-y-3">
+ <a href="/services-ai-machine-learning" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 4v16" />
+ <path d="M8 8v2m0 4v2" />
+ <path d="M16 8v2m0 4v2" />
+ <path d="M4 12h4m8 0h4" />
+ </svg>
+ <span>AI &amp; Machine Learning</span>
+ </a>
+ <a href="/services-ai-consulting" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M21 15v4a2 2 0 0 1-2 2h-5l-4 2v-2H5a2 2 0 0 1-2-2v-4" />
+ <path d="M7 9a5 5 0 1 1 10 0v3a5 5 0 1 1-10 0V9z" />
+ </svg>
+ <span>AI Consulting</span>
+ </a>
+ <a href="/services-digital-transformation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="4" y="5" width="16" height="14" rx="2" />
+ <path d="M9 9h6" />
+ <path d="M9 13h4" />
+ </svg>
+ <span>Digital Transformation</span>
+ </a>
+ <a href="/services-workflow-automation" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M4 9h9l-2-2m2 2-2 2" />
+ <path d="M20 15h-9l2 2m-2-2 2-2" />
+ <path d="M12 7V5m0 14v-2" />
+ </svg>
+ <span>Workflow Automation</span>
+ </a>
+ <a href="/services-internal-tooling" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+ <svg class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M12 3l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L6.2 7.2l4-.6z" />
+ </svg>
+ <span>Internal Tooling</span>
+ </a>
+ <a href="/services" class="flex items-center gap-2 text-base text-blue-600 font-medium hover:text-blue-700 transition-colors">
+ <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M5 12h14" />
+ <path d="M13 6l6 6-6 6" />
+ </svg>
+ <span>Explore all services &rarr;</span>
+ </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
+Enterprise AI
+<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+</button>
+<div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="p-4 space-y-3">
+<a href="/enterprise-ai.html" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+<polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+<line x1="12" y1="22.08" x2="12" y2="12" />
+</svg>
+<span>Enterprise AI Overview</span>
+</a>
+<a href="/microsoft-intelligence.html" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+<rect x="4" y="4" width="7" height="7" fill="#F25022"/>
+<rect x="13" y="4" width="7" height="7" fill="#7FBA00"/>
+<rect x="4" y="13" width="7" height="7" fill="#00A4EF"/>
+<rect x="13" y="13" width="7" height="7" fill="#FFB900"/>
+</svg>
+<span>Microsoft Intelligence</span>
+</a>
+</div>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
+Resources
+<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+</button>
+<div class="absolute left-0 top-full mt-3 w-56 bg-white rounded-2xl shadow-xl border border-gray-200" style="display: none; transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+<div class="p-4 space-y-3">
+<a href="/blog" class="flex items-center gap-3 text-base text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 4h14v16H5z" />
+<path d="M9 8h6" />
+<path d="M9 12h6" />
+<path d="M9 16h3" />
+</svg>
+<span>Blog</span>
+</a>
+<a href="/tools" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+<span>Tools</span>
+</a>
+<a href="/glossary" class="flex items-center gap-3 text-sm text-gray-700 hover:text-black transition-colors">
+<svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+</svg>
+<span>Glossary</span>
+</a>
+</div>
+</div>
+</div>
+        <a href="/work-with-us.html" class="px-5 py-2.5 bg-black text-white text-base font-medium rounded-full hover:bg-gray-800 transition-colors">Work With Us</a>
       </div>
-      
-      <!-- WORK WITH US BUTTON (right) -->
-      <a href="/work-with-us" class="hidden md:inline-block px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors flex-shrink-0">
-        Work With Us
-      </a>
-      
-      <!-- MOBILE MENU BUTTON -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-black">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
+        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      
     </div>
-  </div>
-  
-  <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
-    <div class="px-6 py-4 space-y-3">
-      <a href="/case-studies" class="block text-sm text-gray-700 hover:text-black py-2">Case Studies</a>
-      <a href="/ai-development" class="block text-sm text-gray-700 hover:text-black py-2">AI Development</a>
-      <a href="/enterprise-ai" class="block text-sm text-gray-700 hover:text-black py-2">Enterprise AI</a>
-      <a href="/resources" class="block text-sm text-gray-700 hover:text-black py-2">Resources</a>
-      <a href="/work-with-us" class="block px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full text-center">Work With Us</a>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
+      <nav class="flex flex-col gap-4 pt-4">
+        <a href="/case-studies.html" class="block py-2 text-sm text-gray-700 hover:text-black transition-colors min-h-[44px] flex items-center">Case Studies</a>
+        
+        <!-- AI Development with ALL sub-options -->
+        <div class="py-2">
+          <button type="button" class="ai-dev-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            AI Development
+            <span class="ai-dev-icon text-xs">+</span>
+          </button>
+          <div class="ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <p class="text-xs uppercase text-gray-500 mb-2">Industries</p>
+            <a href="/industries-real-estate" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Real Estate</a>
+            <a href="/industries-healthcare" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Healthcare</a>
+            <a href="/industries-finance" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Finance</a>
+            <a href="/industries-construction" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Construction</a>
+            <a href="/industries-energy" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Energy</a>
+            <a href="/industries" class="block text-sm text-blue-600 hover:text-blue-700 transition-colors py-2 min-h-[44px] flex items-center">Explore all industries →</a>
+            
+            <p class="text-xs uppercase text-gray-500 mb-2 mt-4">Services</p>
+            <a href="/services-ai-machine-learning" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI & Machine Learning</a>
+            <a href="/services-ai-consulting" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI Consulting</a>
+            <a href="/services-digital-transformation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Digital Transformation</a>
+            <a href="/services-workflow-automation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Workflow Automation</a>
+            <a href="/services-internal-tooling" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Internal Tooling</a>
+            <a href="/services" class="block text-sm text-blue-600 hover:text-blue-700 transition-colors py-2 min-h-[44px] flex items-center">Explore all services →</a>
+          </div>
+        </div>
+        
+        <!-- Enterprise AI with sub-options -->
+        <div class="py-2">
+          <button type="button" class="enterprise-ai-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            Enterprise AI
+            <span class="enterprise-ai-icon text-xs">+</span>
+          </button>
+          <div class="enterprise-ai-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <a href="/enterprise-ai.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Enterprise AI Overview</a>
+            <a href="/microsoft-intelligence.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Microsoft Intelligence</a>
+          </div>
+        </div>
+        
+        <!-- Resources with sub-options -->
+        <div class="py-2">
+          <button type="button" class="resources-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            Resources
+            <span class="resources-icon text-xs">+</span>
+          </button>
+          <div class="resources-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <a href="/blog" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Blog</a>
+            <a href="/tools.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Tools</a>
+            <a href="/glossary.html" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Glossary</a>
+          </div>
+        </div>
+        
+        <a href="/work-with-us.html" class="block py-3 mt-4 bg-black text-white text-sm text-center rounded-full hover:bg-gray-800 transition-colors min-h-[44px] flex items-center justify-center">Work With Us</a>
+      </nav>
     </div>
   </div>
 </nav>
@@ -1300,65 +1427,114 @@
     </div>
   </footer>
 
-  <script>
-    (function() {
-      function initMobileMenu() {
-        var btn = document.getElementById('mobile-menu-button');
-        var menu = document.getElementById('mobile-menu');
-        var iconOpen = document.getElementById('menu-icon-open');
-        var iconClose = document.getElementById('menu-icon-close');
-        
-        if (!btn || !menu) {
-          return;
-        }
-        
-        // Enterprise AI toggle
-        var enterpriseAiToggle = document.querySelector('.enterprise-ai-toggle');
-        var enterpriseAiSubmenu = document.querySelector('.enterprise-ai-submenu');
-        var enterpriseAiIcon = document.querySelector('.enterprise-ai-icon');
-        
-        if (enterpriseAiToggle && enterpriseAiSubmenu) {
-          enterpriseAiToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            enterpriseAiSubmenu.classList.toggle('hidden');
-            if (enterpriseAiIcon) {
-              enterpriseAiIcon.textContent = enterpriseAiSubmenu.classList.contains('hidden') ? '+' : '−';
-            }
-          });
-        }
-        
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          menu.classList.toggle('hidden');
-          
-          if (iconOpen && iconClose) {
-            iconOpen.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
-          }
-        });
-        
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!menu.contains(e.target) && !btn.contains(e.target)) {
-            menu.classList.add('hidden');
-            if (iconOpen && iconClose) {
-              iconOpen.classList.remove('hidden');
-              iconClose.classList.add('hidden');
-            }
-          }
-        });
+<script>
+  (function() {
+    function initMobileMenu() {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      
+      if (!btn || !menu) {
+        return;
       }
       
-      // Run immediately if DOM is ready, otherwise wait
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMobileMenu);
-      } else {
-        initMobileMenu();
-      }
-    })();
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        menu.classList.toggle('hidden');
+        
+        if (iconOpen && iconClose) {
+          iconOpen.classList.toggle('hidden');
+          iconClose.classList.toggle('hidden');
+        }
+      });
+      
+      // Close when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        }
+      });
+      
+      // Close menu when a link is clicked
+      var menuLinks = menu.querySelectorAll('a');
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          if (iconOpen && iconClose) {
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          }
+        });
+      });
+    }
+    
+    // Run immediately if DOM is ready, otherwise wait
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+      initMobileMenu();
+    }
+  })();
+</script>
+
+<script>
+  (function() {
+    // AI Development toggle
+    var aiDevToggle = document.querySelector('.ai-dev-toggle');
+    var aiDevSubmenu = document.querySelector('.ai-dev-submenu');
+    var aiDevIcon = document.querySelector('.ai-dev-icon');
+    
+    if (aiDevToggle && aiDevSubmenu) {
+      aiDevToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        aiDevSubmenu.classList.toggle('hidden');
+        if (aiDevIcon) {
+          aiDevIcon.textContent = aiDevSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+    
+    // Resources toggle
+    var resourcesToggle = document.querySelector('.resources-toggle');
+    var resourcesSubmenu = document.querySelector('.resources-submenu');
+    var resourcesIcon = document.querySelector('.resources-icon');
+    
+    if (resourcesToggle && resourcesSubmenu) {
+      resourcesToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        resourcesSubmenu.classList.toggle('hidden');
+        if (resourcesIcon) {
+          resourcesIcon.textContent = resourcesSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+    
+    // Enterprise AI toggle
+    var enterpriseAiToggle = document.querySelector('.enterprise-ai-toggle');
+    var enterpriseAiSubmenu = document.querySelector('.enterprise-ai-submenu');
+    var enterpriseAiIcon = document.querySelector('.enterprise-ai-icon');
+    
+    if (enterpriseAiToggle && enterpriseAiSubmenu) {
+      enterpriseAiToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        enterpriseAiSubmenu.classList.toggle('hidden');
+        if (enterpriseAiIcon) {
+          enterpriseAiIcon.textContent = enterpriseAiSubmenu.classList.contains('hidden') ? '+' : '−';
+        }
+      });
+    }
+  })();
+</script>
 
     // Accordion card toggle function
     function toggleAccordionItem(itemElement, contentId) {
@@ -1379,15 +1555,6 @@
         content.classList.add('expanded');
       }
   }
-</script>
-
-<script>
-  document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-    menu.classList.toggle('active');
-  });
-</script>
 
 </body>
 </html>

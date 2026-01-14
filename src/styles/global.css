@@ -137,6 +137,25 @@
     transition: none !important;
     filter: none !important;
   }
+  
+  /* CRITICAL: Keep dropdown open when hovering over the dropdown itself */
+  nav .group > div[class*="absolute"]:hover {
+    display: block !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    opacity: 1 !important;
+  }
+  
+  /* Add invisible bridge between button and dropdown to prevent flicker */
+  nav .group > div[class*="absolute"]::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    background: transparent;
+  }
 }
 
 
