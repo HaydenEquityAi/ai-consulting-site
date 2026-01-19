@@ -522,16 +522,16 @@ Resources
      display: flex;
      justify-content: space-between;
      align-items: center;
-     min-h: 60px;
+     min-height: 60px;
    }
    .industry-accordion-content {
      max-height: 0;
      overflow: hidden;
-     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
      padding: 0 1.5rem;
    }
    .industry-accordion-item.active .industry-accordion-content {
-     max-height: 1000px;
+     max-height: 2000px;
      padding: 0 1.5rem 1.5rem 1.5rem;
    }
    .industry-accordion-chevron {
@@ -546,11 +546,11 @@ Resources
  </style>
  
  <div class="bg-black/30 rounded-xl overflow-hidden mb-8 sm:mb-12">
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Real Estate & Property Management</h3>
- <p class="text-gray-400 text-xs">Residential, Commercial, Multifamily, Mixed-Use</p>
+ <p class="text-blue-400 text-xs">Residential, Commercial, Multifamily, Mixed-Use</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -566,11 +566,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Scalable portfolios without operational sprawl.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Construction, Trades & Field Services</h3>
- <p class="text-gray-400 text-xs">Concrete, Painting, Pest Control, Electrical, Plumbing, Specialty Contractors</p>
+ <p class="text-blue-400 text-xs">Concrete, Painting, Pest Control, Electrical, Plumbing, Specialty Contractors</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -586,11 +586,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Predictable execution and cleaner margins.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Home & Recurring Services</h3>
- <p class="text-gray-400 text-xs">Subscription, Route-Based, Membership Models</p>
+ <p class="text-blue-400 text-xs">Subscription, Route-Based, Membership Models</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -606,11 +606,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Stable revenue and easier expansion.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Healthcare & Wellness</h3>
- <p class="text-gray-400 text-xs">Therapists, Clinics, Private Practices, Wellness Groups</p>
+ <p class="text-blue-400 text-xs">Therapists, Clinics, Private Practices, Wellness Groups</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -626,11 +626,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Less admin, more focus on care.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Professional Services</h3>
- <p class="text-gray-400 text-xs">Consulting, Accounting, Advisory, Legal, Specialized Firms</p>
+ <p class="text-blue-400 text-xs">Consulting, Accounting, Advisory, Legal, Specialized Firms</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -646,11 +646,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Better delivery and clearer profitability.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Financial Services & Investment Firms</h3>
- <p class="text-gray-400 text-xs">Investment Groups, Asset Managers, Family Offices</p>
+ <p class="text-blue-400 text-xs">Investment Groups, Asset Managers, Family Offices</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -666,11 +666,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Better decisions, faster execution.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Manufacturing & Light Industrial</h3>
- <p class="text-gray-400 text-xs">Fabrication, Distribution, Assembly, Logistics</p>
+ <p class="text-blue-400 text-xs">Fabrication, Distribution, Assembly, Logistics</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -686,11 +686,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Fewer bottlenecks, higher throughput.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Retail, Hospitality & Multi-Location Businesses</h3>
- <p class="text-gray-400 text-xs">Retail Groups, Restaurants, Service Brands</p>
+ <p class="text-blue-400 text-xs">Retail Groups, Restaurants, Service Brands</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -706,11 +706,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Consistent execution at scale.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Education, Training & Knowledge-Based Organizations</h3>
- <p class="text-gray-400 text-xs">Training Companies, Certification Programs, Internal L&D</p>
+ <p class="text-blue-400 text-xs">Training Companies, Certification Programs, Internal L&D</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -726,11 +726,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Scalable learning without manual coordination.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Nonprofits, Associations & Membership Organizations</h3>
- <p class="text-gray-400 text-xs">Mission-driven and member-based organizations</p>
+ <p class="text-blue-400 text-xs">Mission-driven and member-based organizations</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -746,11 +746,11 @@ Resources
  <p class="text-gray-500 text-sm italic">More impact with less overhead.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Technology-Enabled & Digital Businesses</h3>
- <p class="text-gray-400 text-xs">SaaS, Platforms, Productized Services</p>
+ <p class="text-blue-400 text-xs">SaaS, Platforms, Productized Services</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -766,11 +766,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Clean infrastructure behind growth.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Small & Mid-Sized Businesses</h3>
- <p class="text-gray-400 text-xs">Founder-Led, Growth-Stage Companies</p>
+ <p class="text-blue-400 text-xs">Founder-Led, Growth-Stage Companies</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -786,11 +786,11 @@ Resources
  <p class="text-gray-500 text-sm italic">Fewer fires, better decisions.</p>
  </div>
  </div>
- <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
  <h3 class="text-lg sm:text-xl font-normal mb-1">Enterprise & Complex Organizations</h3>
- <p class="text-gray-400 text-xs">When scale creates complexity</p>
+ <p class="text-blue-400 text-xs">When scale creates complexity</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1137,6 +1137,7 @@ Resources
 
 <script>
   function toggleIndustryAccordion(element) {
+    if (!element) return;
     const isActive = element.classList.contains('active');
     
     // Toggle the clicked item
@@ -1146,6 +1147,25 @@ Resources
       element.classList.add('active');
     }
   }
+  
+  // Add event listeners as backup
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.industry-accordion-header').forEach(function(header) {
+      header.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const item = this.closest('.industry-accordion-item');
+        if (item) {
+          const isActive = item.classList.contains('active');
+          if (isActive) {
+            item.classList.remove('active');
+          } else {
+            item.classList.add('active');
+          }
+        }
+      });
+    });
+  });
 </script>
 </main>
 </Layout>
