@@ -501,164 +501,312 @@ Resources
  <div class="max-w-6xl mx-auto px-4 sm:px-6">
  <h2 class="text-2xl sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4 px-4">Solutions for every industry</h2>
  <p class="text-gray-400 text-base sm:text-lg text-center mb-8 sm:mb-12 px-4">Built for how organizations actually operate.</p>
- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
- <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
- <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Real Estate & Property Management</h3>
- <p class="text-gray-400 text-xs mb-3 sm:mb-4">Residential, Commercial, Multifamily, Mixed-Use</p>
- <ul class="space-y-2 mb-3 sm:mb-4">
+ 
+ <style>
+   .industry-accordion-item {
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     transition: background-color 0.2s ease;
+   }
+   .industry-accordion-item:last-child {
+     border-bottom: none;
+   }
+   .industry-accordion-item:hover {
+     background-color: rgba(255, 255, 255, 0.05);
+   }
+   .industry-accordion-item.active {
+     background-color: rgba(255, 255, 255, 0.08);
+   }
+   .industry-accordion-header {
+     cursor: pointer;
+     padding: 1.25rem 1.5rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     min-h: 60px;
+   }
+   .industry-accordion-content {
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+     padding: 0 1.5rem;
+   }
+   .industry-accordion-item.active .industry-accordion-content {
+     max-height: 1000px;
+     padding: 0 1.5rem 1.5rem 1.5rem;
+   }
+   .industry-accordion-chevron {
+     transition: transform 0.3s ease;
+     flex-shrink: 0;
+     width: 20px;
+     height: 20px;
+   }
+   .industry-accordion-item.active .industry-accordion-chevron {
+     transform: rotate(180deg);
+   }
+ </style>
+ 
+ <div class="bg-black/30 rounded-xl overflow-hidden mb-8 sm:mb-12">
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Real Estate & Property Management</h3>
+ <p class="text-gray-400 text-xs">Residential, Commercial, Multifamily, Mixed-Use</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
  <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lead intake & leasing workflows</li>
  <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Deal underwriting & portfolio visibility</li>
  <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Maintenance, vendor, and compliance systems</li>
  <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial and performance dashboards</li>
  </ul>
- <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Scalable portfolios without operational sprawl.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Construction, Trades & Field Services</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Concrete, Painting, Pest Control, Electrical, Plumbing, Specialty Contractors</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lead → estimate → job execution pipelines</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Crew scheduling & capacity planning</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Job costing, margin tracking, and billing</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>SOPs embedded directly into workflows</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Predictable execution and cleaner margins.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Home & Recurring Services</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Subscription, Route-Based, Membership Models</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Customer onboarding & renewals</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Route planning & service coordination</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Billing automation & collections</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Performance visibility across teams</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Stable revenue and easier expansion.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Healthcare & Wellness</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Therapists, Clinics, Private Practices, Wellness Groups</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Intake, scheduling, and documentation systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Client communication workflows</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal knowledge & process systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Compliance-aware organization</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Less admin, more focus on care.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Professional Services</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Consulting, Accounting, Advisory, Legal, Specialized Firms</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>CRM & opportunity tracking</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Project and engagement workflows</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Time, billing, and delivery systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Knowledge management & reporting</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Better delivery and clearer profitability.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Financial Services & Investment Firms</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Investment Groups, Asset Managers, Family Offices</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Deal tracking & pipeline visibility</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial modeling & reporting systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Portfolio dashboards & scenario analysis</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal workflows & documentation</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Better decisions, faster execution.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Manufacturing & Light Industrial</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Fabrication, Distribution, Assembly, Logistics</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Order tracking & workflow coordination</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Inventory visibility & process automation</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Capacity planning & production reporting</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial and operational dashboards</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Fewer bottlenecks, higher throughput.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Retail, Hospitality & Multi-Location Businesses</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Retail Groups, Restaurants, Service Brands</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Location-level performance visibility</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Staffing, scheduling, and operations systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Revenue, cost, and margin dashboards</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Process standardization across locations</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Consistent execution at scale.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Education, Training & Knowledge-Based Organizations</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Training Companies, Certification Programs, Internal L&D</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Enrollment & onboarding workflows</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Content delivery & progress tracking</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal knowledge systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Performance and engagement dashboards</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Scalable learning without manual coordination.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Nonprofits, Associations & Membership Organizations</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Mission-driven and member-based organizations</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Member onboarding & engagement workflows</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Donor or revenue tracking</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Operations & compliance systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Executive dashboards and reporting</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">More impact with less overhead.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Technology-Enabled & Digital Businesses</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">SaaS, Platforms, Productized Services</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal operations & delivery systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Customer lifecycle workflows</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial and performance visibility</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Custom internal tooling</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Clean infrastructure behind growth.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Small & Mid-Sized Businesses</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">Founder-Led, Growth-Stage Companies</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Tool consolidation & workflow design</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Sales, operations, and finance systems</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automation to reduce headcount pressure</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Executive-level visibility</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Fewer fires, better decisions.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-          <div class="bg-black/30 border border-white/10 p-4 sm:p-6 rounded-xl">
-            <h3 class="text-lg sm:text-xl font-normal mb-1 sm:mb-2">Enterprise & Complex Organizations</h3>
-            <p class="text-gray-400 text-xs mb-3 sm:mb-4">When scale creates complexity</p>
-            <ul class="space-y-2 mb-3 sm:mb-4">
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Cross-department integration</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Custom internal platforms</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Data visibility across teams</li>
-              <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Ongoing optimization and ownership</li>
-            </ul>
-            <p class="text-gray-500 text-sm italic mb-3 sm:mb-4">Alignment instead of fragmentation.</p>
-            <a href="/contact" class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">Learn more <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-          </div>
-        </div>
+ <p class="text-gray-500 text-sm italic">Scalable portfolios without operational sprawl.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Construction, Trades & Field Services</h3>
+ <p class="text-gray-400 text-xs">Concrete, Painting, Pest Control, Electrical, Plumbing, Specialty Contractors</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Lead → estimate → job execution pipelines</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Crew scheduling & capacity planning</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Job costing, margin tracking, and billing</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>SOPs embedded directly into workflows</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Predictable execution and cleaner margins.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Home & Recurring Services</h3>
+ <p class="text-gray-400 text-xs">Subscription, Route-Based, Membership Models</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Customer onboarding & renewals</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Route planning & service coordination</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Billing automation & collections</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Performance visibility across teams</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Stable revenue and easier expansion.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Healthcare & Wellness</h3>
+ <p class="text-gray-400 text-xs">Therapists, Clinics, Private Practices, Wellness Groups</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Intake, scheduling, and documentation systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Client communication workflows</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal knowledge & process systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Compliance-aware organization</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Less admin, more focus on care.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Professional Services</h3>
+ <p class="text-gray-400 text-xs">Consulting, Accounting, Advisory, Legal, Specialized Firms</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>CRM & opportunity tracking</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Project and engagement workflows</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Time, billing, and delivery systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Knowledge management & reporting</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Better delivery and clearer profitability.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Financial Services & Investment Firms</h3>
+ <p class="text-gray-400 text-xs">Investment Groups, Asset Managers, Family Offices</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Deal tracking & pipeline visibility</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial modeling & reporting systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Portfolio dashboards & scenario analysis</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal workflows & documentation</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Better decisions, faster execution.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Manufacturing & Light Industrial</h3>
+ <p class="text-gray-400 text-xs">Fabrication, Distribution, Assembly, Logistics</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Order tracking & workflow coordination</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Inventory visibility & process automation</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Capacity planning & production reporting</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial and operational dashboards</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Fewer bottlenecks, higher throughput.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Retail, Hospitality & Multi-Location Businesses</h3>
+ <p class="text-gray-400 text-xs">Retail Groups, Restaurants, Service Brands</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Location-level performance visibility</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Staffing, scheduling, and operations systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Revenue, cost, and margin dashboards</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Process standardization</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Consistent execution at scale.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Education, Training & Knowledge-Based Organizations</h3>
+ <p class="text-gray-400 text-xs">Training Companies, Certification Programs, Internal L&D</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Enrollment & onboarding workflows</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Content delivery & progress tracking</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal knowledge systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Performance and engagement dashboards</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Scalable learning without manual coordination.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Nonprofits, Associations & Membership Organizations</h3>
+ <p class="text-gray-400 text-xs">Mission-driven and member-based organizations</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Member onboarding & engagement workflows</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Donor or revenue tracking</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Operations & compliance systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Executive dashboards and reporting</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">More impact with less overhead.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Technology-Enabled & Digital Businesses</h3>
+ <p class="text-gray-400 text-xs">SaaS, Platforms, Productized Services</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Internal operations & delivery systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Customer lifecycle workflows</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Financial and performance visibility</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Custom internal tooling</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Clean infrastructure behind growth.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Small & Mid-Sized Businesses</h3>
+ <p class="text-gray-400 text-xs">Founder-Led, Growth-Stage Companies</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Tool consolidation & workflow design</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Sales, operations, and finance systems</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Automation to reduce headcount pressure</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Executive-level visibility</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Fewer fires, better decisions.</p>
+ </div>
+ </div>
+ <div class="industry-accordion-item" onclick="toggleIndustryAccordion(this)">
+ <div class="industry-accordion-header">
+ <div class="flex-1">
+ <h3 class="text-lg sm:text-xl font-normal mb-1">Enterprise & Complex Organizations</h3>
+ <p class="text-gray-400 text-xs">When scale creates complexity</p>
+ </div>
+ <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+ </svg>
+ </div>
+ <div class="industry-accordion-content">
+ <ul class="space-y-2 mb-4">
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Cross-department integration</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Custom internal platforms</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Data visibility across teams</li>
+ <li class="flex items-start gap-2 text-gray-400 text-sm"><span class="text-white/50">•</span>Ongoing optimization and ownership</li>
+ </ul>
+ <p class="text-gray-500 text-sm italic">Alignment instead of fragmentation.</p>
+ </div>
+ </div>
+ </div>
         <p class="text-gray-500 text-sm sm:text-base text-center max-w-3xl mx-auto px-4">If your organization depends on disconnected tools, manual processes, or institutional knowledge living in people's heads—we build the system that replaces that.</p>
  </div>
  </section>
@@ -985,6 +1133,19 @@ Resources
       });
     }
   })();
+</script>
+
+<script>
+  function toggleIndustryAccordion(element) {
+    const isActive = element.classList.contains('active');
+    
+    // Toggle the clicked item
+    if (isActive) {
+      element.classList.remove('active');
+    } else {
+      element.classList.add('active');
+    }
+  }
 </script>
 </main>
 </Layout>
