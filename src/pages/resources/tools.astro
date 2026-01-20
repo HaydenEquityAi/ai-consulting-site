@@ -1,0 +1,879 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Recommended AI Tools - intelio">
+<main class="bg-white min-h-screen">
+  <!-- Header Section -->
+  <section class="py-16 px-6 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Recommended AI Tools
+      </h1>
+      <p class="text-lg text-gray-600 max-w-3xl">
+        A curated list of AI tools we use and recommend. Updated regularly as the landscape evolves.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tools Sections -->
+  <section class="py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- LLMs & Chat Interfaces -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">LLMs & Chat Interfaces</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- ChatGPT -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/chatgpt-logo.png" alt="ChatGPT" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">ChatGPT</h3>
+                <p class="text-sm text-gray-500 mb-2">OpenAI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">The most popular AI assistant. Great for general tasks, coding, writing, and analysis.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Claude -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/claude-logo.png" alt="Claude" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-orange-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Claude</h3>
+                <p class="text-sm text-gray-500 mb-2">Anthropic</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Excellent for long-form content, nuanced analysis, and coding. Our go-to for complex tasks.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Gemini -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/gemini-logo.png" alt="Gemini" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Gemini</h3>
+                <p class="text-sm text-gray-500 mb-2">Google</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Great multimodal capabilities. Integrates well with Google Workspace and search.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Perplexity -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/perplexity-logo.png" alt="Perplexity" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Perplexity</h3>
+                <p class="text-sm text-gray-500 mb-2">Perplexity AI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">AI-powered search with citations. Perfect for research and fact-checking.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://perplexity.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Grok -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/grok-logo.png" alt="Grok" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Grok</h3>
+                <p class="text-sm text-gray-500 mb-2">xAI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Real-time X/Twitter integration for social automation.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://x.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- DeepSeek -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/deepseek-logo.png" alt="DeepSeek" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">DeepSeek</h3>
+                <p class="text-sm text-gray-500 mb-2">DeepSeek</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Cost-effective for high-volume tasks.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice & Audio -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Voice & Audio</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- ElevenLabs -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/elevenlabs-logo.png" alt="ElevenLabs" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">ElevenLabs</h3>
+                <p class="text-sm text-gray-500 mb-2">Voice AI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Best-in-class voice synthesis and cloning. Great for podcasts and video voiceovers.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Descript -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/descript-logo.png" alt="Descript" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Descript</h3>
+                <p class="text-sm text-gray-500 mb-2">Audio/Video Editor</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Audio/video editing with AI transcription, filler word removal, and overdub.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.descript.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Otter.ai -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/otter-logo.png" alt="Otter.ai" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Otter.ai</h3>
+                <p class="text-sm text-gray-500 mb-2">Transcription</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Meeting transcription and AI-powered summaries.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://otter.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coding & Development -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Coding & Development</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cursor -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/cursor-logo.png" alt="Cursor" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Cursor</h3>
+                <p class="text-sm text-gray-500 mb-2">AI Code Editor</p>
+                <p class="text-sm text-gray-600 leading-relaxed">AI-native code editor. Best for pair programming with AI. Our daily driver.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://cursor.sh" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- GitHub Copilot -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/github-copilot-logo.png" alt="GitHub Copilot" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">GitHub Copilot</h3>
+                <p class="text-sm text-gray-500 mb-2">GitHub / Microsoft</p>
+                <p class="text-sm text-gray-600 leading-relaxed">AI pair programmer that integrates with VS Code, JetBrains, and more.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Replit -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/replit-logo.png" alt="Replit" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Replit</h3>
+                <p class="text-sm text-gray-500 mb-2">Browser IDE</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Browser-based IDE with AI assistant. Great for quick prototypes and collaboration.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://replit.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- v0 by Vercel -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/v0-logo.png" alt="v0 by Vercel" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">v0 by Vercel</h3>
+                <p class="text-sm text-gray-500 mb-2">UI Generator</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Generate UI components from text descriptions. Outputs React/Tailwind code.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://v0.dev" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Claude Code -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/claude-code-logo.png" alt="Claude Code" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-orange-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Claude Code</h3>
+                <p class="text-sm text-gray-500 mb-2">Anthropic</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Anthropic's CLI agent for coding. Strong for agentic workflows.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Windsurf -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/windsurf-logo.png" alt="Windsurf" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Windsurf</h3>
+                <p class="text-sm text-gray-500 mb-2">Codeium</p>
+                <p class="text-sm text-gray-600 leading-relaxed">AI-powered code editor. Strong Cursor alternative.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Bolt.new -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/bolt-logo.png" alt="Bolt.new" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">⚡ Bolt.new</h3>
+                <p class="text-sm text-gray-500 mb-2">StackBlitz</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Full-stack app generation in browser. More complete than v0.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Writing & Content -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Writing & Content</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- NotebookLM -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/notebooklm-logo.png" alt="NotebookLM" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">NotebookLM</h3>
+                <p class="text-sm text-gray-500 mb-2">Google</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Research assistant for synthesizing source material.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free</span>
+              <a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Copy.ai -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/copyai-logo.png" alt="Copy.ai" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Copy.ai</h3>
+                <p class="text-sm text-gray-500 mb-2">Copy.ai</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Marketing copy workflows and templates.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.copy.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Grammarly -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/grammarly-logo.png" alt="Grammarly" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Grammarly</h3>
+                <p class="text-sm text-gray-500 mb-2">Grammarly</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Writing polish, tone adjustment, and grammar checking.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.grammarly.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation & Workflows -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Automation & Workflows</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- n8n -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/n8n-logo.png" alt="n8n" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">n8n</h3>
+                <p class="text-sm text-gray-500 mb-2">Workflow Automation</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Open-source workflow automation. More flexible than Zapier, self-hostable.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Make -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/make-logo.png" alt="Make" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Make</h3>
+                <p class="text-sm text-gray-500 mb-2">Visual Automation</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Visual automation platform. Great for complex multi-step workflows.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.make.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Zapier -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/zapier-logo.png" alt="Zapier" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Zapier</h3>
+                <p class="text-sm text-gray-500 mb-2">No-Code Automation</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Most popular automation tool. Huge app library, easy to use for beginners.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://zapier.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image & Video Generation -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Image & Video Generation</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Midjourney -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/midjourney-logo.png" alt="Midjourney" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Midjourney</h3>
+                <p class="text-sm text-gray-500 mb-2">Image Generation</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Best image quality overall. Excellent for artistic and professional imagery.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- DALL-E 3 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/dalle-logo.png" alt="DALL-E 3" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">DALL-E 3</h3>
+                <p class="text-sm text-gray-500 mb-2">OpenAI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Great text understanding. Built into ChatGPT Plus. Best for quick iterations.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://openai.com/dall-e-3" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Runway -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/runway-logo.png" alt="Runway" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Runway</h3>
+                <p class="text-sm text-gray-500 mb-2">Video Generation</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Leading AI video generation. Gen-2 produces impressive short clips.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://runwayml.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- HeyGen -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/heygen-logo.png" alt="HeyGen" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">HeyGen</h3>
+                <p class="text-sm text-gray-500 mb-2">HeyGen</p>
+                <p class="text-sm text-gray-600 leading-relaxed">AI avatar videos for personalized outreach and training.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.heygen.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Pika -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/pika-logo.png" alt="Pika" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Pika</h3>
+                <p class="text-sm text-gray-500 mb-2">Pika Labs</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Emerging video generator with unique motion controls.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://pika.art" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- CapCut -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/capcut-logo.png" alt="CapCut" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">CapCut</h3>
+                <p class="text-sm text-gray-500 mb-2">ByteDance</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Free editor with AI auto-captions and background removal.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free</span>
+              <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Opus Clip -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/opus-logo.png" alt="Opus Clip" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Opus Clip</h3>
+                <p class="text-sm text-gray-500 mb-2">Opus</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Auto-generates short clips from long videos for social.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://opus.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Marketing -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Social & Marketing</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Buffer -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/buffer-logo.png" alt="Buffer" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Buffer</h3>
+                <p class="text-sm text-gray-500 mb-2">Buffer</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Social scheduling with AI content suggestions.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://buffer.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Instantly.ai -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/instantly-logo.png" alt="Instantly.ai" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Instantly.ai</h3>
+                <p class="text-sm text-gray-500 mb-2">Instantly</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Cold email with AI personalization at scale.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded">Paid</span>
+              <a href="https://instantly.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent Frameworks -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Agent Frameworks</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CrewAI -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/crewai-logo.png" alt="CrewAI" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">CrewAI</h3>
+                <p class="text-sm text-gray-500 mb-2">CrewAI</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Multi-agent orchestration framework. Pairs well with LangChain.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Open Source</span>
+              <a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- AutoGen -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/autogen-logo.png" alt="AutoGen" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">AutoGen</h3>
+                <p class="text-sm text-gray-500 mb-2">Microsoft</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Multi-agent conversation framework.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Open Source</span>
+              <a href="https://microsoft.github.io/autogen" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data & Analytics -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Data & Analytics</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Supabase -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/supabase-logo.png" alt="Supabase" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Supabase</h3>
+                <p class="text-sm text-gray-500 mb-2">Backend Platform</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Open-source Firebase alternative. Postgres database with vector support for AI.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://supabase.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Pinecone -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/pinecone-logo.png" alt="Pinecone" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Pinecone</h3>
+                <p class="text-sm text-gray-500 mb-2">Vector Database</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Leading vector database for RAG applications. Essential for semantic search.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">Free + Paid</span>
+              <a href="https://www.pinecone.io" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- LangChain -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/langchain-logo.png" alt="LangChain" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">LangChain</h3>
+                <p class="text-sm text-gray-500 mb-2">LLM Framework</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Framework for building LLM applications. Chains, agents, and RAG made easier.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Open Source</span>
+              <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Weaviate -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/weaviate-logo.png" alt="Weaviate" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Weaviate</h3>
+                <p class="text-sm text-gray-500 mb-2">Weaviate</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Open-source vector database with hybrid search.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Open Source</span>
+              <a href="https://weaviate.io" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+
+          <!-- Chroma -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/chroma-logo.png" alt="Chroma" class="w-8 h-8" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-gray-300 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-gray-900 mb-1">Chroma</h3>
+                <p class="text-sm text-gray-500 mb-2">Chroma</p>
+                <p class="text-sm text-gray-600 leading-relaxed">Lightweight, developer-friendly vector database.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-semibold rounded">Open Source</span>
+              <a href="https://www.trychroma.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-1">
+                Visit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+</Layout>
+
