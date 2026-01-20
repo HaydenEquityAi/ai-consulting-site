@@ -8,12 +8,14 @@ import NewsletterSection from "../../components/resources/NewsletterSection.astr
 // Get all insight articles (if they exist)
 let allArticles: any[] = [];
 try {
-  const articles = await Astro.glob('../../content/insights/*.md');
-  allArticles = articles.map(article => {
-    const filename = article.file.split('/').pop() || '';
+  const articles = await import.meta.glob('../../content/insights/*.md', { 
+    eager: true 
+  });
+  allArticles = Object.entries(articles).map(([path, module]: [string, any]) => {
+    const filename = path.split('/').pop() || '';
     const slug = filename.replace('.md', '');
     return {
-      data: article.frontmatter,
+      data: module.frontmatter,
       slug: slug,
       url: `/resources/insights/${slug}`
     };

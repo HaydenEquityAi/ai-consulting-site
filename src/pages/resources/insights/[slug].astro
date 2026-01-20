@@ -2,13 +2,17 @@
 import Layout from "../../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const articles = await Astro.glob('../../../content/insights/*.md');
-  return articles.map((article) => {
-    const filename = article.file.split('/').pop() || '';
+  const articles = await import.meta.glob('../../../content/insights/*.md', { 
+    eager: true 
+  });
+  
+  return Object.entries(articles).map(([path, module]: [string, any]) => {
+    const filename = path.split('/').pop() || '';
     const slug = filename.replace('.md', '');
+    // Markdown files in Astro: module has frontmatter and Content directly
     return {
       params: { slug },
-      props: { article },
+      props: { article: module },
     };
   });
 }
@@ -19,7 +23,7 @@ interface Props {
 
 const { article } = Astro.props;
 
-if (!article) {
+if (!article || !article.frontmatter) {
   return Astro.redirect("/resources/insights");
 }
 
@@ -32,7 +36,9 @@ function formatDate(dateString: string): string {
   });
 }
 
-const { Content } = await article.render();
+// Get Content component - markdown files export it directly
+// When using import.meta.glob, markdown files have Content as a named export
+const Content = article.Content;
 ---
 
 <Layout title={`${article.frontmatter.title} - Insights`}>

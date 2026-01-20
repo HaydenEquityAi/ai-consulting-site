@@ -5,7 +5,7 @@ author: "John Doe"
 authorTitle: "Systems Architect"
 date: "2024-01-15"
 category: "Systems Architecture"
-image: "/images/insights/systems-architecture.jpg"
+image: "/logos/Modern Architecture vs. Legacy Systems .png"
 readTime: 12
 ---
 
