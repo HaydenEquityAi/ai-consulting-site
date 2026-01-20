@@ -16,6 +16,30 @@
   body {
     font-family: 'Figtree', system-ui, sans-serif;
   }
+  
+  /* Mobile improvements */
+  @media (max-width: 767px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Ensure touch targets are at least 44px */
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    * {
+      max-width: 100%;
+    }
+    
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @layer components {

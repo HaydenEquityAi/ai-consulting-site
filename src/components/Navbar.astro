@@ -4,10 +4,10 @@
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-6 py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
     <div class="flex items-center justify-between">
       <!-- LEFT: Logo -->
-      <a href="/" class="text-3xl font-medium tracking-tight text-black">intelio</a>
+      <a href="/" class="text-2xl sm:text-3xl font-medium tracking-tight text-black">intelio</a>
       
       <!-- CENTER: Navigation Items -->
       <div class="hidden md:flex items-center gap-8">
@@ -123,7 +123,7 @@
       </div>
       
       <!-- Mobile Menu Button -->
-      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu">
+      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
         <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -132,8 +132,8 @@
     </div>
     
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100">
-      <nav class="flex flex-col gap-4 pt-4">
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 bg-white z-40 max-h-[calc(100vh-80px)] overflow-y-auto">
+      <nav class="flex flex-col gap-2 sm:gap-4 pt-4 px-4 sm:px-6">
         <!-- What We Build (Mobile Accordion) -->
         <div class="py-2">
           <button type="button" class="what-we-build-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
@@ -237,6 +237,34 @@
     pointer-events: auto !important;
     opacity: 1 !important;
   }
+  
+  /* Mobile menu improvements */
+  @media (max-width: 767px) {
+    #mobile-menu {
+      position: relative;
+      z-index: 40;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    #mobile-menu-button {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Ensure mobile menu items are easily tappable */
+    #mobile-menu a,
+    #mobile-menu button {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+      overflow: hidden;
+    }
+  }
 </style>
 
 <script>
@@ -255,33 +283,62 @@
         e.preventDefault();
         e.stopPropagation();
         
+        var isHidden = menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
         
+        // Toggle body scroll lock on mobile
+        if (window.innerWidth < 768) {
+          if (isHidden) {
+            document.body.classList.add('menu-open');
+          } else {
+            document.body.classList.remove('menu-open');
+          }
+        }
+        
+        // Update icon based on menu state
         if (iconOpen && iconClose) {
-          iconOpen.classList.toggle('hidden');
-          iconClose.classList.toggle('hidden');
+          if (isHidden) {
+            // Opening menu - show close icon, hide open icon
+            iconOpen.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+          } else {
+            // Closing menu - show open icon, hide close icon
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+          }
         }
       });
       
       // Close when clicking outside
       document.addEventListener('click', function(e) {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
           menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
           if (iconOpen && iconClose) {
             iconOpen.classList.remove('hidden');
             iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
           }
         }
       });
       
-      // Close menu when a link is clicked
-      var menuLinks = menu.querySelectorAll('a');
+      // Prevent menu from closing when clicking inside it
+      menu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      
+      // Close menu when a link is clicked (but not for accordion toggles)
+      var menuLinks = menu.querySelectorAll('a:not(.what-we-build-toggle):not(.resources-toggle)');
       menuLinks.forEach(function(link) {
         link.addEventListener('click', function() {
           menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
           if (iconOpen && iconClose) {
             iconOpen.classList.remove('hidden');
             iconClose.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
           }
         });
       });
