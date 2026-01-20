@@ -4,322 +4,949 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Revenue & Growth Systems - intelio">
 <main>
-  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
-  <section class="hero-revenue min-h-screen flex items-center relative overflow-hidden">
-    <!-- Background Image/Video -->
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
-      <!-- You can add a video or image here for sales/pipeline/growth theme -->
+  <!-- VIDEO HERO SECTION - CINEMATIC FIRST IMPRESSION -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover hidden md:block"
+      >
+        <source src="/videos/heroes/revenue-growth-hero.webm" type="video/webm" />
+        <source src="/videos/heroes/revenue-growth-hero.mp4" type="video/mp4" />
+      </video>
+      <!-- Mobile fallback -->
+      <div class="md:hidden absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      
+      <!-- Gradient Overlay - darker on left for text readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40"></div>
+      
+      <!-- Subtle noise texture for premium film grain feel -->
+      <div class="absolute inset-0 opacity-[0.03] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
     </div>
-    
-    <!-- Dark Overlay for text readability -->
-    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+    <!-- Content positioned over video -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            Predictable Revenue
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
           Revenue & Growth Systems
         </h1>
-        <p class="text-lg text-white/70 mb-8">
+        
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-4 leading-relaxed">
           Systems that capture demand, follow up automatically, and make growth predictable.
         </p>
-        <a href="#how-it-works" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
-          See How It Works
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
+        
+        <!-- Stats Bar -->
+        <div class="flex flex-wrap gap-8 mb-10 py-6 border-y border-white/10">
+          <div>
+            <div class="text-3xl font-bold text-white">35%</div>
+            <div class="text-sm text-gray-400">Avg Pipeline Increase</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white">60%</div>
+            <div class="text-sm text-gray-400">Faster Follow-up</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white">2x</div>
+            <div class="text-sm text-gray-400">Lead Conversion</div>
+          </div>
+        </div>
+        
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#how-it-works" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            See How It Works
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            Talk to an Expert
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="py-8 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <p class="text-sm text-gray-500 font-medium">Trusted by growth-focused teams in commercial real estate, professional services, and B2B companies</p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: What Breaks (Light background) -->
-  <section class="py-20 px-6 bg-white">
+  <!-- SECTION: What Breaks - PROBLEM CARDS -->
+  <section class="py-24 px-6 bg-gray-50">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">What Breaks</p>
-      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
-        Revenue systems fail when:
-      </p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Breaks</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          Revenue systems fail when:
+        </p>
+      </div>
 
-      <!-- Problem Cards - 3+2 layout (3 top, 2 centered bottom) -->
-      <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <!-- Problem Cards - 5 cards in responsive grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
         <!-- Card 1: Inconsistent Follow-up -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Inconsistent Follow-up</h4>
-          <p class="text-sm text-gray-500">Leads aren't followed up consistently</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Inconsistent Follow-up</h4>
+          <p class="text-gray-600 leading-relaxed">Leads aren't followed up consistently—opportunities slip through the cracks</p>
         </div>
 
         <!-- Card 2: People-Dependent Sales -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">People-Dependent Sales</h4>
-          <p class="text-sm text-gray-500">Sales processes depend on individuals instead of systems</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">People-Dependent Sales</h4>
+          <p class="text-gray-600 leading-relaxed">Sales processes depend on individuals instead of systems</p>
         </div>
 
         <!-- Card 3: Siloed Teams -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Siloed Teams</h4>
-          <p class="text-sm text-gray-500">Marketing and sales operate independently</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Siloed Teams</h4>
+          <p class="text-gray-600 leading-relaxed">Marketing and sales operate independently—no shared visibility</p>
         </div>
-      </div>
 
-      <!-- Bottom row - 2 cards centered -->
-      <div class="grid md:grid-cols-3 gap-6 mb-8">
-        <div class="md:col-start-1 md:col-span-1"></div>
         <!-- Card 4: Unreliable Pipeline -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1 md:col-start-1">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Unreliable Pipeline</h4>
-          <p class="text-sm text-gray-500">Pipelines don't reflect reality</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Unreliable Pipeline</h4>
+          <p class="text-gray-600 leading-relaxed">Pipelines don't reflect reality—forecasts are guesses</p>
         </div>
 
         <!-- Card 5: Blind Forecasting -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Blind Forecasting</h4>
-          <p class="text-sm text-gray-500">Leadership can't forecast revenue confidently</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Blind Forecasting</h4>
+          <p class="text-gray-600 leading-relaxed">Leadership can't forecast revenue confidently</p>
         </div>
-        <div class="md:col-start-3 md:col-span-1"></div>
       </div>
 
-      <!-- Callout Box -->
-      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-        <p class="text-base text-gray-700 font-medium">
-          Growth becomes unpredictable and exhausting.
+      <!-- Pain Callout -->
+      <div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 px-12 rounded-2xl relative overflow-hidden mb-8">
+        <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);"></div>
+        <p class="text-2xl md:text-3xl font-medium text-center relative z-10">
+          Growth becomes unpredictable and exhausting. Every quarter feels like starting over.
         </p>
+      </div>
+      
+      <!-- Cost of Inaction -->
+      <p class="text-center text-lg text-gray-500 italic max-w-3xl mx-auto">
+        Every lost lead is revenue you'll never recover. Every missed follow-up is a competitor's opportunity.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: The Transformation (Before/After) -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Transformation</h2>
+        <p class="text-lg md:text-xl text-gray-600">From chaotic pipeline to predictable revenue</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- LEFT: Before (Red/Warning) -->
+        <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-red-600">Without Intelio</h3>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">•</span>
+              <span>Leads fall through the cracks</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">•</span>
+              <span>Follow-up depends on who remembers</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">•</span>
+              <span>Marketing has no idea what converts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">•</span>
+              <span>Pipeline changes weekly</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">•</span>
+              <span>Forecasts are fiction</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- RIGHT: After (Blue/Success) -->
+        <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-600">With Intelio</h3>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Every lead captured and routed automatically</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Systematic follow-up sequences</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Full attribution from first touch to close</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Real-time pipeline visibility</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Forecasts you can bank on</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="text-center text-2xl font-bold text-gray-900 mt-12">
+        This isn't a CRM upgrade. It's a revenue operating system.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Why Intelio (Competitive Positioning) -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Intelio</h2>
+        <p class="text-lg md:text-xl text-gray-600">We're not a CRM. We're not sales trainers. We're revenue systems builders.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1: vs. Buying a CRM -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">vs. Buying a CRM</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-1">Their Approach</p>
+              <p class="text-gray-600">You buy Salesforce or HubSpot. Then you need to configure it, build automations, integrate with other tools, and hope your team actually uses it.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">The Intelio Approach</p>
+              <p class="text-gray-900 font-medium">We design the entire revenue system—lead capture, routing, follow-up, pipeline tracking, forecasting—configured to how you actually sell.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: vs. Hiring Sales Ops -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">vs. Hiring Sales Ops</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-1">Their Approach</p>
+              <p class="text-gray-600">Hire a sales ops person, give them 6 months to figure out your systems, hope they don't leave.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">The Intelio Approach</p>
+              <p class="text-gray-900 font-medium">We build the system and maintain it. You get institutional knowledge that doesn't walk out the door.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: vs. Marketing Automation Alone -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">vs. Marketing Automation Alone</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-1">Their Approach</p>
+              <p class="text-gray-600">Marketing sends leads to sales. Sales says they're bad leads. Finger-pointing ensues.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">The Intelio Approach</p>
+              <p class="text-gray-900 font-medium">Unified system from first touch to closed deal. Full visibility. No excuses.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: vs. Manual Processes -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">vs. Manual Processes</h3>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-1">Their Approach</p>
+              <p class="text-gray-600">Spreadsheets, sticky notes, hoping your best rep shares their secrets.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-1">The Intelio Approach</p>
+              <p class="text-gray-900 font-medium">Systematized excellence. Every lead gets your best process, automatically.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: What We Build (White background) -->
-  <section class="py-20 px-6 bg-white border-t border-gray-100">
+  <!-- SECTION: What We Build - SHOWCASE WITH AUTHORITY -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">What We Build</p>
-      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
-        We build revenue systems that manage the full lifecycle from first interaction to closed revenue.
-      </p>
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
+        <div class="w-24 h-1 bg-blue-600 mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl leading-relaxed">
+          We build revenue systems that manage the full lifecycle from first interaction to closed revenue.
+        </p>
+      </div>
 
-      <!-- Feature Cards - 3x2 grid (5 cards) -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1: Lead Capture -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Feature Cards - 3x2 grid with MORE visual weight -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Lead Capture & Routing -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Lead Capture</h4>
-          <p class="text-sm text-gray-500">Lead capture and intake workflows</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Lead Capture & Routing</h4>
+          <p class="text-gray-600 leading-relaxed">Automated lead intake from every source—web, referral, partner—routed to the right person instantly</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
         </div>
 
         <!-- Card 2: CRM Architecture -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">CRM Architecture</h4>
-          <p class="text-sm text-gray-500">CRM architecture aligned to how deals actually progress</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">CRM Architecture</h4>
+          <p class="text-gray-600 leading-relaxed">CRM configured to how deals actually progress—not software defaults</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
         </div>
 
         <!-- Card 3: Automated Follow-up -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Automated Follow-up</h4>
-          <p class="text-sm text-gray-500">Automated follow-up and task sequencing</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Automated Follow-up</h4>
+          <p class="text-gray-600 leading-relaxed">Sequences that nurture and follow up automatically—no leads forgotten</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
         </div>
 
         <!-- Card 4: Pipeline Tracking -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Pipeline Tracking</h4>
-          <p class="text-sm text-gray-500">Pipeline tracking and forecasting</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Pipeline Tracking</h4>
+          <p class="text-gray-600 leading-relaxed">Real-time visibility into every deal, stage, and probability</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
         </div>
 
-        <!-- Card 5: Clean Handoffs -->
-        <div class="service-card bg-gray-50 rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+        <!-- Card 5: Revenue Forecasting -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2">Clean Handoffs</h4>
-          <p class="text-sm text-gray-500">Clear handoffs between marketing, sales, and delivery</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Revenue Forecasting</h4>
+          <p class="text-gray-600 leading-relaxed">AI-powered forecasting based on actual pipeline behavior</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
+        </div>
+
+        <!-- Card 6: Marketing Attribution -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Marketing Attribution</h4>
+          <p class="text-gray-600 leading-relaxed">Know exactly which channels, campaigns, and touchpoints drive revenue</p>
+          <a href="#contact" class="mt-4 text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center">
+            Learn more →
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: How It Works (Process Steps) -->
-  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100" id="how-it-works">
+  <!-- SECTION: How It Works - PROCESS THAT FEELS INEVITABLE -->
+  <section class="py-24 px-6 bg-gradient-to-b from-gray-50 to-white border-t border-gray-100" id="how-it-works">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-12">How It Works</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+        <p class="text-lg md:text-xl text-gray-600">From first touch to closed deal in four steps</p>
+      </div>
       
-      <div class="grid md:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-4 gap-6 relative">
+        <!-- Connecting Line (SVG) -->
+        <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-200 transform -translate-y-1/2" style="margin: 0 3rem;"></div>
+        
         <!-- Step 01: Model -->
-        <div class="border border-gray-200 rounded-xl p-6 relative">
-          <div class="flex items-start justify-between mb-4">
-            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border-2 border-dashed border-gray-200 hover:border-blue-300 transition-all duration-300 relative">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center border-2 border-blue-200">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
               </svg>
             </div>
-            <span class="text-5xl font-light text-gray-200">01</span>
+            <span class="text-7xl font-bold text-blue-100">01</span>
           </div>
-          <h4 class="font-semibold mb-2">Model</h4>
-          <p class="text-sm text-gray-500">We model how revenue actually moves through your organization—not how software vendors think it should.</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Model</h4>
+          <p class="text-gray-600 leading-relaxed">We model how revenue actually moves through your organization—not how software vendors think it should.</p>
           <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </div>
         </div>
 
         <!-- Step 02: Design -->
-        <div class="border border-gray-200 rounded-xl p-6 relative">
-          <div class="flex items-start justify-between mb-4">
-            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border-2 border-dashed border-gray-200 hover:border-blue-300 transition-all duration-300 relative">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center border-2 border-blue-200">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
               </svg>
             </div>
-            <span class="text-5xl font-light text-gray-200">02</span>
+            <span class="text-7xl font-bold text-blue-100">02</span>
           </div>
-          <h4 class="font-semibold mb-2">Design</h4>
-          <p class="text-sm text-gray-500">Architect systems that match your actual sales motion and team structure.</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Design</h4>
+          <p class="text-gray-600 leading-relaxed">Architect systems that match your actual sales motion and team structure.</p>
           <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </div>
         </div>
 
         <!-- Step 03: Automate -->
-        <div class="border border-gray-200 rounded-xl p-6 relative">
-          <div class="flex items-start justify-between mb-4">
-            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border-2 border-dashed border-gray-200 hover:border-blue-300 transition-all duration-300 relative">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center border-2 border-blue-200">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
-            <span class="text-5xl font-light text-gray-200">03</span>
+            <span class="text-7xl font-bold text-blue-100">03</span>
           </div>
-          <h4 class="font-semibold mb-2">Automate</h4>
-          <p class="text-sm text-gray-500">Implement automated sequences, routing, and task management.</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Automate</h4>
+          <p class="text-gray-600 leading-relaxed">Implement automated sequences, routing, and task management.</p>
           <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </div>
         </div>
 
         <!-- Step 04: Optimize -->
-        <div class="border border-gray-200 rounded-xl p-6">
-          <div class="flex items-start justify-between mb-4">
-            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-2xl p-8 border-2 border-dashed border-gray-200 hover:border-blue-300 transition-all duration-300">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center border-2 border-blue-200">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
               </svg>
             </div>
-            <span class="text-5xl font-light text-gray-200">04</span>
+            <span class="text-7xl font-bold text-blue-100">04</span>
           </div>
-          <h4 class="font-semibold mb-2">Optimize</h4>
-          <p class="text-sm text-gray-500">Deploy tracking and iterate based on real conversion data.</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Optimize</h4>
+          <p class="text-gray-600 leading-relaxed">Deploy tracking and iterate based on real conversion data.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: AI Capabilities (Compact) -->
-  <section class="py-12 px-6 bg-white border-t border-gray-100">
+  <!-- SECTION: Where AI Creates Leverage - CUTTING-EDGE DARK SECTION -->
+  <section class="py-24 px-6 bg-gray-900 border-t border-gray-800">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-6">AI is applied where it adds leverage:</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Where AI Creates Leverage</h2>
+        <p class="text-lg md:text-xl text-gray-300">AI is applied where it accelerates revenue—not as a gimmick</p>
+      </div>
       
-      <div class="flex flex-wrap gap-6 justify-center">
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-          <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          <span>Lead prioritization</span>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Lead Prioritization</h4>
+          <p class="text-gray-400 mb-3">AI scores leads based on fit and behavior—your team focuses on the best opportunities</p>
+          <p class="text-sm text-blue-400 italic">Example: Identify the 20% of leads that will drive 80% of revenue</p>
         </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-          <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          <span>Routing based on capacity or fit</span>
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Intelligent Routing</h4>
+          <p class="text-gray-400 mb-3">Route leads based on capacity, expertise, and likelihood to close</p>
+          <p class="text-sm text-blue-400 italic">Example: Match enterprise leads to your enterprise closers automatically</p>
         </div>
-        <div class="flex items-center gap-2 text-sm text-gray-600">
-          <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-          </svg>
-          <span>Forecasting and trend analysis</span>
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold text-lg mb-2">Forecast Intelligence</h4>
+          <p class="text-gray-400 mb-3">Predict close dates and amounts based on historical patterns</p>
+          <p class="text-sm text-blue-400 italic">Example: Know which deals will slip before they do</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-xl text-blue-400 font-medium">
+          AI embedded into your revenue system—not a separate tool to check.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Impact - BOLD STATEMENT BLOCKS -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Impact</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Impact 1: Fewer lost opportunities -->
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Fewer lost opportunities</p>
+          <p class="text-sm text-gray-500">Average 35% reduction in lead leakage</p>
+        </div>
+
+        <!-- Impact 2: Shorter sales cycles -->
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Shorter sales cycles</p>
+          <p class="text-sm text-gray-500">20% faster time-to-close</p>
+        </div>
+
+        <!-- Impact 3: Predictable growth -->
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Predictable growth</p>
+          <p class="text-sm text-gray-500">From quarterly surprises to reliable forecasts</p>
+        </div>
+
+        <!-- Impact 4: Revenue that scales -->
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Revenue that scales</p>
+          <p class="text-sm text-gray-500">Grow without proportionally growing headcount</p>
+        </div>
+      </div>
+      
+      <!-- Testimonial Quote -->
+      <blockquote class="max-w-3xl mx-auto text-center py-12 mt-12">
+        <p class="text-2xl lg:text-3xl font-medium text-gray-900 italic mb-6">
+          "We went from hoping for a good quarter to knowing exactly where we'd land—and what levers to pull."
+        </p>
+        <footer class="text-gray-500">
+          — VP Sales, Regional Services Company
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Industry Applications -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Built for Your Industry</h2>
+        <p class="text-lg md:text-xl text-gray-600">Revenue systems configured to how your industry actually sells</p>
+      </div>
+      
+      <div x-data="{ activeTab: 'cre' }" class="bg-white rounded-2xl p-8 border border-gray-200">
+        <!-- Tab buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+          <button 
+            @click="activeTab = 'cre'" 
+            :class="activeTab === 'cre' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="px-6 py-3 rounded-full font-medium transition-all"
+          >
+            Commercial Real Estate
+          </button>
+          <button 
+            @click="activeTab = 'services'" 
+            :class="activeTab === 'services' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="px-6 py-3 rounded-full font-medium transition-all"
+          >
+            Professional Services
+          </button>
+          <button 
+            @click="activeTab = 'b2b'" 
+            :class="activeTab === 'b2b' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="px-6 py-3 rounded-full font-medium transition-all"
+          >
+            B2B Sales Teams
+          </button>
+          <button 
+            @click="activeTab = 'home'" 
+            :class="activeTab === 'home' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'"
+            class="px-6 py-3 rounded-full font-medium transition-all"
+          >
+            Home Services
+          </button>
+        </div>
+        
+        <!-- Tab content -->
+        <div x-show="activeTab === 'cre'" class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Deal Flow Intelligence</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Deal flow tracking from prospect to signed lease</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Broker activity and commission visibility</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Lease expiration pipeline management</span>
+              </li>
+            </ul>
+            <div class="p-4 bg-blue-50 rounded-xl">
+              <p class="text-blue-900 font-medium">"Track 500 active prospects across 20 brokers with full visibility"</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-400">
+            Dashboard Preview
+          </div>
+        </div>
+
+        <div x-show="activeTab === 'services'" class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Engagement Pipeline</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Proposal tracking and win rate analysis</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Referral source attribution</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Engagement pipeline from lead to SOW</span>
+              </li>
+            </ul>
+            <div class="p-4 bg-blue-50 rounded-xl">
+              <p class="text-blue-900 font-medium">"Know your win rate by service line, client size, and lead source"</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-400">
+            Dashboard Preview
+          </div>
+        </div>
+
+        <div x-show="activeTab === 'b2b'" class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Enterprise Sales Tracking</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Multi-stage enterprise sales tracking</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Account-based pipeline management</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Sales team performance visibility</span>
+              </li>
+            </ul>
+            <div class="p-4 bg-blue-50 rounded-xl">
+              <p class="text-blue-900 font-medium">"See every touchpoint in a 6-month enterprise sales cycle"</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-400">
+            Dashboard Preview
+          </div>
+        </div>
+
+        <div x-show="activeTab === 'home'" class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Territory & Capacity Routing</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Lead routing by territory and capacity</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Estimate-to-close tracking</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>Seasonal demand forecasting</span>
+              </li>
+            </ul>
+            <div class="p-4 bg-blue-50 rounded-xl">
+              <p class="text-blue-900 font-medium">"Route leads in real-time based on crew availability and location"</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-400">
+            Dashboard Preview
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: The Impact (Checkmark list) -->
-  <section class="py-20 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-sm text-gray-500 mb-12">The Impact</p>
+  <!-- NEW SECTION: Case Study Previews -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Results That Speak</h2>
+      </div>
       
-      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
-        <ul class="space-y-4">
-          <li class="flex items-center gap-3 text-gray-700">
-            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base">Fewer lost opportunities</span>
-          </li>
-          <li class="flex items-center gap-3 text-gray-700">
-            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base">Shorter sales cycles</span>
-          </li>
-          <li class="flex items-center gap-3 text-gray-700">
-            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base">Predictable growth</span>
-          </li>
-          <li class="flex items-center gap-3 text-gray-700">
-            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base">Revenue that scales without constant intervention</span>
-          </li>
-        </ul>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Case Study 1 -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="p-8">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+              Commercial Brokerage
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">From lost leads to 40% more conversions</h3>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-4xl font-bold text-blue-600">40%</span>
+              <span class="text-gray-500">increase in lead-to-deal conversion</span>
+            </div>
+            <p class="text-gray-600 mb-6">A regional brokerage automated lead routing and follow-up across 15 brokers. No more leads falling through the cracks.</p>
+            <a href="/case-studies" class="inline-flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+              Read the full story
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="p-8">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+              Professional Services
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Finally knowing where revenue comes from</h3>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-4xl font-bold text-blue-600">100%</span>
+              <span class="text-gray-500">attribution visibility</span>
+            </div>
+            <p class="text-gray-600 mb-6">A consulting firm discovered 60% of revenue came from just 2 referral sources. They doubled down.</p>
+            <a href="/case-studies" class="inline-flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+              Read the full story
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+          <div class="p-8">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-4">
+              B2B Sales Team
+            </span>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Forecasts you can actually trust</h3>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="text-4xl font-bold text-blue-600">90%</span>
+              <span class="text-gray-500">forecast accuracy</span>
+            </div>
+            <p class="text-gray-600 mb-6">An enterprise sales team went from wild guesses to reliable quarterly forecasts.</p>
+            <a href="/case-studies" class="inline-flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+              Read the full story
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Technical Foundation -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Systems We Integrate</h2>
+        <p class="text-lg md:text-xl text-gray-600">We connect with the platforms your team already uses</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-12 border border-gray-200">
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">CRMs</h3>
+          <p class="text-gray-600">Salesforce, HubSpot, Pipedrive, Zoho, Close, custom CRMs</p>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Marketing</h3>
+          <p class="text-gray-600">Mailchimp, ActiveCampaign, Marketo, Pardot, Google Ads, Meta Ads</p>
+        </div>
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Communication</h3>
+          <p class="text-gray-600">Slack, Teams, email systems, phone systems</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-4">Data</h3>
+          <p class="text-gray-600">Google Sheets, Excel, databases, data warehouses</p>
+        </div>
       </div>
     </div>
   </section>
@@ -439,26 +1066,87 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- GRADIENT CTA SECTION -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
-        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to make revenue predictable?</h2>
-        <p class="text-white/80 mb-8">Let's build systems that capture demand and convert it into growth</p>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
-          Work with Intelio
+  <!-- GRADIENT CTA SECTION - CLOSE WITH CONVICTION -->
+  <section class="py-24 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 relative overflow-hidden">
+    <!-- Subtle pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+        Ready to make revenue predictable?
+      </h2>
+      <p class="text-xl text-blue-100 mb-4">
+        Most clients see measurable pipeline improvement within 60 days.
+      </p>
+      <p class="text-blue-200 mb-10">
+        No pressure. No generic pitch. Just clarity on whether we're the right fit.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="/contact" class="inline-flex items-center px-10 py-5 bg-white text-blue-700 text-lg font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          Schedule a Discovery Call
         </a>
+        <a href="/how-we-work" class="inline-flex items-center px-10 py-5 border-2 border-white/30 text-white text-lg font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
+          See How We Work →
+        </a>
+      </div>
+      
+      <!-- What to expect -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+          </svg>
+          30-minute call
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+          </svg>
+          We'll discuss your current state
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Leave with clarity on next steps
+        </span>
       </div>
     </div>
   </section>
+
+  <!-- Floating "Talk to Us" Button -->
+  <div 
+    id="floating-cta"
+    class="fixed right-6 bottom-6 z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+  >
+    <a 
+      href="/contact" 
+      class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      Talk to Us
+    </a>
+  </div>
 </main>
 </Layout>
 
 <style>
-  .hero-revenue {
-    background: #000000;
-    position: relative;
-    overflow: hidden;
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    video {
+      display: none;
+    }
+    section:first-of-type {
+      background-image: linear-gradient(to bottom right, #111827, #1f2937);
+      background-size: cover;
+      background-position: center;
+    }
+    .animate-bounce {
+      animation: none;
+    }
   }
 
   /* FAQ Accordion Styles */
@@ -471,6 +1159,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 </style>
 
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script>
   // FAQ Accordion Functionality
   document.addEventListener('DOMContentLoaded', function() {
@@ -489,5 +1178,19 @@ import Layout from "../../layouts/Layout.astro";
         }
       });
     });
+
+    // Floating CTA Button
+    const floatingCTA = document.getElementById('floating-cta');
+    if (floatingCTA) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+          floatingCTA.classList.remove('opacity-0', 'pointer-events-none');
+          floatingCTA.classList.add('opacity-100');
+        } else {
+          floatingCTA.classList.add('opacity-0', 'pointer-events-none');
+          floatingCTA.classList.remove('opacity-100');
+        }
+      });
+    }
   });
 </script>
