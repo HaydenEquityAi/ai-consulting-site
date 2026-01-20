@@ -201,9 +201,7 @@ import Layout from "../layouts/Layout.astro";
           <!-- Power BI -->
           <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
             <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
+              <img src="/logos/powerbi-logo.png" alt="Power BI" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
             </div>
             <h4 class="font-bold text-gray-900 mb-2">Power BI</h4>
             <p class="text-sm text-gray-600 mb-3">Microsoft's enterprise analytics platform. Real-time dashboards, AI-powered insights, seamless M365 integration</p>
@@ -213,9 +211,7 @@ import Layout from "../layouts/Layout.astro";
           <!-- Tableau -->
           <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
             <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
+              <img src="/logos/tableau-logo.png" alt="Tableau" class="h-8 w-auto object-contain" onerror="this.style.display='none';">
             </div>
             <h4 class="font-bold text-gray-900 mb-2">Tableau</h4>
             <p class="text-sm text-gray-600 mb-3">Industry-leading data visualization platform. Deep analytics, interactive dashboards, complex data exploration</p>
@@ -940,11 +936,13 @@ import Layout from "../layouts/Layout.astro";
       <div class="mb-12">
         <h4 class="text-sm font-semibold text-gray-500 mb-6">Enterprise Foundations</h4>
         <div class="grid md:grid-cols-2 gap-6 mb-6">
-          <div class="bg-white border border-gray-200 rounded-xl p-6">
+          <div class="bg-white border border-gray-200 rounded-xl p-6 flex flex-col items-center text-center">
+            <img src="/logos/microsoft-azure-logo.png" alt="Microsoft" class="h-16 w-auto object-contain mb-4">
             <h5 class="text-lg font-semibold text-gray-900 mb-3">Microsoft</h5>
             <p class="text-sm text-gray-600">Identity, automation, data, AI, and enterprise infrastructure.</p>
           </div>
-          <div class="bg-white border border-gray-200 rounded-xl p-6">
+          <div class="bg-white border border-gray-200 rounded-xl p-6 flex flex-col items-center text-center">
+            <img src="/logos/google-cloud-logo.webp" alt="Google" class="h-16 w-auto object-contain mb-4">
             <h5 class="text-lg font-semibold text-gray-900 mb-3">Google</h5>
             <p class="text-sm text-gray-600">Workspace, analytics, search, and local presence.</p>
           </div>
