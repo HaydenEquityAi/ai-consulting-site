@@ -4,81 +4,257 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="AI & Automation Enablement - intelio">
 <main>
-  <!-- HERO SECTION (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">AI & Automation Enablement</h1>
-      <p class="text-lg sm:text-xl text-gray-400">Applied where it removes friction or scales decisions.</p>
+  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+  <section class="hero-ai min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Image/Video -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
+      <!-- You can add a video or image here for AI/technology/automation theme -->
+    </div>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          AI & Automation Enablement
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Applied where it removes friction or scales decisions.
+        </p>
+        <a href="#philosophy" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+          See Where AI Fits
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: Our Philosophy (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">Our Philosophy</h2>
-      <p class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">AI is not the product.</p>
-      <p class="text-xl sm:text-2xl font-semibold text-gray-900 mb-8">Leverage is.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">We apply AI only where it:</p>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Reduces manual effort</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Improves decision quality</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Scales execution</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Removes bottlenecks</span>
-        </li>
-      </ul>
+  <!-- SECTION: Philosophy Statement (Visual Anchor) -->
+  <section class="py-24 px-6 bg-blue-50" id="philosophy">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+        AI is not the product.
+      </p>
+      <p class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+        Leverage is.
+      </p>
     </div>
   </section>
 
-  <!-- SECTION: Where AI Is Used (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">Where AI Is Used</h2>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Workflow automation</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Intelligent routing and prioritization</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Document and data processing</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Forecasting and analysis</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Internal assistants where appropriate</span>
-        </li>
-      </ul>
-      <p class="text-sm sm:text-base text-gray-500 italic">Always embedded inside real systems—not bolted on.</p>
+  <!-- SECTION: Criteria Cards (Framework) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">Our Philosophy</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        We apply AI only where it:
+      </p>
+
+      <!-- Criteria Cards - 4 columns on desktop, 2x2 on tablet -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Reduces Manual Effort -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Reduces Manual Effort</h4>
+          <p class="text-sm text-gray-500">Eliminates repetitive tasks that drain capacity</p>
+        </div>
+
+        <!-- Card 2: Improves Decision Quality -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Improves Decision Quality</h4>
+          <p class="text-sm text-gray-500">Surfaces insights humans would miss or take too long to find</p>
+        </div>
+
+        <!-- Card 3: Scales Execution -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Scales Execution</h4>
+          <p class="text-sm text-gray-500">Multiplies output without multiplying headcount</p>
+        </div>
+
+        <!-- Card 4: Removes Bottlenecks -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Removes Bottlenecks</h4>
+          <p class="text-sm text-gray-500">Eliminates delays caused by manual handoffs or review</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CTA SECTION (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-8 sm:mb-12">Want to apply AI where it actually matters?</h2>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-        Work with Intelio
-      </a>
+  <!-- SECTION: Where AI Is Used (Feature Cards) -->
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">Where AI Is Used</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        AI capabilities embedded into real business systems:
+      </p>
+
+      <!-- Feature Cards - 3x2 grid (5 cards) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Workflow Automation -->
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Workflow Automation</h4>
+          <p class="text-sm text-gray-500">Automated triggers, sequences, and handoffs that run without intervention</p>
+        </div>
+
+        <!-- Card 2: Intelligent Routing -->
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Intelligent Routing</h4>
+          <p class="text-sm text-gray-500">Routing and prioritization based on rules, capacity, or predictive signals</p>
+        </div>
+
+        <!-- Card 3: Document Processing -->
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Document Processing</h4>
+          <p class="text-sm text-gray-500">Extraction, classification, and processing of documents and data</p>
+        </div>
+
+        <!-- Card 4: Forecasting & Analysis -->
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Forecasting & Analysis</h4>
+          <p class="text-sm text-gray-500">Trend detection, scenario modeling, and predictive analytics</p>
+        </div>
+
+        <!-- Card 5: Internal Assistants -->
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Internal Assistants</h4>
+          <p class="text-sm text-gray-500">AI assistants embedded where appropriate—not as a gimmick</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Integration Principle Callout -->
+  <section class="py-16 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-blue-50 border-l-4 border-blue-500 rounded-xl p-8 flex items-start gap-4">
+        <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+        </svg>
+        <div>
+          <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed text-center">
+            Always embedded inside real systems—not bolted on.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Technologies (Optional - for credibility) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">Technologies we work with</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        Proven AI and automation platforms integrated into business systems:
+      </p>
+
+      <!-- Technology Grid -->
+      <div class="space-y-8">
+        <!-- AI Platforms Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">AI Platforms</h4>
+          <div class="flex flex-wrap items-center gap-6">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">OpenAI</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Azure AI / Azure OpenAI</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Anthropic (Claude)</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Google AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automation Platforms Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">Automation Platforms</h4>
+          <div class="flex flex-wrap items-center gap-6">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">n8n</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Make (Integromat)</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Zapier</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200">
+              <span class="text-sm font-medium text-gray-700">Power Automate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRADIENT CTA SECTION -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Want to apply AI where it actually matters?</h2>
+        <p class="text-white/80 mb-8">Let's identify where AI creates real leverage in your business</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+          Work with Intelio
+        </a>
+      </div>
     </div>
   </section>
 </main>
 </Layout>
 
+<style>
+  .hero-ai {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
