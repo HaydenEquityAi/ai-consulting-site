@@ -1,9 +1,9 @@
 ---
 title: "The Architecture Question Your Business Needs to Ask"
 excerpt: "Why your current business systems are costing you more than they're helping—and what actually works."
-author: "Hayden"
+author: "Hayden Ashley"
 authorTitle: ""
-date: "2025-01-15"
+date: "2025-01-10"
 category: "Systems Architecture"
 image: "/logos/Modern Architecture vs. Legacy Systems .png"
 readTime: 15
