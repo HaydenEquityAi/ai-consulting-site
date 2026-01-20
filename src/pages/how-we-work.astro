@@ -70,6 +70,78 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- CREDIBILITY BAR -->
+  <section class="py-12 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col items-center justify-center gap-6">
+        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
+        <!-- Client Logos - Infinite Scroll -->
+        <div class="logo-marquee-container w-full">
+          <div class="logo-marquee-track">
+            <!-- First set of logos -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ENHANCED ENGAGEMENT MODELS SECTION -->
   <section id="engagement-models" class="py-24 px-6 bg-white">
     <div class="max-w-7xl mx-auto">
@@ -654,6 +726,121 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+      
+      <div class="border-t border-gray-200 pt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you determine which engagement model fits?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We start with a discovery call to understand your goals, team capacity, and operational needs. Based on that, we recommend the model that best aligns with how much execution you want to own versus offload.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What's the typical timeline for implementation?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Most systems go live within 8-12 weeks from discovery. Complex integrations or custom builds may take longer, but we provide clear timelines upfront based on your specific requirements.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can we switch between engagement models?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. As your business evolves, you can transition between models. We design systems to support this flexibility, whether you want to take more ownership or offload more execution.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What happens after systems go live?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We provide documentation, training, and ongoing support based on your engagement model. Systems are monitored, maintained, and evolved to stay aligned with your business as it grows.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Do you work with existing tools and systems?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Absolutely. We integrate with your existing stack—CRMs, accounting software, project management tools, and more. We configure proven platforms to work together, not replace everything.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What if we need custom development?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Custom development is available for select engagements where standard tools break down. These are scoped independently and evaluated based on impact potential and complexity alignment.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you ensure systems stay reliable?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We build monitoring, error handling, and alerting into every system. Regular maintenance, updates, and performance reviews ensure systems stay reliable, secure, and aligned with your operations.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What's included in the initial discovery?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We discuss your current state, identify where time and money are leaking, and outline how systems could address those gaps. You'll leave with clarity on next steps and which engagement model fits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ENHANCED CTA SECTION -->
   <section class="py-24 px-6 bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 relative overflow-hidden">
     <!-- Subtle pattern overlay -->
@@ -690,5 +877,111 @@ import Layout from "../layouts/Layout.astro";
     .animate-bounce {
       animation: none;
     }
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
+
+  /* FAQ Accordion Styles */
+  .faq-card.active .faq-answer {
+    display: block !important;
+  }
+
+  .faq-card.active .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Logo Carousel Styles */
+  .logo-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    animation: logo-scroll 40s linear infinite;
+    width: fit-content;
+  }
+
+  .logo-marquee-container:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-marquee-item:hover {
+    opacity: 1;
+  }
+
+  .logo-marquee-img {
+    height: 120px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo-marquee-img {
+      height: 100px;
+      max-width: 160px;
+    }
+    .logo-marquee-track {
+      gap: 1.25rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-marquee-img {
+      height: 80px;
+      max-width: 140px;
+    }
+    .logo-marquee-track {
+      gap: 1rem;
+      animation: logo-scroll 40s linear infinite;
+    }
   }
 </style>
+
+<script>
+  // FAQ Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqCards = document.querySelectorAll('.faq-card');
+    
+    faqCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        
+        // Close all cards
+        faqCards.forEach(c => c.classList.remove('active'));
+        
+        // Open clicked card if it wasn't active
+        if (!isActive) {
+          this.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
