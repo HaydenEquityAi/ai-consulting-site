@@ -1,0 +1,266 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Resources Hub - Your AI & Systems Knowledge Center - intelio">
+<main class="bg-gray-900 min-h-screen">
+  <!-- HERO SECTION: Animated Knowledge Graph Visualization -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+    <!-- Animated Knowledge Graph Canvas -->
+    <div id="knowledge-graph" class="absolute inset-0 w-full h-full">
+      <!-- This will be rendered by JavaScript/Three.js or CSS animations -->
+      <canvas id="graph-canvas" class="absolute inset-0 w-full h-full opacity-80"></canvas>
+    </div>
+    
+    <!-- Content Overlay -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+          Your AI & Systems Knowledge Center
+        </h1>
+        <p class="text-2xl lg:text-3xl text-gray-200 mb-4 font-medium">
+          Everything You Need to Know About Systems, AI, and Enterprise Operations
+        </p>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          Expert insights. Practical tools. Clear definitions. Real answers.
+        </p>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          Intelio's knowledge center is built to help you understand the systems, AI, and automation concepts that drive modern business.
+        </p>
+      </div>
+
+      <!-- Interactive Search Bar -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="relative">
+          <input
+            type="text"
+            id="resource-search"
+            placeholder="Search insights, tools, glossary, FAQs..."
+            class="w-full px-8 py-6 text-lg bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all"
+          />
+          <svg class="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <button class="filter-btn px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all" data-filter="insights">
+            Insights
+          </button>
+          <button class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/20 transition-all" data-filter="tools">
+            Tools
+          </button>
+          <button class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/20 transition-all" data-filter="glossary">
+            Glossary
+          </button>
+          <button class="filter-btn px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/20 transition-all" data-filter="faqs">
+            FAQs
+          </button>
+        </div>
+      </div>
+
+      <!-- Resource Type Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <!-- Insights Card -->
+        <a href="/resources/insights" class="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400 transition-all duration-300">
+          <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors">
+            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Insights</h3>
+          <p class="text-gray-300 leading-relaxed">Deep-dive articles on systems, AI, and operations</p>
+          <div class="mt-4 text-blue-400 font-semibold flex items-center gap-2">
+            Explore Insights
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tools Card -->
+        <a href="/resources/tools" class="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-green-400 transition-all duration-300">
+          <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors">
+            <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Tools</h3>
+          <p class="text-gray-300 leading-relaxed">Practical calculators and interactive resources</p>
+          <div class="mt-4 text-green-400 font-semibold flex items-center gap-2">
+            Explore Tools
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Glossary Card -->
+        <a href="/resources/glossary" class="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-amber-400 transition-all duration-300">
+          <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500/30 transition-colors">
+            <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Glossary</h3>
+          <p class="text-gray-300 leading-relaxed">Clear definitions of systems and AI terms</p>
+          <div class="mt-4 text-amber-400 font-semibold flex items-center gap-2">
+            Explore Glossary
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- FAQs Card -->
+        <a href="/resources/faqs" class="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-purple-400 transition-all duration-300">
+          <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors">
+            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">FAQs</h3>
+          <p class="text-gray-300 leading-relaxed">Answers to common questions about systems and AI</p>
+          <div class="mt-4 text-purple-400 font-semibold flex items-center gap-2">
+            Explore FAQs
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Results Modal (Hidden by default) -->
+  <div id="search-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm">
+    <div class="max-w-4xl mx-auto mt-20 px-6">
+      <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-white">Search Results</h3>
+          <button id="close-modal" class="text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div id="search-results" class="space-y-4">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</Layout>
+
+<style>
+  /* Knowledge Graph Animation Styles */
+  #knowledge-graph {
+    background: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
+  }
+
+  @keyframes orbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  .filter-btn.active {
+    background: rgba(37, 99, 235, 0.8);
+    border-color: rgba(37, 99, 235, 1);
+  }
+</style>
+
+<script>
+  // Knowledge Graph Visualization (Simplified CSS version)
+  document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('graph-canvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Center node
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    let rotation = 0;
+
+    // Orbital nodes
+    const rings = [
+      { radius: 150, nodes: 8, color: '#3b82f6', type: 'insights' },
+      { radius: 250, nodes: 6, color: '#10b981', type: 'tools' },
+      { radius: 350, nodes: 10, color: '#f59e0b', type: 'glossary' },
+      { radius: 450, nodes: 8, color: '#a855f7', type: 'faqs' }
+    ];
+
+    function drawNode(x, y, color, size = 8) {
+      ctx.beginPath();
+      ctx.arc(x, y, size, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = color;
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      rotation += 0.005;
+
+      // Draw center node
+      drawNode(centerX, centerY, '#fbbf24', 12);
+
+      // Draw orbital rings
+      rings.forEach((ring, ringIndex) => {
+        for (let i = 0; i < ring.nodes; i++) {
+          const angle = (Math.PI * 2 / ring.nodes) * i + rotation * (1 + ringIndex * 0.3);
+          const x = centerX + Math.cos(angle) * ring.radius;
+          const y = centerY + Math.sin(angle) * ring.radius;
+          
+          // Draw connection line
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.lineTo(x, y);
+          ctx.strokeStyle = 'rgba(16, 185, 129, 0.3)';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+          
+          // Draw node
+          drawNode(x, y, ring.color, 6);
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Search functionality
+    const searchInput = document.getElementById('resource-search');
+    const searchModal = document.getElementById('search-modal');
+    const closeModal = document.getElementById('close-modal');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    searchInput?.addEventListener('focus', () => {
+      searchModal?.classList.remove('hidden');
+    });
+
+    closeModal?.addEventListener('click', () => {
+      searchModal?.classList.add('hidden');
+    });
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+</script>
+
