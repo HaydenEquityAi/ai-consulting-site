@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -28,6 +29,7 @@ const { title, description = "AI consultancy and development firm, bringing comp
   <body class="overflow-x-hidden bg-white">
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
 
