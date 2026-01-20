@@ -1,0 +1,32 @@
+---
+import ArticleCard from './ArticleCard.astro';
+
+interface Props {
+  articles: any[];
+}
+
+const { articles } = Astro.props;
+---
+
+<section class="articles-grid max-w-7xl mx-auto px-6 mb-16">
+  <div class="grid md:grid-cols-2 gap-6">
+    {articles.map((article) => {
+      // Handle both markdown files and sample data
+      const slug = article.slug 
+        ? `/resources/insights/${article.slug}`
+        : article.url || '#';
+      
+      return (
+        <ArticleCard
+          title={article.data?.title || article.title}
+          excerpt={article.data?.excerpt || article.excerpt}
+          author={article.data?.author || article.author}
+          date={article.data?.date || article.date}
+          image={article.data?.image || article.image}
+          slug={slug}
+        />
+      );
+    })}
+  </div>
+</section>
+

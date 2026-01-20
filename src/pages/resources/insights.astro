@@ -1,609 +1,170 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import InsightsHero from "../../components/resources/InsightsHero.astro";
+import FeaturedArticle from "../../components/resources/FeaturedArticle.astro";
+import ArticlesGrid from "../../components/resources/ArticlesGrid.astro";
+import NewsletterSection from "../../components/resources/NewsletterSection.astro";
+
+// Get all insight articles (if they exist)
+let allArticles: any[] = [];
+try {
+  const articles = await Astro.glob('../../content/insights/*.md');
+  allArticles = articles.map(article => {
+    const filename = article.file.split('/').pop() || '';
+    const slug = filename.replace('.md', '');
+    return {
+      data: article.frontmatter,
+      slug: slug,
+      url: `/resources/insights/${slug}`
+    };
+  });
+} catch (e) {
+  // If content directory doesn't exist yet, use sample data
+  allArticles = [];
+}
+
+// Sort by date, newest first
+const sortedArticles = allArticles.sort((a, b) => {
+  const dateA = new Date(a.data?.date || a.date || '2000-01-01').getTime();
+  const dateB = new Date(b.data?.date || b.date || '2000-01-01').getTime();
+  return dateB - dateA;
+});
+
+// Featured is first, rest go in grid
+const featured = sortedArticles[0];
+const latestArticles = sortedArticles.slice(1, 13); // Show 12 articles after featured
+
+// Sample data if no articles exist yet
+const sampleFeatured = {
+  data: {
+    title: "Building Scalable AI Systems: Architecture Patterns That Work",
+    excerpt: "Learn the proven architecture patterns that enable AI systems to scale from prototype to production, handling millions of requests while maintaining reliability and performance.",
+    author: "John Doe",
+    date: "2024-01-15",
+    category: "Systems Architecture",
+    image: "/images/insights/systems-architecture.jpg"
+  },
+  slug: "building-scalable-ai-systems"
+};
+
+const sampleArticles = [
+  {
+    data: {
+      title: "The Complete Guide to Enterprise AI Integration",
+      excerpt: "A comprehensive guide covering everything from planning to execution, including common pitfalls and best practices for integrating AI into enterprise systems.",
+      author: "Sarah Miller",
+      date: "2023-12-20",
+      image: "/images/insights/enterprise-ai.jpg"
+    },
+    slug: "enterprise-ai-integration"
+  },
+  {
+    data: {
+      title: "Understanding System Architecture Patterns",
+      excerpt: "Learn the fundamental patterns that make systems scalable, maintainable, and reliable.",
+      author: "John Doe",
+      date: "2023-12-15",
+      image: "/images/insights/architecture-patterns.jpg"
+    },
+    slug: "system-architecture-patterns"
+  },
+  {
+    data: {
+      title: "Operations Excellence Through Automation",
+      excerpt: "How to identify automation opportunities and implement them effectively.",
+      author: "Alex Brown",
+      date: "2023-12-10",
+      image: "/images/insights/automation.jpg"
+    },
+    slug: "operations-automation"
+  },
+  {
+    data: {
+      title: "API Integration Best Practices",
+      excerpt: "Essential strategies for connecting systems and ensuring reliable data flow.",
+      author: "John Doe",
+      date: "2023-12-05",
+      image: "/images/insights/api-integration.jpg"
+    },
+    slug: "api-integration"
+  },
+  {
+    data: {
+      title: "Leadership in the Age of AI",
+      excerpt: "How executives can navigate AI adoption and make strategic technology decisions.",
+      author: "Sarah Miller",
+      date: "2023-11-28",
+      image: "/images/insights/leadership-ai.jpg"
+    },
+    slug: "leadership-ai"
+  },
+  {
+    data: {
+      title: "Data-Driven Decision Making",
+      excerpt: "Building systems that turn data into actionable insights for business leaders.",
+      author: "Alex Brown",
+      date: "2023-11-20",
+      image: "/images/insights/data-driven.jpg"
+    },
+    slug: "data-driven-decisions"
+  }
+];
 ---
 
-<Layout title="Insights - Deep-Dive Articles on Systems, AI, and Operations - intelio">
+<Layout title="Insights - Articles and Perspectives on Business Systems, AI, and Operations - intelio">
 <main class="bg-white min-h-screen">
-  <!-- HERO SECTION: Interactive Timeline Slider -->
-  <section class="py-16 bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          Deep-Dive Articles on Systems, AI, and Operations
-        </h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Expert insights to help you understand and implement intelligent systems
-        </p>
-      </div>
-
-      <!-- Interactive Timeline Slider -->
-      <div class="relative max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
-          <!-- Left: Timeline -->
-          <div class="lg:col-span-3 hidden lg:block">
-            <div class="timeline-vertical space-y-6">
-              <div class="timeline-item active" data-article="0">
-                <div class="flex items-center gap-4">
-                  <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
-                  <div>
-                    <div class="text-sm font-semibold text-gray-900">Jan 2024</div>
-                    <div class="text-xs text-gray-500">Latest</div>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item" data-article="1">
-                <div class="flex items-center gap-4">
-                  <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                  <div>
-                    <div class="text-sm font-semibold text-gray-700">Dec 2023</div>
-                    <div class="text-xs text-gray-500">Featured</div>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item" data-article="2">
-                <div class="flex items-center gap-4">
-                  <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                  <div>
-                    <div class="text-sm font-semibold text-gray-700">Nov 2023</div>
-                    <div class="text-xs text-gray-500">Popular</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Center: Featured Article -->
-          <div class="lg:col-span-6">
-            <div class="featured-article bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300">
-              <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                <img src="/images/articles/featured-article.jpg" alt="Featured Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-4 right-4">
-                  <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Featured</span>
-                </div>
-              </div>
-              <div class="p-8">
-                <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                  <span>Jan 15, 2024</span>
-                  <span>•</span>
-                  <span>12 min read</span>
-                  <span>•</span>
-                  <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-semibold">Intermediate</span>
-                </div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-3">Building Scalable AI Systems: Architecture Patterns That Work</h2>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  Learn the proven architecture patterns that enable AI systems to scale from prototype to production, handling millions of requests while maintaining reliability and performance.
-                </p>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">JD</div>
-                    <div>
-                      <div class="font-semibold text-gray-900">John Doe</div>
-                      <div class="text-sm text-gray-500">Systems Architect</div>
-                    </div>
-                  </div>
-                  <a href="/resources/insights/building-scalable-ai-systems" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors flex items-center gap-2">
-                    Read Article
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Article Meta -->
-          <div class="lg:col-span-3 hidden lg:block">
-            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div class="space-y-4">
-                <div>
-                  <div class="text-xs text-gray-500 mb-1">Reading Time</div>
-                  <div class="text-lg font-semibold text-gray-900">12 minutes</div>
-                </div>
-                <div>
-                  <div class="text-xs text-gray-500 mb-2">Topics</div>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">AI Architecture</span>
-                    <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Scalability</span>
-                    <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Systems Design</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="text-xs text-gray-500 mb-1">Author</div>
-                  <div class="text-sm font-semibold text-gray-900">John Doe</div>
-                  <div class="text-xs text-gray-500">Systems Architect</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Article Series Tags -->
-  <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-40 backdrop-blur-sm bg-white/95">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-        <button class="series-tag active px-6 py-2 bg-blue-600 text-white font-semibold rounded-full whitespace-nowrap transition-all">
-          All Articles (24)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="systems">
-          Systems Architecture (7)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="ai">
-          AI Implementation (12)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="operations">
-          Operations (5)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="integration">
-          Integration (8)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="leadership">
-          Leadership (3)
-        </button>
-        <button class="series-tag px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-full whitespace-nowrap transition-all" data-series="case-studies">
-          Case Studies (6)
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content: Filter Sidebar + Article Grid -->
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-8">
-        <!-- Left Sidebar: Advanced Filtering (Sticky) -->
-        <aside class="lg:col-span-3 hidden lg:block">
-          <div class="sticky top-24 bg-white rounded-xl border border-gray-200 p-6">
-            <h3 class="text-lg font-bold text-gray-900 mb-6">Filters</h3>
-            
-            <!-- Category Filter -->
-            <div class="mb-6">
-              <h4 class="text-sm font-semibold text-gray-700 mb-3">Category</h4>
-              <div class="space-y-2">
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="systems" />
-                  <span class="text-sm text-gray-600">Systems</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="ai" />
-                  <span class="text-sm text-gray-600">AI</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="operations" />
-                  <span class="text-sm text-gray-600">Operations</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="integration" />
-                  <span class="text-sm text-gray-600">Integration</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="leadership" />
-                  <span class="text-sm text-gray-600">Leadership</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="category" value="case-studies" />
-                  <span class="text-sm text-gray-600">Case Studies</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Difficulty Filter -->
-            <div class="mb-6">
-              <h4 class="text-sm font-semibold text-gray-700 mb-3">Difficulty</h4>
-              <div class="space-y-2">
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="difficulty" value="beginner" />
-                  <span class="text-sm text-gray-600">Beginner</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="difficulty" value="intermediate" />
-                  <span class="text-sm text-gray-600">Intermediate</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="difficulty" value="advanced" />
-                  <span class="text-sm text-gray-600">Advanced</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Read Time Filter -->
-            <div class="mb-6">
-              <h4 class="text-sm font-semibold text-gray-700 mb-3">Read Time</h4>
-              <div class="space-y-2">
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="readtime" value="under5" />
-                  <span class="text-sm text-gray-600">Under 5 min</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="readtime" value="5-10" />
-                  <span class="text-sm text-gray-600">5-10 min</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="readtime" value="10-15" />
-                  <span class="text-sm text-gray-600">10-15 min</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="readtime" value="15plus" />
-                  <span class="text-sm text-gray-600">15+ min</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Publication Date Filter -->
-            <div class="mb-6">
-              <h4 class="text-sm font-semibold text-gray-700 mb-3">Publication Date</h4>
-              <div class="space-y-2">
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="date" value="week" />
-                  <span class="text-sm text-gray-600">Last week</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="date" value="month" />
-                  <span class="text-sm text-gray-600">Last month</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="date" value="quarter" />
-                  <span class="text-sm text-gray-600">Last quarter</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" class="filter-checkbox" data-filter="date" value="all" />
-                  <span class="text-sm text-gray-600">All time</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Toggles -->
-            <div class="space-y-3 mb-6">
-              <label class="flex items-center justify-between cursor-pointer">
-                <span class="text-sm text-gray-600">Most Popular</span>
-                <input type="checkbox" class="toggle-switch" />
-              </label>
-              <label class="flex items-center justify-between cursor-pointer">
-                <span class="text-sm text-gray-600">Most Recent</span>
-                <input type="checkbox" class="toggle-switch" checked />
-              </label>
-            </div>
-
-            <!-- Active Filters -->
-            <div id="active-filters" class="mb-4">
-              <!-- Filter chips will appear here -->
-            </div>
-
-            <button id="clear-filters" class="w-full text-sm text-blue-600 hover:text-blue-700 font-semibold">
-              Clear all filters
-            </button>
-          </div>
-        </aside>
-
-        <!-- Right: Article Grid (Masonry Style) -->
-        <div class="lg:col-span-9">
-          <div class="article-grid grid grid-cols-1 md:grid-cols-2 gap-6" id="article-grid">
-            <!-- Large Featured Card (2x2) -->
-            <article class="article-card featured md:col-span-2 bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all group">
-              <div class="grid md:grid-cols-2 gap-0">
-                <div class="aspect-video md:aspect-auto bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-                  <img src="/images/articles/article-1.jpg" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div class="absolute top-4 right-4">
-                    <button class="save-article w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="absolute bottom-4 left-4">
-                    <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Intermediate</span>
-                  </div>
-                </div>
-                <div class="p-8">
-                  <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                    <span>Dec 20, 2023</span>
-                    <span>•</span>
-                    <span>10 min read</span>
-                  </div>
-                  <h2 class="text-2xl font-bold text-gray-900 mb-3 border-l-4 border-blue-600 pl-4">The Complete Guide to Enterprise AI Integration</h2>
-                  <p class="text-gray-600 leading-relaxed mb-6">
-                    A comprehensive guide covering everything from planning to execution, including common pitfalls and best practices for integrating AI into enterprise systems.
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                      <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">SM</div>
-                      <div>
-                        <div class="font-semibold text-gray-900">Sarah Miller</div>
-                        <div class="text-xs text-gray-500">AI Strategist</div>
-                      </div>
-                    </div>
-                    <div class="flex gap-2">
-                      <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">AI</span>
-                      <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Integration</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Medium Cards (1x1) -->
-            <article class="article-card bg-white rounded-xl shadow-md border-l-4 border-purple-500 border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
-              <div class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
-                <img src="/images/articles/article-2.jpg" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-3 right-3">
-                  <button class="save-article w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                  </button>
-                </div>
-                <div class="absolute bottom-3 left-3">
-                  <span class="px-2 py-1 bg-green-500 text-white text-xs font-semibold rounded">Beginner</span>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                  <span>Dec 15, 2023</span>
-                  <span>•</span>
-                  <span>8 min read</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Understanding System Architecture Patterns</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                  Learn the fundamental patterns that make systems scalable, maintainable, and reliable.
-                </p>
-                <div class="flex items-center gap-2">
-                  <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-semibold">JD</div>
-                  <span class="text-sm text-gray-600">John Doe</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card bg-white rounded-xl shadow-md border-l-4 border-green-500 border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
-              <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
-                <img src="/images/articles/article-3.jpg" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-3 right-3">
-                  <button class="save-article w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                  </button>
-                </div>
-                <div class="absolute bottom-3 left-3">
-                  <span class="px-2 py-1 bg-blue-500 text-white text-xs font-semibold rounded">Intermediate</span>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center gap-3 mb-3 text-xs text-gray-500">
-                  <span>Dec 10, 2023</span>
-                  <span>•</span>
-                  <span>15 min read</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Operations Excellence Through Automation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                  How to identify automation opportunities and implement them effectively.
-                </p>
-                <div class="flex items-center gap-2">
-                  <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-semibold">AB</div>
-                  <span class="text-sm text-gray-600">Alex Brown</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Regular Cards (1x1) -->
-            <article class="article-card bg-white rounded-xl shadow-md border-l-4 border-amber-500 border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
-              <div class="aspect-video bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden">
-                <img src="/images/articles/article-4.jpg" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-3 right-3">
-                  <button class="save-article w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center gap-3 mb-2 text-xs text-gray-500">
-                  <span>Dec 5, 2023</span>
-                  <span>•</span>
-                  <span>6 min read</span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2">API Integration Best Practices</h3>
-                <div class="flex items-center gap-2">
-                  <span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs">Integration</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card bg-white rounded-xl shadow-md border-l-4 border-pink-500 border border-gray-200 overflow-hidden hover:shadow-lg transition-all group">
-              <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600 relative overflow-hidden">
-                <img src="/images/articles/article-5.jpg" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div class="absolute top-3 right-3">
-                  <button class="save-article w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center gap-3 mb-2 text-xs text-gray-500">
-                  <span>Nov 28, 2023</span>
-                  <span>•</span>
-                  <span>5 min read</span>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-2">Leadership in the Age of AI</h3>
-                <div class="flex items-center gap-2">
-                  <span class="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs">Leadership</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- More articles would continue here -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter Signup -->
-  <section class="py-16 bg-gradient-to-br from-blue-50 to-purple-50 border-t border-gray-200">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Get Insights Delivered Weekly</h2>
-      <p class="text-lg text-gray-600 mb-8">
-        Stay updated with the latest articles on systems, AI, and operations
-      </p>
-      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="flex-1 px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:border-blue-500"
-        />
-        <button
-          type="submit"
-          class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-        >
-          Subscribe
-        </button>
-      </form>
-    </div>
+  <InsightsHero />
+  
+  {featured ? (
+    <FeaturedArticle
+      title={featured.data?.title || featured.title}
+      excerpt={featured.data?.excerpt || featured.excerpt}
+      author={featured.data?.author || featured.author}
+      date={featured.data?.date || featured.date}
+      category={featured.data?.category || featured.category}
+      image={featured.data?.image || featured.image}
+      slug={featured.slug ? `/resources/insights/${featured.slug}` : (featured.url || '#')}
+    />
+  ) : (
+    <FeaturedArticle
+      title={sampleFeatured.data.title}
+      excerpt={sampleFeatured.data.excerpt}
+      author={sampleFeatured.data.author}
+      date={sampleFeatured.data.date}
+      category={sampleFeatured.data.category}
+      image={sampleFeatured.data.image}
+      slug={`/resources/insights/${sampleFeatured.slug}`}
+    />
+  )}
+  
+  {latestArticles.length > 0 ? (
+    <ArticlesGrid articles={latestArticles} />
+  ) : (
+    <ArticlesGrid articles={sampleArticles} />
+  )}
+  
+  <NewsletterSection />
+  
+  <section class="text-center py-12 px-6">
+    <a href="/resources" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+      View all resources
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
   </section>
 </main>
 </Layout>
 
 <style>
-  /* Timeline Styles */
-  .timeline-vertical {
-    position: relative;
-  }
-
-  .timeline-vertical::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #3b82f6, #e5e7eb);
-  }
-
-  .timeline-item {
-    position: relative;
-    padding-left: 2rem;
-  }
-
-  .timeline-item.active .w-3 {
-    background: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
-  }
-
-  /* Article Grid Masonry Effect */
-  .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: auto;
-    gap: 1.5rem;
-  }
-
-  .article-card.featured {
-    grid-column: span 2;
-  }
-
+  /* Responsive adjustments */
   @media (max-width: 768px) {
-    .article-card.featured {
-      grid-column: span 1;
+    .featured-article > div {
+      grid-template-columns: 1fr !important;
     }
-  }
-
-  /* Category Color Coding */
-  .border-blue-500 { border-left-color: #2563eb; } /* Systems Architecture */
-  .border-purple-500 { border-left-color: #a855f7; } /* AI & Automation */
-  .border-green-500 { border-left-color: #10b981; } /* Operations */
-  .border-amber-500 { border-left-color: #f59e0b; } /* Integration */
-  .border-pink-500 { border-left-color: #ec4899; } /* Leadership */
-
-  /* Scrollbar Hide */
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+    
+    .articles-grid > div {
+      grid-template-columns: 1fr !important;
+    }
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Timeline interaction
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach(item => {
-      item.addEventListener('click', function() {
-        timelineItems.forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
-        // Update featured article based on selection
-      });
-    });
-
-    // Series tag filtering
-    const seriesTags = document.querySelectorAll('.series-tag');
-    seriesTags.forEach(tag => {
-      tag.addEventListener('click', function() {
-        seriesTags.forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        // Filter articles by series
-      });
-    });
-
-    // Save article functionality
-    const saveButtons = document.querySelectorAll('.save-article');
-    saveButtons.forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        this.classList.toggle('saved');
-        // Add to saved articles list
-      });
-    });
-
-    // Filter functionality
-    const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-    const activeFiltersDiv = document.getElementById('active-filters');
-    const clearFiltersBtn = document.getElementById('clear-filters');
-
-    filterCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', updateActiveFilters);
-    });
-
-    clearFiltersBtn?.addEventListener('click', function() {
-      filterCheckboxes.forEach(cb => cb.checked = false);
-      updateActiveFilters();
-    });
-
-    function updateActiveFilters() {
-      const active = Array.from(filterCheckboxes)
-        .filter(cb => cb.checked)
-        .map(cb => ({ type: cb.dataset.filter, value: cb.value }));
-      
-      if (active.length === 0) {
-        activeFiltersDiv.innerHTML = '';
-        return;
-      }
-
-      activeFiltersDiv.innerHTML = active.map(filter => `
-        <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
-          ${filter.value}
-          <button class="remove-filter" data-type="${filter.type}" data-value="${filter.value}">×</button>
-        </span>
-      `).join('');
-
-      // Add remove functionality
-      document.querySelectorAll('.remove-filter').forEach(btn => {
-        btn.addEventListener('click', function() {
-          const type = this.dataset.type;
-          const value = this.dataset.value;
-          const checkbox = document.querySelector(`input[data-filter="${type}"][value="${value}"]`);
-          if (checkbox) checkbox.checked = false;
-          updateActiveFilters();
-        });
-      });
-    }
-  });
-</script>
-
