@@ -4,58 +4,381 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="System Integration & Tooling - intelio">
 <main>
-  <!-- HERO SECTION (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">System Integration & Tooling</h1>
-      <p class="text-lg sm:text-xl text-gray-400">Connecting CRMs, accounting, operations, and data into one coordinated system.</p>
+  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+  <section class="hero-integration min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Image/Video -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
+      <!-- You can add a video or image here for connectivity/integration/network theme -->
+    </div>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          System Integration & Tooling
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Connecting CRMs, accounting, operations, and data into one coordinated system.
+        </p>
+        <a href="#how-it-works" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+          See How We Connect
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What Breaks (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What Breaks</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">Most businesses already own good tools—they just don't work together.</p>
+  <!-- SECTION: What Breaks (Prominent Statement) -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm text-gray-500 mb-8">What Breaks</p>
+      <div class="bg-white border-l-4 border-blue-500 rounded-xl p-8 md:p-12 text-center">
+        <div class="flex justify-center mb-4">
+          <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <p class="text-2xl md:text-3xl text-gray-700 font-medium leading-relaxed">
+          Most businesses already own good tools—they just don't work together.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What We Do (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What We Do</h2>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-6">We integrate, automate, and simplify your existing stack:</p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>CRMs</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Accounting systems</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Operations tools</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Data platforms</span>
-        </li>
-      </ul>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed">The result is a coordinated system instead of disconnected software.</p>
+  <!-- SECTION: What We Integrate (Platform Cards) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">What We Integrate</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        We integrate, automate, and simplify your existing stack.
+      </p>
+
+      <!-- Platform Cards - 2x2 grid -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Card 1: CRMs -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">CRMs</h4>
+          <p class="text-sm text-gray-500">Salesforce, HubSpot, Pipedrive, Zoho, and custom CRMs</p>
+        </div>
+
+        <!-- Card 2: Accounting Systems -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Accounting Systems</h4>
+          <p class="text-sm text-gray-500">QuickBooks, Xero, NetSuite, Sage, and enterprise ERPs</p>
+        </div>
+
+        <!-- Card 3: Operations Tools -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Operations Tools</h4>
+          <p class="text-sm text-gray-500">Project management, scheduling, inventory, and fulfillment systems</p>
+        </div>
+
+        <!-- Card 4: Data Platforms -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Data Platforms</h4>
+          <p class="text-sm text-gray-500">Databases, warehouses, analytics platforms, and reporting tools</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CTA SECTION (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-8 sm:mb-12">Ready to connect your tools?</h2>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-        Work with Intelio
-      </a>
+  <!-- SECTION: Platforms We Connect (Logo Grid) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">Platforms We Connect</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        We integrate with the tools you're already using:
+      </p>
+
+      <!-- Logo Grid -->
+      <div class="space-y-8">
+        <!-- CRMs Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">CRMs</h4>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Salesforce</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">HubSpot</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Pipedrive</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Zoho CRM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accounting Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">Accounting</h4>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">QuickBooks</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Xero</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">NetSuite</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Sage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations & Data Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">Operations & Data</h4>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Asana / Monday.com</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Airtable</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Google Workspace</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Microsoft 365</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Analytics Row -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-500 mb-4">Data & Analytics</h4>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Snowflake</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">PostgreSQL</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Power BI</span>
+            </div>
+            <div class="px-4 py-2 bg-gray-50 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
+              <span class="text-sm font-medium text-gray-700">Tableau</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: How It Works (Process Steps) -->
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100" id="how-it-works">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">How It Works</p>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 01: Audit -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">01</span>
+          </div>
+          <h4 class="font-semibold mb-2">Audit</h4>
+          <p class="text-sm text-gray-500">Map your current systems and identify how data moves (or doesn't) between them.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 02: Design -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">02</span>
+          </div>
+          <h4 class="font-semibold mb-2">Design</h4>
+          <p class="text-sm text-gray-500">Architect integrations that match your workflows—not generic templates.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 03: Connect -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">03</span>
+          </div>
+          <h4 class="font-semibold mb-2">Connect</h4>
+          <p class="text-sm text-gray-500">Build secure, reliable connections between platforms.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 04: Monitor -->
+        <div class="border border-gray-200 rounded-xl p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">04</span>
+          </div>
+          <h4 class="font-semibold mb-2">Monitor</h4>
+          <p class="text-sm text-gray-500">Ongoing health checks, error handling, and optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Result (Before/After Visualization) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">The Result</p>
+      
+      <div class="relative">
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <!-- Before -->
+          <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+              </svg>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-500 mb-2">Before</h4>
+            <p class="text-base text-gray-600">Disconnected software</p>
+          </div>
+
+          <!-- After -->
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl p-8 text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+              </svg>
+            </div>
+            <h4 class="text-lg font-semibold text-blue-700 mb-2">After</h4>
+            <p class="text-base text-blue-600 font-medium">One coordinated system</p>
+          </div>
+        </div>
+
+        <!-- Arrow between cards (desktop only) -->
+        <div class="hidden md:flex items-center justify-center absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          <div class="bg-white rounded-full p-2 shadow-lg">
+            <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Statement -->
+      <div class="text-center">
+        <p class="text-lg md:text-xl text-gray-700 font-medium">
+          The result is a coordinated system instead of disconnected software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Impact (Checkmark list) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">The Impact</p>
+      
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Data flows automatically between systems</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Single source of truth across departments</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Eliminated manual data entry and reconciliation</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Tools that finally work together</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRADIENT CTA SECTION -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to connect your tools?</h2>
+        <p class="text-white/80 mb-8">Let's turn your disconnected software into one coordinated system</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+          Work with Intelio
+        </a>
+      </div>
     </div>
   </section>
 </main>
 </Layout>
 
+<style>
+  .hero-integration {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
