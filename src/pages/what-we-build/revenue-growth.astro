@@ -984,28 +984,319 @@ import Layout from "../../layouts/Layout.astro";
 
   <!-- NEW SECTION: Technical Foundation -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Systems We Integrate</h2>
         <p class="text-lg md:text-xl text-gray-600">We connect with the platforms your team already uses</p>
       </div>
       
-      <div class="bg-white rounded-2xl p-12 border border-gray-200">
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">CRMs</h3>
-          <p class="text-gray-600">Salesforce, HubSpot, Pipedrive, Zoho, Close, custom CRMs</p>
+      <!-- CRMs Section -->
+      <div class="mb-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-6">CRMs</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Salesforce -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/salesforce-logo.png" alt="Salesforce" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Salesforce</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Enterprise CRM with advanced automation and reporting capabilities.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- HubSpot -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/hubspot-logo.png" alt="HubSpot" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-orange-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">HubSpot</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">All-in-one CRM with marketing, sales, and service hubs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipedrive -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/pipedrive-logo.png" alt="Pipedrive" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Pipedrive</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Sales-focused CRM designed for deal management and pipeline visibility.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zoho -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/zoho-logo.png" alt="Zoho CRM" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-red-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Zoho CRM</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Comprehensive CRM suite with extensive customization options.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Close -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/close-logo.png" alt="Close" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-purple-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Close</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Built for inside sales teams with powerful communication tools.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom CRMs -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Custom CRMs</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">We integrate with proprietary and custom-built CRM systems.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">Marketing</h3>
-          <p class="text-gray-600">Mailchimp, ActiveCampaign, Marketo, Pardot, Google Ads, Meta Ads</p>
+      </div>
+
+      <!-- Marketing Section -->
+      <div class="mb-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-6">Marketing</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Mailchimp -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/mailchimp-logo.png" alt="Mailchimp" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-yellow-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Mailchimp</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Email marketing and automation platform with audience management.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ActiveCampaign -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/activecampaign-logo.png" alt="ActiveCampaign" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">ActiveCampaign</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Customer experience automation with email, SMS, and marketing automation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marketo -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/marketo-logo.png" alt="Marketo" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-purple-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Marketo</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Enterprise marketing automation and lead management platform.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pardot -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/pardot-logo.png" alt="Pardot" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Pardot</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">B2B marketing automation by Salesforce for lead generation and nurturing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Ads -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/google-ads-logo.png" alt="Google Ads" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Google Ads</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Search, display, and video advertising platform with advanced targeting.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meta Ads -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/meta-ads-logo.png" alt="Meta Ads" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Meta Ads</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Facebook and Instagram advertising with advanced audience targeting.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">Communication</h3>
-          <p class="text-gray-600">Slack, Teams, email systems, phone systems</p>
+      </div>
+
+      <!-- Communication Section -->
+      <div class="mb-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-6">Communication</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Slack -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/slack-logo.png" alt="Slack" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-purple-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Slack</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Team communication and collaboration platform with channel-based messaging.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Microsoft Teams -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/microsoft-teams-logo.png" alt="Microsoft Teams" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-blue-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Microsoft Teams</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Unified communication and collaboration within Microsoft 365.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Systems -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Email Systems</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Gmail, Outlook, Exchange, and other email platforms.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Systems -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Phone Systems</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">VoIP, PBX, and cloud phone systems for call tracking and integration.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold text-gray-700 mb-4">Data</h3>
-          <p class="text-gray-600">Google Sheets, Excel, databases, data warehouses</p>
+      </div>
+
+      <!-- Data Section -->
+      <div>
+        <h3 class="text-xl font-bold text-gray-900 mb-6">Data</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Google Sheets -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/google-sheets-logo.png" alt="Google Sheets" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-green-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Google Sheets</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Cloud-based spreadsheet platform with real-time collaboration.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Excel -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src="/logos/excel-logo.png" alt="Excel" class="w-8 h-8 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="w-8 h-8 bg-green-200 rounded hidden"></div>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Excel</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Microsoft Excel and Office 365 for data management and analysis.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Databases</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">PostgreSQL, MySQL, MongoDB, SQL Server, and other database systems.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Warehouses -->
+          <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-900 mb-1">Data Warehouses</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">Snowflake, BigQuery, Redshift, and other data warehouse platforms.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
