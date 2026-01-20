@@ -1,0 +1,96 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const articles = await Astro.glob('../../../content/insights/*.md');
+  return articles.map((article) => {
+    const filename = article.file.split('/').pop() || '';
+    const slug = filename.replace('.md', '');
+    return {
+      params: { slug },
+      props: { article },
+    };
+  });
+}
+
+interface Props {
+  article: any;
+}
+
+const { article } = Astro.props;
+
+if (!article) {
+  return Astro.redirect("/resources/insights");
+}
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", { 
+    month: "long", 
+    day: "numeric", 
+    year: "numeric" 
+  });
+}
+
+const { Content } = await article.render();
+---
+
+<Layout title={`${article.frontmatter.title} - Insights`}>
+  <main class="bg-white min-h-screen pt-20">
+    <!-- Back to Insights -->
+    <section class="py-6 px-6 border-b border-gray-200">
+      <div class="max-w-4xl mx-auto">
+        <a href="/resources/insights" class="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Back to Insights</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Article Header -->
+    <article class="max-w-4xl mx-auto px-6 py-12">
+      <!-- Article Meta -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-gray-500 text-sm">{formatDate(article.frontmatter.date)}</span>
+          <span class="text-gray-400 text-sm">·</span>
+          <span class="text-gray-500 text-sm">{article.frontmatter.author}</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{article.frontmatter.title}</h1>
+        
+        <p class="text-xl text-gray-600 mb-8">{article.frontmatter.excerpt}</p>
+      </div>
+
+      <!-- Cover Image -->
+      <div class="mb-12 rounded-2xl overflow-hidden">
+        <img 
+          src={article.frontmatter.image} 
+          alt={article.frontmatter.title}
+          class="w-full h-auto object-cover"
+        />
+      </div>
+
+      <!-- Article Content -->
+      <div 
+        class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-code:text-gray-800 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-img:rounded-xl prose-img:shadow-lg prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic prose-ul:list-disc prose-ol:list-decimal prose-li:my-2"
+      >
+        <Content />
+      </div>
+    </article>
+
+    <!-- Back to Insights Link -->
+    <section class="py-12 px-6 border-t border-gray-200">
+      <div class="max-w-4xl mx-auto">
+        <a href="/resources/insights" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Back to Insights</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
