@@ -4,263 +4,490 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Custom Internal Platforms - intelio">
 <main>
-  <!-- HERO SECTION WITH BACKGROUND IMAGE (Premium - darker overlay) -->
-  <section class="hero-custom min-h-screen flex items-center relative overflow-hidden">
-    <!-- Background Image/Video -->
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
-      <!-- You can add a video or image here for custom development/architecture/engineering theme -->
+  <!-- VIDEO HERO SECTION - PREMIUM & EXCLUSIVE -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover hidden md:block"
+      >
+        <source src="/videos/heroes/custom-platforms-hero.webm" type="video/webm" />
+        <source src="/videos/heroes/custom-platforms-hero.mp4" type="video/mp4" />
+      </video>
+      <!-- Mobile fallback -->
+      <div class="md:hidden absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      
+      <!-- Darker Gradient Overlay for premium feel -->
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/60"></div>
+      
+      <!-- Subtle noise texture for premium film grain feel -->
+      <div class="absolute inset-0 opacity-[0.03] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
     </div>
-    
-    <!-- Darker Overlay for premium positioning -->
-    <div class="absolute inset-0 bg-black/40 z-[1]"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
-      <div class="max-w-2xl">
+    <!-- Content positioned over video -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
         <!-- Premium Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full mb-6">
-          <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-          </svg>
-          <span class="text-sm text-blue-300 font-medium">Select Engagements</span>
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            Select Engagements
+          </span>
         </div>
         
-        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
           Custom Internal Platforms
         </h1>
-        <p class="text-lg text-white/70 mb-8">
+        
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-4 leading-relaxed">
           Purpose-built systems when off-the-shelf tools don't fit.
         </p>
-        <a href="/contact" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
-          Discuss Your Challenge
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
+        
+        <!-- Additional context -->
+        <p class="text-lg text-gray-400 mb-10 max-w-2xl">
+          For organizations operating at scale or complexity where standard solutions break down.
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            Discuss Your Challenge
+          </a>
+          <a href="#when-needed" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            Is This Right for You?
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SELECTIVITY NOTICE (replaces trust bar) -->
+  <section class="py-8 bg-gray-900 border-y border-gray-800">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-gray-400">
+        <span class="text-white font-semibold">Custom platform engagements are selective.</span>
+        We evaluate based on impact potential, organizational readiness, and complexity alignment.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION: When This Is Needed - PREMIUM STYLING -->
+  <section class="py-24 px-6 bg-white" id="when-needed">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">When This Is Needed</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          Some organizations outgrow standard tools.
+        </p>
+      </div>
+
+      <!-- Problem Cards - 2x2 grid with amber/warning styling -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Card 1: System Sprawl -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">System Sprawl</h4>
+          <p class="text-gray-600 leading-relaxed">Too many disconnected systems—no single vendor covers your needs</p>
+        </div>
+
+        <!-- Card 2: Manual Workarounds -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655-5.653a2.548 2.548 0 00-3.586-3.586l-1.757 1.757c-1.5 1.5-1.5 3.94 0 5.44l4.655 5.653M11.42 15.17l-5.877-5.877"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Manual Workarounds</h4>
+          <p class="text-gray-600 leading-relaxed">Critical processes require manual workarounds everywhere</p>
+        </div>
+
+        <!-- Card 3: Unsupported Workflows -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Unsupported Workflows</h4>
+          <p class="text-gray-600 leading-relaxed">Your most important workflows aren't supported by any off-the-shelf tool</p>
+        </div>
+
+        <!-- Card 4: Competitive Constraint -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:-translate-y-1">
+          <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Competitive Constraint</h4>
+          <p class="text-gray-600 leading-relaxed">Execution limits are creating competitive disadvantage</p>
+        </div>
+      </div>
+
+      <!-- Qualifying question -->
+      <div class="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-200 text-center">
+        <p class="text-lg md:text-xl text-gray-700 italic">
+          "If your business has outgrown its tools—and off-the-shelf solutions feel like forcing a square peg into a round hole—this may be the right path."
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: When This Is Needed (Light background) -->
-  <section class="py-24 px-6 bg-white">
+  <!-- SECTION: What We Build - PREMIUM SHOWCASE -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">When This Is Needed</p>
-      <p class="text-lg text-gray-600 mb-16 max-w-3xl">
-        Some organizations outgrow standard tools:
-      </p>
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
+        <div class="w-24 h-1 bg-blue-600 mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl leading-relaxed">
+          In select engagements, we design and build custom internal platforms.
+        </p>
+      </div>
 
-      <!-- Problem Cards - 2x2 grid with more spacing -->
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1: System Sprawl -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+      <!-- Feature Cards - 3x2 grid with premium styling -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Internal Operating Systems -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">System Sprawl</h4>
-          <p class="text-sm text-gray-500">Too many disconnected systems</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Internal Operating Systems</h4>
+          <p class="text-gray-600 leading-relaxed">Centralized platforms that run core business operations—purpose-built for your workflow</p>
         </div>
 
-        <!-- Card 2: Manual Workarounds -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Card 2: Proprietary Workflows -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Manual Workarounds</h4>
-          <p class="text-sm text-gray-500">Manual workarounds everywhere</p>
-        </div>
-
-        <!-- Card 3: Unsupported Workflows -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-            </svg>
-          </div>
-          <h4 class="font-semibold mb-2 text-lg">Unsupported Workflows</h4>
-          <p class="text-sm text-gray-500">Critical workflows unsupported by existing tools</p>
-        </div>
-
-        <!-- Card 4: Execution Limits -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
-            </svg>
-          </div>
-          <h4 class="font-semibold mb-2 text-lg">Execution Limits</h4>
-          <p class="text-sm text-gray-500">Competitive disadvantage due to execution limits</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION: What We Build (White background with more spacing) -->
-  <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">What We Build</p>
-      <p class="text-lg text-gray-600 mb-16 max-w-3xl">
-        In select engagements, we design and build custom internal platforms.
-      </p>
-
-      <!-- Feature Cards - 3x2 grid (5 cards) with more spacing -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1: Internal Operating Systems -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-            </svg>
-          </div>
-          <h4 class="font-semibold mb-2 text-lg">Internal Operating Systems</h4>
-          <p class="text-sm text-gray-500">Centralized platforms that run core business operations</p>
-        </div>
-
-        <!-- Card 2: Proprietary Workflows -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-            </svg>
-          </div>
-          <h4 class="font-semibold mb-2 text-lg">Proprietary Workflows</h4>
-          <p class="text-sm text-gray-500">Custom workflows designed around how you actually operate</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Proprietary Workflows</h4>
+          <p class="text-gray-600 leading-relaxed">Custom workflows that match exactly how your business operates—no compromises</p>
         </div>
 
         <!-- Card 3: Decision Engines -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Decision Engines</h4>
-          <p class="text-sm text-gray-500">Automated logic for routing, approvals, and escalations</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Decision Engines</h4>
+          <p class="text-gray-600 leading-relaxed">Automated logic for routing, approvals, escalations, and complex business rules</p>
         </div>
 
         <!-- Card 4: Intelligence Layers -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Intelligence Layers</h4>
-          <p class="text-sm text-gray-500">Advanced automation or AI capabilities embedded into operations</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Intelligence Layers</h4>
+          <p class="text-gray-600 leading-relaxed">Advanced AI and automation capabilities embedded into your operations</p>
         </div>
 
         <!-- Card 5: Multi-Department Integrations -->
-        <div class="service-card bg-gray-50 rounded-xl p-8">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Multi-Department Integrations</h4>
-          <p class="text-sm text-gray-500">Systems that unify data and workflows across teams</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Multi-Department Integrations</h4>
+          <p class="text-gray-600 leading-relaxed">Systems that unify data and workflows across departments and functions</p>
+        </div>
+
+        <!-- Card 6: Proprietary Analytics -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-2">Proprietary Analytics</h4>
+          <p class="text-gray-600 leading-relaxed">Custom analytics and decision tools built for your specific competitive advantage</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: Selectivity Callout (Premium styling) -->
-  <section class="py-16 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-blue-50 border-l-4 border-blue-500 rounded-xl p-8 flex items-start gap-4">
-        <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        <div>
-          <p class="text-base md:text-lg text-gray-700 font-medium leading-relaxed">
-            Custom work is not default. It is evaluated based on impact, readiness, and complexity.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION: Evaluation Criteria (Premium positioning) -->
-  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100">
+  <!-- SECTION: Selectivity Criteria - PREMIUM POSITIONING -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-12">These engagements are:</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">These Engagements Are:</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
       
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
         <!-- Selective -->
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Selective</h4>
-          <p class="text-sm text-gray-500">We take on projects where we can deliver meaningful impact</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Selective</h4>
+          <p class="text-gray-600 leading-relaxed">We take on projects where we can deliver meaningful, lasting impact</p>
         </div>
 
         <!-- Independently Scoped -->
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Independently Scoped</h4>
-          <p class="text-sm text-gray-500">Each engagement is architected from scratch</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Independently Scoped</h4>
+          <p class="text-gray-600 leading-relaxed">Each engagement is architected from scratch based on your unique requirements</p>
         </div>
 
-        <!-- Reserved for Operational Readiness -->
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+        <!-- Designed for Long-Term -->
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 text-center hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h4 class="font-semibold mb-2 text-lg">Reserved for Operational Readiness</h4>
-          <p class="text-sm text-gray-500">Organizations must be ready to implement</p>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Designed for Long-Term</h4>
+          <p class="text-gray-600 leading-relaxed">Built for years of operation, evolution, and growth—not quick fixes</p>
+        </div>
+      </div>
+
+      <!-- Callout box -->
+      <div class="bg-gray-900 text-white rounded-2xl p-10 text-center border border-gray-800">
+        <p class="text-xl md:text-2xl font-medium">
+          Custom work is not the default. It is reserved for situations where standard systems break down and the impact justifies the investment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: How We Approach Custom Work -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Approach Custom Work</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 01: Deep Discovery -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-blue-200">
+            <span class="text-2xl font-bold text-blue-600">01</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Deep Discovery</h4>
+          <p class="text-gray-600 leading-relaxed">We invest significant time understanding your unique requirements, constraints, and objectives before proposing solutions.</p>
+        </div>
+
+        <!-- Step 02: Architecture Design -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-blue-200">
+            <span class="text-2xl font-bold text-blue-600">02</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Architecture Design</h4>
+          <p class="text-gray-600 leading-relaxed">Custom system architecture designed for your specific needs—not modified templates.</p>
+        </div>
+
+        <!-- Step 03: Iterative Development -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-blue-200">
+            <span class="text-2xl font-bold text-blue-600">03</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Iterative Development</h4>
+          <p class="text-gray-600 leading-relaxed">Build in phases with continuous feedback. You see working functionality early and often.</p>
+        </div>
+
+        <!-- Step 04: Long-Term Partnership -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-blue-200">
+            <span class="text-2xl font-bold text-blue-600">04</span>
+          </div>
+          <h4 class="text-xl font-bold text-gray-900 mb-3">Long-Term Partnership</h4>
+          <p class="text-gray-600 leading-relaxed">Custom platforms require ongoing care. We design for maintainability and provide long-term support options.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: The Impact (Checkmark list) -->
+  <!-- NEW SECTION: Example Scenarios -->
   <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-sm text-gray-500 mb-12">The Impact</p>
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Example Scenarios</h2>
+        <p class="text-lg md:text-xl text-gray-600">Types of challenges we've solved with custom platforms</p>
+      </div>
       
-      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-10">
-        <ul class="space-y-5">
-          <li class="flex items-center gap-4 text-gray-700">
-            <svg class="w-6 h-6 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base md:text-lg">Systems that fit the business—not the other way around</span>
-          </li>
-          <li class="flex items-center gap-4 text-gray-700">
-            <svg class="w-6 h-6 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base md:text-lg">Reduced tool sprawl</span>
-          </li>
-          <li class="flex items-center gap-4 text-gray-700">
-            <svg class="w-6 h-6 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            <span class="text-base md:text-lg">Sustainable execution advantage</span>
-          </li>
-        </ul>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Scenario 1 -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Multi-Entity Operations Platform</h3>
+          <p class="text-gray-600 leading-relaxed">A holding company with 12 portfolio companies needed unified reporting while preserving entity autonomy. No off-the-shelf tool handled their complexity.</p>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Proprietary Workflow Engine</h3>
+          <p class="text-gray-600 leading-relaxed">A professional services firm had a unique delivery methodology that didn't fit any project management tool. We built their methodology into a platform.</p>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Cross-Department Intelligence System</h3>
+          <p class="text-gray-600 leading-relaxed">An operator needed real-time intelligence that combined sales, operations, and finance data in ways no BI tool could handle out of the box.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
+  <!-- NEW SECTION: Technical Approach -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Technical Approach</h2>
+        <p class="text-lg md:text-xl text-gray-600">How we build custom platforms that last</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Principle 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise Foundations</h3>
+          <p class="text-gray-600 leading-relaxed">Built on proven infrastructure—Microsoft Azure, modern databases, established frameworks</p>
+        </div>
+
+        <!-- Principle 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Future-Proof Architecture</h3>
+          <p class="text-gray-600 leading-relaxed">Designed for scale, evolution, and changing requirements</p>
+        </div>
+
+        <!-- Principle 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Your Intellectual Property</h3>
+          <p class="text-gray-600 leading-relaxed">Custom platforms built for your organization belong to you</p>
+        </div>
+
+        <!-- Principle 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Documented & Maintainable</h3>
+          <p class="text-gray-600 leading-relaxed">Full documentation, clean code, and architecture designed for long-term ownership</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Is This Right For You? -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Is This Right for You?</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Good Fit If -->
+        <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Good Fit If:
+          </h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>You've outgrown multiple off-the-shelf tools</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Your workflows are genuinely unique to your business</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>The investment is justified by competitive advantage or operational necessity</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>You have the organizational capacity to implement and adopt new systems</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>You're thinking in years, not months</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Probably Not If -->
+        <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+            Probably Not If:
+          </h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>A standard tool could work with proper configuration</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>The primary goal is cost reduction (custom usually costs more upfront)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>You're not ready to invest in proper implementation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 mt-0.5">✗</span>
+              <span>You need something live in 4 weeks</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION - FOCUSED (6 questions) -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
       
       <div class="border-t border-gray-200 pt-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- FAQ 1 -->
           <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
             <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you determine if we need custom development?</p>
@@ -339,56 +566,67 @@ import Layout from "../../layouts/Layout.astro";
             </div>
           </div>
 
-          <!-- FAQ 7 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you ensure the platform scales with our growth?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Architecture decisions are made with scale in mind from day one. We design for 10x your current volume and build in flexibility for changing requirements.
-            </div>
-          </div>
-
-          <!-- FAQ 8 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What if we need changes after launch?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              That's expected. We build platforms that can evolve. Post-launch changes are scoped and quoted separately, or handled through ongoing retainer agreements.
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GRADIENT CTA SECTION -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
-        <h2 class="text-2xl md:text-3xl text-white mb-4">Have a complex problem that needs a custom solution?</h2>
-        <p class="text-white/80 mb-8">Let's discuss whether a custom platform is the right approach for your organization</p>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
-          Work with Intelio
+  <!-- GRADIENT CTA SECTION - EXCLUSIVE TONE -->
+  <section class="py-24 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <!-- Subtle pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+        Have a complex problem that needs a custom solution?
+      </h2>
+      <p class="text-xl text-gray-300 mb-4">
+        Let's discuss whether a custom platform is the right approach for your situation.
+      </p>
+      <p class="text-gray-400 mb-10 text-sm">
+        Initial consultations focus on understanding your challenge and determining fit—not selling.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white text-lg font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          Schedule a Consultation
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Floating "Talk to Us" Button -->
+  <div 
+    id="floating-cta"
+    class="fixed right-6 bottom-6 z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+  >
+    <a 
+      href="/contact" 
+      class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+      </svg>
+      Talk to Us
+    </a>
+  </div>
 </main>
 </Layout>
 
 <style>
-  .hero-custom {
-    background: #000000;
-    position: relative;
-    overflow: hidden;
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    video {
+      display: none;
+    }
+    section:first-of-type {
+      background-image: linear-gradient(to bottom right, #111827, #1f2937);
+      background-size: cover;
+      background-position: center;
+    }
+    .animate-bounce {
+      animation: none;
+    }
   }
 
   /* FAQ Accordion Styles */
@@ -419,5 +657,19 @@ import Layout from "../../layouts/Layout.astro";
         }
       });
     });
+
+    // Floating CTA Button
+    const floatingCTA = document.getElementById('floating-cta');
+    if (floatingCTA) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+          floatingCTA.classList.remove('opacity-0', 'pointer-events-none');
+          floatingCTA.classList.add('opacity-100');
+        } else {
+          floatingCTA.classList.add('opacity-0', 'pointer-events-none');
+          floatingCTA.classList.remove('opacity-100');
+        }
+      });
+    }
   });
 </script>
