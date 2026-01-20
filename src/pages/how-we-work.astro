@@ -4,169 +4,318 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="How We Work - intelio">
 <main>
-  <!-- HERO SECTION (Dark background) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">How We Work</h1>
-      <p class="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8">Clear engagement models. No ambiguity. No surprises.</p>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-        intelio installs systems that businesses rely on. How those systems are supported depends on how much execution you want to own.
-      </p>
-    </div>
-  </section>
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <section class="hero-how-we-work min-h-screen flex items-center relative overflow-hidden">
+    <!-- Video Background -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+      style="z-index: 0;"
+    >
+      <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+      <!-- Fallback gradient if video doesn't load -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+    </video>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
 
-  <!-- SECTION 1: Identify + Build + Maintain (Light background) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">Identify + Build + Maintain</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-700 mb-6 sm:mb-8">For organizations that want strong systems and internal ownership.</p>
-      
-      <div class="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
-        <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-          We identify where time, money, and momentum are leaking — then design and build the systems that fix it.
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          How We Work
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Clear engagement models. No ambiguity. No surprises.
         </p>
-        <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-          Once live, we maintain those systems so they remain reliable, secure, and effective as the business evolves.
+        <p class="text-base text-white/80 mb-8 leading-relaxed">
+          intelio installs systems that businesses rely on. How those systems are supported depends on how much execution you want to own.
         </p>
+        <a href="/contact" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors">
+          Get Started
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
       </div>
-
-      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div>
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What this includes</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Business and system assessment</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Architecture and system design</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Implementation and integration</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Documentation and training</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Ongoing maintenance, updates, and support</span>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">How it works</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>You operate the systems day-to-day</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>We ensure they stay healthy and aligned</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-700">
-              <span class="text-gray-400 mt-1">•</span>
-              <span>Improvements are handled without disruption</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="text-sm sm:text-base text-gray-500 italic">Best for: Teams that want control without technical burden.</p>
     </div>
   </section>
 
-  <!-- SECTION 2: Identify + Build + Operate (Dark background) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">Identify + Build + Operate</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-300 mb-6 sm:mb-8">For organizations that want execution off their plate.</p>
-      
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 sm:mb-12">
-        We identify and build the same systems — then we run them with you or for you, inside clearly defined guardrails.
+  <!-- OUR ENGAGEMENT MODELS -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">Our engagement models</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        Intelio engages through a small number of clearly defined models—each designed to reduce friction, create leverage, and align systems with how your business actually operates.
       </p>
 
-      <div class="grid md:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
-        <div>
-          <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">What this includes</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Everything in Build + Maintain</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Ongoing system operation</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Workflow execution and monitoring</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Exception handling and optimization</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Regular performance review</span>
-            </li>
-          </ul>
+      <!-- Services Grid - 3 columns with BLUE icons -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Identify + Build + Maintain -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Identify + Build + Maintain</h4>
+          <p class="text-sm text-gray-500 mb-3">Strong systems. Internal ownership.</p>
+          <p class="text-sm text-gray-600">We identify where time, money, and momentum are leaking, then design and build the systems that fix it. Once live, we maintain and evolve those systems so they stay reliable, secure, and aligned as your business grows.</p>
+          <p class="text-xs text-gray-500 italic mt-4">Best for: Teams that want control without ongoing technical burden.</p>
         </div>
-        <div>
-          <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">How it works</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>You set direction and priorities</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>We execute inside the system</span>
-            </li>
-            <li class="flex items-start gap-3 text-gray-300">
-              <span class="text-gray-500 mt-1">•</span>
-              <span>Visibility and reporting are built in</span>
-            </li>
-          </ul>
+
+        <!-- Identify + Build + Operate -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Identify + Build + Operate</h4>
+          <p class="text-sm text-gray-500 mb-3">Execution off your plate.</p>
+          <p class="text-sm text-gray-600">We identify and build the same systems—then operate them with you or for you, within clear guardrails. This removes operational drag while preserving leadership visibility and control.</p>
+          <p class="text-xs text-gray-500 italic mt-4">Best for: Founder-led, growth-stage, or lean teams that need leverage without adding headcount.</p>
+        </div>
+
+        <!-- Select Custom & Advanced Builds -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Select Custom & Advanced Builds</h4>
+          <p class="text-sm text-gray-500 mb-3">For complex environments.</p>
+          <p class="text-sm text-gray-600">In select cases, we take on custom system design or advanced AI-enabled projects where standard tools and configurations break down. These engagements are selective and scoped independently.</p>
+          <p class="text-xs text-gray-500 italic mt-4">Best for: Organizations operating at scale or complexity.</p>
         </div>
       </div>
-
-      <p class="text-sm sm:text-base text-gray-500 italic">Best for: Founder-led, growth-stage, or lean teams that need leverage without adding headcount.</p>
     </div>
   </section>
 
-  <!-- SECTION 3: Select Custom & Advanced Builds (Light background) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">Select Custom & Advanced Builds</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-700 mb-6 sm:mb-8">For complex or non-standard environments.</p>
+  <!-- WHAT THIS INCLUDES - PRICING CARDS STYLE -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">What's included in each engagement</p>
       
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8 sm:mb-12">
-        In select cases, intelio undertakes advanced system design or AI-enabled projects where standard configurations are insufficient.
-      </p>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <!-- Build + Maintain Card -->
+        <div class="pricing-card border border-gray-200 rounded-2xl p-8">
+          <h4 class="text-xl font-semibold mb-2">Identify + Build + Maintain</h4>
+          <p class="text-sm text-gray-500 mb-6">Strong systems. Internal ownership.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Business and system assessment
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Architecture and system design
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Implementation and integration
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Documentation and team training
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Ongoing maintenance, updates, and support
+            </li>
+          </ul>
+          <a href="/contact" class="block w-full py-3 bg-blue-500 text-white text-center text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors">
+            Get Custom Quote
+          </a>
+        </div>
 
-      <div class="mb-8 sm:mb-12">
-        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">These engagements are:</h3>
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3 text-gray-700">
-            <span class="text-gray-400 mt-1">•</span>
-            <span>Selective</span>
-          </li>
-          <li class="flex items-start gap-3 text-gray-700">
-            <span class="text-gray-400 mt-1">•</span>
-            <span>Independently scoped</span>
-          </li>
-          <li class="flex items-start gap-3 text-gray-700">
-            <span class="text-gray-400 mt-1">•</span>
-            <span>Reserved for organizations with operational readiness</span>
-          </li>
-        </ul>
+        <!-- Build + Operate Card -->
+        <div class="pricing-card border border-gray-200 rounded-2xl p-8">
+          <h4 class="text-xl font-semibold mb-2">Identify + Build + Operate</h4>
+          <p class="text-sm text-gray-500 mb-6">Execution off your plate.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Everything in Build + Maintain
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Ongoing system operation
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Workflow execution and monitoring
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Exception handling and optimization
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Regular performance review and adjustment
+            </li>
+          </ul>
+          <a href="/contact" class="block w-full py-3 bg-blue-500 text-white text-center text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors">
+            Get Custom Quote
+          </a>
+        </div>
+
+        <!-- Custom & Advanced Builds Card -->
+        <div class="pricing-card border border-gray-200 rounded-2xl p-8">
+          <h4 class="text-xl font-semibold mb-2">Select Custom & Advanced Builds</h4>
+          <p class="text-sm text-gray-500 mb-6">For complex environments.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Selective engagements only
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Custom system architecture
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Advanced AI and automation layers
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Multi-department integration
+            </li>
+            <li class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Designed for long-term operation
+            </li>
+          </ul>
+          <a href="/contact" class="block w-full py-3 bg-blue-500 text-white text-center text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors">
+            Schedule Discovery
+          </a>
+        </div>
       </div>
 
-      <p class="text-sm sm:text-base text-gray-500 italic">Best for: Businesses operating at scale where standard systems break down.</p>
+      <div class="text-center">
+        <a href="/pricing" class="inline-flex items-center px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">
+          See Our Pricing
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR DEVELOPMENT PROCESS -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">How it works</p>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="border border-blue-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">01</span>
+          </div>
+          <h4 class="font-semibold mb-2">Discovery</h4>
+          <p class="text-sm text-gray-500">We assess fit, scope, and operational readiness before any commitment.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="border border-blue-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">02</span>
+          </div>
+          <h4 class="font-semibold mb-2">Architecture</h4>
+          <p class="text-sm text-gray-500">We design systems around your business logic, data, and constraints.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="border border-blue-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">03</span>
+          </div>
+          <h4 class="font-semibold mb-2">Build</h4>
+          <p class="text-sm text-gray-500">We develop, test, and integrate—with visibility at every stage.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="border border-blue-200 rounded-xl p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">04</span>
+          </div>
+          <h4 class="font-semibold mb-2">Production</h4>
+          <p class="text-sm text-gray-500">We deploy, monitor, and support systems built for long-term operation.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -356,3 +505,10 @@ import Layout from "../layouts/Layout.astro";
 </main>
 </Layout>
 
+<style>
+  .hero-how-we-work {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
