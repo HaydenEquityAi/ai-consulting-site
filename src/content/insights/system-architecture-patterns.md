@@ -3,7 +3,7 @@ title: "Understanding System Architecture Patterns"
 excerpt: "Learn the fundamental patterns that make systems scalable, maintainable, and reliable."
 author: "John Doe"
 authorTitle: "Systems Architect"
-date: "2023-12-15"
+date: "2024-01-15"
 category: "Systems Architecture"
 image: "/images/insights/architecture-patterns.jpg"
 readTime: 8
