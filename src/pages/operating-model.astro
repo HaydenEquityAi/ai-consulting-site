@@ -3,229 +3,354 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="The Intelio Operating Model - intelio">
-<main>
-  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
-  <section class="hero-operating-model min-h-screen flex items-center relative overflow-hidden">
-    <!-- Background Image/Video -->
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
-      <!-- You can add a video or image here for systems architecture/blueprint/interconnected network theme -->
-    </div>
+<main class="bg-white">
+  <!-- ENHANCED HERO SECTION -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+    <!-- Video Background -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
+    >
+      <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+    </video>
     
-    <!-- Dark Overlay for text readability -->
-    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60 z-[1]"></div>
+    
+    <!-- Subtle noise texture -->
+    <div class="absolute inset-0 opacity-[0.02] mix-blend-overlay z-[2]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            The Framework
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
           The Intelio Operating Model
         </h1>
-        <p class="text-lg text-white/70 mb-8">
+        
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
           Turning business intent into systems that execute.
         </p>
-        <a href="#layers" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
-          Explore the Layers
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
+        
+        <!-- Description -->
+        <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
+          Five integrated layers that connect revenue, operations, finance, intelligence, and leadership into a unified operating system.
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#layers" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            Explore the Layers
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY BAR -->
+  <section class="py-12 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col items-center justify-center gap-6">
+        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
+        <!-- Client Logos - Infinite Scroll -->
+        <div class="logo-marquee-container w-full">
+          <div class="logo-marquee-track">
+            <!-- First set of logos -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: Opening Statement -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <div class="prose prose-lg max-w-none text-center">
-        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+  <!-- ENHANCED OPENING STATEMENT -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-block mb-4">
+          <span class="text-sm text-gray-500 font-medium uppercase tracking-wide">The Problem We Solve</span>
+        </div>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 border-2 border-blue-100 text-center">
+        <p class="text-2xl md:text-3xl lg:text-4xl text-gray-900 leading-relaxed mb-6 font-medium">
           Most organizations don't struggle because of strategy. They struggle because execution is fragmented, invisible, and dependent on people holding everything together.
         </p>
-        <p class="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
+        <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           The Intelio Operating Model exists to solve that.
         </p>
-        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
           We translate business needs into working systems—then ensure those systems continue to operate, adapt, and create leverage as the organization evolves.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: The Core Problem We Solve -->
-  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">The Core Problem We Solve</p>
-      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
-        Across industries, the failure pattern is the same:
-      </p>
+  <!-- ENHANCED CORE PROBLEM SECTION -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block mb-4">
+          <span class="text-sm text-gray-500 font-medium uppercase tracking-wide">The Core Problem We Solve</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Across Industries, The Failure Pattern Is The Same
+        </h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+      </div>
 
-      <!-- Problem Cards - 5 cards (3+2 layout) -->
-      <div class="grid md:grid-cols-3 gap-6 mb-8">
-        <div class="service-card bg-white rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Enhanced Problem Cards -->
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+        <div class="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
             </svg>
           </div>
-          <p class="text-sm text-gray-700 font-medium">Revenue systems don't talk to operations</p>
+          <p class="text-base font-semibold text-gray-900">Revenue systems don't talk to operations</p>
         </div>
-        <div class="service-card bg-white rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <p class="text-sm text-gray-700 font-medium">Operations don't reflect financial reality</p>
+          <p class="text-base font-semibold text-gray-900">Operations don't reflect financial reality</p>
         </div>
-        <div class="service-card bg-white rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.29 3.29m0 0L3 3m3.29 3.29L3 3m6.29 6.29L3 3m6.29 6.29l3.29 3.29m0 0L21 21m-3.29-3.29L21 21m-6.29-6.29L21 21"/>
             </svg>
           </div>
-          <p class="text-sm text-gray-700 font-medium">Leadership lacks real-time visibility</p>
+          <p class="text-base font-semibold text-gray-900">Leadership lacks real-time visibility</p>
         </div>
-        <div class="service-card bg-white rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
           </div>
-          <p class="text-sm text-gray-700 font-medium">Critical knowledge lives in people's heads</p>
+          <p class="text-base font-semibold text-gray-900">Critical knowledge lives in people's heads</p>
         </div>
-        <div class="service-card bg-white rounded-xl p-6">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="group bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
             </svg>
           </div>
-          <p class="text-sm text-gray-700 font-medium">Technology exists, but execution breaks</p>
+          <p class="text-base font-semibold text-gray-900">Technology exists, but execution breaks</p>
         </div>
       </div>
 
-      <!-- Callout -->
-      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6 text-center">
-        <p class="text-base text-gray-700 font-medium">
+      <!-- Enhanced Callout -->
+      <div class="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl p-8 mb-8 text-center">
+        <p class="text-xl font-bold text-gray-900">
           The result is friction, missed opportunity, and leadership fatigue.
         </p>
       </div>
 
       <!-- Bold Statement -->
       <div class="text-center">
-        <p class="text-xl md:text-2xl font-bold text-gray-900">
-          intelio replaces that with an integrated operating model.
+        <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+          Intelio replaces that with an integrated operating model.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: The Intelio Operating Layers Intro -->
-  <section class="py-20 px-6 bg-white border-t border-gray-100">
+  <!-- ENHANCED OPERATING LAYERS INTRO -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
     <div class="max-w-6xl mx-auto text-center">
-      <p class="text-sm text-gray-500 mb-4">The Intelio Operating Layers</p>
-      <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-        We don't sell tools.
-      </p>
+      <div class="inline-block mb-4">
+        <span class="text-sm text-gray-500 font-medium uppercase tracking-wide">The Intelio Operating Layers</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        We Don't Sell Tools
+      </h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
       <p class="text-2xl md:text-3xl font-bold text-gray-900">
         We build and operate layers of capability that work together.
       </p>
     </div>
   </section>
 
-  <!-- SECTION: Layer 1 - Revenue & Growth Layer -->
+  <!-- ENHANCED LAYER 1 - Revenue & Growth -->
   <section class="py-24 px-6 bg-white border-t border-gray-100" id="layers">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="relative">
         <!-- Large faded number -->
-        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">01</span>
+        <span class="absolute -top-8 -left-8 text-[12rem] font-light text-blue-100 select-none opacity-50">01</span>
         
-        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+        <div class="relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 border-2 border-blue-200 shadow-xl">
           <div class="flex items-start gap-6 mb-8">
-            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Revenue & Growth Layer</h3>
-              <p class="text-lg font-medium text-gray-600 mb-4">How demand becomes predictable revenue.</p>
-              <p class="text-base text-gray-700 mb-8">This layer governs how opportunities enter the business, move through pipelines, and convert into cash.</p>
+              <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Revenue & Growth Layer</h3>
+              <p class="text-xl font-semibold text-gray-600 mb-4">How demand becomes predictable revenue.</p>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">This layer governs how opportunities enter the business, move through pipelines, and convert into cash.</p>
             </div>
           </div>
 
-          <!-- Two-column layout -->
+          <!-- Enhanced Two-column layout -->
           <div class="grid md:grid-cols-2 gap-8 mb-8">
             <!-- What breaks -->
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h4 class="text-sm font-bold text-red-600 uppercase tracking-wide mb-4">What breaks without it</h4>
               <ul class="space-y-3">
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Leads are mishandled or ignored</span>
+                  <span class="text-base">Leads are mishandled or ignored</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Sales activity isn't visible</span>
+                  <span class="text-base">Sales activity isn't visible</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Forecasts are guesses</span>
+                  <span class="text-base">Forecasts are guesses</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Growth relies on heroics</span>
+                  <span class="text-base">Growth relies on heroics</span>
                 </li>
               </ul>
             </div>
 
             <!-- What we build -->
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-blue-200">
+              <h4 class="text-sm font-bold text-blue-600 uppercase tracking-wide mb-4">What we build</h4>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Lead intake and qualification systems</span>
+                  <span class="text-base">Lead intake and qualification systems</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">CRM architecture aligned to how deals actually move</span>
+                  <span class="text-base">CRM architecture aligned to how deals actually move</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Automated follow-up and handoffs</span>
+                  <span class="text-base">Automated follow-up and handoffs</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Pipeline visibility and forecasting</span>
+                  <span class="text-base">Pipeline visibility and forecasting</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Attribution between marketing and revenue</span>
+                  <span class="text-base">Attribution between marketing and revenue</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <!-- Example scenarios -->
-          <div class="bg-white rounded-xl p-6 border border-gray-200">
-            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
-            <div class="space-y-2">
+          <!-- Enhanced Example scenarios -->
+          <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-md">
+            <h4 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Example scenarios</h4>
+            <div class="grid md:grid-cols-3 gap-4">
               <p class="text-sm text-gray-600 italic">A brokerage sees deal velocity and fallout before quarter-end</p>
               <p class="text-sm text-gray-600 italic">A construction firm stops losing leads after initial contact</p>
               <p class="text-sm text-gray-600 italic">A healthcare group stabilizes intake without admin overload</p>
@@ -236,97 +361,97 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION: Layer 2 - Operations & Execution Layer -->
+  <!-- ENHANCED LAYER 2 - Operations & Execution -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="relative">
-        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">02</span>
+        <span class="absolute -top-8 -left-8 text-[12rem] font-light text-blue-100 select-none opacity-50">02</span>
         
-        <div class="relative bg-white rounded-2xl p-8 md:p-12 border border-gray-200">
+        <div class="relative bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200 shadow-xl">
           <div class="flex items-start gap-6 mb-8">
-            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Operations & Execution Layer</h3>
-              <p class="text-lg font-medium text-gray-600 mb-4">How work actually gets done.</p>
-              <p class="text-base text-gray-700 mb-8">This layer controls delivery, coordination, and accountability across teams.</p>
+              <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Operations & Execution Layer</h3>
+              <p class="text-xl font-semibold text-gray-600 mb-4">How work actually gets done.</p>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">This layer controls delivery, coordination, and accountability across teams.</p>
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+            <div class="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
+              <h4 class="text-sm font-bold text-red-600 uppercase tracking-wide mb-4">What breaks without it</h4>
               <ul class="space-y-3">
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Work is tracked manually</span>
+                  <span class="text-base">Work is tracked manually</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Schedules constantly change</span>
+                  <span class="text-base">Schedules constantly change</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Execution depends on tribal knowledge</span>
+                  <span class="text-base">Execution depends on tribal knowledge</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Scale increases chaos</span>
+                  <span class="text-base">Scale increases chaos</span>
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+            <div class="bg-gray-50 rounded-xl p-6 border-2 border-blue-200">
+              <h4 class="text-sm font-bold text-blue-600 uppercase tracking-wide mb-4">What we build</h4>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Scheduling and capacity systems</span>
+                  <span class="text-base">Scheduling and capacity systems</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Job, project, or case management workflows</span>
+                  <span class="text-base">Job, project, or case management workflows</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">SOPs embedded directly into systems</span>
+                  <span class="text-base">SOPs embedded directly into systems</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Task orchestration and accountability</span>
+                  <span class="text-base">Task orchestration and accountability</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Tool consolidation across teams</span>
+                  <span class="text-base">Tool consolidation across teams</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
-            <div class="space-y-2">
+          <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-md">
+            <h4 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Example scenarios</h4>
+            <div class="grid md:grid-cols-3 gap-4">
               <p class="text-sm text-gray-600 italic">A property management firm standardizes operations across assets</p>
               <p class="text-sm text-gray-600 italic">An energy services provider aligns field work with billing</p>
               <p class="text-sm text-gray-600 italic">A professional services firm delivers consistently without micromanagement</p>
@@ -337,96 +462,96 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION: Layer 3 - Financial & Control Layer -->
+  <!-- ENHANCED LAYER 3 - Financial & Control -->
   <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="relative">
-        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">03</span>
+        <span class="absolute -top-8 -left-8 text-[12rem] font-light text-blue-100 select-none opacity-50">03</span>
         
-        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+        <div class="relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 border-2 border-blue-200 shadow-xl">
           <div class="flex items-start gap-6 mb-8">
-            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Financial & Control Layer</h3>
-              <p class="text-lg font-medium text-gray-600 mb-4">How money becomes visible and controllable.</p>
-              <p class="text-base text-gray-700 mb-8">This layer ensures financial reality matches operational reality.</p>
+              <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Financial & Control Layer</h3>
+              <p class="text-xl font-semibold text-gray-600 mb-4">How money becomes visible and controllable.</p>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">This layer ensures financial reality matches operational reality.</p>
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h4 class="text-sm font-bold text-red-600 uppercase tracking-wide mb-4">What breaks without it</h4>
               <ul class="space-y-3">
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Revenue looks strong but margins erode</span>
+                  <span class="text-base">Revenue looks strong but margins erode</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Costs are discovered too late</span>
+                  <span class="text-base">Costs are discovered too late</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Leadership flies blind between reports</span>
+                  <span class="text-base">Leadership flies blind between reports</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Decisions are reactive</span>
+                  <span class="text-base">Decisions are reactive</span>
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-blue-200">
+              <h4 class="text-sm font-bold text-blue-600 uppercase tracking-wide mb-4">What we build</h4>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Job costing and margin tracking</span>
+                  <span class="text-base">Job costing and margin tracking</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Automated billing and collections workflows</span>
+                  <span class="text-base">Automated billing and collections workflows</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Cash flow visibility</span>
+                  <span class="text-base">Cash flow visibility</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Budget vs actual monitoring</span>
+                  <span class="text-base">Budget vs actual monitoring</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Financial performance dashboards</span>
+                  <span class="text-base">Financial performance dashboards</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl p-6 border border-gray-200">
-            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
-            <div class="space-y-2">
+          <div class="bg-white rounded-xl p-6 border-2 border-gray-200 shadow-md">
+            <h4 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">Example scenarios</h4>
+            <div class="grid md:grid-cols-3 gap-4">
               <p class="text-sm text-gray-600 italic">A contractor identifies margin loss before projects close</p>
               <p class="text-sm text-gray-600 italic">A real estate operator models hold vs sell decisions</p>
               <p class="text-sm text-gray-600 italic">A multi-entity business gains consolidated financial visibility</p>
@@ -437,290 +562,316 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION: Layer 4 - Intelligence & Automation Layer -->
+  <!-- ENHANCED LAYER 4 - Intelligence & Automation -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="relative">
-        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">04</span>
+        <span class="absolute -top-8 -left-8 text-[12rem] font-light text-blue-100 select-none opacity-50">04</span>
         
-        <div class="relative bg-white rounded-2xl p-8 md:p-12 border border-gray-200">
+        <div class="relative bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200 shadow-xl">
           <div class="flex items-start gap-6 mb-8">
-            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Intelligence & Automation Layer</h3>
-              <p class="text-lg font-medium text-gray-600 mb-4">Where AI creates real leverage.</p>
-              <div class="bg-blue-50 border-l-4 border-blue-500 rounded-xl p-4 mb-4">
-                <p class="text-lg font-bold text-gray-900">AI is not the product — it's the force multiplier.</p>
+              <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Intelligence & Automation Layer</h3>
+              <p class="text-xl font-semibold text-gray-600 mb-4">Where AI creates real leverage.</p>
+              <div class="bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-300 rounded-xl p-6 mb-6">
+                <p class="text-xl font-bold text-gray-900">AI is not the product — it's the force multiplier.</p>
               </div>
-              <p class="text-base text-gray-700 mb-8">We apply intelligence where it meaningfully improves outcomes.</p>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">We apply intelligence where it meaningfully improves outcomes.</p>
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">Where AI is used</h4>
+            <div class="bg-gray-50 rounded-xl p-6 border-2 border-blue-200">
+              <h4 class="text-sm font-bold text-blue-600 uppercase tracking-wide mb-4">Where AI is used</h4>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Lead prioritization and routing</span>
+                  <span class="text-base">Lead prioritization and routing</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Forecasting and scenario modeling</span>
+                  <span class="text-base">Forecasting and scenario modeling</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Document analysis and abstraction</span>
+                  <span class="text-base">Document analysis and abstraction</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Cost and anomaly detection</span>
+                  <span class="text-base">Cost and anomaly detection</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Decision support and summarization</span>
+                  <span class="text-base">Decision support and summarization</span>
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What this replaces</h4>
+            <div class="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
+              <h4 class="text-sm font-bold text-red-600 uppercase tracking-wide mb-4">What this replaces</h4>
               <ul class="space-y-3">
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Manual analysis</span>
+                  <span class="text-base">Manual analysis</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Late insights</span>
+                  <span class="text-base">Late insights</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Spreadsheet dependency</span>
+                  <span class="text-base">Spreadsheet dependency</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Guess-driven decisions</span>
+                  <span class="text-base">Guess-driven decisions</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="bg-gray-50 border-l-4 border-blue-500 rounded-xl p-6">
-            <p class="text-sm text-gray-600 italic">AI is embedded into workflows, not separated into novelty tools.</p>
+          <div class="bg-gradient-to-br from-blue-50 to-purple-50 border-l-4 border-blue-500 rounded-xl p-6">
+            <p class="text-base font-semibold text-gray-900">AI is embedded into workflows, not separated into novelty tools.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: Layer 5 - Visibility & Leadership Layer -->
+  <!-- ENHANCED LAYER 5 - Visibility & Leadership -->
   <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="relative">
-        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">05</span>
+        <span class="absolute -top-8 -left-8 text-[12rem] font-light text-blue-100 select-none opacity-50">05</span>
         
-        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+        <div class="relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 border-2 border-blue-200 shadow-xl">
           <div class="flex items-start gap-6 mb-8">
-            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Visibility & Leadership Layer</h3>
-              <p class="text-lg font-medium text-gray-600 mb-4">How leaders regain control.</p>
-              <p class="text-base text-gray-700 mb-8">This layer exists for decision-makers.</p>
+              <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Visibility & Leadership Layer</h3>
+              <p class="text-xl font-semibold text-gray-600 mb-4">How leaders regain control.</p>
+              <p class="text-lg text-gray-700 mb-8 leading-relaxed">This layer exists for decision-makers.</p>
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-gray-200">
+              <h4 class="text-sm font-bold text-red-600 uppercase tracking-wide mb-4">What breaks without it</h4>
               <ul class="space-y-3">
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Data is everywhere but insight is nowhere</span>
+                  <span class="text-base">Data is everywhere but insight is nowhere</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Reporting lags reality</span>
+                  <span class="text-base">Reporting lags reality</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Teams argue over numbers</span>
+                  <span class="text-base">Teams argue over numbers</span>
                 </li>
-                <li class="flex items-start gap-3 text-gray-600">
-                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>
-                  <span class="text-sm">Leadership reacts instead of directs</span>
+                  <span class="text-base">Leadership reacts instead of directs</span>
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+            <div class="bg-white rounded-xl p-6 border-2 border-blue-200">
+              <h4 class="text-sm font-bold text-blue-600 uppercase tracking-wide mb-4">What we build</h4>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Executive dashboards tied to reality</span>
+                  <span class="text-base">Executive dashboards tied to reality</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Cross-department visibility</span>
+                  <span class="text-base">Cross-department visibility</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Early warning indicators</span>
+                  <span class="text-base">Early warning indicators</span>
                 </li>
                 <li class="flex items-start gap-3 text-gray-700">
                   <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
-                  <span class="text-sm">Drill-down from summary to execution</span>
+                  <span class="text-base">Drill-down from summary to execution</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div class="bg-white border-l-4 border-blue-500 rounded-xl p-6">
-            <p class="text-base font-semibold text-gray-900">This is how leadership moves from management to direction.</p>
+          <div class="bg-white border-l-4 border-blue-500 rounded-xl p-6 shadow-md">
+            <p class="text-lg font-bold text-gray-900">This is how leadership moves from management to direction.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: How the Layers Work Together -->
+  <!-- ENHANCED HOW THE LAYERS WORK TOGETHER -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">How the Layers Work Together</p>
-      <p class="text-lg text-gray-600 mb-4 max-w-3xl">
-        These layers are not separate products. They are designed as a system.
-      </p>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block mb-4">
+          <span class="text-sm text-gray-500 font-medium uppercase tracking-wide">How the Layers Work Together</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Designed as a System
+        </h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          These layers are not separate products. They are designed as a system.
+        </p>
+      </div>
 
-      <!-- Flow Diagram - Horizontal Flow -->
-      <div class="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 mb-8 overflow-x-auto">
+      <!-- Enhanced Flow Diagram -->
+      <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200 shadow-xl mb-8 overflow-x-auto">
         <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 min-w-max">
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Revenue</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Revenue</p>
           </div>
-          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Operations</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Operations</p>
           </div>
-          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Finance</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Finance</p>
           </div>
-          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Intelligence</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Intelligence</p>
           </div>
-          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Leadership</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Leadership</p>
           </div>
-          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
-            <p class="font-semibold text-gray-900 whitespace-nowrap">Strategy</p>
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
+            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Strategy</p>
           </div>
         </div>
       </div>
 
-      <p class="text-base font-semibold text-gray-900 text-center">intelio owns the alignment between them.</p>
+      <p class="text-xl md:text-2xl font-bold text-gray-900 text-center">Intelio owns the alignment between them.</p>
     </div>
   </section>
 
-  <!-- SECTION: How This Is Delivered -->
-  <section class="py-20 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">How This Is Delivered</p>
-      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
-        The Intelio Operating Model is delivered through our engagement structures:
-      </p>
+  <!-- ENHANCED HOW THIS IS DELIVERED -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block mb-4">
+          <span class="text-sm text-gray-500 font-medium uppercase tracking-wide">How This Is Delivered</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Through Our Engagement Structures
+        </h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          The Intelio Operating Model is delivered through our engagement structures:
+        </p>
+      </div>
 
-      <div class="grid md:grid-cols-3 gap-6 mb-8">
-        <a href="/how-we-work#build-maintain" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <a href="/how-we-work#engagement-models" class="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-blue-50/0 group-hover:from-blue-50/50 group-hover:to-transparent transition-all duration-300"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Identify + Build + Maintain</h4>
+            <p class="text-base text-gray-600 leading-relaxed">You own execution. We ensure the systems stay aligned, reliable, and current.</p>
           </div>
-          <h4 class="font-semibold text-gray-900 mb-2">Identify + Build + Maintain</h4>
-          <p class="text-sm text-gray-600">You own execution. We ensure the systems stay aligned, reliable, and current.</p>
         </a>
-        <a href="/how-we-work#build-operate" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <a href="/how-we-work#engagement-models" class="group bg-white rounded-2xl p-8 border-2 border-blue-300 hover:border-blue-400 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div class="absolute top-6 right-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Identify + Build + Operate</h4>
+            <p class="text-base text-gray-600 leading-relaxed">You set direction. We execute inside the systems with visibility and guardrails.</p>
           </div>
-          <h4 class="font-semibold text-gray-900 mb-2">Identify + Build + Operate</h4>
-          <p class="text-sm text-gray-600">You set direction. We execute inside the systems with visibility and guardrails.</p>
         </a>
-        <a href="/how-we-work#custom" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-            </svg>
+        <a href="/how-we-work#engagement-models" class="group bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-blue-50/0 group-hover:from-blue-50/50 group-hover:to-transparent transition-all duration-300"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Select Custom & Advanced Builds</h4>
+            <p class="text-base text-gray-600 leading-relaxed">For environments where scale or complexity breaks standard models.</p>
           </div>
-          <h4 class="font-semibold text-gray-900 mb-2">Select Custom & Advanced Builds</h4>
-          <p class="text-sm text-gray-600">For environments where scale or complexity breaks standard models.</p>
         </a>
       </div>
 
-      <p class="text-base text-gray-600 mb-6 text-center">Each ensures systems are not only built — but kept aligned to the business.</p>
+      <p class="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">Each ensures systems are not only built — but kept aligned to the business.</p>
       <div class="text-center">
-        <a href="/how-we-work" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+        <a href="/how-we-work" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300">
           Explore How We Work
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
@@ -728,25 +879,117 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- GRADIENT CTA SECTION -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
-        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to build an operating model that actually works?</h2>
-        <p class="text-white/80 mb-8">Let's translate your business intent into systems that execute</p>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
-          Work with Intelio
-        </a>
-      </div>
+  <!-- ENHANCED CTA SECTION -->
+  <section class="py-24 px-6 bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 relative overflow-hidden">
+    <!-- Subtle pattern overlay -->
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Ready to build an operating model that actually works?
+      </h2>
+      <p class="text-xl text-white/90 mb-10 leading-relaxed">
+        Let's translate your business intent into systems that execute
+      </p>
+      <a href="/contact" class="inline-flex items-center px-10 py-5 bg-white text-blue-600 text-lg font-semibold rounded-xl hover:bg-gray-100 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300">
+        Work with Intelio
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
     </div>
   </section>
 </main>
 </Layout>
 
 <style>
-  .hero-operating-model {
-    background: #000000;
-    position: relative;
+  @media (prefers-reduced-motion: reduce) {
+    video {
+      display: none;
+    }
+    section:first-of-type {
+      background-image: linear-gradient(to bottom right, #111827, #1f2937);
+      background-size: cover;
+      background-position: center;
+    }
+    .animate-bounce {
+      animation: none;
+    }
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
+
+  /* Logo Carousel Styles */
+  .logo-marquee-container {
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    animation: logo-scroll 40s linear infinite;
+    width: fit-content;
+  }
+
+  .logo-marquee-container:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-marquee-item:hover {
+    opacity: 1;
+  }
+
+  .logo-marquee-img {
+    height: 120px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo-marquee-img {
+      height: 100px;
+      max-width: 160px;
+    }
+    .logo-marquee-track {
+      gap: 1.25rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-marquee-img {
+      height: 80px;
+      max-width: 140px;
+    }
+    .logo-marquee-track {
+      gap: 1rem;
+      animation: logo-scroll 40s linear infinite;
+    }
   }
 </style>
