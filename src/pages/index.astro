@@ -81,12 +81,16 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
     overflow: hidden;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
 
   .logo-carousel-track {
     display: flex;
     width: fit-content;
     animation: logo-scroll 30s linear infinite;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .logo-carousel-slide {
@@ -100,9 +104,11 @@ import Layout from "../layouts/Layout.astro";
   @keyframes logo-scroll {
     0% {
       transform: translateX(0);
+      -webkit-transform: translateX(0);
     }
     100% {
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
     }
   }
 
@@ -110,6 +116,7 @@ import Layout from "../layouts/Layout.astro";
   @media (max-width: 1024px) {
     .logo-carousel-track {
       animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
     }
   }
 
@@ -120,6 +127,7 @@ import Layout from "../layouts/Layout.astro";
     }
     .logo-carousel-track {
       animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
     }
   }
 
@@ -130,12 +138,24 @@ import Layout from "../layouts/Layout.astro";
     }
     .logo-carousel-track {
       animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
     }
   }
 
-  /* Pause on hover for better UX */
-  .logo-carousel-container:hover .logo-carousel-track {
-    animation-play-state: paused;
+  /* Pause on hover for better UX (desktop only) */
+  @media (hover: hover) {
+    .logo-carousel-container:hover .logo-carousel-track {
+      animation-play-state: paused;
+      -webkit-animation-play-state: paused;
+    }
+  }
+
+  /* Ensure animation works on mobile */
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
+    }
   }
 </style>
 
