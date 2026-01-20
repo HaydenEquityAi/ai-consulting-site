@@ -53,16 +53,72 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- CREDIBILITY BAR -->
-  <section class="py-8 px-6 bg-white border-b border-gray-100">
+  <section class="py-12 px-6 bg-white border-b border-gray-100">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div class="flex flex-col items-center justify-center gap-6">
         <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
-        <div class="flex items-center gap-8 opacity-60 grayscale">
-          <!-- Placeholder for client logos -->
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
+        <!-- Client Logos - Infinite Scroll -->
+        <div class="logo-marquee-container w-full">
+          <div class="logo-marquee-track">
+            <!-- First set of logos -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -397,6 +453,121 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+      
+      <div class="border-t border-gray-200 pt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How long does it take to implement a business intelligence system?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Typical implementations range from 6-12 weeks depending on data complexity and number of source systems. We start delivering value in phases, with initial dashboards often live within 3-4 weeks.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What data sources can you integrate?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We connect to virtually any system—CRMs, ERPs, accounting software, spreadsheets, databases, and custom applications. If it has data, we can integrate it.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Do we need to replace our existing tools?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              No. We build intelligence layers on top of your existing systems. Our approach integrates rather than replaces—you keep using the tools your team knows.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How is this different from buying a BI tool like Tableau or Power BI?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Tools are just software. We design the entire system—data architecture, KPI definitions, automated pipelines, and executive dashboards—configured to how your business actually operates.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What if our data is messy or inconsistent?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              That's normal. Part of our process includes data cleaning, standardization, and establishing governance rules. We build systems that enforce consistency going forward.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can leadership actually use these dashboards?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. We design for executives, not analysts. Dashboards are intuitive, focused on decisions, and built around how leaders actually consume information.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What ongoing support is included?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Every engagement includes a post-launch support period. For ongoing needs, our Build + Maintain and Build + Operate models provide continuous system health, updates, and optimization.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you handle security and data privacy?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We build with enterprise security standards—role-based access, encryption, audit logging, and compliance awareness. Your data stays yours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- GRADIENT CTA SECTION - CLOSE WITH CONVICTION -->
   <section class="py-24 px-6 bg-white">
     <div class="max-w-4xl mx-auto">
@@ -424,4 +595,107 @@ import Layout from "../../layouts/Layout.astro";
     position: relative;
     overflow: hidden;
   }
+
+  /* FAQ Accordion Styles */
+  .faq-card.active .faq-answer {
+    display: block !important;
+  }
+
+  .faq-card.active .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Logo Carousel Styles */
+  .logo-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    animation: logo-scroll 40s linear infinite;
+    width: fit-content;
+  }
+
+  .logo-marquee-container:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-marquee-item:hover {
+    opacity: 1;
+  }
+
+  .logo-marquee-img {
+    height: 120px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo-marquee-img {
+      height: 100px;
+      max-width: 160px;
+    }
+    .logo-marquee-track {
+      gap: 1.25rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-marquee-img {
+      height: 80px;
+      max-width: 140px;
+    }
+    .logo-marquee-track {
+      gap: 1rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
 </style>
+
+<script>
+  // FAQ Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqCards = document.querySelectorAll('.faq-card');
+    
+    faqCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        
+        // Close all cards
+        faqCards.forEach(c => c.classList.remove('active'));
+        
+        // Open clicked card if it wasn't active
+        if (!isActive) {
+          this.classList.add('active');
+        }
+      });
+    });
+  });
+</script>

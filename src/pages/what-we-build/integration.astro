@@ -360,6 +360,121 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+      
+      <div class="border-t border-gray-200 pt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What systems can you integrate?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              CRMs, accounting software, ERPs, project management, scheduling tools, databases, custom applications—if it has an API or data export, we can connect it.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you handle systems without APIs?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We work with what's available—file exports, database connections, or UI automation when necessary. The goal is getting your data flowing regardless of technical limitations.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What happens if an integration breaks?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We build monitoring and alerting into every integration. When issues occur, they're caught early and resolved quickly—often before you notice.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can you connect cloud and on-premise systems?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. Hybrid environments are common. We design secure connections between cloud services and on-premise infrastructure.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you handle data conflicts between systems?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We establish master data rules—which system is authoritative for which data. Conflicts are resolved systematically, not manually.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What about real-time vs. batch integration?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Depends on the use case. Some data needs real-time sync; other data is fine with scheduled updates. We design based on actual business requirements.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Do you provide documentation for integrations?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. Every integration is documented—data mappings, sync schedules, error handling, and troubleshooting guides. Your team will understand how it works.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can you migrate data from old systems?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. Data migration is often part of integration projects. We handle extraction, transformation, cleaning, and loading into new or updated systems.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- GRADIENT CTA SECTION -->
   <section class="py-20 px-6 bg-white">
     <div class="max-w-2xl mx-auto">
@@ -381,4 +496,34 @@ import Layout from "../../layouts/Layout.astro";
     position: relative;
     overflow: hidden;
   }
+
+  /* FAQ Accordion Styles */
+  .faq-card.active .faq-answer {
+    display: block !important;
+  }
+
+  .faq-card.active .faq-chevron {
+    transform: rotate(180deg);
+  }
 </style>
+
+<script>
+  // FAQ Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqCards = document.querySelectorAll('.faq-card');
+    
+    faqCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        
+        // Close all cards
+        faqCards.forEach(c => c.classList.remove('active'));
+        
+        // Open clicked card if it wasn't active
+        if (!isActive) {
+          this.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
