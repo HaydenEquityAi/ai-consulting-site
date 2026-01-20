@@ -4,486 +4,749 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="The Intelio Operating Model - intelio">
 <main>
-  <!-- HERO SECTION (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">The Intelio Operating Model</h1>
-      <p class="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8">Turning business intent into systems that execute.</p>
-      <div class="space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
-        <p>Most organizations don't struggle because of strategy. They struggle because execution is fragmented, invisible, and dependent on people holding everything together.</p>
-        <p>The Intelio Operating Model exists to solve that.</p>
-        <p>We translate business needs into working systems—then ensure those systems continue to operate, adapt, and create leverage as the organization evolves.</p>
-      </div>
+  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+  <section class="hero-operating-model min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Image/Video -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
+      <!-- You can add a video or image here for systems architecture/blueprint/interconnected network theme -->
     </div>
-  </section>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
 
-  <!-- SECTION: The Core Problem We Solve (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">The Core Problem We Solve</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">Across industries, the failure pattern is the same:</p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Revenue systems don't talk to operations</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Operations don't reflect financial reality</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Leadership lacks real-time visibility</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Critical knowledge lives in people's heads</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Technology exists, but execution breaks</span>
-        </li>
-      </ul>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">The result is friction, missed opportunity, and leadership fatigue.</p>
-      <p class="text-base sm:text-lg font-semibold text-gray-900">intelio replaces that with an integrated operating model.</p>
-    </div>
-  </section>
-
-  <!-- SECTION: The Intelio Operating Layers Intro (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">The Intelio Operating Layers</h2>
-      <p class="text-xl sm:text-2xl font-semibold text-white mb-4">We don't sell tools.</p>
-      <p class="text-xl sm:text-2xl font-semibold text-white">We build and operate layers of capability that work together.</p>
-    </div>
-  </section>
-
-  <!-- SECTION: Layer 1 - Revenue & Growth (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">1. Revenue & Growth Layer</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-700 mb-6 sm:mb-8">How demand becomes predictable revenue.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">This layer governs how opportunities enter the business, move through pipelines, and convert into cash.</p>
-      
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What breaks without it</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Leads are mishandled or ignored</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Sales activity isn't visible</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Forecasts are guesses</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Growth relies on heroics</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What we build</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Lead intake and qualification systems</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>CRM architecture aligned to how deals actually move</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Automated follow-up and handoffs</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Pipeline visibility and forecasting</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Attribution between marketing and revenue</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Example scenarios</h3>
-      <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A brokerage sees deal velocity and fallout before quarter-end</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A construction firm stops losing leads after initial contact</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A healthcare group stabilizes intake without admin overload</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SECTION: Layer 2 - Operations & Execution (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">2. Operations & Execution Layer</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-300 mb-6 sm:mb-8">How work actually gets done.</p>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">This layer controls delivery, coordination, and accountability across teams.</p>
-      
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">What breaks without it</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Work is tracked manually</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Schedules constantly change</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Execution depends on tribal knowledge</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Scale increases chaos</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">What we build</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Scheduling and capacity systems</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Job, project, or case management workflows</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>SOPs embedded directly into systems</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Task orchestration and accountability</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Tool consolidation across teams</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">Example scenarios</h3>
-      <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A property management firm standardizes operations across assets</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>An energy services provider aligns field work with billing</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A professional services firm delivers consistently without micromanagement</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SECTION: Layer 3 - Financial & Control (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">3. Financial & Control Layer</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-700 mb-6 sm:mb-8">How money becomes visible and controllable.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">This layer ensures financial reality matches operational reality.</p>
-      
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What breaks without it</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Revenue looks strong but margins erode</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Costs are discovered too late</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Leadership flies blind between reports</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Decisions are reactive</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What we build</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Job costing and margin tracking</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Automated billing and collections workflows</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Cash flow visibility</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Budget vs actual monitoring</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Financial performance dashboards</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Example scenarios</h3>
-      <ul class="space-y-3">
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A contractor identifies margin loss before projects close</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A real estate operator models hold vs sell decisions</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-500 italic">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>A multi-entity business gains consolidated financial visibility</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SECTION: Layer 4 - Intelligence & Automation (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">4. Intelligence & Automation Layer</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-300 mb-6 sm:mb-8">Where AI creates real leverage.</p>
-      <p class="text-xl sm:text-2xl font-semibold text-white mb-4">AI is not the product — it's the force multiplier.</p>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">We apply intelligence where it meaningfully improves outcomes.</p>
-      
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">Where AI is used</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Lead prioritization and routing</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Forecasting and scenario modeling</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Document analysis and abstraction</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Cost and anomaly detection</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Decision support and summarization</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">What this replaces</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Manual analysis</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Late insights</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Spreadsheet dependency</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Guess-driven decisions</span>
-        </li>
-      </ul>
-      <p class="text-sm sm:text-base text-gray-500 italic">AI is embedded into workflows, not separated into novelty tools.</p>
-    </div>
-  </section>
-
-  <!-- SECTION: Layer 5 - Visibility & Leadership (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-3 sm:mb-4">5. Visibility & Leadership Layer</h2>
-      <p class="text-base sm:text-lg font-semibold text-gray-700 mb-6 sm:mb-8">How leaders regain control.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">This layer exists for decision-makers.</p>
-      
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What breaks without it</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Data is everywhere but insight is nowhere</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Reporting lags reality</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Teams argue over numbers</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Leadership reacts instead of directs</span>
-        </li>
-      </ul>
-
-      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">What we build</h3>
-      <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Executive dashboards tied to reality</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Cross-department visibility</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Early warning indicators</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Drill-down from summary to execution</span>
-        </li>
-      </ul>
-      <p class="text-base sm:text-lg font-semibold text-gray-900">This is how leadership moves from management to direction.</p>
-    </div>
-  </section>
-
-  <!-- SECTION: How the Layers Work Together (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">How the Layers Work Together</h2>
-      <p class="text-xl sm:text-2xl font-semibold text-white mb-4">These layers are not separate products.</p>
-      <p class="text-xl sm:text-2xl font-semibold text-white mb-8">They are designed as a system.</p>
-      
-      <div class="space-y-6 sm:space-y-8 mb-8">
-        <div class="flex items-center gap-4">
-          <div class="text-lg sm:text-xl font-semibold text-white">Revenue feeds operations</div>
-        </div>
-        <div class="flex items-center justify-center">
-          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          The Intelio Operating Model
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Turning business intent into systems that execute.
+        </p>
+        <a href="#layers" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+          Explore the Layers
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="text-lg sm:text-xl font-semibold text-white">Operations feed finance</div>
-        </div>
-        <div class="flex items-center justify-center">
-          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="text-lg sm:text-xl font-semibold text-white">Finance feeds intelligence</div>
-        </div>
-        <div class="flex items-center justify-center">
-          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="text-lg sm:text-xl font-semibold text-white">Intelligence feeds leadership</div>
-        </div>
-        <div class="flex items-center justify-center">
-          <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="text-lg sm:text-xl font-semibold text-white">Leadership feeds strategy</div>
-        </div>
-      </div>
-      <p class="text-base sm:text-lg font-semibold text-white">intelio owns the alignment between them.</p>
-    </div>
-  </section>
-
-  <!-- SECTION: How This Is Delivered (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">How This Is Delivered</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8">The Intelio Operating Model is delivered through our engagement structures:</p>
-      
-      <div class="grid md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
-        <div class="bg-gray-50 border border-gray-200 p-6 sm:p-8 rounded-xl">
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Identify + Build + Maintain</h3>
-          <p class="text-sm sm:text-base text-gray-600">You own execution. We ensure the systems stay aligned, reliable, and current.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 p-6 sm:p-8 rounded-xl">
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Identify + Build + Operate</h3>
-          <p class="text-sm sm:text-base text-gray-600">You set direction. We execute inside the systems with visibility and guardrails.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 p-6 sm:p-8 rounded-xl">
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Select Custom & Advanced Builds</h3>
-          <p class="text-sm sm:text-base text-gray-600">For environments where scale or complexity breaks standard models.</p>
-        </div>
-      </div>
-      
-      <div class="text-center">
-        <a href="/how-we-work" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-          Explore How We Work
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: What This Means for Your Organization (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What This Means for Your Organization</h2>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg font-semibold">Fewer handoffs</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg font-semibold">Fewer blind spots</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg font-semibold">Faster decisions</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg font-semibold">Less dependence on individuals</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg font-semibold">Systems that grow with you</span>
-        </li>
-      </ul>
+  <!-- SECTION: Opening Statement -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="prose prose-lg max-w-none text-center">
+        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
+          Most organizations don't struggle because of strategy. They struggle because execution is fragmented, invisible, and dependent on people holding everything together.
+        </p>
+        <p class="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
+          The Intelio Operating Model exists to solve that.
+        </p>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+          We translate business needs into working systems—then ensure those systems continue to operate, adapt, and create leverage as the organization evolves.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- CTA SECTION (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-        Work with Intelio
-      </a>
+  <!-- SECTION: The Core Problem We Solve -->
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">The Core Problem We Solve</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        Across industries, the failure pattern is the same:
+      </p>
+
+      <!-- Problem Cards - 5 cards (3+2 layout) -->
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-700 font-medium">Revenue systems don't talk to operations</p>
+        </div>
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-700 font-medium">Operations don't reflect financial reality</p>
+        </div>
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.29 3.29m0 0L3 3m3.29 3.29L3 3m6.29 6.29L3 3m6.29 6.29l3.29 3.29m0 0L21 21m-3.29-3.29L21 21m-6.29-6.29L21 21"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-700 font-medium">Leadership lacks real-time visibility</p>
+        </div>
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-700 font-medium">Critical knowledge lives in people's heads</p>
+        </div>
+        <div class="service-card bg-white rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <p class="text-sm text-gray-700 font-medium">Technology exists, but execution breaks</p>
+        </div>
+      </div>
+
+      <!-- Callout -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6 text-center">
+        <p class="text-base text-gray-700 font-medium">
+          The result is friction, missed opportunity, and leadership fatigue.
+        </p>
+      </div>
+
+      <!-- Bold Statement -->
+      <div class="text-center">
+        <p class="text-xl md:text-2xl font-bold text-gray-900">
+          intelio replaces that with an integrated operating model.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: The Intelio Operating Layers Intro -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-sm text-gray-500 mb-4">The Intelio Operating Layers</p>
+      <p class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        We don't sell tools.
+      </p>
+      <p class="text-2xl md:text-3xl font-bold text-gray-900">
+        We build and operate layers of capability that work together.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION: Layer 1 - Revenue & Growth Layer -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100" id="layers">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative">
+        <!-- Large faded number -->
+        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">01</span>
+        
+        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-start gap-6 mb-8">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Revenue & Growth Layer</h3>
+              <p class="text-lg font-medium text-gray-600 mb-4">How demand becomes predictable revenue.</p>
+              <p class="text-base text-gray-700 mb-8">This layer governs how opportunities enter the business, move through pipelines, and convert into cash.</p>
+            </div>
+          </div>
+
+          <!-- Two-column layout -->
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <!-- What breaks -->
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Leads are mishandled or ignored</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Sales activity isn't visible</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Forecasts are guesses</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Growth relies on heroics</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- What we build -->
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Lead intake and qualification systems</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">CRM architecture aligned to how deals actually move</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Automated follow-up and handoffs</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Pipeline visibility and forecasting</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Attribution between marketing and revenue</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Example scenarios -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
+            <div class="space-y-2">
+              <p class="text-sm text-gray-600 italic">A brokerage sees deal velocity and fallout before quarter-end</p>
+              <p class="text-sm text-gray-600 italic">A construction firm stops losing leads after initial contact</p>
+              <p class="text-sm text-gray-600 italic">A healthcare group stabilizes intake without admin overload</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Layer 2 - Operations & Execution Layer -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative">
+        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">02</span>
+        
+        <div class="relative bg-white rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-start gap-6 mb-8">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Operations & Execution Layer</h3>
+              <p class="text-lg font-medium text-gray-600 mb-4">How work actually gets done.</p>
+              <p class="text-base text-gray-700 mb-8">This layer controls delivery, coordination, and accountability across teams.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Work is tracked manually</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Schedules constantly change</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Execution depends on tribal knowledge</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Scale increases chaos</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Scheduling and capacity systems</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Job, project, or case management workflows</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">SOPs embedded directly into systems</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Task orchestration and accountability</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Tool consolidation across teams</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
+            <div class="space-y-2">
+              <p class="text-sm text-gray-600 italic">A property management firm standardizes operations across assets</p>
+              <p class="text-sm text-gray-600 italic">An energy services provider aligns field work with billing</p>
+              <p class="text-sm text-gray-600 italic">A professional services firm delivers consistently without micromanagement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Layer 3 - Financial & Control Layer -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative">
+        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">03</span>
+        
+        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-start gap-6 mb-8">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Financial & Control Layer</h3>
+              <p class="text-lg font-medium text-gray-600 mb-4">How money becomes visible and controllable.</p>
+              <p class="text-base text-gray-700 mb-8">This layer ensures financial reality matches operational reality.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Revenue looks strong but margins erode</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Costs are discovered too late</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Leadership flies blind between reports</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Decisions are reactive</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Job costing and margin tracking</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Automated billing and collections workflows</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Cash flow visibility</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Budget vs actual monitoring</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Financial performance dashboards</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <h4 class="text-sm font-semibold text-gray-500 mb-4">Example scenarios</h4>
+            <div class="space-y-2">
+              <p class="text-sm text-gray-600 italic">A contractor identifies margin loss before projects close</p>
+              <p class="text-sm text-gray-600 italic">A real estate operator models hold vs sell decisions</p>
+              <p class="text-sm text-gray-600 italic">A multi-entity business gains consolidated financial visibility</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Layer 4 - Intelligence & Automation Layer -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative">
+        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">04</span>
+        
+        <div class="relative bg-white rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-start gap-6 mb-8">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Intelligence & Automation Layer</h3>
+              <p class="text-lg font-medium text-gray-600 mb-4">Where AI creates real leverage.</p>
+              <div class="bg-blue-50 border-l-4 border-blue-500 rounded-xl p-4 mb-4">
+                <p class="text-lg font-bold text-gray-900">AI is not the product — it's the force multiplier.</p>
+              </div>
+              <p class="text-base text-gray-700 mb-8">We apply intelligence where it meaningfully improves outcomes.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">Where AI is used</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Lead prioritization and routing</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Forecasting and scenario modeling</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Document analysis and abstraction</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Cost and anomaly detection</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Decision support and summarization</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What this replaces</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Manual analysis</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Late insights</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Spreadsheet dependency</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Guess-driven decisions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border-l-4 border-blue-500 rounded-xl p-6">
+            <p class="text-sm text-gray-600 italic">AI is embedded into workflows, not separated into novelty tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Layer 5 - Visibility & Leadership Layer -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="relative">
+        <span class="absolute -top-4 -left-4 text-9xl font-light text-blue-100 select-none">05</span>
+        
+        <div class="relative bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-200">
+          <div class="flex items-start gap-6 mb-8">
+            <div class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">Visibility & Leadership Layer</h3>
+              <p class="text-lg font-medium text-gray-600 mb-4">How leaders regain control.</p>
+              <p class="text-base text-gray-700 mb-8">This layer exists for decision-makers.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What breaks without it</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Data is everywhere but insight is nowhere</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Reporting lags reality</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Teams argue over numbers</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-600">
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  <span class="text-sm">Leadership reacts instead of directs</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-gray-500 mb-4">What we build</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Executive dashboards tied to reality</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Cross-department visibility</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Early warning indicators</span>
+                </li>
+                <li class="flex items-start gap-3 text-gray-700">
+                  <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span class="text-sm">Drill-down from summary to execution</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white border-l-4 border-blue-500 rounded-xl p-6">
+            <p class="text-base font-semibold text-gray-900">This is how leadership moves from management to direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: How the Layers Work Together -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">How the Layers Work Together</p>
+      <p class="text-lg text-gray-600 mb-4 max-w-3xl">
+        These layers are not separate products. They are designed as a system.
+      </p>
+
+      <!-- Flow Diagram - Horizontal Flow -->
+      <div class="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 mb-8 overflow-x-auto">
+        <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 min-w-max">
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Revenue</p>
+          </div>
+          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Operations</p>
+          </div>
+          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Finance</p>
+          </div>
+          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Intelligence</p>
+          </div>
+          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Leadership</p>
+          </div>
+          <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+          <div class="bg-blue-50 border-2 border-blue-500 rounded-xl px-6 py-4">
+            <p class="font-semibold text-gray-900 whitespace-nowrap">Strategy</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-base font-semibold text-gray-900 text-center">intelio owns the alignment between them.</p>
+    </div>
+  </section>
+
+  <!-- SECTION: How This Is Delivered -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">How This Is Delivered</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        The Intelio Operating Model is delivered through our engagement structures:
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <a href="/how-we-work#build-maintain" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Identify + Build + Maintain</h4>
+          <p class="text-sm text-gray-600">You own execution. We ensure the systems stay aligned, reliable, and current.</p>
+        </a>
+        <a href="/how-we-work#build-operate" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Identify + Build + Operate</h4>
+          <p class="text-sm text-gray-600">You set direction. We execute inside the systems with visibility and guardrails.</p>
+        </a>
+        <a href="/how-we-work#custom" class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-gray-900 mb-2">Select Custom & Advanced Builds</h4>
+          <p class="text-sm text-gray-600">For environments where scale or complexity breaks standard models.</p>
+        </a>
+      </div>
+
+      <p class="text-base text-gray-600 mb-6 text-center">Each ensures systems are not only built — but kept aligned to the business.</p>
+      <div class="text-center">
+        <a href="/how-we-work" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+          Explore How We Work
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRADIENT CTA SECTION -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to build an operating model that actually works?</h2>
+        <p class="text-white/80 mb-8">Let's translate your business intent into systems that execute</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+          Work with Intelio
+        </a>
+      </div>
     </div>
   </section>
 </main>
 </Layout>
 
+<style>
+  .hero-operating-model {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
