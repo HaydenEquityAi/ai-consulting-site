@@ -24,7 +24,7 @@ export interface HashnodePost {
 }
 
 interface HashnodeResponse {
-  data: {
+  data?: {
     publication: {
       posts: {
         edges: Array<{
@@ -33,14 +33,22 @@ interface HashnodeResponse {
       };
     };
   };
+  errors?: Array<{
+    message: string;
+    extensions?: any;
+  }>;
 }
 
 interface HashnodeSinglePostResponse {
-  data: {
+  data?: {
     publication: {
       post: HashnodePost | null;
     };
   };
+  errors?: Array<{
+    message: string;
+    extensions?: any;
+  }>;
 }
 
 /**
@@ -50,7 +58,8 @@ export async function getAllPosts(): Promise<HashnodePost[]> {
   const publicationId = import.meta.env.HASHNODE_PUBLICATION_ID;
   
   if (!publicationId) {
-    throw new Error("HASHNODE_PUBLICATION_ID environment variable is not set");
+    console.warn("HASHNODE_PUBLICATION_ID environment variable is not set. Returning empty posts array.");
+    return [];
   }
 
   const query = `
@@ -102,10 +111,17 @@ export async function getAllPosts(): Promise<HashnodePost[]> {
     });
 
     if (!response.ok) {
-      throw new Error(`Hashnode API error: ${response.statusText}`);
+      console.warn(`Hashnode API error: ${response.statusText}. Returning empty posts array.`);
+      return [];
     }
 
     const data: HashnodeResponse = await response.json();
+
+    // Check for GraphQL errors
+    if (data.errors) {
+      console.warn("Hashnode GraphQL errors:", data.errors);
+      return [];
+    }
 
     if (data.data?.publication?.posts?.edges) {
       return data.data.publication.posts.edges.map((edge) => edge.node);
@@ -113,7 +129,7 @@ export async function getAllPosts(): Promise<HashnodePost[]> {
 
     return [];
   } catch (error) {
-    console.error("Error fetching posts from Hashnode:", error);
+    console.warn("Error fetching posts from Hashnode:", error);
     return [];
   }
 }
@@ -125,7 +141,8 @@ export async function getPostBySlug(slug: string): Promise<HashnodePost | null> 
   const publicationId = import.meta.env.HASHNODE_PUBLICATION_ID;
   
   if (!publicationId) {
-    throw new Error("HASHNODE_PUBLICATION_ID environment variable is not set");
+    console.warn("HASHNODE_PUBLICATION_ID environment variable is not set. Returning null.");
+    return null;
   }
 
   const query = `
@@ -173,14 +190,21 @@ export async function getPostBySlug(slug: string): Promise<HashnodePost | null> 
     });
 
     if (!response.ok) {
-      throw new Error(`Hashnode API error: ${response.statusText}`);
+      console.warn(`Hashnode API error: ${response.statusText}. Returning null for post "${slug}".`);
+      return null;
     }
 
     const data: HashnodeSinglePostResponse = await response.json();
 
+    // Check for GraphQL errors
+    if (data.errors) {
+      console.warn(`Hashnode GraphQL errors for post "${slug}":`, data.errors);
+      return null;
+    }
+
     return data.data?.publication?.post || null;
   } catch (error) {
-    console.error(`Error fetching post "${slug}" from Hashnode:`, error);
+    console.warn(`Error fetching post "${slug}" from Hashnode:`, error);
     return null;
   }
 }

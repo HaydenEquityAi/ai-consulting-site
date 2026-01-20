@@ -5,13 +5,24 @@ import { getPostBySlug, mapTagToCategory, getCardColor } from "../../lib/hashnod
 export async function getStaticPaths() {
   // This will be populated at build time
   // For now, we'll fetch all posts to generate paths
-  const { getAllPosts } = await import("../../lib/hashnode");
-  const posts = await getAllPosts();
-  
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  try {
+    const { getAllPosts } = await import("../../lib/hashnode");
+    const posts = await getAllPosts();
+    
+    // Return empty array if no posts to prevent build failure
+    if (!posts || posts.length === 0) {
+      return [];
+    }
+    
+    return posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { post },
+    }));
+  } catch (error) {
+    console.warn("Error in getStaticPaths for blog posts:", error);
+    // Return empty array to allow build to continue
+    return [];
+  }
 }
 
 interface Props {

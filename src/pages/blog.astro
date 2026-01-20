@@ -2,8 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import { getAllPosts, mapTagToCategory, getCardColor, getCategoryIcon } from "../lib/hashnode";
 
-// Fetch posts from Hashnode
-const posts = await getAllPosts();
+// Fetch posts from Hashnode - handle errors gracefully
+let posts: Awaited<ReturnType<typeof getAllPosts>> = [];
+try {
+  posts = await getAllPosts();
+} catch (error) {
+  console.warn("Error fetching blog posts:", error);
+  posts = [];
+}
 
 // Sort by publishedAt descending
 const sortedPosts = posts.sort((a, b) => {
