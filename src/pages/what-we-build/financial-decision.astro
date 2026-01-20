@@ -4,115 +4,302 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Financial & Decision Systems - intelio">
 <main>
-  <!-- HERO SECTION (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">Financial & Decision Systems</h1>
-      <p class="text-lg sm:text-xl text-gray-400">Real-time visibility into money, margins, and trade-offs.</p>
+  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+  <section class="hero-financial min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Image/Video -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
+      <!-- You can add a video or image here for finance/analytics/dashboard theme -->
+    </div>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          Financial & Decision Systems
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Real-time visibility into money, margins, and trade-offs.
+        </p>
+        <a href="#how-it-works" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+          See How It Works
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What Breaks (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What Breaks</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">Most organizations:</p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Close books late</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Lack real-time visibility into profitability</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Can't see margin by project, client, or segment</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Make financial decisions reactively</span>
-        </li>
-      </ul>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">Finance becomes historical reporting instead of a control system.</p>
+  <!-- SECTION: What Breaks (Light background) -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">What Breaks</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        Most organizations:
+      </p>
+
+      <!-- Problem Cards - 2x2 grid -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <!-- Card 1: Late Closes -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Late Closes</h4>
+          <p class="text-sm text-gray-500">Close books late</p>
+        </div>
+
+        <!-- Card 2: No Real-Time Visibility -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.29 3.29m0 0L3 3m3.29 3.29L3 3m6.29 6.29L3 3m6.29 6.29l3.29 3.29m0 0L21 21m-3.29-3.29L21 21m-6.29-6.29L21 21"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">No Real-Time Visibility</h4>
+          <p class="text-sm text-gray-500">Lack real-time visibility into profitability</p>
+        </div>
+
+        <!-- Card 3: Blind Margins -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Blind Margins</h4>
+          <p class="text-sm text-gray-500">Can't see margin by project, client, or segment</p>
+        </div>
+
+        <!-- Card 4: Reactive Decisions -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Reactive Decisions</h4>
+          <p class="text-sm text-gray-500">Make financial decisions reactively</p>
+        </div>
+      </div>
+
+      <!-- Callout Box -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
+        <p class="text-base text-gray-700 font-medium">
+          Finance becomes historical reporting instead of a control system.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What We Build (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What We Build</h2>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">We build financial and decision systems that connect operations to money.</p>
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">This includes:</h3>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Job and project costing</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Margin and profitability analysis</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Cash flow tracking</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Forecasting and scenario modeling</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Executive dashboards grounded in operational data</span>
-        </li>
-      </ul>
+  <!-- SECTION: What We Build (White background) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">What We Build</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        We build financial and decision systems that connect operations to money.
+      </p>
+
+      <!-- Feature Cards - 3x2 grid (5 cards) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Job & Project Costing -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Job & Project Costing</h4>
+          <p class="text-sm text-gray-500">Accurate cost tracking at the job and project level</p>
+        </div>
+
+        <!-- Card 2: Margin Analysis -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Margin Analysis</h4>
+          <p class="text-sm text-gray-500">Margin and profitability analysis by project, client, or segment</p>
+        </div>
+
+        <!-- Card 3: Cash Flow Tracking -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Cash Flow Tracking</h4>
+          <p class="text-sm text-gray-500">Real-time visibility into cash position and flow</p>
+        </div>
+
+        <!-- Card 4: Forecasting & Scenarios -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Forecasting & Scenarios</h4>
+          <p class="text-sm text-gray-500">Forecasting and scenario modeling for confident planning</p>
+        </div>
+
+        <!-- Card 5: Executive Dashboards -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Executive Dashboards</h4>
+          <p class="text-sm text-gray-500">Executive dashboards grounded in operational data</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: How It Works (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">How It Works</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">We integrate financial data directly with operational activity, so leadership sees not just outcomes—but drivers.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">AI is used for forecasting, trend detection, and scenario modeling where appropriate.</p>
+  <!-- SECTION: How It Works (Process Steps) -->
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100" id="how-it-works">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">How It Works</p>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 01: Connect -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">01</span>
+          </div>
+          <h4 class="font-semibold mb-2">Connect</h4>
+          <p class="text-sm text-gray-500">We integrate financial data directly with operational activity.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 02: Model -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">02</span>
+          </div>
+          <h4 class="font-semibold mb-2">Model</h4>
+          <p class="text-sm text-gray-500">Build financial models that reflect how your business actually operates.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 03: Surface -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">03</span>
+          </div>
+          <h4 class="font-semibold mb-2">Surface</h4>
+          <p class="text-sm text-gray-500">Leadership sees not just outcomes—but drivers.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 04: Forecast -->
+        <div class="border border-gray-200 rounded-xl p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">04</span>
+          </div>
+          <h4 class="font-semibold mb-2">Forecast</h4>
+          <p class="text-sm text-gray-500">AI-powered forecasting, trend detection, and scenario modeling where appropriate.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: The Impact (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">The Impact</h2>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Clear financial truth</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Better capital allocation</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Fewer surprises</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Confident decision-making</span>
-        </li>
-      </ul>
+  <!-- SECTION: The Impact (Checkmark list) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">The Impact</p>
+      
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Clear financial truth</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Better capital allocation</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Fewer surprises</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Confident decision-making</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- CTA SECTION (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-8 sm:mb-12">Ready to see the real numbers?</h2>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-        Work with Intelio
-      </a>
+  <!-- GRADIENT CTA SECTION -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to see the real numbers?</h2>
+        <p class="text-white/80 mb-8">Let's build financial systems that give you clarity and control</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+          Work with Intelio
+        </a>
+      </div>
     </div>
   </section>
 </main>
 </Layout>
 
+<style>
+  .hero-financial {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
