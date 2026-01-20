@@ -4,115 +4,314 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Operational Systems - intelio">
 <main>
-  <!-- HERO SECTION (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal mb-4 sm:mb-6">Operational Systems</h1>
-      <p class="text-lg sm:text-xl text-gray-400">Systems that run the business day to day—without living in people's heads.</p>
+  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+  <section class="hero-operational min-h-screen flex items-center relative overflow-hidden">
+    <!-- Background Image/Video -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
+      <!-- You can add a video or image here for operations/workflow/team coordination theme -->
+    </div>
+    
+    <!-- Dark Overlay for text readability -->
+    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
+          Operational Systems
+        </h1>
+        <p class="text-lg text-white/70 mb-8">
+          Systems that run the business day to day—without living in people's heads.
+        </p>
+        <a href="#how-it-works" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
+          See How It Works
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What Breaks (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What Breaks</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">Operations break when:</p>
-      <ul class="space-y-4 mb-8">
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Processes live in people's heads</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Execution varies by individual</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Tools don't reflect reality</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-700">
-          <span class="text-gray-400 mt-1">•</span>
-          <span>Scaling increases chaos instead of output</span>
-        </li>
-      </ul>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed">This leads to burnout, errors, and stalled growth.</p>
+  <!-- SECTION: What Breaks (Light background) -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">What Breaks</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        Operations break when:
+      </p>
+
+      <!-- Problem Cards - 2x2 grid -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <!-- Card 1: Tribal Knowledge -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Tribal Knowledge</h4>
+          <p class="text-sm text-gray-500">Processes live in people's heads</p>
+        </div>
+
+        <!-- Card 2: Inconsistent Execution -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Inconsistent Execution</h4>
+          <p class="text-sm text-gray-500">Execution varies by individual</p>
+        </div>
+
+        <!-- Card 3: Disconnected Tools -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.735c-1.217.857-2.61 1.34-4.116 1.34-1.506 0-2.899-.483-4.116-1.34a4.5 4.5 0 01-4.884-4.735A4.5 4.5 0 0112 2.25c2.729 0 5.018 1.794 5.75 4.5zM21.75 17.25a4.5 4.5 0 01-4.884 4.735c-1.217.857-2.61 1.34-4.116 1.34-1.506 0-2.899-.483-4.116-1.34a4.5 4.5 0 01-4.884-4.735A4.5 4.5 0 0112 13.5c2.729 0 5.018 1.794 5.75 4.5z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Disconnected Tools</h4>
+          <p class="text-sm text-gray-500">Tools don't reflect reality</p>
+        </div>
+
+        <!-- Card 4: Scaling = Chaos -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Scaling = Chaos</h4>
+          <p class="text-sm text-gray-500">Scaling increases chaos instead of output</p>
+        </div>
+      </div>
+
+      <!-- Callout Box -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
+        <p class="text-base text-gray-700 font-medium">
+          This leads to burnout, errors, and stalled growth.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: What We Build (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">What We Build</h2>
-      <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">We design operational systems that make execution consistent, accountable, and scalable.</p>
-      <h3 class="text-lg sm:text-xl font-semibold text-white mb-4">This includes:</h3>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Workflow automation</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Task and responsibility tracking</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Scheduling and execution logic</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>SOPs embedded directly into tools</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span>Cross-team coordination systems</span>
-        </li>
-      </ul>
+  <!-- SECTION: What We Build (White background) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-4">What We Build</p>
+      <p class="text-lg text-gray-600 mb-12 max-w-3xl">
+        We design operational systems that make execution consistent, accountable, and scalable.
+      </p>
+
+      <!-- Feature Cards - 3x2 grid (5 cards) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Workflow Automation -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Workflow Automation</h4>
+          <p class="text-sm text-gray-500">Automated workflows that eliminate manual handoffs</p>
+        </div>
+
+        <!-- Card 2: Task Tracking -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Task Tracking</h4>
+          <p class="text-sm text-gray-500">Task and responsibility tracking with clear ownership</p>
+        </div>
+
+        <!-- Card 3: Scheduling Logic -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Scheduling Logic</h4>
+          <p class="text-sm text-gray-500">Scheduling and execution logic built into the system</p>
+        </div>
+
+        <!-- Card 4: Embedded SOPs -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Embedded SOPs</h4>
+          <p class="text-sm text-gray-500">SOPs embedded directly into tools—not buried in docs</p>
+        </div>
+
+        <!-- Card 5: Cross-Team Coordination -->
+        <div class="service-card bg-gray-50 rounded-xl p-6">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.645-5.888-1.654A15.97 15.97 0 016 18.72m3.28-1.528a3 3 0 00-1.413-1.414M6 18.72a9.094 9.094 0 01-3.741-.479 3 3 0 014.682-2.72m.94 3.198l-.001.031c0 .225.012.447.037.666A11.944 11.944 0 0012 21c2.17 0 4.207-.645 5.888-1.654A15.97 15.97 0 0018 18.72m-6 0a9.094 9.094 0 01-3.741-.479 3 3 0 014.682-2.72m.94 3.198l-.001.031c0 .225.012.447.037.666A11.944 11.944 0 0112 21c2.17 0 4.207-.645 5.888-1.654A15.97 15.97 0 0018 18.72m-6 0V9.75m0 0a9.094 9.094 0 013.741-.479 3 3 0 014.682 2.72m-.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.645-5.888-1.654A15.97 15.97 0 016 18.72V9.75"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold mb-2">Cross-Team Coordination</h4>
+          <p class="text-sm text-gray-500">Systems that connect teams without endless meetings</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: How It Works (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">How It Works</h2>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">We observe how work actually gets done, then build systems that support reality—not theory.</p>
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">Automation reduces friction; systems create accountability.</p>
+  <!-- SECTION: How It Works (Process Steps) -->
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100" id="how-it-works">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">How It Works</p>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <!-- Step 01: Observe -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">01</span>
+          </div>
+          <h4 class="font-semibold mb-2">Observe</h4>
+          <p class="text-sm text-gray-500">We observe how work actually gets done—not how it's documented.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 02: Design -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">02</span>
+          </div>
+          <h4 class="font-semibold mb-2">Design</h4>
+          <p class="text-sm text-gray-500">Build systems that support reality, not theory.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 03: Automate -->
+        <div class="border border-gray-200 rounded-xl p-6 relative">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">03</span>
+          </div>
+          <h4 class="font-semibold mb-2">Automate</h4>
+          <p class="text-sm text-gray-500">Reduce friction by automating repetitive handoffs and triggers.</p>
+          <div class="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 04: Systematize -->
+        <div class="border border-gray-200 rounded-xl p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
+              </svg>
+            </div>
+            <span class="text-5xl font-light text-gray-200">04</span>
+          </div>
+          <h4 class="font-semibold mb-2">Systematize</h4>
+          <p class="text-sm text-gray-500">Create accountability through structure, not supervision.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION: The Impact (Dark) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-6 sm:mb-8">The Impact</h2>
-      <ul class="space-y-4">
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Fewer fires</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Faster onboarding</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Consistent delivery</span>
-        </li>
-        <li class="flex items-start gap-3 text-gray-300">
-          <span class="text-gray-500 mt-1">•</span>
-          <span class="text-lg">Operations that scale without breaking</span>
-        </li>
-      </ul>
+  <!-- SECTION: The Principle (Quote/Callout) -->
+  <section class="py-12 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-blue-50 border-l-4 border-blue-500 rounded-xl p-8">
+        <p class="text-xl md:text-2xl text-gray-700 italic text-center font-medium">
+          "Automation reduces friction; systems create accountability."
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- CTA SECTION (Light) -->
-  <section class="py-16 sm:py-20 md:py-24 bg-white text-black">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-normal mb-8 sm:mb-12">Ready to stop firefighting?</h2>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-black text-white text-base sm:text-lg font-medium rounded-full hover:bg-gray-800 transition-colors min-h-[56px]">
-        Work with Intelio
-      </a>
+  <!-- SECTION: The Impact (Checkmark list) -->
+  <section class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm text-gray-500 mb-12">The Impact</p>
+      
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Fewer fires</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Faster onboarding</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Consistent delivery</span>
+          </li>
+          <li class="flex items-center gap-3 text-gray-700">
+            <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-base">Operations that scale without breaking</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRADIENT CTA SECTION -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 rounded-3xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Ready to stop firefighting?</h2>
+        <p class="text-white/80 mb-8">Let's build systems that run the business without constant intervention</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+          Work with Intelio
+        </a>
+      </div>
     </div>
   </section>
 </main>
 </Layout>
 
+<style>
+  .hero-operational {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
