@@ -750,7 +750,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- ENHANCED HOW THE LAYERS WORK TOGETHER -->
+  <!-- ENHANCED HOW THE LAYERS WORK TOGETHER - INTERACTIVE CAROUSEL -->
   <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
@@ -766,42 +766,108 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
 
-      <!-- Enhanced Flow Diagram -->
-      <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200 shadow-xl mb-8 overflow-x-auto">
-        <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 min-w-max">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Revenue</p>
+      <!-- Interactive Carousel -->
+      <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-gray-200 shadow-xl mb-8">
+        <div class="relative">
+          <!-- Carousel Container -->
+          <div class="layers-carousel-container overflow-hidden relative">
+            <div class="layers-carousel-track flex transition-transform duration-500 ease-in-out" id="layers-carousel-track">
+              <!-- Layer 1: Revenue -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">01</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Revenue</h3>
+                    <p class="text-lg text-gray-700">How demand becomes predictable revenue</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Layer 2: Operations -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">02</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Operations</h3>
+                    <p class="text-lg text-gray-700">How work actually gets done</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Layer 3: Finance -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">03</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Finance</h3>
+                    <p class="text-lg text-gray-700">How money becomes visible and controllable</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Layer 4: Intelligence -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">04</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Intelligence</h3>
+                    <p class="text-lg text-gray-700">Where AI creates real leverage</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Layer 5: Leadership -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">05</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Leadership</h3>
+                    <p class="text-lg text-gray-700">How leaders regain control</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Layer 6: Strategy -->
+              <div class="layers-carousel-slide min-w-full flex-shrink-0 px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-2xl px-12 py-16 shadow-xl inline-block">
+                    <div class="text-6xl font-bold text-blue-600 mb-4">06</div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Strategy</h3>
+                    <p class="text-lg text-gray-700">How direction becomes execution</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Operations</p>
-          </div>
-          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Finance</p>
-          </div>
-          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Intelligence</p>
-          </div>
-          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Leadership</p>
-          </div>
-          <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 rounded-xl px-8 py-5 shadow-lg hover:scale-105 transition-transform">
-            <p class="font-bold text-gray-900 whitespace-nowrap text-lg">Strategy</p>
-          </div>
+
+          <!-- Navigation Buttons -->
+          <button 
+            class="layers-carousel-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center hover:bg-blue-50 hover:border-blue-500 transition-all duration-300 shadow-lg"
+            aria-label="Previous layer"
+          >
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          
+          <button 
+            class="layers-carousel-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white border-2 border-gray-300 rounded-full flex items-center justify-center hover:bg-blue-50 hover:border-blue-500 transition-all duration-300 shadow-lg"
+            aria-label="Next layer"
+          >
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="flex justify-center gap-3 mt-8">
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="0" aria-label="Go to Revenue layer"></button>
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="1" aria-label="Go to Operations layer"></button>
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="2" aria-label="Go to Finance layer"></button>
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="3" aria-label="Go to Intelligence layer"></button>
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="4" aria-label="Go to Leadership layer"></button>
+          <button class="layers-carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300 active:bg-blue-600 active:w-8" data-index="5" aria-label="Go to Strategy layer"></button>
         </div>
       </div>
 
@@ -992,4 +1058,164 @@ import Layout from "../layouts/Layout.astro";
       animation: logo-scroll 40s linear infinite;
     }
   }
+
+  /* Layers Carousel Styles */
+  .layers-carousel-container {
+    position: relative;
+    min-height: 300px;
+  }
+
+  .layers-carousel-track {
+    display: flex;
+    will-change: transform;
+  }
+
+  .layers-carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .layers-carousel-dot.active {
+    background-color: #2563eb;
+    width: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .layers-carousel-prev {
+      left: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .layers-carousel-next {
+      right: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .layers-carousel-prev svg,
+    .layers-carousel-next svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
 </style>
+
+<script>
+  // Layers Carousel Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('layers-carousel-track');
+    const slides = track.querySelectorAll('.layers-carousel-slide');
+    const prevBtn = document.querySelector('.layers-carousel-prev');
+    const nextBtn = document.querySelector('.layers-carousel-next');
+    const dots = document.querySelectorAll('.layers-carousel-dot');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+      const translateX = -currentIndex * 100;
+      track.style.transform = `translateX(${translateX}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+      
+      // Update button states
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === totalSlides - 1;
+    }
+
+    function goToSlide(index) {
+      if (index >= 0 && index < totalSlides) {
+        currentIndex = index;
+        updateCarousel();
+      }
+    }
+
+    function nextSlide() {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }
+
+    // Auto-play (optional - uncomment to enable)
+    // let autoPlayInterval = setInterval(() => {
+    //   if (currentIndex < totalSlides - 1) {
+    //     nextSlide();
+    //   } else {
+    //     goToSlide(0);
+    //   }
+    // }, 5000);
+
+    // Pause auto-play on hover
+    // const carouselContainer = document.querySelector('.layers-carousel-container');
+    // carouselContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    // carouselContainer.addEventListener('mouseleave', () => {
+    //   autoPlayInterval = setInterval(() => {
+    //     if (currentIndex < totalSlides - 1) {
+    //       nextSlide();
+    //     } else {
+    //       goToSlide(0);
+    //     }
+    //   }, 5000);
+    // });
+
+    // Initialize
+    updateCarousel();
+  });
+</script>
