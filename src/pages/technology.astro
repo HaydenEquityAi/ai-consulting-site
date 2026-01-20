@@ -2,67 +2,149 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Technology - intelio">
+<Layout title="Our Technology & Partnerships - Enterprise Grade Platforms - intelio">
 <main>
-  <!-- HERO SECTION WITH BACKGROUND IMAGE -->
-  <section class="hero-technology min-h-screen flex items-center relative overflow-hidden">
-    <!-- Background Image/Video -->
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style="z-index: 0;">
-      <!-- You can add a video or image here for technology/infrastructure/systems architecture theme -->
+  <!-- VIDEO HERO SECTION -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover hidden md:block"
+      >
+        <source src="/videos/heroes/technology-hero.webm" type="video/webm" />
+        <source src="/videos/heroes/technology-hero.mp4" type="video/mp4" />
+      </video>
+      <!-- Mobile fallback -->
+      <div class="md:hidden absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
+      
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40"></div>
+      
+      <!-- Subtle noise texture -->
+      <div class="absolute inset-0 opacity-[0.03] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            Enterprise Grade
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+          Our Technology & Partnerships
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-4 leading-relaxed">
+          Built on proven platforms and partnerships. Designed for scale and reliability.
+        </p>
+        
+        <!-- Philosophy Statement -->
+        <div class="py-6 mb-8 border-y border-white/10">
+          <p class="text-lg text-gray-300">
+            We don't reinvent the wheel. We integrate the best-in-class tools and platforms, and customize them for your business. Microsoft ecosystem mastery. Google cloud native expertise. Best-of-breed integrations across every function.
+          </p>
+        </div>
+        
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#our-stack" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            Explore Our Stack
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+            Technical Consultation
+          </a>
+        </div>
+      </div>
     </div>
     
-    <!-- Dark Overlay for text readability -->
-    <div class="absolute inset-0 bg-black/30 z-[1]"></div>
-
-    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-1px] text-white mb-6">
-          Technology
-        </h1>
-        <p class="text-lg text-white/70 mb-4">
-          Built to support real businesses, not demos.
-        </p>
-        <p class="text-base text-white/60 mb-8">
-          Technology only creates value when it aligns with how a business actually operates.
-        </p>
-        <a href="#philosophy" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors">
-          See Our Approach
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
-      </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
     </div>
   </section>
 
-  <!-- SECTION: Opening Statement -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <div class="prose prose-lg max-w-none text-center">
-        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
-          At intelio, technology is not the product — it's the infrastructure that makes execution reliable, scalable, and visible.
-        </p>
-        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-          We design, integrate, and operate systems that sit underneath revenue, operations, finance, and decision-making — applying AI and automation only where it creates real leverage.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION: Our Philosophy -->
-  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100" id="philosophy">
+  <!-- SECTION: Our Technology Philosophy -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100" id="philosophy">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">Our Philosophy</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Choose Technology</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      </div>
       
-      <!-- Bold Statement -->
-      <div class="text-center mb-12">
-        <p class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-          Technology should disappear into the business.
-        </p>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Most organizations don't fail because they lack tools. They fail because tools are fragmented, poorly integrated, or misaligned with how work actually happens.
+      <!-- Large Statement Block -->
+      <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-12 border-2 border-blue-200 text-center mb-12">
+        <p class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          Enterprise-grade tools. Proven integrations. No experimental software. No unnecessary complexity.
         </p>
       </div>
+
+      <!-- Four Core Principles -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Principle 1: Proven & Supported -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Proven & Supported</h3>
+          <p class="text-gray-600 leading-relaxed">We build on platforms with active development, strong support, and large user bases. Enterprise-grade reliability and security. Migration paths if you change direction.</p>
+        </div>
+
+        <!-- Principle 2: Best-in-Class for Each Function -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Best-in-Class for Each Function</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">We don't force everything into one platform.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div><strong>CRM:</strong> Salesforce, HubSpot, Dynamics 365, Pipedrive</div>
+            <div><strong>BI:</strong> Power BI, Tableau, Looker, Qlik</div>
+            <div><strong>Automation:</strong> n8n, Make, Power Automate, Zapier</div>
+            <div><strong>Cloud:</strong> Azure, Google Cloud, AWS, Vercel</div>
+            <div><strong>AI/ML:</strong> OpenAI, Anthropic, Google AI, Azure AI</div>
+          </div>
+        </div>
+
+        <!-- Principle 3: Integration First -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Integration First</h3>
+          <p class="text-gray-600 leading-relaxed">Every platform choice considers how it integrates with your ecosystem. Native APIs preferred over custom workarounds. Real-time sync where it matters, batch where it doesn't.</p>
+        </div>
+
+        <!-- Principle 4: Your Infrastructure -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-md hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Your Infrastructure</h3>
+          <p class="text-gray-600 leading-relaxed">Platforms you choose or already own. Cloud-agnostic where possible. Your data stays in your infrastructure. No vendor lock-in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
       <!-- Framework (3-step approach) -->
       <div class="mb-12">
@@ -98,13 +180,569 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION: The Intelio Operating Layers (Centerpiece) -->
+  <!-- SECTION: Core Technology Foundation -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100" id="our-stack">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Complete Technology Stack</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+          Enterprise-grade platforms organized by function
+        </p>
+      </div>
+
+      <!-- Category: Business Intelligence & Analytics -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+          <span class="w-1 h-8 bg-blue-600"></span>
+          Business Intelligence & Analytics
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Power BI -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Power BI</h4>
+            <p class="text-sm text-gray-600 mb-3">Microsoft's enterprise analytics platform. Real-time dashboards, AI-powered insights, seamless M365 integration</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Tight Microsoft ecosystem integration, enterprise-grade security, advanced analytics</p>
+          </div>
+
+          <!-- Tableau -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Tableau</h4>
+            <p class="text-sm text-gray-600 mb-3">Industry-leading data visualization platform. Deep analytics, interactive dashboards, complex data exploration</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Unmatched visualization capabilities, data discovery, enterprise scale</p>
+          </div>
+
+          <!-- Looker -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Looker</h4>
+            <p class="text-sm text-gray-600 mb-3">Google's modern BI platform. Semantic layer, embedded analytics, real-time data</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Google Cloud integration, API-first design, real-time capabilities</p>
+          </div>
+
+          <!-- Qlik Sense -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Qlik Sense</h4>
+            <p class="text-sm text-gray-600 mb-3">Associative analytics engine. Self-service analytics, data storytelling, advanced analytics</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Powerful data engine, intuitive UI, enterprise features</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Data Integration & Pipelines -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+          <span class="w-1 h-8 bg-green-600"></span>
+          Data Integration & Pipelines
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- n8n -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">n8n</h4>
+            <p class="text-sm text-gray-600 mb-3">Open-source workflow automation. More flexible than Zapier, self-hostable, advanced integrations</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Flexibility, control, cost-effectiveness for complex scenarios</p>
+          </div>
+
+          <!-- Make -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Make (Integromat)</h4>
+            <p class="text-sm text-gray-600 mb-3">Visual automation platform. Intuitive interface, powerful scenarios, extensive app library</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> User-friendly, powerful capabilities, extensive integrations</p>
+          </div>
+
+          <!-- Zapier -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Zapier</h4>
+            <p class="text-sm text-gray-600 mb-3">No-code automation platform. Largest app library, easy setup, enterprise-grade</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Reliability, ease of use, widest integration library</p>
+          </div>
+
+          <!-- Power Automate -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Power Automate</h4>
+            <p class="text-sm text-gray-600 mb-3">Microsoft's automation platform. Built into M365, RPA capabilities, cloud flows</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> M365 native integration, enterprise features, no licensing overhead</p>
+          </div>
+
+          <!-- Supabase -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Supabase</h4>
+            <p class="text-sm text-gray-600 mb-3">Open-source Firebase alternative. Postgres database, real-time APIs, authentication</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Postgresql power, open-source, cost-effective, full control</p>
+          </div>
+
+          <!-- Airbyte -->
+          <div class="tech-card bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all">
+            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-2">Airbyte</h4>
+            <p class="text-sm text-gray-600 mb-3">Open-source data integration. Extract data from any source, load to any warehouse</p>
+            <p class="text-xs text-gray-500"><strong>Why:</strong> Flexible, extensive connectors, data quality, cost-effective</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Microsoft Ecosystem Expertise -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Microsoft Technology Leadership</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+          Deep expertise in the Microsoft ecosystem that many enterprise teams already use.
+        </p>
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200 max-w-4xl mx-auto">
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            If you use Microsoft, we maximize its value. M365, Dynamics 365, Azure AI—we integrate them all into intelligent systems that work for your business.
+          </p>
+        </div>
+      </div>
+
+      <!-- Microsoft Premium Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: M365 Copilot Integration -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Enterprise Ready</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">M365 Copilot Integration</h3>
+          <p class="text-sm text-gray-600 mb-4">Embed intelligence into Word, Excel, Teams, and Outlook. Automated report generation, data analysis, intelligent content creation powered by Azure OpenAI.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Copilot in Word:</strong> Intelligent content generation, document summarization</div>
+            <div><strong>Copilot in Excel:</strong> Formula assistance, data analysis, trend identification</div>
+            <div><strong>Copilot in Teams:</strong> Meeting summarization, action items, intelligent search</div>
+            <div><strong>Copilot in Outlook:</strong> Email drafting, scheduling intelligence</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep M365</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Dynamics 365 Integration -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Enterprise Ready</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Dynamics 365 Integration</h3>
+          <p class="text-sm text-gray-600 mb-4">Connect sales, operations, and finance in unified platform. Complete business process automation, unified reporting, real-time visibility across departments.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Sales Cloud:</strong> Pipeline management, forecasting, deal acceleration</div>
+            <div><strong>Operations:</strong> Supply chain, project operations, asset management</div>
+            <div><strong>Finance:</strong> Accounting, budgeting, financial planning</div>
+            <div><strong>Unified Data:</strong> Single source of truth across functions</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep ecosystem</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Azure AI Services -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Enterprise Grade</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Azure AI Services</h3>
+          <p class="text-sm text-gray-600 mb-4">Enterprise-grade AI capabilities for document analysis, forecasting, anomaly detection. Powered by Azure's secure infrastructure and AI models.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Document Intelligence:</strong> Invoice, receipt, form processing</div>
+            <div><strong>Anomaly Detection:</strong> Identify unusual patterns in data</div>
+            <div><strong>Forecast:</strong> Time-series prediction and forecasting</div>
+            <div><strong>Language Services:</strong> NLP, sentiment analysis, entity extraction</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep technical</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Power Platform -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-green-600 text-white text-xs font-semibold rounded-full">Rapid Development</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Power Platform (BI, Apps, Automate)</h3>
+          <p class="text-sm text-gray-600 mb-4">Power BI for visualization, Power Apps for custom applications, Power Automate for workflows. Rapid development without writing code.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Power BI:</strong> Interactive dashboards, real-time analytics</div>
+            <div><strong>Power Apps:</strong> Canvas apps, model-driven apps, rapid development</div>
+            <div><strong>Power Automate:</strong> Cloud flows, RPA, business process flows</div>
+            <div><strong>Dataverse:</strong> Central data platform for Power Platform</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Intermediate to Advanced | <strong>Integration:</strong> Comprehensive</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Teams Integration -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Deep Integration</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Teams Integration & Automation</h3>
+          <p class="text-sm text-gray-600 mb-4">Embed apps, automations, and intelligent data directly into Teams workflows. Workflow notifications, decision support, intelligent collaboration.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Teams Apps:</strong> Custom app development and embedding</div>
+            <div><strong>Workflow Automations:</strong> Trigger-based teams workflows</div>
+            <div><strong>Actionable Messages:</strong> Rich interactive messages</div>
+            <div><strong>Meeting Intelligence:</strong> Recording, transcription, insights</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Intermediate | <strong>Integration:</strong> Deep Teams</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Azure Infrastructure -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Enterprise Scale</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Azure Infrastructure & Data</h3>
+          <p class="text-sm text-gray-600 mb-4">Enterprise cloud platform for hosting, data warehousing, AI services. Secure, scalable, compliant infrastructure powering intelligent systems.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>App Service:</strong> Application hosting and scaling</div>
+            <div><strong>SQL Server & Azure SQL:</strong> Enterprise database platform</div>
+            <div><strong>Synapse Analytics:</strong> Enterprise data warehousing</div>
+            <div><strong>Azure OpenAI:</strong> Enterprise OpenAI deployment</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Comprehensive</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Microsoft Statement -->
+      <div class="mt-12 bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
+        <p class="text-lg font-medium text-gray-900">
+          Microsoft ecosystem mastery means we don't fight your infrastructure—we enhance it. Every integration is designed to work seamlessly with what you already have, reducing friction and accelerating time-to-value.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Google Cloud Ecosystem Expertise -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Google Cloud & Workspace Leadership</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+          Deep expertise in Google's cloud-native and analytics platforms that power modern, data-driven enterprises.
+        </p>
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200 max-w-4xl mx-auto">
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            If you use Google Workspace and GCP, we unlock their full potential. BigQuery, Vertex AI, Looker, Cloud Workflows—we integrate them into systems that scale with your business.
+          </p>
+        </div>
+      </div>
+
+      <!-- Google Premium Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Google Workspace Copilot -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">AI-Native</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Google Workspace Copilot Integration</h3>
+          <p class="text-sm text-gray-600 mb-4">Embed generative AI throughout Google Workspace. Intelligent document creation, spreadsheet analysis, email automation powered by Gemini.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Docs Assist:</strong> Content generation, writing refinement</div>
+            <div><strong>Sheets Assist:</strong> Formula generation, data analysis</div>
+            <div><strong>Gmail Assist:</strong> Email drafting, response suggestions</div>
+            <div><strong>Meet Assist:</strong> Real-time transcription, meeting notes</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep Workspace</div>
+          </div>
+        </div>
+
+        <!-- Card 2: BigQuery -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Petabyte Scale</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">BigQuery Integration</h3>
+          <p class="text-sm text-gray-600 mb-4">Enterprise data warehouse for analytics at scale. Real-time analytics, built-in ML, SQL-based analysis of petabyte-scale data.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Petabyte-scale SQL analytics</strong></div>
+            <div><strong>Real-time data streaming</strong></div>
+            <div><strong>Built-in ML functions</strong></div>
+            <div><strong>Cost-efficient data warehousing</strong></div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep data</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Vertex AI -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Enterprise ML</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Vertex AI & Custom ML Models</h3>
+          <p class="text-sm text-gray-600 mb-4">Google's unified AI platform for model development and deployment. AutoML, custom models, real-time predictions, enterprise scale.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>AutoML:</strong> Automated model training</div>
+            <div><strong>Custom Training:</strong> Full control over model development</div>
+            <div><strong>Model Deployment:</strong> Scalable serving and predictions</div>
+            <div><strong>Gemini Integration:</strong> Multimodal model capabilities</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Advanced | <strong>Integration:</strong> Deep ML</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Looker -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Semantic Analytics</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Looker Analytics Platform</h3>
+          <p class="text-sm text-gray-600 mb-4">Modern BI platform with semantic layer. Self-service analytics, embedded dashboards, data storytelling.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Semantic Layer:</strong> Consistent business definitions</div>
+            <div><strong>Self-Service Analytics:</strong> User-driven exploration</div>
+            <div><strong>Embedded Analytics:</strong> Dashboard embedding in apps</div>
+            <div><strong>Real-time Data:</strong> Dynamic, current analysis</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Intermediate to Advanced | <strong>Integration:</strong> Comprehensive BI</div>
+          </div>
+        </div>
+
+        <!-- Card 5: Cloud Workflows -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-green-600 text-white text-xs font-semibold rounded-full">Serverless</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Workflows & Functions</h3>
+          <p class="text-sm text-gray-600 mb-4">Orchestrate complex workflows and serverless functions. Event-driven automation, workflow coordination, cost-efficient processing.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Cloud Workflows:</strong> Visual workflow orchestration</div>
+            <div><strong>Cloud Functions:</strong> Event-driven serverless compute</div>
+            <div><strong>Pub/Sub:</strong> Messaging and event streaming</div>
+            <div><strong>Cloud Tasks:</strong> Task scheduling and queuing</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Intermediate to Advanced | <strong>Integration:</strong> Deep automation</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Cloud Storage & Infrastructure -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">Global Scale</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Storage & Data Infrastructure</h3>
+          <p class="text-sm text-gray-600 mb-4">Secure, scalable cloud infrastructure. Multi-regional storage, data governance, compliance and security at enterprise scale.</p>
+          <div class="space-y-2 text-xs text-gray-600 mb-4">
+            <div><strong>Cloud Storage:</strong> Scalable object storage</div>
+            <div><strong>Firestore/Datastore:</strong> Document databases</div>
+            <div><strong>Cloud SQL:</strong> Managed relational databases</div>
+            <div><strong>Data Loss Prevention:</strong> Data security and governance</div>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-xs text-gray-500"><strong>Skill Level:</strong> Intermediate | <strong>Integration:</strong> Comprehensive</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Statement -->
+      <div class="mt-12 bg-blue-50 rounded-2xl p-8 border-l-4 border-blue-600">
+        <p class="text-lg font-medium text-gray-900">
+          Google Cloud expertise means we build systems that scale with your data. From real-time analytics to AI-powered predictions, we unlock the power of Google's data and AI platforms to drive competitive advantage.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Integration Architecture & Patterns -->
   <section class="py-24 px-6 bg-white border-t border-gray-100">
     <div class="max-w-6xl mx-auto">
-      <p class="text-sm text-gray-500 mb-4">The Intelio Operating Layers</p>
-      <p class="text-lg text-gray-600 mb-16 max-w-3xl">
-        Rather than selling tools, we architect operating layers that work together.
-      </p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Architect Integration</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200 max-w-4xl mx-auto mb-12">
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            Regardless of your platform choice—Microsoft, Google, AWS, or hybrid—we follow proven integration patterns that maximize reliability, minimize complexity, and ensure your systems work together seamlessly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Integration Patterns -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Pattern 1: API-First -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">API-First Integration</h3>
+          <p class="text-gray-600 mb-4">Leverage native APIs for real-time data flow. Preferred approach for mission-critical systems.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div><strong>Benefits:</strong> Real-time data, reduced latency, complete control</div>
+            <div><strong>Technologies:</strong> REST/GraphQL APIs, Webhooks, OAuth, API gateways</div>
+            <div><strong>When to use:</strong> Real-time requirements, frequent data updates, complex logic</div>
+          </div>
+        </div>
+
+        <!-- Pattern 2: ETL/ELT Pipelines -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">ETL/ELT Pipelines</h3>
+          <p class="text-gray-600 mb-4">Scheduled data movement and transformation. Cost-effective for batch processing.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div><strong>Benefits:</strong> Cost efficiency, data transformation, auditable processes</div>
+            <div><strong>Technologies:</strong> n8n, Airflow, Dataflow, Cloud Data Fusion</div>
+            <div><strong>When to use:</strong> Large data volumes, periodic updates, complex transformations</div>
+          </div>
+        </div>
+
+        <!-- Pattern 3: Event-Driven -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Event-Driven Architecture</h3>
+          <p class="text-gray-600 mb-4">Decoupled systems communicating through events. Scalable and flexible.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div><strong>Benefits:</strong> Scalability, flexibility, decoupled systems</div>
+            <div><strong>Technologies:</strong> Pub/Sub, Event Hubs, Kafka, Cloud Events</div>
+            <div><strong>When to use:</strong> Multiple consumers, asynchronous processing, event streams</div>
+          </div>
+        </div>
+
+        <!-- Pattern 4: Hybrid Approach -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Hybrid Approach</h3>
+          <p class="text-gray-600 mb-4">Combine multiple patterns for optimal efficiency.</p>
+          <div class="space-y-2 text-sm text-gray-600">
+            <div><strong>Use case:</strong> Real-time critical data via APIs, periodic bulk operations via ETL, event-driven notifications</div>
+            <div><strong>Benefits:</strong> Flexibility, optimization, cost efficiency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
       <!-- Layer 1: Core Business Systems -->
       <div class="bg-gray-50 rounded-2xl p-8 md:p-12 mb-8 border border-gray-200">
@@ -397,8 +1035,239 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- SECTION: Selection Criteria Matrix -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How We Choose Technologies</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+      </div>
+
+      <!-- Criteria Table -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Criteria</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Priority</th>
+                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Evaluation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Enterprise Support</td>
+                <td class="px-6 py-4 text-sm text-red-600 font-semibold">Critical</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Active vendor, SLA options, support tiers</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Security & Compliance</td>
+                <td class="px-6 py-4 text-sm text-red-600 font-semibold">Critical</td>
+                <td class="px-6 py-4 text-sm text-gray-600">SOC2, ISO, HIPAA, data residency options</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Integration Ecosystem</td>
+                <td class="px-6 py-4 text-sm text-red-600 font-semibold">Critical</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Native APIs, popular integration platforms, middleware</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Scalability</td>
+                <td class="px-6 py-4 text-sm text-orange-600 font-semibold">High</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Performance under load, auto-scaling, limits</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Cost Model</td>
+                <td class="px-6 py-4 text-sm text-orange-600 font-semibold">High</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Transparent pricing, cost predictability, ROI</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">User Experience</td>
+                <td class="px-6 py-4 text-sm text-orange-600 font-semibold">High</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Team adoption, training requirements, intuitiveness</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Customization</td>
+                <td class="px-6 py-4 text-sm text-blue-600 font-semibold">Medium</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Configuration vs. coding, extensibility, flexibility</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Data Portability</td>
+                <td class="px-6 py-4 text-sm text-blue-600 font-semibold">Medium</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Export capabilities, migration paths, vendor lock-in</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Modern Stack</td>
+                <td class="px-6 py-4 text-sm text-blue-600 font-semibold">Medium</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Active development, cloud-native, modern architecture</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 text-sm font-medium text-gray-900">Competitive Advantages</td>
+                <td class="px-6 py-4 text-sm text-blue-600 font-semibold">Medium</td>
+                <td class="px-6 py-4 text-sm text-gray-600">Unique capabilities, market position, innovation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Your Technology Decision -->
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choosing Your Path</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200 max-w-4xl mx-auto mb-12">
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            Different businesses need different technology stacks. We help you choose the right tools for your specific situation—then we build, integrate, and operate them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Decision Cards -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1: All-in Microsoft -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">All-in Microsoft</h3>
+          <p class="text-gray-600 mb-4"><strong>Best for:</strong> Organizations already invested in Microsoft. M365, Microsoft ecosystem familiarity, enterprise requirements.</p>
+          <p class="text-sm text-gray-600 mb-4"><strong>What we build:</strong> Integrated M365 systems, Dynamics 365 automation, Azure-powered intelligence.</p>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-sm text-gray-600 mb-2"><strong>Implementation:</strong> 4-8 weeks</div>
+            <div class="text-sm text-gray-600"><strong>TCO advantage:</strong> Reduces licensing complexity, maximizes existing investments</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Google Cloud Native -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Google Cloud Native</h3>
+          <p class="text-gray-600 mb-4"><strong>Best for:</strong> Data-driven organizations, analytics focus, modern cloud preference.</p>
+          <p class="text-sm text-gray-600 mb-4"><strong>What we build:</strong> BigQuery data systems, Vertex AI models, Looker analytics, GCP infrastructure.</p>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-sm text-gray-600 mb-2"><strong>Implementation:</strong> 4-8 weeks</div>
+            <div class="text-sm text-gray-600"><strong>TCO advantage:</strong> Cost-efficient at scale, powerful analytics, modern architecture</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Best-of-Breed Multi-Cloud -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Best-of-Breed Multi-Cloud</h3>
+          <p class="text-gray-600 mb-4"><strong>Best for:</strong> Organizations needing best-in-class solutions for each function.</p>
+          <p class="text-sm text-gray-600 mb-4"><strong>What we build:</strong> Integrated systems using Salesforce, Snowflake, Tableau, Azure, Google Cloud.</p>
+          <div class="pt-4 border-t border-gray-200">
+            <div class="text-sm text-gray-600 mb-2"><strong>Implementation:</strong> 8-12 weeks</div>
+            <div class="text-sm text-gray-600"><strong>TCO advantage:</strong> Optimal tooling per function, maximum flexibility</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Technology Consulting Process -->
+  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Let's Find Your Ideal Stack</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200 max-w-4xl mx-auto mb-12">
+          <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            Not sure which technologies are right for you? We provide no-pressure technology consulting to help you understand your options.
+          </p>
+        </div>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">01</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Assessment (Week 1)</h3>
+          <p class="text-sm text-gray-600 mb-3"><strong>What we do:</strong> Understand your current systems, business requirements, team capabilities</p>
+          <p class="text-sm text-gray-500"><strong>Outcome:</strong> Clear picture of your technology landscape and needs</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">02</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Evaluation (Week 2-3)</h3>
+          <p class="text-sm text-gray-600 mb-3"><strong>What we do:</strong> Research options, compare platforms against your criteria</p>
+          <p class="text-sm text-gray-500"><strong>Outcome:</strong> Shortlist of recommended technologies with tradeoffs</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">03</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Recommendation (Week 4)</h3>
+          <p class="text-sm text-gray-600 mb-3"><strong>What we do:</strong> Present findings with implementation roadmap and cost analysis</p>
+          <p class="text-sm text-gray-500"><strong>Outcome:</strong> Clear direction and implementation plan</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">04</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Implementation Partnership</h3>
+          <p class="text-sm text-gray-600 mb-3"><strong>What we do:</strong> Build, integrate, and operate your chosen stack</p>
+          <p class="text-sm text-gray-500"><strong>Outcome:</strong> Production-ready systems that work seamlessly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Final CTA -->
+  <section class="py-24 px-6 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Ready to Build Your Intelligent Technology System?
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Whether you're Microsoft-first, Google Cloud native, or need a best-of-breed approach, we'll architect the systems that work for your business.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact?type=tech-consultation" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          Schedule Technology Consultation
+        </a>
+        <a href="/how-we-work#technology" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+          Explore Our Approach
+        </a>
+      </div>
+      
+      <!-- Trust Indicators -->
+      <div class="mt-16 pt-8 border-t border-white/20">
+        <div class="grid md:grid-cols-3 gap-8 text-white/80">
+          <div>
+            <div class="text-2xl font-bold text-white mb-2">50+</div>
+            <div class="text-sm">Successful Implementations</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-white mb-2">Microsoft Gold Partner</div>
+            <div class="text-sm">Google Cloud Select Partner</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-white mb-2">SOC2, ISO27001</div>
+            <div class="text-sm">HIPAA-ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECTION: Custom & Advanced Technology Projects -->
-  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100">
+  <section class="py-20 px-6 bg-gray-50 border-t border-gray-100 hidden">
     <div class="max-w-6xl mx-auto">
       <p class="text-sm text-gray-500 mb-4">Custom & Advanced Technology Projects</p>
       <p class="text-lg text-gray-600 mb-6">In select cases, off-the-shelf tools are not sufficient.</p>
