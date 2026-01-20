@@ -3,15 +3,15 @@ title: "The Complete Guide to Enterprise AI Integration: From Strategy to Operat
 excerpt: "Why most AI initiatives fail—and how to actually get real value from AI in your organization."
 author: "Hayden Ashley"
 authorTitle: "AI Strategist"
-date: "2025-01-12"
+date: "2025-01-07"
 category: "AI Implementation"
-image: "/logos/Business Architecture Reimagined.png"
+image: "/logos/Enterprise AI Integration.png"
 readTime: 25
 ---
 
 **Why most AI initiatives fail—and how to actually get real value from AI in your organization.**
 
-*Hayden Ashley | January 12, 2025*
+*Hayden Ashley | January 7, 2025*
 
 ---
 
