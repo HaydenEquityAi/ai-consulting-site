@@ -368,4 +368,161 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+</main>
+</Layout>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    video {
+      display: none;
+    }
+    section:first-of-type {
+      background-image: linear-gradient(to bottom right, #111827, #1f2937);
+      background-size: cover;
+      background-position: center;
+    }
+    .animate-bounce {
+      animation: none;
+    }
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
+
+  /* Logo Carousel Styles */
+  .logo-marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    animation: logo-scroll 40s linear infinite;
+    width: fit-content;
+  }
+
+  .logo-marquee-container:hover .logo-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .logo-marquee-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo-marquee-item:hover {
+    opacity: 1;
+  }
+
+  .logo-marquee-img {
+    height: 120px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo-marquee-img {
+      height: 100px;
+      max-width: 160px;
+    }
+    .logo-marquee-track {
+      gap: 1.25rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-marquee-img {
+      height: 80px;
+      max-width: 140px;
+    }
+    .logo-marquee-track {
+      gap: 1rem;
+      animation: logo-scroll 40s linear infinite;
+    }
+  }
+
+  /* Case Study Accordion Styles */
+  .case-study-card {
+    transition: all 0.3s ease;
+  }
+
+  .case-study-card.active {
+    border-color: #2563eb;
+  }
+
+  .case-study-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+  }
+
+  .case-study-content.active {
+    max-height: 5000px;
+    padding-top: 1.5rem;
+  }
+
+  .case-study-chevron {
+    transition: transform 0.3s ease;
+  }
+
+  .case-study-card.active .case-study-chevron {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  // Case Study Accordion Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const caseStudyHeaders = document.querySelectorAll('.case-study-header');
+    
+    caseStudyHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+        const card = this.closest('.case-study-card');
+        const content = card.querySelector('.case-study-content');
+        const isActive = card.classList.contains('active');
+        
+        // Close all other cards
+        document.querySelectorAll('.case-study-card').forEach(c => {
+          c.classList.remove('active');
+          const cContent = c.querySelector('.case-study-content');
+          if (cContent) {
+            cContent.classList.remove('active');
+            cContent.classList.add('hidden');
+          }
+        });
+        
+        // Toggle current card
+        if (!isActive) {
+          card.classList.add('active');
+          content.classList.add('active');
+          content.classList.remove('hidden');
+        }
+      });
+    });
+  });
+</script>
 
