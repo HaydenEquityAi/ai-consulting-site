@@ -11,10 +11,40 @@
       
       <!-- CENTER: Navigation Items -->
       <div class="hidden md:flex items-center gap-8">
-        <!-- What We Build Dropdown -->
+        <!-- Custom AI & Development Dropdown -->
         <div class="relative group">
           <button class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
-            What We Build
+            Custom AI & Development
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full w-[500px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
+            <div class="p-5 space-y-3">
+              <a href="/custom-ai-development/full-stack-systems" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
+                <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">Full-Stack Custom Systems</h3>
+                <p class="text-xs text-gray-600">Purpose-built software from database to user interface. Complete stack you own and control.</p>
+              </a>
+              <a href="/custom-ai-development/ai-intelligence-integration" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
+                <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">AI Intelligence Integration</h3>
+                <p class="text-xs text-gray-600">Intelligent automation and decision support built into your workflows. Applied where it creates real leverage.</p>
+              </a>
+              <a href="/custom-ai-development/saas-product-development" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
+                <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">SaaS Product Development</h3>
+                <p class="text-xs text-gray-600">Building scalable products and platforms. Custom systems that evolve into recurring revenue business assets.</p>
+              </a>
+              <a href="/custom-ai-development/custom-enterprise-builds" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
+                <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">Custom Enterprise Builds</h3>
+                <p class="text-xs text-gray-600">Complex, multi-system implementations for organizations operating at scale or in specialized domains.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Business Systems Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-base text-gray-700 hover:text-black transition-colors">
+            Business Systems
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -59,14 +89,6 @@
                   <a href="/what-we-build/integration" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
                     <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">System Integration & Tooling</h3>
                     <p class="text-xs text-gray-600">Connecting CRMs, accounting, operations, and data.</p>
-                  </a>
-                  <a href="/build-maintain" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
-                    <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">Build + Maintain</h3>
-                    <p class="text-xs text-gray-600">We build and support the systems your team operates.</p>
-                  </a>
-                  <a href="/build-operate" class="group/item block hover:bg-gray-50 rounded-lg p-2 -m-2 transition-colors">
-                    <h3 class="text-sm font-semibold text-gray-900 mb-1 group-hover/item:text-blue-600 transition-colors">Build + Operate</h3>
-                    <p class="text-xs text-gray-600">We run the systems with you or for you.</p>
                   </a>
                 </div>
               </div>
@@ -134,10 +156,24 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 bg-white z-40 max-h-[calc(100vh-80px)] overflow-y-auto">
       <nav class="flex flex-col gap-2 sm:gap-4 pt-4 px-4 sm:px-6">
-        <!-- What We Build (Mobile Accordion) -->
+        <!-- Custom AI & Development (Mobile Accordion) -->
+        <div class="py-2">
+          <button type="button" class="custom-ai-dev-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
+            Custom AI & Development
+            <span class="custom-ai-dev-icon text-xs">+</span>
+          </button>
+          <div class="custom-ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
+            <a href="/custom-ai-development/full-stack-systems" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Full-Stack Custom Systems</a>
+            <a href="/custom-ai-development/ai-intelligence-integration" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI Intelligence Integration</a>
+            <a href="/custom-ai-development/saas-product-development" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">SaaS Product Development</a>
+            <a href="/custom-ai-development/custom-enterprise-builds" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Custom Enterprise Builds</a>
+          </div>
+        </div>
+        
+        <!-- Business Systems (Mobile Accordion) -->
         <div class="py-2">
           <button type="button" class="what-we-build-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
-            What We Build
+            Business Systems
             <span class="what-we-build-icon text-xs">+</span>
           </button>
           <div class="what-we-build-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
@@ -150,8 +186,6 @@
             <p class="text-xs uppercase text-gray-500 mb-2 mt-4">How It's Enabled</p>
             <a href="/what-we-build/ai-automation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI & Automation Enablement</a>
             <a href="/what-we-build/integration" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">System Integration & Tooling</a>
-            <a href="/build-maintain" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Build + Maintain</a>
-            <a href="/build-operate" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Build + Operate</a>
             <a href="/how-we-work" class="block text-sm text-blue-600 hover:text-blue-700 transition-colors py-2 min-h-[44px] flex items-center">Explore how we work →</a>
           </div>
         </div>
@@ -330,7 +364,7 @@
       });
       
       // Close menu when a link is clicked (but not for accordion toggles)
-      var menuLinks = menu.querySelectorAll('a:not(.what-we-build-toggle):not(.resources-toggle)');
+      var menuLinks = menu.querySelectorAll('a:not(.what-we-build-toggle):not(.resources-toggle):not(.custom-ai-dev-toggle)');
       menuLinks.forEach(function(link) {
         link.addEventListener('click', function() {
           menu.classList.add('hidden');
@@ -346,7 +380,7 @@
     
     // Mobile accordion toggles
     function initMobileAccordions() {
-      // What We Build toggle
+      // Business Systems toggle
       var whatWeBuildToggle = document.querySelector('.what-we-build-toggle');
       var whatWeBuildSubmenu = document.querySelector('.what-we-build-submenu');
       var whatWeBuildIcon = document.querySelector('.what-we-build-icon');
@@ -374,6 +408,22 @@
           resourcesSubmenu.classList.toggle('hidden');
           if (resourcesIcon) {
             resourcesIcon.textContent = resourcesSubmenu.classList.contains('hidden') ? '+' : '−';
+          }
+        });
+      }
+      
+      // Custom AI & Development toggle
+      var customAiDevToggle = document.querySelector('.custom-ai-dev-toggle');
+      var customAiDevSubmenu = document.querySelector('.custom-ai-dev-submenu');
+      var customAiDevIcon = document.querySelector('.custom-ai-dev-icon');
+      
+      if (customAiDevToggle && customAiDevSubmenu) {
+        customAiDevToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          customAiDevSubmenu.classList.toggle('hidden');
+          if (customAiDevIcon) {
+            customAiDevIcon.textContent = customAiDevSubmenu.classList.contains('hidden') ? '+' : '−';
           }
         });
       }
