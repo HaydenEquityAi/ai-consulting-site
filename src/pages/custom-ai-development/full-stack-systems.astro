@@ -747,50 +747,53 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- INDUSTRY USE CASES SECTION -->
-  <section class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-7xl mx-auto">
+  <section class="py-24 px-6 bg-gradient-to-br from-[#0f172a] to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
           Built for Every Industry That Operates Seriously
         </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
           We build for companies that understand their systems are their competitive advantage.
         </p>
       </div>
 
       <div class="max-w-4xl mx-auto space-y-4">
         <!-- Use Case 1 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Real Estate & Property Management</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Real Estate & Property Management</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Operations platforms handling portfolios from 10 to 10,000+ properties</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Deal tracking and buyer matching at scale</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Maintenance coordination and vendor management</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Financial visibility across locations, property types, markets</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Compete on speed and data. Analyze deals faster. Match opportunities smarter. Coordinate seamlessly. Win the market.
               </p>
             </div>
@@ -798,36 +801,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 2 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Construction & Trades</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Construction & Trades</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Lead-to-close pipelines with automated estimation</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Crew scheduling and capacity planning</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Job costing with real-time margin tracking</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Project delivery tracking with accountability</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Cash-flow business. Accurate job costing is survival. Crew scheduling is how you scale. Make money predictable.
               </p>
             </div>
@@ -835,36 +838,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 3 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Healthcare & Wellness</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Healthcare & Wellness</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Patient intake, scheduling, and compliance automation</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Clinical workflows that reduce administrative burden</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Internal knowledge systems that prevent duplicated effort</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Financial tracking from scheduling to billing</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Automate compliance, scheduling, administrative overhead. Focus on patient care. Better care. Happier team. More revenue.
               </p>
             </div>
@@ -872,36 +875,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 4 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Professional Services</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Professional Services</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>CRM and opportunity tracking at project level</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Project and engagement workflows with delivery tracking</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Time, billing, and profitability systems that actually work</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Knowledge management preventing duplicated effort</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Profit on utilization and delivery excellence. Track both. Accurate project profitability. Efficient resource allocation.
               </p>
             </div>
@@ -909,36 +912,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 5 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Financial Services & Investment</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Financial Services & Investment</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Deal tracking and pipeline visibility across teams</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Financial modeling and scenario analysis</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Portfolio dashboards with real-time performance</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Risk assessment and compliance automation</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Financial decisions depend on data quality. Portfolio performance visibility. Infrastructure for million-dollar decisions.
               </p>
             </div>
@@ -946,36 +949,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 6 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Service Businesses & Recurring Revenue</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Service Businesses & Recurring Revenue</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Customer lifecycle management from acquisition to retention</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Route coordination and scheduling automation</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Billing automation and collections processes</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Performance visibility across teams and locations</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Operational excellence. Route optimization saves thousands. Billing accuracy improves cash flow. Make recurring revenue sustainable.
               </p>
             </div>
@@ -983,36 +986,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 7 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Enterprise & Complex Organizations</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Enterprise & Complex Organizations</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Cross-department integration eliminating data silos</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Executive-level visibility across the entire organization</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Compliance and audit automation</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Operational systems that scale to thousands of users</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Eliminate silos. Different tools, different truths, different processes. Build the integrating system that aligns the entire organization.
               </p>
             </div>
@@ -1020,36 +1023,36 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Use Case 8 -->
-        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-600">Growth-Stage Companies</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-400">Growth-Stage Companies</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
             <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-700">
+              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-300">
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Tool consolidation eliminating redundancy and cost</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Sales, operations, and finance systems that actually connect</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Automation reducing headcount pressure during growth</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="text-blue-600">•</span>
+                  <span class="text-blue-400">•</span>
                   <span>Executive visibility that scales with the company</span>
                 </li>
               </ul>
-              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-600 leading-relaxed">
+              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-400 leading-relaxed">
                 Keep control while enabling speed. The difference between scaling to $10M and stalling at $2M.
               </p>
             </div>
@@ -1500,7 +1503,7 @@ import Layout from "../../layouts/Layout.astro";
     }
 
     .industry-accordion-header:hover {
-      background-color: #f9fafb;
+      background-color: rgba(31, 41, 55, 0.7);
     }
 
     .industry-accordion-content {
