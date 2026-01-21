@@ -66,36 +66,105 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- CREDIBILITY BAR -->
+  <section class="py-12 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col items-center justify-center gap-6">
+        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
+        <!-- Client Logos - Infinite Scroll -->
+        <div class="logo-marquee-container w-full">
+          <div class="logo-marquee-track">
+            <!-- First set of logos -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="logo-marquee-item">
+              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
+            </div>
+            <div class="logo-marquee-item">
+              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROBLEM SECTION -->
-  <section class="problem-section py-20 md:py-24 px-6 bg-gradient-to-br from-[#0f172a] to-[#1a1a1a] relative overflow-hidden">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
+  <section class="problem-section py-20 md:py-24 px-6 bg-white relative">
     <!-- Left Accent Line (Animated) -->
-    <div class="problem-accent-line absolute left-0 top-0 w-1 bg-blue-500 rounded-full z-10"></div>
+    <div class="problem-accent-line absolute left-0 top-0 w-1 bg-blue-600 rounded-full z-10"></div>
     
     <div class="max-w-5xl mx-auto relative z-10">
       <div class="mb-16 scroll-fade-in">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 inline-block pb-4 border-b-4 border-blue-500">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 inline-block pb-4 border-b-4 border-blue-600">
           Why Your Current Approach Is Costing You
         </h2>
-        <p class="text-base text-gray-300 max-w-3xl leading-relaxed mt-6 mb-12">
+        <p class="text-base text-gray-600 max-w-3xl leading-relaxed mt-6 mb-12">
           You're probably running on some combination of spreadsheets, disconnected tools, and institutional knowledge living in people's heads. It feels normal because every business does it. That doesn't make it less destructive.
         </p>
       </div>
 
       <div class="space-y-10 relative pl-8">
         <!-- Problem 1 -->
-        <div class="problem-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-lg p-8 border-t-4 border-l-4 border-blue-500 border-r border-b border-gray-700/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 scroll-fade-in">
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
           <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-3">Fragmented Tools Create Fragmented Reality</h3>
-              <p class="text-base text-gray-300 leading-relaxed">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Fragmented Tools Create Fragmented Reality</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
                 Three different systems. Three different versions of truth. Teams make decisions on incomplete information because the complete picture doesn't exist anywhere.
               </p>
             </div>
@@ -103,16 +172,16 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Problem 2 -->
-        <div class="problem-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-lg p-8 border-t-4 border-l-4 border-blue-500 border-r border-b border-gray-700/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 scroll-fade-in">
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
           <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-3">Manual Processes Don't Scale</h3>
-              <p class="text-base text-gray-300 leading-relaxed">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Manual Processes Don't Scale</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
                 Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability. Your team manages spreadsheets instead of building.
               </p>
             </div>
@@ -120,16 +189,16 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Problem 3 -->
-        <div class="problem-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-lg p-8 border-t-4 border-l-4 border-blue-500 border-r border-b border-gray-700/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 scroll-fade-in">
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
           <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-3">Low-Code Tools Hit a Wall</h3>
-              <p class="text-base text-gray-300 leading-relaxed">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Low-Code Tools Hit a Wall</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
                 Great for simple problems. The moment requirements get sophisticated, you hit the platform's ceiling. Premium prices for tools that can't do what you need.
               </p>
             </div>
@@ -137,16 +206,16 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Problem 4 -->
-        <div class="problem-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-lg p-8 border-t-4 border-l-4 border-blue-500 border-r border-b border-gray-700/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 scroll-fade-in">
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
           <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-3">You Don't Own Your System</h3>
-              <p class="text-base text-gray-300 leading-relaxed">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">You Don't Own Your System</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
                 You're renting the vendor's product. At the mercy of their roadmap. Constrained by their platform. Your competitive advantage belongs to them.
               </p>
             </div>
@@ -154,16 +223,16 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Problem 5 -->
-        <div class="problem-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-lg p-8 border-t-4 border-l-4 border-blue-500 border-r border-b border-gray-700/50 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 scroll-fade-in">
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
           <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
               </svg>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-3">Growth Becomes Friction</h3>
-              <p class="text-base text-gray-300 leading-relaxed">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Growth Becomes Friction</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
                 Every new market or product line means rebuilding. You're compounding complexity, not accelerating. Systems that powered $1M can't power $10M.
               </p>
             </div>
@@ -1321,6 +1390,82 @@ import Layout from "../../layouts/Layout.astro";
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+      }
+      .logo-marquee-track {
+        animation: none;
+      }
+    }
+
+    /* Logo Carousel Styles */
+    .logo-marquee-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .logo-marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      animation: logo-scroll 40s linear infinite;
+      width: fit-content;
+    }
+
+    .logo-marquee-container:hover .logo-marquee-track {
+      animation-play-state: paused;
+    }
+
+    .logo-marquee-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-marquee-item:hover {
+      opacity: 1;
+    }
+
+    .logo-marquee-img {
+      height: 120px;
+      width: auto;
+      max-width: 200px;
+      object-fit: contain;
+      filter: grayscale(100%);
+    }
+
+    @keyframes logo-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .logo-marquee-img {
+        height: 100px;
+        max-width: 160px;
+      }
+      .logo-marquee-track {
+        gap: 1.25rem;
+        animation: logo-scroll 40s linear infinite;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-marquee-img {
+        height: 80px;
+        max-width: 140px;
+      }
+      .logo-marquee-track {
+        gap: 1rem;
+        animation: logo-scroll 40s linear infinite;
       }
     }
   </style>
