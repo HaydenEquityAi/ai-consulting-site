@@ -4,65 +4,69 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="Full-Stack Custom Systems | Intelio - AI-Powered Business Infrastructure" description="Purpose-built software from database to interface. Custom systems you own, we maintain. Built for competitive advantage, not off-the-shelf compromise.">
 <main class="bg-white">
-  <!-- HERO SECTION -->
-  <section class="hero-section relative h-[700px] md:h-[700px] flex items-center overflow-hidden pt-20 md:pt-24">
-    <!-- Animated Gradient Background -->
-    <div class="hero-gradient absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"></div>
+  <!-- ENHANCED HERO SECTION -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+    <!-- Video Background -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
+    >
+      <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+    </video>
     
-    <!-- Subtle Data Visualization Background -->
-    <div class="hero-visual absolute inset-0 opacity-10">
-      <svg class="w-full h-full" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Connected Nodes Pattern -->
-        <circle cx="200" cy="150" r="4" fill="#3b82f6" opacity="0.6"/>
-        <circle cx="400" cy="200" r="4" fill="#3b82f6" opacity="0.6"/>
-        <circle cx="600" cy="180" r="4" fill="#3b82f6" opacity="0.6"/>
-        <circle cx="800" cy="220" r="4" fill="#3b82f6" opacity="0.6"/>
-        <circle cx="1000" cy="160" r="4" fill="#3b82f6" opacity="0.6"/>
-        <line x1="200" y1="150" x2="400" y2="200" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
-        <line x1="400" y1="200" x2="600" y2="180" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
-        <line x1="600" y1="180" x2="800" y2="220" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
-        <line x1="800" y1="220" x2="1000" y2="160" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
-        <!-- Database Cylinders -->
-        <rect x="150" y="400" width="60" height="120" rx="4" fill="#3b82f6" opacity="0.15"/>
-        <rect x="300" y="380" width="60" height="140" rx="4" fill="#3b82f6" opacity="0.15"/>
-        <rect x="450" y="420" width="60" height="100" rx="4" fill="#3b82f6" opacity="0.15"/>
-      </svg>
-    </div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60 z-[1]"></div>
     
-    <!-- Glassmorphism Card Container -->
-    <div class="max-w-5xl mx-auto px-6 lg:px-10 py-20 md:py-24 w-full relative z-10">
-      <div class="hero-content max-w-3xl backdrop-blur-sm bg-white/5 rounded-2xl border border-white/10 p-8 md:p-12 shadow-2xl">
-        <!-- Headline with Gradient Text -->
-        <h1 class="hero-headline text-5xl md:text-6xl font-bold text-white leading-[1.2] mb-6 tracking-tight hero-fade-in">
-          <span class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">Full-Stack Custom Systems</span>
-          <div class="hero-underline w-32 h-1 bg-blue-600 mt-4 rounded-full"></div>
+    <!-- Subtle noise texture -->
+    <div class="absolute inset-0 opacity-[0.02] mix-blend-overlay z-[2]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            Custom Development
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+          Full-Stack Custom Systems
         </h1>
         
-        <!-- Subheading -->
-        <p class="hero-subheading text-2xl md:text-3xl text-gray-200 mb-8 leading-relaxed font-semibold hero-fade-in-delay-1">
+        <!-- Subtitle -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
           The software that actually runs your business.
         </p>
         
         <!-- Description -->
-        <p class="hero-description text-lg md:text-xl text-gray-300 mb-10 leading-relaxed hero-fade-in-delay-2">
-          Off-the-shelf tools are built for everyone. That means they're built for no one.<br><br>
-          Your workflows are unique. Your data is unique. Your competitive edge depends on systems that fit exactly how you operate—not systems that force you to operate like everyone else.<br><br>
-          We engineer full-stack systems from database to interface. Complete ownership. Complete control. Complete leverage.
+        <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
+          Off-the-shelf tools are built for everyone. That means they're built for no one. Your workflows are unique. Your data is unique. Your competitive edge depends on systems that fit exactly how you operate—not systems that force you to operate like everyone else. We engineer full-stack systems from database to interface. Complete ownership. Complete control. Complete leverage.
         </p>
         
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap gap-4 hero-buttons hero-fade-in-delay-3">
-          <a href="#what-we-build" class="hero-primary-btn inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-base font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 hover:scale-105 group">
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#what-we-build" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
             Explore Full-Stack Systems
-            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
-          <a href="/contact" class="hero-secondary-btn inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-base font-semibold rounded-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
+          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
             Schedule Discovery
           </a>
         </div>
       </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
     </div>
   </section>
 
@@ -755,229 +759,301 @@ import Layout from "../../layouts/Layout.astro";
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="max-w-4xl mx-auto space-y-4">
         <!-- Use Case 1 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Real Estate & Property Management</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Operations platforms handling portfolios from 10 to 10,000+ properties</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Deal tracking and buyer matching at scale</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Maintenance coordination and vendor management</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Financial visibility across locations, property types, markets</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Compete on speed and data. Analyze deals faster. Match opportunities smarter. Coordinate seamlessly. Win the market.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Real Estate & Property Management</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Operations platforms handling portfolios from 10 to 10,000+ properties</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Deal tracking and buyer matching at scale</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Maintenance coordination and vendor management</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Financial visibility across locations, property types, markets</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Compete on speed and data. Analyze deals faster. Match opportunities smarter. Coordinate seamlessly. Win the market.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 2 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Construction & Trades</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Lead-to-close pipelines with automated estimation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Crew scheduling and capacity planning</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Job costing with real-time margin tracking</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Project delivery tracking with accountability</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Cash-flow business. Accurate job costing is survival. Crew scheduling is how you scale. Make money predictable.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Construction & Trades</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Lead-to-close pipelines with automated estimation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Crew scheduling and capacity planning</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Job costing with real-time margin tracking</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Project delivery tracking with accountability</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Cash-flow business. Accurate job costing is survival. Crew scheduling is how you scale. Make money predictable.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 3 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Healthcare & Wellness</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Patient intake, scheduling, and compliance automation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Clinical workflows that reduce administrative burden</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Internal knowledge systems that prevent duplicated effort</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Financial tracking from scheduling to billing</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Automate compliance, scheduling, administrative overhead. Focus on patient care. Better care. Happier team. More revenue.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Healthcare & Wellness</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Patient intake, scheduling, and compliance automation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Clinical workflows that reduce administrative burden</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Internal knowledge systems that prevent duplicated effort</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Financial tracking from scheduling to billing</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Automate compliance, scheduling, administrative overhead. Focus on patient care. Better care. Happier team. More revenue.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 4 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Professional Services</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>CRM and opportunity tracking at project level</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Project and engagement workflows with delivery tracking</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Time, billing, and profitability systems that actually work</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Knowledge management preventing duplicated effort</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Profit on utilization and delivery excellence. Track both. Accurate project profitability. Efficient resource allocation.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Professional Services</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>CRM and opportunity tracking at project level</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Project and engagement workflows with delivery tracking</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Time, billing, and profitability systems that actually work</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Knowledge management preventing duplicated effort</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Profit on utilization and delivery excellence. Track both. Accurate project profitability. Efficient resource allocation.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 5 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Financial Services & Investment</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Deal tracking and pipeline visibility across teams</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Financial modeling and scenario analysis</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Portfolio dashboards with real-time performance</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Risk assessment and compliance automation</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Financial decisions depend on data quality. Portfolio performance visibility. Infrastructure for million-dollar decisions.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Financial Services & Investment</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Deal tracking and pipeline visibility across teams</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Financial modeling and scenario analysis</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Portfolio dashboards with real-time performance</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Risk assessment and compliance automation</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Financial decisions depend on data quality. Portfolio performance visibility. Infrastructure for million-dollar decisions.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 6 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Service Businesses & Recurring Revenue</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Customer lifecycle management from acquisition to retention</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Route coordination and scheduling automation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Billing automation and collections processes</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Performance visibility across teams and locations</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Operational excellence. Route optimization saves thousands. Billing accuracy improves cash flow. Make recurring revenue sustainable.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Service Businesses & Recurring Revenue</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Customer lifecycle management from acquisition to retention</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Route coordination and scheduling automation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Billing automation and collections processes</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Performance visibility across teams and locations</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Operational excellence. Route optimization saves thousands. Billing accuracy improves cash flow. Make recurring revenue sustainable.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 7 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 600ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Enterprise & Complex Organizations</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Cross-department integration eliminating data silos</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Executive-level visibility across the entire organization</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Compliance and audit automation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Operational systems that scale to thousands of users</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Eliminate silos. Different tools, different truths, different processes. Build the integrating system that aligns the entire organization.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Enterprise & Complex Organizations</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Cross-department integration eliminating data silos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Executive-level visibility across the entire organization</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Compliance and audit automation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Operational systems that scale to thousands of users</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Eliminate silos. Different tools, different truths, different processes. Build the integrating system that aligns the entire organization.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Use Case 8 -->
-        <div class="use-case-card bg-white rounded-xl p-8 border-t-4 border-blue-600 border-r border-b border-l border-gray-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 700ms;">
-          <h3 class="text-xl font-bold text-blue-600 mb-4">Growth-Stage Companies</h3>
-          <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
-          <ul class="space-y-2 mb-4 text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Tool consolidation eliminating redundancy and cost</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Sales, operations, and finance systems that actually connect</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Automation reducing headcount pressure during growth</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Executive visibility that scales with the company</span>
-            </li>
-          </ul>
-          <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Keep control while enabling speed. The difference between scaling to $10M and stalling at $2M.
-          </p>
+        <div class="industry-accordion-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer" aria-expanded="false">
+            <h3 class="text-xl font-bold text-blue-600">Growth-Stage Companies</h3>
+            <svg class="industry-accordion-chevron w-6 h-6 text-blue-600 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="px-6 pb-6 pt-0">
+              <p class="text-gray-700 mb-4 font-semibold">Capabilities:</p>
+              <ul class="space-y-2 mb-4 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Tool consolidation eliminating redundancy and cost</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Sales, operations, and finance systems that actually connect</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Automation reducing headcount pressure during growth</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600">•</span>
+                  <span>Executive visibility that scales with the company</span>
+                </li>
+              </ul>
+              <p class="text-gray-700 font-semibold mb-2">Why It Matters:</p>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Keep control while enabling speed. The difference between scaling to $10M and stalling at $2M.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1226,6 +1302,43 @@ import Layout from "../../layouts/Layout.astro";
           }
         });
       });
+
+      // Industry Accordion Functionality
+      const industryAccordions = document.querySelectorAll('.industry-accordion-item');
+      
+      industryAccordions.forEach(item => {
+        const header = item.querySelector('.industry-accordion-header');
+        const content = item.querySelector('.industry-accordion-content');
+        const chevron = item.querySelector('.industry-accordion-chevron');
+        
+        header.addEventListener('click', () => {
+          const isExpanded = header.getAttribute('aria-expanded') === 'true';
+          
+          // Close all other accordions (optional - remove if you want multiple open)
+          industryAccordions.forEach(otherItem => {
+            if (otherItem !== item) {
+              const otherHeader = otherItem.querySelector('.industry-accordion-header');
+              const otherContent = otherItem.querySelector('.industry-accordion-content');
+              const otherChevron = otherItem.querySelector('.industry-accordion-chevron');
+              
+              otherHeader.setAttribute('aria-expanded', 'false');
+              otherContent.style.maxHeight = '0';
+              otherChevron.style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          // Toggle current accordion
+          if (isExpanded) {
+            header.setAttribute('aria-expanded', 'false');
+            content.style.maxHeight = '0';
+            chevron.style.transform = 'rotate(0deg)';
+          } else {
+            header.setAttribute('aria-expanded', 'true');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            chevron.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
     });
   </script>
 
@@ -1377,6 +1490,31 @@ import Layout from "../../layouts/Layout.astro";
       transition: all 0.3s ease;
     }
 
+    /* Industry Accordion Styles */
+    .industry-accordion-item {
+      transition: all 0.3s ease;
+    }
+
+    .industry-accordion-header {
+      user-select: none;
+    }
+
+    .industry-accordion-header:hover {
+      background-color: #f9fafb;
+    }
+
+    .industry-accordion-content {
+      transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    }
+
+    .industry-accordion-content[style*="max-height: 0"] {
+      opacity: 0;
+    }
+
+    .industry-accordion-chevron {
+      transition: transform 0.3s ease-in-out;
+    }
+
     /* Final CTA */
     .final-cta-btn {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1384,6 +1522,17 @@ import Layout from "../../layouts/Layout.astro";
 
     /* Reduced Motion Support */
     @media (prefers-reduced-motion: reduce) {
+      video {
+        display: none;
+      }
+      section:first-of-type {
+        background-image: linear-gradient(to bottom right, #111827, #1f2937);
+        background-size: cover;
+        background-position: center;
+      }
+      .animate-bounce {
+        animation: none;
+      }
       *,
       *::before,
       *::after {
