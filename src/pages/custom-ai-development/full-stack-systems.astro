@@ -5,34 +5,59 @@ import Layout from "../../layouts/Layout.astro";
 <Layout title="Full-Stack Custom Systems | Intelio - AI-Powered Business Infrastructure" description="Purpose-built software from database to interface. Custom systems you own, we maintain. Built for competitive advantage, not off-the-shelf compromise.">
 <main class="bg-white">
   <!-- HERO SECTION -->
-  <section class="relative min-h-[85vh] flex items-center bg-gray-900">
-    <div class="max-w-5xl mx-auto px-6 lg:px-10 py-20 md:py-24 w-full">
-      <div class="max-w-3xl">
-        <!-- Headline -->
-        <h1 class="text-5xl md:text-6xl font-bold text-white leading-[1.2] mb-6 tracking-tight">
-          Full-Stack Custom Systems
+  <section class="hero-section relative min-h-[85vh] flex items-center overflow-hidden">
+    <!-- Animated Gradient Background -->
+    <div class="hero-gradient absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"></div>
+    
+    <!-- Subtle Data Visualization Background -->
+    <div class="hero-visual absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Connected Nodes Pattern -->
+        <circle cx="200" cy="150" r="4" fill="#3b82f6" opacity="0.6"/>
+        <circle cx="400" cy="200" r="4" fill="#3b82f6" opacity="0.6"/>
+        <circle cx="600" cy="180" r="4" fill="#3b82f6" opacity="0.6"/>
+        <circle cx="800" cy="220" r="4" fill="#3b82f6" opacity="0.6"/>
+        <circle cx="1000" cy="160" r="4" fill="#3b82f6" opacity="0.6"/>
+        <line x1="200" y1="150" x2="400" y2="200" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+        <line x1="400" y1="200" x2="600" y2="180" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+        <line x1="600" y1="180" x2="800" y2="220" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+        <line x1="800" y1="220" x2="1000" y2="160" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+        <!-- Database Cylinders -->
+        <rect x="150" y="400" width="60" height="120" rx="4" fill="#3b82f6" opacity="0.15"/>
+        <rect x="300" y="380" width="60" height="140" rx="4" fill="#3b82f6" opacity="0.15"/>
+        <rect x="450" y="420" width="60" height="100" rx="4" fill="#3b82f6" opacity="0.15"/>
+      </svg>
+    </div>
+    
+    <!-- Glassmorphism Card Container -->
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 py-20 md:py-24 w-full relative z-10">
+      <div class="hero-content max-w-3xl backdrop-blur-sm bg-white/5 rounded-2xl border border-white/10 p-8 md:p-12 shadow-2xl">
+        <!-- Headline with Gradient Text -->
+        <h1 class="hero-headline text-5xl md:text-6xl font-bold text-white leading-[1.2] mb-6 tracking-tight hero-fade-in">
+          <span class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">Full-Stack Custom Systems</span>
+          <div class="hero-underline w-32 h-1 bg-blue-600 mt-4 rounded-full"></div>
         </h1>
         
         <!-- Subheading -->
-        <p class="text-2xl md:text-3xl text-gray-200 mb-8 leading-relaxed font-semibold">
+        <p class="hero-subheading text-2xl md:text-3xl text-gray-200 mb-8 leading-relaxed font-semibold hero-fade-in-delay-1">
           The software that actually runs your business.
         </p>
         
         <!-- Description -->
-        <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+        <p class="hero-description text-lg md:text-xl text-gray-300 mb-10 leading-relaxed hero-fade-in-delay-2">
           Off-the-shelf tools are built for everyone. That means they're built for no one.<br><br>
           We engineer full-stack systems from database to interface. Complete ownership. Complete control. Complete leverage.
         </p>
         
-        <!-- CTA Button -->
-        <div class="flex flex-wrap gap-4">
-          <a href="#what-we-build" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold rounded-lg transition-colors duration-200">
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 hero-buttons hero-fade-in-delay-3">
+          <a href="#what-we-build" class="hero-primary-btn inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-base font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 hover:scale-105 group">
             Explore Full-Stack Systems
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
-          <a href="/contact" class="inline-flex items-center px-8 py-4 border border-gray-400 hover:border-gray-300 text-white text-base font-semibold rounded-lg hover:bg-white/5 transition-colors duration-200">
+          <a href="/contact" class="hero-secondary-btn inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-base font-semibold rounded-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
             Schedule Discovery
           </a>
         </div>
@@ -41,9 +66,9 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- PROBLEM SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-white">
+  <section class="problem-section py-20 md:py-24 px-6 bg-white">
     <div class="max-w-5xl mx-auto">
-      <div class="mb-16">
+      <div class="mb-16 scroll-fade-in">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Why Your Current Approach Is Costing You
         </h2>
@@ -53,45 +78,90 @@ import Layout from "../../layouts/Layout.astro";
         </p>
       </div>
 
-      <div class="space-y-6">
+      <div class="space-y-10">
         <!-- Problem 1 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Fragmented Tools Create Fragmented Reality</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Three different systems. Three different versions of truth. Teams make decisions on incomplete information because the complete picture doesn't exist anywhere.
-          </p>
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
+          <div class="flex items-start gap-4">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Fragmented Tools Create Fragmented Reality</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Three different systems. Three different versions of truth. Teams make decisions on incomplete information because the complete picture doesn't exist anywhere.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Problem 2 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Manual Processes Don't Scale</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability. Your team manages spreadsheets instead of building.
-          </p>
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
+          <div class="flex items-start gap-4">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Manual Processes Don't Scale</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability. Your team manages spreadsheets instead of building.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Problem 3 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Low-Code Tools Hit a Wall</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Great for simple problems. The moment requirements get sophisticated, you hit the platform's ceiling. Premium prices for tools that can't do what you need.
-          </p>
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
+          <div class="flex items-start gap-4">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Low-Code Tools Hit a Wall</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Great for simple problems. The moment requirements get sophisticated, you hit the platform's ceiling. Premium prices for tools that can't do what you need.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Problem 4 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">You Don't Own Your System</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            You're renting the vendor's product. At the mercy of their roadmap. Constrained by their platform. Your competitive advantage belongs to them.
-          </p>
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
+          <div class="flex items-start gap-4">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">You Don't Own Your System</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                You're renting the vendor's product. At the mercy of their roadmap. Constrained by their platform. Your competitive advantage belongs to them.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Problem 5 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Growth Becomes Friction</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Every new market or product line means rebuilding. You're compounding complexity, not accelerating. Systems that powered $1M can't power $10M.
-          </p>
+        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
+          <div class="flex items-start gap-4">
+            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Growth Becomes Friction</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Every new market or product line means rebuilding. You're compounding complexity, not accelerating. Systems that powered $1M can't power $10M.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -112,78 +182,102 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1: Database Architecture -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">01</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Database Architecture That Thinks Like Your Business</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Database Architecture That Thinks Like Your Business</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Relational databases that capture your business logic. Deal matrices. Project tracking. Financial forecasting. A single source of truth—not a workaround.
           </p>
         </div>
 
         <!-- Card 2: Intelligent Automation -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">02</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Automation That Responds to Business Reality</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Automation That Responds to Business Reality</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Workflows triggered by database changes. Business events routed automatically. Data synced without manual intervention. Transparent, versionable, business-logic-driven.
           </p>
         </div>
 
         <!-- Card 3: Custom Interfaces -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">03</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Interfaces Designed for How Your Team Works</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Interfaces Designed for How Your Team Works</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Custom React interfaces built from scratch. Real-time dashboards. Forms that guide decisions. Reports that answer the questions leadership asks. The software adapts to your team.
           </p>
         </div>
 
         <!-- Card 4: Seamless Integration -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">04</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Your Existing Tools, Now Connected</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Your Existing Tools, Now Connected</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             We integrate with what you have—CRM, accounting, scheduling. Your custom system connects all the pieces. Data flows automatically. One source of truth.
           </p>
         </div>
 
         <!-- Card 5: Infrastructure -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">05</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Deployed, Monitored, Optimized</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">Deployed, Monitored, Optimized</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Docker containerization. Managed infrastructure. Deploy anywhere. Automatic backups. Security updates. Performance optimization. You own it. We maintain it.
           </p>
         </div>
 
         <!-- Card 6: Intelligence -->
-        <div class="bg-white rounded-lg p-8 border border-gray-200 hover:border-blue-600 transition-colors duration-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-            </svg>
+        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 500ms;">
+          <div class="relative mb-6">
+            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">06</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">AI Where It Creates Leverage</h3>
+          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-3">AI Where It Creates Leverage</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Automated scoring. Intelligent routing. Predictive analysis. Decision support. Applied precisely where it creates real business value.
           </p>
@@ -207,11 +301,15 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="space-y-8">
         <!-- Step 01 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
           <div class="flex items-start gap-6">
-            <div class="text-5xl md:text-6xl font-bold text-blue-600 flex-shrink-0">01</div>
+            <div class="step-number-wrapper flex-shrink-0">
+              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
+                <span class="text-3xl font-bold text-white">01</span>
+              </div>
+            </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Understand How You Actually Operate</h3>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Understand How You Actually Operate</h3>
               <p class="text-base text-gray-600 leading-relaxed mb-6">
                 We map how your business really works—not how you think it works. Where does data come from? Where does it need to go? What's manual that could be automated? This becomes the blueprint.
               </p>
@@ -223,11 +321,15 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Step 02 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 150ms;">
           <div class="flex items-start gap-6">
-            <div class="text-5xl md:text-6xl font-bold text-blue-600 flex-shrink-0">02</div>
+            <div class="step-number-wrapper flex-shrink-0">
+              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
+                <span class="text-3xl font-bold text-white">02</span>
+              </div>
+            </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Build the Complete System</h3>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Build the Complete System</h3>
               <p class="text-base text-gray-600 leading-relaxed mb-6">
                 Database schema. Automation workflows. React interfaces. Infrastructure that scales. Built to spec. Tested. Production-ready.
               </p>
@@ -239,11 +341,15 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Step 03 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
           <div class="flex items-start gap-6">
-            <div class="text-5xl md:text-6xl font-bold text-blue-600 flex-shrink-0">03</div>
+            <div class="step-number-wrapper flex-shrink-0">
+              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
+                <span class="text-3xl font-bold text-white">03</span>
+              </div>
+            </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Connect Everything. Move Data. Go Live.</h3>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Connect Everything. Move Data. Go Live.</h3>
               <p class="text-base text-gray-600 leading-relaxed mb-6">
                 Connect to CRM, accounting, operations tools. Migrate data safely. Run parallel testing. Go live. No chaos. No data loss.
               </p>
@@ -255,11 +361,15 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Step 04 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 450ms;">
           <div class="flex items-start gap-6">
-            <div class="text-5xl md:text-6xl font-bold text-blue-600 flex-shrink-0">04</div>
+            <div class="step-number-wrapper flex-shrink-0">
+              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
+                <span class="text-3xl font-bold text-white">04</span>
+              </div>
+            </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Launch and Stabilize</h3>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Launch and Stabilize</h3>
               <p class="text-base text-gray-600 leading-relaxed mb-6">
                 System goes live. We monitor. Respond quickly. Fix issues. Your team learns. We optimize. Week one: operating. Week two: optimizing.
               </p>
@@ -271,11 +381,15 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Step 05 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 600ms;">
           <div class="flex items-start gap-6">
-            <div class="text-5xl md:text-6xl font-bold text-blue-600 flex-shrink-0">05</div>
+            <div class="step-number-wrapper flex-shrink-0">
+              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
+                <span class="text-3xl font-bold text-white">05</span>
+              </div>
+            </div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">We Don't Disappear. We Evolve With You.</h3>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">We Don't Disappear. We Evolve With You.</h3>
               <p class="text-base text-gray-600 leading-relaxed mb-6">
                 Weekly iteration cycles. Infrastructure monitoring. Security updates. Feature enhancements. Your system improves continuously. You can operate it or we can. Either way, it keeps working and getting better.
               </p>
@@ -303,132 +417,144 @@ import Layout from "../../layouts/Layout.astro";
       </div>
 
       <!-- Database & Data Layer -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8">Database & Data Layer</h3>
-        <div class="bg-white rounded-lg border border-gray-200 p-8">
-          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+      <div class="mb-16 scroll-fade-in">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h3 class="text-2xl font-bold text-gray-900">Database & Data Layer</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
+          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">PostgreSQL</span>
+              <span class="text-sm font-semibold text-gray-700">PostgreSQL</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/supabase-logo.jpg" alt="Supabase" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/supabase-logo.jpg" alt="Supabase" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Supabase</span>
+              <span class="text-sm font-semibold text-gray-700">Supabase</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/redis-logo.webp" alt="Redis" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/redis-logo.webp" alt="Redis" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Redis</span>
+              <span class="text-sm font-semibold text-gray-700">Redis</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/elastic.STcKNrQI.svg" alt="Elasticsearch" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/elastic.STcKNrQI.svg" alt="Elasticsearch" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Elasticsearch</span>
+              <span class="text-sm font-semibold text-gray-700">Elasticsearch</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Automation & Workflow Engine -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8">Automation & Workflow Engine</h3>
-        <div class="bg-white rounded-lg border border-gray-200 p-8">
-          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/n8n-logo.png" alt="n8n" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+      <div class="mb-16 scroll-fade-in">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h3 class="text-2xl font-bold text-gray-900">Automation & Workflow Engine</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
+          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/n8n-logo.png" alt="n8n" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">n8n</span>
+              <span class="text-sm font-semibold text-gray-700">n8n</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/Zapier-Emblem-logo.png" alt="Zapier" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/Zapier-Emblem-logo.png" alt="Zapier" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Zapier</span>
+              <span class="text-sm font-semibold text-gray-700">Zapier</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/nodejs-logo.jpeg" alt="Node.js" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/nodejs-logo.jpeg" alt="Node.js" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Node.js</span>
+              <span class="text-sm font-semibold text-gray-700">Node.js</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Frontend & User Experience -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8">Frontend & User Experience</h3>
-        <div class="bg-white rounded-lg border border-gray-200 p-8">
-          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/react-logo.webp" alt="React" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+      <div class="mb-16 scroll-fade-in">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h3 class="text-2xl font-bold text-gray-900">Frontend & User Experience</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
+          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/react-logo.webp" alt="React" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">React</span>
+              <span class="text-sm font-semibold text-gray-700">React</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/typescript-logo.png" alt="TypeScript" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/typescript-logo.png" alt="TypeScript" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">TypeScript</span>
+              <span class="text-sm font-semibold text-gray-700">TypeScript</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Tailwind CSS</span>
+              <span class="text-sm font-semibold text-gray-700">Tailwind CSS</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/nextjs-logo.svg" alt="Next.js" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/nextjs-logo.svg" alt="Next.js" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Next.js</span>
+              <span class="text-sm font-semibold text-gray-700">Next.js</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Infrastructure & Deployment -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8">Infrastructure & Deployment</h3>
-        <div class="bg-white rounded-lg border border-gray-200 p-8">
-          <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/docker-logo.webp" alt="Docker" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+      <div class="mb-16 scroll-fade-in">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+          <h3 class="text-2xl font-bold text-gray-900">Infrastructure & Deployment</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
+          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/docker-logo.webp" alt="Docker" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Docker</span>
+              <span class="text-sm font-semibold text-gray-700">Docker</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/kubernetes-logo.png" alt="Kubernetes" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/kubernetes-logo.png" alt="Kubernetes" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Kubernetes</span>
+              <span class="text-sm font-semibold text-gray-700">Kubernetes</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/aws-logo.png" alt="AWS" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/aws-logo.png" alt="AWS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">AWS</span>
+              <span class="text-sm font-semibold text-gray-700">AWS</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Google Cloud</span>
+              <span class="text-sm font-semibold text-gray-700">Google Cloud</span>
             </div>
-            <div class="flex flex-col items-center gap-3">
-              <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-                <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="w-16 h-16 object-contain" onerror="this.style.display='none';">
+            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
+              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
               </div>
-              <span class="text-sm font-medium text-gray-700">Azure</span>
+              <span class="text-sm font-semibold text-gray-700">Azure</span>
             </div>
           </div>
         </div>
@@ -451,12 +577,16 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Outcome 1 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <div class="outcome-card bg-gradient-to-br from-blue-50/30 to-white rounded-xl p-10 border-l-6 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
+          <div class="relative mb-6">
+            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-200 hover:rotate-12 hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
           </div>
+          <div class="h-0.5 w-10 bg-blue-600/30 mb-4"></div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">One System. One Version of Reality.</h3>
           <p class="text-base text-gray-600 leading-relaxed">
             Sales, finance, operations—all operating on the same data. No disagreement. Decisions on complete information. Speed increases immediately.
