@@ -8,37 +8,64 @@ import Layout from "../layouts/Layout.astro";
  <!-- HERO SECTION -->
  <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 px-3 sm:px-4 md:px-6">
  <div class="max-w-7xl mx-auto">
- <h1 class="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[50px] leading-[1.25] tracking-[-0.5px] mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-sm sm:max-w-md md:max-w-7xl mx-auto px-3 sm:px-4">
- <span class="">Custom AI development and intelligent automation for modern businesses.</span>
+ <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-12 md:mb-16 max-w-5xl mx-auto px-3 sm:px-4">
+ Custom AI development and intelligent automation for{' '}
+ <span class="text-violet-600">modern businesses</span>.
  </h1>
- <p class="text-center text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-10 md:mb-12 lg:mb-16 max-w-3xl mx-auto px-3 sm:px-4">
- Build custom software and AI platforms. Or make your existing systems smarter.
- </p>
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-<div class="feature-card rounded-2xl overflow-hidden min-h-[320px] sm:min-h-[350px] md:min-h-[380px] bg-black relative">
-<div class="feature-card-content h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8">
-<h2 class="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3 sm:mb-4">Custom AI Development</h2>
-<p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">Purpose-built software, AI-powered platforms, and SaaS products. Full-stack development you own and control.</p>
-            <a href="/custom-ai-development" class="inline-flex items-center w-full sm:w-auto justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 backdrop-blur-sm text-white text-sm sm:text-base font-medium rounded-full border border-white/30 hover:bg-white/30 transition-all duration-200 min-h-[40px]">Explore Development</a>
-</div>
-</div>
-<div class="feature-card rounded-2xl overflow-hidden min-h-[320px] sm:min-h-[350px] md:min-h-[380px] bg-black relative">
-<div class="feature-card-content h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8">
-<h2 class="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3 sm:mb-4">AI Integration & Automation</h2>
-<p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">Connect your systems, automate workflows, and embed AI into the tools you already use.</p>
-            <a href="/ai-integration-automation" class="inline-flex items-center w-full sm:w-auto justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 backdrop-blur-sm text-white text-sm sm:text-base font-medium rounded-full border border-white/30 hover:bg-white/30 transition-all duration-200 min-h-[40px]">Explore Integration</a>
-</div>
-</div>
-<div class="feature-card rounded-2xl overflow-hidden min-h-[320px] sm:min-h-[350px] md:min-h-[380px] bg-black relative">
-<div class="feature-card-content h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8">
-<h2 class="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3 sm:mb-4">How We Work</h2>
-<p class="text-gray-300 text-sm sm:text-base mb-4 sm:mb-6">Two verticals. Six engagement models. Clear ownership and outcomes.</p>
-            <a href="/how-we-work" class="inline-flex items-center w-full sm:w-auto justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white/20 backdrop-blur-sm text-white text-sm sm:text-base font-medium rounded-full border border-white/30 hover:bg-white/30 transition-all duration-200 min-h-[40px]">View Models</a>
-</div>
-</div>
+ 
+ <!-- Video background container with 2 cards -->
+ <div class="relative rounded-2xl overflow-hidden border border-gray-800">
+  <!-- Background video -->
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover -z-10 opacity-30"
+  >
+    <source src="/videos/hero-background.mp4" type="video/mp4" />
+  </video>
+  
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/60 -z-10"></div>
+  
+  <!-- Cards -->
+  <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
+    
+    <!-- Card 1: Custom AI Development -->
+    <div class="bg-black/70 backdrop-blur-sm border border-gray-700 rounded-xl p-10 md:p-12 lg:p-14 min-h-[280px] md:min-h-[320px] flex flex-col justify-center text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-4">Custom AI Development</h2>
+      <p class="text-gray-300 text-base md:text-lg mb-6">Purpose-built software, AI-powered platforms, and SaaS products. Full-stack development you own and control.</p>
+      <a href="/custom-ai-development" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-8 py-4 text-base rounded-lg hover:bg-white/20 transition-all">
+        Explore Development
+      </a>
+    </div>
+    
+    <!-- Card 2: AI Integration & Automation -->
+    <div class="bg-black/70 backdrop-blur-sm border border-gray-700 rounded-xl p-10 md:p-12 lg:p-14 min-h-[280px] md:min-h-[320px] flex flex-col justify-center text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-4">AI Integration & Automation</h2>
+      <p class="text-gray-300 text-base md:text-lg mb-6">Connect your systems, automate workflows, and embed AI into the tools you already use.</p>
+      <a href="/ai-integration-automation" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-8 py-4 text-base rounded-lg hover:bg-white/20 transition-all">
+        Explore Integration
+      </a>
+    </div>
+    
+  </div>
  </div>
  </div>
  </section>
+
+<style>
+  /* Accessibility: Hide video for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-gradient video {
+      display: none;
+    }
+    .hero-gradient .bg-black/60 {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+</style>
 
  <!-- AI DEVELOPMENT FIRM SECTION -->
  <section class="py-12 sm:py-16 md:py-20 bg-black text-white">
@@ -169,7 +196,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
       <!-- Card 1: Full-Stack Applications -->
-      <div class="bg-gray-900 rounded-xl p-6 sm:p-8 flex flex-col">
+      <div class="bg-black border border-gray-800 rounded-xl p-6 sm:p-8 flex flex-col">
         <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Full-Stack Applications</h3>
         <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Complete software systems from database to UI. APIs, data models, interfaces—engineered for production.</p>
         <a href="/custom-ai-development/full-stack-systems" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
@@ -181,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- Card 2: AI-Powered Platforms -->
-      <div class="bg-gray-900 rounded-xl p-6 sm:p-8 flex flex-col">
+      <div class="bg-black border border-gray-800 rounded-xl p-6 sm:p-8 flex flex-col">
         <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">AI-Powered Platforms</h3>
         <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Intelligent systems with AI at the core. Decision engines, automation platforms, and smart workflows.</p>
         <a href="/custom-ai-development/ai-intelligence-integration" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
@@ -193,7 +220,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- Card 3: SaaS & Product Development -->
-      <div class="bg-gray-900 rounded-xl p-6 sm:p-8 flex flex-col">
+      <div class="bg-black border border-gray-800 rounded-xl p-6 sm:p-8 flex flex-col">
         <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">SaaS & Product Development</h3>
         <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Scalable products designed for growth. Customer-facing platforms that become business assets.</p>
         <a href="/custom-ai-development/saas-product-development" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
@@ -205,7 +232,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- Card 4: Enterprise Systems -->
-      <div class="bg-gray-900 rounded-xl p-6 sm:p-8 flex flex-col">
+      <div class="bg-black border border-gray-800 rounded-xl p-6 sm:p-8 flex flex-col">
         <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Enterprise Systems</h3>
         <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Complex, multi-system implementations for organizations operating at scale.</p>
         <a href="/custom-ai-development/custom-enterprise-builds" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
