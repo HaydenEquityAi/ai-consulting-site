@@ -28,35 +28,30 @@ import Layout from "../../layouts/Layout.astro";
         <!-- Badge -->
         <div class="mb-6">
           <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            Custom Development
+            CUSTOM DEVELOPMENT
           </span>
         </div>
         
         <!-- Headline -->
         <h1 class="text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
-          Full-Stack Custom Systems
+          The software that actually runs your business.
         </h1>
         
         <!-- Subtitle -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
-          The software that actually runs your business.
-        </p>
-        
-        <!-- Description -->
-        <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
-          Off-the-shelf tools are built for everyone. That means they're built for no one. Your workflows are unique. Your data is unique. Your competitive edge depends on systems that fit exactly how you operate—not systems that force you to operate like everyone else. We engineer full-stack systems from database to interface. Complete ownership. Complete control. Complete leverage.
+        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
+          Off-the-shelf tools are built for everyone—which means they're built for no one. We engineer systems from database to interface, designed around how you actually operate.
         </p>
         
         <!-- CTAs -->
         <div class="flex flex-wrap gap-4">
-          <a href="#what-we-build" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Explore Full-Stack Systems
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <a href="#how-we-work" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
+            Start a Conversation
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
-            Schedule Discovery
+          <a href="#process" class="text-white text-lg font-semibold hover:text-blue-300 transition-colors duration-200 ease-out underline decoration-2 underline-offset-4">
+            See How It Works
           </a>
         </div>
       </div>
@@ -142,103 +137,364 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- PROBLEM SECTION -->
-  <section class="problem-section py-20 md:py-24 px-6 bg-white relative">
-    <!-- Left Accent Line (Animated) -->
-    <div class="problem-accent-line absolute left-0 top-0 w-1 bg-blue-600 rounded-full z-10"></div>
-    
-    <div class="max-w-5xl mx-auto relative z-10">
-      <div class="mb-16 scroll-fade-in">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 inline-block pb-4 border-b-4 border-blue-600">
-          Why Your Current Approach Is Costing You
+  <!-- INDUSTRY SELECTION SECTION -->
+  <section class="py-32 px-6 bg-amber-50/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Built for operations that can't afford to break
         </h2>
-        <p class="text-base text-gray-600 max-w-3xl leading-relaxed mt-6 mb-12">
-          You're probably running on some combination of spreadsheets, disconnected tools, and institutional knowledge living in people's heads. It feels normal because every business does it. That doesn't make it less destructive.
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Select your industry to see relevant examples
         </p>
       </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 max-w-5xl mx-auto border border-gray-200 rounded-lg overflow-hidden">
+        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Real Estate & Property</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Construction & Trades</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Healthcare & Wellness</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Professional Services</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Financial Services</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Service Businesses</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Enterprise Operations</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+        <div class="industry-box p-8 text-center hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
+          <div class="relative inline-block">
+            <span class="text-base font-semibold text-gray-900">Growth-Stage Companies</span>
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="space-y-10 relative pl-8">
-        <!-- Problem 1 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-              </svg>
+  <!-- PROBLEM SECTION -->
+  <section class="problem-section py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 relative">
+    <div class="absolute inset-0 opacity-15 pointer-events-none" style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.15) 0%, transparent 70%);"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid md:grid-cols-5 gap-12 items-start">
+        <!-- Left Column: Header (40%) -->
+        <div class="md:col-span-2">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why your current approach is costing you
+          </h2>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            You're probably running on some combination of spreadsheets, disconnected tools, and institutional knowledge living in people's heads. It feels normal because every business does it. That doesn't make it less destructive.
+          </p>
+        </div>
+        
+        <!-- Right Column: Pain Items (60%) -->
+        <div class="md:col-span-3 space-y-6">
+          <!-- Pain Item 1 -->
+          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
+                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-white mb-2">Fragmented tools create fragmented reality</h3>
+                <p class="text-base text-gray-300 leading-relaxed">
+                  Three systems. Three versions of truth. Teams make decisions on incomplete information.
+                </p>
+              </div>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Fragmented Tools Create Fragmented Reality</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Three different systems. Three different versions of truth. Teams make decisions on incomplete information because the complete picture doesn't exist anywhere.
-              </p>
+          </div>
+          
+          <!-- Pain Item 2 -->
+          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
+                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-white mb-2">Manual processes don't scale</h3>
+                <p class="text-base text-gray-300 leading-relaxed">
+                  Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pain Item 3 -->
+          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
+                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-white mb-2">Knowledge walks out the door</h3>
+                <p class="text-base text-gray-300 leading-relaxed">
+                  Critical processes live in people's heads. When they leave, so does how things work.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Problem 2 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+  <!-- BEFORE/AFTER DELTA SECTION -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          What changes on Monday morning
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          This isn't theoretical value. These are real changes to how your business operates.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-0 max-w-5xl mx-auto rounded-xl overflow-hidden border border-gray-200">
+        <!-- BEFORE Column -->
+        <div class="md:col-span-1 bg-red-50/30 p-10">
+          <div class="mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-red-600">BEFORE</span>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
+              <span class="text-base text-gray-700">Ops team reconciling 3 different systems</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-base text-gray-700">Leadership reviewing last month's numbers</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-base text-gray-700">Manual handoffs between departments</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-base text-gray-700">Hunting for information across tools</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-base text-gray-700">Quarterly system "improvements"</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Arrow/Divider -->
+        <div class="hidden md:flex items-center justify-center bg-white border-l border-r border-gray-200">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </div>
+        
+        <!-- AFTER Column -->
+        <div class="md:col-span-1 bg-green-50/30 p-10">
+          <div class="mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-green-600">AFTER</span>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-gray-700">One live operating dashboard</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-gray-700">Real-time visibility into what's happening now</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-gray-700">Automated routing based on business logic</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-gray-700">Single source of truth, accessible anywhere</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-gray-700">Weekly iteration cycles, continuous improvement</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Mobile Arrow -->
+      <div class="md:hidden flex items-center justify-center py-8">
+        <svg class="w-8 h-8 text-blue-600 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES / SYSTEM PROOFS SECTION -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">SYSTEMS IN PRODUCTION</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          What this looks like in practice
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Real systems. Real operations. Exposed with permission.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Case Study 1 -->
+        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
+          <div class="mb-5">
+            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Commercial Real Estate</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 leading-tight">
+            Deal Pipeline + Buyer Matching System
+          </h3>
+          <div class="mb-4">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">Problem:</span> Regional CRE firm tracking properties in spreadsheets, matching buyers manually, losing deals to faster competitors.
+            </p>
+          </div>
+          <div class="mb-6">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">System:</span> Unified property database with automated buyer-property matching and real-time pipeline visibility.
+            </p>
+          </div>
+          <div class="border-t border-gray-200 pt-4 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Property tracking: 3 spreadsheets → 1 live database</span>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Manual Processes Don't Scale</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability. Your team manages spreadsheets instead of building.
-              </p>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Buyer matching: manual → automated scoring</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Deal velocity: 2x faster response to new listings</span>
             </div>
           </div>
         </div>
-
-        <!-- Problem 3 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
-              </svg>
+        
+        <!-- Case Study 2 -->
+        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
+          <div class="mb-5">
+            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Professional Services</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 leading-tight">
+            Client Delivery + Capacity System
+          </h3>
+          <div class="mb-4">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">Problem:</span> Growing consultancy couldn't see capacity across teams, leading to overcommitment and missed deadlines.
+            </p>
+          </div>
+          <div class="mb-6">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">System:</span> Sales pipeline connected to delivery capacity with automatic resource flagging and utilization tracking.
+            </p>
+          </div>
+          <div class="border-t border-gray-200 pt-4 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Visibility: siloed teams → unified capacity view</span>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Low-Code Tools Hit a Wall</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Great for simple problems. The moment requirements get sophisticated, you hit the platform's ceiling. Premium prices for tools that can't do what you need.
-              </p>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Forecasting: reactive → 6-week forward visibility</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Utilization: manual tracking → automated alerts</span>
             </div>
           </div>
         </div>
-
-        <!-- Problem 4 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">You Don't Own Your System</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You're renting the vendor's product. At the mercy of their roadmap. Constrained by their platform. Your competitive advantage belongs to them.
-              </p>
-            </div>
+        
+        <!-- Case Study 3 -->
+        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
+          <div class="mb-5">
+            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Healthcare Operations</span>
           </div>
-        </div>
-
-        <!-- Problem 5 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
+          <h3 class="text-lg font-semibold text-gray-900 mb-5 leading-tight">
+            Patient Flow + Scheduling Integration
+          </h3>
+          <div class="mb-4">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">Problem:</span> Multi-location practice running disconnected scheduling tools and paper intake across 4 systems.
+            </p>
+          </div>
+          <div class="mb-6">
+            <p class="text-sm text-gray-600 leading-relaxed">
+              <span class="font-semibold text-gray-900">System:</span> Integrated scheduling, intake, and follow-up with automated patient communication workflows.
+            </p>
+          </div>
+          <div class="border-t border-gray-200 pt-4 space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">No-show rate: reduced 35%</span>
             </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-3">Growth Becomes Friction</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Every new market or product line means rebuilding. You're compounding complexity, not accelerating. Systems that powered $1M can't power $10M.
-              </p>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Admin time: 10+ hours/week recovered</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-600 text-sm">→</span>
+              <span class="text-sm text-gray-700">Patient data: 4 systems → 1 source of truth</span>
             </div>
           </div>
         </div>
@@ -365,276 +621,216 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- HOW IT WORKS SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-white">
-    <div class="max-w-5xl mx-auto">
+  <!-- PROCESS TIMELINE SECTION -->
+  <section id="process" class="py-32 px-6 bg-amber-50/30">
+    <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          From Business Problem to Operating System
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          From business problem to operating system
         </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We follow a disciplined process designed to translate your workflows into a system that actually works. Not months of requirements gathering. Not theoretical architecture. Real clarity, real building, real results.
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          A disciplined process. Real building, not months of requirements gathering.
         </p>
       </div>
 
-      <div class="space-y-8">
+      <!-- Horizontal Timeline -->
+      <div class="relative hidden md:block">
+        <!-- Connecting Line -->
+        <div class="absolute top-9 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-blue-400 to-gray-300 z-0"></div>
+        
+        <div class="grid grid-cols-4 gap-8 relative z-10">
+          <!-- Step 01 -->
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
+              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">01</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Understand</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              Map how your business actually works—not how you think it works.
+            </p>
+            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+              1-2 weeks
+            </div>
+          </div>
+          
+          <!-- Step 02 -->
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
+              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">02</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Build</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              Database schema. Automation workflows. React interfaces. Tested, production-ready.
+            </p>
+            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+              4-6 weeks
+            </div>
+          </div>
+          
+          <!-- Step 03 -->
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
+              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">03</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Connect</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              Integrate existing tools, migrate data safely, go live.
+            </p>
+            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+              1-2 weeks
+            </div>
+          </div>
+          
+          <!-- Step 04 -->
+          <div class="text-center">
+            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
+              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">04</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Evolve</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              Weekly iterations, monitoring, continuous optimization.
+            </p>
+            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+              Ongoing
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Vertical Layout -->
+      <div class="md:hidden space-y-12">
         <!-- Step 01 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">01</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Understand How You Actually Operate</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                We map how your business really works—not how you think it works. Where does data come from? Where does it need to go? What's manual that could be automated? This becomes the blueprint.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 1-2 weeks</p>
-              </div>
-            </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl font-bold text-blue-600">01</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Understand</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Map how your business actually works—not how you think it works.
+          </p>
+          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+            1-2 weeks
           </div>
         </div>
-
+        
         <!-- Step 02 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 150ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">02</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Build the Complete System</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Database schema. Automation workflows. React interfaces. Infrastructure that scales. Built to spec. Tested. Production-ready.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 4-6 weeks</p>
-              </div>
-            </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl font-bold text-blue-600">02</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Build</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Database schema. Automation workflows. React interfaces. Tested, production-ready.
+          </p>
+          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+            4-6 weeks
           </div>
         </div>
-
+        
         <!-- Step 03 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">03</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Connect Everything. Move Data. Go Live.</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Connect to CRM, accounting, operations tools. Migrate data safely. Run parallel testing. Go live. No chaos. No data loss.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 1-2 weeks</p>
-              </div>
-            </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl font-bold text-blue-600">03</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Connect</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Integrate existing tools, migrate data safely, go live.
+          </p>
+          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+            1-2 weeks
           </div>
         </div>
-
+        
         <!-- Step 04 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 450ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">04</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">Launch and Stabilize</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                System goes live. We monitor. Respond quickly. Fix issues. Your team learns. We optimize. Week one: operating. Week two: optimizing.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 2 weeks</p>
-              </div>
-            </div>
+        <div class="text-center">
+          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
+            <span class="text-2xl font-bold text-blue-600">04</span>
           </div>
-        </div>
-
-        <!-- Step 05 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 600ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">05</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-blue-600 mb-4">We Don't Disappear. We Evolve With You.</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Weekly iteration cycles. Infrastructure monitoring. Security updates. Feature enhancements. Your system improves continuously. You can operate it or we can. Either way, it keeps working and getting better.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: Ongoing</p>
-              </div>
-            </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Evolve</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Weekly iterations, monitoring, continuous optimization.
+          </p>
+          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+            Ongoing
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TECHNOLOGY STACK SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Powered By Best-of-Breed Technology
+  <!-- ARCHITECTURE PRINCIPLES SECTION -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-[1000px] mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Built on proven system architecture
         </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Professional-grade technology built to scale enterprises. The same foundations that power the world's most reliable applications.
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We don't chase frameworks. We build on architectural principles used in mission-critical enterprise software.
         </p>
       </div>
 
-      <!-- Database & Data Layer -->
-      <div class="mb-16 scroll-fade-in">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Database & Data Layer</h3>
-        </div>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">PostgreSQL</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/supabase-logo.jpg" alt="Supabase" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Supabase</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/redis-logo.webp" alt="Redis" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Redis</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/elastic.STcKNrQI.svg" alt="Elasticsearch" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Elasticsearch</span>
-            </div>
+      <!-- Architecture Principles Grid -->
+      <div class="grid md:grid-cols-2 gap-16 md:gap-20">
+        <!-- Principle 1 -->
+        <div class="principle-block group">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Relational Core, Not Tool Sprawl
+          </h3>
+          <p class="text-base text-gray-600 leading-relaxed mb-8">
+            One authoritative data model that reflects how your business actually works.
+          </p>
+          <div class="flex items-center gap-6 flex-wrap">
+            <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/supabase-logo.jpg" alt="Supabase" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/redis-logo.webp" alt="Redis" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/elastic.STcKNrQI.svg" alt="Elasticsearch" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
           </div>
         </div>
-      </div>
-
-      <!-- Automation & Workflow Engine -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Automation & Workflow Engine</h3>
-        </div>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/n8n-logo.png" alt="n8n" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">n8n</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/Zapier-Emblem-logo.png" alt="Zapier" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Zapier</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/nodejs-logo.jpeg" alt="Node.js" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Node.js</span>
-            </div>
+        
+        <!-- Principle 2 -->
+        <div class="principle-block group">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Event-Driven Automation
+          </h3>
+          <p class="text-base text-gray-600 leading-relaxed mb-8">
+            Systems respond to real business events, not brittle schedules or manual triggers.
+          </p>
+          <div class="flex items-center gap-6 flex-wrap">
+            <img src="/logos/n8n-logo.png" alt="n8n" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/nodejs-logo.jpeg" alt="Node.js" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
           </div>
         </div>
-      </div>
-
-      <!-- Frontend & User Experience -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Frontend & User Experience</h3>
-        </div>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/react-logo.webp" alt="React" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">React</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/typescript-logo.png" alt="TypeScript" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">TypeScript</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Tailwind CSS</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/nextjs-logo.svg" alt="Next.js" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Next.js</span>
-            </div>
+        
+        <!-- Principle 3 -->
+        <div class="principle-block group">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Operator-First Interfaces
+          </h3>
+          <p class="text-base text-gray-600 leading-relaxed mb-8">
+            Designed for people doing real work, not dashboards built for demos.
+          </p>
+          <div class="flex items-center gap-6 flex-wrap">
+            <img src="/logos/react-logo.webp" alt="React" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/typescript-logo.png" alt="TypeScript" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/nextjs-logo.svg" alt="Next.js" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
           </div>
         </div>
-      </div>
-
-      <!-- Infrastructure & Deployment -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Infrastructure & Deployment</h3>
-        </div>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/docker-logo.webp" alt="Docker" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Docker</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/kubernetes-logo.png" alt="Kubernetes" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Kubernetes</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/aws-logo.png" alt="AWS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">AWS</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Google Cloud</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Azure</span>
-            </div>
+        
+        <!-- Principle 4 -->
+        <div class="principle-block group">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            Infrastructure That Doesn't Flinch
+          </h3>
+          <p class="text-base text-gray-600 leading-relaxed mb-8">
+            Built for uptime, observability, and safe iteration.
+          </p>
+          <div class="flex items-center gap-6 flex-wrap">
+            <img src="/logos/docker-logo.webp" alt="Docker" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/aws-logo.png" alt="AWS" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
+            <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
           </div>
         </div>
       </div>
