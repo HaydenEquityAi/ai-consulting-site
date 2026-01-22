@@ -507,280 +507,158 @@ import Layout from "../layouts/Layout.astro";
  </section>
 
 <!-- How We Work -->
-<section class="py-20 md:py-28 bg-black">
+<section class="py-20 md:py-28 bg-black" x-data="{ activeTab: 'development' }">
   <div class="max-w-6xl mx-auto px-4">
     
     <!-- Section Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-semibold text-white">How We Work</h2>
       <p class="text-lg text-gray-400 mt-4">Two verticals. Six engagement models. Clear ownership and outcomes.</p>
     </div>
     
-    <!-- Custom AI Development -->
-    <div class="mb-20">
-      <h3 class="text-2xl font-semibold text-white text-center mb-2">Custom AI Development</h3>
-      <p class="text-gray-500 text-center mb-10">Three Ways to Build</p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 01: Fixed-Scope Development -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            01
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              01
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Fixed-Scope Development
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            Defined builds with clear outcomes
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              MVPs
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Internal tools
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              One-time fee
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#fixed-scope" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+    <!-- Tab Navigation -->
+    <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-12 mb-12">
+      <button 
+        @click="activeTab = 'development'"
+        :class="activeTab === 'development' ? 'bg-violet-600 text-white' : 'bg-transparent border-2 border-gray-700 text-gray-400 hover:border-gray-500 hover:text-white'"
+        class="px-8 py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-200"
+      >
+        Custom AI Development
+      </button>
+      <button 
+        @click="activeTab = 'integration'"
+        :class="activeTab === 'integration' ? 'bg-violet-600 text-white' : 'bg-transparent border-2 border-gray-700 text-gray-400 hover:border-gray-500 hover:text-white'"
+        class="px-8 py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-200"
+      >
+        AI Integration & Automation
+      </button>
+    </div>
+    
+    <!-- Development Content -->
+    <div 
+      x-show="activeTab === 'development'" 
+      x-transition:enter="transition ease-out duration-300" 
+      x-transition:enter-start="opacity-0 transform translate-y-4" 
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+    >
+      <!-- Card 1: Fixed-Scope Development -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <h3 class="text-xl font-semibold text-white mb-2">Fixed-Scope Development</h3>
+        <p class="text-sm text-violet-600 italic mb-4">Defined builds with clear outcomes</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">A clearly scoped custom software build with defined deliverables, timeline, and full code ownership.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">MVPs, internal tools, phase-one products</p>
         </div>
-
-        <!-- Card 02: Ongoing Product Development -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            02
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              02
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Ongoing Product Development
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            Continuous development for evolving products
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              SaaS products
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Scaling platforms
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Monthly retainer
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#ongoing-product" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">One-time project fee</p>
         </div>
+      </div>
 
-        <!-- Card 03: Partnership Development -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute top-6 right-6 z-20">
-            <span class="text-xs uppercase tracking-widest text-violet-600 bg-violet-600/10 px-3 py-1.5 rounded-full font-semibold">
-              Selective
-            </span>
-          </div>
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            03
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              03
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Partnership Development
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            Selective, high-leverage engagements
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Founder-led
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Strategic platforms
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              By invitation
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#partnership" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+      <!-- Card 2: Ongoing Product Development -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <h3 class="text-xl font-semibold text-white mb-2">Ongoing Product Development</h3>
+        <p class="text-sm text-violet-600 italic mb-4">Continuous development for evolving products</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Monthly development partnership for platforms and products that grow over time.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">SaaS products, scaling platforms, complex systems</p>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">Monthly development retainer</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Partnership Development -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <span class="absolute top-4 right-4 text-xs uppercase tracking-wider text-violet-600 bg-violet-600/10 px-3 py-1 rounded-full font-medium">
+          Selective
+        </span>
+        <h3 class="text-xl font-semibold text-white mb-2">Partnership Development</h3>
+        <p class="text-sm text-violet-600 italic mb-4">Selective, high-leverage engagements</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Select engagements where Intelio partners at a deeper level on high-upside platforms.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">Founder-led products, strategic platforms</p>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">By invitation or mutual fit</p>
         </div>
       </div>
     </div>
     
-    <!-- Divider -->
-    <div class="border-t border-gray-800 my-16 max-w-xs mx-auto"></div>
-    
-    <!-- AI Integration & Automation -->
-    <div class="mb-16">
-      <h3 class="text-2xl font-semibold text-white text-center mb-2">AI Integration & Automation</h3>
-      <p class="text-gray-500 text-center mb-10">Three Ways to Operate</p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 01: Build + Maintain -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            01
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              01
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Build + Maintain
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            You run it. We keep it working.
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Ownership
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Monthly maintenance
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Your team operates
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#build-maintain" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+    <!-- Integration Content -->
+    <div 
+      x-show="activeTab === 'integration'" 
+      x-transition:enter="transition ease-out duration-300" 
+      x-transition:enter-start="opacity-0 transform translate-y-4" 
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+    >
+      <!-- Card 1: Build + Maintain -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <h3 class="text-xl font-semibold text-white mb-2">Build + Maintain</h3>
+        <p class="text-sm text-violet-600 italic mb-4">You run it. We keep it working.</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">We build and integrate intelligent systems, then maintain them as your business evolves.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">Teams wanting ownership without technical burden</p>
         </div>
-
-        <!-- Card 02: Build + Operate -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            02
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              02
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Build + Operate
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            We build and run it for you.
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Lean teams
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Founders
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Monthly retainer
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#build-operate" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">Project fee + monthly maintenance</p>
         </div>
+      </div>
 
-        <!-- Card 03: Managed Automation -->
-        <div class="group relative bg-[#111] border border-gray-800 rounded-2xl p-8 lg:p-10 hover:border-violet-600/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-          <div class="absolute -top-4 -left-2 text-[120px] font-bold text-white/[0.03] leading-none select-none pointer-events-none">
-            03
-          </div>
-          <div class="relative z-10">
-            <span class="text-5xl lg:text-6xl font-bold text-violet-600/30 group-hover:text-violet-600/50 transition-colors duration-300">
-              03
-            </span>
-          </div>
-          <h4 class="text-xl lg:text-2xl font-semibold text-white mt-4 mb-2 relative z-10">
-            Managed Automation
-          </h4>
-          <p class="text-gray-400 text-sm lg:text-base mb-6 relative z-10">
-            Continuous automation as a service
-          </p>
-          <div class="flex flex-wrap gap-2 relative z-10">
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Enterprise
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Ongoing optimization
-            </span>
-            <span class="text-xs bg-gray-800/80 text-gray-300 px-3 py-1.5 rounded-full">
-              Subscription
-            </span>
-          </div>
-          <div class="mt-6 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <a href="/how-we-work#managed-automation" class="inline-flex items-center text-sm text-violet-600 hover:text-violet-500">
-              Learn more
-              <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
+      <!-- Card 2: Build + Operate -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <h3 class="text-xl font-semibold text-white mb-2">Build + Operate</h3>
+        <p class="text-sm text-violet-600 italic mb-4">We build and run it for you.</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">We build the system and operate it with or for you. Execution off your plate.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">Lean teams, founders, ops-heavy businesses</p>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">Monthly operating retainer</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Managed Automation -->
+      <div class="bg-[#111] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-200 relative">
+        <h3 class="text-xl font-semibold text-white mb-2">Managed Automation</h3>
+        <p class="text-sm text-violet-600 italic mb-4">Continuous automation as a service</p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Ongoing automation, AI integration, and optimization delivered as a managed service.</p>
+        <div class="mb-3">
+          <span class="text-xs uppercase tracking-wider text-gray-600">Best for:</span>
+          <p class="text-sm text-gray-300 mt-1">Mature operations, enterprise teams</p>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-gray-600">Structure:</span>
+          <p class="text-sm text-white mt-1 font-medium">Monthly subscription</p>
         </div>
       </div>
     </div>
     
     <!-- Bottom CTA -->
-    <div class="text-center mt-16">
-      <p class="text-gray-500 mb-4">Want the full breakdown?</p>
-      <a href="/how-we-work" class="inline-flex items-center justify-center bg-transparent border-2 border-gray-700 text-white px-8 py-4 rounded-full font-semibold hover:border-violet-600 hover:text-violet-600 transition-all duration-200">
-        View All Engagement Details
-        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+    <div class="text-center mt-12">
+      <a href="/how-we-work" class="inline-flex items-center text-gray-400 hover:text-white transition-colors">
+        View full engagement details
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
         </svg>
       </a>
     </div>
     
   </div>
 </section>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <!-- OUR APPROACH -->
 <section class="py-12 sm:py-16 md:py-20 bg-white" style="width: 100vw; margin-left: calc(-50vw + 50%);">
