@@ -4,8 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="System Integration | Intelio - Connect Your Systems" description="Connect fragmented business systems so information flows automatically instead of being manually copied between platforms.">
 <main class="bg-white">
-  <!-- HERO SECTION: Video Background -->
-  <section class="relative h-[600px] md:h-[450px] sm:h-[300px] flex items-center justify-center overflow-hidden bg-black">
+  <!-- SECTION 1: HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
     <!-- Video Background -->
     <video 
       autoplay
@@ -13,840 +13,468 @@ import Layout from "../../layouts/Layout.astro";
       loop
       playsinline
       preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
       class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/videos/system-integration-hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     
     <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 bg-black/45 z-[1]"></div>
+    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
 
-    <!-- Hero Content -->
-    <div class="relative z-10 max-w-4xl mx-auto px-[6%] text-center">
-      <h1 class="text-[48px] md:text-[36px] sm:text-[24px] text-white mb-6 leading-[1.2] font-normal tracking-[-0.5px]">
-        Systems Stay in Sync Automatically
-      </h1>
-      <p class="text-lg md:text-base sm:text-sm text-[#d1d5db] leading-[1.7] font-normal max-w-[600px] mx-auto mb-10">
-        Data entered once. Propagates everywhere. No re-entry. No manual coordination. No bottleneck.
-      </p>
-      <a href="/contact" class="inline-block px-7 py-3 bg-white text-black text-[15px] font-normal hover:bg-gray-100 transition-colors rounded-md border border-white">
-        Start a Project
-      </a>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Label -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            SYSTEM INTEGRATION
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
+          Systems Stay in Sync Automatically
+        </h1>
+        
+        <!-- Subhead -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed">
+          Data entered once. Propagates everywhere. No re-entry. No manual coordination. No bottleneck.
+        </p>
+        
+        <!-- CTA Button -->
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
+          Start a Project
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="max-w-[1200px] mx-auto px-[6%]">
-    <!-- THE PROBLEM SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        What's Broken Today
+  <!-- SECTION 2: INTRO -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-8">
+        Connect Your Systems. Remove Manual Work.
       </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        Most businesses run on disconnected systems. Data lives in silos. Someone is responsible for keeping everything in sync.
-      </p>
+      <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+        <p>
+          Most businesses run on disconnected systems. Data lives in silos. Someone is responsible for keeping everything in sync—manually copying information between platforms, re-entering data, and coordinating workflows.
+        </p>
+        <p>
+          Intelio builds system integrations that make data flow automatically. Information entered once propagates everywhere. No re-entry. No manual coordination. No bottleneck.
+        </p>
+      </div>
+      <div class="mt-10 p-6 bg-gray-50 rounded-lg border-l-4 border-blue-600">
+        <p class="text-lg font-semibold text-gray-900">
+          This isn't consulting. This isn't advice. It's infrastructure.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 gap-12 mb-10">
-        <div class="p-0">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            Manual Data Replication
-          </h3>
-          <p class="text-[15px] text-gray-600 leading-[1.7] font-normal">
+  <!-- SECTION 3: WHAT'S BROKEN -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT'S BROKEN TODAY</span>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+          <h3 class="text-2xl text-gray-900 mb-4">Manual Data Replication</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Customer data entered in CRM, re-entered in accounting, re-entered in project management. Same person. Multiple systems. Hours per week wasted.
           </p>
         </div>
-        
-        <div class="p-0">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            Disconnected Workflows
-          </h3>
-          <p class="text-[15px] text-gray-600 leading-[1.7] font-normal">
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+          <h3 class="text-2xl text-gray-900 mb-4">Disconnected Workflows</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Deal closes in CRM but finance doesn't know. Project completes but accounting doesn't see it. Information moves in silos, not synchronized.
           </p>
         </div>
 
-        <div class="p-0">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            System Conflicts
-          </h3>
-          <p class="text-[15px] text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+          <h3 class="text-2xl text-gray-900 mb-4">System Conflicts</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Different systems show different customer data. Finance sees one version, operations sees another. Decisions made on conflicting information.
           </p>
         </div>
 
-        <div class="p-0">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            No Single Source of Truth
-          </h3>
-          <p class="text-[15px] text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+          <h3 class="text-2xl text-gray-900 mb-4">No Single Source of Truth</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Customer address lives in three places. Which one is right? Nobody knows. Financial reconciliation becomes guesswork.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WHAT CHANGES SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        What Changes After Deployment
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        The system removes coordination overhead by making data flow automatic instead of manual.
-      </p>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
-        <div class="p-8 bg-[#f0f9ff] border-l-[3px] border-[#3b82f6] rounded">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Automatic Information Flow
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+  <!-- SECTION 4: WHAT CHANGES -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT CHANGES AFTER DEPLOYMENT</span>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-3">Automatic Information Flow</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Data entered once, propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.
           </p>
         </div>
 
-        <div class="p-8 bg-[#f0f9ff] border-l-[3px] border-[#3b82f6] rounded">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Real-Time Synchronization
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 2 -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-3">Real-Time Synchronization</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.
           </p>
         </div>
 
-        <div class="p-8 bg-[#f0f9ff] border-l-[3px] border-[#3b82f6] rounded">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Built-In Conflict Detection
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 3 -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-3">Built-In Conflict Detection</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             System detects when data diverges across systems and alerts you before decisions get made on bad information.
           </p>
         </div>
 
-        <div class="p-8 bg-[#f0f9ff] border-l-[3px] border-[#3b82f6] rounded">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Time Freed for Revenue Work
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 4 -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-3">Time Freed for Revenue Work</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.
           </p>
         </div>
 
-        <div class="p-8 bg-[#f0f9ff] border-l-[3px] border-[#3b82f6] rounded md:col-span-2 lg:col-span-1">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Complete Audit Trail
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 5 -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-3">Complete Audit Trail</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- HOW IT WORKS SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        How the System Actually Works
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        The system monitors your business systems for changes, applies your rules, executes actions, and keeps humans in control.
-      </p>
-
-      <div class="mb-10">
-        <div class="p-8 border border-gray-200 border-t rounded-t-lg bg-white">
-          <h3 class="text-[15px] text-black mb-3 font-normal leading-[1.4]">
-            Input Layer
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+  <!-- SECTION 5: HOW IT WORKS -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">HOW THE SYSTEM ACTUALLY WORKS</span>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Input Layer</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Your data already exists in systems you operate (CRM, accounting, project management). The integration continuously monitors for changes: new records created, existing records modified, status transitions, financial transactions.
           </p>
         </div>
 
-        <div class="p-8 border-x border-gray-200 bg-white">
-          <h3 class="text-[15px] text-black mb-3 font-normal leading-[1.4]">
-            Decision Logic
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Decision Logic</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             The system applies rules you define. Where should this data go? How should it be formatted for the target system? If data exists in multiple places, which version is authoritative? What conditions require human review?
           </p>
         </div>
 
-        <div class="p-8 border-x border-gray-200 bg-white">
-          <h3 class="text-[15px] text-black mb-3 font-normal leading-[1.4]">
-            Action Layer
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Action Layer</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Based on the logic, the system executes automatically. Creates or updates records in target systems. Sends notifications when data moves. Triggers downstream workflows. Generates audit logs with complete records of what moved, when, and why.
           </p>
         </div>
 
-        <div class="p-8 border border-gray-200 border-b rounded-b-lg bg-white">
-          <h3 class="text-[15px] text-black mb-3 font-normal leading-[1.4]">
-            Oversight Layer
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Oversight Layer</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             Humans stay in control. The system routes exceptions to people when needed. Requires approval for sensitive operations if configured. Provides dashboards showing what moved, what failed, what needs attention. Can be paused immediately. Can be reconfigured as business rules change.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROOF OF PRODUCTION REALITY -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        This Actually Works
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        These aren't theoretical concepts. This is infrastructure running in production right now.
-      </p>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        <div class="p-8 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-lg border border-[#e2e8f0]">
-          <h3 class="text-[28px] text-[#1e40af] mb-2 font-normal leading-[1.4]">
-            50-100
-          </h3>
-          <p class="text-sm text-gray-600 mb-2 leading-[1.6] font-normal">
-            Data sync operations per day across current deployments
-          </p>
-          <p class="text-[13px] text-gray-500 mt-2 font-normal">
-            Running continuously. Zero unplanned downtime in 60+ days.
-          </p>
-        </div>
-
-        <div class="p-8 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-lg border border-[#e2e8f0]">
-          <h3 class="text-[28px] text-[#1e40af] mb-2 font-normal leading-[1.4]">
-            5-15
-          </h3>
-          <p class="text-sm text-gray-600 mb-2 leading-[1.6] font-normal">
-            System-to-system connections per client
-          </p>
-          <p class="text-[13px] text-gray-500 mt-2 font-normal">
-            Handling real-world complexity: validation, error recovery, escalation.
-          </p>
-        </div>
-
-        <div class="p-8 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-lg border border-[#e2e8f0]">
-          <h3 class="text-[28px] text-[#1e40af] mb-2 font-normal leading-[1.4]">
-            10-15 hrs/week
-          </h3>
-          <p class="text-sm text-gray-600 mb-2 leading-[1.6] font-normal">
-            Time freed from manual data coordination
-          </p>
-          <p class="text-[13px] text-gray-500 mt-2 font-normal">
-            Per client. That's one person's job eliminated and capacity freed for revenue work.
-          </p>
-        </div>
-
-        <div class="p-8 bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-lg border border-[#e2e8f0]">
-          <h3 class="text-[28px] text-[#1e40af] mb-2 font-normal leading-[1.4]">
-            Same-Day
-          </h3>
-          <p class="text-sm text-gray-600 mb-2 leading-[1.6] font-normal">
-            Financial reconciliation time
-          </p>
-          <p class="text-[13px] text-gray-500 mt-2 font-normal">
-            Down from 3-5 days. Because data flows automatically instead of waiting for someone to copy it.
-          </p>
-        </div>
+  <!-- SECTION 6: ENGAGEMENT MODELS -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">ENGAGEMENT MODELS</span>
       </div>
-
-      <div class="p-8 bg-[#f9fafb] border border-gray-200 rounded-lg">
-        <h3 class="text-base text-black mb-4 font-normal leading-[1.4]">
-          Mission-Critical Operations
-        </h3>
-        <p class="text-sm text-black leading-[1.6] mb-4 font-normal">
-          Integrations aren't optional. They're what runs your business.
-        </p>
-        <ul class="space-y-3 text-sm text-gray-600 list-none">
-          <li class="flex items-start">
-            <span class="text-[#3b82f6] mr-3 font-normal">→</span>
-            <span class="font-normal leading-[1.6]">Financial reconciliation depends on data flowing from operations to accounting</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-[#3b82f6] mr-3 font-normal">→</span>
-            <span class="font-normal leading-[1.6]">Revenue recognition depends on deal data syncing from CRM to financial systems</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-[#3b82f6] mr-3 font-normal">→</span>
-            <span class="font-normal leading-[1.6]">Project profitability depends on cost data flowing from operations to finance</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-[#3b82f6] mr-3 font-normal">→</span>
-            <span class="font-normal leading-[1.6]">Customer experience depends on customer data staying synchronized</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ENGAGEMENT MODELS SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        How We Work
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        Two engagement models. Clear ownership. Explicit responsibilities.
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-8 mb-10">
-        <div class="p-10 border-2 border-gray-200 rounded-lg bg-white">
-          <h3 class="text-lg text-black mb-2 font-normal leading-[1.4]">
-            Build + Maintain
-          </h3>
-          <p class="text-sm text-gray-500 mb-6 italic font-normal">
-            You own operations. We monitor and optimize.
-          </p>
-          
-          <div class="space-y-4 mb-6">
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card 1: Build + Maintain -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-2">Build + Maintain</h3>
+          <p class="text-sm text-gray-600 mb-6">You own operations. We monitor and optimize.</p>
+          <div class="space-y-4">
             <div>
-              <p class="text-[13px] text-black mb-1.5 font-normal uppercase tracking-wider">You Own</p>
-              <p class="text-sm text-gray-600 leading-[1.6] font-normal">Day-to-day decisions about data flows and business rules</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
+              <p class="text-sm text-gray-700">Day-to-day decisions about data flows and business rules</p>
             </div>
             <div>
-              <p class="text-[13px] text-black mb-1.5 font-normal uppercase tracking-wider">We Own</p>
-              <p class="text-sm text-gray-600 leading-[1.6] font-normal">System monitoring, performance tuning, infrastructure health</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
+              <p class="text-sm text-gray-700">System monitoring, performance tuning, infrastructure health</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
+              <p class="text-sm text-gray-700">Operations or IT teams that can own the workflow. You want monthly support, not daily involvement.</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
+              <p class="text-sm text-gray-700">Project fee + monthly maintenance</p>
             </div>
           </div>
+        </div>
 
-          <div class="p-4 bg-[#f0f9ff] rounded-md mb-4 border-l-[3px] border-[#3b82f6]">
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">
-              <span class="font-normal">Best for:</span> You have an operations or IT team that can own the workflow. You want monthly support, not daily operational involvement.
+        <!-- Card 2: Build + Operate -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-2">Build + Operate</h3>
+          <p class="text-sm text-gray-600 mb-6">We embed and manage the system end-to-end.</p>
+          <div class="space-y-4">
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
+              <p class="text-sm text-gray-700">Overall business outcomes and strategy</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
+              <p class="text-sm text-gray-700">Daily operations, monitoring, optimization, exception handling, business rule updates</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
+              <p class="text-sm text-gray-700">You want integrations to "just work" without your team managing them. You need someone accountable for data accuracy end-to-end.</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
+              <p class="text-sm text-gray-700">Monthly operating retainer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: OUR PROCESS -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">OUR PROCESS</span>
+      </div>
+      
+      <div class="space-y-12">
+        <!-- Step 01 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            01
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">System Audit</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              We map your current data landscape. What systems do you use? What data lives where? What's currently manual? Where are the biggest pain points?
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Clear documentation of current state and specific integration opportunities with ROI estimates
             </p>
           </div>
-
-          <div class="text-[13px] text-gray-500 mt-5 pt-4 border-t border-gray-200 font-normal">Project fee + monthly maintenance</div>
         </div>
 
-        <div class="p-10 border-2 border-gray-200 rounded-lg bg-white">
-          <h3 class="text-lg text-black mb-2 font-normal leading-[1.4]">
-            Build + Operate
-          </h3>
-          <p class="text-sm text-gray-500 mb-6 italic font-normal">
-            We embed and manage the system end-to-end.
-          </p>
-          
-          <div class="space-y-4 mb-6">
-            <div>
-              <p class="text-[13px] text-black mb-1.5 font-normal uppercase tracking-wider">You Own</p>
-              <p class="text-sm text-gray-600 leading-[1.6] font-normal">Overall business outcomes and strategy</p>
-            </div>
-            <div>
-              <p class="text-[13px] text-black mb-1.5 font-normal uppercase tracking-wider">We Own</p>
-              <p class="text-sm text-gray-600 leading-[1.6] font-normal">Daily operations, monitoring, optimization, exception handling, business rule updates</p>
-            </div>
+        <!-- Step 02 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            02
           </div>
-
-          <div class="p-4 bg-[#f0f9ff] rounded-md mb-4 border-l-[3px] border-[#3b82f6]">
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">
-              <span class="font-normal">Best for:</span> You want the integrations to "just work" without your team managing them. You need someone accountable for data accuracy end-to-end.
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Workflow Specification</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              You define how data should flow. What are the rules for each integration? What exceptions need human review? What data transformations are needed?
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Detailed integration specification that becomes the build plan
             </p>
           </div>
+        </div>
 
-          <div class="text-[13px] text-gray-500 mt-5 pt-4 border-t border-gray-200 font-normal">Monthly operating retainer</div>
+        <!-- Step 03 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            03
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Build & Test</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              We build integrations and validate with your real data. Real data testing, not synthetic. Validation against your rules. Exception handling tested. Performance verified.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Working integrations, tested and ready to deploy
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            04
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Pilot Deployment</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              Run integrations on a limited basis. One data flow live. Monitor accuracy and performance. Gather feedback. Refine before full deployment.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Confidence that the system works before going live
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 05 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            05
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Full Deployment & Handoff</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              Deploy to full operation. All integrations live. Team training. Monitoring dashboards set up. Support plan defined.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Live system, monitored and supported according to your engagement model
+            </p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="p-8 bg-[#f9fafb] border border-gray-200 rounded-lg">
-        <h3 class="text-base text-black mb-5 font-normal leading-[1.4]">
-          What's Always Clear
-        </h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <!-- SECTION 8: WHAT YOU GET -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+        What You Get
+      </h2>
+      <ul class="space-y-6">
+        <li class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
           <div>
-            <h4 class="text-[15px] text-black mb-2 font-normal leading-[1.4]">Data Ownership</h4>
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">You own the data. We manage the pipelines. No ambiguity.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Automatic Data Flow</h3>
+            <p class="text-base text-gray-600">Data entered once propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.</p>
           </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
           <div>
-            <h4 class="text-[15px] text-black mb-2 font-normal leading-[1.4]">Decision Authority</h4>
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">You control what rules the system enforces. Changes go through you.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Real-Time Synchronization</h3>
+            <p class="text-base text-gray-600">Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.</p>
           </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
           <div>
-            <h4 class="text-[15px] text-black mb-2 font-normal leading-[1.4]">Failure Handling</h4>
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">If something breaks, here's who gets notified, in what order, what the rollback procedure is.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Complete Audit Trail</h3>
+            <p class="text-base text-gray-600">Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.</p>
           </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
           <div>
-            <h4 class="text-[15px] text-black mb-2 font-normal leading-[1.4]">Cost Transparency</h4>
-            <p class="text-sm text-gray-600 leading-[1.6] font-normal">Monthly costs based on systems connected, data volume, complexity. No surprises.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Time Freed for Revenue Work</h3>
+            <p class="text-base text-gray-600">The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.</p>
           </div>
-        </div>
-      </div>
-    </section>
+        </li>
+        <li class="flex items-start gap-4">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Flexible Engagement</h3>
+            <p class="text-base text-gray-600">Build + Maintain or Build + Operate models—we adapt to how you work and what you need.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- COMMON PATTERNS SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        Common Integration Patterns
+  <!-- SECTION 9 & 10: WHO THIS IS FOR + FINAL CTA -->
+  <section class="py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-white mb-12">
+        Who This Is For
       </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        Real scenarios from production deployments.
-      </p>
-
-      <div class="space-y-8">
-        <div class="p-8 bg-[#f9fafb] border border-gray-200 rounded-lg">
-          <h3 class="text-base text-black mb-5 font-normal leading-[1.4]">
-            CRM ↔ Accounting (Revenue Sync)
-          </h3>
-          <div class="grid md:grid-cols-2 gap-5">
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Input</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Deal closes in CRM (marked "Closed/Won")</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Action</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Create invoice in accounting, update CRM with reference, notify finance</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4 md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Removes</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Someone manually creating invoices from CRM deals (2 hours/week)</div>
-            </div>
-            <div class="md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Adds</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Deals close at 4 PM. Invoices exist in accounting by 4:15 PM.</div>
-            </div>
-            <div class="p-4 bg-[#f0f9ff] rounded-md border-l-[3px] border-[#3b82f6] mt-4 md:col-span-2">
-              <p class="text-sm text-black font-normal leading-[1.6]">
-                <span class="font-normal">Result:</span> 100% invoice creation accuracy. Processing time instant. No manual data entry.
-              </p>
-            </div>
+      <ul class="space-y-6 mb-16">
+        <li class="flex items-start gap-4">
+          <span class="text-blue-400 text-xl mt-1">•</span>
+          <div>
+            <h3 class="text-xl text-white mb-1">Businesses Using 3+ Systems</h3>
+            <p class="text-base text-gray-300">CRM, accounting, project management, and other platforms that should talk to each other</p>
           </div>
-        </div>
-
-        <div class="p-8 bg-[#f9fafb] border border-gray-200 rounded-lg">
-          <h3 class="text-base text-black mb-5 font-normal leading-[1.4]">
-            Operations ↔ Finance (Profitability)
-          </h3>
-          <div class="grid md:grid-cols-2 gap-5">
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Input</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Project costs updated (hours, expenses), timeline changes</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Action</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Calculate profitability, update forecast, alert finance if margin below threshold</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4 md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Removes</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Manual profitability calculations and financial reconciliation</div>
-            </div>
-            <div class="md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Adds</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Real-time margin visibility. Early warning when projects are losing money.</div>
-            </div>
-            <div class="p-4 bg-[#f0f9ff] rounded-md border-l-[3px] border-[#3b82f6] mt-4 md:col-span-2">
-              <p class="text-sm text-black font-normal leading-[1.6]">
-                <span class="font-normal">Result:</span> Problems caught before they become crises. Visibility into which projects actually make money.
-              </p>
-            </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-blue-400 text-xl mt-1">•</span>
+          <div>
+            <h3 class="text-xl text-white mb-1">Operations Teams</h3>
+            <p class="text-base text-gray-300">Someone on your team is responsible for keeping systems in sync manually</p>
           </div>
-        </div>
-
-        <div class="p-8 bg-[#f9fafb] border border-gray-200 rounded-lg">
-          <h3 class="text-base text-black mb-5 font-normal leading-[1.4]">
-            Customer Data ↔ Everywhere (Single Source of Truth)
-          </h3>
-          <div class="grid md:grid-cols-2 gap-5">
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Input</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Customer info updated anywhere (CRM, accounting, support)</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Action</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Detect change, verify validity, update everywhere it's stored</div>
-            </div>
-            <div class="border-b border-gray-200 pb-4 md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Removes</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">Customer address in three places. Uncertainty about which is correct.</div>
-            </div>
-            <div class="md:col-span-2">
-              <div class="text-xs text-gray-500 mb-1.5 font-normal uppercase tracking-wider">Adds</div>
-              <div class="text-sm text-black leading-[1.6] font-normal">One customer address, updated automatically everywhere.</div>
-            </div>
-            <div class="p-4 bg-[#f0f9ff] rounded-md border-l-[3px] border-[#3b82f6] mt-4 md:col-span-2">
-              <p class="text-sm text-black font-normal leading-[1.6]">
-                <span class="font-normal">Result:</span> One version of truth. No duplicate records. Complete sync across all systems.
-              </p>
-            </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-blue-400 text-xl mt-1">•</span>
+          <div>
+            <h3 class="text-xl text-white mb-1">Organizations with Defined Workflows</h3>
+            <p class="text-base text-gray-300">You have repeatable processes and an internal owner who can define integration rules</p>
           </div>
-        </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-blue-400 text-xl mt-1">•</span>
+          <div>
+            <h3 class="text-xl text-white mb-1">Companies Measuring Outcomes</h3>
+            <p class="text-base text-gray-300">You measure business outcomes like profitability, speed, and accuracy</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Final CTA -->
+      <div class="text-center pt-12 border-t border-gray-700">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Ready to connect your systems?
+        </h2>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
+          Start a Project
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
       </div>
-    </section>
-
-    <!-- RISK & CONTROL SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        Risk, Control & Ownership
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        Explicit about how we handle failure and keep you in control.
-      </p>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
-        <div class="p-0">
-          <h3 class="text-[15px] text-black mb-4 font-normal leading-[1.4]">
-            Data & IP
-          </h3>
-          <ul class="space-y-3 text-sm text-gray-600 list-none">
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Your data lives in your systems, owned by you</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">We never store or own your business data</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Integration rules documented and version-controlled</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">No vendor lock-in</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="p-0">
-          <h3 class="text-[15px] text-black mb-4 font-normal leading-[1.4]">
-            Failure Handling
-          </h3>
-          <ul class="space-y-3 text-sm text-gray-600 list-none">
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">24/7 automated monitoring of all data flows</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Notified immediately if sync fails</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Automatic retry for temporary failures</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Can pause and revert to previous state</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="p-0">
-          <h3 class="text-[15px] text-black mb-4 font-normal leading-[1.4]">
-            Human Oversight
-          </h3>
-          <ul class="space-y-3 text-sm text-gray-600 list-none">
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">System doesn't make decisions about data movement</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">It executes based on your rules</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">All exceptions get human review</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Clear escalation path defined</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="p-0">
-          <h3 class="text-[15px] text-black mb-4 font-normal leading-[1.4]">
-            Compliance & Audit
-          </h3>
-          <ul class="space-y-3 text-sm text-gray-600 list-none">
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Complete audit trail of every data movement</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Access control configurable by system</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">Data residency and retention policies enforced</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#3b82f6] mr-3 font-normal">•</span>
-              <span class="font-normal leading-[1.6]">SOC2, HIPAA-ready</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- IDEAL FIT SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Is This Right for You?
-      </h2>
-
-      <div class="grid md:grid-cols-2 gap-12 mb-5">
-        <div>
-          <h3 class="text-lg text-[#059669] mb-6 font-normal leading-[1.4]">
-            Best Fit
-          </h3>
-          <ul class="space-y-3.5 text-[15px] text-black list-none">
-            <li class="flex items-start">
-              <span class="text-[#059669] mr-3 font-normal mt-0.5">✓</span>
-              <span class="font-normal leading-[1.6]">Using 3+ business systems that should talk to each other</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#059669] mr-3 font-normal mt-0.5">✓</span>
-              <span class="font-normal leading-[1.6]">Someone on your team is responsible for keeping systems in sync</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#059669] mr-3 font-normal mt-0.5">✓</span>
-              <span class="font-normal leading-[1.6]">You have defined, repeatable workflows</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#059669] mr-3 font-normal mt-0.5">✓</span>
-              <span class="font-normal leading-[1.6]">You have an internal owner (COO, ops manager) who can define rules</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#059669] mr-3 font-normal mt-0.5">✓</span>
-              <span class="font-normal leading-[1.6]">You measure business outcomes (profitability, speed, accuracy)</span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-lg text-[#dc2626] mb-6 font-normal leading-[1.4]">
-            Not a Fit
-          </h3>
-          <ul class="space-y-3.5 text-[15px] text-black list-none">
-            <li class="flex items-start">
-              <span class="text-[#dc2626] mr-3 font-normal mt-0.5">✗</span>
-              <span class="font-normal leading-[1.6]">Looking for a proof-of-concept without commitment</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#dc2626] mr-3 font-normal mt-0.5">✗</span>
-              <span class="font-normal leading-[1.6]">Workflows are undefined or constantly changing</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#dc2626] mr-3 font-normal mt-0.5">✗</span>
-              <span class="font-normal leading-[1.6]">No internal owner to specify integration rules</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#dc2626] mr-3 font-normal mt-0.5">✗</span>
-              <span class="font-normal leading-[1.6]">Trying to solve a people problem with technology</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#dc2626] mr-3 font-normal mt-0.5">✗</span>
-              <span class="font-normal leading-[1.6]">Need real-time sync but have legacy systems with no APIs</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT HAPPENS NEXT SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        What Happens Next
-      </h2>
-      <p class="text-base text-gray-600 leading-[1.8] mb-12 font-normal max-w-[700px]">
-        Clear process. No surprises.
-      </p>
-
-      <div class="space-y-6">
-        <div class="p-6 border border-gray-200 rounded-lg bg-white">
-          <div class="grid grid-cols-[40px_1fr] gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-[#dbeafe] rounded-full flex items-center justify-center">
-                <span class="text-[#1e40af] font-normal">1</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-base text-black mb-2 font-normal leading-[1.4]">
-                System Audit (1-2 weeks)
-              </h3>
-              <p class="text-sm text-gray-600 mb-3 leading-[1.7] font-normal">
-                We map your current data landscape. What systems do you use? What data lives where? What's currently manual? Where are the biggest pain points?
-              </p>
-              <p class="text-[13px] text-gray-500 italic font-normal">
-                You get: Clear documentation of current state and specific integration opportunities with ROI estimates
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-6 border border-gray-200 rounded-lg bg-white">
-          <div class="grid grid-cols-[40px_1fr] gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-[#dbeafe] rounded-full flex items-center justify-center">
-                <span class="text-[#1e40af] font-normal">2</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-base text-black mb-2 font-normal leading-[1.4]">
-                Workflow Specification (1 week)
-              </h3>
-              <p class="text-sm text-gray-600 mb-3 leading-[1.7] font-normal">
-                You define how data should flow. What are the rules for each integration? What exceptions need human review? What data transformations are needed?
-              </p>
-              <p class="text-[13px] text-gray-500 italic font-normal">
-                You get: Detailed integration specification that becomes the build plan
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-6 border border-gray-200 rounded-lg bg-white">
-          <div class="grid grid-cols-[40px_1fr] gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-[#dbeafe] rounded-full flex items-center justify-center">
-                <span class="text-[#1e40af] font-normal">3</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-base text-black mb-2 font-normal leading-[1.4]">
-                Build & Test (2-4 weeks)
-              </h3>
-              <p class="text-sm text-gray-600 mb-3 leading-[1.7] font-normal">
-                We build integrations and validate with your real data. Real data testing, not synthetic. Validation against your rules. Exception handling tested. Performance verified.
-              </p>
-              <p class="text-[13px] text-gray-500 italic font-normal">
-                You get: Working integrations, tested and ready to deploy
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-6 border border-gray-200 rounded-lg bg-white">
-          <div class="grid grid-cols-[40px_1fr] gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-[#dbeafe] rounded-full flex items-center justify-center">
-                <span class="text-[#1e40af] font-normal">4</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-base text-black mb-2 font-normal leading-[1.4]">
-                Pilot Deployment (1-2 weeks)
-              </h3>
-              <p class="text-sm text-gray-600 mb-3 leading-[1.7] font-normal">
-                Run integrations on a limited basis. One data flow live. Monitor accuracy and performance. Gather feedback. Refine before full deployment.
-              </p>
-              <p class="text-[13px] text-gray-500 italic font-normal">
-                You get: Confidence that the system works before going live
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-6 border border-gray-200 rounded-lg bg-white">
-          <div class="grid grid-cols-[40px_1fr] gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-[#dbeafe] rounded-full flex items-center justify-center">
-                <span class="text-[#1e40af] font-normal">5</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-base text-black mb-2 font-normal leading-[1.4]">
-                Full Deployment & Handoff
-              </h3>
-              <p class="text-sm text-gray-600 mb-3 leading-[1.7] font-normal">
-                Deploy to full operation. All integrations live. Team training. Monitoring dashboards set up. Support plan defined.
-              </p>
-              <p class="text-[13px] text-gray-500 italic font-normal">
-                You get: Live system, monitored and supported according to your engagement model
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="pt-20 pb-20 border-t border-gray-200">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Common Questions
-      </h2>
-
-      <div class="space-y-0">
-        <div class="py-6 border-b border-gray-200">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            What if the systems change? Do we need to rebuild?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            No. The integration rules are defined separately from the system implementations. When systems update (new fields, API changes), we update the integration logic. The rules you defined stay the same.
-          </p>
-        </div>
-
-        <div class="py-6 border-b border-gray-200">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            What happens if data is wrong?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            Validation catches most issues before data moves. For issues that slip through, you review and correct. The system learns from corrections and gets better. Complete audit trail shows what happened.
-          </p>
-        </div>
-
-        <div class="py-6 border-b border-gray-200">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            Can we turn this off if we need to?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            Yes. Integrations can be paused immediately. You can roll back to previous states. Nothing is permanent. If something goes wrong, you're not locked in.
-          </p>
-        </div>
-
-        <div class="py-6 border-b border-gray-200">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            What about compliance and data security?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            All data stays in your systems. We don't store business data. Audit trails are complete. Access control is configurable. Complies with standard frameworks (SOC2, HIPAA if needed).
-          </p>
-        </div>
-
-        <div class="py-6 border-b border-gray-200">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            How do we know it's actually working?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            Dashboards show real-time status. You see how much data moved, what failed, what needed review. Monthly reports show impact: time saved, errors caught, data quality improved.
-          </p>
-        </div>
-
-        <div class="py-6">
-          <h3 class="text-base text-black mb-3 font-normal leading-[1.4]">
-            What if we need to change a rule?
-          </h3>
-          <p class="text-sm text-gray-600 leading-[1.7] font-normal">
-            Changes go through a control process. You define the rule, we implement, we test, you approve. Usually 1-2 days for standard changes. The system is designed to evolve.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="pt-20 pb-20 bg-black text-white text-center">
-      <h2 class="text-[32px] md:text-[28px] sm:text-[24px] text-white mb-4 font-normal leading-[1.4]">
-        Ready to Connect Your Systems?
-      </h2>
-      <p class="text-lg text-[#d1d5db] mb-8 leading-[1.7] font-normal max-w-[600px] mx-auto">
-        Start with a conversation about your current landscape and integration opportunities.
-      </p>
-      <a href="/contact" class="inline-block px-7 py-3 bg-white text-black text-[15px] font-normal hover:bg-[#f3f4f6] transition-colors rounded-md border border-white">
-        Start a Project
-      </a>
-    </section>
-  </div>
-
-  <!-- Back Link -->
-  <section class="py-8 px-6 border-t border-gray-100">
-    <div class="max-w-[900px] mx-auto">
-      <a href="/ai-integration-automation" class="text-base text-gray-600 hover:text-black transition-colors font-normal">
-        ← Back to AI Integration & Automation
-      </a>
     </div>
   </section>
 </main>
 
 <style>
-  /* Video background positioning */
+  /* Video background mobile fixes for hero section */
   section video {
     position: absolute;
     top: 50%;
@@ -859,8 +487,8 @@ import Layout from "../../layouts/Layout.astro";
     object-fit: cover;
   }
 
-  /* Mobile video fixes */
-  @media (max-width: 640px) {
+  /* Ensure video containers work on mobile */
+  @media (max-width: 768px) {
     section video {
       width: 100%;
       height: 100%;
