@@ -20,20 +20,21 @@ import Layout from "../layouts/Layout.astro";
   <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
     <!-- Video Background -->
     <video 
-      autoplay 
-      loop 
-      muted 
+      autoplay
+      muted
+      loop
       playsinline
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
       class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
     </video>
     
     <!-- Dark Overlay for Text Readability -->
     <div class="absolute inset-0 bg-black/50 z-[1]"></div>
-    
-    <!-- Mobile Fallback Background -->
-    <div class="absolute inset-0 bg-black md:hidden z-[1]"></div>
     
     <!-- Content -->
     <div class="relative z-10">
@@ -48,20 +49,21 @@ import Layout from "../layouts/Layout.astro";
   <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
     <!-- Video Background -->
     <video 
-      autoplay 
-      loop 
-      muted 
+      autoplay
+      muted
+      loop
       playsinline
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
       class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/logos/Abstract_Network_Landscape_Visualization.mp4" type="video/mp4">
     </video>
     
     <!-- Dark Overlay for Text Readability -->
     <div class="absolute inset-0 bg-black/50 z-[1]"></div>
-    
-    <!-- Mobile Fallback Background -->
-    <div class="absolute inset-0 bg-black md:hidden z-[1]"></div>
     
     <!-- Content -->
     <div class="relative z-10">
@@ -206,6 +208,36 @@ import Layout from "../layouts/Layout.astro";
     text-align: center !important;
     display: block;
     width: 100%;
+  }
+
+  /* Video background mobile fixes */
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Ensure video containers work on mobile */
+  @media (max-width: 768px) {
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
   }
 </style>
 
