@@ -6,9 +6,9 @@ import Layout from "../layouts/Layout.astro";
 
 <main>
  <!-- HERO SECTION -->
- <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 px-1 sm:px-2 md:px-4">
- <div class="max-w-6xl mx-auto">
- <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl text-black tracking-tight mb-8 md:mb-10 leading-tight">
+ <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16">
+ <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+ <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-black tracking-tight mb-8 md:mb-10 leading-tight px-4 sm:px-6 md:px-8">
  Custom&nbsp;AI&nbsp;development&nbsp;and&nbsp;intelligent&nbsp;automation<br />
  for&nbsp;<span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">modern&nbsp;businesses</span>.
  </h1>
@@ -161,27 +161,8 @@ import Layout from "../layouts/Layout.astro";
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
     word-break: keep-all;
-  }
-  
-  @media (min-width: 640px) {
-    .hero-headline {
-      max-width: 100%;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .hero-headline {
-      max-width: 100%;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .hero-headline {
-      max-width: 100%;
-    }
+    box-sizing: border-box;
   }
 </style>
 
