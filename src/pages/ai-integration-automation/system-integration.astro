@@ -364,98 +364,101 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 8: WHAT YOU GET -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
-        What You Get
-      </h2>
-      <ul class="space-y-6">
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Automatic Data Flow</h3>
-            <p class="text-base text-gray-600">Data entered once propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Real-Time Synchronization</h3>
-            <p class="text-base text-gray-600">Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Complete Audit Trail</h3>
-            <p class="text-base text-gray-600">Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Time Freed for Revenue Work</h3>
-            <p class="text-base text-gray-600">The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Flexible Engagement</h3>
-            <p class="text-base text-gray-600">Build + Maintain or Build + Operate models—we adapt to how you work and what you need.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SECTION 9 & 10: WHO THIS IS FOR + FINAL CTA -->
+  <!-- SECTION 8: WHAT YOU GET & WHO THIS IS FOR -->
   <section class="py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-white mb-12">
-        Who This Is For
-      </h2>
-      <ul class="space-y-6 mb-16">
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Businesses Using 3+ Systems</h3>
-            <p class="text-base text-gray-300">CRM, accounting, project management, and other platforms that should talk to each other</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Operations Teams</h3>
-            <p class="text-base text-gray-300">Someone on your team is responsible for keeping systems in sync manually</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Organizations with Defined Workflows</h3>
-            <p class="text-base text-gray-300">You have repeatable processes and an internal owner who can define integration rules</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Companies Measuring Outcomes</h3>
-            <p class="text-base text-gray-300">You measure business outcomes like profitability, speed, and accuracy</p>
-          </div>
-        </li>
-      </ul>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <!-- Left Column: What You Get -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-12">
+            What You Get
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Automatic Data Flow</h3>
+                <p class="text-base text-gray-300">Data entered once propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Real-Time Synchronization</h3>
+                <p class="text-base text-gray-300">Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Complete Audit Trail</h3>
+                <p class="text-base text-gray-300">Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Time Freed for Revenue Work</h3>
+                <p class="text-base text-gray-300">The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Flexible Engagement</h3>
+                <p class="text-base text-gray-300">Build + Maintain or Build + Operate models—we adapt to how you work and what you need.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Who This Is For -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-12">
+            Who This Is For
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="text-blue-400 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-white mb-1">Businesses Using 3+ Systems</h3>
+                <p class="text-base text-gray-300">CRM, accounting, project management, and other platforms that should talk to each other</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-400 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-white mb-1">Operations Teams</h3>
+                <p class="text-base text-gray-300">Someone on your team is responsible for keeping systems in sync manually</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-400 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-white mb-1">Organizations with Defined Workflows</h3>
+                <p class="text-base text-gray-300">You have repeatable processes and an internal owner who can define integration rules</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-400 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-white mb-1">Companies Measuring Outcomes</h3>
+                <p class="text-base text-gray-300">You measure business outcomes like profitability, speed, and accuracy</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Final CTA -->
       <div class="text-center pt-12 border-t border-gray-700">
