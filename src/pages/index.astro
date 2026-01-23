@@ -477,12 +477,60 @@ import Layout from "../layouts/Layout.astro";
  </div>
  </div>
  </div>
-        <p class="text-gray-500 text-sm sm:text-base text-center max-w-3xl mx-auto px-4">If your organization depends on disconnected tools, manual processes, or institutional knowledge living in people's heads—we build the system that replaces that.</p>
  </div>
  </section>
 
+<!-- HOW WE WORK SECTION -->
+<section class="py-16 sm:py-20 md:py-24 bg-black text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Heading -->
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16">How we work</h2>
+    
+    <!-- Three Process Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+      <!-- Card 1: Define the Outcome -->
+      <div class="how-we-work-card bg-black border border-gray-400 rounded-xl p-6 sm:p-8 md:p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+        <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4">Define the Outcome</h3>
+        <p class="text-base sm:text-lg text-white leading-relaxed">
+          We start with what you're building or fixing—custom software, an AI platform, or operational automation. We clarify requirements, constraints, and success criteria.
+        </p>
+      </div>
+      
+      <!-- Card 2: Design & Architect -->
+      <div class="how-we-work-card bg-black border border-gray-400 rounded-xl p-6 sm:p-8 md:p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+        <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4">Design & Architect</h3>
+        <p class="text-base sm:text-lg text-white leading-relaxed">
+          We design the full solution—data models, APIs, interfaces, integrations, and AI components. Engineered for production and ownership.
+        </p>
+      </div>
+      
+      <!-- Card 3: Build & Deliver -->
+      <div class="how-we-work-card bg-black border border-gray-400 rounded-xl p-6 sm:p-8 md:p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+        <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4">Build & Deliver</h3>
+        <p class="text-base sm:text-lg text-white leading-relaxed">
+          We build in iterations with weekly visibility. Working systems, not slide decks. You own it, we maintain it, or we operate it—your choice.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Work with us Button -->
+    <div class="text-center">
+      <a href="/contact" class="inline-block px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-gray-100 transition-colors duration-200">
+        Work with us
+      </a>
+    </div>
+  </div>
+</section>
 
-
+<style>
+  .how-we-work-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .how-we-work-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+</style>
 
   <!-- FAQ SECTION -->
   <section class="py-16 bg-white" style="width: 100vw; margin-left: calc(-50vw + 50%);">
