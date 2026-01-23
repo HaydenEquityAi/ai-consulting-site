@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
  <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 px-1 sm:px-2 md:px-3">
  <div class="max-w-7xl mx-auto">
  <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl text-black tracking-tight mb-8 md:mb-10 leading-tight">
- <span class="hero-line-1">Custom AI development and intelligent automation</span><br />
+ <span class="hero-line-1">Custom&nbsp;AI&nbsp;development&nbsp;and&nbsp;intelligent&nbsp;automation</span><br />
  <span class="hero-line-2">for <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">modern businesses</span>.</span>
  </h1>
  
@@ -160,34 +160,49 @@ import Layout from "../layouts/Layout.astro";
 
   /* Hero headline line break control */
   .hero-headline {
-    max-width: 95%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   
   .hero-line-1 {
-    display: inline-block;
+    display: inline;
+    white-space: nowrap;
   }
   
   .hero-line-2 {
-    display: inline-block;
+    display: inline;
+  }
+  
+  @media (max-width: 639px) {
+    .hero-line-1 {
+      white-space: normal;
+    }
   }
   
   @media (min-width: 640px) {
     .hero-headline {
-      max-width: 90%;
+      max-width: 95%;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
   
   @media (min-width: 1024px) {
     .hero-headline {
-      max-width: 85%;
+      max-width: 90%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
   
   @media (min-width: 1280px) {
     .hero-headline {
-      max-width: 80%;
+      max-width: 85%;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 </style>
@@ -333,11 +348,11 @@ import Layout from "../layouts/Layout.astro";
    }
    .industry-accordion-header {
      cursor: pointer;
-     padding: 1.25rem 1.5rem;
+     padding: 2rem 1.5rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     min-height: 60px;
+     min-height: 90px;
    }
    .industry-accordion-content {
      max-height: 0;
@@ -352,8 +367,8 @@ import Layout from "../layouts/Layout.astro";
    .industry-accordion-chevron {
      transition: transform 0.3s ease;
      flex-shrink: 0;
-     width: 20px;
-     height: 20px;
+     width: 28px;
+     height: 28px;
    }
    .industry-accordion-item.active .industry-accordion-chevron {
      transform: rotate(180deg);
@@ -364,7 +379,7 @@ import Layout from "../layouts/Layout.astro";
  <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
- <h3 class="text-lg sm:text-xl font-normal mb-1">Real Estate & Property Management</h3>
+ <h3 class="text-xl sm:text-2xl md:text-3xl font-normal mb-1">Real Estate & Property Management</h3>
  <p class="text-blue-400 text-xs">Residential, Commercial, Multifamily, Mixed-Use</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -393,7 +408,7 @@ import Layout from "../layouts/Layout.astro";
  <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
- <h3 class="text-lg sm:text-xl font-normal mb-1">Construction, Trades & Field Services</h3>
+ <h3 class="text-xl sm:text-2xl md:text-3xl font-normal mb-1">Construction, Trades & Field Services</h3>
  <p class="text-blue-400 text-xs">Concrete, Painting, Pest Control, Electrical, Plumbing, Specialty Contractors</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -422,7 +437,7 @@ import Layout from "../layouts/Layout.astro";
  <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
- <h3 class="text-lg sm:text-xl font-normal mb-1">Healthcare & Wellness</h3>
+ <h3 class="text-xl sm:text-2xl md:text-3xl font-normal mb-1">Healthcare & Wellness</h3>
  <p class="text-blue-400 text-xs">Therapists, Clinics, Private Practices, Wellness Groups</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -451,7 +466,7 @@ import Layout from "../layouts/Layout.astro";
  <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
- <h3 class="text-lg sm:text-xl font-normal mb-1">Professional Services</h3>
+ <h3 class="text-xl sm:text-2xl md:text-3xl font-normal mb-1">Professional Services</h3>
  <p class="text-blue-400 text-xs">Consulting, Accounting, Advisory, Legal, Specialized Firms</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -480,7 +495,7 @@ import Layout from "../layouts/Layout.astro";
  <div class="industry-accordion-item">
  <div class="industry-accordion-header">
  <div class="flex-1">
- <h3 class="text-lg sm:text-xl font-normal mb-1">Financial Services & Investment Firms</h3>
+ <h3 class="text-xl sm:text-2xl md:text-3xl font-normal mb-1">Financial Services & Investment Firms</h3>
  <p class="text-blue-400 text-xs">Investment Groups, Asset Managers, Family Offices</p>
  </div>
  <svg class="industry-accordion-chevron text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
