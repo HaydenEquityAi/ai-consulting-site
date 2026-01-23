@@ -6,10 +6,10 @@ import Layout from "../layouts/Layout.astro";
 
 <main>
  <!-- HERO SECTION -->
- <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 px-1 sm:px-2 md:px-3">
+ <section class="hero-gradient pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-8">
  <div class="max-w-7xl mx-auto">
- <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl text-black tracking-tight mb-8 md:mb-10 leading-tight px-4 sm:px-6 md:px-8">
- <span class="hero-line-1">Custom&nbsp;AI&nbsp;development&nbsp;and&nbsp;intelligent&nbsp;automation</span><br />
+ <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl text-black tracking-tight mb-8 md:mb-10 leading-tight">
+ <span class="hero-line-1">Custom AI development and intelligent automation</span><br />
  <span class="hero-line-2">for <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">modern businesses</span>.</span>
  </h1>
  
@@ -163,38 +163,33 @@ import Layout from "../layouts/Layout.astro";
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
   
   .hero-line-1 {
-    display: inline;
-    white-space: nowrap;
+    display: inline-block;
   }
   
   .hero-line-2 {
-    display: inline;
-  }
-  
-  @media (max-width: 639px) {
-    .hero-line-1 {
-      white-space: normal;
-    }
+    display: inline-block;
   }
   
   @media (min-width: 640px) {
-    .hero-headline {
-      max-width: 95%;
-    }
-  }
-  
-  @media (min-width: 1024px) {
     .hero-headline {
       max-width: 90%;
     }
   }
   
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     .hero-headline {
       max-width: 85%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .hero-headline {
+      max-width: 80%;
     }
   }
 </style>
@@ -264,7 +259,6 @@ import Layout from "../layouts/Layout.astro";
     <div class="mb-8 sm:mb-12">
       <h2 class="text-2xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4">AI Integration & Automation</h2>
       <p class="text-gray-300 text-base sm:text-lg mb-2">Make your existing systems intelligent. Connect, automate, optimize.</p>
-      <p class="text-gray-400 text-sm sm:text-base italic">This goes far beyond simple integrations—covering system design, automation architecture, and AI embedded directly into operations.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
       <!-- Card 1: System Integration -->
