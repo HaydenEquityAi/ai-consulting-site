@@ -77,95 +77,98 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 3: WHAT'S BROKEN -->
+  <!-- SECTION 3: WHAT'S BROKEN & WHAT CHANGES (SIDE BY SIDE) -->
   <section class="py-32 px-6 bg-gray-50">
     <div class="max-w-7xl mx-auto">
-      <div class="mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT'S BROKEN TODAY</span>
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">Manual Data Replication</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Customer data entered in CRM, re-entered in accounting, re-entered in project management. Same person. Multiple systems. Hours per week wasted.
-          </p>
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Left Column: What's Broken Today -->
+        <div>
+          <div class="mb-12">
+            <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT'S BROKEN TODAY</span>
+          </div>
+          
+          <div class="space-y-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Manual Data Replication</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Customer data entered in CRM, re-entered in accounting, re-entered in project management. Same person. Multiple systems. Hours per week wasted.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Disconnected Workflows</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Deal closes in CRM but finance doesn't know. Project completes but accounting doesn't see it. Information moves in silos, not synchronized.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">System Conflicts</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Different systems show different customer data. Finance sees one version, operations sees another. Decisions made on conflicting information.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">No Single Source of Truth</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Customer address lives in three places. Which one is right? Nobody knows. Financial reconciliation becomes guesswork.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">Disconnected Workflows</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Deal closes in CRM but finance doesn't know. Project completes but accounting doesn't see it. Information moves in silos, not synchronized.
-          </p>
-        </div>
+        <!-- Right Column: What Changes After Deployment -->
+        <div>
+          <div class="mb-12">
+            <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT CHANGES AFTER DEPLOYMENT</span>
+          </div>
+          
+          <div class="space-y-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Automatic Information Flow</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Data entered once, propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.
+              </p>
+            </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">System Conflicts</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Different systems show different customer data. Finance sees one version, operations sees another. Decisions made on conflicting information.
-          </p>
-        </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Real-Time Synchronization</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.
+              </p>
+            </div>
 
-        <!-- Card 4 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">No Single Source of Truth</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Customer address lives in three places. Which one is right? Nobody knows. Financial reconciliation becomes guesswork.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Built-In Conflict Detection</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                System detects when data diverges across systems and alerts you before decisions get made on bad information.
+              </p>
+            </div>
 
-  <!-- SECTION 4: WHAT CHANGES -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT CHANGES AFTER DEPLOYMENT</span>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-3">Automatic Information Flow</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Data entered once, propagates everywhere automatically. No re-entry. No manual copying. No human bottleneck.
-          </p>
-        </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Time Freed for Revenue Work</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.
+              </p>
+            </div>
 
-        <!-- Card 2 -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-3">Real-Time Synchronization</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Deal closes at 4 PM. Invoice exists in accounting by 4:15 PM. One source of truth, updated as events happen.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-3">Built-In Conflict Detection</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            System detects when data diverges across systems and alerts you before decisions get made on bad information.
-          </p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-3">Time Freed for Revenue Work</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            The person whose job was syncing systems? That 10-15 hours per week is now available for core business work.
-          </p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-3">Complete Audit Trail</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.
-          </p>
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Complete Audit Trail</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Every data movement recorded. Who updated what. When it changed. Why it moved. Compliance and debugging become straightforward.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
