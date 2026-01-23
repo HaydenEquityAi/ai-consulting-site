@@ -4,11 +4,28 @@
 
 <footer class="relative">
   <div class="relative h-[400px] overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80');"></div>
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <!-- Video Background -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
+    
+    <!-- Mobile Fallback Background -->
+    <div class="absolute inset-0 bg-black md:hidden z-[1]"></div>
+    
+    <!-- Large Background Text -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[2]">
       <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">intelio</span>
     </div>
+    
     <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
       <div class="grid md:grid-cols-2 gap-12">
         <div>
