@@ -17,11 +17,31 @@ import Layout from "../layouts/Layout.astro";
  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
   
   <!-- Card 1: Custom AI Development -->
-  <div class="bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center">
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">Custom AI Development</h2>
-    <a href="/custom-ai-development" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
-      Explore Development
-    </a>
+  <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
+    <!-- Video Background -->
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/50 z-[1]"></div>
+    
+    <!-- Mobile Fallback Background -->
+    <div class="absolute inset-0 bg-black md:hidden z-[1]"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">Custom AI Development</h2>
+      <a href="/custom-ai-development" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
+        Explore Development
+      </a>
+    </div>
   </div>
   
   <!-- Card 2: AI Integration & Automation -->
