@@ -3,16 +3,16 @@
 // Used across ALL pages of the site
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 w-full overflow-x-hidden">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 w-full">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full">
     <div class="flex items-center justify-between gap-4 w-full min-w-0">
       <!-- LEFT: Logo -->
       <a href="/" class="text-2xl sm:text-3xl font-medium tracking-tight text-black flex-shrink-0">intelio</a>
       
       <!-- CENTER: Navigation Items -->
-      <div class="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 flex-1 justify-center max-w-4xl mx-auto min-w-0 overflow-x-hidden">
+      <div class="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 flex-1 justify-center max-w-4xl mx-auto min-w-0" style="overflow: visible;">
         <!-- Custom AI & Development Dropdown -->
-        <div class="relative group">
+        <div class="relative group" style="overflow: visible;">
           <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
             Custom AI & Development
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@
         </div>
         
         <!-- AI Integration & Automation Dropdown -->
-        <div class="relative group">
+        <div class="relative group" style="overflow: visible;">
           <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
             AI Integration & Automation
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@
         <a href="/case-studies" class="text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">Case Studies</a>
         
         <!-- Resources Dropdown -->
-        <div class="relative group">
+        <div class="relative group" style="overflow: visible;">
           <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
             Resources
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,6 +177,18 @@
 
 <style>
   /* Dropdown visibility using CSS - matches existing pattern */
+  nav {
+    overflow: visible !important;
+  }
+  
+  nav > div {
+    overflow: visible !important;
+  }
+  
+  nav .group {
+    overflow: visible !important;
+  }
+  
   nav .group > div[class*="absolute"] {
     z-index: 9999 !important;
     position: absolute;
@@ -195,8 +207,9 @@
     transition: none !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    margin-top: 0 !important;
-    top: calc(100% - 0.5rem) !important;
+    margin-top: 0.5rem !important;
+    top: 100% !important;
+    overflow: visible !important;
   }
 
   /* Invisible bridge for hover continuity */
