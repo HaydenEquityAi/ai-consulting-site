@@ -1,0 +1,916 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Data Connectivity & Visibility | Intelio - One Source of Truth" description="One source of truth. Real-time dashboards. All your fragmented data unified so leadership sees current state and makes confident decisions.">
+<main class="bg-white">
+  <!-- HERO SECTION: Video Background -->
+  <section class="relative h-[600px] md:h-[450px] sm:h-[300px] flex items-center justify-center overflow-hidden bg-black">
+    <!-- Video Background -->
+    <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/videos/system-integration-hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/45 z-[1]"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-[48px] md:text-[36px] sm:text-[24px] text-white mb-4 leading-[1.2] font-normal tracking-[-0.5px]">
+        One Source of Truth. Real-Time Visibility.
+      </h1>
+      <p class="text-lg md:text-base sm:text-sm text-[#f0f0f0] leading-relaxed font-normal max-w-[600px] mx-auto">
+        All your fragmented data unified in real-time dashboards. Leadership sees current state. Decisions made with confidence instead of guesses.
+      </p>
+    </div>
+  </section>
+
+  <div class="max-w-[900px] mx-auto px-6 md:px-6 sm:px-6">
+    <!-- THE PROBLEM SECTION -->
+    <section class="pt-24 md:pt-16 sm:pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
+        What's Broken Today
+      </h2>
+      <p class="text-lg text-black leading-relaxed mb-12 font-normal">
+        Your data is fragmented across systems. Nobody sees the whole picture. Reporting is manual. Dashboards are stale. Decisions are made on incomplete information.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Fragmented Data Across Systems
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Customer data in CRM, financial data in accounting, operational data in project management. Nobody sees the whole picture. Decisions made on partial information.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Manual Monthly Reporting
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Finance spends 2-3 days compiling monthly reports (exporting from multiple systems, reconciling differences). By the time the report is done, the data is stale.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Stale Dashboards
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Your dashboard updated yesterday shows today's situation was already obsolete. Problems not caught until monthly close. Opportunities missed because trends weren't visible.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Conflicting Information
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Finance sees one version of customer data; operations sees another. Different departments make decisions based on conflicting information. Arguments about "what's really true?"
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT CHANGES SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
+        What Changes After Deployment
+      </h2>
+      <p class="text-lg text-black leading-relaxed mb-12 font-normal">
+        All data unified in one place, flowing continuously, visible in real-time dashboards. One source of truth everyone trusts.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Single Source of Truth
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            All departments see same data. CRM, accounting, operations all show same customer record, same deal status, same project status. No conflicts. No arguments about "what's really true?"
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Real-Time Data Flow
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Data flows automatically from source systems continuously. Dashboards update as information changes, not at end of day. Minutes not hours behind reality.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Instant Reporting
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            No manual compilation. Reports pull from live data, generate in seconds, not days. Finance team analyzes instead of compiling. Time freed for strategic thinking.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Early Warning System
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            System continuously monitors and surfaces issues automatically. Project margin trending down? Alert sent before it's a crisis. Customer engagement declining? Detected before churn.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8 md:col-span-2">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Confident Decision-Making
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Leaders see current, accurate information. No guessing. No conflicting data. Decisions made with confidence based on knowledge, not assumptions or incomplete information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
+        How the System Actually Works
+      </h2>
+      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
+        Data from your systems flows continuously, gets unified and validated, then surfaces in real-time dashboards.
+      </p>
+
+      <div class="space-y-8">
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Continuous Data Capture
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Data exists in your systems (CRM, accounting, project management, HR, operations). The visibility system continuously detects every change: new record, updated record, status change. Nothing is missed.
+          </p>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Standardization & Validation
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Formats differ across systems (customer ID in CRM is different than accounting). The system normalizes everything so it connects properly. Deduplicates (same customer in two places becomes one). Validates for quality before problems emerge.
+          </p>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Analytics Layer
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Data is organized for answering business questions. Dimensional schemas let you slice and dice by customer, by service, by time period. Business metrics are calculated (margin, cash position, customer acquisition cost). Historical snapshots so you see trends.
+          </p>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Monitoring & Alerting
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            The system watches for patterns and issues. Anomalies detected automatically (customer engagement dropped 40%). Thresholds monitored (gross margin below target?). Trends analyzed (is this metric improving or declining?). Alerts sent when attention is needed.
+          </p>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Real-Time Dashboards
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Users see current, accurate information. Executive dashboards show business health. Departmental dashboards show finance P&L, operations delivery, sales pipeline. Detailed reports for analysis. Ad-hoc query tools so business users can ask questions without IT.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF OF PRODUCTION REALITY -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
+        This Actually Works
+      </h2>
+      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
+        These visibility systems are providing real-time insights to leadership and operations teams right now.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            10-50
+          </h3>
+          <p class="text-base text-black mb-4 font-normal">
+            Data connections per client
+          </p>
+          <p class="text-sm text-gray-600 font-normal">
+            CRM, accounting, project management, HR, operations. All feeding real-time dashboards.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            50,000-500,000
+          </h3>
+          <p class="text-base text-black mb-4 font-normal">
+            Data events processed per day
+          </p>
+          <p class="text-sm text-gray-600 font-normal">
+            New records, updates, status changes. All flowing continuously into analytics layer.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            &lt; 5 minutes
+          </h3>
+          <p class="text-base text-black mb-4 font-normal">
+            Dashboard update latency
+          </p>
+          <p class="text-sm text-gray-600 font-normal">
+            Most data real-time. Some daily. Transparent about what's live vs. batched.
+          </p>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            99.5%+
+          </h3>
+          <p class="text-base text-black mb-4 font-normal">
+            System uptime
+          </p>
+          <p class="text-sm text-gray-600 font-normal">
+            Running continuously for 6+ months. Redundancy built in for critical data flows.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="p-8 border border-gray-200 rounded-lg">
+          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
+            Time Saved
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Financial reporting: 40 hours manual compilation → 15 minutes automated</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Profitability analysis: Ad-hoc 2-3 day requests → instant self-service</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Dashboard updates: Manual monthly rebuild → automated continuous</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Exception detection: Manual weekly reviews → automatic continuous</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-8 border border-gray-200 rounded-lg">
+          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
+            Decision Speed Improvement
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Margin problem detection: 1 month → 1 day</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Churn risk detection: After churn → 2 weeks early</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Improvement opportunities: Quarterly review → continuous visibility</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Financial close: 5-7 days → 2-3 days</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-8 border border-gray-200 rounded-lg">
+        <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+          Pattern Discovery in Action
+        </h3>
+        <p class="text-base text-black leading-relaxed mb-4 font-normal">
+          These dashboards surface patterns leadership didn't see before.
+        </p>
+        <ul class="space-y-3 text-base text-black list-none">
+          <li class="flex items-start">
+            <span class="text-black mr-3 font-normal">•</span>
+            <span class="font-normal">Discovered certain customer types have 3x profitability (now targeting those types)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-3 font-normal">•</span>
+            <span class="font-normal">Found projects over 6 months have 40% margin slip (now implementing controls)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-3 font-normal">•</span>
+            <span class="font-normal">Identified customer acquisition cost varies 2x by source (now optimizing channels)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-black mr-3 font-normal">•</span>
+            <span class="font-normal">Surfaced team A delivers 2x faster than team B (now understanding why and scaling)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODELS SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
+        How We Work
+      </h2>
+      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
+        Two engagement models. Clear ownership. Explicit accountability.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            Build + Maintain
+          </h3>
+          <p class="text-base text-gray-600 mb-6 italic font-normal">
+            You own the dashboards. We maintain the infrastructure.
+          </p>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="text-sm text-black mb-1 font-normal">You own</p>
+              <p class="text-base text-black font-normal">What questions you ask, what dashboards you need, how you use the data</p>
+            </div>
+            <div>
+              <p class="text-sm text-black mb-1 font-normal">We own</p>
+              <p class="text-base text-black font-normal">Data pipeline health, accuracy, infrastructure performance, system changes</p>
+            </div>
+          </div>
+
+          <p class="text-base text-black leading-relaxed mb-4 p-4 border border-gray-200 rounded-lg font-normal">
+            Best for: You have a business analyst or data person who can define dashboards. You want strategic oversight with hands-on involvement.
+          </p>
+
+          <p class="text-sm text-gray-600 font-normal">Project fee + monthly maintenance</p>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
+            Build + Operate
+          </h3>
+          <p class="text-base text-gray-600 mb-6 italic font-normal">
+            We own the entire visibility system.
+          </p>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="text-sm text-black mb-1 font-normal">You own</p>
+              <p class="text-base text-black font-normal">Business outcomes and strategy. Using dashboards for decisions.</p>
+            </div>
+            <div>
+              <p class="text-sm text-black mb-1 font-normal">We own</p>
+              <p class="text-base text-black font-normal">Data pipelines, dashboards, reporting, optimization, insights</p>
+            </div>
+          </div>
+
+          <p class="text-base text-black leading-relaxed mb-4 p-4 border border-gray-200 rounded-lg font-normal">
+            Best for: You want visibility to "just work." You need someone accountable for data quality and insights.
+          </p>
+
+          <p class="text-sm text-gray-600 font-normal">Monthly operating retainer</p>
+        </div>
+      </div>
+
+      <div class="mt-8 p-8 border-2 border-gray-200 rounded-lg">
+        <h3 class="text-xl text-black mb-6 font-normal leading-[1.4]">
+          What's Always Clear
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-base text-black mb-2 font-normal">Data Ownership</p>
+            <p class="text-base text-black font-normal">You own the data. You own the dashboards. You can take them with you.</p>
+          </div>
+          <div>
+            <p class="text-base text-black mb-2 font-normal">Decision Authority</p>
+            <p class="text-base text-black font-normal">You decide what to ask and how to act on answers. System supports decisions.</p>
+          </div>
+          <div>
+            <p class="text-base text-black mb-2 font-normal">Data Freshness</p>
+            <p class="text-base text-black font-normal">Some data real-time, some daily. Transparent about latency by metric.</p>
+          </div>
+          <div>
+            <p class="text-base text-black mb-2 font-normal">Cost Model</p>
+            <p class="text-base text-black font-normal">Based on data volume, complexity, dashboard users. Transparent, no surprises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON PATTERNS SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
+        Common Dashboards We Build
+      </h2>
+
+      <div class="space-y-8">
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Revenue & Forecast Dashboard
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-2 font-normal">WHAT YOU SEE</p>
+              <p class="text-base text-black font-normal">Deal pipeline by stage and amount. Historical conversion rates. Revenue forecast (realistic, not inflated). Cash flow projection based on deal timing and payment terms. Revenue trend month-over-month and year-over-year.</p>
+            </div>
+            <div class="border border-gray-200 rounded-lg p-4">
+              <p class="text-sm text-black mb-1 font-normal">DECISIONS IT ENABLES</p>
+              <p class="text-base text-black font-normal">How much revenue can we realistically expect? What's our cash runway? Where should sales focus? Is the business healthy?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Profitability Dashboard
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-2 font-normal">WHAT YOU SEE</p>
+              <p class="text-base text-black font-normal">Profit by customer (revenue minus delivery cost). Profit by service/product (which is most profitable?). Profit by project (is this making money?). Profit by team (productivity differences?). Margin trend (improving or declining?).</p>
+            </div>
+            <div class="border border-gray-200 rounded-lg p-4">
+              <p class="text-sm text-black mb-1 font-normal">DECISIONS IT ENABLES</p>
+              <p class="text-base text-black font-normal">Which customers are actually profitable? Which services have best margins? Why are some projects losing money? How productive is each team?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Cash & Runway Dashboard
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-2 font-normal">WHAT YOU SEE</p>
+              <p class="text-base text-black font-normal">Current cash position. Cash flow projection (inflows and outflows). Runway calculation (months of cash remaining). Expense trends (are costs growing faster than revenue?). Working capital (accounts receivable and payable).</p>
+            </div>
+            <div class="border border-gray-200 rounded-lg p-4">
+              <p class="text-sm text-black mb-1 font-normal">DECISIONS IT ENABLES</p>
+              <p class="text-base text-black font-normal">How much cash do we really have? When will we run out? What expenses can we cut? Can we invest in growth or preserve cash?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Operational Delivery Dashboard
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-2 font-normal">WHAT YOU SEE</p>
+              <p class="text-base text-black font-normal">Project status (on track, at risk, off track). Resource utilization (capacity vs. allocation). Delivery timeline (are we on time?). Cost performance (actual vs. budget). Quality metrics (defects, rework, satisfaction).</p>
+            </div>
+            <div class="border border-gray-200 rounded-lg p-4">
+              <p class="text-sm text-black mb-1 font-normal">DECISIONS IT ENABLES</p>
+              <p class="text-base text-black font-normal">Can we take on new projects? Are we going to deliver on time? Is this project profitable? How can we improve delivery?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Customer Health Dashboard
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm text-gray-600 mb-2 font-normal">WHAT YOU SEE</p>
+              <p class="text-base text-black font-normal">Customer segment distribution (types you have). Customer lifetime value (by segment, by source). Revenue concentration (% from top customers). Churn rate (are customers staying?). Engagement trends (more or less active?).</p>
+            </div>
+            <div class="border border-gray-200 rounded-lg p-4">
+              <p class="text-sm text-black mb-1 font-normal">DECISIONS IT ENABLES</p>
+              <p class="text-base text-black font-normal">Which customer types are most valuable? Are we losing important customers? Where should we focus retention? What's our acquisition cost by source?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK & CONTROL SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
+        Risk, Control & Ownership
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Data & Storage
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Your data lives in your account, in a database you control</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Data stays in your region (if required for compliance)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">No data leaves your control or is used for other purposes</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Dashboards documented so you can maintain or move them</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Data Quality & Accuracy
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Data validated at source before analytics layer</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Deduplication: same record consolidates properly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Analytics reconciled to source systems regularly</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Complete audit trail of data movements</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Monitoring & Reliability
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Alerted if data stops flowing or becomes stale</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Regular sample validation ensures accuracy doesn't drift</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Dashboards load in &lt; 5 seconds, queries return &lt; 30 seconds</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Redundancy built in for critical data flows</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg p-8">
+          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
+            Access & Compliance
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Role-based access control by person, by data type</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Complete audit logs of who accessed what when</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Data encrypted in transit and at rest</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">•</span>
+              <span class="font-normal">Audit-ready: complete documentation for external audits</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDEAL FIT SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
+        Is This Right for You?
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl text-black mb-6 font-normal leading-[1.4]">
+            Best Fit
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✓</span>
+              <span class="font-normal">Using 3+ business systems (CRM, accounting, project management, HR)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✓</span>
+              <span class="font-normal">Have more data than you can manually analyze</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✓</span>
+              <span class="font-normal">Make regular decisions that would benefit from real-time data</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✓</span>
+              <span class="font-normal">Have someone (CFO, COO, analyst) who cares about visibility</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✓</span>
+              <span class="font-normal">Measure outcomes (track KPIs, profitability, metrics)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl text-black mb-6 font-normal leading-[1.4]">
+            Not a Fit
+          </h3>
+          <ul class="space-y-3 text-base text-black list-none">
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✗</span>
+              <span class="font-normal">Looking for a demo without commitment</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✗</span>
+              <span class="font-normal">Data completely fragmented or inaccessible (no APIs)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✗</span>
+              <span class="font-normal">No one who cares about data or metrics</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✗</span>
+              <span class="font-normal">Processes so ad-hoc that consistent metrics don't apply</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-black mr-3 font-normal">✗</span>
+              <span class="font-normal">Can't prioritize even though visibility would help</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
+        What Happens Next
+      </h2>
+
+      <div class="space-y-6">
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
+                <span class="text-black font-normal">1</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
+                Data Landscape Assessment (1-2 weeks)
+              </h3>
+              <p class="text-base text-black mb-3 leading-relaxed font-normal">
+                We understand your current situation. What systems do you use? What data do you need visibility into? What decisions would benefit from real-time data? What reporting do you currently do manually? What are your biggest gaps?
+              </p>
+              <p class="text-sm text-gray-600 italic font-normal">
+                You get: Clear map of data landscape and visualization opportunities with ROI
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
+                <span class="text-black font-normal">2</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
+                Data Architecture Design (1 week)
+              </h3>
+              <p class="text-base text-black mb-3 leading-relaxed font-normal">
+                We design how data will flow and be organized. What data to extract from each system? How will it be standardized and connected? What metrics will be calculated? What dashboards are highest priority? What's the rollout sequence?
+              </p>
+              <p class="text-sm text-gray-600 italic font-normal">
+                You get: Detailed design document with data flows, schemas, dashboard concepts
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
+                <span class="text-black font-normal">3</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
+                Build Data Infrastructure (2-4 weeks)
+              </h3>
+              <p class="text-base text-black mb-3 leading-relaxed font-normal">
+                We build the analytics layer. Set up data warehouse or data lake. Build pipelines from source systems. Implement validation and quality checks. Calculate metrics. Create sample dashboards.
+              </p>
+              <p class="text-sm text-gray-600 italic font-normal">
+                You get: Working data infrastructure with initial dashboards
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
+                <span class="text-black font-normal">4</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
+                Build Dashboards (2-3 weeks)
+              </h3>
+              <p class="text-base text-black mb-3 leading-relaxed font-normal">
+                We build dashboards your team actually needs. Executive dashboard (business health). Departmental dashboards (finance, operations, sales). Custom dashboards (unique needs). Ad-hoc query tools (self-service).
+              </p>
+              <p class="text-sm text-gray-600 italic font-normal">
+                You get: Dashboards you can actually use, not generic templates
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-2 border-gray-200 rounded-lg p-8">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
+                <span class="text-black font-normal">5</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
+                Pilot & Rollout (1-2 weeks)
+              </h3>
+              <p class="text-base text-black mb-3 leading-relaxed font-normal">
+                Limited deployment before full rollout. One team uses dashboards. Gather feedback. Refine before full rollout. Training for all users. Monitoring configured.
+              </p>
+              <p class="text-sm text-gray-600 italic font-normal">
+                You get: Live dashboards, trained team, continuous monitoring in place
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="pt-12 pb-12 border-b border-gray-200">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
+        Common Questions
+      </h2>
+
+      <div class="space-y-8">
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            How current does the data need to be?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Depends on the decision. Financial forecasting needs minutes/hours. Monthly reporting fine with daily. Strategic trends fine with weekly. We're transparent about latency for each metric.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            What if source systems have poor data quality?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            That's real. We handle it—validation, deduplication, exception flagging. Getting clean data sometimes requires cleaning up source systems first. We help identify what needs fixing.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Can we trust the data?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            We validate against source systems. Regular reconciliation. Audit trail for every data point. You can track where data came from. If something looks wrong, we investigate.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            How many people need to use this?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Doesn't matter. Finance needs it. Operations needs it. CEO needs it. Not everyone needs the same level of detail. Access control ensures everyone sees what they need.
+          </p>
+        </div>
+
+        <div class="border-b border-gray-200 pb-8">
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            What if we need to change a dashboard?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Business changes, dashboards change. Usually 1-2 days for standard changes. Longer for complex logic changes. System designed to evolve with your business.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
+            Can we share dashboards with stakeholders or investors?
+          </h3>
+          <p class="text-base text-black leading-relaxed font-normal">
+            Yes. Role-based access control so board sees high-level KPIs, investors see metrics you want them to see. Can restrict by person and by data type. Full control over what's shared.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="pt-12 pb-24 md:pb-16 sm:pb-12 text-center">
+      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-6 font-normal leading-[1.4]">
+        Ready for Real-Time Visibility?
+      </h2>
+      <p class="text-xl text-black mb-8 leading-relaxed font-normal max-w-2xl mx-auto">
+        Start with a conversation about your data landscape and visibility opportunities.
+      </p>
+      <a href="/contact" class="inline-block px-8 py-3 bg-black text-white text-sm font-normal hover:bg-gray-800 transition-colors rounded-sm">
+        Start a Project
+      </a>
+    </section>
+  </div>
+
+  <!-- Back Link -->
+  <section class="py-8 px-6 border-t border-gray-100">
+    <div class="max-w-[900px] mx-auto">
+      <a href="/ai-integration-automation" class="text-base text-gray-600 hover:text-black transition-colors font-normal">
+        ← Back to AI Integration & Automation
+      </a>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Video background positioning */
+  section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Mobile video fixes */
+  @media (max-width: 640px) {
+    section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    section video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
+</Layout>
+
