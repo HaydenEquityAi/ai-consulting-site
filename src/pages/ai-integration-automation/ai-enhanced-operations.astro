@@ -4,8 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout title="AI-Enhanced Operations | Intelio - Scale Without Multiplying Headcount" description="Scale your operations without headcount multiplication. AI extracts data, scores leads, detects patterns. Humans make decisions. Same team handles 2-3x volume.">
 <main class="bg-white">
-  <!-- HERO SECTION: Video Background -->
-  <section class="relative h-[600px] md:h-[450px] sm:h-[300px] flex items-center justify-center overflow-hidden bg-black">
+  <!-- SECTION 1: HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
     <!-- Video Background -->
     <video 
       autoplay
@@ -13,888 +13,973 @@ import Layout from "../../layouts/Layout.astro";
       loop
       playsinline
       preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
       class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/videos/system-integration-hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     
     <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 bg-black/45 z-[1]"></div>
+    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
 
-    <!-- Hero Content -->
-    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-      <h1 class="text-[48px] md:text-[36px] sm:text-[24px] text-white mb-4 leading-[1.2] font-normal tracking-[-0.5px]">
-        Scale Operations Without Multiplying Headcount
-      </h1>
-      <p class="text-lg md:text-base sm:text-sm text-[#f0f0f0] leading-relaxed font-normal max-w-[600px] mx-auto">
-        AI extracts data from documents. Scores leads consistently. Detects risk patterns. Your team handles 2-3x volume with the same people.
-      </p>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <!-- Label -->
+        <div class="mb-6">
+          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
+            AI-ENHANCED OPERATIONS
+          </span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
+          Scale Operations Without Multiplying Headcount
+        </h1>
+        
+        <!-- Subhead -->
+        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed">
+          AI extracts data from documents. Scores leads consistently. Detects risk patterns. Your team handles 2-3x volume with the same people.
+        </p>
+        
+        <!-- CTA Button -->
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
+          Start a Project
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="max-w-[900px] mx-auto px-6 md:px-6 sm:px-6">
-    <!-- THE PROBLEM SECTION -->
-    <section class="pt-24 md:pt-16 sm:pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        What's Broken Today
+  <!-- SECTION 2: INTRO -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-8">
+        Scale Without Adding Headcount. AI Handles Pattern-Matching.
       </h2>
-      <p class="text-lg text-black leading-relaxed mb-12 font-normal">
-        Volume grows. Your team doesn't. Manual work doesn't scale without hiring people. And decisions lack consistency because they rely on individual judgment.
-      </p>
+      <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+        <p>
+          Volume grows. Your team doesn't. Manual work doesn't scale without hiring people. And decisions lack consistency because they rely on individual judgment.
+        </p>
+        <p>
+          Intelio builds AI-enhanced operations that multiply your leverage. AI handles pattern-matching and information assembly. Your team handles judgment. Same headcount, 2-3x volume, better decisions.
+        </p>
+      </div>
+      <div class="mt-10 p-6 bg-gray-50 rounded-lg border-l-4 border-blue-600">
+        <p class="text-lg font-semibold text-gray-900">
+          This isn't consulting. This isn't advice. It's infrastructure.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Manual Data Extraction
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Invoices, contracts, applications arrive as PDFs. Someone manually reads them, extracts structured data, enters it into systems. Slow, error-prone, and doesn't scale.
-          </p>
-        </div>
+  <!-- SECTION 3: WHAT'S BROKEN & WHAT CHANGES (SIDE BY SIDE) -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-20 relative">
+        <!-- Vertical Divider Line -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-black transform -translate-x-1/2"></div>
         
-        <div>
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Inconsistent Decision-Making
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Leads scored by intuition. Accuracy depends on who does it. Approvals decided by gut feel. Same requests get different outcomes. Patterns invisible because decisions aren't systematic.
-          </p>
+        <!-- Left Column: What's Broken Today -->
+        <div class="relative">
+          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What's Broken Today</h2>
+          
+          <div class="space-y-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Manual Data Extraction</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Invoices, contracts, applications arrive as PDFs. Someone manually reads them, extracts structured data, enters it into systems. Slow, error-prone, and doesn't scale.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Inconsistent Decision-Making</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Leads scored by intuition. Accuracy depends on who does it. Approvals decided by gut feel. Same requests get different outcomes. Patterns invisible because decisions aren't systematic.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">No Early Warning System</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Problems emerge late. Customer churn discovered after they're gone. Project timeline slips at deadline. Market shifts discovered after you've lost ground. No systematic pattern detection.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Scaling Requires Headcount</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                As volume grows, you hire more people to handle same tasks. Document processing needs another person. Lead scoring needs another person. No leverage, just multiplication.
+              </p>
+            </div>
+          </div>
         </div>
 
+        <!-- Right Column: What Changes After Deployment -->
         <div>
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            No Early Warning System
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Problems emerge late. Customer churn discovered after they're gone. Project timeline slips at deadline. Market shifts discovered after you've lost ground. No systematic pattern detection.
-          </p>
-        </div>
+          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What Changes After Deployment</h2>
+          
+          <div class="space-y-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Automatic Data Extraction</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Documents arrive, structured data extracted automatically, validated for accuracy, ready for use. Manual data entry eliminated. Accuracy improves over time.
+              </p>
+            </div>
 
-        <div>
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Scaling Requires Headcount
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            As volume grows, you hire more people to handle same tasks. Document processing needs another person. Lead scoring needs another person. No leverage, just multiplication.
-          </p>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Systematic Decision-Making</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                AI applies same logic consistently. Lead scoring uses explicit criteria, not gut. Approvals evaluated against historical data. Decisions are repeatable and measurable.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Proactive Pattern Detection</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                System continuously monitors operations and surfaces patterns you wouldn't see manually. Churn risk detected early. Timeline slips detected before crisis. Market shifts visible in data.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Context-Rich Decisions</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                When someone needs to decide, all relevant context is automatically assembled. "Is this customer profitable?" answered with complete financial context in seconds.
+              </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
+              <h3 class="text-2xl text-gray-900 mb-4">Headcount-Independent Scaling</h3>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Same number of people handle 2-3x volume. AI handles the pattern-matching and information assembly. People handle the judgment. Volume growth doesn't require proportional hiring.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WHAT CHANGES SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        What Changes After Deployment
-      </h2>
-      <p class="text-lg text-black leading-relaxed mb-12 font-normal">
-        AI handles pattern-matching and information assembly. Your team handles judgment. Same headcount, 2-3x volume, better decisions.
-      </p>
-
+  <!-- SECTION 5: HOW IT WORKS -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">How the System Actually Works</h2>
+      
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Automatic Data Extraction
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Documents arrive, structured data extracted automatically, validated for accuracy, ready for use. Manual data entry eliminated. Accuracy improves over time.
-          </p>
-        </div>
-
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Systematic Decision-Making
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            AI applies same logic consistently. Lead scoring uses explicit criteria, not gut. Approvals evaluated against historical data. Decisions are repeatable and measurable.
-          </p>
-        </div>
-
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Proactive Pattern Detection
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            System continuously monitors operations and surfaces patterns you wouldn't see manually. Churn risk detected early. Timeline slips detected before crisis. Market shifts visible in data.
-          </p>
-        </div>
-
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Context-Rich Decisions
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            When someone needs to decide, all relevant context is automatically assembled. "Is this customer profitable?" answered with complete financial context in seconds.
-          </p>
-        </div>
-
-        <div class="border border-gray-200 rounded-lg p-8 md:col-span-2">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Headcount-Independent Scaling
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Same number of people handle 2-3x volume. AI handles the pattern-matching and information assembly. People handle the judgment. Volume growth doesn't require proportional hiring.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        How the System Actually Works
-      </h2>
-      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
-        AI understands data, identifies patterns, scores and classifies, then presents recommendations. Humans stay in control of all decisions.
-      </p>
-
-      <div class="space-y-8">
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Input Layer
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            The system receives unstructured or complex data: documents (PDFs, scans, emails), operational data (transactions, activities, customer interactions), behavioral data (usage patterns, engagement metrics, transaction history).
-          </p>
-        </div>
-
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Extraction & Understanding
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Extraction & Understanding</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             For documents: What type is this? What's important in it? Are there issues (duplicates, unusual terms, missing info)? How does it compare to historical documents? The system reads and understands automatically.
           </p>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Pattern Analysis
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Pattern Analysis</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             What patterns predict success? Which leads close? Which customers churn? Which projects slip? What's abnormal? What correlations exist? The system identifies patterns in historical data automatically.
           </p>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Scoring & Recommendation
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Scoring & Recommendation</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             The system scores quality, risk, and priority. Lead quality score: likelihood to close and deal value. Customer health score: churn risk, expansion opportunity. Document risk: unusual terms, policy violations. Then generates recommendations: next best action, decision context, risk flagging.
           </p>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Human Decision Layer
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Human Decision Layer</h3>
+          <p class="text-base text-gray-600 leading-relaxed">
             AI makes recommendations. Humans make decisions. Low-confidence extractions get human review. High-risk decisions go to specialists. Unusual patterns escalate. Feedback loop: human corrections improve the AI over time.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROOF OF PRODUCTION REALITY -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        This Actually Works
-      </h2>
-      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
+  <!-- SECTION 6: THIS ACTUALLY WORKS -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">This Actually Works</h2>
+      <p class="text-lg text-gray-600 mb-12 leading-relaxed max-w-3xl">
         These AI systems are handling mission-critical decisions and document processing at scale right now.
       </p>
 
       <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            500-2,000
-          </h3>
-          <p class="text-base text-black mb-4 font-normal">
-            Documents processed per day
-          </p>
-          <p class="text-sm text-gray-600 font-normal">
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-4xl text-blue-600 mb-2 font-bold">500-2,000</h3>
+          <p class="text-base text-gray-900 mb-4 font-semibold">Documents processed per day</p>
+          <p class="text-sm text-gray-600">
             Invoices, contracts, applications. Running continuously for 120+ days with continuous improvement.
           </p>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            95%+
-          </h3>
-          <p class="text-base text-black mb-4 font-normal">
-            Extraction and classification accuracy
-          </p>
-          <p class="text-sm text-gray-600 font-normal">
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-4xl text-blue-600 mb-2 font-bold">95%+</h3>
+          <p class="text-base text-gray-900 mb-4 font-semibold">Extraction and classification accuracy</p>
+          <p class="text-sm text-gray-600">
             Validated against human review. Improves continuously as the system learns.
           </p>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            333 hours/month
-          </h3>
-          <p class="text-base text-black mb-4 font-normal">
-            Time freed from invoice processing
-          </p>
-          <p class="text-sm text-gray-600 font-normal">
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-4xl text-blue-600 mb-2 font-bold">333 hours/month</h3>
+          <p class="text-base text-gray-900 mb-4 font-semibold">Time freed from invoice processing</p>
+          <p class="text-sm text-gray-600">
             2,000 invoices × 10 min manual = $25K/month labor savings. That's a person.
           </p>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            60-70% → 94%
-          </h3>
-          <p class="text-base text-black mb-4 font-normal">
-            Lead qualification consistency
-          </p>
-          <p class="text-sm text-gray-600 font-normal">
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-4xl text-blue-600 mb-2 font-bold">60-70% → 94%</h3>
+          <p class="text-base text-gray-900 mb-4 font-semibold">Lead qualification consistency</p>
+          <p class="text-sm text-gray-600">
             Human consistency is variable. AI consistency is repeatable and measurable.
           </p>
         </div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="p-8 border border-gray-200 rounded-lg">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            Pattern Discovery in Action
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Identified leads matching profile X have 3x closure rate (now routing to specialists)</span>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Pattern Discovery in Action</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Identified leads matching profile X have 3x closure rate (now routing to specialists)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Discovered vertical Y customers have 40% churn risk (now proactive outreach)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Discovered vertical Y customers have 40% churn risk (now proactive outreach)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Found specific contract terms cost 2x to fulfill (now flagged for renegotiation)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Found specific contract terms cost 2x to fulfill (now flagged for renegotiation)</p>
             </li>
           </ul>
         </div>
 
-        <div class="p-8 border border-gray-200 rounded-lg">
-          <h3 class="text-lg text-black mb-3 font-normal leading-[1.4]">
-            Accuracy Improvements
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Invoice accuracy: 85% → 98% (fewer errors in financial system)</span>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Accuracy Improvements</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Invoice accuracy: 85% → 98% (fewer errors in financial system)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Risk detection: Previously invisible patterns now surface automatically</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Risk detection: Previously invisible patterns now surface automatically</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Decision consistency: Same situation, same outcome, every time</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Decision consistency: Same situation, same outcome, every time</p>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="p-8 border border-gray-200 rounded-lg">
-        <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-          Mission-Critical Operations
-        </h3>
-        <p class="text-base text-black leading-relaxed mb-4 font-normal">
+      <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+        <h3 class="text-xl text-gray-900 mb-4">Mission-Critical Operations</h3>
+        <p class="text-base text-gray-600 mb-6">
           These aren't nice-to-haves. They're operational dependencies.
         </p>
-        <ul class="space-y-3 text-base text-black list-none">
-          <li class="flex items-start">
-            <span class="text-black mr-3 font-normal">•</span>
-            <span class="font-normal">Invoice processing: Removing it adds 40 hours/week of manual work</span>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 text-xl mt-1">•</span>
+            <p class="text-base text-gray-600">Invoice processing: Removing it adds 40 hours/week of manual work</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-black mr-3 font-normal">•</span>
-            <span class="font-normal">Lead scoring: Used for routing 100% of inbound leads; determines resource allocation</span>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 text-xl mt-1">•</span>
+            <p class="text-base text-gray-600">Lead scoring: Used for routing 100% of inbound leads; determines resource allocation</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-black mr-3 font-normal">•</span>
-            <span class="font-normal">Customer monitoring: Used for proactive retention; directly impacts revenue</span>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 text-xl mt-1">•</span>
+            <p class="text-base text-gray-600">Customer monitoring: Used for proactive retention; directly impacts revenue</p>
           </li>
-          <li class="flex items-start">
-            <span class="text-black mr-3 font-normal">•</span>
-            <span class="font-normal">Document review: Removes bottleneck in compliance-critical workflows</span>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-600 text-xl mt-1">•</span>
+            <p class="text-base text-gray-600">Document review: Removes bottleneck in compliance-critical workflows</p>
           </li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ENGAGEMENT MODELS SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-4 font-normal leading-[1.4]">
-        How We Work
-      </h2>
-      <p class="text-lg text-black mb-12 leading-relaxed font-normal">
-        Two engagement models. Clear ownership. Explicit accountability.
-      </p>
-
+  <!-- SECTION 7: ENGAGEMENT MODELS -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Engagement Models</h2>
+      
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            Build + Maintain
-          </h3>
-          <p class="text-base text-gray-600 mb-6 italic font-normal">
-            You own the decisions. We maintain the AI.
-          </p>
-          
-          <div class="space-y-4 mb-6">
+        <!-- Card 1: Build + Maintain -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-2">Build + Maintain</h3>
+          <p class="text-sm text-gray-600 mb-6">You own the decisions. We maintain the AI.</p>
+          <div class="space-y-4">
             <div>
-              <p class="text-sm text-black mb-1 font-normal">You own</p>
-              <p class="text-base text-black font-normal">How AI is used in decisions, when recommendations are overridden, process changes</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
+              <p class="text-sm text-gray-700">How AI is used in decisions, when recommendations are overridden, process changes</p>
             </div>
             <div>
-              <p class="text-sm text-black mb-1 font-normal">We own</p>
-              <p class="text-base text-black font-normal">Model accuracy, system performance, retraining as data patterns change</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
+              <p class="text-sm text-gray-700">Model accuracy, system performance, retraining as data patterns change</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
+              <p class="text-sm text-gray-700">Operations teams that manage AI deployment. You want monthly support and strategic oversight. You handle user feedback.</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
+              <p class="text-sm text-gray-700">Project fee + monthly maintenance</p>
             </div>
           </div>
-
-          <p class="text-base text-black leading-relaxed mb-4 p-4 border border-gray-200 rounded-lg font-normal">
-            Best for: Operations teams that manage AI deployment. You want monthly support and strategic oversight. You handle user feedback.
-          </p>
-
-          <p class="text-sm text-gray-600 font-normal">Project fee + monthly maintenance</p>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <h3 class="text-2xl text-black mb-2 font-normal leading-[1.4]">
-            Build + Operate
-          </h3>
-          <p class="text-base text-gray-600 mb-6 italic font-normal">
-            We own the AI performance and accuracy.
-          </p>
-          
-          <div class="space-y-4 mb-6">
+        <!-- Card 2: Build + Operate -->
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-2">Build + Operate</h3>
+          <p class="text-sm text-gray-600 mb-6">We own the AI performance and accuracy.</p>
+          <div class="space-y-4">
             <div>
-              <p class="text-sm text-black mb-1 font-normal">You own</p>
-              <p class="text-base text-black font-normal">Business outcomes and strategy. Using recommendations. Periodic feedback.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
+              <p class="text-sm text-gray-700">Business outcomes and strategy. Using recommendations. Periodic feedback.</p>
             </div>
             <div>
-              <p class="text-sm text-black mb-1 font-normal">We own</p>
-              <p class="text-base text-black font-normal">AI accuracy, retraining, optimization, alert response, continuous improvement</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
+              <p class="text-sm text-gray-700">AI accuracy, retraining, optimization, alert response, continuous improvement</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
+              <p class="text-sm text-gray-700">You want AI to "just work." You need someone accountable for accuracy and ROI. You focus on decisions, not maintenance.</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
+              <p class="text-sm text-gray-700">Monthly operating retainer</p>
             </div>
           </div>
-
-          <p class="text-base text-black leading-relaxed mb-4 p-4 border border-gray-200 rounded-lg font-normal">
-            Best for: You want AI to "just work." You need someone accountable for accuracy and ROI. You focus on decisions, not maintenance.
-          </p>
-
-          <p class="text-sm text-gray-600 font-normal">Monthly operating retainer</p>
         </div>
       </div>
 
-      <div class="mt-8 p-8 border-2 border-gray-200 rounded-lg">
-        <h3 class="text-xl text-black mb-6 font-normal leading-[1.4]">
-          What's Always Clear
-        </h3>
+      <div class="mt-12 bg-gray-50 rounded-xl p-8 border border-gray-200">
+        <h3 class="text-xl text-gray-900 mb-6">What's Always Clear</h3>
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <p class="text-base text-black mb-2 font-normal">Decision Authority</p>
-            <p class="text-base text-black font-normal">AI makes recommendations. Humans make decisions. Always.</p>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Decision Authority</p>
+            <p class="text-sm text-gray-700">AI makes recommendations. Humans make decisions. Always.</p>
           </div>
           <div>
-            <p class="text-base text-black mb-2 font-normal">Feedback Loop</p>
-            <p class="text-base text-black font-normal">Human corrections improve the AI. This is continuous and measured.</p>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Feedback Loop</p>
+            <p class="text-sm text-gray-700">Human corrections improve the AI. This is continuous and measured.</p>
           </div>
           <div>
-            <p class="text-base text-black mb-2 font-normal">Transparency</p>
-            <p class="text-base text-black font-normal">You can see why the AI scored something. No black boxes. Full explainability.</p>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Transparency</p>
+            <p class="text-sm text-gray-700">You can see why the AI scored something. No black boxes. Full explainability.</p>
           </div>
           <div>
-            <p class="text-base text-black mb-2 font-normal">Model Ownership</p>
-            <p class="text-base text-black font-normal">You own the trained model. Can audit it, take it, integrate it elsewhere.</p>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Model Ownership</p>
+            <p class="text-sm text-gray-700">You own the trained model. Can audit it, take it, integrate it elsewhere.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- COMMON PATTERNS SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Common AI-Enhanced Workflows
-      </h2>
+  <!-- SECTION 8: COMMON AI-ENHANCED WORKFLOWS -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Common AI-Enhanced Workflows</h2>
 
       <div class="space-y-8">
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Invoice Processing & Validation
-          </h3>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Invoice Processing & Validation</h3>
           <div class="space-y-4">
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE WORK</p>
-              <p class="text-base text-black font-normal">Invoice arrives as PDF. Someone manually reads it, extracts vendor, amount, line items, due date, validates against contracts.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE WORK</p>
+              <p class="text-base text-gray-600">Invoice arrives as PDF. Someone manually reads it, extracts vendor, amount, line items, due date, validates against contracts.</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE AI</p>
-              <p class="text-base text-black font-normal">Automatically extracts all fields. Validates: amounts reasonable? Terms match contract? Detects: duplicates, fraud indicators, unusual amounts. Routes based on amount and validation.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE AI</p>
+              <p class="text-base text-gray-600">Automatically extracts all fields. Validates: amounts reasonable? Terms match contract? Detects: duplicates, fraud indicators, unusual amounts. Routes based on amount and validation.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-4">
-              <p class="text-sm text-black mb-1 font-normal">RESULT</p>
-              <p class="text-base text-black font-normal">85% of invoices auto-approved. Processing time 10 min → 2 min per invoice. 333 hours/month freed. Financial errors drop from 15% to 2%.</p>
+            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">RESULT</p>
+              <p class="text-base text-gray-900">85% of invoices auto-approved. Processing time 10 min → 2 min per invoice. 333 hours/month freed. Financial errors drop from 15% to 2%.</p>
             </div>
           </div>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Lead Scoring & Routing
-          </h3>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Lead Scoring & Routing</h3>
           <div class="space-y-4">
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE WORK</p>
-              <p class="text-base text-black font-normal">Lead arrives. Someone qualifies it (is this a real opportunity?), scores it, routes to a salesperson. Judgment varies. Quality inconsistent.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE WORK</p>
+              <p class="text-base text-gray-600">Lead arrives. Someone qualifies it (is this a real opportunity?), scores it, routes to a salesperson. Judgment varies. Quality inconsistent.</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE AI</p>
-              <p class="text-base text-black font-normal">Automatically classifies lead type, enriches with company data. Scores against ideal customer profile using historical closes. Shows similar historical leads and their outcomes. Recommends routing based on rep expertise and capacity.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE AI</p>
+              <p class="text-base text-gray-600">Automatically classifies lead type, enriches with company data. Scores against ideal customer profile using historical closes. Shows similar historical leads and their outcomes. Recommends routing based on rep expertise and capacity.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-4">
-              <p class="text-sm text-black mb-1 font-normal">RESULT</p>
-              <p class="text-base text-black font-normal">Qualification consistency 60-70% (human) → 94% (AI). Response time improves. Best leads get senior reps. $375K/year in freed coordination time.</p>
+            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">RESULT</p>
+              <p class="text-base text-gray-900">Qualification consistency 60-70% (human) → 94% (AI). Response time improves. Best leads get senior reps. $375K/year in freed coordination time.</p>
             </div>
           </div>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Contract Risk Detection
-          </h3>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Contract Risk Detection</h3>
           <div class="space-y-4">
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE WORK</p>
-              <p class="text-base text-black font-normal">Contract arrives for signature. Legal manually reviews it (2 days). Risk items sometimes missed. Terms get negotiated without historical context.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE WORK</p>
+              <p class="text-base text-gray-600">Contract arrives for signature. Legal manually reviews it (2 days). Risk items sometimes missed. Terms get negotiated without historical context.</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE AI</p>
-              <p class="text-base text-black font-normal">Automatically extracts key terms (payment, term length, termination, liability). Compares to company standards and historical similar contracts. Identifies unusual or risky terms. Shows customer's historical contract requests and outcomes.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE AI</p>
+              <p class="text-base text-gray-600">Automatically extracts key terms (payment, term length, termination, liability). Compares to company standards and historical similar contracts. Identifies unusual or risky terms. Shows customer's historical contract requests and outcomes.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-4">
-              <p class="text-sm text-black mb-1 font-normal">RESULT</p>
-              <p class="text-base text-black font-normal">Review time 2 days → 2 hours. Risk items never missed. Account team negotiates from historical context. $3,750/month legal time freed.</p>
+            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">RESULT</p>
+              <p class="text-base text-gray-900">Review time 2 days → 2 hours. Risk items never missed. Account team negotiates from historical context. $3,750/month legal time freed.</p>
             </div>
           </div>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Customer Churn Risk Detection
-          </h3>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Customer Churn Risk Detection</h3>
           <div class="space-y-4">
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE WORK</p>
-              <p class="text-base text-black font-normal">Customer disengages. Company doesn't see it until they've already left. Account manager reactive instead of proactive.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE WORK</p>
+              <p class="text-base text-gray-600">Customer disengages. Company doesn't see it until they've already left. Account manager reactive instead of proactive.</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE AI</p>
-              <p class="text-base text-black font-normal">Continuously monitors customer engagement, product usage, support activity. Analyzes behavioral patterns that predict churn. Generates churn risk score. Shows similar customers who churned and what interventions worked.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE AI</p>
+              <p class="text-base text-gray-600">Continuously monitors customer engagement, product usage, support activity. Analyzes behavioral patterns that predict churn. Generates churn risk score. Shows similar customers who churned and what interventions worked.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-4">
-              <p class="text-sm text-black mb-1 font-normal">RESULT</p>
-              <p class="text-base text-black font-normal">Churn caught early when intervention works. Account managers get alerts with action recommendations. Retention improves 15-20%. High-risk customers saved proactively.</p>
+            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">RESULT</p>
+              <p class="text-base text-gray-900">Churn caught early when intervention works. Account managers get alerts with action recommendations. Retention improves 15-20%. High-risk customers saved proactively.</p>
             </div>
           </div>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Approval Routing with Context
-          </h3>
+        <div class="bg-white rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Approval Routing with Context</h3>
           <div class="space-y-4">
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE WORK</p>
-              <p class="text-base text-black font-normal">Approval request submitted (purchase, refund, discount). Someone manually routes to appropriate approver. Takes 2-3 days. Approver has no context.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE WORK</p>
+              <p class="text-base text-gray-600">Approval request submitted (purchase, refund, discount). Someone manually routes to appropriate approver. Takes 2-3 days. Approver has no context.</p>
             </div>
             <div>
-              <p class="text-sm text-gray-600 mb-2 font-normal">THE AI</p>
-              <p class="text-base text-black font-normal">Automatically classifies request type. Gathers context: similar historical requests and decisions, budget status, risk factors. Routes based on amount and policy. Generates recommendation based on historical outcomes.</p>
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">THE AI</p>
+              <p class="text-base text-gray-600">Automatically classifies request type. Gathers context: similar historical requests and decisions, budget status, risk factors. Routes based on amount and policy. Generates recommendation based on historical outcomes.</p>
             </div>
-            <div class="border border-gray-200 rounded-lg p-4">
-              <p class="text-sm text-black mb-1 font-normal">RESULT</p>
-              <p class="text-base text-black font-normal">Approval time 2-3 days → 2-3 hours. Decisions informed by data, not gut. Consistent policy enforcement. High-context decisions make approvers confident.</p>
+            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-600">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">RESULT</p>
+              <p class="text-base text-gray-900">Approval time 2-3 days → 2-3 hours. Decisions informed by data, not gut. Consistent policy enforcement. High-context decisions make approvers confident.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- RISK & CONTROL SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Risk, Control & Ownership
-      </h2>
+  <!-- SECTION 9: RISK, CONTROL & OWNERSHIP -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Risk, Control & Ownership</h2>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Data & Model Ownership
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Training data is yours, used only for your operations</span>
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Data & Model Ownership</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Training data is yours, used only for your operations</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Not used for other clients or external purposes</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Not used for other clients or external purposes</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Trained model you own—can audit, take, integrate elsewhere</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Trained model you own—can audit, take, integrate elsewhere</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Prompts and logic documented and versioned</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Prompts and logic documented and versioned</p>
             </li>
           </ul>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Model Accuracy & Validation
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Before deployment: establish accuracy baseline with human expert review</span>
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Model Accuracy & Validation</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Before deployment: establish accuracy baseline with human expert review</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Ongoing: regular validation samples to ensure accuracy doesn't drift</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Ongoing: regular validation samples to ensure accuracy doesn't drift</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Retraining: triggered automatically if accuracy drops below threshold</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Retraining: triggered automatically if accuracy drops below threshold</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Feedback loop: human corrections feed back into improvement</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Feedback loop: human corrections feed back into improvement</p>
             </li>
           </ul>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Human Oversight
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Low-confidence extractions flagged for human review</span>
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Human Oversight</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Low-confidence extractions flagged for human review</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Unusual patterns escalate for approval</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Unusual patterns escalate for approval</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">High-risk decisions routed to specialists</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">High-risk decisions routed to specialists</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Nothing auto-executes without human control</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Nothing auto-executes without human control</p>
             </li>
           </ul>
         </div>
 
-        <div class="border border-gray-200 rounded-lg p-8">
-          <h3 class="text-xl text-black mb-4 font-normal leading-[1.4]">
-            Compliance & Transparency
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Complete audit trail of every score and decision</span>
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <h3 class="text-xl text-gray-900 mb-4">Compliance & Transparency</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Complete audit trail of every score and decision</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Full explainability: see why something was scored</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Full explainability: see why something was scored</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Regular bias checks for model fairness</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Regular bias checks for model fairness</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">•</span>
-              <span class="font-normal">Regulatory alignment (Fair Lending, FCRA, etc. if applicable)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <p class="text-base text-gray-600">Regulatory alignment (Fair Lending, FCRA, etc. if applicable)</p>
             </li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- IDEAL FIT SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Is This Right for You?
-      </h2>
+  <!-- SECTION 10: IS THIS RIGHT FOR YOU -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Is This Right for You?</h2>
 
       <div class="grid md:grid-cols-2 gap-12">
         <div>
-          <h3 class="text-2xl text-black mb-6 font-normal leading-[1.4]">
-            Best Fit
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✓</span>
-              <span class="font-normal">Document-heavy workflows (50+ documents/day)</span>
+          <h3 class="text-2xl text-gray-900 mb-6">Best Fit</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 text-xl mt-1">✓</span>
+              <p class="text-base text-gray-600">Document-heavy workflows (50+ documents/day)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✓</span>
-              <span class="font-normal">Need consistent decision-making at scale</span>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 text-xl mt-1">✓</span>
+              <p class="text-base text-gray-600">Need consistent decision-making at scale</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✓</span>
-              <span class="font-normal">Have historical data showing patterns (what works, what doesn't)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 text-xl mt-1">✓</span>
+              <p class="text-base text-gray-600">Have historical data showing patterns (what works, what doesn't)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✓</span>
-              <span class="font-normal">Have an operations owner who understands the workflow</span>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 text-xl mt-1">✓</span>
+              <p class="text-base text-gray-600">Have an operations owner who understands the workflow</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✓</span>
-              <span class="font-normal">Measure outcomes (accuracy, speed, ROI)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-green-600 text-xl mt-1">✓</span>
+              <p class="text-base text-gray-600">Measure outcomes (accuracy, speed, ROI)</p>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-2xl text-black mb-6 font-normal leading-[1.4]">
-            Not a Fit
-          </h3>
-          <ul class="space-y-3 text-base text-black list-none">
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✗</span>
-              <span class="font-normal">Low-volume processes (AI only makes sense at scale)</span>
+          <h3 class="text-2xl text-gray-900 mb-6">Not a Fit</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 text-xl mt-1">✗</span>
+              <p class="text-base text-gray-600">Low-volume processes (AI only makes sense at scale)</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✗</span>
-              <span class="font-normal">No historical data to learn patterns from</span>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 text-xl mt-1">✗</span>
+              <p class="text-base text-gray-600">No historical data to learn patterns from</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✗</span>
-              <span class="font-normal">Looking for a demo without commitment</span>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 text-xl mt-1">✗</span>
+              <p class="text-base text-gray-600">Looking for a demo without commitment</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✗</span>
-              <span class="font-normal">Process constantly changing and undefined</span>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 text-xl mt-1">✗</span>
+              <p class="text-base text-gray-600">Process constantly changing and undefined</p>
             </li>
-            <li class="flex items-start">
-              <span class="text-black mr-3 font-normal">✗</span>
-              <span class="font-normal">Using AI to replace human expertise (sometimes you need people)</span>
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 text-xl mt-1">✗</span>
+              <p class="text-base text-gray-600">Using AI to replace human expertise (sometimes you need people)</p>
             </li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WHAT HAPPENS NEXT SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        What Happens Next
-      </h2>
-
-      <div class="space-y-6">
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
-                <span class="text-black font-normal">1</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
-                Workflow Audit (1-2 weeks)
-              </h3>
-              <p class="text-base text-black mb-3 leading-relaxed font-normal">
-                We understand your current process. What decisions are being made? What data informs them? What does "good" look like? What volume? What are the bottlenecks?
-              </p>
-              <p class="text-sm text-gray-600 italic font-normal">
-                You get: Understanding of where AI can help, with ROI estimates
-              </p>
-            </div>
+  <!-- SECTION 11: OUR PROCESS -->
+  <section class="py-32 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Our Process</h2>
+      
+      <div class="space-y-12">
+        <!-- Step 01 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            01
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Workflow Audit</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              We understand your current process. What decisions are being made? What data informs them? What does "good" look like? What volume? What are the bottlenecks?
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Understanding of where AI can help, with ROI estimates
+            </p>
+            <p class="text-xs text-gray-500 mt-2">(1-2 weeks)</p>
           </div>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
-                <span class="text-black font-normal">2</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
-                Data Assessment (1 week)
-              </h3>
-              <p class="text-base text-black mb-3 leading-relaxed font-normal">
-                We assess if you have sufficient historical data. Do you have examples of good and bad outcomes? Is the data clean? What patterns exist? What edge cases do we need to handle?
-              </p>
-              <p class="text-sm text-gray-600 italic font-normal">
-                You get: Feasibility assessment and data requirements
-              </p>
-            </div>
+        <!-- Step 02 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            02
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Data Assessment</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              We assess if you have sufficient historical data. Do you have examples of good and bad outcomes? Is the data clean? What patterns exist? What edge cases do we need to handle?
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Feasibility assessment and data requirements
+            </p>
+            <p class="text-xs text-gray-500 mt-2">(1 week)</p>
           </div>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
-                <span class="text-black font-normal">3</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
-                Build & Validate (3-4 weeks)
-              </h3>
-              <p class="text-base text-black mb-3 leading-relaxed font-normal">
-                We train the AI system on your historical data. Test accuracy on holdout dataset. Validate against human expert review. Fine-tune until accuracy is acceptable. Build pipelines.
-              </p>
-              <p class="text-sm text-gray-600 italic font-normal">
-                You get: Trained model with documented accuracy and validation report
-              </p>
-            </div>
+        <!-- Step 03 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            03
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Build & Validate</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              We train the AI system on your historical data. Test accuracy on holdout dataset. Validate against human expert review. Fine-tune until accuracy is acceptable. Build pipelines.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Trained model with documented accuracy and validation report
+            </p>
+            <p class="text-xs text-gray-500 mt-2">(3-4 weeks)</p>
           </div>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
-                <span class="text-black font-normal">4</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
-                Pilot Deployment (2-3 weeks)
-              </h3>
-              <p class="text-base text-black mb-3 leading-relaxed font-normal">
-                Run on limited basis (10-20% of volume). Monitor accuracy and human feedback. Gather operational feedback. Does this help? What's missing? Refine before full deployment.
-              </p>
-              <p class="text-sm text-gray-600 italic font-normal">
-                You get: Confidence that model works in production
-              </p>
-            </div>
+        <!-- Step 04 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            04
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Pilot Deployment</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              Run on limited basis (10-20% of volume). Monitor accuracy and human feedback. Gather operational feedback. Does this help? What's missing? Refine before full deployment.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Confidence that model works in production
+            </p>
+            <p class="text-xs text-gray-500 mt-2">(2-3 weeks)</p>
           </div>
         </div>
 
-        <div class="border-2 border-gray-200 rounded-lg p-8">
-          <div class="flex items-start gap-6">
-            <div class="flex-shrink-0">
-              <div class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center">
-                <span class="text-black font-normal">5</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xl text-black mb-2 font-normal leading-[1.4]">
-                Full Deployment
-              </h3>
-              <p class="text-base text-black mb-3 leading-relaxed font-normal">
-                Deploy to full operation. 100% of volume flowing through AI system. Team training. Monitoring and alerts. Feedback loop established for continuous improvement.
-              </p>
-              <p class="text-sm text-gray-600 italic font-normal">
-                You get: Live AI system, continuously improving
-              </p>
-            </div>
+        <!-- Step 05 -->
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            05
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl text-gray-900 mb-3">Full Deployment</h3>
+            <p class="text-base text-gray-600 leading-relaxed mb-3">
+              Deploy to full operation. 100% of volume flowing through AI system. Team training. Monitoring and alerts. Feedback loop established for continuous improvement.
+            </p>
+            <p class="text-sm font-semibold text-gray-500 italic">
+              You get: Live AI system, continuously improving
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FAQ SECTION -->
-    <section class="pt-12 pb-12 border-b border-gray-200">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-12 font-normal leading-[1.4]">
-        Common Questions
-      </h2>
-
-      <div class="space-y-8">
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            How accurate does the AI need to be?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Depends on the workflow. For document extraction, 98%+ is standard. For scoring/ranking, 85-90% is useful and actionable. Lower-confidence items automatically get human review.
-          </p>
-        </div>
-
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            What if the AI makes mistakes?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            That's why humans stay in the loop. Low-confidence items get human review. Unusual patterns escalate. The system doesn't make final decisions—it recommends. Humans decide.
-          </p>
-        </div>
-
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            How long until accuracy is good enough?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            We validate on sample data before deployment, typically 2-4 weeks. Accuracy improves continuously as the system learns from human feedback. You see improvement month over month.
-          </p>
-        </div>
-
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            What if your business changes?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            The AI retrains on new data. As you add customer types, new products, or change operations, the AI learns. Patterns might shift, but the system adapts. Feedback loop keeps it current.
-          </p>
-        </div>
-
-        <div class="border-b border-gray-200 pb-8">
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            Can we audit why something was scored a certain way?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Yes. Every score has explainability. What factors drove it? Historical examples? Pattern matches? Full transparency. No black boxes.
-          </p>
-        </div>
-
+  <!-- SECTION 8: WHAT YOU GET & WHO THIS IS FOR -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <!-- Left Column: What You Get -->
         <div>
-          <h3 class="text-xl text-black mb-3 font-normal leading-[1.4]">
-            How do we measure if it's working?
-          </h3>
-          <p class="text-base text-black leading-relaxed font-normal">
-            Clear metrics: accuracy (human validation), speed (time to decision), consistency (same situation, same outcome), business outcomes (cost saved, quality improved, revenue impact).
-          </p>
+          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What You Get</h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Automatic Data Extraction</h3>
+                <p class="text-base text-gray-600">Documents arrive, structured data extracted automatically, validated for accuracy, ready for use. Manual data entry eliminated.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Systematic Decision-Making</h3>
+                <p class="text-base text-gray-600">AI applies same logic consistently. Lead scoring uses explicit criteria. Approvals evaluated against historical data. Decisions are repeatable and measurable.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Proactive Pattern Detection</h3>
+                <p class="text-base text-gray-600">System continuously monitors operations and surfaces patterns you wouldn't see manually. Churn risk detected early. Timeline slips detected before crisis.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Headcount-Independent Scaling</h3>
+                <p class="text-base text-gray-600">Same number of people handle 2-3x volume. AI handles pattern-matching. People handle judgment. Volume growth doesn't require proportional hiring.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Flexible Engagement</h3>
+                <p class="text-base text-gray-600">Build + Maintain or Build + Operate models—we adapt to how you work and what you need.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Who This Is For -->
+        <div>
+          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Who This Is For</h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Document-Heavy Workflows</h3>
+                <p class="text-base text-gray-600">50+ documents per day that require manual processing, extraction, or review</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Need Consistent Decision-Making</h3>
+                <p class="text-base text-gray-600">You need consistent decision-making at scale with measurable, repeatable outcomes</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Organizations with Historical Data</h3>
+                <p class="text-base text-gray-600">You have historical data showing patterns (what works, what doesn't) that can be learned from</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="text-blue-600 text-xl mt-1">•</span>
+              <div>
+                <h3 class="text-xl text-gray-900 mb-1">Companies Measuring Outcomes</h3>
+                <p class="text-base text-gray-600">You measure outcomes like accuracy, speed, and ROI, and want to improve them systematically</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CTA SECTION -->
-    <section class="pt-12 pb-24 md:pb-16 sm:pb-12 text-center">
-      <h2 class="text-[32px] md:text-[24px] sm:text-[24px] text-black mb-6 font-normal leading-[1.4]">
-        Ready to Scale Without Adding Headcount?
-      </h2>
-      <p class="text-xl text-black mb-8 leading-relaxed font-normal max-w-2xl mx-auto">
-        Start with a conversation about your workflows and where AI can multiply your operational leverage.
-      </p>
-      <a href="/contact" class="inline-block px-8 py-3 bg-black text-white text-sm font-normal hover:bg-gray-800 transition-colors rounded-sm">
-        Start a Project
-      </a>
-    </section>
-  </div>
+  <!-- FAQ SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl mb-12 text-gray-900">Frequently Asked Questions</h2>
 
-  <!-- Back Link -->
-  <section class="py-8 px-6 border-t border-gray-100">
-    <div class="max-w-[900px] mx-auto">
-      <a href="/ai-integration-automation" class="text-base text-gray-600 hover:text-black transition-colors font-normal">
-        ← Back to AI Integration & Automation
-      </a>
+      <div class="border-t border-gray-200 pt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How accurate does the AI need to be?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Depends on the workflow. For document extraction, 98%+ is standard. For scoring/ranking, 85-90% is useful and actionable. Lower-confidence items automatically get human review.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What if the AI makes mistakes?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              That's why humans stay in the loop. Low-confidence items get human review. Unusual patterns escalate. The system doesn't make final decisions—it recommends. Humans decide.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How long until accuracy is good enough?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We validate on sample data before deployment, typically 2-4 weeks. Accuracy improves continuously as the system learns from human feedback. You see improvement month over month.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What if your business changes?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              The AI retrains on new data. As you add customer types, new products, or change operations, the AI learns. Patterns might shift, but the system adapts. Feedback loop keeps it current.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">Can we audit why something was scored a certain way?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Yes. Every score has explainability. What factors drove it? Historical examples? Pattern matches? Full transparency. No black boxes.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How do we measure if it's working?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Clear metrics: accuracy (human validation), speed (time to decision), consistency (same situation, same outcome), business outcomes (cost saved, quality improved, revenue impact).
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What types of workflows can be enhanced with AI?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Document processing, lead scoring, customer health monitoring, contract review, approval routing, pattern detection, and any process that involves data extraction, scoring, or pattern recognition.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How do we get started?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Start with a conversation. We'll clarify whether you need AI enhancement, integration, or both—and which engagement model fits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Final CTA -->
+      <div>
+        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
+          Ready to scale without adding headcount?
+        </h2>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
+          Start a Project
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 </main>
 
 <style>
-  /* Video background positioning */
+  /* Video background mobile fixes for hero section */
   section video {
     position: absolute;
     top: 50%;
@@ -907,8 +992,8 @@ import Layout from "../../layouts/Layout.astro";
     object-fit: cover;
   }
 
-  /* Mobile video fixes */
-  @media (max-width: 640px) {
+  /* Ensure video containers work on mobile */
+  @media (max-width: 768px) {
     section video {
       width: 100%;
       height: 100%;
@@ -924,5 +1009,27 @@ import Layout from "../../layouts/Layout.astro";
     }
   }
 </style>
-</Layout>
 
+<script>
+  document.querySelectorAll('.faq-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const isOpen = this.classList.contains('faq-open');
+      // Close all other cards
+      document.querySelectorAll('.faq-card').forEach(c => {
+        c.classList.remove('faq-open');
+        c.querySelector('.faq-answer')?.classList.add('hidden');
+        c.querySelector('.faq-chevron')?.classList.remove('rotate-180');
+        c.classList.remove('border-blue-500');
+        c.querySelector('.faq-question')?.classList.remove('text-blue-500');
+      });
+      // Toggle current card
+      if (!isOpen) {
+        this.classList.add('faq-open', 'border-blue-500');
+        this.querySelector('.faq-answer')?.classList.remove('hidden');
+        this.querySelector('.faq-chevron')?.classList.add('rotate-180');
+        this.querySelector('.faq-question')?.classList.add('text-blue-500');
+      }
+    });
+  });
+</script>
+</Layout>
