@@ -365,7 +365,7 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- SECTION 8: WHAT YOU GET & WHO THIS IS FOR -->
-  <section class="py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+  <section class="py-32 px-6 bg-black">
     <div class="max-w-7xl mx-auto">
       <div class="grid md:grid-cols-2 gap-12 mb-16">
         <!-- Left Column: What You Get -->
@@ -459,9 +459,129 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- FAQ SECTION -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl mb-12 text-gray-900">Frequently Asked Questions</h2>
+
+      <div class="border-t border-gray-200 pt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What types of custom software do you build?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Full-stack applications, AI-powered platforms, SaaS products, internal tools, and enterprise systems. Database to UI—purpose-built software you own and control.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">Who owns the code and IP?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              You do. Custom development means you own the codebase, architecture, and intellectual property outright. No licensing fees, no vendor lock-in.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How long does a custom build take?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Most projects run 8–16 weeks depending on scope. Complex enterprise systems take longer. We scope timeline during discovery.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How is this different from a typical dev shop?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              We combine product thinking with engineering. Most dev shops build to spec. We help define what to build, architect it for scale, and stay involved to maintain and evolve it.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What systems can you integrate?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              CRMs, accounting platforms, ERPs, databases, communication tools, scheduling systems—most modern business software.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How does AI get applied to existing systems?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Document processing, intelligent routing, automated decision support, natural language interfaces, and predictive workflows.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What's the difference between Build + Maintain and Build + Operate?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Build + Maintain: your team runs operations, we keep the system working. Build + Operate: we run it for you within clear guardrails.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
+            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How do we get started?</p>
+            <div class="flex justify-center mb-4">
+              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
+              Start with a conversation. We'll clarify whether you need custom development, integration, or both—and which engagement model fits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="py-32 px-6 bg-black">
+    <div class="max-w-4xl mx-auto text-center">
       <!-- Final CTA -->
-      <div class="text-center pt-12 border-t border-gray-700">
+      <div>
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
           Ready to connect your systems?
         </h2>
@@ -507,4 +627,27 @@ import Layout from "../../layouts/Layout.astro";
     }
   }
 </style>
+
+<script>
+  document.querySelectorAll('.faq-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const isOpen = this.classList.contains('faq-open');
+      // Close all other cards
+      document.querySelectorAll('.faq-card').forEach(c => {
+        c.classList.remove('faq-open');
+        c.querySelector('.faq-answer')?.classList.add('hidden');
+        c.querySelector('.faq-chevron')?.classList.remove('rotate-180');
+        c.classList.remove('border-blue-500');
+        c.querySelector('.faq-question')?.classList.remove('text-blue-500');
+      });
+      // Toggle current card
+      if (!isOpen) {
+        this.classList.add('faq-open', 'border-blue-500');
+        this.querySelector('.faq-answer')?.classList.remove('hidden');
+        this.querySelector('.faq-chevron')?.classList.add('rotate-180');
+        this.querySelector('.faq-question')?.classList.add('text-blue-500');
+      }
+    });
+  });
+</script>
 </Layout>
