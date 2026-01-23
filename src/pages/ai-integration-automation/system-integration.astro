@@ -1,0 +1,390 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="System Integration | Intelio - Connect Your Systems" description="Connect CRMs, accounting, operations, and data systems. One connected stack instead of disconnected tools.">
+<main class="bg-white">
+  <!-- HERO SECTION: Video Background -->
+  <section class="relative h-[600px] md:h-[450px] sm:h-[300px] flex items-center justify-center overflow-hidden bg-black">
+    <!-- Video Background -->
+    <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/videos/system-integration-hero.mp4" type="video/mp4">
+      <!-- Fallback if video doesn't load -->
+    </video>
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/40 z-[1]"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-5xl sm:text-4xl text-white mb-6 leading-[1.2] font-normal">
+        System Integration
+      </h1>
+      <p class="text-lg md:text-lg sm:text-base text-gray-200 leading-relaxed font-normal max-w-2xl mx-auto">
+        Connect CRMs, accounting, operations, and data systems. One connected stack.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: The Problem -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-8 font-normal leading-[1.4]">
+        Your Systems Should Work Together
+      </h2>
+      <p class="text-base text-black leading-[1.6] font-normal">
+        Most businesses operate with 8-12 disconnected tools. Each solves a problem. None talk to each other. The result: data silos, manual data entry, and leadership making decisions on incomplete information.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Integration Patterns -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-16 md:mb-16 sm:mb-12 font-normal leading-[1.4]">
+        What We Connect
+      </h2>
+      
+      <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-12 md:gap-12 sm:gap-8">
+        <!-- Pattern 1: CRM ↔ Accounting -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            CRM ↔ Accounting
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            Revenue Alignment Without Reconciliation
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Deal closes in CRM → Invoice generates automatically → Status syncs back. Real-time revenue visibility without manual reconciliation.
+          </p>
+        </div>
+
+        <!-- Pattern 2: Operations ↔ Finance -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            Operations ↔ Finance
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            Margin Visibility in Real Time
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Project costs and timelines flow automatically → Finance sees actual margin. Real-time profitability without spreadsheets.
+          </p>
+        </div>
+
+        <!-- Pattern 3: Customer Data ↔ Everywhere -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            Customer Data ↔ Everywhere
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            One Source of Truth
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Unified customer record → Changes propagate → No duplicates. Single view of customer across all systems.
+          </p>
+        </div>
+
+        <!-- Pattern 4: Operations ↔ Communications -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            Operations ↔ Communications
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            Context Flows Everywhere
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Support sees project context → Sales sees delivery history → Delivery sees contracts. No information silos between teams.
+          </p>
+        </div>
+
+        <!-- Pattern 5: Legacy ↔ Modern -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            Legacy ↔ Modern
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            Old Systems Stay Productive
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Legacy data flows to modern dashboards → No re-entry required. Phased modernization without rip-and-replace.
+          </p>
+        </div>
+
+        <!-- Pattern 6: Custom Data Flows -->
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-2 font-normal leading-[1.4]">
+            Custom Data Flows
+          </h3>
+          <p class="text-base text-gray-600 mb-4 font-normal leading-[1.6]">
+            Purpose-Built Connections
+          </p>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Any system to any system → Custom middleware if needed → Real-time or scheduled. Flexibility to connect anything.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: How We Build It -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-16 md:mb-16 sm:mb-12 font-normal leading-[1.4]">
+        How We Build It
+      </h2>
+      
+      <div class="space-y-8 md:space-y-8 sm:space-y-6">
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-3 font-normal leading-[1.4]">
+            1. Map Your Current State
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Understand tools, data flows, pain points. Identify highest-impact integrations.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-3 font-normal leading-[1.4]">
+            2. Design the Connected Stack
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Clean integration architecture. Real-time vs. scheduled syncing decisions. Plan for future growth.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-3 font-normal leading-[1.4]">
+            3. Build and Validate
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Implement iteratively. Test with real data. Error handling and monitoring.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl md:text-2xl sm:text-xl text-black mb-3 font-normal leading-[1.4]">
+            4. Deploy and Transition
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Complete documentation. Team training. Ongoing support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Technical Approach (Optional) -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-12 md:mb-12 sm:mb-8 font-normal leading-[1.4]">
+        Technical Approach
+      </h2>
+      
+      <div class="space-y-6 md:space-y-6 sm:space-y-4">
+        <p class="text-base text-black leading-[1.6] font-normal">
+          API-first architecture. We connect systems through their native APIs when available, ensuring reliable, maintainable integrations.
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Middleware when necessary. For legacy systems or complex transformations, we build lightweight middleware that handles data mapping and routing.
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Real-time vs. batched syncing. We choose the right sync pattern based on data criticality and system capabilities.
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Monitoring and reliability. Every integration includes error handling, logging, and alerting so issues are caught before they impact operations.
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Extensible design. New tools integrate cleanly. Changes to one system don't break others.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: What You Get -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-12 md:mb-12 sm:mb-8 font-normal leading-[1.4]">
+        What Changes
+      </h2>
+      
+      <div class="space-y-6 md:space-y-6 sm:space-y-4">
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Connected Systems — Data flows automatically between tools
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Eliminated Manual Steps — Hours of data entry gone
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Unified Information — One source of truth
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Real-Time Visibility — Dashboards always current
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Scaled Capacity — Same team handles more volume
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Future-Proof — New tools integrate cleanly
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Common Questions -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-12 md:mb-12 sm:mb-8 font-normal leading-[1.4]">
+        Questions
+      </h2>
+      
+      <div class="space-y-8 md:space-y-8 sm:space-y-6">
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            How long does integration take?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Most integrations take 2-6 weeks depending on complexity. We start with high-impact connections and expand from there.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            Will you disrupt our operations?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            No. We build and test integrations in parallel with your existing workflows. Cutover happens only after validation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            What if we change systems later?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Our integrations are designed to be modular. When you switch tools, we update the connection points without rebuilding everything.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            Do you maintain the integrations?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Yes. We monitor integrations, handle API changes, and fix issues as they arise. Maintenance is included in our engagement models.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            What about data security?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            All integrations use secure, encrypted connections. We follow your existing security policies and can work with your IT team on compliance requirements.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl md:text-xl sm:text-lg text-black mb-2 font-normal leading-[1.4]">
+            Can we start small?
+          </h3>
+          <p class="text-base text-black leading-[1.6] font-normal">
+            Absolutely. We often start with one high-impact integration to prove value, then expand to connect additional systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Who This Works For -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-12 md:mb-12 sm:mb-8 font-normal leading-[1.4]">
+        Who This Works For
+      </h2>
+      
+      <div class="space-y-4 md:space-y-4 sm:space-y-3">
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Growing companies running multiple tools
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Professional services firms
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Sales-driven businesses
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Lean operations teams
+        </p>
+        <p class="text-base text-black leading-[1.6] font-normal">
+          Companies with legacy systems
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: CTA -->
+  <section class="py-24 md:py-24 sm:py-12 px-16 md:px-16 sm:px-6 bg-white">
+    <div class="max-w-[900px] mx-auto text-center">
+      <h2 class="text-4xl md:text-4xl sm:text-3xl text-black mb-6 font-normal leading-[1.4]">
+        Ready to integrate?
+      </h2>
+      <p class="text-base text-black leading-[1.6] font-normal mb-8 max-w-2xl mx-auto">
+        Let's start with understanding your current state—what tools you use, where manual effort exists, what visibility you're missing.
+      </p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white text-base font-normal rounded-sm hover:bg-gray-800 transition-colors">
+        Start a conversation
+      </a>
+    </div>
+  </section>
+
+  <!-- Back Link -->
+  <section class="py-12 md:py-12 sm:py-8 px-16 md:px-16 sm:px-6 bg-white border-t border-gray-100">
+    <div class="max-w-[900px] mx-auto">
+      <a href="/ai-integration-automation" class="text-base text-gray-600 hover:text-black transition-colors font-normal">
+        ← Back to AI Integration & Automation
+      </a>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Video background positioning */
+  section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Mobile video fixes */
+  @media (max-width: 640px) {
+    section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    section video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
+</Layout>
+
