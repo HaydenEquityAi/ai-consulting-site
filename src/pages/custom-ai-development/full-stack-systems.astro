@@ -6,71 +6,67 @@ import Layout from "../../layouts/Layout.astro";
 <main class="bg-white">
   <!-- SECTION 1: HERO -->
   <section class="hero-section">
+    <div class="hero-background">
     <!-- Video Background -->
     <video 
       autoplay 
       muted 
-      loop
+        loop
       playsinline
-      preload="auto"
-      webkit-playsinline="true"
-      x5-playsinline="true"
-      class="absolute inset-0 w-full h-full object-cover"
-      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
+        preload="auto"
+        webkit-playsinline="true"
+        x5-playsinline="true"
+        class="hero-bg-video"
     >
       <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
-      Your browser does not support the video tag.
+        Your browser does not support the video tag.
     </video>
-
-    <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);"></div>
-
-    <!-- Subtle Radial Gradient Accent -->
-    <div class="hero-gradient-accent"></div>
-
-    <div class="hero-content">
-      <div class="max-w-[900px]">
-        <!-- Label -->
-        <div class="mb-6">
-          <span class="hero-label">
-            FULL-STACK CUSTOM SYSTEMS
-          </span>
+      <div class="hero-overlay"></div>
         </div>
         
-        <!-- Headline -->
-        <h1 class="hero-headline">
-          Complete platforms built around your operational logic.
+    <div class="hero-content">
+      <span class="hero-label">FULL-STACK CUSTOM SYSTEMS</span>
+      
+      <h1 class="hero-headline">
+        Complete platforms built<br />
+        around your operational logic.
         </h1>
         
-        <!-- Subhead -->
-        <p class="hero-body">
-          We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works. Custom architecture that becomes infrastructure you own.
-        </p>
-        
-        <!-- CTA Button -->
-        <a href="/contact" class="cta-primary">
-          Connect with our team
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      <a href="#intro" class="hero-cta">
+        Learn more
+        <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </a>
-        </div>
     </div>
   </section>
 
-  <!-- SECTION 2: THE OPPORTUNITY -->
+  <!-- SECTION 2: INTRO SECTION -->
+  <section id="intro" class="intro-section">
+    <div class="intro-container">
+      <p class="intro-text">
+        We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works. Custom architecture that becomes infrastructure you own.
+      </p>
+      
+      <p class="intro-text-secondary">
+        Purpose-built systems eliminate the compromises of off-the-shelf software. Your workflows, your data structures, your competitive advantage—encoded directly into the platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE OPPORTUNITY -->
   <section class="opportunity-section">
     <div class="opportunity-container">
       <div class="opportunity-content">
-        <h2 class="section-headline">The Opportunity</h2>
-        <div class="space-y-5">
-          <p class="body-text">
-            Organizations with unique operational requirements have strategic opportunity: purpose-built platforms that encode their specific logic directly into infrastructure.
-          </p>
-          <p class="body-text">
-            Custom systems eliminate the compromises of off-the-shelf software. Workflows match how you actually operate. Data structures reflect your business model. The system becomes how you compete—not a tool you work around.
-          </p>
-            </div>
+        <span class="section-label">THE OPPORTUNITY</span>
+        
+        <h2 class="section-headline">
+          Organizations with unique operational requirements have strategic opportunity.
+          </h2>
+        
+        <p class="body-text">
+          Purpose-built platforms encode your specific logic directly into infrastructure. Workflows match how you actually operate. Data structures reflect your business model. The system becomes how you compete—not a tool you work around.
+        </p>
           </div>
           
       <!-- Image Placeholder -->
@@ -86,7 +82,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 3: VISUAL BREAK -->
+  <!-- SECTION 4: VISUAL BREAK -->
   <section class="visual-break" aria-hidden="true">
     <img 
       src="/images/full-stack-visual-break.jpg" 
@@ -97,7 +93,7 @@ import Layout from "../../layouts/Layout.astro";
     <div class="visual-break-gradient" style="display: none;"></div>
   </section>
 
-  <!-- SECTION 4: CAPABILITIES -->
+  <!-- SECTION 5: CAPABILITIES -->
   <section class="capabilities-section">
     <div class="capabilities-container">
       <h2 class="section-headline-light">Capabilities</h2>
@@ -159,7 +155,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 5: CLIENT IMPACT -->
+  <!-- SECTION 6: CLIENT IMPACT -->
   <section class="impact-section">
     <div class="impact-container">
       <h2 class="section-headline">Client Impact</h2>
@@ -192,7 +188,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 6: OUR APPROACH -->
+  <!-- SECTION 7: OUR APPROACH -->
   <section class="approach-section">
     <div class="approach-container">
       <h2 class="section-headline-light">Our Approach</h2>
@@ -246,7 +242,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 7: CLOSING CTA -->
+  <!-- SECTION 8: CLOSING CTA -->
   <section class="cta-section">
     <div class="cta-background">
       <img 
@@ -312,112 +308,104 @@ import Layout from "../../layouts/Layout.astro";
 
   /* HERO SECTION */
   .hero-section {
+    position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 80px;
     background: var(--color-black);
-    position: relative;
     overflow: hidden;
   }
 
-  .hero-section::before {
-    content: '';
+  .hero-background {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    background: radial-gradient(
-      ellipse at 80% 40%,
-      rgba(99, 102, 241, 0.06) 0%,
-      transparent 60%
-    );
-    pointer-events: none;
-    z-index: 1;
+    inset: 0;
+    z-index: 0;
   }
 
-  .hero-gradient-accent {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    background: radial-gradient(
-      ellipse at 80% 40%,
-      rgba(99, 102, 241, 0.06) 0%,
-      transparent 60%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+  .hero-bg-video {
     width: 100%;
-  }
-
-  .hero-label {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 24px;
-    display: inline-block;
-  }
-
-  .hero-headline {
-    font-size: clamp(48px, 7vw, 76px);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--color-white);
-    max-width: 900px;
-    margin-bottom: 28px;
-  }
-
-  .hero-body {
-    font-size: 19px;
-    line-height: 1.7;
-    color: var(--color-text-on-dark);
-    max-width: 620px;
-    margin-bottom: 44px;
-  }
-
-  .cta-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--color-accent);
-    color: var(--color-white);
-    padding: 16px 28px;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 15px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .cta-primary:hover {
-    background: var(--color-accent-hover);
-    gap: 14px;
-  }
-
-  /* Video background mobile fixes */
-  .hero-section video {
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .hero-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+  }
+
+  .hero-headline {
+    font-size: clamp(48px, 8vw, 80px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    max-width: 900px;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+  }
+
+  .hero-cta:hover {
+    gap: 12px;
+  }
+
+  .hero-cta .cta-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Video background mobile fixes */
+  @media (max-width: 768px) {
+    .hero-bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-headline {
+      font-size: 48px !important;
+    }
   }
 
   @media (max-width: 768px) {
@@ -430,6 +418,34 @@ import Layout from "../../layouts/Layout.astro";
     .hero-headline {
       font-size: 48px !important;
     }
+  }
+
+  /* INTRO SECTION */
+  .intro-section {
+    background: var(--color-black);
+    padding: clamp(80px, 12vw, 140px) 24px;
+  }
+
+  .intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-white);
+    margin-bottom: 32px;
+  }
+
+  .intro-text-secondary {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   /* OPPORTUNITY SECTION */
@@ -458,19 +474,28 @@ import Layout from "../../layouts/Layout.astro";
     max-width: 520px;
   }
 
+  .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+  }
+
   .section-headline {
-    font-size: clamp(36px, 5vw, 48px);
+    font-size: clamp(28px, 4vw, 36px);
     font-weight: 500;
+    line-height: 1.3;
     color: var(--color-text-primary);
-    margin-bottom: 28px;
-    letter-spacing: -0.01em;
+    margin-bottom: 24px;
   }
 
   .body-text {
     font-size: 17px;
     line-height: 1.75;
     color: var(--color-text-secondary);
-    margin-bottom: 20px;
   }
 
   .opportunity-image {
@@ -570,7 +595,7 @@ import Layout from "../../layouts/Layout.astro";
     background: var(--color-rich-black);
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 44px;
-    transition: all 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .capability-card:hover {
@@ -791,11 +816,16 @@ import Layout from "../../layouts/Layout.astro";
 
   /* iOS Safari video fixes */
   @supports (-webkit-touch-callout: none) {
-    .hero-section video {
+    .hero-bg-video {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      }
     }
+  }
+  
+  /* Smooth scroll for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
   </style>
 
 </Layout>
