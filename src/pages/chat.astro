@@ -1,0 +1,431 @@
+---
+// src/pages/chat.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ask intelio - AI Chatbot">
+  <div class="chat-page">
+    
+    <!-- Left Panel - Login/Auth -->
+    <div class="chat-panel chat-panel-left">
+      <div class="chat-form-container">
+        
+        <div class="chat-header">
+          <div class="chat-beta-badge">BETA</div>
+          <h1 class="chat-logo">
+            <span class="logo-text">Ask</span>
+            <span class="logo-brand">intelio</span>
+          </h1>
+        </div>
+        
+        <h2 class="chat-form-title">
+          Sign in or create an account to explore the experience
+        </h2>
+        
+        <!-- Email Login -->
+        <form class="chat-email-form">
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <div class="email-input-wrapper">
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Username@email.com"
+                required
+              />
+              <button type="submit" class="email-submit-btn" aria-label="Continue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <!-- Divider -->
+        <div class="form-divider">
+          <span>Or</span>
+        </div>
+        
+        <!-- Social Login Buttons -->
+        <div class="social-login">
+          <button class="social-btn apple-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.05 13.5c-.73 0-1.38.35-1.8.88-.42-.53-1.07-.88-1.8-.88-1.66 0-3 1.34-3 3s1.34 3 3 3c.73 0 1.38-.35 1.8-.88.42.53 1.07.88 1.8.88 1.66 0 3-1.34 3-3s-1.34-3-3-3z"/>
+            </svg>
+            Continue with Apple
+          </button>
+          
+          <button class="social-btn google-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.545 10.239v3.821h5.445c-0.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032 0-3.331 2.701-6.032 6.032-6.032 1.498 0 2.866 0.549 3.921 1.453l2.814-2.814c2.031-1.908 4.741-3.081 7.542-3.081-0.035 0-0.089 0-0.124 0 0 0 0 0 0 0-8.294 0-15 6.706-15 15s6.706 15 15 15c8.294 0 15-6.706 15-15 0-1.061-0.108-2.096-0.309-3.106z"/>
+            </svg>
+            Continue with Google
+          </button>
+          
+          <button class="social-btn linkedin-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.5v8.5h2.5v-4.34c0-.77.62-1.4 1.4-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.5 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-1 13.5h2.5v-8.5h-2.5v8.5z"/>
+            </svg>
+            Continue with LinkedIn
+          </button>
+          
+          <button class="social-btn sso-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Continue with SSO
+          </button>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Right Panel - Chat Interface -->
+    <div class="chat-panel chat-panel-right">
+      <a href="/" class="chat-close-btn" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </a>
+      
+      <div class="chat-interface">
+        <div class="chat-greeting">
+          <div class="chat-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+          
+          <h3 class="chat-greeting-title">
+            Hi 👋! I'm Ask intelio,<br/>
+            <span class="chat-highlight">an AI chatbot that answers your questions</span><br/>
+            based on intelio's published insights.
+          </h3>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</Layout>
+
+<style>
+  .chat-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    background: #FFFFFF;
+  }
+  
+  /* Left Panel - Form */
+  .chat-panel-left {
+    background: #FFFFFF;
+    padding: clamp(40px, 5vw, 60px) 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  
+  .chat-form-container {
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  /* Chat Header */
+  .chat-header {
+    margin-bottom: 40px;
+  }
+  
+  .chat-beta-badge {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #0052CC;
+    margin-bottom: 12px;
+  }
+  
+  .chat-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .logo-text {
+    font-weight: 400;
+  }
+  
+  .logo-brand {
+    font-weight: 600;
+    color: #0052CC;
+  }
+  
+  /* Form Title */
+  .chat-form-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 500;
+    color: #000000;
+    margin: 0 0 32px 0;
+    line-height: 1.3;
+  }
+  
+  /* Email Form */
+  .chat-email-form {
+    margin-bottom: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  
+  .email-input-wrapper {
+    display: flex;
+    border: 2px solid #0052CC;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .email-input-wrapper input {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background: #FFFFFF;
+  }
+  
+  .email-input-wrapper input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .email-input-wrapper input:focus {
+    outline: none;
+  }
+  
+  .email-submit-btn {
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0052CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+  
+  .email-submit-btn:hover {
+    opacity: 0.7;
+  }
+  
+  .email-submit-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Divider */
+  .form-divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+  }
+  
+  .form-divider::before,
+  .form-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-divider::before {
+    margin-right: 16px;
+  }
+  
+  .form-divider::after {
+    margin-left: 16px;
+  }
+  
+  /* Social Buttons */
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .social-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Right Panel - Chat */
+  .chat-panel-right {
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
+    padding: clamp(40px, 5vw, 60px) 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Close Button */
+  .chat-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+    text-decoration: none;
+  }
+  
+  .chat-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .chat-close-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Chat Interface */
+  .chat-interface {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .chat-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .chat-avatar {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+  }
+  
+  .chat-avatar svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chat-greeting-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  .chat-highlight {
+    color: #FFD700;
+    font-weight: 600;
+  }
+  
+  /* Responsive */
+  @media (max-width: 968px) {
+    .chat-page {
+      grid-template-columns: 1fr;
+    }
+    
+    .chat-panel-right {
+      min-height: 400px;
+      order: 2;
+    }
+    
+    .chat-panel-left {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .chat-page {
+      grid-template-columns: 1fr;
+    }
+    
+    .chat-panel-left {
+      padding: 32px 16px;
+    }
+    
+    .chat-panel-right {
+      padding: 40px 16px;
+      min-height: 350px;
+    }
+    
+    .chat-form-container {
+      max-width: 100%;
+    }
+    
+    .chat-logo {
+      font-size: 24px;
+    }
+    
+    .chat-greeting-title {
+      font-size: 20px;
+    }
+  }
+</style>
+
