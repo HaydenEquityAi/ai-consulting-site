@@ -90,18 +90,21 @@ import Layout from '../layouts/Layout.astro';
       </a>
       
       <div class="chat-interface">
-        <div class="chat-greeting">
-          <div class="chat-avatar">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <circle cx="12" cy="12" r="10"/>
-            </svg>
+        <div class="chat-content">
+          <!-- Chat Messages Container -->
+          <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be dynamically added here -->
           </div>
           
-          <h3 class="chat-greeting-title">
-            Hi 👋! I'm Ask intelio,<br/>
-            <span class="chat-highlight">an AI chatbot that answers your questions</span><br/>
-            based on intelio's published insights.
-          </h3>
+          <!-- Input Area (optional, disabled for now) -->
+          <div class="chat-input-area">
+            <input 
+              type="text" 
+              id="chat-input"
+              placeholder="Ask a question..."
+              disabled
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -306,10 +309,11 @@ import Layout from '../layouts/Layout.astro';
     background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     padding: clamp(40px, 5vw, 60px) 24px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   /* Close Button */
@@ -344,45 +348,145 @@ import Layout from '../layouts/Layout.astro';
   /* Chat Interface */
   .chat-interface {
     width: 100%;
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .chat-greeting {
+    max-width: 600px;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
   }
   
-  .chat-avatar {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
+  .chat-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  
+  /* Chat Messages */
+  .chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+  
+  /* Message Wrapper */
+  .message-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Avatar */
+  .message-avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
     border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
+    margin-top: 4px;
   }
   
-  .chat-avatar svg {
-    width: 40px;
-    height: 40px;
+  .message-avatar svg {
+    width: 24px;
+    height: 24px;
   }
   
-  .chat-greeting-title {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: clamp(24px, 4vw, 32px);
-    font-weight: 500;
-    color: #FFFFFF;
+  /* Message Bubble */
+  .chat-message-bubble {
+    padding: 16px 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .bot-message p {
     margin: 0;
-    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
   }
   
-  .chat-highlight {
-    color: #FFD700;
-    font-weight: 600;
+  /* Typing Message */
+  .bot-message.typing {
+    background: rgba(255, 255, 255, 0.2);
+    animation: slideIn 0.4s ease-out, pulse 1.5s ease-in-out infinite;
+  }
+  
+  /* Typing Cursor */
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #FFFFFF;
+    margin-left: 3px;
+    animation: blink 1s infinite;
+    vertical-align: text-bottom;
+  }
+  
+  /* Input Area */
+  .chat-input-area {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .chat-input-area input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+  }
+  
+  .chat-input-area input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .chat-input-area input:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 49% {
+      opacity: 1;
+    }
+    50%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      background: rgba(255, 255, 255, 0.3);
+    }
   }
   
   /* Responsive */
@@ -428,4 +532,97 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<script>
+  // Chat Typing Animation
+  (function() {
+    // Bot messages to type
+    const botMessages = [
+      "Hi 👋! I'm Ask intelio, an AI chatbot that answers your questions based on intelio's published insights.",
+      "I can help you understand custom AI development, automation strategies, and how intelligent systems transform businesses.",
+      "What would you like to know about AI and technology implementation?"
+    ];
+
+    const messagesContainer = document.getElementById('chat-messages');
+    const chatEndRef = document.createElement('div');
+    let currentMessageIndex = 0;
+    let typingInterval = null;
+
+    // Auto-scroll to bottom
+    function scrollToBottom() {
+      chatEndRef.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Create message bubble
+    function createMessageBubble(text, isTyping = false) {
+      const messageWrapper = document.createElement('div');
+      messageWrapper.className = 'message-wrapper';
+
+      const avatar = document.createElement('div');
+      avatar.className = 'message-avatar';
+      avatar.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+      `;
+
+      const bubble = document.createElement('div');
+      bubble.className = `chat-message-bubble bot-message ${isTyping ? 'typing' : ''}`;
+      
+      const paragraph = document.createElement('p');
+      paragraph.innerHTML = text;
+      
+      bubble.appendChild(paragraph);
+      messageWrapper.appendChild(avatar);
+      messageWrapper.appendChild(bubble);
+      
+      return { wrapper: messageWrapper, bubble: bubble, paragraph: paragraph };
+    }
+
+    // Type message character by character
+    function typeMessage(messageText, delay = 1000) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const { wrapper, bubble, paragraph } = createMessageBubble('', true);
+          messagesContainer.appendChild(wrapper);
+          messagesContainer.appendChild(chatEndRef);
+          scrollToBottom();
+
+          let currentIndex = 0;
+          const typingSpeed = 40; // ms per character
+
+          typingInterval = setInterval(() => {
+            if (currentIndex <= messageText.length) {
+              const text = messageText.substring(0, currentIndex);
+              paragraph.innerHTML = text + '<span class="typing-cursor">|</span>';
+              scrollToBottom();
+              currentIndex++;
+            } else {
+              clearInterval(typingInterval);
+              // Remove typing class and cursor
+              bubble.classList.remove('typing');
+              paragraph.innerHTML = messageText;
+              scrollToBottom();
+              resolve();
+            }
+          }, typingSpeed);
+        }, delay);
+      });
+    }
+
+    // Start typing messages
+    async function startTyping() {
+      for (let i = 0; i < botMessages.length; i++) {
+        await typeMessage(botMessages[i], i === 0 ? 500 : 1000);
+      }
+    }
+
+    // Initialize when page loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', startTyping);
+    } else {
+      startTyping();
+    }
+  })();
+</script>
 
