@@ -1172,53 +1172,64 @@ import Layout from "../layouts/Layout.astro";
   /* Final CTA Section */
   .final-cta-section {
     background: #0052CC;  /* McKinsey Electric Blue */
-    padding: clamp(100px, 12vw, 140px) 24px;
+    padding: clamp(80px, 10vw, 100px) 24px;
     position: relative;
     overflow: hidden;
   }
 
-  .final-cta-container {
-    max-width: 1200px;
+  /* Wrapper - Constrains width and creates side-by-side layout */
+  .final-cta-wrapper {
+    max-width: 1100px;
     margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
   }
 
-  .final-cta-content {
-    max-width: 900px;
-    margin: 0 auto;
+  /* Left Column - Headline */
+  .final-cta-headline-column {
+    display: flex;
+    align-items: center;
   }
 
-  /* Headline - Large Serif (Italic) */
+  /* Headline - Non-Italic, Inter Font, Larger */
   .final-cta-headline {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(48px, 7vw, 80px);
-    font-weight: 700;
-    font-style: italic;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 600;
+    font-style: normal;  /* NOT italic */
     color: #FFFFFF;
-    line-height: 1.1;
-    margin-bottom: 32px;
-    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -0.3px;
+  }
+
+  /* Right Column - Content + Button */
+  .final-cta-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
   }
 
   /* Description */
   .final-cta-description {
-    font-size: clamp(17px, 2vw, 22px);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 400;
     color: rgba(255, 255, 255, 0.95);
-    line-height: 1.7;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.6;
+    margin: 0;
   }
 
   /* CTA Button */
   .final-cta-button {
     display: inline-block;
-    padding: 14px 40px;
+    width: fit-content;
+    padding: 13px 38px;
     background: #FFFFFF;
-    color: #0052CC;  /* McKinsey Electric Blue text on white button */
-    font-size: 15px;
+    color: #0052CC;  /* McKinsey Electric Blue text */
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     text-align: center;
@@ -1226,7 +1237,7 @@ import Layout from "../layouts/Layout.astro";
     border: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
   }
 
   .final-cta-button:hover {
@@ -1239,44 +1250,43 @@ import Layout from "../layouts/Layout.astro";
     transform: translateY(-1px);
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .final-cta-section {
-      padding: clamp(80px, 10vw, 120px) 24px;
+  /* Responsive - Stack on Tablet */
+  @media (max-width: 968px) {
+    .final-cta-wrapper {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
     
     .final-cta-headline {
-      margin-bottom: 24px;
+      font-size: clamp(36px, 4vw, 48px);
     }
     
     .final-cta-description {
-      margin-bottom: 32px;
-      font-size: 18px;
-    }
-    
-    .final-cta-button {
-      padding: 12px 32px;
-      font-size: 14px;
+      font-size: 17px;
     }
   }
 
+  /* Responsive - Mobile */
   @media (max-width: 600px) {
     .final-cta-section {
-      padding: 60px 24px;
+      padding: clamp(60px, 8vw, 80px) 24px;
+    }
+    
+    .final-cta-wrapper {
+      gap: 32px;
     }
     
     .final-cta-headline {
-      font-size: 40px;
-      margin-bottom: 20px;
+      font-size: 32px;
     }
     
     .final-cta-description {
       font-size: 16px;
-      margin-bottom: 24px;
+      line-height: 1.5;
     }
     
     .final-cta-button {
-      padding: 10px 28px;
+      padding: 11px 32px;
       font-size: 13px;
     }
   }
@@ -1284,12 +1294,14 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- Final CTA Section - Before Footer -->
 <section class="final-cta-section">
-  <div class="final-cta-container">
-    <div class="final-cta-content">
+  <div class="final-cta-wrapper">
+    <div class="final-cta-headline-column">
       <h2 class="final-cta-headline">
         What's your next brilliant move?
       </h2>
-      
+    </div>
+    
+    <div class="final-cta-content-column">
       <p class="final-cta-description">
         Game-changing work. People-powered growth. At intelio, we help you think 
         bigger, build stronger, and expand opportunity for all.
