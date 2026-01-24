@@ -2,1714 +2,238 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="SaaS Product Development | Intelio - Build Scalable Recurring Revenue Products" description="Transform your service delivery into a scalable SaaS product. Build once, deploy to thousands. Create recurring revenue and defensible competitive advantage.">
+<Layout title="Platform Development | Intelio - Transform Proven Solutions Into Scalable Products" description="We partner with organizations to architect and build multi-tenant platforms—converting domain expertise into defensible software assets that scale revenue without proportional resource growth.">
 <main class="bg-white">
-  <!-- ENHANCED HERO SECTION -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+  <!-- SECTION 1: HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background-color: #000000;">
     <!-- Video Background -->
     <video 
       autoplay 
-      loop 
       muted 
+      loop
       playsinline
-      class="absolute inset-0 w-full h-full object-cover opacity-40"
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/logos/Wireframe_City_Animation_Generation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-3xl">
-        <!-- Badge -->
-        <div class="mb-6">
-          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            SaaS Development
+    <!-- Dark Overlay for Text Readability - 70% dark -->
+    <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-[900px]">
+        <!-- Label -->
+        <div class="mb-8">
+          <span class="text-[#6366F1] text-sm font-medium tracking-[0.2em] uppercase">
+            PLATFORM DEVELOPMENT
           </span>
         </div>
         
         <!-- Headline -->
-        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-          SaaS Product Development
+        <h1 class="text-[48px] lg:text-[72px] text-white leading-[1.1] mb-8 tracking-[-0.02em] font-medium">
+          Transform proven solutions into scalable products.
         </h1>
         
-        <!-- Subtitle -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
-          Build once. Scale to thousands. Transform service delivery into recurring revenue.
+        <!-- Subhead -->
+        <p class="text-lg text-white/85 mb-12 leading-[1.7] font-normal max-w-[640px]">
+          We partner with organizations to architect and build multi-tenant platforms—converting domain expertise into defensible software assets that scale revenue without proportional resource growth.
         </p>
         
-        <!-- Description -->
-        <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
-          You've solved a problem exceptionally well. Now you're solving it repeatedly for different clients. Same solution. Same cost. Same team needed each time.<br><br>What if you built it once and deployed to many? Scaled revenue without scaling headcount. Turned expertise into a defensible asset.<br><br>That's the SaaS opportunity.
-        </p>
-        
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4">
-          <a href="#what-we-build" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Explore SaaS Development
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <!-- CTA Button -->
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+          Connect with our team
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
-            Schedule SaaS Strategy Call
-          </a>
         </div>
-      </div>
-    </div>
-    
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
     </div>
   </section>
 
-  <!-- CREDIBILITY BAR -->
-  <section class="py-12 px-6 bg-white border-b border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col items-center justify-center gap-6">
-        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
-        <!-- Client Logos - Infinite Scroll -->
-        <div class="logo-marquee-container w-full">
-          <div class="logo-marquee-track">
-            <!-- First set of logos -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-            <!-- Duplicate set for seamless loop -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM SECTION -->
-  <section class="problem-section py-20 md:py-24 px-6 bg-white relative">
-    <!-- Left Accent Line (Animated) -->
-    <div class="problem-accent-line absolute left-0 top-0 w-1 bg-blue-600 rounded-full z-10"></div>
-    
-    <div class="max-w-5xl mx-auto relative z-10">
-      <div class="mb-16 scroll-fade-in">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-6 inline-block pb-4 border-b-4 border-blue-600">
-          Why Service Delivery Models Break at Scale
+  <!-- SECTION 2: THE PRODUCTIZATION OPPORTUNITY -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="max-w-[720px]">
+        <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">
+          The Productization Opportunity
         </h2>
-        <p class="text-base text-gray-600 max-w-3xl leading-relaxed mt-6 mb-12">
-          You've solved it for 3 clients. Each took 6 weeks. Each made money. Now you want to scale. Here's what happens:
+        <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal mb-12">
+          <p>
+            Service businesses with proven, repeatable solutions are uniquely positioned for platform transformation.
         </p>
       </div>
 
-      <div class="space-y-10 relative pl-8">
-        <!-- Problem 1 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Margins Disappear Into Headcount</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                New client = new team. Revenue scales. Profit doesn't.
-              </p>
-            </div>
-          </div>
+        <div class="space-y-8">
+          <!-- Opportunity 1 -->
+          <div>
+            <h3 class="text-2xl text-black mb-3 font-medium">Recurring Revenue Economics</h3>
+            <p class="text-base text-[#666666] leading-[1.7] font-normal">
+              Subscription models valued 3-10x project-based multiples.
+            </p>
         </div>
 
-        <!-- Problem 2 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Scaling = Job Factory</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Revenue ceiling = team size × projects per person. Capped upside.
-              </p>
-            </div>
-          </div>
+          <!-- Opportunity 2 -->
+          <div>
+            <h3 class="text-2xl text-black mb-3 font-medium">Scalable Delivery</h3>
+            <p class="text-base text-[#666666] leading-[1.7] font-normal">
+              Platform architecture serves many customers with contained complexity.
+            </p>
         </div>
 
-        <!-- Problem 3 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Dependent on People, Not Process</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                One person leaves = crisis. Managing people, not building capability.
-              </p>
-            </div>
-          </div>
+          <!-- Opportunity 3 -->
+          <div>
+            <h3 class="text-2xl text-black mb-3 font-medium">Embedded Expertise</h3>
+            <p class="text-base text-[#666666] leading-[1.7] font-normal">
+              Domain knowledge encoded in software creates defensible differentiation.
+            </p>
         </div>
 
-        <!-- Problem 4 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Clients Can Leave Easily</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                6-week implementations. Not sticky. Lifetime value = contract length.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 5 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Expertise Is Bottlenecked</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                One expert = one constraint. Can't scale faster than they work.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 6 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">You Hit the Ceiling</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                $2–$5M revenue cap. Lifestyle business. No exit. No upside.<br><br><strong>Unless you productize.</strong>
-              </p>
-            </div>
+          <!-- Opportunity 4 -->
+          <div>
+            <h3 class="text-2xl text-black mb-3 font-medium">Customer Relationship Depth</h3>
+            <p class="text-base text-[#666666] leading-[1.7] font-normal">
+              Platform integration creates switching costs and deepening relationships.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT WE BUILD SECTION -->
-  <section id="what-we-build" class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          Turn Expertise Into a Scalable Product
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Productization transforms a service into an asset. Instead of trading time for money, you build once and deploy repeatedly. Revenue scales. Headcount doesn't. Profit multiplies.
-        </p>
-      </div>
-
-      <div class="capability-cards-pyramid grid grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <!-- Card 1: Row 1 - Centered -->
-        <div class="capability-card capability-card-pyramid-1 col-start-2 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">01</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Reusable Systems. Configurable for Each Customer.</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Your custom solution for Client A has components that apply to Client B. And Client C. And every other client with that problem. We identify the reusable core and build configurability around it. Vertical-specific workflows. White-label options. Tenant-specific customization. One system serves many clients, each with their specific needs.
+  <!-- SECTION 3: PLATFORM ARCHITECTURE CAPABILITIES -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Platform Architecture Capabilities</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Capability 1 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Configurable Platform Core</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Reusable components with tenant-specific customization. One platform serves diverse customers.
           </p>
         </div>
 
-        <!-- Card 2: Row 2 - Left -->
-        <div class="capability-card capability-card-pyramid-2 col-start-1 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">02</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Multi-Tenant Infrastructure</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Running one system per customer means one database per customer, one server per customer, one support instance per customer. That's expensive at scale. Multi-tenant architecture means one system serves 100 customers, with data isolation, per-tenant configuration, and independent scaling. Same infrastructure cost serves 100x the revenue.
+        <!-- Capability 2 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Multi-Tenant Architecture</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Shared resources with complete data isolation and independent scaling.
           </p>
         </div>
 
-        <!-- Card 3: Row 2 - Right -->
-        <div class="capability-card capability-card-pyramid-3 col-start-3 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">03</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Automated Deployment</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Right now, each new client takes 6 weeks to implement. That's 6 weeks of team time. 6 weeks of consulting cost. 6 weeks before you make money. With productization, new customers can be up and running in 1 week. Mostly automated. Your team does onboarding and customization, not rearchitecting.
+        <!-- Capability 3 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Deployment Automation</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Streamlined provisioning that reduces time-to-value for new customers.
           </p>
         </div>
 
-        <!-- Card 4: Row 3 - Left -->
-        <div class="capability-card capability-card-pyramid-4 col-start-1 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">04</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">User Management & Licensing</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Your service model is manual: you invoice, they pay, you track licenses. SaaS is automatic: they sign up, get a dashboard, see their usage, their bill is calculated automatically. If they want to add users, they do it themselves. Revenue recognition is automatic.
+        <!-- Capability 4 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Subscription Management</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Self-service account management, usage tracking, automated billing.
           </p>
         </div>
 
-        <!-- Card 5: Row 3 - Center -->
-        <div class="capability-card capability-card-pyramid-5 col-start-2 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">05</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">API & Integration Layer</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            One customer wants to connect your system to Salesforce. Another wants Slack integration. Another wants custom webhooks. Instead of building each integration custom for each customer, you build an API layer once. Now customers (or partners) can build integrations themselves. Your product becomes a platform other companies build on.
+        <!-- Capability 5 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Integration Architecture</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            API layer enabling customer and partner integrations.
           </p>
         </div>
 
-        <!-- Card 6: Row 3 - Right -->
-        <div class="capability-card capability-card-pyramid-6 col-start-3 bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">06</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Operations at Scale</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            One customer means one support conversation. 1,000 customers means 1,000 support conversations. Except you don't need 1,000x team because most issues are common. We build operational infrastructure for scale: monitoring, alerting, knowledge base automation, support routing. Customers self-serve 80% of issues. Your team handles the 20% that actually need attention.
+        <!-- Capability 6 -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <h3 class="text-2xl text-white mb-4 font-medium">Operational Infrastructure</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Monitoring, support systems, and self-service capabilities for scale.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          From Service to Product to Platform
+  <!-- SECTION 4: CLOSING CTA -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="max-w-[720px] text-center mx-auto">
+        <h2 class="text-[36px] md:text-[48px] text-white mb-8 font-medium leading-[1.2]">
+          Transform Proven Solutions Into Scalable Platforms
         </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Productization is a process, not a magic wand. We validate the concept, build the product, automate deployment, acquire customers, optimize continuously.
-        </p>
-      </div>
-
-      <div class="timeline-progress-container relative my-16">
-        <!-- Progress bar background -->
-        <div class="progress-bar-background absolute top-9 left-0 right-0 h-1 bg-gray-200 rounded-full z-0"></div>
-        <!-- Progress bar fill (animated) -->
-        <div class="progress-bar-fill absolute top-9 left-0 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 rounded-full z-0 progress-animation" style="width: 0%;"></div>
-        
-        <div class="timeline-steps-progress flex flex-col md:flex-row justify-between items-start gap-8 md:gap-4 relative z-10">
-          <!-- Step 01 -->
-          <div class="timeline-step-progress flex-1 text-center scroll-fade-in-stagger" style="animation-delay: 0ms;">
-            <div class="step-number-progress w-18 h-18 md:w-20 md:h-20 mx-auto mb-4 bg-white border-3 border-blue-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-2xl md:text-3xl font-bold text-blue-600">01</span>
-            </div>
-            <div class="step-percentage text-xs font-bold text-blue-600 mb-2">0% → 20%</div>
-            <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-2">Proof of Concept</h3>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-3">
-              Validate with first customer. Test pricing. Real feedback.
-            </p>
-            <div class="text-xs text-gray-500">6–8 weeks</div>
+        <div class="space-y-6 text-lg text-white/85 leading-[1.7] font-normal mb-10">
+          <p>
+            Organizations with repeatable solutions have a strategic opportunity: productization that converts domain expertise into platform infrastructure.
+          </p>
+          <p>
+            Recurring revenue. Scalable delivery. Embedded customer relationships.
+          </p>
+          <p>
+            This is what platform transformation creates. We partner with you to build it.
+          </p>
           </div>
-
-          <!-- Step 02 -->
-          <div class="timeline-step-progress flex-1 text-center scroll-fade-in-stagger" style="animation-delay: 150ms;">
-            <div class="step-number-progress w-18 h-18 md:w-20 md:h-20 mx-auto mb-4 bg-white border-3 border-blue-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-2xl md:text-3xl font-bold text-blue-600">02</span>
-            </div>
-            <div class="step-percentage text-xs font-bold text-blue-600 mb-2">20% → 40%</div>
-            <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-2">Productize</h3>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-3">
-              Build reusable core. Templates. Configuration.
-            </p>
-            <div class="text-xs text-gray-500">8–12 weeks</div>
-          </div>
-
-          <!-- Step 03 -->
-          <div class="timeline-step-progress flex-1 text-center scroll-fade-in-stagger" style="animation-delay: 300ms;">
-            <div class="step-number-progress w-18 h-18 md:w-20 md:h-20 mx-auto mb-4 bg-white border-3 border-blue-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-2xl md:text-3xl font-bold text-blue-600">03</span>
-            </div>
-            <div class="step-percentage text-xs font-bold text-blue-600 mb-2">40% → 60%</div>
-            <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-2">Automate</h3>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-3">
-              Automated deployment. Self-service onboarding.
-            </p>
-            <div class="text-xs text-gray-500">2–4 weeks</div>
-          </div>
-
-          <!-- Step 04 -->
-          <div class="timeline-step-progress flex-1 text-center scroll-fade-in-stagger" style="animation-delay: 450ms;">
-            <div class="step-number-progress w-18 h-18 md:w-20 md:h-20 mx-auto mb-4 bg-white border-3 border-blue-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-2xl md:text-3xl font-bold text-blue-600">04</span>
-            </div>
-            <div class="step-percentage text-xs font-bold text-blue-600 mb-2">60% → 80%</div>
-            <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-2">Launch</h3>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-3">
-              Go-to-market. First 10–20 customers.
-            </p>
-            <div class="text-xs text-gray-500">4–8 weeks</div>
-          </div>
-
-          <!-- Step 05 -->
-          <div class="timeline-step-progress flex-1 text-center scroll-fade-in-stagger" style="animation-delay: 600ms;">
-            <div class="step-number-progress w-18 h-18 md:w-20 md:h-20 mx-auto mb-4 bg-white border-3 border-blue-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-2xl md:text-3xl font-bold text-blue-600">05</span>
-            </div>
-            <div class="step-percentage text-xs font-bold text-blue-600 mb-2">80% → 100%</div>
-            <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-2">Scale</h3>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-3">
-              Optimize. Improve retention. Accelerate revenue.
-            </p>
-            <div class="text-xs text-gray-500">Ongoing</div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGY STACK SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          Built for Scalable SaaS Operations
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          SaaS requires specific architecture choices—multi-tenancy, scalability, monitoring, compliance. We build on platforms designed for these demands.
-        </p>
-      </div>
-
-      <!-- CORE PLATFORM LAYER -->
-      <div class="mb-16 scroll-fade-in">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Core Platform Layer</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-6 max-w-3xl">
-          The foundation of your SaaS needs to handle multiple customers simultaneously, scale as they grow, and maintain reliability as complexity increases.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">PostgreSQL</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/supabase-logo.jpg" alt="Supabase" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Supabase</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/redis-logo.webp" alt="Redis" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Redis</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/n8n-logo.png" alt="n8n" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">n8n</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-2xl font-bold text-gray-600">K</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Kafka</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-2xl font-bold text-gray-600">M</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">MongoDB</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Frontend & User Experience -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Frontend & User Experience</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-6 max-w-3xl">
-          Your SaaS interface is what customers interact with daily. It needs to be fast, intuitive, and performant for thousands of concurrent users.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/react-logo.webp" alt="React" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">React</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/typescript-logo.png" alt="TypeScript" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">TypeScript</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Tailwind CSS</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/nextjs-logo.svg" alt="Next.js" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Next.js</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">shadcn</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">shadcn/ui</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Infrastructure & Deployment -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Infrastructure & Deployment</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-6 max-w-3xl">
-          SaaS infrastructure needs to scale horizontally (add more instances), maintain high availability, and handle billing/licensing at scale.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/docker-logo.webp" alt="Docker" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Docker</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/kubernetes-logo.png" alt="Kubernetes" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Kubernetes</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/aws-logo.png" alt="AWS" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">AWS</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Google Cloud</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Azure</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">Stripe</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Stripe / Paddle</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 600ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">Terraform</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Terraform</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Operations & Monitoring -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-8">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Operations & Monitoring</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-6 max-w-3xl">
-          SaaS failure is visible to many customers at once. You need comprehensive monitoring, alerting, and incident response.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">Datadog</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Datadog</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">Sentry</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Sentry</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">PostHog</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">PostHog</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="text-sm font-bold text-gray-600">LaunchDarkly</div>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">LaunchDarkly</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUTCOMES & VALUE SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          What Productization Creates
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Productization transforms your business economics. Revenue scales. Headcount stays flat. Profit multiplies. The math is completely different from services.
-        </p>
-      </div>
-
-      <div class="outcomes-container-metric flex flex-col gap-8 max-w-4xl mx-auto">
-        <!-- Outcome 1 -->
-        <div class="outcome-item-metric grid grid-cols-[140px_1fr] gap-8 items-center p-8 bg-white border-t-4 border-blue-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="outcome-metric-value text-center">
-            <div class="text-3xl md:text-4xl font-bold text-blue-600 leading-tight">3-10x</div>
-            <div class="text-sm text-gray-500 mt-2">Valuation Multiple</div>
-          </div>
-          <div class="outcome-content-metric">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Recurring Revenue</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Service model: $50K project, 6 weeks, one-time revenue. Build + maintain model: $20K build, $2K/month recurring. After 10 customers: $200K revenue upfront, $20K/month recurring ($240K annually). Recurring revenue is more valuable because it's predictable. Investors value it 3–10x higher than project revenue.
-            </p>
-          </div>
-        </div>
-
-        <!-- Outcome 2 -->
-        <div class="outcome-item-metric grid grid-cols-[140px_1fr] gap-8 items-center p-8 bg-white border-t-4 border-blue-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="outcome-metric-value text-center">
-            <div class="text-3xl md:text-4xl font-bold text-blue-600 leading-tight">3x</div>
-            <div class="text-sm text-gray-500 mt-2">Revenue Scales</div>
-          </div>
-          <div class="outcome-content-metric">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Scalable Growth</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Service model: Add customers = add team. 10 customers = 5 consultants. 20 customers = 10 consultants. SaaS model: Add customers = add servers. 10 customers = 2 people (sales, support). 100 customers = 8 people (sales, support, product, engineering). Your team doesn't scale linearly with revenue.
-            </p>
-          </div>
-        </div>
-
-        <!-- Outcome 3 -->
-        <div class="outcome-item-metric grid grid-cols-[140px_1fr] gap-8 items-center p-8 bg-white border-t-4 border-blue-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="outcome-metric-value text-center">
-            <div class="text-3xl md:text-4xl font-bold text-blue-600 leading-tight">Moat</div>
-            <div class="text-sm text-gray-500 mt-2">Built In</div>
-          </div>
-          <div class="outcome-content-metric">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Competitive Moat</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              A service, competitors can replicate by hiring people. An off-the-shelf tool, customers can switch to. A SaaS product you built? Much harder to replicate. You own the code. You own the customer relationships. You own the data integrations. Switching costs for customers are high.
-            </p>
-          </div>
-        </div>
-
-        <!-- Outcome 4 -->
-        <div class="outcome-item-metric grid grid-cols-[140px_1fr] gap-8 items-center p-8 bg-white border-t-4 border-blue-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="outcome-metric-value text-center">
-            <div class="text-3xl md:text-4xl font-bold text-blue-600 leading-tight">10x</div>
-            <div class="text-sm text-gray-500 mt-2">Efficiency</div>
-          </div>
-          <div class="outcome-content-metric">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Operational Efficiency</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Building a system from scratch for each customer costs $20K. Deploying an instance of your SaaS costs $2K. That's a 10x efficiency improvement. That efficiency becomes profit or gets reinvested in product.
-            </p>
-          </div>
-        </div>
-
-        <!-- Outcome 5 -->
-        <div class="outcome-item-metric grid grid-cols-[140px_1fr] gap-8 items-center p-8 bg-white border-t-4 border-blue-600 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="outcome-metric-value text-center">
-            <div class="text-3xl md:text-4xl font-bold text-blue-600 leading-tight">3-10x</div>
-            <div class="text-sm text-gray-500 mt-2">Exit Value</div>
-          </div>
-          <div class="outcome-content-metric">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Exit Value</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Service businesses sell for 0.5–1x annual revenue. SaaS businesses sell for 3–10x annual recurring revenue. $500K revenue service business: worth ~$500K. $500K revenue SaaS business: worth $1.5M–$5M. Your exit value becomes 3–10x higher because the buyer is buying recurring revenue, not dependence on your team.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRY USE CASES SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          Vertical-Specific SaaS Opportunities
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Every vertical has problems only specialists understand. That specialist knowledge becomes a SaaS product.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto space-y-4">
-        <!-- Use Case 1 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Real Estate & CRE</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+          Connect with our team
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Deal matching platform for brokers. Automates buyer-property matching at scale. Subscription per broker or per transaction.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Brokers need sophisticated deal matching to compete. Building it custom for each broker costs $20K. Licensing it as SaaS costs them $500/month. You serve 100 brokers at $500/month = $50K/month recurring revenue.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 2 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Construction & Trades</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Project delivery and job costing platform for contractors. Handles estimation, scheduling, job costing, crew management.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Every contractor is bad at knowing whether they're actually profitable on jobs. A system that shows profitability per job becomes essential. Contractors will pay $1K–$2K/month for accurate profitability visibility.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 3 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Healthcare & Wellness</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Practice management system for therapists, clinics, wellness practitioners. Handles scheduling, patient records, compliance, billing.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Healthcare practitioners are drowning in compliance and administrative work. A system that automates it becomes their most valuable tool.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 4 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Professional Services</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Project delivery and time/billing system for consultancies. Handles project workflows, time tracking, billing, profitability.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Professional services firms are obsessed with project profitability and utilization. A system that makes both transparent and automated is immediately valuable.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 5 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Financial Services & Investment</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Deal tracking and portfolio management platform for investment firms. Tracks deal pipeline, portfolio performance, investor communications.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Investment firms manage deal flow manually. A specialized system cuts analysis time 10x. They'll pay $5K–$10K/month for that leverage.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 6 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Service & Recurring Revenue Businesses</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Customer lifecycle platform. Onboarding, renewals, expansion, retention, billing automation.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Recurring revenue businesses live or die on renewals and churn. A specialized system that handles customer lifecycle automation is valuable. Subscription SaaS at $2K–$5K/month scales quickly.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 7 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Marketing & Growth Agencies</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Campaign management and client reporting platform. Handles campaign workflows, performance tracking, automated client reporting.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Agencies spend 20% of their time on client reporting. Automate that, and they recover 20% productivity. That's worth $2K–$5K/month per agency.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 8 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">HR & People Operations</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Product Opportunity:</p>
-              <p class="text-sm text-gray-300 mb-4 leading-relaxed">
-                Recruitment, scheduling, performance management platform for businesses. Handles hiring, scheduling, performance tracking, payroll integration.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">Why It Works:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Every business manages people badly. A specialized system that handles recruitment, scheduling, and performance improves how companies operate fundamentally. Highly scalable.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT & PROCESS SECTION -->
-  <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          How We Build Your SaaS
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          SaaS development isn't a single project. It's a series of phases, each validating the last. We move fast but don't sacrifice validation.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Engagement 1 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Full SaaS Development</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Build Your Product From Concept to Market</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Deep discovery and business model validation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Product architecture and design</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Full-stack development (database, backend, frontend)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Multi-tenant architecture</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Deployment automation and infrastructure</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Go-to-market strategy and launch support</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Initial customer acquisition and support</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 mb-2"><strong>Timeline:</strong> 4–6 months start to market-ready</p>
-          <p class="text-sm text-gray-600 italic mt-4">Best for: You have a validated problem, customer demand, and want to build a full SaaS. We handle everything.</p>
-        </div>
-
-        <!-- Engagement 2 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Productization Acceleration</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">Transform Your Existing Service Into a Product</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Assess your existing service for productization potential</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Identify reusable components and customization boundaries</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Build productization layer (templates, configuration, deployment automation)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Build multi-tenant architecture if not already present</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Automate deployment</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Support first 3–5 SaaS implementations</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 mb-2"><strong>Timeline:</strong> 3–4 months start to first customer</p>
-          <p class="text-sm text-gray-600 italic mt-4">Best for: You already have a proven solution. You need to productize it and start selling recurring subscriptions.</p>
-        </div>
-
-        <!-- Engagement 3 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Custom Go-to-Market</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">Launch Your Product and Acquire Customers</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Go-to-market strategy (positioning, pricing, distribution)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Product launch planning and messaging</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Early customer acquisition support</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Sales process design and execution</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Customer success playbook</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Pricing and packaging strategy</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 mb-2"><strong>Timeline:</strong> 2–4 months</p>
-          <p class="text-sm text-gray-600 italic mt-4">Best for: Your product is ready. You need help acquiring customers and executing launch effectively.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
-      
-      <div class="border-t border-gray-200 pt-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- FAQ 1 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do we know if our service can be productized?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Good signs: You've sold the same solution to multiple customers. Customers keep asking for the same features. Your implementation process is repeatable. You're tired of rebuilding the same thing. Bad signs: Every customer needs complete customization. Your solution is highly specialized to one customer. You've only sold it once or twice. We assess this in discovery.
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What should we price the SaaS?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Pricing depends on value delivered and customer segment. A SaaS for enterprise could be $5K–$20K/month. A SaaS for SMBs might be $500–$2K/month. We model pricing based on customer willingness to pay, customer segment, competitive pricing, and your target revenue.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do we acquire customers?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              It depends on your market and customer segment. Options include: Direct sales (enterprise SaaS), Product-led growth (SMB SaaS), Partnerships (niche SaaS), Content/SEO (search-driven SaaS), Vertical sales (industry-specific SaaS). Most successful SaaS combine 2–3 channels.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can we white-label or resell the platform?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes. Many SaaS build white-label models where partners resell under their own brand. We can build that capability into your product. Revenue split varies but typically 60/40 to 70/30 split (you keep 60–70%, partner/reseller gets 30–40%).
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What does "multi-tenant" mean and why do we need it?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Multi-tenant means one instance of your application serves many customers with isolated data. Your database has 100 customers, but they can't see each other's data. Why it matters: Single-tenant (one system per customer) becomes expensive at scale. Multi-tenant spreads infrastructure cost across customers, making your product profitable.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How long before we break even on SaaS investment?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Depends on pricing and customer acquisition cost. If you charge $2K/month and CAC is $1K, you break even on the first customer after 6 months. On customer 10, you have $20K/month revenue and CAC per cohort is lower. Most well-run SaaS break even on product investment within 12–18 months.
-            </div>
-          </div>
-
-          <!-- FAQ 7 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can we offer free trials or freemium?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes, both are common. Free trial: customers get full product for 14 days, then must convert to paid. Freemium: customers get limited features free forever, upgrade for advanced features. Free trial works better for enterprise SaaS. Freemium works better for SMB/bottom-up SaaS.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // FAQ Accordion Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const faqCards = document.querySelectorAll('.faq-card');
-      
-      faqCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const isActive = this.classList.contains('active');
-          
-          // Close all FAQ cards
-          faqCards.forEach(c => {
-            c.classList.remove('active');
-            const answer = c.querySelector('.faq-answer');
-            const chevron = c.querySelector('.faq-chevron');
-            if (answer) answer.classList.add('hidden');
-            if (chevron) chevron.style.transform = 'rotate(0deg)';
-          });
-          
-          // Open clicked card if it wasn't active
-          if (!isActive) {
-            this.classList.add('active');
-            const answer = this.querySelector('.faq-answer');
-            const chevron = this.querySelector('.faq-chevron');
-            if (answer) answer.classList.remove('hidden');
-            if (chevron) chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-
-      // Industry Accordion Functionality
-      const industryAccordions = document.querySelectorAll('.industry-accordion-item');
-      
-      industryAccordions.forEach(item => {
-        const header = item.querySelector('.industry-accordion-header');
-        const content = item.querySelector('.industry-accordion-content');
-        const chevron = item.querySelector('.industry-accordion-chevron');
-        
-        header.addEventListener('click', () => {
-          const isExpanded = header.getAttribute('aria-expanded') === 'true';
-          
-          // Close all other accordions (optional - remove if you want multiple open)
-          industryAccordions.forEach(otherItem => {
-            if (otherItem !== item) {
-              const otherHeader = otherItem.querySelector('.industry-accordion-header');
-              const otherContent = otherItem.querySelector('.industry-accordion-content');
-              const otherChevron = otherItem.querySelector('.industry-accordion-chevron');
-              
-              otherHeader.setAttribute('aria-expanded', 'false');
-              otherContent.style.maxHeight = '0';
-              otherChevron.style.transform = 'rotate(0deg)';
-            }
-          });
-          
-          // Toggle current accordion
-          if (isExpanded) {
-            header.setAttribute('aria-expanded', 'false');
-            content.style.maxHeight = '0';
-            chevron.style.transform = 'rotate(0deg)';
-          } else {
-            header.setAttribute('aria-expanded', 'true');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-    });
-  </script>
-
-  <style>
-    .faq-card.active .faq-answer {
-      display: block !important;
-    }
-
-    .faq-card.active .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    /* Hero Section Animations */
-    @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    .hero-gradient {
-      background: linear-gradient(-45deg, #111827, #1e3a8a, #111827, #1e40af);
-      background-size: 400% 400%;
-      animation: gradient-shift 10s ease infinite;
-    }
-
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-fade-in {
-      animation: fade-in-up 0.8s ease-out;
-    }
-
-    .hero-fade-in-delay-1 {
-      animation: fade-in-up 0.8s ease-out 0.2s both;
-    }
-
-    .hero-fade-in-delay-2 {
-      animation: fade-in-up 0.8s ease-out 0.4s both;
-    }
-
-    .hero-fade-in-delay-3 {
-      animation: fade-in-up 0.8s ease-out 0.6s both;
-    }
-
-    .hero-underline {
-      animation: fade-in-up 0.8s ease-out 0.3s both;
-      transform-origin: left;
-    }
-
-    /* Scroll Animations */
-    .scroll-fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .scroll-fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scroll-fade-in-stagger {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .scroll-fade-in-stagger.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Problem Section Enhancements */
-    .problem-section {
-      position: relative;
-    }
-
-    .problem-accent-line {
-      height: 0;
-      opacity: 0;
-      animation: lineDrawDown 800ms ease-out 500ms forwards;
-    }
-
-    @keyframes lineDrawDown {
-      from {
-        height: 0;
-        opacity: 0;
-      }
-      to {
-        height: 100%;
-        opacity: 1;
-      }
-    }
-
-    .problem-card {
-      transition: all 0.3s ease;
-    }
-
-    .problem-icon {
-      transition: transform 0.3s ease;
-    }
-
-    .problem-card:hover .problem-icon {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    /* Capability Cards - Pyramid Layout */
-    .capability-cards-pyramid {
-      position: relative;
-    }
-
-    @media (max-width: 768px) {
-      .capability-cards-pyramid {
-        grid-template-columns: 1fr;
-      }
-      
-      .capability-card-pyramid-1,
-      .capability-card-pyramid-2,
-      .capability-card-pyramid-3,
-      .capability-card-pyramid-4,
-      .capability-card-pyramid-5,
-      .capability-card-pyramid-6 {
-        grid-column: 1 !important;
-      }
-    }
-
-    .capability-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .capability-card:hover {
-      transform: translateY(-4px);
-    }
-
-    /* Process Steps - Progress Bar Timeline */
-    .timeline-progress-container {
-      position: relative;
-      padding: 40px 0;
-    }
-
-    .progress-bar-background {
-      position: absolute;
-      top: 36px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #e5e7eb;
-      border-radius: 2px;
-      z-index: 0;
-    }
-
-    .progress-bar-fill {
-      position: absolute;
-      top: 36px;
-      left: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
-      border-radius: 2px;
-      z-index: 1;
-      animation: progressFill 3s ease-in-out infinite;
-    }
-
-    .border-3 {
-      border-width: 3px;
-    }
-
-    @keyframes progressFill {
-      0%, 10% { width: 0%; }
-      50% { width: 100%; }
-      90%, 100% { width: 100%; }
-    }
-
-    .timeline-steps-progress {
-      position: relative;
-      z-index: 2;
-    }
-
-    .step-number-progress {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .timeline-step-progress:hover .step-number-progress {
-      transform: scale(1.1);
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .timeline-steps-progress {
-        flex-direction: column;
-        gap: 32px;
-      }
-      
-      .progress-bar-background,
-      .progress-bar-fill {
-        display: none;
-      }
-    }
-
-    .process-step {
-      transition: all 0.3s ease;
-    }
-
-    .step-number-circle {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .process-step:hover .step-number-circle {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Technology Stack */
-    .tech-logo-item {
-      transition: all 0.3s ease;
-    }
-
-    /* Outcome Cards - Metric Focused */
-    .outcomes-container-metric {
-      position: relative;
-    }
-
-    .outcome-item-metric {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .outcome-item-metric:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .outcome-metric-value {
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 768px) {
-      .outcome-item-metric {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      
-      .outcome-metric-value {
-        margin-bottom: 16px;
-      }
-    }
-
-    /* Outcome Cards */
-    .outcome-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Use Case Cards */
-    .use-case-card {
-      transition: all 0.3s ease;
-    }
-
-    /* Industry Accordion Styles */
-    .industry-accordion-item {
-      transition: all 0.3s ease;
-    }
-
-    .industry-accordion-header {
-      user-select: none;
-    }
-
-    .industry-accordion-header:hover {
-      background-color: rgba(31, 41, 55, 0.7);
-    }
-
-    .industry-accordion-content {
-      transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    }
-
-    .industry-accordion-content[style*="max-height: 0"] {
-      opacity: 0;
-    }
-
-    .industry-accordion-chevron {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    /* Final CTA */
-    .final-cta-btn {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Reduced Motion Support */
-    @media (prefers-reduced-motion: reduce) {
-      video {
-        display: none;
-      }
-      section:first-of-type {
-        background-image: linear-gradient(to bottom right, #111827, #1f2937);
-        background-size: cover;
-        background-position: center;
-      }
-      .animate-bounce {
-        animation: none;
-      }
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      .logo-marquee-track {
-        animation: none;
-      }
-    }
-
-    /* Logo Carousel Styles */
-    .logo-marquee-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-
-    .logo-marquee-track {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      animation: logo-scroll 40s linear infinite;
-      width: fit-content;
-    }
-
-    .logo-marquee-container:hover .logo-marquee-track {
-      animation-play-state: paused;
-    }
-
-    .logo-marquee-item {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .logo-marquee-item:hover {
-      opacity: 1;
-    }
-
-    .logo-marquee-img {
-      height: 120px;
-      width: auto;
-      max-width: 200px;
-      object-fit: contain;
-      filter: grayscale(100%);
-    }
-
-    @keyframes logo-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (max-width: 1024px) {
-      .logo-marquee-img {
-        height: 100px;
-        max-width: 160px;
-      }
-      .logo-marquee-track {
-        gap: 1.25rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .logo-marquee-img {
-        height: 80px;
-        max-width: 140px;
-      }
-      .logo-marquee-track {
-        gap: 1rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-  </style>
-
-  <script>
-    // Intersection Observer for scroll animations
-    document.addEventListener('DOMContentLoaded', function() {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      // Observe all scroll-fade-in elements
-      document.querySelectorAll('.scroll-fade-in, .scroll-fade-in-stagger').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
-
-  <!-- FINAL CTA SECTION -->
-  <section class="final-cta-section py-24 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-    <!-- Subtle pattern overlay -->
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 scroll-fade-in">
-        Stop Rebuilding the Wheel.
-      </h2>
-      <p class="text-xl text-gray-200 mb-4 font-semibold scroll-fade-in-delay-1">
-        Turn Expertise Into Recurring Revenue.
-      </p>
-      <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto scroll-fade-in-delay-2">
-        You've proven your solution works. You've proven customers want it. You've proven you can deliver it.<br><br>
-        The only question is: Do you keep trading time for money by delivering custom? Or do you productize once and scale to 100 customers without adding 100 consultants?<br><br>
-        One decision transforms your business from service to platform. From capped revenue to exponential growth. From paycheck to equity value.<br><br>
-        That's what productization does. We help you build it.
-      </p>
-      
-      <div class="flex flex-wrap gap-4 justify-center mb-8 scroll-fade-in-delay-3">
-        <a href="/contact" class="final-cta-btn inline-flex items-center px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 group">
-          Schedule a SaaS Strategy Call
-          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
         </a>
-      </div>
-      
-      <p class="text-sm text-gray-400 mb-4">Or explore our other services:</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/custom-ai-development/full-stack-systems" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">Full-Stack Custom Systems</a>
-        <span class="text-gray-500">|</span>
-        <a href="/custom-ai-development/ai-intelligence-integration" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">AI Intelligence Integration</a>
-        <span class="text-gray-500">|</span>
-        <a href="/custom-ai-development/enterprise-builds" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">Custom Enterprise Builds</a>
       </div>
     </div>
   </section>
 </main>
-</Layout>
 
+  <style>
+  /* Typography - Inter for headlines */
+  h1, h2, h3 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Video background mobile fixes for hero section */
+  section video {
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Ensure video containers work on mobile */
+    @media (max-width: 768px) {
+    section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: 48px !important;
+    }
+    
+    h2 {
+      font-size: 36px !important;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    section video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+
+</Layout>

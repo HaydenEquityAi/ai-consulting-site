@@ -2,1962 +2,383 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Custom Enterprise Builds | Intelio - Enterprise Systems Integration at Scale" description="Enterprise-scale system integration. Multi-system architectures designed for your complexity. Built for regulatory compliance, massive scale, and competitive advantage.">
+<Layout title="Custom Enterprise Builds | Intelio - Complex Implementations That Reshape Organizations" description="We partner with organizations requiring deep, multi-system transformations—implementations that span departments, integrate legacy platforms, and fundamentally change operational infrastructure.">
 <main class="bg-white">
-  <!-- ENHANCED HERO SECTION -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+  <!-- SECTION 1: HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background-color: #000000;">
     <!-- Video Background -->
     <video 
       autoplay 
-      loop 
       muted 
+      loop
       playsinline
-      class="absolute inset-0 w-full h-full object-cover opacity-40"
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/logos/Enterprise_Technology_Hero_Section_Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-3xl">
-        <!-- Badge -->
-        <div class="mb-6">
-          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            Enterprise Systems
+    <!-- Dark Overlay for Text Readability - 70% dark -->
+    <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 100%);"></div>
+
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-[900px]">
+        <!-- Label -->
+        <div class="mb-8">
+          <span class="text-[#6366F1] text-sm font-medium tracking-[0.2em] uppercase">
+            CUSTOM ENTERPRISE BUILDS
           </span>
         </div>
         
         <!-- Headline -->
-        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-          Custom Enterprise Builds
+        <h1 class="text-[48px] lg:text-[72px] text-white leading-[1.1] mb-8 tracking-[-0.02em] font-medium">
+          Complex implementations that reshape how organizations operate.
         </h1>
         
-        <!-- Subtitle -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-6 leading-relaxed">
-          When complexity is your competitive advantage.
+        <!-- Subhead -->
+        <p class="text-xl text-white/85 mb-12 leading-[1.7] font-normal max-w-[640px]">
+          We partner with organizations requiring deep, multi-system transformations—
+          implementations that span departments, integrate legacy platforms, and 
+          fundamentally change operational infrastructure. Enterprise-grade solutions 
+          for enterprise-scale challenges.
         </p>
         
-        <!-- Description -->
-        <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
-          You operate at scale. You have specialized requirements. Your competitive edge depends on systems built specifically for you—not generic software.<br><br>
-          Off-the-shelf breaks at scale. Consultants recommend without building. Vendors overpromise.<br><br>
-          You need a partner who engineers bespoke solutions and makes them work at scale.
-        </p>
-        
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4">
-          <a href="#what-we-build" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            Explore Enterprise Systems
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-white/30 hover:border-white/60 text-white text-lg font-semibold rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all duration-300">
-            Schedule Enterprise Discovery
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- CREDIBILITY BAR -->
-  <section class="py-12 px-6 bg-white border-b border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col items-center justify-center gap-6">
-        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
-        <!-- Client Logos - Infinite Scroll -->
-        <div class="logo-marquee-container w-full">
-          <div class="logo-marquee-track">
-            <!-- First set of logos -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-            <!-- Duplicate set for seamless loop -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM SECTION -->
-  <section class="problem-section py-20 md:py-24 px-6 bg-white relative">
-    <!-- Left Accent Line (Animated) -->
-    <div class="problem-accent-line absolute left-0 top-0 w-1 bg-blue-600 rounded-full z-10"></div>
-    
-    <div class="max-w-5xl mx-auto relative z-10">
-      <div class="mb-16 scroll-fade-in">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-6 inline-block pb-4 border-b-4 border-blue-600">
-          The Limitations of Standard Approaches
-        </h2>
-        <p class="text-base text-gray-600 max-w-3xl leading-relaxed mt-6 mb-12">
-          Your organization is different. You've scaled beyond where standard software applies. Your complexity isn't a problem to solve—it's your competitive advantage. But standard solutions treat complexity as a liability.
-        </p>
-      </div>
-
-      <div class="space-y-10 relative pl-8">
-        <!-- Problem 1 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Standard Software Wasn't Built for Your Scale</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Salesforce can handle 1,000 users. Then complexity builds, performance degrades, and you're fighting the platform, not using it. Airtable can handle 100,000 records. Then queries slow down, relationships become impossible, and you're hitting architectural limits. Standard software is built for the middle market. Slightly above that and it breaks.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 2 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Integration Complexity Exposes the Fragmentation</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You run on 5–7 major systems: CRM, accounting, operations, scheduling, data warehouse, internal tools, compliance systems. Each system is the "source of truth" for some data. None of them are the source of truth for everything. Data flows between systems are manual, incomplete, slow. Decision-making requires asking 5 different systems. Leadership doesn't get clarity because clarity doesn't exist.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 3 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Legacy Systems Can't Be Replaced</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You can't abandon systems that have 20 years of data and critical processes embedded in them. But you also can't build everything on top of legacy systems. You need new systems and old systems coexisting, integrated seamlessly. That integration is what vendors won't do. They want to be the only system.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 4 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Specialized Requirements Need Specialized Solutions</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Your industry has specific compliance requirements. Your business model has unique workflows. Your competitive advantage depends on systems that work exactly like you work, not systems you adapt to. You need something built for your market. Not for everyone. For you.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 5 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Off-the-Shelf Solutions Create Dependencies</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You're not just dependent on the vendor's roadmap. You're dependent on their pricing decisions. Their feature prioritization. Their survival. If they get acquired, acquired out of your market, or shut down, you're stuck. Real competitive advantage requires owning your systems. Not renting them.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 6 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">Growth Creates Operational Chaos</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You grew from $10M to $50M. The systems that worked at $10M don't work at $50M. Data volume breaks reporting. Team size breaks communication. Complexity breaks coordination. Scaling isn't just about adding revenue. It's about re-architecting how the organization operates. Most organizations fail at this transition.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Problem 7 -->
-        <div class="problem-card bg-gradient-to-br from-white to-blue-50/30 rounded-lg p-8 border-t-4 border-l-4 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 scroll-fade-in">
-          <div class="flex items-start gap-4">
-            <div class="problem-icon flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-3">So You Manage Chaos Instead of Building Advantage</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                You accept fragmentation. You accept manual processes. You accept slow decision-making. You accept that growth requires organizational complexity. You manage chaos instead of building systems that prevent it. That's not a business strategy. That's surrender.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT WE BUILD SECTION -->
-  <section id="what-we-build" class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          Enterprise Systems Built for Your Specific Reality
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We don't implement software. We engineer integrated platforms designed around how you operate, at your scale, with your complexity as the starting assumption.
-        </p>
-      </div>
-
-      <div class="capability-cards-zigzag flex flex-col gap-6 max-w-5xl mx-auto relative">
-        <!-- Center connector line -->
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-blue-400 to-gray-300 transform -translate-x-1/2 z-0"></div>
-        
-        <!-- Card 1: Left -->
-        <div class="capability-card capability-card-zigzag-left relative z-10 w-[60%] max-w-[500px] bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-r-3 border-blue-600 border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">01</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Connect Everything. Make Disparate Systems Operate as One.</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            You don't have one system. You have 5–10 systems all necessary, all containing critical data, none of them talking to each other. We build the integration layer that makes them operate as one. Data flows between systems automatically. Finance sees operational data real-time. Operations sees customer data real-time. Leadership sees unified reporting. You still have your legacy systems. You still have your specialized tools. But now they operate together instead of against each other.
-          </p>
-        </div>
-
-        <!-- Card 2: Right -->
-        <div class="capability-card capability-card-zigzag-right relative z-10 w-[60%] max-w-[500px] ml-auto bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-l-3 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">02</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Handle Enterprise-Scale Data Relationships</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Your data has relationships that simple databases can't handle. Deals have properties. Properties have buyers. Buyers have historical performance. Performance has patterns. Properties have markets. Markets have trends. Trends drive acquisition strategy. We design relational data architectures that capture this complexity. Query a deal and instantly see buyer fit, market conditions, and probability. Query a buyer and instantly see all relevant opportunities. Query a market and see supply/demand dynamics. This isn't possible with standard tools. It requires architectural sophistication.
-          </p>
-        </div>
-
-        <!-- Card 3: Left -->
-        <div class="capability-card capability-card-zigzag-left relative z-10 w-[60%] max-w-[500px] bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-r-3 border-blue-600 border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">03</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Embed Compliance, Workflows, and Logic Into Operations</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Your industry has specific workflows. Compliance requirements. Business logic embedded in processes. A generic automation platform doesn't understand these. We build automations that understand your domain. Regulatory compliance baked in. Industry workflows embedded. Business rules enforced. Your competitive advantage automated. This is why you need custom. Generic systems can't capture your domain expertise.
-          </p>
-        </div>
-
-        <!-- Card 4: Right -->
-        <div class="capability-card capability-card-zigzag-right relative z-10 w-[60%] max-w-[500px] ml-auto bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-l-3 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">04</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Pattern Recognition Across Massive Datasets</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Your organization creates terabytes of data. Patterns in that data predict outcomes, identify opportunities, signal risk. No human can see these patterns. No standard tool can surface them. We embed advanced intelligence: ML models analyzing your historical data, finding patterns, making predictions. Historical performance predicting future outcomes. Portfolio analysis identifying underperformers. Market analysis identifying opportunities. At your scale, intelligence isn't nice-to-have. It's essential.
-          </p>
-        </div>
-
-        <!-- Card 5: Left -->
-        <div class="capability-card capability-card-zigzag-left relative z-10 w-[60%] max-w-[500px] bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-r-3 border-blue-600 border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">05</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Leadership Sees Reality, Not Summaries</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Executive dashboards usually show summaries. High-level numbers. Which hide reality. We build dashboards that show what's actually happening. Real-time visibility into pipeline, operations, financial performance, market conditions. Drill-down capability to understand the underlying dynamics. Alert-driven visibility surfacing problems before they become disasters. Leadership makes decisions based on reality, not 2-week-old reports.
-          </p>
-        </div>
-
-        <!-- Card 6: Right -->
-        <div class="capability-card capability-card-zigzag-right relative z-10 w-[60%] max-w-[500px] ml-auto bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-l-3 border-blue-600 border-r border-b border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">06</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl text-blue-600 mb-3">Built for Scale. Reliability. Compliance.</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Enterprise requires more than just speed. High availability (99.99% uptime). Disaster recovery. Compliance (SOC2, HIPAA, etc.). Audit trails. Encryption. Access control. We build infrastructure designed for enterprise requirements. Redundancy at every layer. Failover automatic. Compliance built in. Audit trails comprehensive. Security by default. Your system doesn't just work. It works reliably, securely, and in compliance with requirements.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-white">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          From Complexity to Clarity
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Enterprise implementation is sophisticated. We follow a disciplined process that starts with understanding, moves through phased implementation, and results in integrated systems that scale.
-        </p>
-      </div>
-
-      <div class="space-y-8">
-        <!-- Step 01 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">01</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-4">Understand the Entire Landscape</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                We don't start building. We start listening. We understand how your organization actually operates: every system, every workflow, every constraint, every goal. We map your technical landscape, your organizational structure, your data flows, your compliance requirements. We identify quick wins. We identify structural challenges. We identify where integration creates leverage. We identify the phasing strategy—what to build first for maximum impact. This phase defines everything that follows. Getting it right means the implementation succeeds. Getting it wrong means everything that follows is wasted.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 3–4 weeks</p>
-                <p class="text-sm text-gray-600 mt-2">Deliverables: As-is architecture map, integration strategy, phasing plan, ROI model</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 02 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 150ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">02</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-4">Blueprint the Integrated System</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Based on discovery, we design the target architecture. How do all systems connect? How does data flow? Where does intelligence live? How do you scale to 2x or 3x current size? We design for your future, not just your present. The system handles current complexity plus planned growth.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 2–3 weeks</p>
-                <p class="text-sm text-gray-600 mt-2">Deliverables: Target architecture diagrams, data flow specifications, integration sequences, security and compliance design</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 03 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">03</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-4">Build in Waves. Quick Wins First. Momentum Building.</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                We don't try to build everything at once. We identify foundational systems and quick wins. Build foundation (usually data infrastructure + integration layer). Then quick wins (usually 1–2 implementations that show immediate value and build organizational trust). Each phase demonstrates value. Each phase builds momentum for the next phase. First phase gets leadership comfortable. Subsequent phases accelerate because you're not starting from skepticism.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 2–4 weeks per phase</p>
-                <p class="text-sm text-gray-600 mt-2">Deliverables: Live systems, user adoption, demonstrated value</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 04 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 450ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">04</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-4">Connect Systems. Migrate Data. Go Live.</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Once foundation systems are in place, we integrate everything else. Historical data is migrated carefully, validated, and reconciled. Parallel runs ensure everything works before cutover. Go-live is coordinated and carefully managed. We don't try to migrate 20 years of data and go live simultaneously. We migrate strategically, running parallel systems until we're confident.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: 2–4 weeks</p>
-                <p class="text-sm text-gray-600 mt-2">Deliverables: Integrated systems, migrated data, parallel run validation, cutover execution</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 05 -->
-        <div class="process-step bg-gradient-to-br from-blue-50/50 to-white rounded-xl p-8 border-l-4 border-blue-600 border-t border-r border-b border-gray-200 hover:shadow-lg transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 600ms;">
-          <div class="flex items-start gap-6">
-            <div class="step-number-wrapper flex-shrink-0">
-              <div class="step-number-circle w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-500 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-400">
-                <span class="text-3xl font-bold text-white">05</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <h3 class="text-xl md:text-2xl text-blue-600 mb-4">Continuous Improvement Becomes Standard</h3>
-              <p class="text-base text-gray-600 leading-relaxed mb-6">
-                Systems don't get built and then forgotten. They're monitored continuously. Usage patterns inform optimizations. Feedback drives improvements. The system improves continuously because it's designed to improve. We establish weekly optimization cycles. Small improvements every week. The system that powers your business six months from now is smarter and more refined than the system that launched.
-              </p>
-              <div class="bg-white rounded-lg p-4 border border-gray-200">
-                <p class="text-base font-semibold text-gray-900">Timeline: Ongoing</p>
-                <p class="text-sm text-gray-600 mt-2">Deliverables: Weekly improvements, performance optimization, feature evolution, strategic consulting</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGY STACK SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl text-gray-900 mb-4">
-          Built on Enterprise-Grade Infrastructure
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Enterprise systems require sophistication at every layer. We use best-in-class technology selected for reliability, scale, and security.
-        </p>
-      </div>
-
-      <!-- Database & Data Platform -->
-      <div class="mb-16 scroll-fade-in">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Database & Data Platform</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-8 max-w-3xl">
-          Enterprise data has massive volume, complex relationships, and strict consistency requirements. We use platforms that handle these demands professionally.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL Enterprise" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">PostgreSQL Enterprise</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/supabase-logo.jpg" alt="Supabase Enterprise" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Supabase Enterprise</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">❄️</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Snowflake</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">⚡</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Apache Kafka</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">☁️</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Data Lake (AWS S3 / Azure Blob)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Integration & API Layer -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Integration & API Layer</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-8 max-w-3xl">
-          Enterprise systems live and die on integrations. You need sophisticated platforms that can integrate anything, transform data, handle errors.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/n8n-logo.png" alt="n8n Enterprise" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">n8n Enterprise</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🔗</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">MuleSoft</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🌊</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Apache NiFi</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/nodejs-logo.jpeg" alt="Custom APIs" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Custom APIs (Node.js / Python)</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🔔</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Webhook Infrastructure</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Analytics & Intelligence -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Analytics & Intelligence</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-8 max-w-3xl">
-          Enterprise leadership needs sophisticated visibility. We build analytics platforms that surface insights buried in complexity.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">📊</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Tableau</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">👁️</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Looker (Google)</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">📈</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Apache Superset</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/react-logo.webp" alt="Custom React Dashboards" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Custom React Dashboards</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🧠</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Databricks</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Infrastructure & Security -->
-      <div class="mb-16 scroll-fade-in pt-16 border-t border-gray-200">
-        <div class="flex items-center justify-center gap-3 mb-4">
-          <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
-          <h3 class="text-2xl font-bold text-gray-900">Infrastructure & Security</h3>
-        </div>
-        <p class="text-base text-gray-600 mb-8 max-w-3xl">
-          Enterprise requires more than just speed. Reliability, security, compliance, and disaster recovery are non-negotiable.
-        </p>
-        <div class="bg-white rounded-xl border border-gray-200 p-10 shadow-sm">
-          <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/aws-logo.png" alt="AWS / Azure / Google Cloud" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">AWS / Azure / Google Cloud</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <img src="/logos/kubernetes-logo.png" alt="Kubernetes" class="w-20 h-20 object-contain" onerror="this.style.display='none';">
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Kubernetes</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🔐</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">HashiCorp Vault</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">🛡️</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">Cloudflare</span>
-            </div>
-            <div class="tech-logo-item flex flex-col items-center gap-4 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-              <div class="w-24 h-24 bg-gradient-to-br from-gray-50 to-white rounded-xl flex items-center justify-center shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <span class="text-2xl font-bold text-gray-600">💾</span>
-              </div>
-              <span class="text-sm font-semibold text-gray-700">AWS Backup / Azure Backup</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUTCOMES & VALUE SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          What Enterprise Integration Creates
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Enterprise systems don't just improve efficiency. They fundamentally change how organizations operate, how fast they move, how accurately they decide.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Outcome 1 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">One Organization. One Source of Truth.</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Departments stop operating in silos. Finance knows operational reality. Operations knows customer reality. Leadership knows everything. Data flows between systems automatically. One version of the truth. Decisions are made on complete information. Cross-departmental collaboration accelerates.
-          </p>
-        </div>
-
-        <!-- Outcome 2 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Leadership Sees Exactly What's Happening</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Not summaries. Not yesterday's data. Real-time visibility into pipeline, operations, financial performance, market conditions. Leadership responds to reality, not surprises. Strategic adjustments are made based on current data. Competitive response time drops from weeks to hours.
-          </p>
-        </div>
-
-        <!-- Outcome 3 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Problems Surface Before They Become Disasters</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Systems monitor continuously. Portfolio underperformance is identified immediately. Customer churn risk surfaces before customers leave. Operational bottlenecks are visible before they cause disruption. You manage proactively instead of reactively. Small problems are fixed before they become big problems.
-          </p>
-        </div>
-
-        <!-- Outcome 4 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">4</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Eliminate Manual Coordination. Scale Throughput.</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Routine work is automated. Manual coordination is replaced with system flows. Team focus shifts from execution to strategy. Throughput increases without proportional headcount increase. Operational leverage improves. Cost per unit of output decreases.
-          </p>
-        </div>
-
-        <!-- Outcome 5 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">5</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Technology Becomes Your Moat</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Competitors can hire consultants. They can buy off-the-shelf software. They can't replicate custom systems built specifically for your market and your way of operating. Your systems embed your competitive advantage. That advantage is defensible and hard to replicate.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRY USE CASES SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          Enterprise Implementation Across Industries
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Enterprise complexity looks different in every industry. We've navigated complexity in real estate, construction, healthcare, finance, and beyond.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto space-y-4">
-        <!-- Use Case 1 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Commercial Real Estate & REITs</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Portfolio management across hundreds of properties</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Deal tracking and buyer intelligence</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Market analysis and opportunity identification</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial modeling and scenario analysis</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Investor reporting and communications</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and audit automation</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing a $5B portfolio across multiple markets, property types, investor groups. Complexity is portfolio-wide visibility, deal flow analysis, performance reporting, regulatory compliance.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform showing portfolio performance, pipeline visibility, market analysis, and investor reporting. Single dashboard replacing 50 spreadsheets.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 2 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Large Construction Organizations</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Project portfolio management (100s of concurrent projects)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Resource allocation and capacity planning</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial integration (project budgets, actuals, profitability)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and safety automation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Vendor and supplier management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive visibility dashboards</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing $1B+ annual revenue across multiple projects, teams, markets. Complexity is portfolio profitability tracking, resource optimization, compliance at scale.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform showing project profitability, resource utilization, cash flow forecasting, and compliance status. Real-time project command center.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 3 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Healthcare Systems</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Patient workflows across locations</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Clinical and operational integration</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance automation (HIPAA, regulatory requirements)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial integration (billing, revenue cycle, insurance)</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Supply chain and inventory management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive and clinical dashboards</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing 500+ providers across 50+ locations. Complexity is patient care coordination, regulatory compliance, financial management, supply chain.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform coordinating patient care, automating compliance, managing financial workflows, optimizing supply chain. Enterprise healthcare operations platform.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 4 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Professional Services Networks</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Client relationship management across offices</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Engagement delivery and project management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Time, billing, and profitability tracking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Knowledge management and reuse</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Talent and resource management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive profitability dashboards</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing 1000+ professionals across 100+ offices. Complexity is engagement profitability, resource optimization, knowledge sharing, compliance.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform managing client relationships, engagement delivery, resource optimization, financial reporting. Firm-wide profitability and utilization visibility.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 5 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Financial Services & Asset Management</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Deal pipeline and opportunity tracking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Portfolio analytics and risk assessment</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial modeling and scenario analysis</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Investor reporting and communications</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and regulatory reporting</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Market intelligence and analysis</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing $10B+ in AUM across multiple investment vehicles. Complexity is deal flow, portfolio performance, risk management, investor communications, compliance.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform for deal management, portfolio analytics, risk monitoring, investor reporting, and compliance automation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 6 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Manufacturing & Distribution</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Order and supply chain management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Production planning and scheduling</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Inventory and capacity management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Quality and compliance tracking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial integration and profitability</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Operational dashboards</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing production across multiple facilities, supply chains spanning continents. Complexity is supply chain optimization, quality control, inventory management, profitability.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated supply chain and production platform optimizing flows, reducing inventory, improving quality, managing compliance.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 7 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Retail & Hospitality Networks</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Multi-location operations management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Inventory and supply chain coordination</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Staffing and schedule management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial consolidation and reporting</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Performance analytics</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and risk management</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Managing 100s-1000s of locations, each with local decisions but needing central alignment. Complexity is consistency at scale, financial consolidation, supply chain.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform for multi-location operations, inventory management, financial reporting, and performance analytics.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 8 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Enterprise & Complex Organizations (General)</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Applications:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Cross-department integration and alignment</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive intelligence and dashboards</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and audit automation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Data governance and quality</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Operational and financial reporting</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Strategic analytics</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Enterprise Challenge:</p>
-              <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                Operating at scale creates fragmentation. Departments have different systems, different processes, different versions of truth. Complexity is alignment and integration.
-              </p>
-              <p class="text-gray-300 font-semibold mb-2">What We Build:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Integrated platform aligning the organization, surfacing cross-department insights, automating compliance, enabling strategic visibility.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT & PROCESS SECTION -->
-  <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          How We Partner With Enterprise
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Enterprise engagement is sophisticated. We work in phases, maintain constant communication, deliver measurable value at each step, and evolve the partnership as needs change.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Engagement 1 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Build + Operate Model</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Design, Build, and Operate. You Set Direction.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Complete discovery and architecture design</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Phased build with quick wins first</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Ongoing operational management</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Week-to-week optimization</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Scaling support</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Strategic consulting</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Dedicated partnership team</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-2">Timeline:</p>
-          <p class="text-sm text-gray-700 mb-4">6–18 months discovery-to-fully-optimized</p>
-          <p class="text-sm text-gray-600 italic mt-6">Best For: Complex implementations where you need a true partner. You want us to understand your business deeply and improve continuously.</p>
-        </div>
-
-        <!-- Engagement 2 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Build + Partner Model</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Build. Your Team Learns and Operates.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Complete discovery and architecture design</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Phased build with knowledge transfer</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Comprehensive documentation and training</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Transition to your team operation</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Ongoing support and strategic consulting</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Quarterly business reviews</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-2">Timeline:</p>
-          <p class="text-sm text-gray-700 mb-4">4–12 months discovery-to-handoff</p>
-          <p class="text-sm text-gray-600 italic mt-6">Best For: You have technical capacity and want to operate systems in-house. You want Intelio's expertise during build, then ownership internally.</p>
-        </div>
-
-        <!-- Engagement 3 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Strategic Advisory + Implementation</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Guide. Your Teams Build. We Validate.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Strategic planning and architecture advisory</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Your teams do implementation with our guidance</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Weekly architecture review and course correction</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Validation of key decisions</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Go-live support</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Post-launch optimization advisory</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-2">Timeline:</p>
-          <p class="text-sm text-gray-700 mb-4">6–12 months</p>
-          <p class="text-sm text-gray-600 italic mt-6">Best For: You have strong technical teams and want strategic guidance more than hands-on building. We validate your approach and help avoid pitfalls.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
-      
-      <div class="border-t border-gray-200 pt-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- FAQ 1 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How much does an enterprise implementation cost?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Enterprise implementation costs depend on scope of systems being integrated, complexity of data transformation, number of integrations required, phasing strategy, and timeline. We scope each project individually after discovery to provide accurate pricing based on your specific requirements.
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How long does implementation take?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Depends on scope and phasing strategy. Discovery: 3–4 weeks. Foundation systems: 4–8 weeks. Additional integrations: 2–4 weeks each. Typical timeline: 4–6 months discovery-to-first-live-systems, 12–18 months for full implementation including all integrations and optimization. We optimize for value delivery, not speed. You get quick wins early, confidence builds, then we expand scope.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What if we have legacy systems we need to keep?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              That's standard. Enterprise always has legacy. We design integration layers that let legacy and modern systems coexist seamlessly. Legacy system stays running. We build integrations around it. Data flows between systems. You're not forced to migrate everything at once.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do you handle change management?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Change is hard at enterprise scale. We manage it through: Executive sponsorship (strong leadership commitment), Phased rollout (start with pilot teams, expand), Quick wins (demonstrate value early, build confidence), Comprehensive training (teams are never dropped into unfamiliar systems), Support during transition (we're available during go-live), Post-launch optimization (we fine-tune based on real usage). Change management is as important as technical implementation. We invest heavily in both.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What about compliance and security?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Built in from day one. Audit trails, role-based access, encryption, backup strategies, disaster recovery—all designed for regulated industries. If you operate in healthcare, finance, legal, or other regulated verticals, compliance requirements are architectural foundations, not add-ons.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can your teams work with our in-house teams?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes. Most enterprise implementations involve partnership between Intelio team and your architects/developers. We contribute leadership and specialized expertise. You contribute institutional knowledge and long-term continuity. We work collaboratively. Your team learns. Knowledge transfer happens naturally through partnership.
-            </div>
-          </div>
-
-          <!-- FAQ 7 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What happens if the implementation faces challenges?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Challenges are normal. We handle them through: Weekly architecture reviews (identify issues early), Rapid iteration (problems get solved, not postponed), Escalation processes (leadership stays informed), Scope management (we adjust phasing if necessary), Extended support (we stay through challenges until resolved). We don't hand off and disappear. We're committed to making this work.
-            </div>
-          </div>
-
-          <!-- FAQ 8 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How do we know if we need enterprise implementation vs. smaller engagement?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Enterprise implementation is right if: You're integrating 5+ systems, You're operating at significant scale, You have complex domain-specific requirements, You need specialized expertise in your vertical, You want long-term ongoing partnership. Smaller implementations are right if: You're solving focused problems (custom dashboard, single integration), You don't need deep domain expertise, You want faster time-to-value with less ongoing involvement. We assess fit during discovery.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // FAQ Accordion Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const faqCards = document.querySelectorAll('.faq-card');
-      
-      faqCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const isActive = this.classList.contains('active');
-          
-          // Close all FAQ cards
-          faqCards.forEach(c => {
-            c.classList.remove('active');
-            const answer = c.querySelector('.faq-answer');
-            const chevron = c.querySelector('.faq-chevron');
-            if (answer) answer.classList.add('hidden');
-            if (chevron) chevron.style.transform = 'rotate(0deg)';
-          });
-          
-          // Open clicked card if it wasn't active
-          if (!isActive) {
-            this.classList.add('active');
-            const answer = this.querySelector('.faq-answer');
-            const chevron = this.querySelector('.faq-chevron');
-            if (answer) answer.classList.remove('hidden');
-            if (chevron) chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-
-      // Industry Accordion Functionality
-      const industryAccordions = document.querySelectorAll('.industry-accordion-item');
-      
-      industryAccordions.forEach(item => {
-        const header = item.querySelector('.industry-accordion-header');
-        const content = item.querySelector('.industry-accordion-content');
-        const chevron = item.querySelector('.industry-accordion-chevron');
-        
-        header.addEventListener('click', () => {
-          const isExpanded = header.getAttribute('aria-expanded') === 'true';
-          
-          // Close all other accordions (optional - remove if you want multiple open)
-          industryAccordions.forEach(otherItem => {
-            if (otherItem !== item) {
-              const otherHeader = otherItem.querySelector('.industry-accordion-header');
-              const otherContent = otherItem.querySelector('.industry-accordion-content');
-              const otherChevron = otherItem.querySelector('.industry-accordion-chevron');
-              
-              otherHeader.setAttribute('aria-expanded', 'false');
-              otherContent.style.maxHeight = '0';
-              otherChevron.style.transform = 'rotate(0deg)';
-            }
-          });
-          
-          // Toggle current accordion
-          if (isExpanded) {
-            header.setAttribute('aria-expanded', 'false');
-            content.style.maxHeight = '0';
-            chevron.style.transform = 'rotate(0deg)';
-          } else {
-            header.setAttribute('aria-expanded', 'true');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-    });
-  </script>
-
-  <style>
-    .faq-card.active .faq-answer {
-      display: block !important;
-    }
-
-    .faq-card.active .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    /* Hero Section Animations */
-    @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    .hero-gradient {
-      background: linear-gradient(-45deg, #111827, #1e3a8a, #111827, #1e40af);
-      background-size: 400% 400%;
-      animation: gradient-shift 10s ease infinite;
-    }
-
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-fade-in {
-      animation: fade-in-up 0.8s ease-out;
-    }
-
-    .hero-fade-in-delay-1 {
-      animation: fade-in-up 0.8s ease-out 0.2s both;
-    }
-
-    .hero-fade-in-delay-2 {
-      animation: fade-in-up 0.8s ease-out 0.4s both;
-    }
-
-    .hero-fade-in-delay-3 {
-      animation: fade-in-up 0.8s ease-out 0.6s both;
-    }
-
-    .hero-underline {
-      animation: fade-in-up 0.8s ease-out 0.3s both;
-      transform-origin: left;
-    }
-
-    /* Scroll Animations */
-    .scroll-fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .scroll-fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scroll-fade-in-stagger {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .scroll-fade-in-stagger.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Problem Section Enhancements */
-    .problem-section {
-      position: relative;
-    }
-
-    .problem-accent-line {
-      height: 0;
-      opacity: 0;
-      animation: lineDrawDown 800ms ease-out 500ms forwards;
-    }
-
-    @keyframes lineDrawDown {
-      from {
-        height: 0;
-        opacity: 0;
-      }
-      to {
-        height: 100%;
-        opacity: 1;
-      }
-    }
-
-    .problem-card {
-      transition: all 0.3s ease;
-    }
-
-    .problem-icon {
-      transition: transform 0.3s ease;
-    }
-
-    .problem-card:hover .problem-icon {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    /* Capability Cards - Zigzag Layout */
-    .capability-cards-zigzag {
-      position: relative;
-    }
-
-    .capability-card-zigzag-left {
-      margin-right: auto;
-      margin-left: 0;
-      position: relative;
-    }
-
-    .capability-card-zigzag-left::after {
-      content: '';
-      position: absolute;
-      right: -18px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
-      background: #2563eb;
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 0 0 1px #2563eb;
-      z-index: 20;
-    }
-
-    .capability-card-zigzag-right {
-      margin-left: auto;
-      margin-right: 0;
-      position: relative;
-    }
-
-    .capability-card-zigzag-right::after {
-      content: '';
-      position: absolute;
-      left: -18px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
-      background: #2563eb;
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 0 0 1px #2563eb;
-      z-index: 20;
-    }
-
-    .border-r-3 {
-      border-right-width: 3px;
-    }
-
-    .border-l-3 {
-      border-left-width: 3px;
-    }
-
-    @media (max-width: 768px) {
-      .capability-card-zigzag-left,
-      .capability-card-zigzag-right {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .capability-card-zigzag-left::after,
-      .capability-card-zigzag-right::after {
-        display: none;
-      }
-      
-      .capability-cards-zigzag > div:first-child {
-        display: none;
-      }
-    }
-
-    .capability-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .capability-card:hover {
-      transform: translateY(-4px);
-    }
-
-    /* Process Steps */
-    .process-step {
-      transition: all 0.3s ease;
-    }
-
-    .step-number-circle {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .process-step:hover .step-number-circle {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Technology Stack */
-    .tech-logo-item {
-      transition: all 0.3s ease;
-    }
-
-    /* Outcome Cards */
-    .outcome-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Use Case Cards */
-    .use-case-card {
-      transition: all 0.3s ease;
-    }
-
-    /* Industry Accordion Styles */
-    .industry-accordion-item {
-      transition: all 0.3s ease;
-    }
-
-    .industry-accordion-header {
-      user-select: none;
-    }
-
-    .industry-accordion-header:hover {
-      background-color: rgba(31, 41, 55, 0.7);
-    }
-
-    .industry-accordion-content {
-      transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    }
-
-    .industry-accordion-content[style*="max-height: 0"] {
-      opacity: 0;
-    }
-
-    .industry-accordion-chevron {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    /* Final CTA */
-    .final-cta-btn {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Reduced Motion Support */
-    @media (prefers-reduced-motion: reduce) {
-      video {
-        display: none;
-      }
-      section:first-of-type {
-        background-image: linear-gradient(to bottom right, #111827, #1f2937);
-        background-size: cover;
-        background-position: center;
-      }
-      .animate-bounce {
-        animation: none;
-      }
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      .logo-marquee-track {
-        animation: none;
-      }
-    }
-
-    /* Logo Carousel Styles */
-    .logo-marquee-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-
-    .logo-marquee-track {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      animation: logo-scroll 40s linear infinite;
-      width: fit-content;
-    }
-
-    .logo-marquee-container:hover .logo-marquee-track {
-      animation-play-state: paused;
-    }
-
-    .logo-marquee-item {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .logo-marquee-item:hover {
-      opacity: 1;
-    }
-
-    .logo-marquee-img {
-      height: 120px;
-      width: auto;
-      max-width: 200px;
-      object-fit: contain;
-      filter: grayscale(100%);
-    }
-
-    @keyframes logo-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (max-width: 1024px) {
-      .logo-marquee-img {
-        height: 100px;
-        max-width: 160px;
-      }
-      .logo-marquee-track {
-        gap: 1.25rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .logo-marquee-img {
-        height: 80px;
-        max-width: 140px;
-      }
-      .logo-marquee-track {
-        gap: 1rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-  </style>
-
-  <script>
-    // Intersection Observer for scroll animations
-    document.addEventListener('DOMContentLoaded', function() {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      // Observe all scroll-fade-in elements
-      document.querySelectorAll('.scroll-fade-in, .scroll-fade-in-stagger').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
-
-  <!-- FINAL CTA SECTION -->
-  <section class="final-cta-section py-24 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-    <!-- Subtle pattern overlay -->
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 scroll-fade-in">
-        Your Systems Are Holding You Back.
-      </h2>
-      <p class="text-xl text-gray-200 mb-4 font-semibold scroll-fade-in-delay-1">
-        Fragmented tools. Manual processes. Slow decisions. You're operating despite your systems, not because of them.
-      </p>
-      <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto scroll-fade-in-delay-2">
-        Enterprise organizations don't fail because they don't try hard enough. They fail because their systems don't enable the vision. Fragmentation creates chaos. Manual processes create bottlenecks. Slow systems create slow decisions.<br><br>
-        You don't need another tool. You don't need another consultant with recommendations. You need a partner who understands your complexity and engineers systems that enable competitive advantage at scale.<br><br>
-        Systems that integrate your entire organization. That surface insights buried in data. That automate routine work so your team focuses on strategy. That scale with you as you grow.<br><br>
-        That's what we build for enterprise.
-      </p>
-      
-      <div class="flex flex-wrap gap-4 justify-center mb-8 scroll-fade-in-delay-3">
-        <a href="/contact" class="final-cta-btn inline-flex items-center px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 group">
-          Schedule Enterprise Discovery
-          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        <!-- CTA Button -->
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+          Connect with our team
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
       </div>
-      
-      <p class="text-sm text-gray-400 mb-4">Or explore our other services:</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/custom-ai-development/full-stack-systems" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">Full-Stack Custom Systems</a>
-        <span class="text-gray-500">|</span>
-        <a href="/custom-ai-development/ai-intelligence-integration" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">AI Intelligence Integration</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE OPPORTUNITY -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid md:grid-cols-[1fr_1fr] gap-12 items-center">
+        <div class="opportunity-content">
+          <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">
+            The Opportunity
+          </h2>
+          <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal">
+            <p>
+              Organizations requiring fundamental operational transformation have 
+              strategic opportunity: custom enterprise implementations that reshape 
+              how the entire organization works.
+            </p>
+            <p>
+              Multi-system integrations that unify disparate platforms. Legacy 
+              modernization that preserves institutional knowledge. Cross-departmental 
+              infrastructure that breaks down silos. Implementations designed for 
+              the complexity of real enterprise operations.
+            </p>
+          </div>
+        </div>
+        <div class="opportunity-image">
+          <!-- IMAGE PLACEHOLDER: Enterprise Opportunity -->
+          <img 
+            src="/images/enterprise-opportunity.jpg" 
+            alt="Enterprise architecture visualization"
+            class="w-full h-full object-cover rounded"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <div style="display: none; width: 100%; aspect-ratio: 4/5; background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px;">
+            Enterprise Opportunity Image
+          </div>
+        </div>
       </div>
     </div>
   </section>
-</main>
-</Layout>
 
+  <!-- SECTION 3: IMAGE BREAK -->
+  <section class="relative h-[50vh] w-full overflow-hidden">
+    <!-- IMAGE PLACEHOLDER: Enterprise Visual Break -->
+    <img 
+      src="/images/enterprise-visual-break.jpg" 
+      alt=""
+      class="w-full h-full object-cover"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+    />
+    <div style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, #000000 0%, #1A1A1A 50%, #2D2D2D 100%); display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px;">
+      Enterprise Visual Break Image
+    </div>
+  </section>
+
+  <!-- SECTION 4: CAPABILITIES -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Capabilities</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Capability 1: Multi-System Architecture -->
+        <div class="capability-card">
+          <div class="capability-icon mb-6">
+            <svg class="w-12 h-12 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Multi-System Architecture</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Unified infrastructure spanning CRM, ERP, operations, and enterprise 
+            platforms. Systems designed to work together across departmental 
+            boundaries and organizational complexity.
+          </p>
+        </div>
+
+        <!-- Capability 2: Legacy Integration -->
+        <div class="capability-card">
+          <div class="capability-icon mb-6">
+            <svg class="w-12 h-12 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Legacy Integration</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Modern capabilities connected to existing systems. Preserve 
+            institutional knowledge and critical data while enabling new 
+            operational possibilities.
+          </p>
+        </div>
+
+        <!-- Capability 3: Change Management -->
+        <div class="capability-card">
+          <div class="capability-icon mb-6">
+            <svg class="w-12 h-12 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Change Management</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Executive stakeholder alignment, user adoption planning, and 
+            organizational readiness. Technology implementation supported 
+            by change leadership.
+          </p>
+        </div>
+
+        <!-- Capability 4: Enterprise Security -->
+        <div class="capability-card">
+          <div class="capability-icon mb-6">
+            <svg class="w-12 h-12 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Enterprise Security</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Compliance, access control, and data governance built into 
+            architecture from the start. Security that enables rather than 
+            restricts operational capability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CLIENT IMPACT -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-black mb-16 font-medium leading-[1.2]">Client Impact</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Impact 1 -->
+        <div class="impact-card">
+          <span class="text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4 block">
+            Multi-Entity Transformation
+          </span>
+          <p class="text-lg text-[#666666] leading-[1.7] font-normal">
+            A holding company with 12 portfolio companies unified operations 
+            across all entities, gaining real-time visibility and reducing 
+            monthly close from 5-7 days to 2-3 days.
+          </p>
+        </div>
+        
+        <!-- Impact 2 -->
+        <div class="impact-card">
+          <span class="text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4 block">
+            Legacy Modernization
+          </span>
+          <p class="text-lg text-[#666666] leading-[1.7] font-normal">
+            A 30-year-old professional services firm modernized core operations 
+            while preserving decades of client data and institutional knowledge, 
+            enabling capabilities previously impossible.
+          </p>
+        </div>
+        
+        <!-- Impact 3 -->
+        <div class="impact-card">
+          <span class="text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4 block">
+            Cross-Department Integration
+          </span>
+          <p class="text-lg text-[#666666] leading-[1.7] font-normal">
+            A regional construction company unified field operations, accounting, 
+            project management, and executive reporting—eliminating information 
+            silos that had persisted for years.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: OUR APPROACH -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Our Approach</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Step 01: Discover -->
+        <div class="approach-step">
+          <span class="text-[48px] font-medium text-[#6366F1] mb-4 block">01</span>
+          <h3 class="text-2xl text-white mb-4 font-medium">Discover</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Deep organizational assessment, stakeholder alignment, and 
+            transformation roadmap.
+          </p>
+        </div>
+        
+        <!-- Step 02: Architect -->
+        <div class="approach-step">
+          <span class="text-[48px] font-medium text-[#6366F1] mb-4 block">02</span>
+          <h3 class="text-2xl text-white mb-4 font-medium">Architect</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Enterprise architecture, integration design, and security framework.
+          </p>
+        </div>
+        
+        <!-- Step 03: Build -->
+        <div class="approach-step">
+          <span class="text-[48px] font-medium text-[#6366F1] mb-4 block">03</span>
+          <h3 class="text-2xl text-white mb-4 font-medium">Build</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Phased implementation with continuous stakeholder engagement.
+          </p>
+        </div>
+        
+        <!-- Step 04: Transform -->
+        <div class="approach-step">
+          <span class="text-[48px] font-medium text-[#6366F1] mb-4 block">04</span>
+          <h3 class="text-2xl text-white mb-4 font-medium">Transform</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Change management, training, and operational transition support.
+          </p>
+        </div>
+      </div>
+      
+      <div class="approach-cta">
+        <a href="/how-we-work" class="inline-flex items-center gap-2 text-white/85 hover:text-white transition-colors">
+          Learn more about our methodology
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CLOSING CTA -->
+  <section class="relative py-[120px] md:py-[160px] px-6 overflow-hidden">
+    <div class="cta-background absolute inset-0">
+      <img 
+        src="/images/enterprise-cta.jpg" 
+        alt=""
+        class="cta-bg-image w-full h-full object-cover"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      />
+      <div style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);"></div>
+      <div class="cta-overlay absolute inset-0" style="background: rgba(0, 0, 0, 0.75);"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-[1200px] mx-auto text-center">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-8 font-medium leading-[1.2]">
+        Transform Your Enterprise Operations
+      </h2>
+      <p class="text-xl text-white/85 mb-12 leading-[1.7] font-normal max-w-[720px] mx-auto">
+        Organizations requiring fundamental operational change have strategic 
+        opportunity. We look forward to exploring what's possible.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+        Connect with our team
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Typography - Inter for headlines */
+  h1, h2, h3 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Video background mobile fixes for hero section */
+  section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Ensure video containers work on mobile */
+  @media (max-width: 768px) {
+    section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: 48px !important;
+    }
+    
+    h2 {
+      font-size: 36px !important;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    section video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Opportunity section image */
+  .opportunity-image {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  .opportunity-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Capability cards */
+  .capability-card {
+    padding: 0;
+  }
+
+  /* Impact cards */
+  .impact-card {
+    padding: 0;
+  }
+
+  /* Approach steps */
+  .approach-step {
+    padding: 0;
+  }
+</style>
+
+</Layout>
