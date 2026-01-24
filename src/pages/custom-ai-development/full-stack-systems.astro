@@ -996,6 +996,29 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 36px;
   }
 
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: #6366F1;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  .cta-primary:hover {
+    background: #4F46E5;
+  }
+
+  .cta-primary svg {
+    width: 20px;
+    height: 20px;
+  }
+
   /* iOS Safari video fixes */
   @supports (-webkit-touch-callout: none) {
     .hero-bg-video {
