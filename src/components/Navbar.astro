@@ -26,115 +26,6 @@
     </div>
   </div>
   
-  <!-- Capabilities Mega Menu - Drops below navbar -->
-  <div class="capabilities-mega-menu" id="capabilities-mega-menu">
-    <!-- Backdrop - only covers page content below navbar -->
-    <div class="mega-menu-backdrop" id="mega-menu-backdrop" aria-hidden="true"></div>
-    
-    <!-- Menu Panel - Connected to navbar -->
-    <div class="mega-menu-panel">
-      <div class="mega-menu-content">
-        <h3 class="mega-menu-title">Capabilities</h3>
-        
-        <!-- Main Capabilities Grid -->
-        <div class="mega-menu-grid">
-          
-          <!-- Column 1: AI & Custom Systems -->
-          <div class="mega-menu-column">
-            <h4 class="column-heading">AI & Custom Systems</h4>
-            <ul class="column-links">
-              <li><a href="/capabilities/custom-ai-development">Custom AI Development</a></li>
-              <li><a href="/capabilities/full-stack-system-building">Full-Stack System Building</a></li>
-              <li><a href="/capabilities/enterprise-architecture">Enterprise Architecture Design</a></li>
-              <li><a href="/capabilities/ai-integration">AI Integration & Embedding</a></li>
-              <li><a href="/capabilities/data-infrastructure">Data Infrastructure & Pipelines</a></li>
-              <li><a href="/capabilities/connected-systems">Connected Systems Integration</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 2: Automation & Operations -->
-          <div class="mega-menu-column">
-            <h4 class="column-heading">Automation & Operations</h4>
-            <ul class="column-links">
-              <li><a href="/capabilities/process-automation">Business Process Automation</a></li>
-              <li><a href="/capabilities/workflow-orchestration">Workflow Orchestration</a></li>
-              <li><a href="/capabilities/marketing-automation">Marketing Automation Systems</a></li>
-              <li><a href="/capabilities/sales-operations">Sales Operations Platforms</a></li>
-              <li><a href="/capabilities/microsoft-365-integration">Microsoft 365 Integration</a></li>
-              <li><a href="/capabilities/automation-workflows">Automation Workflows</a></li>
-            </ul>
-          </div>
-          
-          <!-- Column 3: Strategy & Implementation -->
-          <div class="mega-menu-column">
-            <h4 class="column-heading">Strategy & Implementation</h4>
-            <ul class="column-links">
-              <li><a href="/capabilities/ai-strategy">AI Strategy & Roadmapping</a></li>
-              <li><a href="/capabilities/technology-assessment">Technology Assessment & Planning</a></li>
-              <li><a href="/capabilities/implementation">Implementation Management</a></li>
-              <li><a href="/capabilities/change-management">Change Management & Adoption</a></li>
-              <li><a href="/capabilities/training">Team Training & Enablement</a></li>
-              <li><a href="/capabilities/optimization">Ongoing Optimization & Support</a></li>
-            </ul>
-          </div>
-          
-        </div>
-        
-        <!-- Specializations Section -->
-        <div class="mega-menu-specializations">
-          <h4 class="specializations-heading">Specializations</h4>
-          
-          <div class="specializations-grid">
-            
-            <!-- Microsoft Ecosystem -->
-            <div class="specialization-card">
-              <h5 class="spec-title">Microsoft Ecosystem Expertise</h5>
-              <ul class="spec-links">
-                <li><a href="/specializations/power-platform">Power Platform Development</a></li>
-                <li><a href="/specializations/dynamics-365">Dynamics 365 Integration</a></li>
-                <li><a href="/specializations/azure">Azure Infrastructure</a></li>
-                <li><a href="/specializations/microsoft-365">Microsoft 365 Automation</a></li>
-                <li><a href="/specializations/copilot">Copilot Implementation</a></li>
-              </ul>
-            </div>
-            
-            <!-- Industry Verticals -->
-            <div class="specialization-card">
-              <h5 class="spec-title">Industry Verticals</h5>
-              <ul class="spec-links">
-                <li><a href="/industries/commercial-real-estate">Commercial Real Estate</a></li>
-                <li><a href="/industries/professional-services">Professional Services</a></li>
-                <li><a href="/industries/construction">Construction & Trades</a></li>
-                <li><a href="/industries/healthcare">Healthcare & Wellness</a></li>
-                <li><a href="/industries/property-management">Property Management</a></li>
-                <li><a href="/industries/financial-services">Financial Services</a></li>
-              </ul>
-            </div>
-            
-            <!-- Emerging Tech -->
-            <div class="specialization-card">
-              <h5 class="spec-title">Emerging Tech</h5>
-              <ul class="spec-links">
-                <li><a href="/emerging-tech/ai-models">AI Models & Fine-tuning</a></li>
-                <li><a href="/emerging-tech/agents">AI Agents & Autonomous Systems</a></li>
-                <li><a href="/emerging-tech/llm">Large Language Model Implementation</a></li>
-                <li><a href="/emerging-tech/generative-ai">Generative AI Applications</a></li>
-              </ul>
-            </div>
-            
-          </div>
-        </div>
-        
-        <!-- Footer -->
-        <div class="mega-menu-footer">
-          <a href="/capabilities" class="mega-menu-link-arrow">
-            Explore All Capabilities →
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
   <!-- Sidebar Menu -->
   <div class="navbar-sidebar" id="navbar-sidebar">
     <!-- Close Button - Top Right -->
@@ -204,13 +95,14 @@
   <!-- Backdrop Overlay -->
   <div class="navbar-backdrop" id="navbar-backdrop"></div>
   
-  <!-- Capabilities Mega Menu -->
+  <!-- Capabilities Mega Menu - Connected to sidebar on the right -->
   <div class="capabilities-mega-menu" id="capabilities-mega-menu">
-    <button class="mega-menu-close" id="mega-menu-close" aria-label="Close">
-      ×
-    </button>
+    <!-- Backdrop -->
+    <div class="mega-menu-backdrop" id="mega-menu-backdrop" aria-hidden="true"></div>
     
-    <div class="mega-menu-content">
+    <!-- Menu Panel -->
+    <div class="mega-menu-panel">
+      <div class="mega-menu-content">
       <h3 class="mega-menu-title">Capabilities</h3>
       
       <!-- Main Capabilities Grid -->
@@ -308,10 +200,8 @@
           Explore All Capabilities →
         </a>
       </div>
+      </div>
     </div>
-    
-    <!-- Backdrop -->
-    <div class="mega-menu-backdrop" id="mega-menu-backdrop" aria-hidden="true"></div>
   </div>
 </nav>
 
@@ -768,32 +658,34 @@
   .capabilities-mega-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 300px;  /* Start after sidebar width */
     right: 0;
-    z-index: 9997;
+    bottom: 0;
+    z-index: 1999;  /* Below sidebar (2000) but above backdrop (1500) */
     display: none;
+    background: #FFFFFF;
+    overflow-y: auto;
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.3);
+    animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .capabilities-mega-menu.open {
     display: block;
   }
 
-  /* Mega Menu Panel - Drops below navbar */
+  /* Mega Menu Panel - Connected to sidebar on the right */
   .mega-menu-panel {
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
     background: #FFFFFF;
-    z-index: 9997;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    animation: slideDown 0.3s ease-out;
+    z-index: 1999;
     overflow-y: auto;
   }
   
-  /* Default top position - will be adjusted by JavaScript */
-  .mega-menu-panel {
-    top: 80px;  /* Default - adjusted dynamically */
-    max-height: calc(100vh - 80px);
+  /* When sidebar is closed, adjust positioning */
+  .navbar-sidebar:not(.open) ~ .capabilities-mega-menu {
+    left: 0;
   }
 
   /* Mega Menu Content */
@@ -804,21 +696,25 @@
     width: 100%;
   }
 
-  /* Backdrop - only covers page content below navbar */
+  /* Backdrop - covers page content behind sidebar and mega menu */
   .mega-menu-backdrop {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
-    z-index: 9996;  /* Behind the menu, but above page */
-    cursor: default;
+    z-index: 1998;  /* Behind mega menu (1999) but above page content */
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
-  /* Default top position - will be adjusted by JavaScript */
-  .mega-menu-backdrop {
-    top: 80px;  /* Default - adjusted dynamically */
+  .capabilities-mega-menu.open .mega-menu-backdrop {
+    opacity: 1;
+    visibility: visible;
   }
 
   /* Title & Headers */
@@ -965,6 +861,17 @@
     }
   }
   
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
   /* Active state for sidebar capabilities button */
   .sidebar-nav-item.active {
     color: #0EA5E9;
@@ -983,6 +890,10 @@
 
   /* Responsive Mega Menu */
   @media (max-width: 1024px) {
+    .capabilities-mega-menu {
+      left: 280px;  /* Match sidebar width on tablet */
+    }
+    
     .mega-menu-content {
       padding: 32px 48px;
     }
@@ -993,6 +904,10 @@
   }
 
   @media (max-width: 968px) {
+    .capabilities-mega-menu {
+      left: 280px;
+    }
+    
     .mega-menu-content {
       padding: 32px 40px;
     }
@@ -1008,14 +923,38 @@
     }
   }
 
-  @media (max-width: 600px) {
-    .mega-menu-panel {
-      top: 64px;  /* Smaller navbar on mobile */
-      max-height: calc(100vh - 64px);
+  @media (max-width: 768px) {
+    .capabilities-mega-menu {
+      left: 280px;  /* Match sidebar width on mobile */
     }
     
-    .mega-menu-backdrop {
-      top: 64px;  /* Smaller navbar on mobile */
+    .mega-menu-content {
+      padding: 24px 16px;
+    }
+    
+    .mega-menu-title {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+    
+    .mega-menu-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
+    .specializations-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .capabilities-mega-menu {
+      left: 100%;  /* Full width on small mobile */
+    }
+    
+    .navbar-sidebar:not(.open) ~ .capabilities-mega-menu {
+      left: 0;
     }
     
     .mega-menu-content {
@@ -1063,6 +1002,51 @@
     const closeBtn = document.getElementById('sidebar-close');
     const backdrop = document.getElementById('navbar-backdrop');
     
+    // Capabilities Mega Menu - Declare early so it's available everywhere
+    const capabilitiesToggle = document.getElementById('capabilities-toggle');
+    const capabilitiesMegaMenu = document.getElementById('capabilities-mega-menu');
+    const megaMenuBackdrop = document.getElementById('mega-menu-backdrop');
+    
+    // Update mega menu position based on sidebar state
+    function updateMegaMenuPosition() {
+      if (capabilitiesMegaMenu && sidebar) {
+        if (sidebar.classList.contains('open')) {
+          // Sidebar is open, position mega menu to the right
+          const sidebarWidth = sidebar.offsetWidth;
+          capabilitiesMegaMenu.style.left = sidebarWidth + 'px';
+        } else {
+          // Sidebar is closed, mega menu takes full width
+          capabilitiesMegaMenu.style.left = '0';
+        }
+      }
+    }
+    
+    function openMegaMenu() {
+      if (capabilitiesMegaMenu) {
+        // Ensure sidebar is open first
+        if (sidebar && !sidebar.classList.contains('open')) {
+          sidebar.classList.add('open');
+          backdrop.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        
+        updateMegaMenuPosition();
+        capabilitiesMegaMenu.classList.add('open');
+        if (capabilitiesToggle) {
+          capabilitiesToggle.classList.add('active');
+        }
+      }
+    }
+    
+    function closeMegaMenu() {
+      if (capabilitiesMegaMenu) {
+        capabilitiesMegaMenu.classList.remove('open');
+        if (capabilitiesToggle) {
+          capabilitiesToggle.classList.remove('active');
+        }
+      }
+    }
+    
     // Scroll handler for navbar background
     let lastScroll = 0;
     function handleScroll() {
@@ -1082,12 +1066,24 @@
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check on load
     
+    // Update position on load, resize, and sidebar toggle
+    updateMegaMenuPosition();
+    window.addEventListener('resize', updateMegaMenuPosition);
+    
+    // Watch for sidebar state changes
+    if (sidebar) {
+      const observer = new MutationObserver(updateMegaMenuPosition);
+      observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+    }
+    
     // Open sidebar
     if (hamburger && sidebar && backdrop) {
       hamburger.addEventListener('click', () => {
         sidebar.classList.add('open');
         backdrop.classList.add('active');
         document.body.style.overflow = 'hidden';
+        // Update mega menu position when sidebar opens
+        updateMegaMenuPosition();
       });
     }
     
@@ -1096,6 +1092,10 @@
       if (sidebar) sidebar.classList.remove('open');
       if (backdrop) backdrop.classList.remove('active');
       document.body.style.overflow = '';
+      // Also close mega menu when sidebar closes
+      closeMegaMenu();
+      // Update mega menu position when sidebar closes
+      updateMegaMenuPosition();
     }
     
     if (closeBtn) {
@@ -1113,46 +1113,7 @@
       }
     });
     
-    // Capabilities Mega Menu
-    const capabilitiesToggle = document.getElementById('capabilities-toggle');
-    const capabilitiesMegaMenu = document.getElementById('capabilities-mega-menu');
-    const megaMenuBackdrop = document.getElementById('mega-menu-backdrop');
-    const megaMenuPanel = capabilitiesMegaMenu ? capabilitiesMegaMenu.querySelector('.mega-menu-panel') : null;
-    
-    // Calculate navbar height and position mega menu
-    function updateMegaMenuPosition() {
-      if (navbar && megaMenuPanel && megaMenuBackdrop) {
-        const navbarHeight = navbar.offsetHeight;
-        megaMenuPanel.style.top = navbarHeight + 'px';
-        megaMenuPanel.style.maxHeight = `calc(100vh - ${navbarHeight}px)`;
-        megaMenuBackdrop.style.top = navbarHeight + 'px';
-      }
-    }
-    
-    // Update position on load and resize
-    updateMegaMenuPosition();
-    window.addEventListener('resize', updateMegaMenuPosition);
-    
-    function openMegaMenu() {
-      if (capabilitiesMegaMenu) {
-        updateMegaMenuPosition(); // Ensure correct positioning
-        capabilitiesMegaMenu.classList.add('open');
-        if (capabilitiesToggle) {
-          capabilitiesToggle.classList.add('active');
-        }
-        // Don't prevent body scroll - let user scroll the menu
-      }
-    }
-    
-    function closeMegaMenu() {
-      if (capabilitiesMegaMenu) {
-        capabilitiesMegaMenu.classList.remove('open');
-        if (capabilitiesToggle) {
-          capabilitiesToggle.classList.remove('active');
-        }
-      }
-    }
-    
+    // Capabilities Mega Menu Event Handlers
     if (capabilitiesToggle && capabilitiesMegaMenu) {
       capabilitiesToggle.addEventListener('click', (e) => {
         e.preventDefault();
@@ -1162,18 +1123,20 @@
         if (capabilitiesMegaMenu.classList.contains('open')) {
           closeMegaMenu();
         } else {
-          // Close sidebar first if open
-          if (sidebar && sidebar.classList.contains('open')) {
-            closeSidebar();
-          }
-          // Then open mega menu
+          // Open sidebar if not open, then open mega menu
           openMegaMenu();
         }
       });
     }
     
     if (megaMenuBackdrop) {
-      megaMenuBackdrop.addEventListener('click', closeMegaMenu);
+      megaMenuBackdrop.addEventListener('click', () => {
+        closeMegaMenu();
+        // Also close sidebar if clicking backdrop
+        if (sidebar && sidebar.classList.contains('open')) {
+          closeSidebar();
+        }
+      });
     }
     
     // Close mega menu on Escape key
@@ -1183,13 +1146,15 @@
       }
     });
     
-    // Close mega menu when clicking links inside
-    const megaMenuLinks = capabilitiesMegaMenu ? capabilitiesMegaMenu.querySelectorAll('a') : [];
-    megaMenuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        closeMegaMenu();
-      });
-    });
+    // Don't close mega menu when clicking links - let them navigate normally
+    // But prevent default if you want to keep it open (commented out for now)
+    // const megaMenuLinks = capabilitiesMegaMenu ? capabilitiesMegaMenu.querySelectorAll('a') : [];
+    // megaMenuLinks.forEach(link => {
+    //   link.addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     // Could load content dynamically here instead
+    //   });
+    // });
     
     // Close mega menu when clicking outside (on navbar backdrop)
     if (backdrop) {
@@ -1217,11 +1182,14 @@
       });
     }
     
-    // Close sidebar when clicking a link (except Sign In button)
+    // Close sidebar when clicking a link (except Sign In button and Capabilities toggle)
     const sidebarLinks = document.querySelectorAll('.sidebar-nav-item[href], .sidebar-submenu-item, .sidebar-footer-item:not(#sidebar-signin-btn)');
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
-        closeSidebar();
+        // Don't close if capabilities menu is open
+        if (!capabilitiesMegaMenu || !capabilitiesMegaMenu.classList.contains('open')) {
+          closeSidebar();
+        }
       });
     });
     
