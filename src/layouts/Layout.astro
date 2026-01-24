@@ -30,6 +30,137 @@ const { title, description = "AI consultancy and development firm, bringing comp
     <Navbar />
     <slot />
     <Footer />
+    
+    <!-- Floating Chat Widget -->
+    <div class="floating-chat-widget">
+      <a 
+        href="/chat"
+        class="floating-chat-button"
+        aria-label="Open chat"
+        title="Ask intelio - AI Chatbot"
+      >
+        <svg 
+          class="chat-icon" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        
+        <div class="floating-chat-label">
+          <span class="chat-brand">Ask intelio</span>
+          <span class="chat-beta">AI CHATBOT (BETA)</span>
+        </div>
+      </a>
+    </div>
   </body>
 </html>
+
+<style>
+  /* Floating Chat Widget Container */
+  .floating-chat-widget {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+  }
+
+  /* Chat Button */
+  .floating-chat-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #0052CC;  /* McKinsey Electric Blue */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 82, 204, 0.25);
+    overflow: hidden;
+  }
+
+  .floating-chat-button:hover {
+    background: rgba(0, 82, 204, 0.95);
+    box-shadow: 0 8px 24px rgba(0, 82, 204, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .floating-chat-button:active {
+    transform: translateY(0);
+  }
+
+  /* Chat Icon */
+  .chat-icon {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+    flex-shrink: 0;
+  }
+
+  /* Chat Label Container */
+  .floating-chat-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.3s ease;
+    white-space: nowrap;
+  }
+
+  /* Brand Name */
+  .chat-brand {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+  }
+
+  /* Beta Label */
+  .chat-beta {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Hover State - Expand Label */
+  .floating-chat-button:hover .floating-chat-label {
+    max-width: 200px;
+  }
+
+  /* Responsive - Hide on Mobile */
+  @media (max-width: 600px) {
+    .floating-chat-widget {
+      bottom: 24px;
+      right: 24px;
+    }
+    
+    .floating-chat-button {
+      padding: 12px 14px;
+      border-radius: 50%;
+    }
+    
+    /* Always show icon only on mobile */
+    .floating-chat-label {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .floating-chat-widget {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+</style>
 
