@@ -1,44 +1,343 @@
 ---
-// Footer component matching the site design
+// Footer component - Simplified with background logo watermark
 ---
 
-<footer class="relative" style="background-color: #000000;">
-  <div class="relative h-[400px] overflow-hidden">
-    <!-- Large Background Text -->
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[2]">
-      <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">intelio</span>
+<footer class="footer">
+  
+  <!-- Footer Content -->
+  <div class="footer-container">
+    
+    <!-- Left: Company Info (Logo Only) -->
+    <div class="footer-section footer-company">
+      <h3 class="footer-logo">intelio</h3>
+      <div class="footer-social">
+        <a href="https://linkedin.com/company/intelio" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#FFFFFF"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com/intelio" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#FFFFFF"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com/intelio" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#FFFFFF"/>
+          </svg>
+        </a>
+      </div>
     </div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <h3 class="text-2xl font-medium mb-2 text-white">
-            intelio
-          </h3>
-          <p class="text-base text-white/80 leading-relaxed">We apply AI and automation where they create real leverage — helping businesses identify, build, and maintain the systems they rely on.</p>
-        </div>
-        <div class="flex justify-end">
-          <div class="space-y-3">
-            <a href="/case-studies" class="block text-white/80 hover:text-white transition-colors">Case Studies</a>
-            <a href="/how-we-work" class="block text-white/80 hover:text-white transition-colors">How We Work</a>
-            <a href="/operating-model" class="block text-white/80 hover:text-white transition-colors">Operating Model</a>
-            <a href="/technology" class="block text-white/80 hover:text-white transition-colors">Technology</a>
-            <a href="/contact" class="block text-white/80 hover:text-white transition-colors">Partner with us</a>
-            <a href="https://www.linkedin.com/company/intelio-ai/about/" target="_blank" rel="noopener noreferrer" class="block text-white/80 hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" class="block text-white/80 hover:text-white transition-colors">X / Twitter</a>
-            <a href="/blog" class="block text-white/80 hover:text-white transition-colors">Blog</a>
-          </div>
-        </div>
+    <!-- Column 2: Services -->
+    <div class="footer-section">
+      <h4 class="footer-heading">Services</h4>
+      <ul class="footer-links">
+        <li><a href="/custom-ai-development">Custom AI Development</a></li>
+        <li><a href="/ai-integration">AI Integration & Automation</a></li>
+        <li><a href="/how-we-work">How We Work</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+      </ul>
+    </div>
+    
+    <!-- Column 3: Company -->
+    <div class="footer-section">
+      <h4 class="footer-heading">Company</h4>
+      <ul class="footer-links">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <!-- Column 4: Subscribe -->
+    <div class="footer-section footer-subscribe">
+      <h4 class="footer-heading">Subscribe</h4>
+      <p class="footer-subscribe-text">
+        Get the latest AI news, implementation guides, and industry insights.
+      </p>
+      <form class="footer-subscribe-form">
+        <input 
+          type="email" 
+          placeholder="Email address" 
+          required 
+          class="footer-input"
+        />
+        <button type="submit" class="footer-submit">Subscribe</button>
+      </form>
+    </div>
+    
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-container">
+      <div class="footer-copyright">
+        <p>&copy; 2025 intelio</p>
       </div>
-      <div class="flex items-end justify-between">
-        <div class="text-2xl font-medium text-white">intelio</div>
-        <div class="text-sm text-white/60">© 2025 intelio</div>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <span class="divider">|</span>
+        <a href="/terms">Terms of Use</a>
+        <span class="divider">|</span>
+        <a href="/cookies">Cookie Preferences</a>
       </div>
     </div>
   </div>
+  
 </footer>
 
 <style>
-  /* Footer solid black background */
-</style>
+  /* Footer */
+  .footer {
+    background: #F5F5F5;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: clamp(80px, 10vw, 120px) 24px 40px;
+    position: relative;
+    overflow: hidden;
+  }
 
+  /* Background Logo Watermark */
+  .footer::before {
+    content: 'intelio';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(200px, 30vw, 500px);
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.05);  /* Very subtle opacity */
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Company Logo Section */
+  .footer-company {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 24px 0;
+  }
+
+  /* Social Icons */
+  .footer-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .footer-social a:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
+  }
+
+  .footer-social svg {
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+  }
+
+  /* Footer Sections */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-heading {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000000;
+    margin: 0 0 20px 0;
+  }
+
+  /* Footer Links */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #000000;
+  }
+
+  /* Subscribe Section */
+  .footer-subscribe-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+  }
+
+  .footer-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-input {
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #000000;
+    transition: all 0.2s ease;
+  }
+
+  .footer-input:focus {
+    outline: none;
+    border-color: #0052CC;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+  }
+
+  .footer-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .footer-submit {
+    padding: 12px 16px;
+    background: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .footer-submit:hover {
+    background: rgba(0, 82, 204, 0.9);
+    transform: translateY(-2px);
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .footer-copyright p {
+    margin: 0;
+  }
+
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-legal a {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-legal a:hover {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .footer-legal .divider {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .footer::before {
+      font-size: clamp(150px, 25vw, 300px);
+    }
+    
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer {
+      padding: 60px 24px 24px;
+    }
+    
+    .footer::before {
+      font-size: clamp(100px, 20vw, 200px);
+      opacity: 0.03;
+    }
+    
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    
+    .footer-bottom-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-legal {
+      justify-content: center;
+    }
+  }
+</style>
