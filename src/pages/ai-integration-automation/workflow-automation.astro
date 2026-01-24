@@ -22,11 +22,11 @@ import Layout from "../../layouts/Layout.astro";
       Your browser does not support the video tag.
     </video>
     
-    <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
+    <!-- Dark Overlay for Text Readability - 70% dark -->
+    <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);"></div>
 
     <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-[720px]">
+      <div class="max-w-[900px]">
         <!-- Label -->
         <div class="mb-8">
           <span class="text-[#6366F1] text-sm font-medium tracking-[0.2em] uppercase">
@@ -35,19 +35,19 @@ import Layout from "../../layouts/Layout.astro";
         </div>
         
         <!-- Headline -->
-        <h1 class="text-[48px] lg:text-[64px] text-white leading-[1.1] mb-12 tracking-tight font-medium">
+        <h1 class="text-[48px] lg:text-[72px] text-white leading-[1.1] mb-8 tracking-[-0.02em] font-medium">
           Operational infrastructure that moves work continuously.
         </h1>
         
         <!-- Subhead -->
-        <p class="text-lg text-white/80 mb-16 leading-relaxed font-normal">
+        <p class="text-lg text-white/85 mb-12 leading-[1.7] font-normal max-w-[640px]">
           We design and build automated workflow systems that route requests, assign work, and maintain context across every handoff. Consistent execution, predictable timelines, and operational visibility—infrastructure that scales with your organization.
         </p>
         
         <!-- CTA Button -->
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
           Connect with our team
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
@@ -56,58 +56,109 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- SECTION 2: THE OPPORTUNITY -->
-  <section class="py-40 px-6 bg-white">
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
     <div class="max-w-[1200px] mx-auto">
-      <div class="max-w-[720px]">
-        <h2 class="text-[32px] md:text-[40px] text-black mb-16 font-medium">
-          The Opportunity
-        </h2>
-        <div class="space-y-8 text-lg text-[#666666] leading-relaxed font-normal">
-          <p>
-            Organizations with high-volume operational workflows have strategic opportunity: systematizing how work moves through the organization.
-          </p>
-          <p>
-            Automatic routing assigns work based on defined criteria. Context travels with every assignment. Status updates flow without manual effort. Teams focus on judgment and execution; the system handles coordination.
-          </p>
+      <div class="grid md:grid-cols-[1.5fr_1fr] gap-20 items-center">
+        <!-- Content -->
+        <div class="max-w-[720px]">
+          <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">
+            The Opportunity
+          </h2>
+          <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal">
+            <p>
+              Organizations with high-volume operational workflows have strategic opportunity: systematizing how work moves through the organization.
+            </p>
+            <p>
+              Automatic routing assigns work based on defined criteria. Context travels with every assignment. Status updates flow without manual effort. Teams focus on judgment and execution; the system handles coordination.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Image -->
+        <div class="relative">
+          <!-- IMAGE PLACEHOLDER: Opportunity Section -->
+          <img 
+            src="/images/opportunity-visual.jpg" 
+            alt="Data flow visualization"
+            class="w-full h-auto"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <div class="hidden w-full aspect-[4/5] bg-[#1A1A1A] flex items-center justify-center">
+            <span class="text-white/40 text-sm">Opportunity Visual</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: CAPABILITIES -->
-  <section class="py-40 px-6 bg-[#F5F5F5]">
+  <!-- SECTION 3: IMAGE BREAK (Visual Interstitial) -->
+  <section class="w-full h-[50vh] min-h-[400px] overflow-hidden">
+    <!-- IMAGE PLACEHOLDER: Visual Break -->
+    <img 
+      src="/images/visual-break-1.jpg" 
+      alt=""
+      class="w-full h-full object-cover object-center"
+      aria-hidden="true"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+    />
+    <div class="hidden w-full h-full bg-[#1A1A1A]"></div>
+  </section>
+
+  <!-- SECTION 4: CAPABILITIES -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
     <div class="max-w-[1200px] mx-auto">
-      <h2 class="text-[32px] md:text-[40px] text-black mb-16 font-medium">Capabilities</h2>
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Capabilities</h2>
       
-      <div class="grid md:grid-cols-2 gap-12">
+      <div class="grid md:grid-cols-2 gap-8">
         <!-- Capability 1 -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Intelligent Routing</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Intelligent Routing</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
             Requests route automatically based on defined criteria—skill, capacity, geography, complexity. Assignment happens in seconds.
           </p>
         </div>
 
         <!-- Capability 2 -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Context Preservation</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Context Preservation</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
             When work is assigned, all relevant information moves with it. Customer history, previous interactions, decision context available immediately.
           </p>
         </div>
 
         <!-- Capability 3 -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Consistent Execution</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Consistent Execution</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
             Same workflow, same rules, every time. Predictable timelines, uniform response times, measurable outcomes.
           </p>
         </div>
 
         <!-- Capability 4 -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Operational Visibility</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Operational Visibility</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
             Status updates flow automatically. Requestors, managers, and stakeholders stay informed without manual coordination.
           </p>
         </div>
@@ -115,19 +166,19 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 4: ENGAGEMENT -->
-  <section class="py-40 px-6 bg-white">
+  <!-- SECTION 5: ENGAGEMENT -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
     <div class="max-w-[1200px] mx-auto">
       <div class="max-w-[720px]">
-        <h2 class="text-[32px] md:text-[40px] text-black mb-16 font-medium">Engagement</h2>
-        <div class="space-y-8 text-lg text-[#666666] leading-relaxed font-normal">
+        <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">Engagement</h2>
+        <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal">
           <p>
             We offer flexible engagement models based on your operational capacity—from workflows you own and manage to full operational partnership where we ensure continuous performance.
           </p>
-          <div class="mt-12">
-            <a href="/how-we-work" class="inline-flex items-center text-[#6366F1] hover:text-[#4F46E5] font-medium">
-              Learn about our engagement models →
-              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <div class="mt-6">
+            <a href="/how-we-work" class="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4F46E5] font-medium transition-all hover:gap-3">
+              Learn about our engagement models
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
@@ -137,49 +188,66 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 5: OUR APPROACH -->
-  <section class="py-40 px-6 bg-[#F5F5F5]">
+  <!-- SECTION 6: OUR APPROACH -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-[#F8F8F8]">
     <div class="max-w-[1200px] mx-auto">
-      <h2 class="text-[32px] md:text-[40px] text-black mb-16 font-medium">Our Approach</h2>
+      <h2 class="text-[36px] md:text-[48px] text-black mb-16 font-medium leading-[1.2]">Our Approach</h2>
       
-      <div class="grid md:grid-cols-2 gap-12 mb-16">
+      <!-- Horizontal Timeline -->
+      <div class="flex flex-col md:flex-row items-start gap-0 md:gap-0 mb-16">
         <!-- Step 1: Map -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Map</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="flex-1 px-6 md:px-8">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">01</div>
+          <h3 class="text-2xl text-black mb-3 font-medium">Map</h3>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
             Document current workflows, routing logic, and handoff points. Identify automation opportunities.
           </p>
         </div>
 
+        <!-- Connector -->
+        <div class="hidden md:block w-px h-24 bg-black/10 flex-shrink-0 mt-6"></div>
+        <div class="md:hidden w-full h-px bg-black/10 my-8"></div>
+
         <!-- Step 2: Design -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Design</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="flex-1 px-6 md:px-8">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">02</div>
+          <h3 class="text-2xl text-black mb-3 font-medium">Design</h3>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
             Define automated workflow specifications—triggers, routing rules, context requirements, escalation paths.
           </p>
         </div>
 
+        <!-- Connector -->
+        <div class="hidden md:block w-px h-24 bg-black/10 flex-shrink-0 mt-6"></div>
+        <div class="md:hidden w-full h-px bg-black/10 my-8"></div>
+
         <!-- Step 3: Build -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Build</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="flex-1 px-6 md:px-8">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">03</div>
+          <h3 class="text-2xl text-black mb-3 font-medium">Build</h3>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
             Implement workflow automation with testing against real operational scenarios.
           </p>
         </div>
 
+        <!-- Connector -->
+        <div class="hidden md:block w-px h-24 bg-black/10 flex-shrink-0 mt-6"></div>
+        <div class="md:hidden w-full h-px bg-black/10 my-8"></div>
+
         <!-- Step 4: Deploy -->
-        <div class="bg-white rounded p-10 border border-[#1A1A1A]/10">
-          <h3 class="text-2xl text-black mb-6 font-medium">Deploy</h3>
-          <p class="text-lg text-[#666666] leading-relaxed font-normal">
+        <div class="flex-1 px-6 md:px-8">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">04</div>
+          <h3 class="text-2xl text-black mb-3 font-medium">Deploy</h3>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
             Phased rollout with continuous monitoring. Refinement based on operational feedback.
           </p>
         </div>
       </div>
 
       <div class="text-center">
-        <a href="/how-we-work" class="inline-flex items-center text-[#6366F1] hover:text-[#4F46E5] font-medium">
-          Learn more about our methodology →
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <a href="/how-we-work" class="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4F46E5] font-medium transition-all hover:gap-3">
+          Learn more about our methodology
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
@@ -187,30 +255,43 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-
-  <!-- FINAL CTA SECTION -->
-  <section class="py-40 px-6 bg-white">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="max-w-[720px] mx-auto text-center">
-        <h2 class="text-[32px] md:text-[40px] text-black mb-12 font-medium">
-          Transform Your Operational Workflows
-        </h2>
-        <p class="text-lg text-[#666666] mb-16 leading-relaxed font-normal">
-          Organizations with high-volume workflows have strategic opportunity. We look forward to exploring what's possible.
-        </p>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
-          Connect with our team
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-      </div>
+  <!-- SECTION 7: CLOSING CTA -->
+  <section class="relative min-h-[50vh] flex items-center justify-center text-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <!-- IMAGE PLACEHOLDER: Closing CTA Background -->
+      <img 
+        src="/images/cta-background.jpg" 
+        alt=""
+        class="w-full h-full object-cover object-center"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      />
+      <div class="hidden w-full h-full bg-[#1A1A1A]"></div>
+    </div>
+    
+    <!-- Dark Overlay - 75% -->
+    <div class="absolute inset-0 z-[1]" style="background: rgba(0, 0, 0, 0.75);"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-[720px] px-6 py-20">
+      <h2 class="text-[32px] md:text-[48px] text-white mb-6 font-medium leading-[1.2]">
+        Transform Your Operational Workflows
+      </h2>
+      <p class="text-lg text-white/85 mb-10 leading-[1.7] font-normal">
+        Organizations with high-volume workflows have strategic opportunity. We look forward to exploring what's possible.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+        Connect with our team
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
     </div>
   </section>
 </main>
 
 <style>
-  /* Typography - Inter/Söhne for headlines */
+  /* Typography - Inter for headlines */
   h1, h2, h3 {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
@@ -241,7 +322,7 @@ import Layout from "../../layouts/Layout.astro";
     }
     
     h2 {
-      font-size: 32px !important;
+      font-size: 36px !important;
     }
   }
 

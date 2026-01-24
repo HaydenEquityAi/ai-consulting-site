@@ -2,26 +2,8 @@
 // Footer component matching the site design
 ---
 
-<footer class="relative">
+<footer class="relative" style="background-color: #000000;">
   <div class="relative h-[400px] overflow-hidden">
-    <!-- Video Background -->
-    <video 
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      webkit-playsinline="true"
-      x5-playsinline="true"
-      class="absolute inset-0 w-full h-full object-cover"
-      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
-    >
-      <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
-    </video>
-    
-    <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
-    
     <!-- Large Background Text -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[2]">
       <span class="text-[150px] md:text-[250px] font-medium text-white/10 tracking-tight">intelio</span>
@@ -30,9 +12,8 @@
     <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 h-full flex flex-col justify-between">
       <div class="grid md:grid-cols-2 gap-12">
         <div>
-          <h3 class="text-2xl font-medium mb-2">
-            <span class="text-white">intelio </span>
-            <span class="bg-gradient-to-r from-purple-300 via-pink-300 to-pink-200 bg-clip-text text-transparent" style="background-clip: text; -webkit-background-clip: text;">(the business intelligence firm)</span>
+          <h3 class="text-2xl font-medium mb-2 text-white">
+            intelio
           </h3>
           <p class="text-base text-white/80 leading-relaxed">We apply AI and automation where they create real leverage — helping businesses identify, build, and maintain the systems they rely on.</p>
         </div>
@@ -58,34 +39,6 @@
 </footer>
 
 <style>
-  /* Video background mobile fixes for footer */
-  footer video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* Ensure video containers work on mobile */
-  @media (max-width: 768px) {
-    footer video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  /* iOS Safari video fixes */
-  @supports (-webkit-touch-callout: none) {
-    footer video {
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-  }
+  /* Footer solid black background */
 </style>
 
