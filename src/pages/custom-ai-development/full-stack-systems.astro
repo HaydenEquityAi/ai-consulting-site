@@ -2,1875 +2,342 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Full-Stack Custom Systems | Intelio - AI-Powered Business Infrastructure" description="Purpose-built software from database to interface. Custom systems you own, we maintain. Built for competitive advantage, not off-the-shelf compromise.">
+<Layout title="Full-Stack Custom Systems | Intelio - Complete Platforms Built Around Your Operational Logic" description="We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works.">
 <main class="bg-white">
-  <!-- ENHANCED HERO SECTION -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+  <!-- SECTION 1: HERO -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background-color: #000000;">
     <!-- Video Background -->
     <video 
-      autoplay 
-      loop 
-      muted 
+      autoplay
+      muted
+      loop
       playsinline
-      class="absolute inset-0 w-full h-full object-cover opacity-40"
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
     >
       <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
+    
+    <!-- Dark Overlay for Text Readability - 70% dark -->
+    <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-3xl">
-        <!-- Badge -->
-        <div class="mb-6">
-          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            CUSTOM DEVELOPMENT
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-[900px]">
+        <!-- Label -->
+        <div class="mb-8">
+          <span class="text-[#6366F1] text-sm font-medium tracking-[0.2em] uppercase">
+            FULL-STACK CUSTOM SYSTEMS
           </span>
         </div>
         
         <!-- Headline -->
-        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-          The software that actually runs your business.
+        <h1 class="text-[48px] lg:text-[72px] text-white leading-[1.1] mb-8 tracking-[-0.02em] font-medium">
+          Complete platforms built around your operational logic.
         </h1>
         
-        <!-- Subtitle -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
-          Off-the-shelf tools are built for everyone—which means they're built for no one. We engineer systems from database to interface, designed around how you actually operate.
+        <!-- Subhead -->
+        <p class="text-lg text-white/85 mb-12 leading-[1.7] font-normal max-w-[640px]">
+          We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works. Custom architecture that becomes infrastructure you own.
         </p>
         
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4">
-          <a href="#how-we-work" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
-            Start a Conversation
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-          <a href="#process" class="text-white text-lg font-semibold hover:text-blue-300 transition-colors duration-200 ease-out underline decoration-2 underline-offset-4">
-            See How It Works
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- CREDIBILITY BAR -->
-  <section class="py-12 px-6 bg-white border-b border-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col items-center justify-center gap-6">
-        <p class="text-sm text-gray-500 font-medium">Trusted by operations leaders at:</p>
-        <!-- Client Logos - Infinite Scroll -->
-        <div class="logo-marquee-container w-full">
-          <div class="logo-marquee-track">
-            <!-- First set of logos -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-            <!-- Duplicate set for seamless loop -->
-            <div class="logo-marquee-item">
-              <img src="/logos/Newmark-logo.png" alt="Newmark" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">Newmark</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/hhp-grey-logo.png" alt="HHP" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">HHP</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/alliance-resource.png" alt="Alliance Resource Partners" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Alliance Resource Partners</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/manhattan-construction-logo.png" alt="Manhattan Construction" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Manhattan Construction</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/brain-body-soul-logo.png" alt="Brain Body Soul" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium text-sm" style="display:none;">Brain Body Soul</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/JLL-Logo.png" alt="JLL" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">JLL</span>
-            </div>
-            <div class="logo-marquee-item">
-              <img src="/logos/CB logo.png" alt="CB" class="logo-marquee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-              <span class="text-gray-400 font-medium" style="display:none;">CB</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRY SELECTION SECTION -->
-  <section class="py-32 px-6 bg-amber-50/30">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          Built for operations that can't afford to break
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Select your industry to see relevant examples
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 max-w-5xl mx-auto border border-gray-200 rounded-lg overflow-hidden">
-        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Real Estate & Property</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Construction & Trades</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-r border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Healthcare & Wellness</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-b border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Professional Services</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Financial Services</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Service Businesses</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center border-r border-gray-200 hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Enterprise Operations</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-        <div class="industry-box p-8 text-center hover:bg-white/60 transition-colors duration-200 ease-out cursor-pointer group">
-          <div class="relative inline-block">
-            <span class="text-base text-gray-900">Growth-Stage Companies</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200 ease-out"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM SECTION -->
-  <section class="problem-section py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 relative">
-    <div class="absolute inset-0 opacity-15 pointer-events-none" style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.15) 0%, transparent 70%);"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="grid md:grid-cols-5 gap-12 items-start">
-        <!-- Left Column: Header (40%) -->
-        <div class="md:col-span-2">
-          <h2 class="text-4xl md:text-5xl text-white mb-6">
-            Why your current approach is costing you
-          </h2>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            You're probably running on some combination of spreadsheets, disconnected tools, and institutional knowledge living in people's heads. It feels normal because every business does it. That doesn't make it less destructive.
-          </p>
-        </div>
-        
-        <!-- Right Column: Pain Items (60%) -->
-        <div class="md:col-span-3 space-y-6">
-          <!-- Pain Item 1 -->
-          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
-                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-xl text-white mb-2">Fragmented tools create fragmented reality</h3>
-                <p class="text-base text-gray-300 leading-relaxed">
-                  Three systems. Three versions of truth. Teams make decisions on incomplete information.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Pain Item 2 -->
-          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
-                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-xl text-white mb-2">Manual processes don't scale</h3>
-                <p class="text-base text-gray-300 leading-relaxed">
-                  Works with 5 people. Breaks with 50. Growth adds administrative burden, not capability.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Pain Item 3 -->
-          <div class="pain-item bg-gray-800/50 border border-gray-700/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-200 ease-out">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20">
-                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-xl text-white mb-2">Knowledge walks out the door</h3>
-                <p class="text-base text-gray-300 leading-relaxed">
-                  Critical processes live in people's heads. When they leave, so does how things work.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BEFORE/AFTER DELTA SECTION -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          What changes on Monday morning
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          This isn't theoretical value. These are real changes to how your business operates.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-0 max-w-5xl mx-auto rounded-xl overflow-hidden border border-gray-200">
-        <!-- BEFORE Column -->
-        <div class="md:col-span-1 bg-red-50/30 p-10">
-          <div class="mb-6">
-            <span class="text-xs font-bold uppercase tracking-wider text-red-600">BEFORE</span>
-          </div>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              <span class="text-base text-gray-700">Ops team reconciling 3 different systems</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              <span class="text-base text-gray-700">Leadership reviewing last month's numbers</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              <span class="text-base text-gray-700">Manual handoffs between departments</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              <span class="text-base text-gray-700">Hunting for information across tools</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              <span class="text-base text-gray-700">Quarterly system "improvements"</span>
-            </li>
-          </ul>
-        </div>
-        
-        <!-- Arrow/Divider -->
-        <div class="hidden md:flex items-center justify-center bg-white border-l border-r border-gray-200">
-          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <!-- CTA Button -->
+        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+          Connect with our team
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </div>
-        
-        <!-- AFTER Column -->
-        <div class="md:col-span-1 bg-green-50/30 p-10">
-          <div class="mb-6">
-            <span class="text-xs font-bold uppercase tracking-wider text-green-600">AFTER</span>
-          </div>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-base text-gray-700">One live operating dashboard</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-base text-gray-700">Real-time visibility into what's happening now</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-base text-gray-700">Automated routing based on business logic</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-base text-gray-700">Single source of truth, accessible anywhere</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="text-base text-gray-700">Weekly iteration cycles, continuous improvement</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Mobile Arrow -->
-      <div class="md:hidden flex items-center justify-center py-8">
-        <svg class="w-8 h-8 text-blue-600 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES / SYSTEM PROOFS SECTION -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">SYSTEMS IN PRODUCTION</span>
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          What this looks like in practice
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Real systems. Real operations. Exposed with permission.
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Case Study 1 -->
-        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="mb-5">
-            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Commercial Real Estate</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-5 leading-tight">
-            Deal Pipeline + Buyer Matching System
-          </h3>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">Problem:</span> Regional CRE firm tracking properties in spreadsheets, matching buyers manually, losing deals to faster competitors.
-            </p>
-          </div>
-          <div class="mb-6">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">System:</span> Unified property database with automated buyer-property matching and real-time pipeline visibility.
-            </p>
-          </div>
-          <div class="border-t border-gray-200 pt-4 space-y-3">
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Property tracking: 3 spreadsheets → 1 live database</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Buyer matching: manual → automated scoring</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Deal velocity: 2x faster response to new listings</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Case Study 2 -->
-        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="mb-5">
-            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Professional Services</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-5 leading-tight">
-            Client Delivery + Capacity System
-          </h3>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">Problem:</span> Growing consultancy couldn't see capacity across teams, leading to overcommitment and missed deadlines.
-            </p>
-          </div>
-          <div class="mb-6">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">System:</span> Sales pipeline connected to delivery capacity with automatic resource flagging and utilization tracking.
-            </p>
-          </div>
-          <div class="border-t border-gray-200 pt-4 space-y-3">
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Visibility: siloed teams → unified capacity view</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Forecasting: reactive → 6-week forward visibility</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Utilization: manual tracking → automated alerts</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Case Study 3 -->
-        <div class="case-study-card bg-amber-50/30 border border-gray-200/60 rounded-xl p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 ease-out">
-          <div class="mb-5">
-            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue-600 bg-blue-50 rounded-full">Healthcare Operations</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-5 leading-tight">
-            Patient Flow + Scheduling Integration
-          </h3>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">Problem:</span> Multi-location practice running disconnected scheduling tools and paper intake across 4 systems.
-            </p>
-          </div>
-          <div class="mb-6">
-            <p class="text-sm text-gray-600 leading-relaxed">
-              <span class="font-semibold text-gray-900">System:</span> Integrated scheduling, intake, and follow-up with automated patient communication workflows.
-            </p>
-          </div>
-          <div class="border-t border-gray-200 pt-4 space-y-3">
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">No-show rate: reduced 35%</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Admin time: 10+ hours/week recovered</span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-blue-600 text-sm">→</span>
-              <span class="text-sm text-gray-700">Patient data: 4 systems → 1 source of truth</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT WE BUILD SECTION -->
-  <section id="what-we-build" class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Purpose-Built Systems. Your Competitive Advantage.
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We don't configure templates or connect tools. We engineer complete systems from the database layer to the user interface. Every component is designed around how your business actually operates. Every decision is made for your advantage, not the vendor's roadmap.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1: Database Architecture -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">01</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">Database Architecture That Thinks Like Your Business</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Relational databases that capture your business logic. Deal matrices. Project tracking. Financial forecasting. A single source of truth—not a workaround.
-          </p>
-        </div>
-
-        <!-- Card 2: Intelligent Automation -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">02</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">Automation That Responds to Business Reality</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Workflows triggered by database changes. Business events routed automatically. Data synced without manual intervention. Transparent, versionable, business-logic-driven.
-          </p>
-        </div>
-
-        <!-- Card 3: Custom Interfaces -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">03</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">Interfaces Designed for How Your Team Works</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Custom React interfaces built from scratch. Real-time dashboards. Forms that guide decisions. Reports that answer the questions leadership asks. The software adapts to your team.
-          </p>
-        </div>
-
-        <!-- Card 4: Seamless Integration -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">04</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">Your Existing Tools, Now Connected</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            We integrate with what you have—CRM, accounting, scheduling. Your custom system connects all the pieces. Data flows automatically. One source of truth.
-          </p>
-        </div>
-
-        <!-- Card 5: Infrastructure -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">05</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">Deployed, Monitored, Optimized</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Docker containerization. Managed infrastructure. Deploy anywhere. Automatic backups. Security updates. Performance optimization. You own it. We maintain it.
-          </p>
-        </div>
-
-        <!-- Card 6: Intelligence -->
-        <div class="capability-card bg-gradient-to-b from-white to-gray-50 rounded-xl p-10 border-t-2 border-blue-600 border-r border-b border-l border-gray-200 hover:border-blue-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 500ms;">
-          <div class="relative mb-6">
-            <div class="capability-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">06</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center shadow-md hover:rotate-6 transition-transform duration-300">
-              <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-12 bg-gray-200 mb-4"></div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3">AI Where It Creates Leverage</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Automated scoring. Intelligent routing. Predictive analysis. Decision support. Applied precisely where it creates real business value.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS TIMELINE SECTION -->
-  <section id="process" class="py-32 px-6 bg-amber-50/30">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          From business problem to operating system
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          A disciplined process. Real building, not months of requirements gathering.
-        </p>
-      </div>
-
-      <!-- Horizontal Timeline -->
-      <div class="relative hidden md:block">
-        <!-- Connecting Line -->
-        <div class="absolute top-9 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-blue-400 to-gray-300 z-0"></div>
-        
-        <div class="grid grid-cols-4 gap-8 relative z-10">
-          <!-- Step 01 -->
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
-              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">01</span>
-            </div>
-            <h3 class="text-lg text-gray-900 mb-3">Understand</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-              Map how your business actually works—not how you think it works.
-            </p>
-            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-              1-2 weeks
-            </div>
-          </div>
-          
-          <!-- Step 02 -->
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
-              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">02</span>
-            </div>
-            <h3 class="text-lg text-gray-900 mb-3">Build</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-              Database schema. Automation workflows. React interfaces. Tested, production-ready.
-            </p>
-            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-              4-6 weeks
-            </div>
-          </div>
-          
-          <!-- Step 03 -->
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
-              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">03</span>
-            </div>
-            <h3 class="text-lg text-gray-900 mb-3">Connect</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-              Integrate existing tools, migrate data safely, go live.
-            </p>
-            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-              1-2 weeks
-            </div>
-          </div>
-          
-          <!-- Step 04 -->
-          <div class="text-center">
-            <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 ease-out group">
-              <span class="text-2xl font-bold text-blue-600 group-hover:text-white transition-colors duration-200">04</span>
-            </div>
-            <h3 class="text-lg text-gray-900 mb-3">Evolve</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-              Weekly iterations, monitoring, continuous optimization.
-            </p>
-            <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-              Ongoing
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Mobile Vertical Layout -->
-      <div class="md:hidden space-y-12">
-        <!-- Step 01 -->
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-2xl font-bold text-blue-600">01</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-3">Understand</h3>
-          <p class="text-sm text-gray-600 leading-relaxed mb-4">
-            Map how your business actually works—not how you think it works.
-          </p>
-          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-            1-2 weeks
-          </div>
-        </div>
-        
-        <!-- Step 02 -->
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-2xl font-bold text-blue-600">02</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-3">Build</h3>
-          <p class="text-sm text-gray-600 leading-relaxed mb-4">
-            Database schema. Automation workflows. React interfaces. Tested, production-ready.
-          </p>
-          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-            4-6 weeks
-          </div>
-        </div>
-        
-        <!-- Step 03 -->
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-2xl font-bold text-blue-600">03</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-3">Connect</h3>
-          <p class="text-sm text-gray-600 leading-relaxed mb-4">
-            Integrate existing tools, migrate data safely, go live.
-          </p>
-          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-            1-2 weeks
-          </div>
-        </div>
-        
-        <!-- Step 04 -->
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
-            <span class="text-2xl font-bold text-blue-600">04</span>
-          </div>
-          <h3 class="text-lg text-gray-900 mb-3">Evolve</h3>
-          <p class="text-sm text-gray-600 leading-relaxed mb-4">
-            Weekly iterations, monitoring, continuous optimization.
-          </p>
-          <div class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-            Ongoing
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARCHITECTURE PRINCIPLES SECTION -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-[1000px] mx-auto">
-      <div class="text-center mb-20">
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          Built on proven system architecture
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          We don't chase frameworks. We build on architectural principles used in mission-critical enterprise software.
-        </p>
-      </div>
-
-      <!-- Architecture Principles Grid -->
-      <div class="grid md:grid-cols-2 gap-16 md:gap-20">
-        <!-- Principle 1 -->
-        <div class="principle-block group">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            Relational Core, Not Tool Sprawl
-          </h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-8">
-            One authoritative data model that reflects how your business actually works.
-          </p>
-          <div class="flex items-center gap-6 flex-wrap">
-            <img src="/logos/Postgresql_elephant.svg.png" alt="PostgreSQL" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/supabase-logo.jpg" alt="Supabase" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/redis-logo.webp" alt="Redis" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/elastic.STcKNrQI.svg" alt="Elasticsearch" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-          </div>
-        </div>
-        
-        <!-- Principle 2 -->
-        <div class="principle-block group">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            Event-Driven Automation
-          </h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-8">
-            Systems respond to real business events, not brittle schedules or manual triggers.
-          </p>
-          <div class="flex items-center gap-6 flex-wrap">
-            <img src="/logos/n8n-logo.png" alt="n8n" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/nodejs-logo.jpeg" alt="Node.js" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-          </div>
-        </div>
-        
-        <!-- Principle 3 -->
-        <div class="principle-block group">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            Operator-First Interfaces
-          </h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-8">
-            Designed for people doing real work, not dashboards built for demos.
-          </p>
-          <div class="flex items-center gap-6 flex-wrap">
-            <img src="/logos/react-logo.webp" alt="React" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/typescript-logo.png" alt="TypeScript" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/tailwindcss-logo.png" alt="Tailwind CSS" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/nextjs-logo.svg" alt="Next.js" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-          </div>
-        </div>
-        
-        <!-- Principle 4 -->
-        <div class="principle-block group">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            Infrastructure That Doesn't Flinch
-          </h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-8">
-            Built for uptime, observability, and safe iteration.
-          </p>
-          <div class="flex items-center gap-6 flex-wrap">
-            <img src="/logos/docker-logo.webp" alt="Docker" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/aws-logo.png" alt="AWS" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/google-cloud-logo.webp" alt="Google Cloud" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-            <img src="/logos/microsoft-azure-logo.png" alt="Azure" class="h-7 opacity-50 grayscale group-hover:opacity-70 group-hover:grayscale-[50%] transition-all duration-200" onerror="this.style.display='none';">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUTCOMES & VALUE SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          What Full-Stack Systems Actually Deliver
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          This isn't theoretical value. These are real, measurable improvements to how your business operates.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Outcome 1 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 0ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">One System. One Version of Reality.</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Sales, finance, operations—all operating on the same data. No disagreement. Decisions on complete information. Speed increases immediately.
-          </p>
-        </div>
-
-        <!-- Outcome 2 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 100ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Routine Work Stops Being Manual</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Lead qualification. Customer onboarding. Invoice generation. All automated. Your team does strategic work, not administrative work. Productivity. Quality. Satisfaction—all increase.
-          </p>
-        </div>
-
-        <!-- Outcome 3 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 200ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Leadership Makes Decisions on Current Data</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Real-time dashboards. Pipeline. Revenue. Delivery. Performance. Leadership sees what's happening now. Adjusts strategy based on reality. Response time: weeks to hours.
-          </p>
-        </div>
-
-        <!-- Outcome 4 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 300ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">4</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Your Business Depends on This System</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            Your data lives here. Your team works here. Your competitive advantage is embedded here. Switching becomes impossible. That's not a problem. That's job security.
-          </p>
-        </div>
-
-        <!-- Outcome 5 -->
-        <div class="outcome-card bg-gradient-to-br from-[#1f2937] to-[#262626] rounded-xl p-10 border-l-6 border-blue-500 border-t border-r border-b border-gray-700/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 scroll-fade-in-stagger" style="animation-delay: 400ms;">
-          <div class="relative mb-6">
-            <div class="outcome-badge absolute -top-2 -right-2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">5</div>
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center shadow-lg border-2 border-blue-500/30 hover:rotate-12 hover:scale-110 transition-all duration-300">
-              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-              </svg>
-            </div>
-          </div>
-          <div class="h-0.5 w-10 bg-blue-500/30 mb-4"></div>
-          <h3 class="text-xl font-bold text-white mb-3">Scale Without Adding Friction</h3>
-          <p class="text-base text-gray-300 leading-relaxed">
-            The system that runs $1M scales to $100M. New markets. New products. New teams. The system scales with you. Growth accelerates.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRY USE CASES SECTION -->
-  <section class="py-24 px-6 bg-gradient-to-br from-black to-[#1a1a1a] relative overflow-hidden border-t border-gray-100">
-    <!-- Subtle gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-transparent pointer-events-none"></div>
-    
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          Built for Every Industry That Operates Seriously
-        </h2>
-        <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          We build for companies that understand their systems are their competitive advantage.
-        </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto space-y-4">
-        <!-- Use Case 1 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Real Estate & Property Management</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Operations platforms handling portfolios from 10 to 10,000+ properties</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Deal tracking and buyer matching at scale</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Maintenance coordination and vendor management</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial visibility across locations, property types, markets</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Compete on speed and data. Analyze deals faster. Match opportunities smarter. Coordinate seamlessly. Win the market.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 2 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Construction & Trades</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Lead-to-close pipelines with automated estimation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Crew scheduling and capacity planning</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Job costing with real-time margin tracking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Project delivery tracking with accountability</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Cash-flow business. Accurate job costing is survival. Crew scheduling is how you scale. Make money predictable.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 3 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Healthcare & Wellness</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Patient intake, scheduling, and compliance automation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Clinical workflows that reduce administrative burden</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Internal knowledge systems that prevent duplicated effort</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial tracking from scheduling to billing</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Automate compliance, scheduling, administrative overhead. Focus on patient care. Better care. Happier team. More revenue.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 4 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Professional Services</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>CRM and opportunity tracking at project level</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Project and engagement workflows with delivery tracking</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Time, billing, and profitability systems that actually work</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Knowledge management preventing duplicated effort</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Profit on utilization and delivery excellence. Track both. Accurate project profitability. Efficient resource allocation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 5 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Financial Services & Investment</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Deal tracking and pipeline visibility across teams</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Financial modeling and scenario analysis</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Portfolio dashboards with real-time performance</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Risk assessment and compliance automation</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Financial decisions depend on data quality. Portfolio performance visibility. Infrastructure for million-dollar decisions.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 6 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Service Businesses & Recurring Revenue</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Customer lifecycle management from acquisition to retention</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Route coordination and scheduling automation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Billing automation and collections processes</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Performance visibility across teams and locations</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Operational excellence. Route optimization saves thousands. Billing accuracy improves cash flow. Make recurring revenue sustainable.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 7 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Enterprise & Complex Organizations</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Cross-department integration eliminating data silos</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive-level visibility across the entire organization</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Compliance and audit automation</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Operational systems that scale to thousands of users</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Eliminate silos. Different tools, different truths, different processes. Build the integrating system that aligns the entire organization.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Use Case 8 -->
-        <div class="industry-accordion-item bg-[#1f2937]/50 backdrop-blur-sm rounded-lg border border-gray-700/50 overflow-hidden">
-          <button class="industry-accordion-header w-full flex items-center justify-between p-6 text-left hover:bg-[#1f2937]/70 transition-colors duration-200 cursor-pointer" aria-expanded="false">
-            <h3 class="text-xl font-bold text-blue-400">Growth-Stage Companies</h3>
-            <svg class="industry-accordion-chevron w-6 h-6 text-blue-400 transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="industry-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="px-6 pb-6 pt-0">
-              <p class="text-gray-300 mb-4 font-semibold">Capabilities:</p>
-              <ul class="space-y-2 mb-4 text-gray-300">
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Tool consolidation eliminating redundancy and cost</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Sales, operations, and finance systems that actually connect</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Automation reducing headcount pressure during growth</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-blue-400">•</span>
-                  <span>Executive visibility that scales with the company</span>
-                </li>
-              </ul>
-              <p class="text-gray-300 font-semibold mb-2">Why It Matters:</p>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Keep control while enabling speed. The difference between scaling to $10M and stalling at $2M.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT & PROCESS SECTION -->
-  <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-          How We Work Together
-        </h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          We don't hand off projects. We don't disappear after launch. We partner on systems that matter.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Engagement 1 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Build + Maintain</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Build. You Operate. We Support.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Complete system design and development</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Integration with your existing tools</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Full training for your team</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Monthly retainer covering infrastructure, security, weekly optimization, bug fixes</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 italic mt-6">Best for: Teams with technical capacity or operational depth. You want control and ownership.</p>
-        </div>
-
-        <!-- Engagement 2 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Build + Operate</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">We Build and Run It. You Stay in Control.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Complete system design and development</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Ongoing operational management</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Day-to-day system oversight</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Weekly optimization and improvement cycles</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Performance monitoring and quick response</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 italic mt-6">Best for: Founder-led teams, lean operations. You want the system to work without carrying the operational load.</p>
-        </div>
-
-        <!-- Engagement 3 -->
-        <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Custom Enterprise Implementation</h3>
-          <p class="text-base font-semibold text-gray-700 mb-6">Complex Needs. Sophisticated Solutions. Ongoing Partnership.</p>
-          
-          <p class="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wide">What's Included:</p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-700">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Deep discovery and strategic planning</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Custom multi-system architecture</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Phased implementation with quick wins first</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Cross-department integration and alignment</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Advanced AI and intelligence capabilities</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600">•</span>
-              <span>Compliance and security embedded</span>
-            </li>
-          </ul>
-          
-          <p class="text-sm text-gray-600 italic mt-6">Best for: Enterprise organizations, complex requirements, specialized domains.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="py-20 md:py-24 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
-      
-      <div class="border-t border-gray-200 pt-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- FAQ 1 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How long does a full-stack system take to build?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Typical timeline is 8–12 weeks from discovery to go-live. Discovery (1–2 weeks), Development (4–6 weeks), Integration (1–2 weeks), Go-live (2 weeks).
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can you integrate with our existing tools?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes, that's standard. We integrate with Salesforce, HubSpot, QuickBooks, Stripe, Slack, and more. If an integration doesn't exist, we build it.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Do we own the system?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              You own everything. The code. The data. The infrastructure. You can take it somewhere else if you want. We maintain it because it's our job, not because we're holding it hostage.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What if we need changes after launch?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Weekly iteration cycles are built into the engagement. Need a new dashboard? New automation? We do it in the weekly cycle. Small improvements are continuous.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">How much does a custom system cost?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Pricing is scoped individually based on your specific requirements. Most clients recover the investment in 6 months through operational efficiency.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">Can your system handle our volume?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes. We design for scale from day one. The system that handles 100 records handles 100M records. If you're growing to 10x in 5 years, we design for that today.
-            </div>
-          </div>
-
-          <!-- FAQ 7 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4">What about compliance and security?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Built in. Compliance automation, audit logs, role-based access control, encryption, backup strategies—these are foundational, not add-ons.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // FAQ Accordion Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const faqCards = document.querySelectorAll('.faq-card');
-      
-      faqCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const isActive = this.classList.contains('active');
-          
-          // Close all FAQ cards
-          faqCards.forEach(c => {
-            c.classList.remove('active');
-            const answer = c.querySelector('.faq-answer');
-            const chevron = c.querySelector('.faq-chevron');
-            if (answer) answer.classList.add('hidden');
-            if (chevron) chevron.style.transform = 'rotate(0deg)';
-          });
-          
-          // Open clicked card if it wasn't active
-          if (!isActive) {
-            this.classList.add('active');
-            const answer = this.querySelector('.faq-answer');
-            const chevron = this.querySelector('.faq-chevron');
-            if (answer) answer.classList.remove('hidden');
-            if (chevron) chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-
-      // Industry Accordion Functionality
-      const industryAccordions = document.querySelectorAll('.industry-accordion-item');
-      
-      industryAccordions.forEach(item => {
-        const header = item.querySelector('.industry-accordion-header');
-        const content = item.querySelector('.industry-accordion-content');
-        const chevron = item.querySelector('.industry-accordion-chevron');
-        
-        header.addEventListener('click', () => {
-          const isExpanded = header.getAttribute('aria-expanded') === 'true';
-          
-          // Close all other accordions (optional - remove if you want multiple open)
-          industryAccordions.forEach(otherItem => {
-            if (otherItem !== item) {
-              const otherHeader = otherItem.querySelector('.industry-accordion-header');
-              const otherContent = otherItem.querySelector('.industry-accordion-content');
-              const otherChevron = otherItem.querySelector('.industry-accordion-chevron');
-              
-              otherHeader.setAttribute('aria-expanded', 'false');
-              otherContent.style.maxHeight = '0';
-              otherChevron.style.transform = 'rotate(0deg)';
-            }
-          });
-          
-          // Toggle current accordion
-          if (isExpanded) {
-            header.setAttribute('aria-expanded', 'false');
-            content.style.maxHeight = '0';
-            chevron.style.transform = 'rotate(0deg)';
-          } else {
-            header.setAttribute('aria-expanded', 'true');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            chevron.style.transform = 'rotate(180deg)';
-          }
-        });
-      });
-    });
-  </script>
-
-  <style>
-    .faq-card.active .faq-answer {
-      display: block !important;
-    }
-
-    .faq-card.active .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    /* Hero Section Animations */
-    @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    .hero-gradient {
-      background: linear-gradient(-45deg, #111827, #1e3a8a, #111827, #1e40af);
-      background-size: 400% 400%;
-      animation: gradient-shift 10s ease infinite;
-    }
-
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-fade-in {
-      animation: fade-in-up 0.8s ease-out;
-    }
-
-    .hero-fade-in-delay-1 {
-      animation: fade-in-up 0.8s ease-out 0.2s both;
-    }
-
-    .hero-fade-in-delay-2 {
-      animation: fade-in-up 0.8s ease-out 0.4s both;
-    }
-
-    .hero-fade-in-delay-3 {
-      animation: fade-in-up 0.8s ease-out 0.6s both;
-    }
-
-    .hero-underline {
-      animation: fade-in-up 0.8s ease-out 0.3s both;
-      transform-origin: left;
-    }
-
-    /* Scroll Animations */
-    .scroll-fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .scroll-fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .scroll-fade-in-stagger {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .scroll-fade-in-stagger.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Problem Section Enhancements */
-    .problem-section {
-      position: relative;
-    }
-
-    .problem-accent-line {
-      height: 0;
-      opacity: 0;
-      animation: lineDrawDown 800ms ease-out 500ms forwards;
-    }
-
-    @keyframes lineDrawDown {
-      from {
-        height: 0;
-        opacity: 0;
-      }
-      to {
-        height: 100%;
-        opacity: 1;
-      }
-    }
-
-    .problem-card {
-      transition: all 0.3s ease;
-    }
-
-    .problem-icon {
-      transition: transform 0.3s ease;
-    }
-
-    .problem-card:hover .problem-icon {
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    /* Capability Cards */
-    .capability-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .capability-card:hover {
-      transform: translateY(-4px);
-    }
-
-    /* Process Steps */
-    .process-step {
-      transition: all 0.3s ease;
-    }
-
-    .step-number-circle {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .process-step:hover .step-number-circle {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Technology Stack */
-    .tech-logo-item {
-      transition: all 0.3s ease;
-    }
-
-    /* Outcome Cards */
-    .outcome-card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Use Case Cards */
-    .use-case-card {
-      transition: all 0.3s ease;
-    }
-
-    /* Industry Accordion Styles */
-    .industry-accordion-item {
-      transition: all 0.3s ease;
-    }
-
-    .industry-accordion-header {
-      user-select: none;
-    }
-
-    .industry-accordion-header:hover {
-      background-color: rgba(31, 41, 55, 0.7);
-    }
-
-    .industry-accordion-content {
-      transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    }
-
-    .industry-accordion-content[style*="max-height: 0"] {
-      opacity: 0;
-    }
-
-    .industry-accordion-chevron {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    /* Final CTA */
-    .final-cta-btn {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Reduced Motion Support */
-    @media (prefers-reduced-motion: reduce) {
-      video {
-        display: none;
-      }
-      section:first-of-type {
-        background-image: linear-gradient(to bottom right, #111827, #1f2937);
-        background-size: cover;
-        background-position: center;
-      }
-      .animate-bounce {
-        animation: none;
-      }
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      .logo-marquee-track {
-        animation: none;
-      }
-    }
-
-    /* Logo Carousel Styles */
-    .logo-marquee-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-
-    .logo-marquee-track {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      animation: logo-scroll 40s linear infinite;
-      width: fit-content;
-    }
-
-    .logo-marquee-container:hover .logo-marquee-track {
-      animation-play-state: paused;
-    }
-
-    .logo-marquee-item {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .logo-marquee-item:hover {
-      opacity: 1;
-    }
-
-    .logo-marquee-img {
-      height: 120px;
-      width: auto;
-      max-width: 200px;
-      object-fit: contain;
-      filter: grayscale(100%);
-    }
-
-    @keyframes logo-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (max-width: 1024px) {
-      .logo-marquee-img {
-        height: 100px;
-        max-width: 160px;
-      }
-      .logo-marquee-track {
-        gap: 1.25rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .logo-marquee-img {
-        height: 80px;
-        max-width: 140px;
-      }
-      .logo-marquee-track {
-        gap: 1rem;
-        animation: logo-scroll 40s linear infinite;
-      }
-    }
-  </style>
-
-  <script>
-    // Intersection Observer for scroll animations
-    document.addEventListener('DOMContentLoaded', function() {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      // Observe all scroll-fade-in elements
-      document.querySelectorAll('.scroll-fade-in, .scroll-fade-in-stagger').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
-
-  <!-- FINAL CTA SECTION -->
-  <section class="final-cta-section py-24 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 relative overflow-hidden">
-    <!-- Subtle pattern overlay -->
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-    
-    <div class="relative z-10 max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 scroll-fade-in">
-        Your Competitive Advantage Isn't Built Off-the-Shelf
-      </h2>
-      <p class="text-xl text-gray-200 mb-4 font-semibold scroll-fade-in-delay-1">
-        It's engineered exactly for how you operate.
-      </p>
-      <p class="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto scroll-fade-in-delay-2">
-        You don't need another tool. You need a system that fits your business, handles your complexity, and gives you leverage.<br><br>
-        Not software you adapt to. Software that adapts to you.
-      </p>
-      
-      <div class="flex flex-wrap gap-4 justify-center mb-8 scroll-fade-in-delay-3">
-        <a href="/contact" class="final-cta-btn inline-flex items-center px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-lg transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 group">
-          Schedule a Discovery Call
-          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
       </div>
-      
-      <p class="text-sm text-gray-400 mb-4">Or explore our other services:</p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="/custom-ai-development/intelligence-integration" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">AI Intelligence Integration</a>
-        <span class="text-gray-500">|</span>
-        <a href="/custom-ai-development/saas-product-development" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">SaaS Product Development</a>
-        <span class="text-gray-500">|</span>
-        <a href="/custom-ai-development/enterprise-builds" class="text-gray-300 hover:text-white font-medium transition-colors duration-200 underline decoration-gray-400 hover:decoration-white">Custom Enterprise Builds</a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE OPPORTUNITY -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid md:grid-cols-[1fr_1fr] gap-20 items-center">
+        <div class="max-w-[720px]">
+          <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">
+            The Opportunity
+          </h2>
+          <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal">
+            <p>
+              Organizations with unique operational requirements have strategic opportunity: purpose-built platforms that encode their specific logic directly into infrastructure.
+            </p>
+            <p>
+              Custom systems eliminate the compromises of off-the-shelf software. Workflows match how you actually operate. Data structures reflect your business model. The system becomes how you compete—not a tool you work around.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Image Placeholder -->
+        <div class="relative">
+          <img 
+            src="/images/full-stack-opportunity.jpg" 
+            alt="System architecture visualization"
+            class="w-full h-auto"
+            onerror="this.style.display='none';"
+          />
+        </div>
       </div>
     </div>
   </section>
-</main>
-</Layout>
 
+  <!-- SECTION 3: IMAGE BREAK -->
+  <section class="w-full h-[50vh] min-h-[400px] overflow-hidden">
+    <img 
+      src="/images/full-stack-visual-break.jpg" 
+      alt=""
+      class="w-full h-full object-cover object-center"
+      aria-hidden="true"
+      onerror="this.style.display='none';"
+    />
+  </section>
+
+  <!-- SECTION 4: CAPABILITIES -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Capabilities</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Capability 1: Custom Architecture -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Custom Architecture</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            System design built around your operational logic. Database structures, API design, and application architecture engineered for your specific requirements.
+          </p>
+        </div>
+
+        <!-- Capability 2: Web Applications -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Web Applications</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Customer-facing platforms, client portals, and operational dashboards. Modern, responsive interfaces that reflect your brand and serve your users.
+          </p>
+        </div>
+
+        <!-- Capability 3: Internal Tools -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Internal Tools</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Operational systems that match how your team actually works. Workflow management, resource allocation, and process automation built for your organization.
+          </p>
+        </div>
+
+        <!-- Capability 4: Data Infrastructure -->
+        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
+          <div class="mb-6">
+            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            </svg>
+          </div>
+          <h3 class="text-2xl text-white mb-4 font-medium">Data Infrastructure</h3>
+          <p class="text-base text-white/85 leading-[1.7] font-normal">
+            Database design, data pipelines, and analytics infrastructure. Systems that capture, process, and surface the information that drives decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CLIENT IMPACT -->
+  <section class="py-[120px] md:py-[160px] px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-black mb-16 font-medium leading-[1.2]">Client Impact</h2>
+      
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Impact 1 -->
+        <div class="bg-[#F8F8F8] p-10 rounded">
+          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
+            Operational Platform
+          </span>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+            A commercial real estate firm replaced 12 disconnected tools with a unified platform that reduced deal evaluation cycles from 12 days to 4 and improved buyer matching accuracy significantly.
+          </p>
+        </div>
+
+        <!-- Impact 2 -->
+        <div class="bg-[#F8F8F8] p-10 rounded">
+          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
+            Client Portal
+          </span>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+            A professional services firm launched a custom client portal that automated reporting delivery and reduced client communication overhead while improving satisfaction scores.
+          </p>
+        </div>
+
+        <!-- Impact 3 -->
+        <div class="bg-[#F8F8F8] p-10 rounded">
+          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
+            Internal System
+          </span>
+          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+            A construction company deployed a project management platform that unified field operations, accounting, and scheduling—improving project margins through real-time visibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: OUR APPROACH -->
+  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Our Approach</h2>
+      
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">01</div>
+          <h3 class="text-xl text-white mb-3 font-medium">Discover</h3>
+          <p class="text-base text-white/85 leading-[1.6] font-normal">
+            Deep understanding of your operations, workflows, and requirements.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">02</div>
+          <h3 class="text-xl text-white mb-3 font-medium">Architect</h3>
+          <p class="text-base text-white/85 leading-[1.6] font-normal">
+            System design, database structure, and technical specifications.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">03</div>
+          <h3 class="text-xl text-white mb-3 font-medium">Build</h3>
+          <p class="text-base text-white/85 leading-[1.6] font-normal">
+            Iterative development with weekly demos and continuous refinement.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center">
+          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">04</div>
+          <h3 class="text-xl text-white mb-3 font-medium">Deploy</h3>
+          <p class="text-base text-white/85 leading-[1.6] font-normal">
+            Phased rollout with training, documentation, and ongoing support.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/how-we-work" class="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4F46E5] font-medium transition-colors">
+          Learn more about our methodology
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CLOSING CTA -->
+  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/images/full-stack-cta.jpg" 
+        alt=""
+        class="w-full h-full object-cover"
+        onerror="this.style.display='none';"
+      />
+      <div class="absolute inset-0 bg-black/75"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-[720px] mx-auto px-6 text-center">
+      <h2 class="text-[36px] md:text-[48px] text-white mb-8 font-medium leading-[1.2]">
+        Build Your Custom Platform
+      </h2>
+      <p class="text-lg text-white/85 leading-[1.7] font-normal mb-10">
+        Organizations with unique operational requirements have strategic opportunity. We look forward to exploring what's possible.
+      </p>
+      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+        Connect with our team
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Typography - Inter for headlines */
+  h1, h2, h3 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Video background mobile fixes for hero section */
+  section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Ensure video containers work on mobile */
+  @media (max-width: 768px) {
+    section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: 48px !important;
+    }
+    
+    h2 {
+      font-size: 36px !important;
+    }
+
+    /* Stack approach steps on mobile */
+    .grid.md\:grid-cols-4 {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .grid.md\:grid-cols-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* iOS Safari video fixes */
+  @supports (-webkit-touch-callout: none) {
+    section video {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
+
+</Layout>
