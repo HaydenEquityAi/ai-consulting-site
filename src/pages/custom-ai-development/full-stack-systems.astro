@@ -25,23 +25,20 @@ import Layout from "../../layouts/Layout.astro";
         </div>
         
     <div class="hero-content">
-      <h1 class="hero-headline">
-        Operational infrastructure.<br />
-        Engineered from foundation.
-        </h1>
-        
+      <!-- Page title - LARGE -->
+      <h1 class="hero-title">Full-Stack Custom Systems</h1>
+      
+      <!-- Tagline - Smaller, pointed -->
       <p class="hero-tagline">
-        Competitive advantage emerges from systems that encode your 
-        specific operational logic—the decisions, workflows, and data 
-        relationships that define how you create value.
+        Operational infrastructure. Engineered from foundation.
       </p>
         
       <a href="#intro" class="hero-cta">
         Learn more
         <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -432,8 +429,11 @@ import Layout from "../../layouts/Layout.astro";
     --color-off-white: #FAFAFA;
     
     /* Accent */
-    --color-accent: #6366F1;
-    --color-accent-hover: #4F46E5;
+    --color-accent: #0EA5E9;
+    --color-accent-hover: #0284C7;
+    --color-accent-light: #38BDF8;
+    --color-accent-dark: #0369A1;
+    --color-accent-muted: rgba(14, 165, 233, 0.15);
     
     /* Text */
     --color-text-primary: #000000;
@@ -501,21 +501,22 @@ import Layout from "../../layouts/Layout.astro";
     padding: 0 24px;
   }
 
-  .hero-headline {
-    font-size: clamp(44px, 6vw, 72px);
+  /* Page title - LARGE */
+  .hero-title {
+    font-size: clamp(48px, 7vw, 72px);
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    max-width: 800px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
+  /* Tagline - Smaller, pointed */
   .hero-tagline {
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: clamp(20px, 2.5vw, 26px);
     font-weight: 400;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 600px;
     margin-bottom: 40px;
   }
@@ -617,7 +618,7 @@ import Layout from "../../layouts/Layout.astro";
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #6366F1;
+    color: #0EA5E9;
     margin-bottom: 20px;
   }
 
@@ -720,7 +721,7 @@ import Layout from "../../layouts/Layout.astro";
 
   .outcome-card {
     padding-left: 24px;
-    border-left: 2px solid #6366F1;
+    border-left: 2px solid #0EA5E9;
   }
 
   .outcome-title {
@@ -775,7 +776,7 @@ import Layout from "../../layouts/Layout.astro";
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #6366F1;
+    color: #0EA5E9;
   }
 
   .impact-title {
@@ -879,7 +880,7 @@ import Layout from "../../layouts/Layout.astro";
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #6366F1;
+    color: #0EA5E9;
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
@@ -958,7 +959,7 @@ import Layout from "../../layouts/Layout.astro";
     align-items: center;
     gap: 8px;
     padding: 16px 32px;
-    background: #6366F1;
+    background: #0EA5E9;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 500;
@@ -968,7 +969,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .cta-primary:hover {
-    background: #4F46E5;
+    background: #0284C7;
   }
 
   .cta-primary svg {
@@ -1045,7 +1046,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .faq-card.faq-open {
-    border-color: #6366F1;
+    border-color: #0EA5E9;
   }
 
   .faq-question {
@@ -1058,7 +1059,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .faq-card.faq-open .faq-question {
-    color: #6366F1;
+    color: #0EA5E9;
   }
 
   .faq-chevron-wrapper {
@@ -1070,7 +1071,7 @@ import Layout from "../../layouts/Layout.astro";
   .faq-chevron {
     width: 24px;
     height: 24px;
-    color: #6366F1;
+    color: #0EA5E9;
     transition: transform 0.3s ease;
   }
 
