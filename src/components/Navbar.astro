@@ -3,715 +3,375 @@
 // Used across ALL pages of the site
 ---
 
-<nav class="main-nav">
-  <div class="nav-container">
-    <!-- Logo -->
-    <a href="/" class="nav-logo">intelio</a>
+<nav class="navbar navbar-transparent" id="navbar">
+  <div class="navbar-container">
+    <!-- Navbar Left: Hamburger + Logo -->
+    <div class="navbar-left">
+      <button class="navbar-hamburger" id="navbar-hamburger" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <a href="/" class="navbar-logo">intelio</a>
+    </div>
     
-    <!-- Nav Items -->
-    <ul class="nav-items">
-      <!-- Capabilities - Mega Menu -->
-      <li class="nav-item has-megamenu">
-        <button class="nav-link" aria-expanded="false">
-          Capabilities
-          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        
-        <!-- Mega Menu Dropdown -->
-        <div class="megamenu">
-          <div class="megamenu-container">
-            <!-- BUILD Column -->
-            <div class="megamenu-column">
-              <h3 class="megamenu-heading">Build</h3>
-              <ul class="megamenu-links">
-                <li>
-                  <a href="/custom-ai-development/full-stack-systems">
-                    Full-Stack Custom Systems
-                  </a>
-                </li>
-                <li>
-                  <a href="/custom-ai-development/ai-intelligence-integration">
-                    AI & Intelligence Integration
-                  </a>
-                </li>
-                <li>
-                  <a href="/custom-ai-development/saas-product-development">
-                    SaaS Product Development
-                  </a>
-                </li>
-                <li>
-                  <a href="/custom-ai-development/custom-enterprise-builds">
-                    Custom Enterprise Builds
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            <!-- INTEGRATE Column -->
-            <div class="megamenu-column">
-              <h3 class="megamenu-heading">Integrate</h3>
-              <ul class="megamenu-links">
-                <li>
-                  <a href="/ai-integration-automation/workflow-automation">
-                    Workflow Orchestration
-                  </a>
-                </li>
-                <li>
-                  <a href="/ai-integration-automation/data-connectivity">
-                    Data Infrastructure
-                  </a>
-                </li>
-                <li>
-                  <a href="/ai-integration-automation/system-integration">
-                    Connected Systems
-                  </a>
-                </li>
-                <li>
-                  <a href="/ai-integration-automation/ai-enhanced-operations">
-                    AI-Enhanced Operations
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <!-- Industries - Simple Dropdown -->
-      <li class="nav-item has-dropdown">
-        <button class="nav-link" aria-expanded="false">
-          Industries
-          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        
-        <div class="dropdown">
-          <ul class="dropdown-links">
-            <li><a href="/industries/commercial-real-estate">Commercial Real Estate</a></li>
-            <li><a href="/industries/professional-services">Professional Services</a></li>
-            <li><a href="/industries/construction">Construction</a></li>
-            <li><a href="/industries/healthcare">Healthcare</a></li>
-            <li><a href="/industries/property-management">Property Management</a></li>
-            <li><a href="/industries/financial-services">Financial Services</a></li>
-          </ul>
-        </div>
-      </li>
-      
-      <!-- Standard Links -->
-      <li class="nav-item">
-        <a href="/how-we-work" class="nav-link">How We Work</a>
-      </li>
-      <li class="nav-item">
-        <a href="/case-studies" class="nav-link">Case Studies</a>
-      </li>
-      
-      <!-- Resources - Simple Dropdown -->
-      <li class="nav-item has-dropdown">
-        <button class="nav-link" aria-expanded="false">
-          Resources
-          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        
-        <div class="dropdown">
-          <ul class="dropdown-links">
-            <li><a href="/resources/insights">Insights</a></li>
-            <li><a href="/resources/tools">Tools</a></li>
-            <li><a href="/resources/glossary">Glossary</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    
-    <!-- CTA -->
-    <a href="/contact" class="nav-cta">
-      Contact
-    </a>
-    
-    <!-- Mobile Menu Button -->
-    <button type="button" id="mobile-menu-button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <!-- Navbar Right: Contact CTA -->
+    <div class="navbar-right">
+      <a href="/contact" class="navbar-cta">Contact</a>
+    </div>
   </div>
   
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu">
-    <nav class="mobile-nav">
-      <!-- Capabilities (Mobile Accordion) -->
-      <div class="mobile-accordion">
-        <button type="button" class="mobile-accordion-toggle capabilities-toggle">
-          Capabilities
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="mobile-accordion-content capabilities-submenu hidden">
-          <div class="mobile-accordion-section">
-            <h4 class="mobile-accordion-heading">Build</h4>
-            <a href="/custom-ai-development/full-stack-systems" class="mobile-link">Full-Stack Custom Systems</a>
-            <a href="/custom-ai-development/ai-intelligence-integration" class="mobile-link">AI & Intelligence Integration</a>
-            <a href="/custom-ai-development/saas-product-development" class="mobile-link">SaaS Product Development</a>
-            <a href="/custom-ai-development/custom-enterprise-builds" class="mobile-link">Custom Enterprise Builds</a>
-          </div>
-          <div class="mobile-accordion-section">
-            <h4 class="mobile-accordion-heading">Integrate</h4>
-            <a href="/ai-integration-automation/workflow-automation" class="mobile-link">Workflow Orchestration</a>
-            <a href="/ai-integration-automation/data-connectivity" class="mobile-link">Data Infrastructure</a>
-            <a href="/ai-integration-automation/system-integration" class="mobile-link">Connected Systems</a>
-            <a href="/ai-integration-automation/ai-enhanced-operations" class="mobile-link">AI-Enhanced Operations</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Industries (Mobile Accordion) -->
-      <div class="mobile-accordion">
-        <button type="button" class="mobile-accordion-toggle industries-toggle">
-          Industries
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="mobile-accordion-content industries-submenu hidden">
-          <a href="/industries/commercial-real-estate" class="mobile-link">Commercial Real Estate</a>
-          <a href="/industries/professional-services" class="mobile-link">Professional Services</a>
-          <a href="/industries/construction" class="mobile-link">Construction</a>
-          <a href="/industries/healthcare" class="mobile-link">Healthcare</a>
-          <a href="/industries/property-management" class="mobile-link">Property Management</a>
-          <a href="/industries/financial-services" class="mobile-link">Financial Services</a>
-        </div>
-      </div>
-      
-      <!-- Standard Links (Mobile) -->
-      <a href="/how-we-work" class="mobile-link">How We Work</a>
-      <a href="/case-studies" class="mobile-link">Case Studies</a>
-      
-      <!-- Resources (Mobile Accordion) -->
-      <div class="mobile-accordion">
-        <button type="button" class="mobile-accordion-toggle resources-toggle">
-          Resources
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="mobile-accordion-content resources-submenu hidden">
-          <a href="/resources/insights" class="mobile-link">Insights</a>
-          <a href="/resources/tools" class="mobile-link">Tools</a>
-          <a href="/resources/glossary" class="mobile-link">Glossary</a>
-        </div>
-      </div>
-      
-      <!-- Contact (Mobile) -->
-      <a href="/contact" class="mobile-cta">Contact</a>
+  <!-- Sidebar Menu -->
+  <div class="navbar-sidebar" id="navbar-sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <a href="/" class="sidebar-logo">intelio</a>
+      <button class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+      <a href="/custom-ai-development" class="sidebar-item">Capabilities</a>
+      <a href="/industries" class="sidebar-item">Industries</a>
+      <a href="/how-we-work" class="sidebar-item">How We Work</a>
+      <a href="/case-studies" class="sidebar-item">Case Studies</a>
+      <a href="/resources" class="sidebar-item">Resources</a>
     </nav>
+    
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer">
+      <a href="/sign-in" class="sidebar-footer-item">Sign In</a>
+      <a href="/email-subscriptions" class="sidebar-footer-item">Email Subscriptions</a>
+    </div>
   </div>
+  
+  <!-- Backdrop Overlay -->
+  <div class="navbar-backdrop" id="navbar-backdrop"></div>
 </nav>
 
 <style>
-  /* ================================
-     NAVIGATION BASE
-     ================================ */
+  /* ===== TOP NAVBAR ===== */
 
-  .main-nav {
+  .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #FFFFFF;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 20px 40px;
+    transition: background 0.3s ease;
   }
 
-  .nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 24px;
-    height: 72px;
+  .navbar-transparent {
+    background: transparent;
+  }
+
+  .navbar-scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
-  /* Logo */
-  .nav-logo {
-    font-size: 22px;
-    font-weight: 500;
-    color: #000000;
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-
-  /* Nav Items Container */
-  .nav-items {
+  /* Navbar Left: Hamburger + Logo */
+  .navbar-left {
     display: flex;
     align-items: center;
-    gap: 8px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    gap: 24px;
   }
 
-  /* Individual Nav Item */
-  .nav-item {
+  .navbar-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 8px;
+    transition: opacity 0.2s ease;
+    width: 44px;
+    height: 44px;
+  }
+
+  .navbar-hamburger:hover {
+    opacity: 0.7;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+
+  .navbar-logo:hover {
+    opacity: 0.8;
+  }
+
+  /* Navbar Right: Contact CTA */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .navbar-cta {
+    padding: 12px 24px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .navbar-cta:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+
+  /* ===== SIDEBAR HAMBURGER MENU ===== */
+
+  .navbar-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: #0A0E27; /* Dark navy/black like McKinsey */
+    z-index: 2000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Sidebar Header */
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar-logo {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 8px;
+    transition: opacity 0.2s ease;
+    width: 44px;
+    height: 44px;
+  }
+
+  .sidebar-close:hover {
+    opacity: 0.7;
+  }
+
+  /* Sidebar Navigation */
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .sidebar-item {
+    display: block;
+    padding: 16px 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
     position: relative;
   }
 
-  /* Nav Link */
-  .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 8px 16px;
-    font-size: 15px;
-    font-weight: 450;
-    color: #000000;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.15s ease;
-    font-family: inherit;
+  .sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #0EA5E9; /* Cyan on hover */
+    padding-left: 32px;
   }
 
-  .nav-link:hover {
-    color: #0EA5E9;
-  }
-
-  .nav-chevron {
-    width: 14px;
-    height: 14px;
-    transition: transform 0.2s ease;
-  }
-
-  /* Rotate chevron when menu is open */
-  .nav-item.active .nav-chevron {
-    transform: rotate(180deg);
-  }
-
-  /* CTA Button */
-  .nav-cta {
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
-    background: #000000;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-
-  .nav-cta:hover {
-    background: #1a1a1a;
-  }
-
-  /* ================================
-     MEGA MENU (Capabilities)
-     ================================ */
-
-  .megamenu {
+  .sidebar-item::before {
+    content: '';
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 12px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    pointer-events: none;
-  }
-
-  .nav-item.has-megamenu:hover .megamenu,
-  .nav-item.has-megamenu.active .megamenu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
-  .megamenu-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    padding: 32px 40px;
-    min-width: 480px;
-    box-shadow: 
-      0 4px 6px rgba(0, 0, 0, 0.04),
-      0 10px 40px rgba(0, 0, 0, 0.08);
-  }
-
-  /* Column */
-  .megamenu-column {
-    min-width: 200px;
-  }
-
-  /* Column Heading */
-  .megamenu-heading {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #0EA5E9;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  /* Links List */
-  .megamenu-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .megamenu-links li a {
-    display: block;
-    padding: 10px 0;
-    font-size: 15px;
-    font-weight: 450;
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.15s ease, padding-left 0.15s ease;
-  }
-
-  .megamenu-links li a:hover {
-    color: #0EA5E9;
-    padding-left: 4px;
-  }
-
-  /* ================================
-     SIMPLE DROPDOWN (Industries)
-     ================================ */
-
-  .dropdown {
-    position: absolute;
-    top: 100%;
     left: 0;
-    padding-top: 12px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #0EA5E9;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .sidebar-item:hover::before {
+    opacity: 1;
+  }
+
+  /* Sidebar Footer */
+  .sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+  }
+
+  .sidebar-footer-item {
+    display: block;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar-footer-item:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Backdrop Overlay */
+  .navbar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  .nav-item.has-dropdown:hover .dropdown,
-  .nav-item.has-dropdown.active .dropdown {
+  .navbar-backdrop.active {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
   }
 
-  .dropdown-links {
-    list-style: none;
-    margin: 0;
-    padding: 16px 0;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    min-width: 220px;
-    box-shadow: 
-      0 4px 6px rgba(0, 0, 0, 0.04),
-      0 10px 40px rgba(0, 0, 0, 0.08);
-  }
-
-  .dropdown-links li a {
-    display: block;
-    padding: 10px 24px;
-    font-size: 15px;
-    font-weight: 450;
-    color: #000000;
-    text-decoration: none;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-
-  .dropdown-links li a:hover {
-    background: #F8F8F8;
-    color: #0EA5E9;
-  }
-
-  /* ================================
-     MOBILE NAVIGATION
-     ================================ */
-
-  .mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    padding: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .mobile-menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background: #000000;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-
-  .mobile-menu {
-    display: none;
-    padding: 24px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    background: #FFFFFF;
-  }
-
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .mobile-accordion {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-  }
-
-  .mobile-accordion-toggle {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    font-size: 15px;
-    font-weight: 450;
-    color: #000000;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-  }
-
-  .accordion-icon {
-    font-size: 18px;
-    transition: transform 0.2s ease;
-  }
-
-  .mobile-accordion.active .accordion-icon {
-    transform: rotate(45deg);
-  }
-
-  .mobile-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .mobile-accordion.active .mobile-accordion-content {
-    max-height: 1000px;
-  }
-
-  .mobile-accordion-content.hidden {
-    display: none;
-  }
-
-  .mobile-accordion-section {
-    padding: 8px 0 8px 16px;
-  }
-
-  .mobile-accordion-heading {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #0EA5E9;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .mobile-link {
-    display: block;
-    padding: 10px 0;
-    font-size: 15px;
-    font-weight: 450;
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.15s ease;
-  }
-
-  .mobile-link:hover {
-    color: #0EA5E9;
-  }
-
-  .mobile-cta {
-    display: block;
-    padding: 12px 20px;
-    margin-top: 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #FFFFFF;
-    background: #000000;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    transition: background 0.15s ease;
-  }
-
-  .mobile-cta:hover {
-    background: #1a1a1a;
-  }
-
-  @media (max-width: 968px) {
-    .nav-items,
-    .nav-cta {
-      display: none;
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 16px 24px;
     }
     
-    .mobile-menu-toggle {
-      display: flex;
+    .navbar-sidebar {
+      width: 280px;
     }
     
-    .mobile-menu.active {
-      display: block;
+    .sidebar-item {
+      padding: 14px 20px;
     }
-  }
-
-  @media (min-width: 969px) {
-    .mobile-menu-toggle,
-    .mobile-menu {
-      display: none;
+    
+    .sidebar-item:hover {
+      padding-left: 28px;
+    }
+    
+    .navbar-logo {
+      font-size: 20px;
     }
   }
 </style>
 
 <script>
   (function() {
-    // Toggle mega menu on click (for touch devices and accessibility)
-    document.querySelectorAll('.nav-item.has-megamenu > button, .nav-item.has-dropdown > button').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const navItem = e.target.closest('.nav-item');
-        const isActive = navItem.classList.contains('active');
-        
-        // Close all other open menus
-        document.querySelectorAll('.nav-item.active').forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
-        });
-        
-        // Toggle current menu
-        if (!isActive) {
-          navItem.classList.add('active');
-          button.setAttribute('aria-expanded', 'true');
-        } else {
-          button.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-
-    // Close menus when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav-item')) {
-        document.querySelectorAll('.nav-item.active').forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
-        });
-      }
-    });
-
-    // Close menus on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.nav-item.active').forEach(item => {
-          item.classList.remove('active');
-          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
-        });
-      }
-    });
-
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('navbar-hamburger');
+    const sidebar = document.getElementById('navbar-sidebar');
+    const closeBtn = document.getElementById('sidebar-close');
+    const backdrop = document.getElementById('navbar-backdrop');
     
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const isActive = mobileMenu.classList.contains('active');
-        mobileMenu.classList.toggle('active');
-        mobileMenuButton.setAttribute('aria-expanded', isActive ? 'false' : 'true');
-        
-        // Toggle body scroll lock
-        if (isActive) {
-          document.body.classList.remove('menu-open');
-        } else {
-          document.body.classList.add('menu-open');
-        }
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && mobileMenu.classList.contains('active')) {
-          mobileMenu.classList.remove('active');
-          mobileMenuButton.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-        }
+    // Scroll handler for navbar background
+    let lastScroll = 0;
+    function handleScroll() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > 50) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('navbar-transparent');
+      }
+      
+      lastScroll = currentScroll;
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on load
+    
+    // Open sidebar
+    if (hamburger && sidebar && backdrop) {
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.add('open');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
       });
     }
-
-    // Mobile accordion toggles
-    const capabilitiesToggle = document.querySelector('.capabilities-toggle');
-    const capabilitiesSubmenu = document.querySelector('.capabilities-submenu');
-    const industriesToggle = document.querySelector('.industries-toggle');
-    const industriesSubmenu = document.querySelector('.industries-submenu');
-
-    if (capabilitiesToggle && capabilitiesSubmenu) {
-      capabilitiesToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const accordion = capabilitiesToggle.closest('.mobile-accordion');
-        accordion?.classList.toggle('active');
-        capabilitiesSubmenu.classList.toggle('hidden');
-      });
+    
+    // Close sidebar
+    function closeSidebar() {
+      if (sidebar) sidebar.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('active');
+      document.body.style.overflow = '';
     }
-
-    if (industriesToggle && industriesSubmenu) {
-      industriesToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const accordion = industriesToggle.closest('.mobile-accordion');
-        accordion?.classList.toggle('active');
-        industriesSubmenu.classList.toggle('hidden');
-      });
+    
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeSidebar);
     }
-
-    const resourcesToggle = document.querySelector('.resources-toggle');
-    const resourcesSubmenu = document.querySelector('.resources-submenu');
-
-    if (resourcesToggle && resourcesSubmenu) {
-      resourcesToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const accordion = resourcesToggle.closest('.mobile-accordion');
-        accordion?.classList.toggle('active');
-        resourcesSubmenu.classList.toggle('hidden');
-      });
+    
+    if (backdrop) {
+      backdrop.addEventListener('click', closeSidebar);
     }
-
-    // Close mobile menu when a link is clicked
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-    mobileLinks.forEach(link => {
+    
+    // Close sidebar on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) {
+        closeSidebar();
+      }
+    });
+    
+    // Close sidebar when clicking a link
+    const sidebarLinks = document.querySelectorAll('.sidebar-item, .sidebar-footer-item');
+    sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (mobileMenu) {
-          mobileMenu.classList.remove('active');
-          mobileMenuButton?.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-        }
+        closeSidebar();
       });
     });
   })();
 </script>
-
-<style>
-  /* Prevent body scroll when mobile menu is open */
-  body.menu-open {
-    overflow: hidden;
-  }
-</style>
