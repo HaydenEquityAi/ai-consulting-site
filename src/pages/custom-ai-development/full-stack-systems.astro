@@ -37,20 +37,37 @@ import Layout from "../../layouts/Layout.astro";
         Learn more
         <svg class="cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </a>
+            </svg>
+          </a>
     </div>
   </section>
 
   <!-- SECTION 2: INTRO SECTION -->
   <section id="intro" class="intro-section">
     <div class="intro-container">
-      <p class="intro-text">
+      <!-- Primary Statement - Large -->
+      <h2 class="intro-headline">
         intelio engineers complete platforms from data architecture to 
-        interface. Systems designed around the specific logic of how your 
-        organization operates and competes. Owned. Controlled. Evolved 
-        on your terms.
-      </p>
+        interface. Systems designed around the specific logic of how 
+        your organization operates and competes.
+        </h2>
+      
+      <!-- Supporting Copy - Smaller -->
+      <div class="intro-body">
+        <p>
+          We build operational infrastructure that encodes your specific 
+          business logic—the decisions, workflows, and data relationships 
+          that define how you create value. Organizations that encode 
+          their specific business logic into custom systems create 
+          advantages that compound over time. Data flows where it needs 
+          to go. Decisions happen at the speed of the business. The 
+          system evolves as you grow—not against you.
+        </p>
+        <p class="intro-emphasis">
+          This is the difference between adapting to software and 
+          software that adapts to you.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -63,7 +80,7 @@ import Layout from "../../layouts/Layout.astro";
         <h2 class="section-headline">
           When your operational infrastructure is purpose-built, 
           it becomes a moat.
-          </h2>
+        </h2>
         
         <p class="body-text">
           Organizations that encode their specific business logic into 
@@ -76,8 +93,8 @@ import Layout from "../../layouts/Layout.astro";
           This is the difference between adapting to software and 
           software that adapts to you.
         </p>
-          </div>
-          
+        </div>
+        
       <!-- Image -->
       <div class="advantage-image">
         <img 
@@ -112,9 +129,9 @@ import Layout from "../../layouts/Layout.astro";
             One authoritative view of operations, accessible in real-time 
             by every stakeholder who needs it. No more reconciling 
             systems or chasing updates.
-        </p>
+          </p>
         </div>
-        
+
         <div class="outcome-card">
           <h3 class="outcome-title">Automated Coordination</h3>
           <p class="outcome-description">
@@ -122,27 +139,27 @@ import Layout from "../../layouts/Layout.astro";
             intervention. Routing, escalation, and handoffs happen 
             systematically.
           </p>
-      </div>
-      
+        </div>
+
         <div class="outcome-card">
           <h3 class="outcome-title">Embedded Business Logic</h3>
           <p class="outcome-description">
             Your specific operational rules encoded into the system. 
             Decisions made consistently, at scale, according to how 
             you actually operate.
-        </p>
-      </div>
-      
+          </p>
+        </div>
+
         <div class="outcome-card">
           <h3 class="outcome-title">Continuous Evolution</h3>
           <p class="outcome-description">
             Weekly improvement cycles, not quarterly projects. The 
             system adapts as your business learns and market 
             conditions change.
-            </p>
-          </div>
-          </div>
-            </div>
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SECTION 6: EXAMPLES OF OUR IMPACT -->
@@ -154,7 +171,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="impact-card">
           <div class="impact-header">
             <span class="impact-industry">Commercial Real Estate</span>
-          </div>
+            </div>
           <h3 class="impact-title">Deal Intelligence Platform</h3>
           <p class="impact-narrative">
             A regional investment firm partnered with intelio to unify 
@@ -167,18 +184,18 @@ import Layout from "../../layouts/Layout.astro";
             <div class="impact-metric">
               <span class="metric-value">67%</span>
               <span class="metric-label">faster deal evaluation</span>
-          </div>
+            </div>
             <div class="impact-metric">
               <span class="metric-value">1</span>
               <span class="metric-label">source of truth (replaced 12 tools)</span>
           </div>
+            </div>
           </div>
-        </div>
-        
+          
         <div class="impact-card">
           <div class="impact-header">
             <span class="impact-industry">Professional Services</span>
-          </div>
+            </div>
           <h3 class="impact-title">Capacity Intelligence System</h3>
           <p class="impact-narrative">
             A growing advisory firm engaged intelio to connect sales 
@@ -191,15 +208,15 @@ import Layout from "../../layouts/Layout.astro";
             <div class="impact-metric">
               <span class="metric-value">6 weeks</span>
               <span class="metric-label">forward capacity visibility</span>
-          </div>
+            </div>
             <div class="impact-metric">
               <span class="metric-value">Predictive</span>
               <span class="metric-label">forecasting (was reactive)</span>
           </div>
             </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 7: OUR APPROACH -->
@@ -212,8 +229,8 @@ import Layout from "../../layouts/Layout.astro";
           user interface—designed around the specific logic of how your 
           organization operates and competes.
         </p>
-      </div>
-
+        </div>
+        
       <div class="approach-grid">
         <div class="approach-pillar">
           <h3 class="pillar-title">Data Architecture</h3>
@@ -225,7 +242,7 @@ import Layout from "../../layouts/Layout.astro";
             across the enterprise.
           </p>
         </div>
-
+        
         <div class="approach-pillar">
           <h3 class="pillar-title">Event-Driven Orchestration</h3>
           <p class="pillar-description">
@@ -235,7 +252,7 @@ import Layout from "../../layouts/Layout.astro";
             version-controlled, aligned with your operational rules.
           </p>
         </div>
-
+        
         <div class="approach-pillar">
           <h3 class="pillar-title">Operator-First Interfaces</h3>
           <p class="pillar-description">
@@ -244,7 +261,7 @@ import Layout from "../../layouts/Layout.astro";
             with appropriate context. Reports that answer the questions 
             leadership actually asks.
           </p>
-        </div>
+          </div>
 
         <div class="approach-pillar">
           <h3 class="pillar-title">Intelligence Integration</h3>
@@ -254,9 +271,9 @@ import Layout from "../../layouts/Layout.astro";
             support—embedded at specific points where human judgment is 
             augmented, not replaced.
           </p>
+          </div>
         </div>
-        </div>
-
+        
       <div class="approach-cta">
         <a href="/how-we-work" class="text-link-light">
           Learn more about our methodology
@@ -285,9 +302,9 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             <div class="faq-answer hidden">
   Full-stack applications, AI-powered platforms, SaaS products, internal tools, and enterprise systems. Database to UI—purpose-built software you own and control.
-            </div>
           </div>
-          
+        </div>
+
           <!-- FAQ 2 -->
           <div class="faq-card">
   <p class="faq-question">Who owns the code and IP?</p>
@@ -298,9 +315,9 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             <div class="faq-answer hidden">
   You do. Custom development means you own the codebase, architecture, and intellectual property outright. No licensing fees, no vendor lock-in.
-            </div>
           </div>
-          
+        </div>
+
           <!-- FAQ 3 -->
           <div class="faq-card">
   <p class="faq-question">How long does a custom build take?</p>
@@ -311,9 +328,9 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             <div class="faq-answer hidden">
   Most projects run 8–16 weeks depending on scope. Complex enterprise systems take longer. We scope timeline during discovery.
-            </div>
           </div>
-          
+        </div>
+
           <!-- FAQ 4 -->
           <div class="faq-card">
   <p class="faq-question">How is this different from a typical dev shop?</p>
@@ -324,9 +341,9 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             <div class="faq-answer hidden">
   We combine product thinking with engineering. Most dev shops build to spec. We help define what to build, architect it for scale, and stay involved to maintain and evolve it.
+          </div>
         </div>
-      </div>
-      
+
           <!-- FAQ 5 -->
           <div class="faq-card">
   <p class="faq-question">What systems can you integrate?</p>
@@ -334,7 +351,7 @@ import Layout from "../../layouts/Layout.astro";
               <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
-          </div>
+            </div>
             <div class="faq-answer hidden">
   CRMs, accounting platforms, ERPs, databases, communication tools, scheduling systems—most modern business software.
           </div>
@@ -346,41 +363,41 @@ import Layout from "../../layouts/Layout.astro";
             <div class="faq-chevron-wrapper">
               <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-          </div>
+            </svg>
+            </div>
             <div class="faq-answer hidden">
   Document processing, intelligent routing, automated decision support, natural language interfaces, and predictive workflows.
           </div>
         </div>
-        
+
           <!-- FAQ 7 -->
           <div class="faq-card">
   <p class="faq-question">What's the difference between Build + Maintain and Build + Operate?</p>
             <div class="faq-chevron-wrapper">
               <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-          </div>
+            </svg>
+            </div>
             <div class="faq-answer hidden">
   Build + Maintain: your team runs operations, we keep the system working. Build + Operate: we run it for you within clear guardrails.
           </div>
         </div>
-        
+
           <!-- FAQ 8 -->
           <div class="faq-card">
   <p class="faq-question">How do we get started?</p>
             <div class="faq-chevron-wrapper">
               <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-          </div>
+            </svg>
+            </div>
             <div class="faq-answer hidden">
   Start with a conversation. We'll clarify whether you need custom development, integration, or both—and which engagement model fits.
           </div>
+        </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 8: CLOSING CTA -->
@@ -394,7 +411,7 @@ import Layout from "../../layouts/Layout.astro";
       />
       <div class="cta-gradient-placeholder" style="display: none;"></div>
       <div class="cta-overlay"></div>
-      </div>
+        </div>
 
     <!-- Content -->
     <div class="cta-content">
@@ -567,22 +584,39 @@ import Layout from "../../layouts/Layout.astro";
   .intro-container {
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;
   }
 
-  .intro-text {
-    font-size: clamp(22px, 3vw, 28px);
+  /* Primary Statement - Large */
+  .intro-headline {
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
     color: #FFFFFF;
+    margin-bottom: 48px;
   }
 
-  .intro-text-secondary {
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 700px;
+  /* Supporting Copy - Smaller */
+  .intro-body {
+    max-width: 720px;
     margin: 0 auto;
+  }
+
+  .intro-body p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+  }
+
+  .intro-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-emphasis {
+    font-style: italic;
+    color: #FFFFFF;
   }
 
   /* ADVANTAGE SECTION */
@@ -893,7 +927,7 @@ import Layout from "../../layouts/Layout.astro";
 
   /* CLOSING CTA SECTION */
   .cta-section {
-    position: relative;
+      position: relative;
     min-height: 55vh;
       display: flex;
       align-items: center;
@@ -909,7 +943,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .cta-background img {
-    width: 100%;
+      width: 100%;
     height: 100%;
     object-fit: cover;
   }
@@ -956,7 +990,7 @@ import Layout from "../../layouts/Layout.astro";
 
   .cta-primary {
     display: inline-flex;
-    align-items: center;
+      align-items: center;
     gap: 8px;
     padding: 16px 32px;
     background: #0EA5E9;
