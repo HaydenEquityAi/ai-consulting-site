@@ -142,6 +142,13 @@ import Layout from "../layouts/Layout.astro";
           >
             <source id="featured-video-source" src="/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4" type="video/mp4">
           </video>
+          <img 
+            id="featured-image"
+            src=""
+            alt=""
+            class="featured-image-img"
+            style="display: none;"
+          />
         </div>
         
         <div class="featured-info">
@@ -859,6 +866,12 @@ import Layout from "../layouts/Layout.astro";
     object-fit: cover;
   }
 
+  .featured-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   /* Info */
   .featured-info {
     padding: 20px 0;
@@ -1335,14 +1348,14 @@ import Layout from "../layouts/Layout.astro";
         headline: "Future-proof your foundation",
         title: "intelio Technology",
         description: "We work with organizations to establish a business-backed architecture, ensure data ubiquity, leverage advanced analytics, and set up cyber and data privacy defenses that preempt evolving threats.",
-        video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
+        image: "/logos/intelio-technology.webp",
         link: "/ai-integration-automation"
       },
       {
         headline: "Tech-powered growth",
         title: "Growth, Marketing & Sales",
         description: "We help our clients transform their marketing and sales capabilities with tech and AI to capture above-market growth.",
-        video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
+        image: "/logos/intelio-growth-marketing-sales.webp",
         link: "/ai-integration-automation/workflow-automation"
       }
     ];
@@ -1362,6 +1375,7 @@ import Layout from "../layouts/Layout.astro";
     const headlineEl = document.getElementById('featured-headline');
     const videoEl = document.getElementById('featured-video');
     const videoSourceEl = document.getElementById('featured-video-source');
+    const imageEl = document.getElementById('featured-image');
     const cardElForLink = document.getElementById('featured-card');
     const titleEl = document.getElementById('featured-title');
     const descriptionEl = document.getElementById('featured-description');
@@ -1382,10 +1396,24 @@ import Layout from "../layouts/Layout.astro";
         }, 150);
       }
       
-      // Update video
-      if (videoSourceEl && videoEl) {
+      // Update video or image
+      if (slide.image && imageEl) {
+        // Show image, hide video
+        imageEl.src = slide.image;
+        imageEl.alt = slide.title || '';
+        imageEl.style.display = 'block';
+        if (videoEl) {
+          videoEl.style.display = 'none';
+          videoEl.pause();
+        }
+      } else if (slide.video && videoSourceEl && videoEl) {
+        // Show video, hide image
         videoSourceEl.src = slide.video;
         videoEl.load();
+        videoEl.style.display = 'block';
+        if (imageEl) {
+          imageEl.style.display = 'none';
+        }
       }
       
       // Update card link and title
