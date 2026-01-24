@@ -80,8 +80,8 @@ import Layout from "../layouts/Layout.astro";
     <div class="approach-header">
       <span class="section-label">OUR APPROACH</span>
       <h2 class="approach-headline">
-        There's no shortcut. It takes architecture, implementation, 
-        and partnership moving together.
+        There's no shortcut. It takes strategy, technology, 
+        and people moving together.
       </h2>
     </div>
     
@@ -91,10 +91,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="approach-image">
           <div class="image-placeholder" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f1a 100%);"></div>
         </div>
-        <h3 class="approach-title">Architecture that fits</h3>
+        <h3 class="approach-title">Strategy that reimagines</h3>
         <p class="approach-description">
-          We design systems around your specific business logic—not 
-          generic templates you'll outgrow in six months.
+          We help you reimagine business models to ensure tech serves your biggest opportunities.
         </p>
       </div>
       
@@ -102,10 +101,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="approach-image">
           <div class="image-placeholder" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f1a 100%);"></div>
         </div>
-        <h3 class="approach-title">Implementation that delivers</h3>
+        <h3 class="approach-title">Technology that delivers</h3>
         <p class="approach-description">
-          Working software every week. Real progress you can see, test, 
-          and refine—not a big reveal after months of silence.
+          We build and embed the latest AI and tech solutions with your teams, and drive value, speed, and measurable results.
         </p>
       </div>
       
@@ -113,10 +111,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="approach-image">
           <div class="image-placeholder" style="background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0f0f1a 100%);"></div>
         </div>
-        <h3 class="approach-title">Partnership that lasts</h3>
+        <h3 class="approach-title">Change that scales</h3>
         <p class="approach-description">
-          We stay engaged until the system is actually working in your 
-          operations—and evolve it as your business grows.
+          We partner with you to build the skills and momentum to drive lasting impact.
         </p>
       </div>
       
@@ -301,9 +298,17 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
-  /* CAPABILITIES SECTION */
+  /* CAPABILITIES SECTION - Full-width white background */
   .capabilities-section {
     background: #FFFFFF;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Full-width background that extends edge-to-edge */
+    /* Inner content remains constrained by Tailwind max-w-7xl class */
   }
 
   .logo-carousel-container {
