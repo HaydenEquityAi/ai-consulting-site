@@ -19,7 +19,7 @@
     
     <!-- Navbar Right: Sign In, Subscribe, Contact -->
     <div class="navbar-right">
-      <a href="/sign-in" class="navbar-link">Sign In</a>
+      <a href="#" class="navbar-link" id="navbar-signin-btn">Sign In</a>
       <span class="navbar-divider">|</span>
       <a href="/email-subscriptions" class="navbar-link">Subscribe</a>
       <a href="/contact" class="navbar-cta">Contact</a>
@@ -93,7 +93,7 @@
     
     <!-- Footer -->
     <div class="sidebar-footer">
-      <a href="/sign-in" class="sidebar-footer-item">
+      <a href="#" class="sidebar-footer-item" id="sidebar-signin-btn">
         Sign In
       </a>
       <a href="/email-subscriptions" class="sidebar-footer-item">
@@ -649,12 +649,40 @@
       });
     }
     
-    // Close sidebar when clicking a link
-    const sidebarLinks = document.querySelectorAll('.sidebar-nav-item[href], .sidebar-submenu-item, .sidebar-footer-item');
+    // Close sidebar when clicking a link (except Sign In button)
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav-item[href], .sidebar-submenu-item, .sidebar-footer-item:not(#sidebar-signin-btn)');
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
         closeSidebar();
       });
     });
+    
+    // Sign In Modal Handler
+    const signInBtn = document.getElementById('navbar-signin-btn');
+    const sidebarSignInBtn = document.getElementById('sidebar-signin-btn');
+    
+    function openSignInModal() {
+      if (window.openSignInModal) {
+        window.openSignInModal();
+      }
+    }
+    
+    if (signInBtn) {
+      signInBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openSignInModal();
+      });
+    }
+    
+    // Also handle sidebar Sign In button
+    if (sidebarSignInBtn) {
+      sidebarSignInBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeSidebar();
+        setTimeout(() => {
+          openSignInModal();
+        }, 300); // Wait for sidebar to close
+      });
+    }
   })();
 </script>

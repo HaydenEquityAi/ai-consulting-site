@@ -1,0 +1,431 @@
+---
+// Sign In Modal Component
+---
+
+<div class="signin-modal" id="signin-modal">
+  <!-- Backdrop -->
+  <div 
+    class="modal-backdrop"
+    id="signin-backdrop"
+    aria-hidden="true"
+  />
+
+  <!-- Modal Dialog -->
+  <div class="modal-dialog" role="dialog" aria-modal="true" id="signin-dialog">
+    <div class="modal-content">
+      
+      <!-- Close Button -->
+      <button
+        class="modal-close-btn"
+        id="signin-close-btn"
+        aria-label="Close"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Sign in or Create an account</h2>
+        <p class="modal-subtitle">
+          If you have an account, your password will be requested.
+        </p>
+      </div>
+
+      <!-- Email Form -->
+      <form class="modal-form" id="signin-email-form">
+        <div class="form-group">
+          <label for="signin-email" class="form-label">Email address</label>
+          <input
+            id="signin-email"
+            type="email"
+            placeholder="your@email.com"
+            required
+            class="form-input"
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn-continue"
+          id="signin-continue-btn"
+        >
+          Continue
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="modal-divider">
+        <span>Or</span>
+      </div>
+
+      <!-- Social Login Buttons -->
+      <div class="social-login-group">
+        <button class="social-btn apple-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.05 13.5c-.73 0-1.38.35-1.8.88-.42-.53-1.07-.88-1.8-.88-1.66 0-3 1.34-3 3s1.34 3 3 3c.73 0 1.38-.35 1.8-.88.42.53 1.07.88 1.8.88 1.66 0 3-1.34 3-3s-1.34-3-3-3z"/>
+          </svg>
+          Continue with Apple
+        </button>
+
+        <button class="social-btn google-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.545 10.239v3.821h5.445c-0.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032 0-3.331 2.701-6.032 6.032-6.032 1.498 0 2.866 0.549 3.921 1.453l2.814-2.814c2.031-1.908 4.741-3.081 7.542-3.081-0.035 0-0.089 0-0.124 0 0 0 0 0 0 0-8.294 0-15 6.706-15 15s6.706 15 15 15c8.294 0 15-6.706 15-15 0-1.061-0.108-2.096-0.309-3.106z"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <button class="social-btn linkedin-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.5v8.5h2.5v-4.34c0-.77.62-1.4 1.4-1.4a1.4 1.4 0 0 1 1.4 1.4v4.34h2.5M6.5 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-1 13.5h2.5v-8.5h-2.5v8.5z"/>
+          </svg>
+          Continue with LinkedIn
+        </button>
+
+        <button class="social-btn sso-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+          Continue with SSO
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Sign In Modal Container */
+  .signin-modal {
+    display: none;
+  }
+
+  .signin-modal.open {
+    display: block;
+  }
+
+  /* Modal Backdrop */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  /* Modal Dialog */
+  .modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: slideUp 0.4s ease-out;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  /* Close Button */
+  .modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+  }
+
+  .modal-close-btn:hover {
+    opacity: 0.7;
+  }
+
+  .modal-close-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+  }
+
+  /* Modal Header */
+  .modal-header {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .modal-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+  }
+
+  .modal-subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Form */
+  .modal-form {
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-label {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #0052CC;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background: #FFFFFF;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #0052CC;
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+  }
+
+  .form-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Continue Button */
+  .btn-continue {
+    width: 100%;
+    padding: 14px 16px;
+    background: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-continue:hover:not(:disabled) {
+    background: rgba(0, 82, 204, 0.95);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
+  }
+
+  .btn-continue:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  /* Divider */
+  .modal-divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+  }
+
+  .modal-divider::before,
+  .modal-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .modal-divider::before {
+    margin-right: 16px;
+  }
+
+  .modal-divider::after {
+    margin-left: 16px;
+  }
+
+  /* Social Login Group */
+  .social-login-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .social-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .social-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .modal-content {
+      margin: 24px;
+      max-width: calc(100% - 48px);
+      padding: 32px 24px;
+    }
+    
+    .modal-title {
+      font-size: 24px;
+    }
+    
+    .modal-subtitle {
+      font-size: 13px;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const modal = document.getElementById('signin-modal');
+    const backdrop = document.getElementById('signin-backdrop');
+    const dialog = document.getElementById('signin-dialog');
+    const closeBtn = document.getElementById('signin-close-btn');
+    const emailForm = document.getElementById('signin-email-form');
+    const continueBtn = document.getElementById('signin-continue-btn');
+
+    // Open modal function
+    function openModal() {
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    // Close modal function
+    function closeModal() {
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close button
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    // Backdrop click
+    if (backdrop) {
+      backdrop.addEventListener('click', closeModal);
+    }
+
+    // Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+
+    // Form submission
+    if (emailForm) {
+      emailForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('signin-email');
+        if (emailInput) {
+          const email = emailInput.value;
+          console.log('Email submitted:', email);
+          // Add your email login logic here
+          // For now, just show loading state
+          if (continueBtn) {
+            continueBtn.disabled = true;
+            continueBtn.textContent = 'Loading...';
+            setTimeout(() => {
+              continueBtn.disabled = false;
+              continueBtn.textContent = 'Continue';
+            }, 2000);
+          }
+        }
+      });
+    }
+
+    // Expose openModal globally so Navbar can call it
+    window.openSignInModal = openModal;
+    window.closeSignInModal = closeModal;
+  })();
+</script>
+

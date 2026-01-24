@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import SignInModal from "../components/SignInModal.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -30,6 +31,7 @@ const { title, description = "AI consultancy and development firm, bringing comp
     <Navbar />
     <slot />
     <Footer />
+    <SignInModal />
     
     <!-- Floating Chat Widget -->
     <div class="floating-chat-widget">
