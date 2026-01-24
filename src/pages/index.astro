@@ -190,6 +190,111 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </section>
 
+<!-- TECH & AI CASE STUDIES SECTION -->
+<section class="case-studies-section">
+  <div class="case-studies-container">
+    
+    <div class="case-studies-header">
+      <span class="section-label">TECH & AI CASE STUDIES</span>
+      <h2 class="case-studies-headline">Ambition in action</h2>
+    </div>
+    
+    <div class="case-studies-grid">
+      
+      <!-- Left Column -->
+      <div class="case-studies-column case-studies-column-left">
+        
+        <!-- Card 1 - Tall -->
+        <a href="/case-studies/deal-intelligence-platform" class="case-card case-card-tall">
+          <div class="case-card-image">
+            <div class="case-card-image-placeholder" style="background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #0891b2 100%);"></div>
+          </div>
+          <div class="case-card-content">
+            <span class="case-card-industry">Commercial Real Estate</span>
+            <h3 class="case-card-headline">
+              Regional investment firm unifies deal flow and accelerates evaluation by 67% <span class="arrow">›</span>
+            </h3>
+          </div>
+        </a>
+        
+        <!-- Card 4 - Medium -->
+        <a href="/case-studies/construction-automation" class="case-card">
+          <div class="case-card-image">
+            <div class="case-card-image-placeholder" style="background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);"></div>
+          </div>
+          <div class="case-card-content">
+            <span class="case-card-industry">Construction</span>
+            <h3 class="case-card-headline">
+              Construction firm automates project handoffs—reducing delays and rework <span class="arrow">›</span>
+            </h3>
+          </div>
+        </a>
+        
+      </div>
+      
+      <!-- Middle Column -->
+      <div class="case-studies-column case-studies-column-middle">
+        
+        <!-- Card 2 - Medium -->
+        <a href="/case-studies/capacity-intelligence-system" class="case-card">
+          <div class="case-card-image">
+            <div class="case-card-image-placeholder" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0e7490 100%);"></div>
+          </div>
+          <div class="case-card-content">
+            <span class="case-card-industry">Professional Services</span>
+            <h3 class="case-card-headline">
+              Advisory firm connects pipeline to capacity—delivering 6-week forward visibility <span class="arrow">›</span>
+            </h3>
+          </div>
+        </a>
+        
+        <!-- Card 5 - Medium -->
+        <a href="/case-studies/financial-automation" class="case-card">
+          <div class="case-card-image">
+            <div class="case-card-image-placeholder" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);"></div>
+          </div>
+          <div class="case-card-content">
+            <span class="case-card-industry">Financial Services</span>
+            <h3 class="case-card-headline">
+              Financial services firm doubles reporting speed with automated data consolidation <span class="arrow">›</span>
+            </h3>
+          </div>
+        </a>
+        
+      </div>
+      
+      <!-- Right Column - Featured Large Card -->
+      <div class="case-studies-column case-studies-column-right">
+        
+        <!-- Card 3 - Large Featured -->
+        <a href="/case-studies/healthcare-automation" class="case-card case-card-featured">
+          <div class="case-card-image">
+            <div class="case-card-image-placeholder" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);"></div>
+          </div>
+          <div class="case-card-content">
+            <span class="case-card-industry">Healthcare</span>
+            <h3 class="case-card-headline-large">
+              Healthcare provider cuts patient scheduling errors 50% and staff coordination time 40% with intelligent automation
+            </h3>
+            <span class="case-card-cta">
+              Read the case study <span class="arrow">→</span>
+            </span>
+          </div>
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <div class="case-studies-footer">
+      <a href="/case-studies" class="case-studies-cta">
+        See all case studies
+      </a>
+    </div>
+    
+  </div>
+</section>
+
 <!-- CAPABILITIES SECTION (Moved from Hero) -->
 <section id="capabilities" class="capabilities-section pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full text-center">
@@ -814,6 +919,221 @@ import Layout from "../layouts/Layout.astro";
     
     .featured-title {
       font-size: 28px;
+    }
+  }
+
+  /* TECH & AI CASE STUDIES SECTION */
+  .case-studies-section {
+    background: #0A1628;
+    padding: clamp(80px, 10vw, 120px) 24px;
+  }
+
+  .case-studies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .case-studies-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .case-studies-section .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+  }
+
+  .case-studies-headline {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+
+  /* Grid Layout */
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .case-studies-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Base Card Styles */
+  .case-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    text-decoration: none;
+    min-height: 280px;
+    border-radius: 4px;
+  }
+
+  .case-card-tall {
+    min-height: 400px;
+  }
+
+  .case-card-featured {
+    height: 100%;
+    min-height: 580px;
+  }
+
+  /* Card Image */
+  .case-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .case-card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  .case-card:hover .case-card-image-placeholder {
+    transform: scale(1.05);
+  }
+
+  /* Card Overlay Gradient */
+  .case-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    z-index: 1;
+  }
+
+  /* Card Content */
+  .case-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+  }
+
+  .case-card-industry {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+  }
+
+  .case-card-headline {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #FFFFFF;
+  }
+
+  .case-card-headline .arrow {
+    font-weight: 400;
+  }
+
+  /* Featured Card Specific */
+  .case-card-featured .case-card-content {
+    padding: 32px;
+  }
+
+  .case-card-headline-large {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  .case-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+  }
+
+  .case-card:hover .case-card-cta {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Footer CTA */
+  .case-studies-footer {
+    text-align: center;
+  }
+
+  .case-studies-cta {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+  }
+
+  .case-studies-cta:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .case-studies-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .case-studies-column-right {
+      grid-column: span 2;
+    }
+    
+    .case-card-featured {
+      min-height: 400px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .case-studies-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .case-studies-column-right {
+      grid-column: span 1;
+    }
+    
+    .case-card {
+      min-height: 300px;
+    }
+    
+    .case-card-tall {
+      min-height: 300px;
+    }
+    
+    .case-card-featured {
+      min-height: 400px;
     }
   }
 </style>
