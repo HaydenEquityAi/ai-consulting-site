@@ -210,21 +210,42 @@ import Layout from "../../layouts/Layout.astro";
           </div>
             </div>
             </div>
-            </div>
-          </div>
+      </div>
+      
+      <!-- CTA Button -->
+      <div class="section-cta-container">
+        <a href="/case-studies" class="section-cta-button">
+          View all case studies
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- LOGOS SECTION -->
   <section class="logos-section">
     <div class="logos-container">
       <span class="logos-label">TRUSTED BY</span>
-      <div class="logos-row">
-        <img src="/logos/JLL-Black-Logo.png" alt="JLL" />
-        <img src="/logos/Newmark-Black-logo.png" alt="Newmark" />
-        <img src="/logos/Brain-body-soul-black-logo.png" alt="Therapy & Wellness" />
-        <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" />
-        <img src="/logos/Manhattan-black-logo.png" alt="Manhattan" />
-        <img src="/logos/HHP-black-logo.png" alt="HHP" />
+      
+      <div class="logos-marquee">
+        <div class="logos-track">
+          <!-- First set of logos -->
+          <img src="/logos/JLL-Black-Logo.png" alt="JLL" />
+          <img src="/logos/Newmark-Black-logo.png" alt="Newmark" />
+          <img src="/logos/Brain-body-soul-black-logo.png" alt="Therapy & Wellness" />
+          <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" />
+          <img src="/logos/Manhattan-black-logo.png" alt="Manhattan" />
+          <img src="/logos/HHP-black-logo.png" alt="HHP" />
+          <!-- Duplicate set for seamless loop -->
+          <img src="/logos/JLL-Black-Logo.png" alt="JLL" />
+          <img src="/logos/Newmark-Black-logo.png" alt="Newmark" />
+          <img src="/logos/Brain-body-soul-black-logo.png" alt="Therapy & Wellness" />
+          <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" />
+          <img src="/logos/Manhattan-black-logo.png" alt="Manhattan" />
+          <img src="/logos/HHP-black-logo.png" alt="HHP" />
+        </div>
       </div>
     </div>
   </section>
@@ -899,6 +920,40 @@ import Layout from "../../layouts/Layout.astro";
     color: rgba(255, 255, 255, 0.5);
   }
 
+  /* CTA Button */
+  .section-cta-container {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .section-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .section-cta-button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    gap: 12px;
+  }
+
+  .section-cta-button svg {
+    transition: transform 0.2s ease;
+  }
+
+  .section-cta-button:hover svg {
+    transform: translateX(2px);
+  }
+
   /* OUR APPROACH SECTION */
   .approach-section {
     background: #050505;
@@ -1153,55 +1208,109 @@ import Layout from "../../layouts/Layout.astro";
   /* LOGOS SECTION */
   .logos-section {
     background: #000000;
-    padding: 60px 24px;
+    padding: 80px 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   .logos-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
   }
 
   .logos-label {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
-  .logos-row {
+  /* Marquee container */
+  .logos-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Fade edges for seamless look */
+  .logos-marquee::before,
+  .logos-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .logos-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #000000 0%, transparent 100%);
+  }
+
+  .logos-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #000000 0%, transparent 100%);
+  }
+
+  /* Scrolling track */
+  .logos-track {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
+    gap: 80px;
+    width: max-content;
+    animation: marquee 30s linear infinite;
   }
 
-  .logos-row img {
-    height: 24px;
+  /* Pause on hover */
+  .logos-marquee:hover .logos-track {
+    animation-play-state: paused;
+  }
+
+  /* Logo images */
+  .logos-track img {
+    height: 36px;
     width: auto;
-    opacity: 0.5;
+    max-width: 140px;
+    opacity: 0.6;
     filter: grayscale(100%) brightness(2);
     transition: opacity 0.2s ease;
+    flex-shrink: 0;
   }
 
-  .logos-row img:hover {
-    opacity: 0.8;
+  .logos-track img:hover {
+    opacity: 0.9;
+  }
+
+  /* Infinite scroll animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   /* Responsive */
   @media (max-width: 768px) {
-    .logos-row {
-      gap: 32px;
+    .logos-track {
+      gap: 60px;
+      animation-duration: 20s;
     }
     
-    .logos-row img {
-      height: 20px;
+    .logos-track img {
+      height: 28px;
+    }
+    
+    .logos-marquee::before,
+    .logos-marquee::after {
+      width: 60px;
     }
   }
 
