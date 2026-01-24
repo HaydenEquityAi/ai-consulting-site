@@ -597,7 +597,10 @@ import Layout from "../../layouts/Layout.astro";
   /* INTRO SECTION */
   .intro-section {
     background: var(--color-black);
-    padding: clamp(60px, 8vw, 100px) 24px;
+    padding-top: clamp(80px, 10vw, 100px);
+    padding-bottom: clamp(40px, 6vw, 60px);
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .intro-container {
@@ -650,7 +653,7 @@ import Layout from "../../layouts/Layout.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;  /* Vertically centers content with image */
+    align-items: stretch;  /* Stretch to match image height */
   }
 
   .advantage-content {
@@ -675,13 +678,17 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .advantage-image {
-    width: 100%;
-    height: auto;
+    position: relative;
+    min-height: 450px;
+    overflow: visible;
   }
 
   .advantage-image img {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 100px);  /* Extends past container */
+    height: 100%;
     object-fit: cover;
   }
 
@@ -694,6 +701,16 @@ import Layout from "../../layouts/Layout.astro";
     
     .advantage-content {
       text-align: center;
+    }
+    
+    .advantage-image {
+      overflow: hidden;  /* Prevent overflow on mobile */
+    }
+    
+    .advantage-image img {
+      position: relative;
+      width: 100%;  /* Full width on mobile, no extension */
+      height: auto;
     }
   }
 
