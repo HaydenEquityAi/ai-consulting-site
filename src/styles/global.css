@@ -19,8 +19,14 @@
     direction: ltr;
   }
   
+  /* Ensure all headers use Figtree (matches homepage) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    text-align: inherit;
+  }
+  
   /* Ensure proper text alignment */
-  h1, h2, h3, h4, h5, h6, p {
+  p {
     text-align: inherit;
   }
   
