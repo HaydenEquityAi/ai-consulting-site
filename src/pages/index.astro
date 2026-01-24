@@ -35,46 +35,24 @@ import Layout from "../layouts/Layout.astro";
    </div>
  </section>
 
-
- <!-- AI DEVELOPMENT FIRM SECTION -->
- <section class="py-12 sm:py-16 md:py-20 bg-black text-white">
- <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
- <div class="text-center mb-8 sm:mb-12">
- <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] leading-[1.1] tracking-[-1px] mb-4 sm:mb-6 px-4">
- <span class=" text-white">intelio </span>
- <span class=" bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent">(the intelligence architects)</span>
- </h2>
- <p class="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto px-4">Custom software and AI platforms designed for how you operate. Owned by you. Evolved with you.</p>
- </div>
- 
-<!-- Logo Carousel -->
-<div class="relative overflow-hidden mb-16 py-6">
-  <div class="logo-carousel-container">
-    <div class="logo-carousel-track">
-      <!-- First set of logos -->
-      <div class="logo-carousel-slide">
-        <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
-        <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
-        <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
-        <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
-        <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
-        <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
-      </div>
-      <!-- Duplicate set for seamless loop -->
-      <div class="logo-carousel-slide" aria-hidden="true">
-        <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
-        <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
-        <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
-        <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
-        <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
-        <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
-      </div>
+<!-- ON THIS PAGE NAVIGATION -->
+<section class="page-nav-section">
+  <div class="page-nav-container">
+    <span class="page-nav-label">On this page:</span>
+    <div class="page-nav-links">
+      <a href="#our-approach" class="page-nav-link">Our approach</a>
+      <span class="page-nav-divider">|</span>
+      <a href="#featured-capabilities" class="page-nav-link">Featured capabilities</a>
+      <span class="page-nav-divider">|</span>
+      <a href="#case-studies" class="page-nav-link">Case studies</a>
+      <span class="page-nav-divider">|</span>
+      <a href="/contact" class="page-nav-link">Contact</a>
     </div>
   </div>
-</div>
+</section>
 
 <!-- OUR APPROACH SECTION -->
-<section class="approach-section">
+<section id="our-approach" class="approach-section">
   <div class="approach-container">
     
     <div class="approach-header">
@@ -130,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <!-- FEATURED CAPABILITIES CAROUSEL -->
-<section class="featured-section" id="featured-section">
+<section id="featured-capabilities" class="featured-section">
   <div class="featured-container">
     
     <span class="section-label">FEATURED CAPABILITIES</span>
@@ -198,7 +176,7 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <!-- TECH & AI CASE STUDIES SECTION -->
-<section class="case-studies-section">
+<section id="case-studies" class="case-studies-section">
   <div class="case-studies-container">
     
     <div class="case-studies-header">
@@ -376,6 +354,97 @@ import Layout from "../layouts/Layout.astro";
  </section>
 
 <style>
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* ON THIS PAGE NAVIGATION */
+  .page-nav-section {
+    background: #000000;
+    padding: 32px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 50;
+  }
+
+  .page-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .page-nav-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .page-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .page-nav-link {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .page-nav-link:hover {
+    color: #0EA5E9;
+  }
+
+  .page-nav-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+  }
+
+  /* Optional: Make sticky on scroll */
+  .page-nav-section.sticky {
+    position: fixed;
+    top: 60px; /* Below navbar */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 16px 24px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page-nav-container {
+      gap: 12px;
+    }
+    
+    .page-nav-label {
+      font-size: 13px;
+    }
+    
+    .page-nav-link {
+      font-size: 13px;
+    }
+    
+    .page-nav-divider {
+      display: none;
+    }
+    
+    .page-nav-links {
+      gap: 12px;
+    }
+  }
+
   /* NEW MCKINSEY-STYLE HERO SECTION */
   .hero-section {
     position: relative;
@@ -489,109 +558,6 @@ import Layout from "../layouts/Layout.astro";
     margin-right: -50vw;
     /* Full-width background that extends edge-to-edge */
     /* Inner content remains constrained by Tailwind max-w-7xl class */
-  }
-
-  .logo-carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .logo-carousel-track {
-    display: flex;
-    width: fit-content;
-    animation: logo-scroll 30s linear infinite;
-    will-change: transform;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .logo-carousel-slide {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    padding: 0 2rem;
-    flex-shrink: 0;
-  }
-
-  .logo-carousel-img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity 0.2s ease;
-    filter: grayscale(100%);
-  }
-
-  .logo-carousel-img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-  }
-
-  @keyframes logo-scroll {
-    0% {
-      transform: translateX(0);
-      -webkit-transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-    }
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .logo-carousel-slide {
-      gap: 2.5rem;
-      padding: 0 1.5rem;
-    }
-    
-    .logo-carousel-img {
-      height: 48px;
-    }
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .logo-carousel-slide {
-      gap: 2rem;
-      padding: 0 1rem;
-    }
-    
-    .logo-carousel-img {
-      height: 40px;
-    }
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
-  }
-
-  /* Pause on hover for better UX (desktop only) */
-  @media (hover: hover) {
-    .logo-carousel-container:hover .logo-carousel-track {
-      animation-play-state: paused;
-      -webkit-animation-play-state: paused;
-    }
-  }
-
-  /* Ensure animation works on mobile */
-  @media (prefers-reduced-motion: no-preference) {
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
   }
 
   /* OUR APPROACH SECTION */
