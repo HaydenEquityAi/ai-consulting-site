@@ -116,8 +116,8 @@ import Layout from "../../layouts/Layout.astro";
             by every stakeholder who needs it. No more reconciling 
             systems or chasing updates.
           </p>
-        </div>
-        
+          </div>
+          
         <div class="outcome-divider"></div>
         
         <div class="outcome-item">
@@ -126,8 +126,8 @@ import Layout from "../../layouts/Layout.astro";
             Business events trigger appropriate responses without manual 
             intervention. Routing, escalation, and handoffs happen 
             systematically.
-          </p>
-        </div>
+                </p>
+              </div>
         
         <div class="outcome-divider"></div>
         
@@ -137,9 +137,9 @@ import Layout from "../../layouts/Layout.astro";
             Your specific operational rules encoded into the system. 
             Decisions made consistently, at scale, according to how 
             you actually operate.
-          </p>
-        </div>
-        
+        </p>
+      </div>
+      
         <div class="outcome-divider"></div>
         
         <div class="outcome-item">
@@ -157,7 +157,10 @@ import Layout from "../../layouts/Layout.astro";
   <!-- SECTION 6: EXAMPLES OF OUR IMPACT -->
   <section class="impact-section">
     <div class="impact-container">
-      <h2 class="section-headline-light">Examples of Our Impact</h2>
+      <!-- Section Header - Centered -->
+      <div class="section-header-centered">
+        <span class="section-label">EXAMPLES OF OUR IMPACT</span>
+      </div>
       
       <div class="impact-grid">
         <div class="impact-card">
@@ -206,7 +209,35 @@ import Layout from "../../layouts/Layout.astro";
               <span class="metric-label">forecasting (was reactive)</span>
           </div>
             </div>
-        </div>
+            </div>
+            </div>
+          </div>
+  </section>
+
+  <!-- LOGO CAROUSEL -->
+  <section class="logo-carousel-section">
+    <div class="relative overflow-hidden py-12">
+      <div class="logo-carousel-container">
+        <div class="logo-carousel-track">
+          <!-- First set of logos -->
+          <div class="logo-carousel-slide">
+            <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
+            <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
+            <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
+            <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
+            <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
+            <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
+          </div>
+          <!-- Duplicate set for seamless loop -->
+          <div class="logo-carousel-slide" aria-hidden="true">
+            <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
+            <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
+            <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
+            <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
+            <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
+            <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
+          </div>
+          </div>
       </div>
     </div>
   </section>
@@ -214,13 +245,14 @@ import Layout from "../../layouts/Layout.astro";
   <!-- SECTION 7: OUR APPROACH -->
   <section class="approach-section">
     <div class="approach-container">
-      <div class="approach-intro">
-        <h2 class="section-headline-light">Our Approach</h2>
-        <p class="approach-lead">
-          We engineer complete platforms—from data architecture through 
-          user interface—designed around the specific logic of how your 
-          organization operates and competes.
-        </p>
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-label">OUR APPROACH</span>
+        <h2 class="section-headline">
+          We engineer complete platforms—from data architecture 
+          through user interface—designed around the specific 
+          logic of how your organization operates and competes.
+        </h2>
       </div>
 
       <div class="approach-grid">
@@ -266,14 +298,9 @@ import Layout from "../../layouts/Layout.astro";
         </div>
         </div>
 
-      <div class="approach-cta">
-        <a href="/how-we-work" class="text-link-light">
-          Learn more about our methodology
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-        </a>
-      </div>
+      <a href="/how-we-work" class="section-cta">
+        Learn more about our methodology →
+      </a>
     </div>
   </section>
 
@@ -419,7 +446,7 @@ import Layout from "../../layouts/Layout.astro";
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
       </a>
-    </div>
+          </div>
   </section>
 </main>
 
@@ -790,6 +817,16 @@ import Layout from "../../layouts/Layout.astro";
     margin: 0 auto;
   }
 
+  /* Section Header - Centered */
+  .section-header-centered {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-header-centered .section-label {
+    margin-bottom: 0;
+  }
+
   .impact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -870,16 +907,21 @@ import Layout from "../../layouts/Layout.astro";
     margin: 0 auto;
   }
 
-  .approach-intro {
-    max-width: 700px;
-    margin-bottom: 56px;
+  /* Section Header */
+  .section-header {
+    margin-bottom: 64px;
   }
 
-  .approach-lead {
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 20px;
+  .section-header .section-label {
+    margin-bottom: 24px;
+  }
+
+  .section-header .section-headline {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    max-width: 900px;
   }
 
   .approach-grid {
@@ -912,24 +954,19 @@ import Layout from "../../layouts/Layout.astro";
     color: rgba(255, 255, 255, 0.6);
   }
 
-  .approach-cta {
-    margin-top: 56px;
+  .section-cta {
+    display: block;
+    margin-top: 64px;
     text-align: center;
-  }
-
-  .text-link-light {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #0EA5E9;
-    font-size: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    transition: gap 0.2s ease;
+    transition: color 0.2s ease;
   }
 
-  .text-link-light:hover {
-    gap: 12px;
+  .section-cta:hover {
+    color: #0EA5E9;
   }
 
   /* CLOSING CTA SECTION */
@@ -1104,9 +1141,111 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .faq-chevron-wrapper {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
     margin-bottom: 16px;
+  }
+
+  /* LOGO CAROUSEL SECTION */
+  .logo-carousel-section {
+    background: #000000;
+    padding: clamp(60px, 8vw, 100px) 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .logo-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-carousel-track {
+    display: flex;
+    width: fit-content;
+    animation: logo-scroll 30s linear infinite;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .logo-carousel-slide {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 2rem;
+    flex-shrink: 0;
+  }
+
+  .logo-carousel-img {
+    height: 60px;
+      width: auto;
+      object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+      filter: grayscale(100%);
+    }
+
+  .logo-carousel-img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+    @keyframes logo-scroll {
+      0% {
+        transform: translateX(0);
+      -webkit-transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      }
+    }
+
+  /* Responsive adjustments */
+    @media (max-width: 1024px) {
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
+      }
+    }
+
+    @media (max-width: 768px) {
+    .logo-carousel-slide {
+      gap: 2.5rem;
+      padding: 0 1.5rem;
+    }
+    
+    .logo-carousel-img {
+      height: 48px;
+    }
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .logo-carousel-slide {
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .logo-carousel-img {
+      height: 40px;
+    }
+    .logo-carousel-track {
+      animation: logo-scroll 30s linear infinite;
+      -webkit-animation: logo-scroll 30s linear infinite;
+    }
+  }
+
+  /* Pause on hover for better UX (desktop only) */
+  @media (hover: hover) {
+    .logo-carousel-container:hover .logo-carousel-track {
+      animation-play-state: paused;
+      -webkit-animation-play-state: paused;
+    }
   }
 
   .faq-chevron {
