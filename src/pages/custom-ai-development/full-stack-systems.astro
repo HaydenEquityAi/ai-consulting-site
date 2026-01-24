@@ -214,30 +214,17 @@ import Layout from "../../layouts/Layout.astro";
           </div>
   </section>
 
-  <!-- LOGO CAROUSEL -->
-  <section class="logo-carousel-section">
-    <div class="relative overflow-hidden py-12">
-      <div class="logo-carousel-container">
-        <div class="logo-carousel-track">
-          <!-- First set of logos -->
-          <div class="logo-carousel-slide">
-            <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
-            <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
-            <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
-            <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
-            <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
-            <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
-          </div>
-          <!-- Duplicate set for seamless loop -->
-          <div class="logo-carousel-slide" aria-hidden="true">
-            <img src="/logos/HHP-black-logo.png" alt="HHP" class="logo-carousel-img" />
-            <img src="/logos/JLL-Black-Logo.png" alt="JLL" class="logo-carousel-img" />
-            <img src="/logos/Newmark-Black-logo.png" alt="Newmark" class="logo-carousel-img" />
-            <img src="/logos/Brain-body-soul-black-logo.png" alt="Brain Body Soul" class="logo-carousel-img" />
-            <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" class="logo-carousel-img" />
-            <img src="/logos/Manhattan-black-logo.png" alt="Manhattan Construction" class="logo-carousel-img" />
-          </div>
-          </div>
+  <!-- LOGOS SECTION -->
+  <section class="logos-section">
+    <div class="logos-container">
+      <span class="logos-label">TRUSTED BY</span>
+      <div class="logos-row">
+        <img src="/logos/JLL-Black-Logo.png" alt="JLL" />
+        <img src="/logos/Newmark-Black-logo.png" alt="Newmark" />
+        <img src="/logos/Brain-body-soul-black-logo.png" alt="Therapy & Wellness" />
+        <img src="/logos/CB-Black-logo.png" alt="Coldwell Banker" />
+        <img src="/logos/Manhattan-black-logo.png" alt="Manhattan" />
+        <img src="/logos/HHP-black-logo.png" alt="HHP" />
       </div>
     </div>
   </section>
@@ -1163,105 +1150,58 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 16px;
   }
 
-  /* LOGO CAROUSEL SECTION */
-  .logo-carousel-section {
+  /* LOGOS SECTION */
+  .logos-section {
     background: #000000;
-    padding: clamp(60px, 8vw, 100px) 24px;
+    padding: 60px 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .logo-carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
+  .logos-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .logo-carousel-track {
+  .logos-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 32px;
+  }
+
+  .logos-row {
     display: flex;
-    width: fit-content;
-    animation: logo-scroll 30s linear infinite;
-    will-change: transform;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .logo-carousel-slide {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding: 0 2rem;
-    flex-shrink: 0;
+    gap: 48px;
+    flex-wrap: wrap;
   }
 
-  .logo-carousel-img {
-    height: 60px;
-      width: auto;
-      object-fit: contain;
-    opacity: 0.7;
+  .logos-row img {
+    height: 24px;
+    width: auto;
+    opacity: 0.5;
+    filter: grayscale(100%) brightness(2);
     transition: opacity 0.2s ease;
-      filter: grayscale(100%);
-    }
-
-  .logo-carousel-img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
   }
 
-    @keyframes logo-scroll {
-      0% {
-        transform: translateX(0);
-      -webkit-transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      }
-    }
+  .logos-row img:hover {
+    opacity: 0.8;
+  }
 
-  /* Responsive adjustments */
-    @media (max-width: 1024px) {
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-      }
-    }
-
-    @media (max-width: 768px) {
-    .logo-carousel-slide {
-      gap: 2.5rem;
-      padding: 0 1.5rem;
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logos-row {
+      gap: 32px;
     }
     
-    .logo-carousel-img {
-      height: 48px;
-    }
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .logo-carousel-slide {
-      gap: 2rem;
-      padding: 0 1rem;
-    }
-    
-    .logo-carousel-img {
-      height: 40px;
-    }
-    .logo-carousel-track {
-      animation: logo-scroll 30s linear infinite;
-      -webkit-animation: logo-scroll 30s linear infinite;
-    }
-  }
-
-  /* Pause on hover for better UX (desktop only) */
-  @media (hover: hover) {
-    .logo-carousel-container:hover .logo-carousel-track {
-      animation-play-state: paused;
-      -webkit-animation-play-state: paused;
+    .logos-row img {
+      height: 20px;
     }
   }
 
