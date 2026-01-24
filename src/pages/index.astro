@@ -144,7 +144,7 @@ import Layout from "../layouts/Layout.astro";
         </svg>
       </button>
       
-      <div class="featured-content">
+      <a href="/custom-ai-development" class="featured-card" id="featured-card">
         <div class="featured-image">
           <video 
             id="featured-video"
@@ -160,14 +160,14 @@ import Layout from "../layouts/Layout.astro";
         </div>
         
         <div class="featured-info">
-          <a href="/custom-ai-development" class="featured-title" id="featured-title">
+          <h3 class="featured-title" id="featured-title">
             Custom AI Development <span class="arrow">›</span>
-          </a>
+          </h3>
           <p class="featured-description" id="featured-description">
             We combine advanced AI engineering with strategic thinking to design solutions that create real-world impact—quickly, responsibly, and at scale.
           </p>
         </div>
-      </div>
+      </a>
       
       <button 
         class="featured-nav featured-nav-next" 
@@ -744,14 +744,8 @@ import Layout from "../layouts/Layout.astro";
 
   /* FEATURED CAPABILITIES CAROUSEL */
   .featured-section {
-    background: #0A1628;
+    background: #000000;
     padding: clamp(80px, 10vw, 120px) 24px;
-    transition: background 0.4s ease, color 0.4s ease;
-  }
-
-  /* HOVER STATE - White background */
-  .featured-section.hovered {
-    background: #FFFFFF;
   }
 
   .featured-container {
@@ -768,11 +762,6 @@ import Layout from "../layouts/Layout.astro";
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 24px;
-    transition: color 0.4s ease;
-  }
-
-  .featured-section.hovered .section-label {
-    color: rgba(0, 0, 0, 0.5);
   }
 
   .featured-headline {
@@ -780,15 +769,11 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 400;
     color: #FFFFFF;
     margin-bottom: 60px;
-    min-height: 130px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.4s ease, opacity 0.3s ease;
-  }
-
-  .featured-section.hovered .featured-headline {
-    color: #000000;
+    transition: opacity 0.3s ease;
   }
 
   /* Carousel Layout */
@@ -799,7 +784,7 @@ import Layout from "../layouts/Layout.astro";
     margin-bottom: 48px;
   }
 
-  /* Navigation Arrows */
+  /* Navigation Arrows - Always white on black */
   .featured-nav {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -820,30 +805,29 @@ import Layout from "../layouts/Layout.astro";
     background: rgba(255, 255, 255, 0.05);
   }
 
-  /* Hover state - dark arrows */
-  .featured-section.hovered .featured-nav {
-    border-color: rgba(0, 0, 0, 0.2);
-    color: #000000;
-  }
-
-  .featured-section.hovered .featured-nav:hover {
-    border-color: rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.05);
-  }
-
   .featured-nav svg {
     width: 24px;
     height: 24px;
   }
 
-  /* Content Area */
-  .featured-content {
+  /* Card - This is what changes on hover */
+  .featured-card {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
     text-align: left;
+    text-decoration: none;
+    padding: 40px;
+    background: transparent;
+    border-radius: 0;
+    transition: background 0.4s ease;
+  }
+
+  /* Card hover - turns white */
+  .featured-card.hovered {
+    background: #FFFFFF;
   }
 
   /* Image/Video */
@@ -865,6 +849,7 @@ import Layout from "../layouts/Layout.astro";
     padding: 20px 0;
   }
 
+  /* Title - NO ITALICS, serif font */
   .featured-title {
     display: inline-flex;
     align-items: center;
@@ -872,31 +857,22 @@ import Layout from "../layouts/Layout.astro";
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 400;
-    font-style: italic;
     color: #FFFFFF;
-    text-decoration: none;
     margin-bottom: 24px;
-    transition: color 0.4s ease, opacity 0.2s ease;
+    transition: color 0.4s ease;
   }
 
-  .featured-section.hovered .featured-title {
-    color: #0EA5E9; /* Cyan on white background */
-  }
-
-  .featured-title:hover {
-    opacity: 0.8;
+  /* Title on card hover - turns cyan */
+  .featured-card.hovered .featured-title {
+    color: #0EA5E9;
   }
 
   .featured-title .arrow {
     font-size: 32px;
-    font-style: normal;
-    color: #FFFFFF;
-  }
-
-  .featured-section.hovered .featured-title .arrow {
     color: #0EA5E9;
   }
 
+  /* Description */
   .featured-description {
     font-size: 17px;
     line-height: 1.7;
@@ -904,7 +880,8 @@ import Layout from "../layouts/Layout.astro";
     transition: color 0.4s ease, opacity 0.3s ease;
   }
 
-  .featured-section.hovered .featured-description {
+  /* Description on card hover - turns dark */
+  .featured-card.hovered .featured-description {
     color: rgba(0, 0, 0, 0.7);
   }
 
@@ -934,24 +911,12 @@ import Layout from "../layouts/Layout.astro";
     background: #FFFFFF;
   }
 
-  /* Hover state - dark dots */
-  .featured-section.hovered .featured-dot {
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .featured-section.hovered .featured-dot:hover {
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-  .featured-section.hovered .featured-dot.active {
-    background: #000000;
-  }
-
   /* Responsive */
   @media (max-width: 968px) {
-    .featured-content {
+    .featured-card {
       grid-template-columns: 1fr;
       gap: 32px;
+      padding: 24px;
     }
     
     .featured-info {
@@ -1599,14 +1564,14 @@ import Layout from "../layouts/Layout.astro";
       }
     ];
 
-    // Hover state management
-    const sectionEl = document.getElementById('featured-section');
-    if (sectionEl) {
-      sectionEl.addEventListener('mouseenter', () => {
-        sectionEl.classList.add('hovered');
+    // Card hover state management
+    const cardEl = document.getElementById('featured-card');
+    if (cardEl) {
+      cardEl.addEventListener('mouseenter', () => {
+        cardEl.classList.add('hovered');
       });
-      sectionEl.addEventListener('mouseleave', () => {
-        sectionEl.classList.remove('hovered');
+      cardEl.addEventListener('mouseleave', () => {
+        cardEl.classList.remove('hovered');
       });
     }
 
@@ -1614,6 +1579,7 @@ import Layout from "../layouts/Layout.astro";
     const headlineEl = document.getElementById('featured-headline');
     const videoEl = document.getElementById('featured-video');
     const videoSourceEl = document.getElementById('featured-video-source');
+    const cardElForLink = document.getElementById('featured-card');
     const titleEl = document.getElementById('featured-title');
     const descriptionEl = document.getElementById('featured-description');
     const dotsEl = document.getElementById('featured-dots');
@@ -1639,9 +1605,11 @@ import Layout from "../layouts/Layout.astro";
         videoEl.load();
       }
       
-      // Update title and link
+      // Update card link and title
+      if (cardElForLink) {
+        cardElForLink.href = slide.link;
+      }
       if (titleEl) {
-        titleEl.href = slide.link;
         titleEl.innerHTML = slide.title + ' <span class="arrow">›</span>';
       }
       
