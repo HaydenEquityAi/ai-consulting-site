@@ -122,6 +122,13 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </section>
 
+<!-- CTA SECTION BELOW OUR APPROACH -->
+<section class="approach-cta-section">
+  <a href="/contact" class="approach-cta-button">
+    Get in touch
+  </a>
+</section>
+
 <!-- FEATURED CAPABILITIES CAROUSEL -->
 <section class="featured-section" id="featured-section">
   <div class="featured-container">
@@ -687,6 +694,48 @@ import Layout from "../layouts/Layout.astro";
     
     .approach-image {
       height: 240px;
+    }
+  }
+
+  /* CTA Section Below Our Approach */
+  .approach-cta-section {
+    background: #000000;
+    padding: 60px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .approach-cta-button {
+    display: inline-block;
+    padding: 16px 48px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+  }
+
+  .approach-cta-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .approach-cta-section {
+      padding: 48px 24px;
+    }
+    
+    .approach-cta-button {
+      padding: 14px 40px;
+      font-size: 14px;
     }
   }
 
