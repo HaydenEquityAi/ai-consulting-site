@@ -25,30 +25,78 @@
   
   <!-- Sidebar Menu -->
   <div class="navbar-sidebar" id="navbar-sidebar">
-    <!-- Sidebar Header -->
-    <div class="sidebar-header">
-      <a href="/" class="sidebar-logo">intelio</a>
-      <button class="sidebar-close" id="sidebar-close" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+    <!-- Close Button - Top Right -->
+    <button class="sidebar-close-top" id="sidebar-close" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <!-- Branding Area -->
+    <div class="sidebar-branding">
+      <a href="/" class="sidebar-brand-link">
+        <div class="sidebar-brand-text">
+          <span class="sidebar-brand-main">intelio</span>
+          <span class="sidebar-brand-sub">Intelligence Architects</span>
+        </div>
+      </a>
     </div>
     
-    <!-- Sidebar Navigation -->
+    <!-- Main Navigation -->
     <nav class="sidebar-nav">
-      <a href="/custom-ai-development" class="sidebar-item">Capabilities</a>
-      <a href="/industries" class="sidebar-item">Industries</a>
-      <a href="/how-we-work" class="sidebar-item">How We Work</a>
-      <a href="/case-studies" class="sidebar-item">Case Studies</a>
-      <a href="/resources" class="sidebar-item">Resources</a>
+      <div class="sidebar-nav-group">
+        <!-- Capabilities - Expandable -->
+        <button class="sidebar-nav-item sidebar-nav-expandable" id="capabilities-toggle">
+          <span class="sidebar-nav-label">Capabilities</span>
+          <svg class="sidebar-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <div class="sidebar-submenu" id="capabilities-submenu">
+          <a href="/custom-ai-development/full-stack-systems" class="sidebar-submenu-item">Full-Stack Custom Systems</a>
+          <a href="/custom-ai-development/ai-intelligence-integration" class="sidebar-submenu-item">AI & Intelligence Integration</a>
+          <a href="/custom-ai-development/saas-product-development" class="sidebar-submenu-item">SaaS Product Development</a>
+          <a href="/custom-ai-development/custom-enterprise-builds" class="sidebar-submenu-item">Custom Enterprise Builds</a>
+          <a href="/ai-integration-automation/workflow-automation" class="sidebar-submenu-item">Workflow Orchestration</a>
+          <a href="/ai-integration-automation/data-connectivity" class="sidebar-submenu-item">Data Infrastructure</a>
+          <a href="/ai-integration-automation/system-integration" class="sidebar-submenu-item">Connected Systems</a>
+          <a href="/ai-integration-automation/ai-enhanced-operations" class="sidebar-submenu-item">AI-Enhanced Operations</a>
+        </div>
+        
+        <!-- Industries - Expandable -->
+        <button class="sidebar-nav-item sidebar-nav-expandable" id="industries-toggle">
+          <span class="sidebar-nav-label">Industries</span>
+          <svg class="sidebar-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <div class="sidebar-submenu" id="industries-submenu">
+          <a href="/industries/commercial-real-estate" class="sidebar-submenu-item">Commercial Real Estate</a>
+          <a href="/industries/professional-services" class="sidebar-submenu-item">Professional Services</a>
+          <a href="/industries/construction" class="sidebar-submenu-item">Construction</a>
+          <a href="/industries/healthcare" class="sidebar-submenu-item">Healthcare</a>
+          <a href="/industries/property-management" class="sidebar-submenu-item">Property Management</a>
+          <a href="/industries/financial-services" class="sidebar-submenu-item">Financial Services</a>
+        </div>
+        
+        <!-- Standard Links -->
+        <a href="/how-we-work" class="sidebar-nav-item">How We Work</a>
+        <a href="/case-studies" class="sidebar-nav-item">Case Studies</a>
+        <a href="/resources" class="sidebar-nav-item">Resources</a>
+      </div>
     </nav>
     
-    <!-- Sidebar Footer -->
+    <!-- Footer -->
     <div class="sidebar-footer">
-      <a href="/sign-in" class="sidebar-footer-item">Sign In</a>
-      <a href="/email-subscriptions" class="sidebar-footer-item">Email Subscriptions</a>
+      <a href="/sign-in" class="sidebar-footer-item">
+        <span>🔐</span>
+        <span>Sign In</span>
+      </a>
+      <a href="/email-subscriptions" class="sidebar-footer-item">
+        <span>📧</span>
+        <span>Email Subscriptions</span>
+      </a>
     </div>
   </div>
   
@@ -86,7 +134,6 @@
     margin: 0 auto;
   }
 
-  /* Navbar Left: Hamburger + Logo */
   .navbar-left {
     display: flex;
     align-items: center;
@@ -123,7 +170,6 @@
     opacity: 0.8;
   }
 
-  /* Navbar Right: Contact CTA */
   .navbar-right {
     display: flex;
     align-items: center;
@@ -147,7 +193,7 @@
     transform: translateY(-2px);
   }
 
-  /* ===== SIDEBAR HAMBURGER MENU ===== */
+  /* ===== SIDEBAR MENU ===== */
 
   .navbar-sidebar {
     position: fixed;
@@ -155,34 +201,26 @@
     left: 0;
     width: 300px;
     height: 100vh;
-    background: #0A0E27; /* Dark navy/black like McKinsey */
+    background: #0A0E1A; /* Deep black with subtle blue tint */
     z-index: 2000;
     overflow-y: auto;
+    overflow-x: hidden;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
   }
 
   .navbar-sidebar.open {
     transform: translateX(0);
   }
 
-  /* Sidebar Header */
-  .sidebar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .sidebar-logo {
-    font-size: 20px;
-    font-weight: 500;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-
-  .sidebar-close {
+  /* Close Button - Top Right */
+  .sidebar-close-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,40 +230,96 @@
     cursor: pointer;
     padding: 8px;
     transition: opacity 0.2s ease;
-    width: 44px;
-    height: 44px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
   }
 
-  .sidebar-close:hover {
+  .sidebar-close-top:hover {
     opacity: 0.7;
   }
 
-  /* Sidebar Navigation */
-  .sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 0;
+  /* Branding Area */
+  .sidebar-branding {
+    padding: 40px 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .sidebar-item {
+  .sidebar-brand-link {
+    text-decoration: none;
+  }
+
+  .sidebar-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-brand-main {
     display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+  }
+
+  .sidebar-brand-sub {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  /* Main Navigation */
+  .sidebar-nav {
+    flex: 1;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-nav-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 16px 24px;
+    background: transparent;
+    border: none;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
+    width: 100%;
+    text-align: left;
   }
 
-  .sidebar-item:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: #0EA5E9; /* Cyan on hover */
+  .sidebar-nav-label {
+    display: block;
+  }
+
+  .sidebar-nav-item:hover {
+    background: rgba(14, 165, 233, 0.08);
+    color: #0EA5E9;
     padding-left: 32px;
   }
 
-  .sidebar-item::before {
+  /* Active State */
+  .sidebar-nav-active {
+    border-bottom: 2px solid #0EA5E9;
+    color: #0EA5E9;
+  }
+
+  .sidebar-nav-active::before {
     content: '';
     position: absolute;
     left: 0;
@@ -233,50 +327,114 @@
     bottom: 0;
     width: 3px;
     background: #0EA5E9;
-    opacity: 0;
-    transition: opacity 0.2s ease;
   }
 
-  .sidebar-item:hover::before {
-    opacity: 1;
+  /* Expandable Items */
+  .sidebar-nav-expandable {
+    cursor: pointer;
   }
 
-  /* Sidebar Footer */
+  .sidebar-nav-chevron {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .sidebar-nav-chevron.open {
+    transform: rotate(90deg);
+  }
+
+  /* Submenu */
+  .sidebar-submenu {
+    display: none;
+    flex-direction: column;
+    background: rgba(14, 165, 233, 0.06);
+    border-left: 2px solid rgba(14, 165, 233, 0.3);
+  }
+
+  .sidebar-submenu.open {
+    display: flex;
+  }
+
+  .sidebar-submenu-item {
+    display: block;
+    padding: 12px 32px;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar-submenu-item:hover {
+    color: #0EA5E9;
+    background: rgba(14, 165, 233, 0.1);
+    padding-left: 40px;
+  }
+
+  /* Footer */
   .sidebar-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 0;
+    padding: 24px 0;
+    margin-top: auto;
   }
 
   .sidebar-footer-item {
-    display: block;
-    padding: 12px 24px;
-    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 400;
     transition: all 0.2s ease;
   }
 
   .sidebar-footer-item:hover {
     color: #FFFFFF;
     background: rgba(255, 255, 255, 0.05);
+    padding-left: 32px;
   }
 
-  /* Backdrop Overlay */
+  .sidebar-footer-item span:first-child {
+    font-size: 16px;
+    opacity: 0.7;
+  }
+
+  /* Scrollbar */
+  .navbar-sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .navbar-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .navbar-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .navbar-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  /* Backdrop */
   .navbar-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1500;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: pointer;
   }
 
   .navbar-backdrop.active {
@@ -284,7 +442,8 @@
     visibility: visible;
   }
 
-  /* Responsive */
+  /* ===== RESPONSIVE ===== */
+
   @media (max-width: 768px) {
     .navbar {
       padding: 16px 24px;
@@ -294,16 +453,54 @@
       width: 280px;
     }
     
-    .sidebar-item {
-      padding: 14px 20px;
+    .sidebar-branding {
+      padding: 32px 20px 24px;
     }
     
-    .sidebar-item:hover {
+    .sidebar-brand-main {
+      font-size: 20px;
+    }
+    
+    .sidebar-nav {
+      padding: 24px 0;
+    }
+    
+    .sidebar-nav-item {
+      padding: 14px 20px;
+      font-size: 15px;
+    }
+    
+    .sidebar-nav-item:hover {
       padding-left: 28px;
     }
     
-    .navbar-logo {
-      font-size: 20px;
+    .sidebar-submenu-item {
+      padding: 10px 28px;
+      font-size: 13px;
+    }
+    
+    .sidebar-submenu-item:hover {
+      padding-left: 36px;
+    }
+    
+    .sidebar-footer-item {
+      padding: 12px 20px;
+      font-size: 13px;
+    }
+    
+    .sidebar-footer-item:hover {
+      padding-left: 28px;
+    }
+    
+    .sidebar-close-top {
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .navbar-sidebar {
+      width: 100%;
     }
   }
 </style>
@@ -366,8 +563,44 @@
       }
     });
     
+    // Expandable menu items
+    const capabilitiesToggle = document.getElementById('capabilities-toggle');
+    const capabilitiesSubmenu = document.getElementById('capabilities-submenu');
+    const industriesToggle = document.getElementById('industries-toggle');
+    const industriesSubmenu = document.getElementById('industries-submenu');
+    
+    if (capabilitiesToggle && capabilitiesSubmenu) {
+      capabilitiesToggle.addEventListener('click', () => {
+        const isOpen = capabilitiesSubmenu.classList.contains('open');
+        const chevron = capabilitiesToggle.querySelector('.sidebar-nav-chevron');
+        
+        if (isOpen) {
+          capabilitiesSubmenu.classList.remove('open');
+          if (chevron) chevron.classList.remove('open');
+        } else {
+          capabilitiesSubmenu.classList.add('open');
+          if (chevron) chevron.classList.add('open');
+        }
+      });
+    }
+    
+    if (industriesToggle && industriesSubmenu) {
+      industriesToggle.addEventListener('click', () => {
+        const isOpen = industriesSubmenu.classList.contains('open');
+        const chevron = industriesToggle.querySelector('.sidebar-nav-chevron');
+        
+        if (isOpen) {
+          industriesSubmenu.classList.remove('open');
+          if (chevron) chevron.classList.remove('open');
+        } else {
+          industriesSubmenu.classList.add('open');
+          if (chevron) chevron.classList.add('open');
+        }
+      });
+    }
+    
     // Close sidebar when clicking a link
-    const sidebarLinks = document.querySelectorAll('.sidebar-item, .sidebar-footer-item');
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav-item[href], .sidebar-submenu-item, .sidebar-footer-item');
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
         closeSidebar();
