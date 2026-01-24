@@ -25,28 +25,28 @@ import Layout from "../../layouts/Layout.astro";
     <!-- Dark Overlay for Text Readability -->
     <div class="absolute inset-0 bg-black/55 z-[1]"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-3xl">
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-[720px]">
         <!-- Label -->
-        <div class="mb-6">
-          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            WORKFLOW AUTOMATION
+        <div class="mb-8">
+          <span class="text-blue-400 text-sm font-medium tracking-[0.2em] uppercase">
+            WORKFLOW ORCHESTRATION
           </span>
         </div>
         
         <!-- Headline -->
-        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-          Requests Route Themselves Automatically
+        <h1 class="text-[48px] lg:text-[64px] text-white leading-[1.1] mb-12 tracking-tight font-medium">
+          Operational infrastructure that moves work continuously.
         </h1>
         
         <!-- Subhead -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed">
-          No manual routing. No queue delays. No bottleneck person. Work flows continuously with the right person handling each request.
+        <p class="text-lg text-gray-200 mb-16 leading-relaxed font-normal">
+          We design and build automated workflow systems that route requests, assign work, and maintain context across every handoff. Consistent execution, predictable timelines, and operational visibility—infrastructure that scales with your organization.
         </p>
         
         <!-- CTA Button -->
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
-          Start a Project
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-base text-white font-medium rounded transition-colors">
+          Connect with our team
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
@@ -55,530 +55,151 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- SECTION 2: INTRO -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-gray-900 mb-8">
-        Eliminate Coordination Bottlenecks. Automate Workflows.
-      </h2>
-      <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-        <p>
-          Most businesses have one person whose job is coordination: routing requests, assigning work, managing queues. When they're unavailable, everything stops.
-        </p>
-        <p>
-          Intelio builds workflow automations that remove the bottleneck. Requests route themselves. Work moves continuously. No manual handoffs. No queue delays.
-        </p>
-      </div>
-      <div class="mt-10 p-6 bg-gray-50 rounded-lg border-l-4 border-blue-600">
-        <p class="text-lg font-semibold text-gray-900">
-          This isn't consulting. This isn't advice. It's infrastructure.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: WHAT'S BROKEN & WHAT CHANGES (SIDE BY SIDE) -->
-  <section class="py-32 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-20 relative">
-        <!-- Vertical Divider Line -->
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-black transform -translate-x-1/2"></div>
-        
-        <!-- Left Column: What's Broken Today -->
-        <div class="relative">
-          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What's Broken Today</h2>
-          
-          <div class="space-y-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Manual Routing Bottleneck</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Requests arrive and someone manually routes them to the right person, team, or department. This person is a bottleneck. Everything queues when they're unavailable.
-              </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Work Sitting in Queues</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Approval requests, lead assignments, support tickets—all waiting for someone to pick them up. Delays compound. Urgency gets lost in the queue.
-              </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Inconsistent Execution</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Same request gets handled differently depending on who picks it up. Lead A qualified in 2 hours, lead B in a week. Approval times are unpredictable.
-              </p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Lost Context at Handoffs</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Work passes from person A to person B and critical context is lost. "Why is this flagged urgent?" Information is fragmented across emails and systems.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: What Changes After Deployment -->
-        <div>
-          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What Changes After Deployment</h2>
-          
-          <div class="space-y-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Automatic Routing & Assignment</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Requests route themselves based on rules (skill, capacity, geography, complexity). No manual bottleneck. No queue delays waiting for someone to route.
-              </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Work Flows Continuously</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Requests are assigned and work begins within minutes, not days. Nothing sits waiting for someone to pick it up manually.
-              </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Consistent Execution</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Same workflow, same rules, every time. Approval times are predictable. Lead qualification is consistent. Response times are uniform across the team.
-              </p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Context Travels with Work</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                When work is assigned, all relevant information moves with it. Customer history, previous interactions, decision context. No scrambling to find context.
-              </p>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-              <h3 class="text-2xl text-gray-900 mb-4">Automatic Status Updates</h3>
-              <p class="text-base text-gray-600 leading-relaxed">
-                Status changes trigger notifications automatically. Requestors, managers, and stakeholders stay informed without asking. Information flows instead of being manually copied.
-              </p>
-            </div>
-          </div>
+  <!-- SECTION 2: THE OPPORTUNITY -->
+  <section class="py-40 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="max-w-[720px]">
+        <h2 class="text-[32px] md:text-[40px] text-gray-900 mb-16 font-medium">
+          The Opportunity
+        </h2>
+        <div class="space-y-8 text-lg text-gray-600 leading-relaxed font-normal">
+          <p>
+            Organizations with high-volume operational workflows have strategic opportunity: systematizing how work moves through the organization.
+          </p>
+          <p>
+            Automatic routing assigns work based on defined criteria. Context travels with every assignment. Status updates flow without manual effort. Teams focus on judgment and execution; the system handles coordination.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: HOW IT WORKS -->
-  <section class="py-32 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">How the System Actually Works</h2>
+  <!-- SECTION 3: CAPABILITIES -->
+  <section class="py-40 px-6 bg-gray-50">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[32px] md:text-[40px] text-gray-900 mb-16 font-medium">Capabilities</h2>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-4">Input Layer</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Work enters from multiple sources: form submissions, system events (deal closed, invoice received), email, API calls, scheduled triggers. The system captures who submitted it, what it's about, when it arrived, any attachments, and where it came from.
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Capability 1 -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Intelligent Routing</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Requests route automatically based on defined criteria—skill, capacity, geography, complexity. Assignment happens in seconds.
           </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-4">Classification & Enrichment</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            The system classifies what type of work this is (support ticket, approval, lead, claim). It enriches the request with context: customer history, related records, previous similar requests, templates, and relevant business rules. This happens in seconds automatically.
+        <!-- Capability 2 -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Context Preservation</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            When work is assigned, all relevant information moves with it. Customer history, previous interactions, decision context available immediately.
           </p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-4">Routing Decision</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Rules determine who should handle this. Which team has expertise? Who has capacity? Is there geographic routing? Are there escalation rules (high-value to senior person, urgent to specialist)? The system applies your rules automatically.
+        <!-- Capability 3 -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Consistent Execution</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Same workflow, same rules, every time. Predictable timelines, uniform response times, measurable outcomes.
           </p>
         </div>
 
-        <!-- Card 4 -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-4">Assignment & Execution</h3>
-          <p class="text-base text-gray-600 leading-relaxed">
-            Work is assigned to the right person with full context, suggested action, SLA deadline, and links to related records. Status notifications go out automatically. If workflows can auto-execute (templated responses, task creation), they do. If they need approval, the approval request goes to the right person.
+        <!-- Capability 4 -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Operational Visibility</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Status updates flow automatically. Requestors, managers, and stakeholders stay informed without manual coordination.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6: ENGAGEMENT MODELS -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Engagement Models</h2>
+  <!-- SECTION 4: ENGAGEMENT -->
+  <section class="py-40 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="max-w-[720px]">
+        <h2 class="text-[32px] md:text-[40px] text-gray-900 mb-16 font-medium">Engagement</h2>
+        <div class="space-y-8 text-lg text-gray-600 leading-relaxed font-normal">
+          <p>
+            We offer flexible engagement models based on your operational capacity—from workflows you own and manage to full operational partnership where we ensure continuous performance.
+          </p>
+          <div class="mt-12">
+            <a href="/how-we-work" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+              Learn about our engagement models →
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: OUR APPROACH -->
+  <section class="py-40 px-6 bg-gray-50">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-[32px] md:text-[40px] text-gray-900 mb-16 font-medium">Our Approach</h2>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1: Build + Maintain -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-2">Build + Maintain</h3>
-          <p class="text-sm text-gray-600 mb-6">You own the workflows. We keep the system running.</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
-              <p class="text-sm text-gray-700">Day-to-day workflow monitoring, routing rules, exception handling, SLA accountability</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
-              <p class="text-sm text-gray-700">System uptime, infrastructure health, technical updates, performance optimization</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
-              <p class="text-sm text-gray-700">Teams with an ops or process owner who wants hands-on control. You review exceptions, manage rule changes.</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
-              <p class="text-sm text-gray-700">Project fee + monthly maintenance</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Build + Operate -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-2">Build + Operate</h3>
-          <p class="text-sm text-gray-600 mb-6">We own the workflow execution and performance.</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">You Own</p>
-              <p class="text-sm text-gray-700">Overall business outcomes and strategic priorities</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">We Own</p>
-              <p class="text-sm text-gray-700">Daily execution, exception handling, rule changes, performance optimization, SLA compliance</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
-              <p class="text-sm text-gray-700">Lean teams who want workflows to "just work" without daily management. You get accountability for execution quality.</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
-              <p class="text-sm text-gray-700">Monthly operating retainer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 7: OUR PROCESS -->
-  <section class="py-32 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Our Process</h2>
-      
-      <div class="space-y-12">
-        <!-- Step 01 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            01
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Workflow Mapping</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We document your current process step-by-step. Who's involved? What are the bottlenecks? What rules drive routing decisions? Where does it break down?
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You get: Clear documentation of current state and specific automation opportunities
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 02 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            02
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Design Specification</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              You define the automated workflow. What triggers it? What routing rules? What context travels with assignments? What escalations? What approvals are required?
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You get: Detailed workflow specification that becomes the build plan
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 03 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            03
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Build & Test</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We build the workflow and validate with real process data. Does it route correctly? Is context complete? How does it handle edge cases? Does it perform?
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You get: Working workflow, tested end-to-end
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 04 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            04
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Pilot Deployment</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              Run on limited basis (10-20% of volume). Monitor accuracy and performance. Gather team feedback. Refine before full deployment.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You get: Confidence that workflow works before going live
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 05 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            05
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Full Deployment</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              Deploy to full operation. 100% of volume flowing through automated workflow. Team training. Monitoring dashboards. Support plan defined.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You get: Live workflow, monitored and supported according to your engagement model
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8: WHAT YOU GET & WHO THIS IS FOR -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
       <div class="grid md:grid-cols-2 gap-12 mb-16">
-        <!-- Left Column: What You Get -->
-        <div>
-          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">What You Get</h2>
-          <ul class="space-y-6">
-            <li class="flex items-start gap-4">
-              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Automatic Routing & Assignment</h3>
-                <p class="text-base text-gray-600">Requests route themselves based on rules. No manual bottleneck. No queue delays waiting for someone to route.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Continuous Work Flow</h3>
-                <p class="text-base text-gray-600">Requests are assigned and work begins within minutes, not days. Nothing sits waiting for someone to pick it up manually.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Consistent Execution</h3>
-                <p class="text-base text-gray-600">Same workflow, same rules, every time. Approval times are predictable. Lead qualification is consistent. Response times are uniform.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Context Travels with Work</h3>
-                <p class="text-base text-gray-600">When work is assigned, all relevant information moves with it. Customer history, previous interactions, decision context.</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Flexible Engagement</h3>
-                <p class="text-base text-gray-600">Build + Maintain or Build + Operate models—we adapt to how you work and what you need.</p>
-              </div>
-            </li>
-          </ul>
+        <!-- Step 1: Map -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Map</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Document current workflows, routing logic, and handoff points. Identify automation opportunities.
+          </p>
         </div>
 
-        <!-- Right Column: Who This Is For -->
-        <div>
-          <h2 class="text-4xl md:text-5xl text-gray-900 mb-12">Who This Is For</h2>
-          <ul class="space-y-6">
-            <li class="flex items-start gap-4">
-              <span class="text-blue-600 text-xl mt-1">•</span>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">High-Volume Processes</h3>
-                <p class="text-base text-gray-600">20+ repetitive processes per week that require routing and coordination</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="text-blue-600 text-xl mt-1">•</span>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Manual Routing Bottlenecks</h3>
-                <p class="text-base text-gray-600">Current process relies on someone manually routing requests, assignments, or approvals</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="text-blue-600 text-xl mt-1">•</span>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Organizations with Defined Workflows</h3>
-                <p class="text-base text-gray-600">You have repeatable processes and an operational owner who can define routing rules</p>
-              </div>
-            </li>
-            <li class="flex items-start gap-4">
-              <span class="text-blue-600 text-xl mt-1">•</span>
-              <div>
-                <h3 class="text-xl text-gray-900 mb-1">Companies Seeking Consistency</h3>
-                <p class="text-base text-gray-600">You want consistent execution and predictable timelines across your team</p>
-              </div>
-            </li>
-          </ul>
+        <!-- Step 2: Design -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Design</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Define automated workflow specifications—triggers, routing rules, context requirements, escalation paths.
+          </p>
         </div>
+
+        <!-- Step 3: Build -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Build</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Implement workflow automation with testing against real operational scenarios.
+          </p>
+        </div>
+
+        <!-- Step 4: Deploy -->
+        <div class="bg-white rounded p-10 border border-gray-200">
+          <h3 class="text-2xl text-gray-900 mb-6 font-medium">Deploy</h3>
+          <p class="text-lg text-gray-600 leading-relaxed font-normal">
+            Phased rollout with continuous monitoring. Refinement based on operational feedback.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/how-we-work" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+          Learn more about our methodology →
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl md:text-5xl mb-12 text-gray-900">Frequently Asked Questions</h2>
-
-      <div class="border-t border-gray-200 pt-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- FAQ 1 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What if we want to change routing rules?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              You tell us the new rules, we update the workflow, we test it. Usually 1-2 days for standard changes. Significant logic shifts take longer, but workflows are designed to evolve.
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What happens to requests that don't fit the normal pattern?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              They get routed to a human for review. Nothing gets lost or auto-executed if it doesn't fit the rules. Escalation ensures unusual requests get appropriate handling.
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How do we measure if it's working?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Dashboard shows workflow metrics: volume processed, average assignment time, escalation rate, completion rate. You also see business outcomes: lead response time down, approval time down, SLA compliance up.
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What if someone is unhappy with how they're routed to?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              If the routing rule is wrong (this person shouldn't handle this work), you change the rule. If it's a capacity issue (person is overloaded), you adjust workload distribution. The workflow enforces your business rules consistently.
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">Can we handle edge cases and exceptions?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Yes. Low-confidence routing goes to human review. Unusual requests escalate. Edge cases get manual review queue. Nothing auto-executes when it shouldn't. You stay in control.
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What if our process changes?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              We update the workflow definition. It's not hard-coded; it's rules-based. Changes are tracked and versioned. When your business evolves, the automation evolves with it.
-            </div>
-          </div>
-
-          <!-- FAQ 7 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">What types of workflows can be automated?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Lead routing, approval workflows, support ticket routing, document review, onboarding, and any process that involves routing, assignment, or coordination.
-            </div>
-          </div>
-
-          <!-- FAQ 8 -->
-          <div class="faq-card bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-200 transition-all duration-300">
-            <p class="faq-question font-medium text-sm text-center text-gray-900 mb-4 transition-colors">How do we get started?</p>
-            <div class="flex justify-center mb-4">
-              <svg class="faq-chevron w-6 h-6 text-blue-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            <div class="faq-answer hidden text-sm text-gray-600 text-center border-t border-gray-100 pt-4">
-              Start with a conversation. We'll clarify whether you need workflow automation, integration, or both—and which engagement model fits.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FINAL CTA SECTION -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <!-- Final CTA -->
-      <div>
-        <h2 class="text-4xl md:text-5xl text-gray-900 mb-6">
-          Ready to eliminate the coordination bottleneck?
+  <section class="py-40 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="max-w-[720px] mx-auto text-center">
+        <h2 class="text-[32px] md:text-[40px] text-gray-900 mb-12 font-medium">
+          Transform Your Operational Workflows
         </h2>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
-          Start a Project
+        <p class="text-lg text-gray-600 mb-16 leading-relaxed font-normal">
+          Organizations with high-volume workflows have strategic opportunity. We look forward to exploring what's possible.
+        </p>
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-base text-white font-medium rounded transition-colors">
+          Connect with our team
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
@@ -589,6 +210,11 @@ import Layout from "../../layouts/Layout.astro";
 </main>
 
 <style>
+  /* Typography - Inter/Söhne for headlines */
+  h1, h2, h3 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
   /* Video background mobile fixes for hero section */
   section video {
     position: absolute;
@@ -609,6 +235,14 @@ import Layout from "../../layouts/Layout.astro";
       height: 100%;
       object-fit: cover;
     }
+    
+    h1 {
+      font-size: 48px !important;
+    }
+    
+    h2 {
+      font-size: 32px !important;
+    }
   }
 
   /* iOS Safari video fixes */
@@ -620,26 +254,4 @@ import Layout from "../../layouts/Layout.astro";
   }
 </style>
 
-<script>
-  document.querySelectorAll('.faq-card').forEach(card => {
-    card.addEventListener('click', function() {
-      const isOpen = this.classList.contains('faq-open');
-      // Close all other cards
-      document.querySelectorAll('.faq-card').forEach(c => {
-        c.classList.remove('faq-open');
-        c.querySelector('.faq-answer')?.classList.add('hidden');
-        c.querySelector('.faq-chevron')?.classList.remove('rotate-180');
-        c.classList.remove('border-blue-500');
-        c.querySelector('.faq-question')?.classList.remove('text-blue-500');
-      });
-      // Toggle current card
-      if (!isOpen) {
-        this.classList.add('faq-open', 'border-blue-500');
-        this.querySelector('.faq-answer')?.classList.remove('hidden');
-        this.querySelector('.faq-chevron')?.classList.add('rotate-180');
-        this.querySelector('.faq-question')?.classList.add('text-blue-500');
-      }
-    });
-  });
-</script>
 </Layout>
