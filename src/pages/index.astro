@@ -123,7 +123,7 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <!-- FEATURED CAPABILITIES CAROUSEL -->
-<section class="featured-section">
+<section class="featured-section" id="featured-section">
   <div class="featured-container">
     
     <span class="section-label">FEATURED CAPABILITIES</span>
@@ -746,6 +746,12 @@ import Layout from "../layouts/Layout.astro";
   .featured-section {
     background: #0A1628;
     padding: clamp(80px, 10vw, 120px) 24px;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  /* HOVER STATE - White background */
+  .featured-section.hovered {
+    background: #FFFFFF;
   }
 
   .featured-container {
@@ -762,6 +768,11 @@ import Layout from "../layouts/Layout.astro";
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 24px;
+    transition: color 0.4s ease;
+  }
+
+  .featured-section.hovered .section-label {
+    color: rgba(0, 0, 0, 0.5);
   }
 
   .featured-headline {
@@ -773,7 +784,11 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s ease;
+    transition: color 0.4s ease, opacity 0.3s ease;
+  }
+
+  .featured-section.hovered .featured-headline {
+    color: #000000;
   }
 
   /* Carousel Layout */
@@ -795,7 +810,7 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     flex-shrink: 0;
     padding: 0;
   }
@@ -803,6 +818,17 @@ import Layout from "../layouts/Layout.astro";
   .featured-nav:hover {
     border-color: rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Hover state - dark arrows */
+  .featured-section.hovered .featured-nav {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #000000;
+  }
+
+  .featured-section.hovered .featured-nav:hover {
+    border-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
   }
 
   .featured-nav svg {
@@ -850,7 +876,11 @@ import Layout from "../layouts/Layout.astro";
     color: #FFFFFF;
     text-decoration: none;
     margin-bottom: 24px;
-    transition: opacity 0.2s ease;
+    transition: color 0.4s ease, opacity 0.2s ease;
+  }
+
+  .featured-section.hovered .featured-title {
+    color: #0EA5E9; /* Cyan on white background */
   }
 
   .featured-title:hover {
@@ -860,13 +890,22 @@ import Layout from "../layouts/Layout.astro";
   .featured-title .arrow {
     font-size: 32px;
     font-style: normal;
+    color: #FFFFFF;
+  }
+
+  .featured-section.hovered .featured-title .arrow {
+    color: #0EA5E9;
   }
 
   .featured-description {
     font-size: 17px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.7);
-    transition: opacity 0.3s ease;
+    transition: color 0.4s ease, opacity 0.3s ease;
+  }
+
+  .featured-section.hovered .featured-description {
+    color: rgba(0, 0, 0, 0.7);
   }
 
   /* Dots */
@@ -884,7 +923,7 @@ import Layout from "../layouts/Layout.astro";
     border: none;
     padding: 0;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
   }
 
   .featured-dot:hover {
@@ -893,6 +932,19 @@ import Layout from "../layouts/Layout.astro";
 
   .featured-dot.active {
     background: #FFFFFF;
+  }
+
+  /* Hover state - dark dots */
+  .featured-section.hovered .featured-dot {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .featured-section.hovered .featured-dot:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .featured-section.hovered .featured-dot.active {
+    background: #000000;
   }
 
   /* Responsive */
@@ -1644,26 +1696,37 @@ import Layout from "../layouts/Layout.astro";
     const slides = [
       {
         headline: "AI built for your business",
-        title: "Custom AI Development",
+        title: "QuantumBlack, AI by intelio",
         description: "We combine advanced AI engineering with strategic thinking to design solutions that create real-world impact—quickly, responsibly, and at scale.",
         video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
         link: "/custom-ai-development"
       },
       {
         headline: "Future-proof your foundation",
-        title: "Intelligent Automation",
-        description: "We work with organizations to establish a business-backed architecture, ensure data ubiquity, leverage advanced analytics, and set up systems that preempt evolving challenges.",
+        title: "intelio Technology",
+        description: "We work with organizations to establish a business-backed architecture, ensure data ubiquity, leverage advanced analytics, and set up cyber and data privacy defenses that preempt evolving threats.",
         video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
         link: "/ai-integration-automation"
       },
       {
         headline: "Tech-powered growth",
-        title: "Operations & Integration",
-        description: "We help our clients transform their operational capabilities with tech and AI to capture above-market growth.",
+        title: "Growth, Marketing & Sales",
+        description: "We help our clients transform their marketing and sales capabilities with tech and AI to capture above-market growth.",
         video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
         link: "/ai-integration-automation/workflow-automation"
       }
     ];
+
+    // Hover state management
+    const sectionEl = document.getElementById('featured-section');
+    if (sectionEl) {
+      sectionEl.addEventListener('mouseenter', () => {
+        sectionEl.classList.add('hovered');
+      });
+      sectionEl.addEventListener('mouseleave', () => {
+        sectionEl.classList.remove('hovered');
+      });
+    }
 
     let currentSlide = 0;
     const headlineEl = document.getElementById('featured-headline');
