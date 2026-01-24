@@ -297,76 +297,76 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- CAPABILITIES SECTION (Moved from Hero) -->
 <section id="capabilities" class="capabilities-section pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full text-center">
-    <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black tracking-tight mb-12 md:mb-16 lg:mb-20 leading-[1.1] w-full mx-auto">
-      Custom AI development and intelligent automation<br />
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full text-center">
+ <h1 class="hero-headline text-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-black tracking-tight mb-12 md:mb-16 lg:mb-20 leading-[1.1] w-full mx-auto">
+ Custom AI development and intelligent automation<br />
       for <span class="bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent">modern businesses</span>.
-    </h1>
+ </h1>
+ 
+ <!-- Cards on white background -->
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto">
+  
+  <!-- Card 1: Custom AI Development -->
+  <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
+    <!-- Video Background -->
+    <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
+    >
+      <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
+    </video>
     
-    <!-- Cards on white background -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto">
-      
-      <!-- Card 1: Custom AI Development -->
-      <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
-        <!-- Video Background -->
-        <video 
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          webkit-playsinline="true"
-          x5-playsinline="true"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
-        >
-          <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
-        </video>
-        
-        <!-- Dark Overlay for Text Readability -->
-        <div class="absolute inset-0 bg-black/50 z-[1]"></div>
-        
-        <!-- Content -->
-        <div class="relative z-10">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">Custom AI Development</h2>
-          <a href="/custom-ai-development" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
-            Explore Development
-          </a>
-        </div>
-      </div>
-      
-      <!-- Card 2: AI Integration & Automation -->
-      <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
-        <!-- Video Background -->
-        <video 
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          webkit-playsinline="true"
-          x5-playsinline="true"
-          class="absolute inset-0 w-full h-full object-cover"
-          style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
-        >
-          <source src="/logos/Abstract_Network_Landscape_Visualization.mp4" type="video/mp4">
-        </video>
-        
-        <!-- Dark Overlay for Text Readability -->
-        <div class="absolute inset-0 bg-black/50 z-[1]"></div>
-        
-        <!-- Content -->
-        <div class="relative z-10">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">AI Integration & Automation</h2>
-          <a href="/ai-integration-automation" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
-            Explore Automation
-          </a>
-        </div>
-      </div>
-      
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/50 z-[1]"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">Custom AI Development</h2>
+      <a href="/custom-ai-development" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
+        Explore Development
+      </a>
     </div>
   </div>
-</section>
+  
+  <!-- Card 2: AI Integration & Automation -->
+  <div class="relative bg-black border border-gray-700 rounded-xl p-8 md:p-12 lg:p-16 min-h-[400px] md:min-h-[500px] flex flex-col justify-center text-center overflow-hidden">
+    <!-- Video Background -->
+    <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      webkit-playsinline="true"
+      x5-playsinline="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
+    >
+      <source src="/logos/Abstract_Network_Landscape_Visualization.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div class="absolute inset-0 bg-black/50 z-[1]"></div>
+    
+    <!-- Content -->
+    <div class="relative z-10">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">AI Integration & Automation</h2>
+      <a href="/ai-integration-automation" class="inline-block mx-auto bg-white/10 border border-gray-600 text-white px-10 py-5 text-lg rounded-lg hover:bg-white/20 transition-all">
+        Explore Automation
+      </a>
+    </div>
+  </div>
+  
+ </div>
+ </div>
+ </section>
 
 <style>
   /* NEW MCKINSEY-STYLE HERO SECTION */
@@ -1189,124 +1189,6 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 </style>
-
-<!-- Service Grid: Custom AI Development -->
-<section class="py-12 sm:py-16 md:py-20 bg-black">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 sm:mb-12">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4">Custom AI Development</h2>
-      <p class="text-gray-300 text-base sm:text-lg">Purpose-built software and AI-powered platforms. You own the code.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-      <!-- Card 1: Full-Stack Applications -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Full-Stack Applications</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Complete software systems from database to UI. APIs, data models, interfaces—engineered for production.</p>
-        <a href="/custom-ai-development/full-stack-systems" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 2: AI-Powered Platforms -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">AI-Powered Platforms</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Intelligent systems with AI at the core. Decision engines, automation platforms, and smart workflows.</p>
-        <a href="/custom-ai-development/ai-intelligence-integration" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 3: SaaS & Product Development -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">SaaS & Product Development</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Scalable products designed for growth. Customer-facing platforms that become business assets.</p>
-        <a href="/custom-ai-development/saas-product-development" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 4: Enterprise Systems -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Enterprise Systems</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Complex, multi-system implementations for organizations operating at scale.</p>
-        <a href="/custom-ai-development/custom-enterprise-builds" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Service Grid: AI Integration & Automation -->
-<section class="py-12 sm:py-16 md:py-20 bg-black border-t border-gray-800">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-8 sm:mb-12">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl text-white mb-3 sm:mb-4">AI Integration & Automation</h2>
-      <p class="text-gray-300 text-base sm:text-lg mb-2">Make your existing systems intelligent. Connect, automate, optimize.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-      <!-- Card 1: AI-Enhanced Operations -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">AI-Enhanced Operations</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Embed AI into existing workflows—document processing, intelligent routing, decision support, and predictive automation.</p>
-        <a href="/ai-integration-automation/ai-enhanced-operations" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 2: Workflow Automation -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Workflow Automation</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Automate repetitive processes, approvals, handoffs, and data entry. Remove manual work from your operations.</p>
-        <a href="/ai-integration-automation/workflow-automation" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 3: Data Connectivity & Visibility -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Data Connectivity & Visibility</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Unified dashboards, real-time reporting, and data pipelines that give leadership the visibility they need.</p>
-        <a href="/ai-integration-automation/data-connectivity" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 4: System Integration -->
-      <div class="bg-black border border-gray-800 rounded-xl p-8 sm:p-10 md:p-12 flex flex-col min-h-[280px] md:min-h-[320px]">
-        <h3 class="text-xl sm:text-2xl text-white mb-3 sm:mb-4">System Integration</h3>
-        <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow">Connect CRMs, accounting, operations, and data systems. One connected stack instead of disconnected tools.</p>
-        <a href="/ai-integration-automation/system-integration" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors group">
-          Learn more
-          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
  <!-- SOLUTIONS FOR EVERY INDUSTRY -->
  <section class="py-12 sm:py-16 md:py-20 bg-black text-white">
