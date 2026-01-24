@@ -3,416 +3,671 @@
 // Used across ALL pages of the site
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 w-full">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full">
-    <div class="flex items-center justify-between gap-4 w-full min-w-0">
-      <!-- LEFT: Logo -->
-      <a href="/" class="text-2xl sm:text-3xl font-medium tracking-tight text-black flex-shrink-0">intelio</a>
-      
-      <!-- CENTER: Navigation Items -->
-      <div class="hidden md:flex items-center gap-3 lg:gap-4 xl:gap-6 flex-1 justify-center max-w-4xl mx-auto min-w-0" style="overflow: visible;">
-        <!-- Custom AI & Development Dropdown -->
-        <div class="relative group" style="overflow: visible;">
-          <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            Custom AI & Development
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full w-[500px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
-            <div class="p-6 space-y-4">
-              <a href="/custom-ai-development/full-stack-systems" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">Full-Stack Custom Systems</h3>
-              </a>
-              <a href="/custom-ai-development/ai-intelligence-integration" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">AI Intelligence Integration</h3>
-              </a>
-              <a href="/custom-ai-development/saas-product-development" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">SaaS Product Development</h3>
-              </a>
-              <a href="/custom-ai-development/custom-enterprise-builds" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">Custom Enterprise Builds</h3>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- AI Integration & Automation Dropdown -->
-        <div class="relative group" style="overflow: visible;">
-          <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            AI Integration & Automation
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full w-[500px] bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
-            <div class="p-6 space-y-4">
-              <a href="/ai-integration-automation/ai-enhanced-operations" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">AI-Enhanced Operations</h3>
-              </a>
-              <a href="/ai-integration-automation/workflow-automation" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">Workflow Automation</h3>
-              </a>
-              <a href="/ai-integration-automation/data-connectivity" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">Data Connectivity & Visibility</h3>
-              </a>
-              <a href="/ai-integration-automation/system-integration" class="group/item block hover:bg-gray-50 rounded-lg py-4 px-5 -mx-6 -my-2 transition-colors">
-                <h3 class="text-sm font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors leading-relaxed">System Integration</h3>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- How We Work (single link) -->
-        <a href="/how-we-work" class="text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">How We Work</a>
-        
-        <!-- Case Studies (single link) -->
-        <a href="/case-studies" class="text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">Case Studies</a>
-        
-        <!-- Resources Dropdown -->
-        <div class="relative group" style="overflow: visible;">
-          <button class="flex items-center gap-1 text-sm lg:text-base text-gray-700 hover:text-black transition-colors whitespace-nowrap">
-            Resources
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="absolute left-0 top-full w-64 bg-white rounded-2xl shadow-xl border border-gray-200 relative z-[100] overflow-hidden" style="transform: translateZ(0) scale(1); -webkit-transform: translateZ(0) scale(1); filter: none;">
-            <div class="p-4 space-y-3">
-              <a href="/resources/insights" class="block hover:bg-gray-50 rounded-lg p-3 -m-3 transition-colors">
-                <h3 class="text-base font-semibold text-gray-900 mb-1">Insights</h3>
-                <p class="text-sm text-gray-600">Articles and perspectives on business systems.</p>
-              </a>
-              <a href="/resources/tools" class="block hover:bg-gray-50 rounded-lg p-3 -m-3 transition-colors">
-                <h3 class="text-base font-semibold text-gray-900 mb-1">Tools</h3>
-                <p class="text-sm text-gray-600">A curated list of AI tools we use and recommend</p>
-              </a>
-              <a href="/resources/glossary" class="block hover:bg-gray-50 rounded-lg p-3 -m-3 transition-colors">
-                <h3 class="text-base font-semibold text-gray-900 mb-1">Glossary</h3>
-                <p class="text-sm text-gray-600">Definitions and terminology.</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- RIGHT: CTA Button -->
-      <div class="hidden md:flex items-center flex-shrink-0">
-        <a href="/contact" class="px-5 py-2.5 bg-black text-white text-base font-medium rounded-full hover:bg-gray-800 transition-colors whitespace-nowrap">Work With Us</a>
-      </div>
-      
-      <!-- Mobile Menu Button -->
-      <button type="button" id="mobile-menu-button" class="md:hidden p-3 min-h-[48px] min-w-[48px] flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false">
-        <svg id="mobile-menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
+<nav class="main-nav">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="/" class="nav-logo">intelio</a>
     
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 bg-white z-40 max-h-[calc(100vh-80px)] overflow-y-auto">
-      <nav class="flex flex-col gap-2 sm:gap-4 pt-4 px-4 sm:px-6">
-        <!-- Custom AI & Development (Mobile Accordion) -->
-        <div class="py-2">
-          <button type="button" class="custom-ai-dev-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
-            Custom AI & Development
-            <span class="custom-ai-dev-icon text-xs">+</span>
-          </button>
-          <div class="custom-ai-dev-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
-            <a href="/custom-ai-development/full-stack-systems" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Full-Stack Custom Systems</a>
-            <a href="/custom-ai-development/ai-intelligence-integration" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI Intelligence Integration</a>
-            <a href="/custom-ai-development/saas-product-development" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">SaaS Product Development</a>
-            <a href="/custom-ai-development/custom-enterprise-builds" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Custom Enterprise Builds</a>
+    <!-- Nav Items -->
+    <ul class="nav-items">
+      <!-- Capabilities - Mega Menu -->
+      <li class="nav-item has-megamenu">
+        <button class="nav-link" aria-expanded="false">
+          Capabilities
+          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="megamenu">
+          <div class="megamenu-container">
+            <!-- BUILD Column -->
+            <div class="megamenu-column">
+              <h3 class="megamenu-heading">Build</h3>
+              <ul class="megamenu-links">
+                <li>
+                  <a href="/custom-ai-development/full-stack-systems">
+                    Full-Stack Custom Systems
+                  </a>
+                </li>
+                <li>
+                  <a href="/custom-ai-development/ai-intelligence-integration">
+                    AI & Intelligence Integration
+                  </a>
+                </li>
+                <li>
+                  <a href="/custom-ai-development/saas-product-development">
+                    SaaS Product Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/custom-ai-development/custom-enterprise-builds">
+                    Custom Enterprise Builds
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- INTEGRATE Column -->
+            <div class="megamenu-column">
+              <h3 class="megamenu-heading">Integrate</h3>
+              <ul class="megamenu-links">
+                <li>
+                  <a href="/ai-integration-automation/workflow-automation">
+                    Workflow Orchestration
+                  </a>
+                </li>
+                <li>
+                  <a href="/ai-integration-automation/data-connectivity">
+                    Data Infrastructure
+                  </a>
+                </li>
+                <li>
+                  <a href="/ai-integration-automation/system-integration">
+                    Connected Systems
+                  </a>
+                </li>
+                <li>
+                  <a href="/ai-integration-automation/ai-enhanced-operations">
+                    AI-Enhanced Operations
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </li>
+      
+      <!-- Industries - Simple Dropdown -->
+      <li class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Industries
+          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
         
-        <!-- AI Integration & Automation (Mobile Accordion) -->
-        <div class="py-2">
-          <button type="button" class="what-we-build-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
-            AI Integration & Automation
-            <span class="what-we-build-icon text-xs">+</span>
-          </button>
-          <div class="what-we-build-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
-            <a href="/ai-integration-automation/ai-enhanced-operations" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">AI-Enhanced Operations</a>
-            <a href="/ai-integration-automation/workflow-automation" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Workflow Automation</a>
-            <a href="/ai-integration-automation/data-connectivity" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Data Connectivity & Visibility</a>
-            <a href="/ai-integration-automation/system-integration" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">System Integration</a>
+        <div class="dropdown">
+          <ul class="dropdown-links">
+            <li><a href="/industries/commercial-real-estate">Commercial Real Estate</a></li>
+            <li><a href="/industries/professional-services">Professional Services</a></li>
+            <li><a href="/industries/construction">Construction</a></li>
+            <li><a href="/industries/healthcare">Healthcare</a></li>
+            <li><a href="/industries/property-management">Property Management</a></li>
+            <li><a href="/industries/financial-services">Financial Services</a></li>
+          </ul>
+        </div>
+      </li>
+      
+      <!-- Standard Links -->
+      <li class="nav-item">
+        <a href="/how-we-work" class="nav-link">How We Work</a>
+      </li>
+      <li class="nav-item">
+        <a href="/case-studies" class="nav-link">Case Studies</a>
+      </li>
+    </ul>
+    
+    <!-- CTA -->
+    <a href="/contact" class="nav-cta">
+      Contact
+    </a>
+    
+    <!-- Mobile Menu Button -->
+    <button type="button" id="mobile-menu-button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <nav class="mobile-nav">
+      <!-- Capabilities (Mobile Accordion) -->
+      <div class="mobile-accordion">
+        <button type="button" class="mobile-accordion-toggle capabilities-toggle">
+          Capabilities
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="mobile-accordion-content capabilities-submenu hidden">
+          <div class="mobile-accordion-section">
+            <h4 class="mobile-accordion-heading">Build</h4>
+            <a href="/custom-ai-development/full-stack-systems" class="mobile-link">Full-Stack Custom Systems</a>
+            <a href="/custom-ai-development/ai-intelligence-integration" class="mobile-link">AI & Intelligence Integration</a>
+            <a href="/custom-ai-development/saas-product-development" class="mobile-link">SaaS Product Development</a>
+            <a href="/custom-ai-development/custom-enterprise-builds" class="mobile-link">Custom Enterprise Builds</a>
+          </div>
+          <div class="mobile-accordion-section">
+            <h4 class="mobile-accordion-heading">Integrate</h4>
+            <a href="/ai-integration-automation/workflow-automation" class="mobile-link">Workflow Orchestration</a>
+            <a href="/ai-integration-automation/data-connectivity" class="mobile-link">Data Infrastructure</a>
+            <a href="/ai-integration-automation/system-integration" class="mobile-link">Connected Systems</a>
+            <a href="/ai-integration-automation/ai-enhanced-operations" class="mobile-link">AI-Enhanced Operations</a>
           </div>
         </div>
-        
-        <!-- How We Work (Mobile) -->
-        <a href="/how-we-work" class="block py-2 text-sm text-gray-700 hover:text-black transition-colors min-h-[44px] flex items-center">How We Work</a>
-        
-        <!-- Case Studies (Mobile) -->
-        <a href="/case-studies" class="block py-2 text-sm text-gray-700 hover:text-black transition-colors min-h-[44px] flex items-center">Case Studies</a>
-        
-        <!-- Resources (Mobile Accordion) -->
-        <div class="py-2">
-          <button type="button" class="resources-toggle text-sm font-medium text-gray-700 hover:text-black w-full text-left flex items-center justify-between min-h-[44px]">
-            Resources
-            <span class="resources-icon text-xs">+</span>
-          </button>
-          <div class="resources-submenu hidden pl-4 space-y-2 border-l border-gray-200 mt-2">
-            <a href="/resources/insights" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Insights</a>
-            <a href="/resources/tools" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Tools</a>
-            <a href="/resources/glossary" class="block text-sm text-gray-600 hover:text-black transition-colors py-2 min-h-[44px] flex items-center">Glossary</a>
-          </div>
+      </div>
+      
+      <!-- Industries (Mobile Accordion) -->
+      <div class="mobile-accordion">
+        <button type="button" class="mobile-accordion-toggle industries-toggle">
+          Industries
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="mobile-accordion-content industries-submenu hidden">
+          <a href="/industries/commercial-real-estate" class="mobile-link">Commercial Real Estate</a>
+          <a href="/industries/professional-services" class="mobile-link">Professional Services</a>
+          <a href="/industries/construction" class="mobile-link">Construction</a>
+          <a href="/industries/healthcare" class="mobile-link">Healthcare</a>
+          <a href="/industries/property-management" class="mobile-link">Property Management</a>
+          <a href="/industries/financial-services" class="mobile-link">Financial Services</a>
         </div>
-        
-        <!-- Work With Us (Mobile) -->
-        <a href="/contact" class="block py-3 mt-4 bg-black text-white text-sm text-center rounded-full hover:bg-gray-800 transition-colors min-h-[44px] flex items-center justify-center">Work With Us</a>
-      </nav>
-    </div>
+      </div>
+      
+      <!-- Standard Links (Mobile) -->
+      <a href="/how-we-work" class="mobile-link">How We Work</a>
+      <a href="/case-studies" class="mobile-link">Case Studies</a>
+      
+      <!-- Contact (Mobile) -->
+      <a href="/contact" class="mobile-cta">Contact</a>
+    </nav>
   </div>
 </nav>
 
 <style>
-  /* Dropdown visibility using CSS - matches existing pattern */
-  nav {
-    overflow: visible !important;
-  }
-  
-  nav > div {
-    overflow: visible !important;
-  }
-  
-  nav .group {
-    overflow: visible !important;
-  }
-  
-  nav .group > div[class*="absolute"] {
-    z-index: 9999 !important;
-    position: absolute;
-    display: none !important;
-    transform: translateZ(0) scale(1);
-    -webkit-transform: translateZ(0) scale(1);
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    image-rendering: crisp-edges;
-    filter: none !important;
-    opacity: 1 !important;
-    transition: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    margin-top: 0.5rem !important;
-    top: 100% !important;
-    overflow: visible !important;
+  /* ================================
+     NAVIGATION BASE
+     ================================ */
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  /* Invisible bridge for hover continuity */
-  nav .group > div[class*="absolute"]::before {
-    content: '';
+  .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo */
+  .nav-logo {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  /* Nav Items Container */
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Individual Nav Item */
+  .nav-item {
+    position: relative;
+  }
+
+  /* Nav Link */
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 450;
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+    font-family: inherit;
+  }
+
+  .nav-link:hover {
+    color: #6366F1;
+  }
+
+  .nav-chevron {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+  }
+
+  /* Rotate chevron when menu is open */
+  .nav-item.active .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* CTA Button */
+  .nav-cta {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .nav-cta:hover {
+    background: #1a1a1a;
+  }
+
+  /* ================================
+     MEGA MENU (Capabilities)
+     ================================ */
+
+  .megamenu {
     position: absolute;
-    top: -1rem;
-    left: -50px;
-    right: -50px;
-    width: calc(100% + 100px);
-    height: 1rem;
-    background: transparent;
-    z-index: 10001;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+  }
+
+  .nav-item.has-megamenu:hover .megamenu,
+  .nav-item.has-megamenu.active .megamenu {
+    opacity: 1;
+    visibility: visible;
     pointer-events: auto;
   }
 
-  /* Show dropdown on hover */
-  nav .group:hover > div[class*="absolute"] {
-    display: block !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    opacity: 1 !important;
-    transition: none !important;
-    filter: none !important;
+  .megamenu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 32px 40px;
+    min-width: 480px;
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.04),
+      0 10px 40px rgba(0, 0, 0, 0.08);
   }
 
-  /* Keep dropdown open when hovering over it */
-  nav .group > div[class*="absolute"]:hover {
-    display: block !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    opacity: 1 !important;
+  /* Column */
+  .megamenu-column {
+    min-width: 200px;
   }
-  
-  /* Mobile menu improvements */
-  @media (max-width: 767px) {
-    #mobile-menu {
-      position: relative;
-      z-index: 40;
-      max-height: calc(100vh - 80px);
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+
+  /* Column Heading */
+  .megamenu-heading {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #6366F1;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* Links List */
+  .megamenu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .megamenu-links li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 450;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.15s ease, padding-left 0.15s ease;
+  }
+
+  .megamenu-links li a:hover {
+    color: #6366F1;
+    padding-left: 4px;
+  }
+
+  /* ================================
+     SIMPLE DROPDOWN (Industries)
+     ================================ */
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+  }
+
+  .nav-item.has-dropdown:hover .dropdown,
+  .nav-item.has-dropdown.active .dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .dropdown-links {
+    list-style: none;
+    margin: 0;
+    padding: 16px 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    min-width: 220px;
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.04),
+      0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .dropdown-links li a {
+    display: block;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 450;
+    color: #000000;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .dropdown-links li a:hover {
+    background: #F8F8F8;
+    color: #6366F1;
+  }
+
+  /* ================================
+     MOBILE NAVIGATION
+     ================================ */
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #000000;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .mobile-menu {
+    display: none;
+    padding: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: #FFFFFF;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mobile-accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-accordion-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 450;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .accordion-icon {
+    font-size: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-accordion.active .accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  .mobile-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-accordion.active .mobile-accordion-content {
+    max-height: 1000px;
+  }
+
+  .mobile-accordion-content.hidden {
+    display: none;
+  }
+
+  .mobile-accordion-section {
+    padding: 8px 0 8px 16px;
+  }
+
+  .mobile-accordion-heading {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #6366F1;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .mobile-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 450;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .mobile-link:hover {
+    color: #6366F1;
+  }
+
+  .mobile-cta {
+    display: block;
+    padding: 12px 20px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.15s ease;
+  }
+
+  .mobile-cta:hover {
+    background: #1a1a1a;
+  }
+
+  @media (max-width: 968px) {
+    .nav-items,
+    .nav-cta {
+      display: none;
     }
     
-    #mobile-menu-button {
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: transparent;
+    .mobile-menu-toggle {
+      display: flex;
     }
     
-    /* Ensure mobile menu items are easily tappable */
-    #mobile-menu a,
-    #mobile-menu button {
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    .mobile-menu.active {
+      display: block;
     }
-    
-    /* Prevent body scroll when menu is open */
-    body.menu-open {
-      overflow: hidden;
+  }
+
+  @media (min-width: 969px) {
+    .mobile-menu-toggle,
+    .mobile-menu {
+      display: none;
     }
   }
 </style>
 
 <script>
   (function() {
-    function initMobileMenu() {
-      var btn = document.getElementById('mobile-menu-button');
-      var menu = document.getElementById('mobile-menu');
-      var iconOpen = document.getElementById('menu-icon-open');
-      var iconClose = document.getElementById('menu-icon-close');
-      
-      if (!btn || !menu) {
-        return;
-      }
-      
-      btn.addEventListener('click', function(e) {
+    // Toggle mega menu on click (for touch devices and accessibility)
+    document.querySelectorAll('.nav-item.has-megamenu > button, .nav-item.has-dropdown > button').forEach(button => {
+      button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        const navItem = e.target.closest('.nav-item');
+        const isActive = navItem.classList.contains('active');
         
-        var isHidden = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
+        // Close all other open menus
+        document.querySelectorAll('.nav-item.active').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
+        });
         
-        // Toggle body scroll lock on mobile
-        if (window.innerWidth < 768) {
-          if (isHidden) {
-            document.body.classList.add('menu-open');
-          } else {
-            document.body.classList.remove('menu-open');
-          }
-        }
-        
-        // Update icon based on menu state
-        if (iconOpen && iconClose) {
-          if (isHidden) {
-            // Opening menu - show close icon, hide open icon
-            iconOpen.classList.add('hidden');
-            iconClose.classList.remove('hidden');
-            btn.setAttribute('aria-expanded', 'true');
-          } else {
-            // Closing menu - show open icon, hide close icon
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-          }
+        // Toggle current menu
+        if (!isActive) {
+          navItem.classList.add('active');
+          button.setAttribute('aria-expanded', 'true');
+        } else {
+          button.setAttribute('aria-expanded', 'false');
         }
       });
-      
-      // Close when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-          document.body.classList.remove('menu-open');
-          if (iconOpen && iconClose) {
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-          }
-        }
-      });
-      
-      // Prevent menu from closing when clicking inside it
-      menu.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-      
-      // Close menu when a link is clicked (but not for accordion toggles)
-      var menuLinks = menu.querySelectorAll('a:not(.what-we-build-toggle):not(.resources-toggle):not(.custom-ai-dev-toggle)');
-      menuLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-          menu.classList.add('hidden');
-          document.body.classList.remove('menu-open');
-          if (iconOpen && iconClose) {
-            iconOpen.classList.remove('hidden');
-            iconClose.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    }
-    
-    // Mobile accordion toggles
-    function initMobileAccordions() {
-      // Business Systems toggle
-      var whatWeBuildToggle = document.querySelector('.what-we-build-toggle');
-      var whatWeBuildSubmenu = document.querySelector('.what-we-build-submenu');
-      var whatWeBuildIcon = document.querySelector('.what-we-build-icon');
-      
-      if (whatWeBuildToggle && whatWeBuildSubmenu) {
-        whatWeBuildToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          whatWeBuildSubmenu.classList.toggle('hidden');
-          if (whatWeBuildIcon) {
-            whatWeBuildIcon.textContent = whatWeBuildSubmenu.classList.contains('hidden') ? '+' : '−';
-          }
-        });
-      }
-      
-      // Resources toggle
-      var resourcesToggle = document.querySelector('.resources-toggle');
-      var resourcesSubmenu = document.querySelector('.resources-submenu');
-      var resourcesIcon = document.querySelector('.resources-icon');
-      
-      if (resourcesToggle && resourcesSubmenu) {
-        resourcesToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          resourcesSubmenu.classList.toggle('hidden');
-          if (resourcesIcon) {
-            resourcesIcon.textContent = resourcesSubmenu.classList.contains('hidden') ? '+' : '−';
-          }
-        });
-      }
-      
-      // Custom AI & Development toggle
-      var customAiDevToggle = document.querySelector('.custom-ai-dev-toggle');
-      var customAiDevSubmenu = document.querySelector('.custom-ai-dev-submenu');
-      var customAiDevIcon = document.querySelector('.custom-ai-dev-icon');
-      
-      if (customAiDevToggle && customAiDevSubmenu) {
-        customAiDevToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          customAiDevSubmenu.classList.toggle('hidden');
-          if (customAiDevIcon) {
-            customAiDevIcon.textContent = customAiDevSubmenu.classList.contains('hidden') ? '+' : '−';
-          }
-        });
-      }
-    }
-    
-    // Close dropdowns on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        // Close all dropdowns (they close on mouse leave anyway, but this is for keyboard users)
-        var dropdowns = document.querySelectorAll('nav .group > div[class*="absolute"]');
-        dropdowns.forEach(function(dropdown) {
-          dropdown.style.display = 'none';
+    });
+
+    // Close menus when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item')) {
+        document.querySelectorAll('.nav-item.active').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
         });
       }
     });
+
+    // Close menus on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.nav-item.active').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('button')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
     
-    // Run immediately if DOM is ready, otherwise wait
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        initMobileMenu();
-        initMobileAccordions();
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isActive = mobileMenu.classList.contains('active');
+        mobileMenu.classList.toggle('active');
+        mobileMenuButton.setAttribute('aria-expanded', isActive ? 'false' : 'true');
+        
+        // Toggle body scroll lock
+        if (isActive) {
+          document.body.classList.remove('menu-open');
+        } else {
+          document.body.classList.add('menu-open');
+        }
       });
-    } else {
-      initMobileMenu();
-      initMobileAccordions();
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+        }
+      });
     }
+
+    // Mobile accordion toggles
+    const capabilitiesToggle = document.querySelector('.capabilities-toggle');
+    const capabilitiesSubmenu = document.querySelector('.capabilities-submenu');
+    const industriesToggle = document.querySelector('.industries-toggle');
+    const industriesSubmenu = document.querySelector('.industries-submenu');
+
+    if (capabilitiesToggle && capabilitiesSubmenu) {
+      capabilitiesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const accordion = capabilitiesToggle.closest('.mobile-accordion');
+        accordion?.classList.toggle('active');
+        capabilitiesSubmenu.classList.toggle('hidden');
+      });
+    }
+
+    if (industriesToggle && industriesSubmenu) {
+      industriesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const accordion = industriesToggle.closest('.mobile-accordion');
+        accordion?.classList.toggle('active');
+        industriesSubmenu.classList.toggle('hidden');
+      });
+    }
+
+    // Close mobile menu when a link is clicked
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.classList.remove('active');
+          mobileMenuButton?.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('menu-open');
+        }
+      });
+    });
   })();
 </script>
+
+<style>
+  /* Prevent body scroll when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+</style>
