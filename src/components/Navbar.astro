@@ -107,6 +107,24 @@
       <li class="nav-item">
         <a href="/case-studies" class="nav-link">Case Studies</a>
       </li>
+      
+      <!-- Resources - Simple Dropdown -->
+      <li class="nav-item has-dropdown">
+        <button class="nav-link" aria-expanded="false">
+          Resources
+          <svg class="nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        
+        <div class="dropdown">
+          <ul class="dropdown-links">
+            <li><a href="/resources/insights">Insights</a></li>
+            <li><a href="/resources/tools">Tools</a></li>
+            <li><a href="/resources/glossary">Glossary</a></li>
+          </ul>
+        </div>
+      </li>
     </ul>
     
     <!-- CTA -->
@@ -168,6 +186,19 @@
       <!-- Standard Links (Mobile) -->
       <a href="/how-we-work" class="mobile-link">How We Work</a>
       <a href="/case-studies" class="mobile-link">Case Studies</a>
+      
+      <!-- Resources (Mobile Accordion) -->
+      <div class="mobile-accordion">
+        <button type="button" class="mobile-accordion-toggle resources-toggle">
+          Resources
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="mobile-accordion-content resources-submenu hidden">
+          <a href="/resources/insights" class="mobile-link">Insights</a>
+          <a href="/resources/tools" class="mobile-link">Tools</a>
+          <a href="/resources/glossary" class="mobile-link">Glossary</a>
+        </div>
+      </div>
       
       <!-- Contact (Mobile) -->
       <a href="/contact" class="mobile-cta">Contact</a>
@@ -648,6 +679,19 @@
         const accordion = industriesToggle.closest('.mobile-accordion');
         accordion?.classList.toggle('active');
         industriesSubmenu.classList.toggle('hidden');
+      });
+    }
+
+    const resourcesToggle = document.querySelector('.resources-toggle');
+    const resourcesSubmenu = document.querySelector('.resources-submenu');
+
+    if (resourcesToggle && resourcesSubmenu) {
+      resourcesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const accordion = resourcesToggle.closest('.mobile-accordion');
+        accordion?.classList.toggle('active');
+        resourcesSubmenu.classList.toggle('hidden');
       });
     }
 
