@@ -5,11 +5,11 @@ import Layout from "../../layouts/Layout.astro";
 <Layout title="Full-Stack Custom Systems | Intelio - Complete Platforms Built Around Your Operational Logic" description="We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works.">
 <main class="bg-white">
   <!-- SECTION 1: HERO -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background-color: #000000;">
+  <section class="hero-section">
     <!-- Video Background -->
     <video 
-      autoplay
-      muted
+      autoplay 
+      muted 
       loop
       playsinline
       preload="auto"
@@ -21,137 +21,137 @@ import Layout from "../../layouts/Layout.astro";
       <source src="/logos/Cinematic_Finance_Animation_Generation (1).mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    
-    <!-- Dark Overlay for Text Readability - 70% dark -->
+
+    <!-- Dark Overlay for Text Readability -->
     <div class="absolute inset-0 z-[1]" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);"></div>
 
-    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 py-24 w-full">
+    <!-- Subtle Radial Gradient Accent -->
+    <div class="hero-gradient-accent"></div>
+
+    <div class="hero-content">
       <div class="max-w-[900px]">
         <!-- Label -->
-        <div class="mb-8">
-          <span class="text-[#6366F1] text-sm font-medium tracking-[0.2em] uppercase">
+        <div class="mb-6">
+          <span class="hero-label">
             FULL-STACK CUSTOM SYSTEMS
           </span>
         </div>
         
         <!-- Headline -->
-        <h1 class="text-[48px] lg:text-[72px] text-white leading-[1.1] mb-8 tracking-[-0.02em] font-medium">
+        <h1 class="hero-headline">
           Complete platforms built around your operational logic.
         </h1>
         
         <!-- Subhead -->
-        <p class="text-lg text-white/85 mb-12 leading-[1.7] font-normal max-w-[640px]">
+        <p class="hero-body">
           We design and build full-stack applications from the ground up—web platforms, internal tools, and operational systems engineered specifically for how your organization works. Custom architecture that becomes infrastructure you own.
         </p>
         
         <!-- CTA Button -->
-        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+        <a href="/contact" class="cta-primary">
           Connect with our team
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-      </div>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
     </div>
   </section>
 
   <!-- SECTION 2: THE OPPORTUNITY -->
-  <section class="py-[120px] md:py-[160px] px-6 bg-white">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="grid md:grid-cols-[1fr_1fr] gap-20 items-center">
-        <div class="max-w-[720px]">
-          <h2 class="text-[36px] md:text-[48px] text-black mb-8 font-medium leading-[1.2]">
-            The Opportunity
-          </h2>
-          <div class="space-y-6 text-lg text-[#666666] leading-[1.7] font-normal">
-            <p>
-              Organizations with unique operational requirements have strategic opportunity: purpose-built platforms that encode their specific logic directly into infrastructure.
-            </p>
-            <p>
-              Custom systems eliminate the compromises of off-the-shelf software. Workflows match how you actually operate. Data structures reflect your business model. The system becomes how you compete—not a tool you work around.
-            </p>
+  <section class="opportunity-section">
+    <div class="opportunity-container">
+      <div class="opportunity-content">
+        <h2 class="section-headline">The Opportunity</h2>
+        <div class="space-y-5">
+          <p class="body-text">
+            Organizations with unique operational requirements have strategic opportunity: purpose-built platforms that encode their specific logic directly into infrastructure.
+          </p>
+          <p class="body-text">
+            Custom systems eliminate the compromises of off-the-shelf software. Workflows match how you actually operate. Data structures reflect your business model. The system becomes how you compete—not a tool you work around.
+          </p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Image Placeholder -->
-        <div class="relative">
-          <img 
-            src="/images/full-stack-opportunity.jpg" 
-            alt="System architecture visualization"
-            class="w-full h-auto"
-            onerror="this.style.display='none';"
-          />
-        </div>
+          
+      <!-- Image Placeholder -->
+      <div class="opportunity-image">
+        <img 
+          src="/images/full-stack-opportunity.jpg" 
+          alt="System architecture visualization"
+          class="w-full h-full object-cover"
+          onerror="this.parentElement.querySelector('.image-placeholder').style.display='block'; this.style.display='none';"
+        />
+        <div class="image-placeholder" style="display: none;"></div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: IMAGE BREAK -->
-  <section class="w-full h-[50vh] min-h-[400px] overflow-hidden">
+  <!-- SECTION 3: VISUAL BREAK -->
+  <section class="visual-break" aria-hidden="true">
     <img 
       src="/images/full-stack-visual-break.jpg" 
       alt=""
       class="w-full h-full object-cover object-center"
-      aria-hidden="true"
-      onerror="this.style.display='none';"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
     />
+    <div class="visual-break-gradient" style="display: none;"></div>
   </section>
 
   <!-- SECTION 4: CAPABILITIES -->
-  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
-    <div class="max-w-[1200px] mx-auto">
-      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Capabilities</h2>
+  <section class="capabilities-section">
+    <div class="capabilities-container">
+      <h2 class="section-headline-light">Capabilities</h2>
       
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="capabilities-grid">
         <!-- Capability 1: Custom Architecture -->
-        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
-          <div class="mb-6">
-            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-white mb-4 font-medium">Custom Architecture</h3>
-          <p class="text-base text-white/85 leading-[1.7] font-normal">
+              </svg>
+            </div>
+          <h3 class="card-title-light">Custom Architecture</h3>
+          <p class="card-body-light">
             System design built around your operational logic. Database structures, API design, and application architecture engineered for your specific requirements.
           </p>
         </div>
 
         <!-- Capability 2: Web Applications -->
-        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
-          <div class="mb-6">
-            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-white mb-4 font-medium">Web Applications</h3>
-          <p class="text-base text-white/85 leading-[1.7] font-normal">
+              </svg>
+            </div>
+          <h3 class="card-title-light">Web Applications</h3>
+          <p class="card-body-light">
             Customer-facing platforms, client portals, and operational dashboards. Modern, responsive interfaces that reflect your brand and serve your users.
           </p>
         </div>
 
         <!-- Capability 3: Internal Tools -->
-        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
-          <div class="mb-6">
-            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-white mb-4 font-medium">Internal Tools</h3>
-          <p class="text-base text-white/85 leading-[1.7] font-normal">
+              </svg>
+            </div>
+          <h3 class="card-title-light">Internal Tools</h3>
+          <p class="card-body-light">
             Operational systems that match how your team actually works. Workflow management, resource allocation, and process automation built for your organization.
           </p>
         </div>
 
         <!-- Capability 4: Data Infrastructure -->
-        <div class="bg-[#1A1A1A] border border-white/10 p-12 rounded transition-colors hover:border-white/20">
-          <div class="mb-6">
-            <svg class="w-8 h-8 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-white mb-4 font-medium">Data Infrastructure</h3>
-          <p class="text-base text-white/85 leading-[1.7] font-normal">
+              </svg>
+            </div>
+          <h3 class="card-title-light">Data Infrastructure</h3>
+          <p class="card-body-light">
             Database design, data pipelines, and analytics infrastructure. Systems that capture, process, and surface the information that drives decisions.
           </p>
         </div>
@@ -160,37 +160,31 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- SECTION 5: CLIENT IMPACT -->
-  <section class="py-[120px] md:py-[160px] px-6 bg-white">
-    <div class="max-w-[1200px] mx-auto">
-      <h2 class="text-[36px] md:text-[48px] text-black mb-16 font-medium leading-[1.2]">Client Impact</h2>
+  <section class="impact-section">
+    <div class="impact-container">
+      <h2 class="section-headline">Client Impact</h2>
       
-      <div class="grid md:grid-cols-3 gap-12">
+      <div class="impact-grid">
         <!-- Impact 1 -->
-        <div class="bg-[#F8F8F8] p-10 rounded">
-          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
-            Operational Platform
-          </span>
-          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+        <div class="impact-card">
+          <span class="impact-category">Operational Platform</span>
+          <p class="impact-result">
             A commercial real estate firm replaced 12 disconnected tools with a unified platform that reduced deal evaluation cycles from 12 days to 4 and improved buyer matching accuracy significantly.
           </p>
-        </div>
-
+          </div>
+          
         <!-- Impact 2 -->
-        <div class="bg-[#F8F8F8] p-10 rounded">
-          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
-            Client Portal
-          </span>
-          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+        <div class="impact-card">
+          <span class="impact-category">Client Portal</span>
+          <p class="impact-result">
             A professional services firm launched a custom client portal that automated reporting delivery and reduced client communication overhead while improving satisfaction scores.
           </p>
-        </div>
-
+          </div>
+          
         <!-- Impact 3 -->
-        <div class="bg-[#F8F8F8] p-10 rounded">
-          <span class="inline-block text-sm font-medium text-[#6366F1] uppercase tracking-wide mb-4">
-            Internal System
-          </span>
-          <p class="text-base text-[#666666] leading-[1.7] font-normal">
+        <div class="impact-card">
+          <span class="impact-category">Internal System</span>
+          <p class="impact-result">
             A construction company deployed a project management platform that unified field operations, accounting, and scheduling—improving project margins through real-time visibility.
           </p>
         </div>
@@ -199,98 +193,219 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- SECTION 6: OUR APPROACH -->
-  <section class="py-[120px] md:py-[160px] px-6" style="background-color: #000000;">
-    <div class="max-w-[1200px] mx-auto">
-      <h2 class="text-[36px] md:text-[48px] text-white mb-16 font-medium leading-[1.2]">Our Approach</h2>
+  <section class="approach-section">
+    <div class="approach-container">
+      <h2 class="section-headline-light">Our Approach</h2>
       
-      <div class="grid md:grid-cols-4 gap-12 mb-16">
+      <div class="approach-timeline">
         <!-- Step 1 -->
-        <div class="text-center">
-          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">01</div>
-          <h3 class="text-xl text-white mb-3 font-medium">Discover</h3>
-          <p class="text-base text-white/85 leading-[1.6] font-normal">
+        <div class="approach-step">
+          <span class="step-number">01</span>
+          <h3 class="step-title">Discover</h3>
+          <p class="step-description">
             Deep understanding of your operations, workflows, and requirements.
           </p>
         </div>
-
+        
         <!-- Step 2 -->
-        <div class="text-center">
-          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">02</div>
-          <h3 class="text-xl text-white mb-3 font-medium">Architect</h3>
-          <p class="text-base text-white/85 leading-[1.6] font-normal">
+        <div class="approach-step">
+          <span class="step-number">02</span>
+          <h3 class="step-title">Architect</h3>
+          <p class="step-description">
             System design, database structure, and technical specifications.
           </p>
         </div>
-
+        
         <!-- Step 3 -->
-        <div class="text-center">
-          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">03</div>
-          <h3 class="text-xl text-white mb-3 font-medium">Build</h3>
-          <p class="text-base text-white/85 leading-[1.6] font-normal">
+        <div class="approach-step">
+          <span class="step-number">03</span>
+          <h3 class="step-title">Build</h3>
+          <p class="step-description">
             Iterative development with weekly demos and continuous refinement.
           </p>
         </div>
-
+        
         <!-- Step 4 -->
-        <div class="text-center">
-          <div class="text-[48px] font-medium text-[#6366F1] leading-none mb-4">04</div>
-          <h3 class="text-xl text-white mb-3 font-medium">Deploy</h3>
-          <p class="text-base text-white/85 leading-[1.6] font-normal">
+        <div class="approach-step">
+          <span class="step-number">04</span>
+          <h3 class="step-title">Deploy</h3>
+          <p class="step-description">
             Phased rollout with training, documentation, and ongoing support.
           </p>
+          </div>
         </div>
-      </div>
 
-      <div class="text-center">
-        <a href="/how-we-work" class="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4F46E5] font-medium transition-colors">
+      <div class="approach-cta">
+        <a href="/how-we-work" class="text-link-light">
           Learn more about our methodology
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
+              </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 7: CLOSING CTA -->
-  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
+  <section class="cta-section">
+    <div class="cta-background">
       <img 
         src="/images/full-stack-cta.jpg" 
         alt=""
         class="w-full h-full object-cover"
-        onerror="this.style.display='none';"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       />
-      <div class="absolute inset-0 bg-black/75"></div>
-    </div>
-    
+      <div class="cta-gradient-placeholder" style="display: none;"></div>
+      <div class="cta-overlay"></div>
+      </div>
+
     <!-- Content -->
-    <div class="relative z-10 max-w-[720px] mx-auto px-6 text-center">
-      <h2 class="text-[36px] md:text-[48px] text-white mb-8 font-medium leading-[1.2]">
-        Build Your Custom Platform
-      </h2>
-      <p class="text-lg text-white/85 leading-[1.7] font-normal mb-10">
+    <div class="cta-content">
+      <h2 class="cta-headline">Build Your Custom Platform</h2>
+      <p class="cta-body">
         Organizations with unique operational requirements have strategic opportunity. We look forward to exploring what's possible.
       </p>
-      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#6366F1] hover:bg-[#4F46E5] text-base text-white font-medium rounded transition-colors">
+      <a href="/contact" class="cta-primary">
         Connect with our team
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
+            </svg>
       </a>
     </div>
   </section>
 </main>
 
 <style>
-  /* Typography - Inter for headlines */
-  h1, h2, h3 {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+  :root {
+    /* Font */
+    --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    /* Blacks */
+    --color-black: #000000;
+    --color-rich-black: #0A0A0A;
+    --color-dark-gray: #111111;
+    
+    /* Whites */
+    --color-white: #FFFFFF;
+    --color-off-white: #FAFAFA;
+    
+    /* Accent */
+    --color-accent: #6366F1;
+    --color-accent-hover: #4F46E5;
+    
+    /* Text */
+    --color-text-primary: #000000;
+    --color-text-secondary: #666666;
+    --color-text-on-dark: rgba(255, 255, 255, 0.85);
+    --color-text-muted-dark: rgba(255, 255, 255, 0.6);
   }
-  
-  /* Video background mobile fixes for hero section */
-  section video {
+
+  /* Typography - DM Sans */
+  body, html, h1, h2, h3, h4, h5, h6, p, a, span, div {
+    font-family: var(--font-primary);
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--color-black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at 80% 40%,
+      rgba(99, 102, 241, 0.06) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-gradient-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at 80% 40%,
+      rgba(99, 102, 241, 0.06) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+  }
+
+  .hero-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+    display: inline-block;
+  }
+
+  .hero-headline {
+    font-size: clamp(48px, 7vw, 76px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+    max-width: 900px;
+    margin-bottom: 28px;
+  }
+
+  .hero-body {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--color-text-on-dark);
+    max-width: 620px;
+    margin-bottom: 44px;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 16px 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cta-primary:hover {
+    background: var(--color-accent-hover);
+    gap: 14px;
+  }
+
+  /* Video background mobile fixes */
+  .hero-section video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -302,42 +417,382 @@ import Layout from "../../layouts/Layout.astro";
     object-fit: cover;
   }
 
-  /* Ensure video containers work on mobile */
   @media (max-width: 768px) {
-    section video {
+    .hero-section video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     
-    h1 {
+    .hero-headline {
       font-size: 48px !important;
     }
-    
-    h2 {
-      font-size: 36px !important;
-    }
+  }
 
-    /* Stack approach steps on mobile */
-    .grid.md\:grid-cols-4 {
+  /* OPPORTUNITY SECTION */
+  .opportunity-section {
+    background: var(--color-white);
+    padding: clamp(100px, 14vw, 160px) 24px;
+  }
+
+  .opportunity-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 968px) {
+    .opportunity-container {
       grid-template-columns: 1fr;
       gap: 48px;
     }
   }
 
-  @media (max-width: 968px) {
-    .grid.md\:grid-cols-3 {
-      grid-template-columns: 1fr;
+  .opportunity-content {
+    max-width: 520px;
+  }
+
+  .section-headline {
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+
+  .body-text {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .opportunity-image {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+  }
+
+  .opportunity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      #0f0f1a 0%,
+      #1a1a2e 40%,
+      #16213e 70%,
+      #0f0f1a 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 12s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* VISUAL BREAK */
+  .visual-break {
+    width: 100%;
+    height: 50vh;
+    min-height: 350px;
+    max-height: 500px;
+    overflow: hidden;
+      position: relative;
     }
+
+  .visual-break img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .visual-break-gradient {
+    width: 100%;
+        height: 100%;
+    background: linear-gradient(
+      90deg,
+      #000000 0%,
+      #0a0a1a 20%,
+      #1a1a2e 50%,
+      #0a0a1a 80%,
+      #000000 100%
+    );
+  }
+
+  /* CAPABILITIES SECTION */
+  .capabilities-section {
+    background: var(--color-black);
+    padding: clamp(100px, 14vw, 160px) 24px;
+  }
+
+  .capabilities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-headline-light {
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 56px;
+    letter-spacing: -0.01em;
+  }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+    .capability-card {
+    background: var(--color-rich-black);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 44px;
+    transition: all 0.3s ease;
+    }
+
+    .capability-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .capability-icon {
+    margin-bottom: 20px;
+  }
+
+  .capability-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-accent);
+  }
+
+  .card-title-light {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 12px;
+  }
+
+  .card-body-light {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-muted-dark);
+  }
+
+  /* CLIENT IMPACT SECTION */
+  .impact-section {
+    background: var(--color-white);
+    padding: clamp(100px, 14vw, 160px) 24px;
+  }
+
+  .impact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 56px;
+  }
+
+  @media (max-width: 968px) {
+    .impact-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  .impact-card {
+    padding: 36px;
+    background: var(--color-off-white);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .impact-category {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+  }
+
+  .impact-result {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  /* OUR APPROACH SECTION */
+  .approach-section {
+    background: var(--color-black);
+    padding: clamp(100px, 14vw, 160px) 24px;
+  }
+
+  .approach-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .approach-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 64px 0;
+  }
+
+  @media (max-width: 968px) {
+    .approach-timeline {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 32px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .approach-timeline {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .approach-step {
+    text-align: center;
+  }
+
+  .step-number {
+    display: block;
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 10px;
+  }
+
+  .step-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-muted-dark);
+  }
+
+  .approach-cta {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .text-link-light {
+    display: inline-flex;
+      align-items: center;
+    gap: 8px;
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+  }
+
+  .text-link-light:hover {
+    gap: 12px;
+  }
+
+  /* CLOSING CTA SECTION */
+  .cta-section {
+    position: relative;
+    min-height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cta-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cta-gradient-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      #0a0a12 0%,
+      #12121f 30%,
+      #1a1a2e 60%,
+      #0a0a12 100%
+    );
+  }
+
+  .cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    padding: 80px 24px;
+  }
+
+  .cta-headline {
+    font-size: clamp(32px, 5vw, 44px);
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .cta-body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--color-text-on-dark);
+    margin-bottom: 36px;
   }
 
   /* iOS Safari video fixes */
   @supports (-webkit-touch-callout: none) {
-    section video {
+    .hero-section video {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      }
     }
-  }
-</style>
+  </style>
 
 </Layout>
