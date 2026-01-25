@@ -149,7 +149,7 @@ export default function Homepage() {
                 name: "Commercial Real Estate",
                 abbr: "BLDG",
                 items: ["Deal sourcing & pipeline management", "Underwriting automation", "Portfolio intelligence"],
-                image: "/images/industry-cre.jpg",
+                image: "/logos/intelio-cool-pic-capital.png",
                 link: "/industries/commercial-real-estate"
               },
               { 
