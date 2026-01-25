@@ -1,0 +1,61 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProfessionalServicesHero from "../../components/industries/ProfessionalServicesHero.astro";
+import IntroSection from "../../components/industries/IntroSection.astro";
+import ProfessionalServicesMoment from "../../components/industries/ProfessionalServicesMoment.astro";
+import ProfessionalServicesChallenge from "../../components/industries/ProfessionalServicesChallenge.astro";
+import ProfessionalServicesApproach from "../../components/industries/ProfessionalServicesApproach.astro";
+import ProfessionalServicesCapabilities from "../../components/industries/ProfessionalServicesCapabilities.astro";
+import WhyInterlioSection from "../../components/industries/WhyInterlioSection.astro";
+import ProfessionalServicesEngagementModels from "../../components/industries/ProfessionalServicesEngagementModels.astro";
+import ProfessionalServicesCaseStudies from "../../components/industries/ProfessionalServicesCaseStudies.astro";
+import ProfessionalServicesCta from "../../components/industries/ProfessionalServicesCta.astro";
+import SectionDivider from "../../components/industries/SectionDivider.astro";
+import PageNavDots from "../../components/industries/PageNavDots.astro";
+
+const pageTitle = "Commercial Real Estate Software | Intelio";
+const pageDescription = "AI-powered systems for commercial real estate deal sourcing, underwriting automation, and portfolio management. Purpose-built for CRE operations.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="cre-industry-page">
+    <ProfessionalServicesHero />
+    <IntroSection 
+      headline="Speed is competitive advantage in commercial real estate"
+      paragraph1="Commercial real estate is a game of velocity. The fastest firms source more deals, underwrite faster, and close more transactions. But velocity alone isn't enough—you still need rigor, accuracy, and investor confidence."
+      paragraph2="Most CRE firms face a painful tradeoff: move fast and risk quality, or maintain rigor and lose deals. Intelio eliminates this choice by building purpose-built systems that let you move at market speed without sacrificing accuracy or operational control."
+      buttonText="Let's Build Together"
+      buttonLink="/contact"
+    />
+    <ProfessionalServicesMoment />
+    <SectionDivider variant="white-to-black" />
+    <ProfessionalServicesChallenge />
+    <SectionDivider />
+    <ProfessionalServicesApproach />
+    <SectionDivider />
+    <ProfessionalServicesCapabilities />
+    <SectionDivider variant="white-to-black" />
+    <WhyInterlioSection
+      headline="Why intelio for Commercial Real Estate"
+      statText="We've helped <strong>50+ commercial real estate firms</strong> build systems that eliminate operational friction and accelerate deal velocity."
+      copyText="Our systems are purpose-built specifically for how CRE teams operate—from sourcing through investor reporting. We don't force-fit generic software into your workflow. Every feature is engineered to eliminate friction, automate drudgery, and create competitive advantage."
+      imageUrl="/logos/intelio-CRE.png"
+      imageAlt="Why intelio for Commercial Real Estate"
+    />
+    <SectionDivider variant="white-to-black" />
+    <ProfessionalServicesCaseStudies />
+    <SectionDivider />
+    <ProfessionalServicesEngagementModels />
+    <SectionDivider />
+    <ProfessionalServicesCta />
+    <PageNavDots />
+  </main>
+</Layout>
+
+<style>
+  .cre-industry-page {
+    background: #FFFFFF;
+    color: #000000;
+  }
+</style>
+

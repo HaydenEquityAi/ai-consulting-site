@@ -1,0 +1,218 @@
+---
+// The Challenge section for Financial Services industry page
+---
+
+<section id="challenge" class="cre-challenge-section">
+  <div class="cre-challenge-container">
+    <span class="section-label">THE CHALLENGE</span>
+    <h2 class="cre-challenge-headline">
+      Speed vs. process in commercial real estate
+    </h2>
+    <p class="cre-challenge-subheadline">
+      Commercial real estate moves fast. Deals appear and disappear in days. Investors need answers immediately. 
+      But most CRE firms are still running on spreadsheets, manual processes, and disconnected systems that can't keep up.
+    </p>
+
+    <!-- Highlight Box -->
+    <div class="cre-highlight-box">
+      <p class="cre-highlight-text">
+        "The average CRE firm misses 30-40% of qualified deals because they can't evaluate and respond fast enough."
+      </p>
+    </div>
+
+    <!-- Challenge List -->
+    <div class="cre-challenge-list-wrapper">
+      <ul class="cre-challenge-list">
+        <li><strong>Deal sourcing is fragmented</strong> across email, spreadsheets, and broker networks—making it impossible to track what's in your pipeline.</li>
+        <li><strong>Underwriting takes too long</strong> because data lives in silos. Analysts spend hours copying numbers between systems instead of analyzing deals.</li>
+        <li><strong>Portfolio performance is opaque</strong> because reporting requires manual data pulls from multiple sources, delaying critical decisions.</li>
+        <li><strong>Investor reporting is reactive</strong> instead of proactive. You're building reports after questions are asked, not before they're needed.</li>
+        <li><strong>Market intelligence is scattered</strong> across news feeds, broker updates, and internal notes—making it hard to spot opportunities.</li>
+        <li><strong>Team coordination breaks down</strong> when deal information lives in email threads and shared drives instead of a single source of truth.</li>
+      </ul>
+    </div>
+
+    <!-- Stat Cards -->
+    <div class="cre-stat-cards">
+      <div class="cre-stat-card">
+        <div class="cre-stat-number">30-40%</div>
+        <div class="cre-stat-label">deals missed</div>
+      </div>
+      <div class="cre-stat-card">
+        <div class="cre-stat-number">60+ hrs</div>
+        <div class="cre-stat-label">per deal</div>
+      </div>
+      <div class="cre-stat-card">
+        <div class="cre-stat-number">3-5 days</div>
+        <div class="cre-stat-label">investor reporting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cre-challenge-section {
+    background: #FFFFFF;
+    padding: clamp(30px, 4vw, 50px) 24px;
+  }
+
+  .cre-challenge-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .cre-challenge-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+
+  .cre-challenge-subheadline {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+    max-width: 900px;
+  }
+
+  .cre-highlight-box {
+    background: rgba(14, 165, 233, 0.05);
+    border-left: 4px solid #0EA5E9;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+
+  .cre-highlight-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .cre-challenge-list-wrapper {
+    margin-bottom: 64px;
+  }
+
+  .cre-challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cre-challenge-list li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 17px; /* Increased from 16px for better readability */
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .cre-challenge-list li::before {
+    content: '−';
+    position: absolute;
+    left: 0;
+    color: #0EA5E9;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .cre-challenge-list li strong {
+    font-size: 17px; /* Match parent font size */
+    color: #000000;
+    font-weight: 600;
+  }
+
+  .cre-stat-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .cre-stat-card {
+    background: rgba(14, 165, 233, 0.05);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    padding: 32px;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  .cre-stat-card:hover {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.4);
+  }
+
+  .cre-stat-number {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: #0EA5E9;
+    margin-bottom: 8px;
+  }
+
+  .cre-stat-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: lowercase;
+  }
+
+  @media (max-width: 1024px) {
+    .cre-challenge-list {
+      grid-template-columns: 1fr;
+    }
+
+    .cre-challenge-list li {
+      font-size: 16px; /* Slightly smaller on tablet */
+    }
+
+    .cre-challenge-list li strong {
+      font-size: 16px; /* Match tablet size */
+    }
+
+    .cre-stat-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-challenge-section {
+      padding: clamp(20px, 3vw, 40px) 24px;
+    }
+
+    .cre-challenge-list li {
+      font-size: 15px; /* Original size on mobile for space efficiency */
+    }
+
+    .cre-challenge-list li strong {
+      font-size: 15px; /* Match mobile size */
+    }
+
+    .cre-highlight-box {
+      padding: 24px;
+    }
+
+    .cre-stat-card {
+      padding: 24px;
+    }
+  }
+</style>
+

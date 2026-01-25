@@ -1,0 +1,193 @@
+---
+// Hero section for Healthcare industry page
+---
+
+<section id="hero" class="cre-hero-section">
+  <!-- Background Image Container -->
+  <div class="cre-hero-image-container">
+    <img 
+      src="/logos/intelio-cool-pic-capital.png" 
+      alt="Commercial Real Estate"
+      class="cre-hero-image"
+    />
+    <div class="cre-hero-overlay"></div>
+  </div>
+
+  <div class="cre-hero-container">
+    <span class="cre-hero-label">COMMERCIAL REAL ESTATE</span>
+    <h1 class="cre-hero-headline">
+      Systems that move faster than your competition
+    </h1>
+    <p class="cre-hero-subheadline">
+      Deal sourcing, underwriting, and portfolio management at the speed you need. Built specifically for how CRE firms operate.
+    </p>
+    <div class="cre-hero-ctas">
+      <a href="#capabilities" class="cre-cta-secondary">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="cre-scroll-indicator">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .cre-hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(50px, 6vw, 80px) 24px;
+    overflow: hidden;
+  }
+
+  .cre-hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .cre-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cre-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .cre-hero-container {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cre-hero-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  .cre-hero-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  .cre-hero-subheadline {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 700px;
+  }
+
+  .cre-hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cre-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cre-cta-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .cre-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    animation: bounce 2s infinite;
+    z-index: 2;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(8px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-hero-section {
+      min-height: 60vh;
+      padding: clamp(30px, 4vw, 50px) 24px;
+    }
+
+    .cre-hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cre-hero-ctas {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .cre-cta-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Stop scroll indicator animation after first scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicator = document.querySelector('.cre-scroll-indicator');
+    let hasScrolled = false;
+    
+    const handleScroll = () => {
+      if (!hasScrolled && window.scrollY > 50) {
+        hasScrolled = true;
+        if (scrollIndicator) {
+          scrollIndicator.style.animation = 'none';
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { once: false });
+  });
+</script>
+
