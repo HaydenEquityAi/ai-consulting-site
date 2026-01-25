@@ -376,7 +376,12 @@ export default function AboutUs() {
 
             {/* Technology */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 h-48 rounded-lg border border-blue-500/30" />
+              <div 
+                className="h-48 rounded-lg border border-blue-500/30 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/intelio-cool-image-7.jpg')`,
+                }}
+              />
               <h3 className="text-2xl font-light text-black">
                 Technology that delivers
               </h3>
