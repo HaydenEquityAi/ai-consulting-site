@@ -22,7 +22,7 @@ export default function Homepage() {
             Tech & AI at intelio
           </p>
           <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8 text-white">
-            intelligence that moves everything.
+            intelligence that moves business.
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             There's software. Then there's intelligence that reimagines and rewires organizations - powered by people, built with AI, and proven to create lasting value.
