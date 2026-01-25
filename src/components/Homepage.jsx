@@ -159,7 +159,7 @@ export default function Homepage() {
                 name: "Healthcare",
                 abbr: "HC",
                 items: ["Patient management systems", "Care coordination workflows", "Scheduling optimization"],
-                image: "/images/industry-healthcare.jpg",
+                image: "/logos/intelio-healthcare-image-header.webp",
                 link: "/industries/healthcare"
               },
               { 
