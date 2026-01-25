@@ -70,59 +70,68 @@ export default function Homepage() {
       </section>
 
       {/* FEATURED CAPABILITIES SECTION */}
-      <section id="featured-capabilities" className="py-24 md:py-32 px-6 md:px-12 bg-black border-y border-white/10">
+      <section id="featured-capabilities" className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
-            Featured Capabilities
-          </p>
-          <h2 className="text-4xl md:text-5xl font-light mb-16 text-white">
-            AI built for your business
-          </h2>
-
+          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Featured Capabilities</p>
+          <h2 className="text-4xl md:text-5xl font-light mb-16">AI built for your business</h2>
+          
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Capability 1 */}
-            <a href="/custom-ai-development" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
-              <h3 className="text-xl font-medium text-white mb-3">
-                Custom AI Development
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Purpose-built AI systems embedded into your workflows. Not generic platforms—intelligence designed for how you operate.
-              </p>
-              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
-            </a>
-
-            {/* Capability 2 */}
-            <a href="/ai-integration-automation" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
-              <h3 className="text-xl font-medium text-white mb-3">
-                Automation & Integration
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Connect disparate systems, automate workflows, and orchestrate operations. Eliminate manual work at scale.
-              </p>
-              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
-            </a>
-
-            {/* Capability 3 */}
-            <a href="/what-we-build" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
-              <h3 className="text-xl font-medium text-white mb-3">
-                Full-Stack Systems
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                End-to-end platforms from architecture through operations. Systems that become your competitive moat.
-              </p>
-              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
-            </a>
-
-            {/* Capability 4 */}
-            <a href="/how-we-work" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
-              <h3 className="text-xl font-medium text-white mb-3">
-                Strategy & Implementation
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                AI strategy, technology assessment, and implementation management. We guide the journey from vision to reality.
-              </p>
-              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
-            </a>
+            {[
+              { 
+                title: "Custom AI Development", 
+                desc: "Purpose-built AI systems engineered for your specific workflows and competitive advantage.",
+                image: "/images/capability-ai-development.jpg",
+                link: "/custom-ai-development"
+              },
+              { 
+                title: "System Integration", 
+                desc: "Connect disparate systems into a unified platform that operates as one cohesive infrastructure.",
+                image: "/images/capability-integration.jpg",
+                link: "/ai-integration-automation/system-integration"
+              },
+              { 
+                title: "Workflow Automation", 
+                desc: "Intelligent automation that removes friction from your operations and accelerates decision-making.",
+                image: "/images/capability-automation.jpg",
+                link: "/ai-integration-automation/workflow-automation"
+              },
+              { 
+                title: "Enterprise Architecture", 
+                desc: "Strategic system design that scales with your business and evolves with your needs.",
+                image: "/images/capability-enterprise.jpg",
+                link: "/custom-ai-development/enterprise-architecture"
+              }
+            ].map((capability, idx) => (
+              <a 
+                key={idx} 
+                href={capability.link}
+                className="relative h-80 rounded-lg overflow-hidden group cursor-pointer transition-all hover:scale-105"
+              >
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url('${capability.image}')`,
+                  }}
+                />
+                
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all" />
+                
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-end p-8 z-10">
+                  <h3 className="text-2xl font-medium text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {capability.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    {capability.desc}
+                  </p>
+                  <div className="text-cyan-400 font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Learn more →
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
