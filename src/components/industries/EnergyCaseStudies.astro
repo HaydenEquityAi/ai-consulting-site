@@ -1,0 +1,223 @@
+---
+// Case Studies section for Energy industry page
+---
+
+<section id="case-studies" class="cre-case-studies-section">
+  <div class="cre-case-studies-container">
+    <span class="section-label">SUCCESS IN CRE</span>
+    <h2 class="cre-case-studies-headline">
+      Real outcomes from CRE firms we work with
+    </h2>
+
+    <div class="cre-case-studies-grid">
+      <!-- Case Study 1 -->
+      <a href="/case-studies/deal-intelligence-platform" class="cre-case-study-card">
+        <div class="cre-case-image">
+          <img 
+            src="/logos/cool-intelio-image-12.jpg" 
+            alt="Regional investment firm"
+            class="cre-case-image-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="cre-case-content">
+          <span class="cre-case-label">REGIONAL INVESTMENT FIRM</span>
+          <h3 class="cre-case-title">
+            Regional investment firm unifies deal flow and accelerates evaluation by 67%
+          </h3>
+          <p class="cre-case-description">
+            Built a unified deal intelligence platform that connected broker networks, automated underwriting workflows, and provided real-time pipeline visibility. The firm now evaluates deals in 6 days instead of 18.
+          </p>
+          <div class="cre-case-stat">6-day reduction in underwriting cycle</div>
+        </div>
+      </a>
+
+      <!-- Case Study 2 -->
+      <a href="/case-studies/construction-automation" class="cre-case-study-card">
+        <div class="cre-case-image">
+          <img 
+            src="/logos/intelio-real-estate-1.webp" 
+            alt="Multi-asset CRE firm"
+            class="cre-case-image-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="cre-case-content">
+          <span class="cre-case-label">MULTI-ASSET CRE FIRM</span>
+          <h3 class="cre-case-title">
+            Multi-asset CRE firm closes 40% more qualified deals with automated sourcing
+          </h3>
+          <p class="cre-case-description">
+            Implemented intelligent deal sourcing system that aggregates opportunities from multiple channels, automatically qualifies leads, and matches deals to buyer profiles. Deal flow increased 3x while maintaining quality.
+          </p>
+          <div class="cre-case-stat">40% more qualified deals closed</div>
+        </div>
+      </a>
+
+      <!-- Case Study 3 -->
+      <a href="/case-studies/financial-automation" class="cre-case-study-card">
+        <div class="cre-case-image">
+          <img 
+            src="/logos/cool-intelio-image-11.jpg" 
+            alt="Portfolio management firm"
+            class="cre-case-image-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="cre-case-content">
+          <span class="cre-case-label">PORTFOLIO MANAGEMENT FIRM</span>
+          <h3 class="cre-case-title">
+            Portfolio management firm eliminates manual reporting overhead
+          </h3>
+          <p class="cre-case-description">
+            Automated investor reporting system that generates portfolio performance reports on-demand. Reports that previously took 3-5 days to compile now generate in minutes, with zero manual data entry.
+          </p>
+          <div class="cre-case-stat">Zero manual reporting overhead</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cre-case-studies-section {
+    background: #FFFFFF;
+    padding: clamp(30px, 4vw, 50px) 24px;
+  }
+
+  .cre-case-studies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .cre-case-studies-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+
+  .cre-case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .cre-case-study-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s ease;
+  }
+
+  .cre-case-study-card:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .cre-case-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f0f0f0;
+    flex-shrink: 0;
+  }
+
+  .cre-case-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .cre-case-study-card:hover .cre-case-image-img {
+    transform: scale(1.03);
+  }
+
+  .cre-case-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cre-case-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .cre-case-title {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0 0 16px 0;
+  }
+
+  .cre-case-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+  }
+
+  .cre-case-stat {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0EA5E9;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 16px;
+    margin-top: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .cre-case-studies-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-case-studies-section {
+      padding: clamp(20px, 3vw, 40px) 24px;
+    }
+
+    .cre-case-studies-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cre-case-title {
+      font-size: 16px;
+    }
+
+    .cre-case-description {
+      font-size: 14px;
+    }
+  }
+</style>
+

@@ -1,0 +1,212 @@
+---
+// Engagement Models section for Trade & Field Services industry page
+---
+
+<section id="engagement" class="cre-engagement-section">
+  <div class="cre-engagement-container">
+    <span class="section-label">ENGAGEMENT MODELS</span>
+    <h2 class="cre-engagement-headline">
+      How we structure CRE partnerships
+    </h2>
+
+    <div class="cre-engagement-grid">
+      <!-- Build + Maintain -->
+      <div class="cre-engagement-card">
+        <h3 class="cre-engagement-card-title">Build + Maintain</h3>
+        <p class="cre-engagement-card-description">
+          We architect and build your CRE systems, then transfer ownership to your team. You maintain and evolve the platform with our support as needed.
+        </p>
+        <div class="cre-engagement-structure">
+          <p class="cre-structure-label">Structure:</p>
+          <ul class="cre-structure-list">
+            <li>Custom system development</li>
+            <li>Knowledge transfer and training</li>
+            <li>Ongoing support on retainer</li>
+            <li>Full system ownership</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Build + Operate -->
+      <div class="cre-engagement-card">
+        <h3 class="cre-engagement-card-title">Build + Operate</h3>
+        <p class="cre-engagement-card-description">
+          We build and operate your systems, handling infrastructure, updates, and maintenance. You focus on deals while we ensure your technology runs smoothly.
+        </p>
+        <div class="cre-engagement-structure">
+          <p class="cre-structure-label">Structure:</p>
+          <ul class="cre-structure-list">
+            <li>Custom system development</li>
+            <li>Full operational management</li>
+            <li>Continuous updates and improvements</li>
+            <li>24/7 system monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Managed Systems -->
+      <div class="cre-engagement-card">
+        <h3 class="cre-engagement-card-title">Managed Systems</h3>
+        <p class="cre-engagement-card-description">
+          We take full responsibility for your CRE technology stack—from architecture through operations. You get enterprise-grade systems without building an internal tech team.
+        </p>
+        <div class="cre-engagement-structure">
+          <p class="cre-structure-label">Structure:</p>
+          <ul class="cre-structure-list">
+            <li>End-to-end system management</li>
+            <li>Strategic technology roadmap</li>
+            <li>Dedicated operations team</li>
+            <li>Performance optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cre-engagement-section {
+    background: #FFFFFF;
+    padding: clamp(30px, 4vw, 50px) 24px;
+  }
+
+  .cre-engagement-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .cre-engagement-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 24px;
+  }
+
+  .cre-engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .cre-engagement-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    background: rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+  }
+
+  .cre-engagement-card:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .cre-engagement-card:hover .cre-engagement-card-title {
+    color: #000000;
+  }
+
+  .cre-engagement-card:hover .cre-engagement-card-description {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .cre-engagement-card:hover .cre-structure-label {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .cre-engagement-card:hover .cre-structure-list li {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .cre-engagement-card-title {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 16px;
+    transition: color 0.4s ease;
+  }
+
+  .cre-engagement-card-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 24px;
+    transition: color 0.4s ease;
+  }
+
+  .cre-engagement-structure {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border-color 0.4s ease;
+  }
+
+  .cre-engagement-card:hover .cre-engagement-structure {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .cre-structure-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease;
+  }
+
+  .cre-structure-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cre-structure-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    transition: color 0.4s ease;
+  }
+
+  .cre-structure-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: #0EA5E9;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .cre-engagement-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-engagement-section {
+      padding: clamp(20px, 3vw, 40px) 24px;
+    }
+
+    .cre-engagement-card {
+      padding: 24px;
+    }
+  }
+</style>
+
