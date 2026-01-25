@@ -80,7 +80,7 @@ export default function Homepage() {
               { 
                 title: "Custom AI Development", 
                 desc: "Purpose-built AI systems engineered for your specific workflows and competitive advantage.",
-                video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
+                video: "/logos/Abstract_Data_Visualization_Video_Generation.mp4",
                 link: "/custom-ai-development"
               },
               { 
