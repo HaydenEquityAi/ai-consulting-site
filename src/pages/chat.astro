@@ -91,9 +91,11 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="chat-interface">
         <div class="chat-content">
-          <!-- Chat Messages Container -->
-          <div class="chat-messages" id="chat-messages">
-            <!-- Messages will be dynamically added here -->
+          <!-- Chat Messages Section - Scrollable -->
+          <div class="chat-messages-section">
+            <div class="chat-messages" id="chat-messages">
+              <!-- Messages will be dynamically added here -->
+            </div>
           </div>
           
           <!-- Input Area (optional, disabled for now) -->
@@ -117,7 +119,9 @@ import Layout from '../layouts/Layout.astro';
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
+    height: 100vh;
     background: #FFFFFF;
+    overflow: hidden;
   }
   
   /* Left Panel - Form */
@@ -307,13 +311,13 @@ import Layout from '../layouts/Layout.astro';
   /* Right Panel - Chat */
   .chat-panel-right {
     background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
-    padding: clamp(40px, 5vw, 60px) 24px;
+    padding: 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100vh;
   }
   
   /* Close Button */
@@ -349,16 +353,29 @@ import Layout from '../layouts/Layout.astro';
   .chat-interface {
     width: 100%;
     max-width: 600px;
-    min-height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    padding: clamp(40px, 5vw, 60px) 24px;
+    overflow: hidden;
   }
   
   .chat-content {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+  
+  /* Chat Messages Section - Scrollable */
+  .chat-messages-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 20px;
   }
   
@@ -367,7 +384,7 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     gap: 24px;
-    flex: 1;
+    min-height: 100%;
   }
   
   /* Message Wrapper */
@@ -434,9 +451,10 @@ import Layout from '../layouts/Layout.astro';
   
   /* Input Area */
   .chat-input-area {
-    margin-top: 24px;
+    margin-top: auto;
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
   }
   
   .chat-input-area input {
@@ -493,9 +511,12 @@ import Layout from '../layouts/Layout.astro';
   @media (max-width: 968px) {
     .chat-page {
       grid-template-columns: 1fr;
+      height: auto;
+      min-height: 100vh;
     }
     
     .chat-panel-right {
+      height: 50vh;
       min-height: 400px;
       order: 2;
     }
@@ -503,11 +524,17 @@ import Layout from '../layouts/Layout.astro';
     .chat-panel-left {
       order: 1;
     }
+    
+    .chat-interface {
+      padding: 32px 16px;
+    }
   }
   
   @media (max-width: 600px) {
     .chat-page {
       grid-template-columns: 1fr;
+      height: auto;
+      min-height: 100vh;
     }
     
     .chat-panel-left {
@@ -515,8 +542,12 @@ import Layout from '../layouts/Layout.astro';
     }
     
     .chat-panel-right {
-      padding: 40px 16px;
+      height: 50vh;
       min-height: 350px;
+    }
+    
+    .chat-interface {
+      padding: 24px 16px;
     }
     
     .chat-form-container {
@@ -529,6 +560,21 @@ import Layout from '../layouts/Layout.astro';
     
     .chat-greeting-title {
       font-size: 20px;
+    }
+    
+    .message-avatar {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+    }
+    
+    .chat-message-bubble {
+      max-width: 100%;
+      padding: 14px 16px;
+    }
+    
+    .bot-message p {
+      font-size: 14px;
     }
   }
 </style>
@@ -548,9 +594,11 @@ import Layout from '../layouts/Layout.astro';
     let currentMessageIndex = 0;
     let typingInterval = null;
 
-    // Auto-scroll to bottom
+    // Auto-scroll to bottom - only scrolls messages section
     function scrollToBottom() {
-      chatEndRef.scrollIntoView({ behavior: 'smooth' });
+      if (chatEndRef && chatEndRef.parentNode) {
+        chatEndRef.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
 
     // Create message bubble
@@ -585,8 +633,15 @@ import Layout from '../layouts/Layout.astro';
         setTimeout(() => {
           const { wrapper, bubble, paragraph } = createMessageBubble('', true);
           messagesContainer.appendChild(wrapper);
+          
+          // Ensure chatEndRef is at the end
+          if (chatEndRef.parentNode) {
+            chatEndRef.parentNode.removeChild(chatEndRef);
+          }
           messagesContainer.appendChild(chatEndRef);
-          scrollToBottom();
+          
+          // Small delay to ensure DOM is updated
+          setTimeout(() => scrollToBottom(), 50);
 
           let currentIndex = 0;
           const typingSpeed = 40; // ms per character
@@ -595,14 +650,18 @@ import Layout from '../layouts/Layout.astro';
             if (currentIndex <= messageText.length) {
               const text = messageText.substring(0, currentIndex);
               paragraph.innerHTML = text + '<span class="typing-cursor">|</span>';
-              scrollToBottom();
+              // Only scroll every few characters to improve performance
+              if (currentIndex % 5 === 0 || currentIndex === messageText.length) {
+                scrollToBottom();
+              }
               currentIndex++;
             } else {
               clearInterval(typingInterval);
               // Remove typing class and cursor
               bubble.classList.remove('typing');
               paragraph.innerHTML = messageText;
-              scrollToBottom();
+              // Final scroll after message is complete
+              setTimeout(() => scrollToBottom(), 100);
               resolve();
             }
           }, typingSpeed);
