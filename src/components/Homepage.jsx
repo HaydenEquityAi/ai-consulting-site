@@ -180,7 +180,7 @@ export default function Homepage() {
                 name: "Property Management",
                 abbr: "PROP",
                 items: ["Tenant operations management", "Maintenance workflow automation", "Financial reporting systems"],
-                image: "/images/industry-property-management.jpg",
+                image: "/logos/intelio-website-pic-dashboard.webp",
                 link: "/industries/property-management"
               },
               { 
@@ -439,7 +439,12 @@ export default function Homepage() {
 
             {/* Case Study 3 */}
             <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
-              <div className="h-48 bg-gradient-to-br from-indigo-500/20 to-purple-500/20" />
+              <div 
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/cool-intelio-image-12.jpg')`,
+                }}
+              />
               <div className="p-8">
                 <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">PROFESSIONAL SERVICES</span>
                 <h3 className="text-xl font-medium text-white mb-3 mt-2">
@@ -454,7 +459,12 @@ export default function Homepage() {
 
             {/* Case Study 4 */}
             <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
-              <div className="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20" />
+              <div 
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/intelio-real-estate-2.webp')`,
+                }}
+              />
               <div className="p-8">
                 <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">CONSTRUCTION</span>
                 <h3 className="text-xl font-medium text-white mb-3 mt-2">
