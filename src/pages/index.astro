@@ -66,6 +66,81 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </section>
 
+<!-- FEATURED CAPABILITIES CAROUSEL -->
+<section id="featured-capabilities" class="featured-section">
+  <div class="featured-container">
+    
+    <span class="section-label">FEATURED CAPABILITIES</span>
+    
+    <h2 class="featured-headline" id="featured-headline">
+      AI built for your business
+    </h2>
+    
+    <div class="featured-carousel">
+      
+      <button 
+        class="featured-nav featured-nav-prev" 
+        id="featured-prev"
+        aria-label="Previous slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      
+      <a href="/custom-ai-development" class="featured-card" id="featured-card">
+        <div class="featured-image">
+          <video 
+            id="featured-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="featured-video"
+          >
+            <source id="featured-video-source" src="/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4" type="video/mp4">
+          </video>
+          <img 
+            id="featured-image"
+            src=""
+            alt=""
+            class="featured-image-img"
+            style="display: none;"
+          />
+        </div>
+        
+        <div class="featured-info">
+          <h3 class="featured-title" id="featured-title">
+            QuantumBlack, AI by intelio <span class="arrow">›</span>
+          </h3>
+          <p class="featured-description" id="featured-description">
+            We combine advanced AI engineering with strategic thinking to design solutions that create real-world impact—quickly, responsibly, and at scale.
+          </p>
+        </div>
+      </a>
+      
+      <button 
+        class="featured-nav featured-nav-next" 
+        id="featured-next"
+        aria-label="Next slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+      
+    </div>
+    
+    <div class="featured-dots" id="featured-dots">
+      <button class="featured-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+      <button class="featured-dot" data-slide="1" aria-label="Go to slide 2"></button>
+      <button class="featured-dot" data-slide="2" aria-label="Go to slide 3"></button>
+    </div>
+    
+  </div>
+</section>
+
 <!-- CAPABILITIES SECTION (Two Cards) -->
 <section id="capabilities" class="capabilities-section pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16">
  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full text-center">
@@ -193,81 +268,6 @@ import Layout from "../layouts/Layout.astro";
   <a href="/contact" class="approach-cta-button">
     Get in touch
   </a>
-</section>
-
-<!-- FEATURED CAPABILITIES CAROUSEL -->
-<section id="featured-capabilities" class="featured-section">
-  <div class="featured-container">
-    
-    <span class="section-label">FEATURED CAPABILITIES</span>
-    
-    <h2 class="featured-headline" id="featured-headline">
-      AI built for your business
-    </h2>
-    
-    <div class="featured-carousel">
-      
-      <button 
-        class="featured-nav featured-nav-prev" 
-        id="featured-prev"
-        aria-label="Previous slide"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 18l-6-6 6-6"/>
-        </svg>
-      </button>
-      
-      <a href="/custom-ai-development" class="featured-card" id="featured-card">
-        <div class="featured-image">
-          <video 
-            id="featured-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            class="featured-video"
-          >
-            <source id="featured-video-source" src="/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4" type="video/mp4">
-          </video>
-          <img 
-            id="featured-image"
-            src=""
-            alt=""
-            class="featured-image-img"
-            style="display: none;"
-          />
-        </div>
-        
-        <div class="featured-info">
-          <h3 class="featured-title" id="featured-title">
-            QuantumBlack, AI by intelio <span class="arrow">›</span>
-          </h3>
-          <p class="featured-description" id="featured-description">
-            We combine advanced AI engineering with strategic thinking to design solutions that create real-world impact—quickly, responsibly, and at scale.
-          </p>
-        </div>
-      </a>
-      
-      <button 
-        class="featured-nav featured-nav-next" 
-        id="featured-next"
-        aria-label="Next slide"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18l6-6-6-6"/>
-        </svg>
-      </button>
-      
-    </div>
-    
-    <div class="featured-dots" id="featured-dots">
-      <button class="featured-dot active" data-slide="0" aria-label="Go to slide 1"></button>
-      <button class="featured-dot" data-slide="1" aria-label="Go to slide 2"></button>
-      <button class="featured-dot" data-slide="2" aria-label="Go to slide 3"></button>
-    </div>
-    
-  </div>
 </section>
 
 <!-- TECH & AI CASE STUDIES SECTION -->
