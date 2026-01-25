@@ -19,11 +19,20 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- BLUE HIGHLIGHT SECTION -->
+  <section class="highlight-section light-bg">
+    <div class="highlight-content">
+      <h2 class="highlight-heading">What separates winners from the rest</h2>
+      <p class="highlight-statement">The fastest organizations aren't using better tools. They're using systems built for their specific competitive advantages.</p>
+    </div>
+  </section>
+
   <!-- INTRO SECTION with IMAGE -->
   <section class="intro-section light-bg">
     <div class="intro-text">
       <p class="intro-primary">Custom software becomes competitive advantage when it encodes your specific operational logic.</p>
-      <p>We architect and build production-grade systems. Data infrastructure, application logic, intelligent automation, user interfaces—engineered as integrated platforms designed for scale. AI integrated at the architectural level where it removes friction, improves decisions, or creates new capabilities.</p>
+      <p>We architect and build production-grade systems. Data infrastructure, application logic, intelligent automation, user interfaces—engineered as integrated platforms designed for scale.</p>
+      <p>AI integrated at the architectural level where it removes friction, improves decisions, or creates new capabilities.</p>
     </div>
     <div class="image-placeholder">
       <div class="image-placeholder-text">
@@ -37,24 +46,65 @@ import Layout from '../../layouts/Layout.astro';
   <!-- KEY STATS SECTION -->
   <section class="stats-section">
     <div class="section-label">REAL OUTCOMES</div>
-    <h2>The impact of custom systems</h2>
+    <h2>The Business Impact</h2>
+    <p class="stats-subheading">Organizations building custom systems create competitive advantage through operational logic generic platforms cannot capture.</p>
     
     <div class="stats-callout">
       <div class="stat-item">
-        <div class="stat-value">3-5x</div>
+        <div class="stat-value-wrapper">
+          <div class="stat-value">3-5x</div>
+        </div>
         <div class="stat-label">Faster decision velocity with integrated automation</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">60%</div>
+        <div class="stat-value-wrapper">
+          <div class="stat-value">60%</div>
+        </div>
         <div class="stat-label">Reduction in manual, repetitive work</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">100%</div>
+        <div class="stat-value-wrapper">
+          <div class="stat-value">100%</div>
+        </div>
         <div class="stat-label">Code ownership. Zero vendor lock-in.</div>
       </div>
     </div>
 
-    <p class="section-supporting-text">Organizations building custom systems create competitive advantage through operational logic generic platforms cannot capture. Systems that become so essential to how you work, switching to alternatives becomes impossible.</p>
+    <p class="section-supporting-text">Systems that become so essential to how you work, switching to alternatives becomes impossible.</p>
+  </section>
+
+  <!-- THE REALITY SECTION -->
+  <section class="reality-section light-bg">
+    <div class="section-label">THE REALITY</div>
+    <h2>Why off-the-shelf platforms fail</h2>
+    
+    <div class="reality-list">
+      <div class="reality-item">
+        <div class="reality-icon">⚠️</div>
+        <div class="reality-content">
+          <h3><strong>Every system feels generic</strong></h3>
+          <p>Built for everyone, optimized for nobody. You adapt your business to fit the software.</p>
+        </div>
+      </div>
+      
+      <div class="reality-item">
+        <div class="reality-icon">⚠️</div>
+        <div class="reality-content">
+          <h3><strong>You're always dependent</strong></h3>
+          <p>Roadmap controlled by vendors. New features require waiting, customization, or migration.</p>
+        </div>
+      </div>
+      
+      <div class="reality-item">
+        <div class="reality-icon">⚠️</div>
+        <div class="reality-content">
+          <h3><strong>Competitors use the same tools</strong></h3>
+          <p>Your advantage comes from how you use them, not from the platform itself.</p>
+        </div>
+      </div>
+    </div>
+    
+    <p class="reality-closing">This is why leading organizations build custom systems instead.</p>
   </section>
 
   <!-- WHAT WE BUILD -->
@@ -65,7 +115,10 @@ import Layout from '../../layouts/Layout.astro';
     <div class="capabilities-grid">
       <!-- Full-Stack Systems -->
       <div class="capability-card">
-        <div class="capability-icon">ICON 1</div>
+        <div class="capability-icon-wrapper">
+          <div class="capability-icon">ICON 1</div>
+        </div>
+        <div class="capability-title-border"></div>
         <h3>Full-Stack Systems</h3>
         <p>Complete production systems from database to user interface. Data models architected for scale. APIs designed for reliability and integration.</p>
         <div class="capability-details">
@@ -76,7 +129,10 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Intelligent Automation -->
       <div class="capability-card">
-        <div class="capability-icon">ICON 2</div>
+        <div class="capability-icon-wrapper">
+          <div class="capability-icon">ICON 2</div>
+        </div>
+        <div class="capability-title-border"></div>
         <h3>Intelligent Automation</h3>
         <p>Systems with AI integrated at the architectural level. Language models process information. Machine learning predicts outcomes. Automation handles decisions.</p>
         <div class="capability-details">
@@ -87,7 +143,10 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- SaaS & Product -->
       <div class="capability-card">
-        <div class="capability-icon">ICON 3</div>
+        <div class="capability-icon-wrapper">
+          <div class="capability-icon">ICON 3</div>
+        </div>
+        <div class="capability-title-border"></div>
         <h3>SaaS & Product Platforms</h3>
         <p>Multi-tenant platforms engineered for scale, security, and efficient operations. Subscription infrastructure with billing and metering.</p>
         <div class="capability-details">
@@ -98,7 +157,10 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Enterprise Infrastructure -->
       <div class="capability-card">
-        <div class="capability-icon">ICON 4</div>
+        <div class="capability-icon-wrapper">
+          <div class="capability-icon">ICON 4</div>
+        </div>
+        <div class="capability-title-border"></div>
         <h3>Enterprise Infrastructure</h3>
         <p>Complex implementations connecting multiple systems, modernizing legacy architecture, and creating unified operational visibility across departments.</p>
         <div class="capability-details">
@@ -114,41 +176,49 @@ import Layout from '../../layouts/Layout.astro';
     <div class="section-label">OUR TECHNICAL APPROACH</div>
     <h2>How we engineer custom systems</h2>
     
-    <div class="approach-item">
+    <div class="approach-item approach-item-alt-1">
       <div class="approach-content">
         <div class="approach-step">
-          <h3>01. Define the Problem</h3>
-          <p>Comprehensive discovery to understand what you're building, what outcomes matter, and what success looks like. We understand workflows, bottlenecks, decision points, and edge cases deeply. <span class="emphasis">Clear scope definition before development begins.</span></p>
+          <h3 class="approach-headline">01. DISCOVERY STARTS HERE</h3>
+          <div class="approach-image-mobile">IMAGE 1</div>
+          <p>Comprehensive discovery to understand what you're building, what outcomes matter, and what success looks like.</p>
+          <p>We understand workflows, bottlenecks, decision points, and edge cases deeply. <span class="emphasis">Clear scope definition before development begins.</span></p>
         </div>
       </div>
       <div class="approach-image">IMAGE 1</div>
     </div>
 
-    <div class="approach-item approach-item-reverse">
+    <div class="approach-item approach-item-reverse approach-item-alt-2">
       <div class="approach-content">
         <div class="approach-step">
-          <h3>02. Architect the System</h3>
-          <p>Complete system design—data models, API architecture, integration points, automation logic, user interfaces. Architecture designed for production: scalability, security, reliability. <span class="emphasis">You review and approve architecture before build.</span></p>
+          <h3 class="approach-headline">02. ARCHITECTURE DEFINES OUTCOMES</h3>
+          <div class="approach-image-mobile">IMAGE 2</div>
+          <p>Complete system design—data models, API architecture, integration points, automation logic, user interfaces.</p>
+          <p>Architecture designed for production: scalability, security, reliability. <span class="emphasis">You review and approve architecture before build.</span></p>
         </div>
       </div>
       <div class="approach-image">IMAGE 2</div>
     </div>
 
-    <div class="approach-item">
+    <div class="approach-item approach-item-alt-1">
       <div class="approach-content">
         <div class="approach-step">
-          <h3>03. Build in Iterations</h3>
-          <p>Iterative development with continuous visibility. Working systems delivered every sprint. Code reviews and testing built into every cycle. <span class="emphasis">No prototypes. Production-ready code.</span></p>
+          <h3 class="approach-headline">03. BUILD IN ITERATIONS</h3>
+          <div class="approach-image-mobile">IMAGE 3</div>
+          <p>Iterative development with continuous visibility. Working systems delivered every sprint.</p>
+          <p>Code reviews and testing built into every cycle. <span class="emphasis">No prototypes. Production-ready code.</span></p>
         </div>
       </div>
       <div class="approach-image">IMAGE 3</div>
     </div>
 
-    <div class="approach-item approach-item-reverse">
+    <div class="approach-item approach-item-reverse approach-item-alt-2">
       <div class="approach-content">
         <div class="approach-step">
-          <h3>04. Deploy & Transition</h3>
-          <p>Deployment to your infrastructure with complete infrastructure code. Monitoring, logging, backup, disaster recovery. Comprehensive documentation. <span class="emphasis">Complete code ownership and IP transfer.</span></p>
+          <h3 class="approach-headline">04. DEPLOY & TRANSITION</h3>
+          <div class="approach-image-mobile">IMAGE 4</div>
+          <p>Deployment to your infrastructure with complete infrastructure code. Monitoring, logging, backup, disaster recovery.</p>
+          <p>Comprehensive documentation. <span class="emphasis">Complete code ownership and IP transfer.</span></p>
         </div>
       </div>
       <div class="approach-image">IMAGE 4</div>
@@ -228,30 +298,27 @@ import Layout from '../../layouts/Layout.astro';
     <div class="case-studies-grid">
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 1</div>
-        <div class="case-study-content">
+        <div class="case-study-overlay">
           <div class="case-study-label">INVESTMENT FIRM</div>
-          <div class="case-study-title">Deal matching system accelerates evaluation by 67%</div>
-          <div class="case-study-description">Built unified deal intelligence platform connecting brokers, automating underwriting, providing real-time visibility.</div>
+          <h3 class="case-study-title">Deal matching system accelerates evaluation by 67%</h3>
           <div class="case-study-metric">6-day reduction in cycle time →</div>
         </div>
       </a>
 
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 2</div>
-        <div class="case-study-content">
+        <div class="case-study-overlay">
           <div class="case-study-label">SAAS COMPANY</div>
-          <div class="case-study-title">Retention intelligence closes 40% more deals</div>
-          <div class="case-study-description">Implemented AI-powered churn prediction and automated retention workflows. Increased deal flow 3x while maintaining quality.</div>
+          <h3 class="case-study-title">Retention intelligence closes 40% more deals</h3>
           <div class="case-study-metric">40% more qualified deals →</div>
         </div>
       </a>
 
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 3</div>
-        <div class="case-study-content">
+        <div class="case-study-overlay">
           <div class="case-study-label">PORTFOLIO FIRM</div>
-          <div class="case-study-title">Eliminates manual reporting overhead completely</div>
-          <div class="case-study-description">Automated reporting system generates portfolio performance reports on-demand. Reports that took 3-5 days now generate in minutes.</div>
+          <h3 class="case-study-title">Eliminates manual reporting overhead completely</h3>
           <div class="case-study-metric">Zero manual effort →</div>
         </div>
       </a>
@@ -262,9 +329,11 @@ import Layout from '../../layouts/Layout.astro';
   <section class="comparison-section">
     <div class="section-label">WHY SYSTEMS MATTER</div>
     <h2>The advantage of built systems</h2>
+    <p class="comparison-intro">Generic platforms force you to adapt. Custom systems adapt to you.</p>
     
     <div class="comparison-grid">
-      <div class="comparison-card">
+      <div class="comparison-card comparison-card-problem">
+        <div class="comparison-icon">⚠️</div>
         <h4>Off-The-Shelf Problem</h4>
         <div class="comparison-item">
           <div class="comparison-label">GENERIC OPTIMIZATION</div>
@@ -281,6 +350,7 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div class="comparison-card comparison-card-cyan">
+        <div class="comparison-icon">✓</div>
         <h4>Custom Systems Advantage</h4>
         <div class="comparison-item">
           <div class="comparison-label">ENCODED LOGIC</div>
@@ -304,32 +374,38 @@ import Layout from '../../layouts/Layout.astro';
     <h2>What you can expect</h2>
     
     <div class="commitments-grid">
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-1">
+        <div class="commitment-icon">✓</div>
         <h3>Complete Code Ownership</h3>
         <p>You own every line of code, every database schema, every API endpoint from day one. No licensing fees. No vendor lock-in. You evolve independently.</p>
       </div>
 
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-2">
+        <div class="commitment-icon">🛡️</div>
         <h3>Production-Grade Engineering</h3>
         <p>Production systems. Architecture designed for scale, security, and reliability. Code reviews, testing, documentation built into every cycle.</p>
       </div>
 
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-3">
+        <div class="commitment-icon">💡</div>
         <h3>Integrated Intelligence</h3>
         <p>AI embedded where it creates measurable leverage. Better decisions. Less manual work. Patterns humans would miss. Not AI for AI's sake.</p>
       </div>
 
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-4">
+        <div class="commitment-icon">👁️</div>
         <h3>Transparent Development</h3>
         <p>Weekly progress visibility. Code reviews shared with stakeholders. Direct access to the team. Architecture decisions explained and documented.</p>
       </div>
 
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-5">
+        <div class="commitment-icon">🤝</div>
         <h3>Technical Partnership</h3>
         <p>Beyond handoff. Available for architecture consultation, integration challenges, scaling decisions. Your system grows—we grow with it.</p>
       </div>
 
-      <div class="commitment-card">
+      <div class="commitment-card commitment-card-6">
+        <div class="commitment-icon">📈</div>
         <h3>Scalable Architecture</h3>
         <p>Built to handle growth. Database architecture that scales. APIs that support high throughput. Security architecture for enterprise compliance.</p>
       </div>
@@ -343,6 +419,7 @@ import Layout from '../../layouts/Layout.astro';
     
     <div class="engagement-grid">
       <div class="engagement-card">
+        <div class="engagement-icon">🎯</div>
         <h3>Fixed-Scope Development</h3>
         <div class="engagement-detail">
           <div class="comparison-label">BEST FOR</div>
@@ -359,6 +436,7 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div class="engagement-card">
+        <div class="engagement-icon">♻️</div>
         <h3>Ongoing Development</h3>
         <div class="engagement-detail">
           <div class="comparison-label">BEST FOR</div>
@@ -375,6 +453,7 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <div class="engagement-card">
+        <div class="engagement-icon">🤝</div>
         <h3>Strategic Partnership</h3>
         <div class="engagement-detail">
           <div class="comparison-label">BEST FOR</div>
@@ -393,7 +472,7 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- CLOSING CTA -->
-  <section class="closing-section light-bg">
+  <section class="closing-section">
     <h2 id="contact">Ready to build?</h2>
     <p>Custom systems become the competitive advantage when they're built for your specific problem, your specific workflows, your specific logic. Every engagement begins with understanding—what you're building, what outcomes matter, what success looks like. Then engineering.</p>
     <div class="cta-buttons">
@@ -503,6 +582,32 @@ import Layout from '../../layouts/Layout.astro';
     color: var(--cyan);
   }
 
+  /* HIGHLIGHT SECTION */
+  .highlight-section {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    padding: 4rem 6%;
+    text-align: center;
+  }
+
+  .highlight-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .highlight-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight-statement {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.6;
+  }
+
   /* SECTIONS */
   section {
     padding: 6rem 6%;
@@ -543,11 +648,15 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     color: #ffffff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     line-height: 1.2;
+  }
+
+  .light-bg h2 {
+    color: #000000;
   }
 
   h3 {
@@ -612,6 +721,14 @@ import Layout from '../../layouts/Layout.astro';
     color: rgba(255, 255, 255, 0.7);
   }
 
+  .stats-subheading {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    line-height: 1.7;
+  }
+
   .stats-callout {
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -625,20 +742,29 @@ import Layout from '../../layouts/Layout.astro';
 
   .stat-item {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value-wrapper {
+    margin-bottom: 1rem;
   }
 
   .stat-value {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 400;
     color: var(--cyan);
-    margin-bottom: 0.5rem;
     line-height: 1;
+    background: linear-gradient(135deg, rgba(14,165,233,0.1), rgba(14,165,233,0.05));
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
   }
 
   .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7) !important;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: 400;
   }
 
@@ -648,6 +774,52 @@ import Layout from '../../layouts/Layout.astro';
     line-height: 1.8;
     margin-top: 3rem;
     max-width: 800px;
+  }
+
+  /* REALITY SECTION */
+  .reality-section {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  .reality-list {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .reality-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .reality-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .reality-content h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .reality-content p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .reality-closing {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 2rem;
+    text-align: center;
   }
 
   /* CAPABILITIES GRID */
@@ -679,18 +851,31 @@ import Layout from '../../layouts/Layout.astro';
     transform: translateY(-4px);
   }
 
-  .capability-icon {
-    background-color: rgba(14, 165, 233, 0.1);
-    border: 1px solid rgba(14, 165, 233, 0.2);
-    border-radius: 6px;
-    height: 100px;
-    width: 100px;
+  .capability-icon-wrapper {
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.85rem;
+  }
+
+  .capability-icon {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0.1));
+    border: 2px solid rgba(14, 165, 233, 0.3);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
+  }
+
+  .capability-title-border {
+    width: 60px;
+    height: 1px;
+    background: var(--cyan);
+    margin-bottom: 1rem;
   }
 
   .capability-card h3 {
@@ -772,16 +957,49 @@ import Layout from '../../layouts/Layout.astro';
     margin-bottom: 2rem;
   }
 
-  .approach-step h3 {
-    font-size: 1.25rem;
+  .approach-headline {
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .approach-image-mobile {
+    display: none;
+    background-color: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 8px;
+    min-height: 200px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .approach-step p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .approach-step p:first-of-type {
+    margin-top: 0;
+  }
+
+  .approach-item-alt-1 {
+    background-color: rgba(14, 165, 233, 0.02);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .approach-item-alt-2 {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 2rem;
+    border-radius: 8px;
   }
 
   /* STACK SECTION */
@@ -809,6 +1027,28 @@ import Layout from '../../layouts/Layout.astro';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .stack-category:nth-child(1) .stack-items {
+    background: rgba(14, 165, 233, 0.03);
+  }
+
+  .stack-category:nth-child(2) .stack-items {
+    background: rgba(168, 85, 247, 0.03);
+  }
+
+  .stack-category:nth-child(3) .stack-items {
+    background: rgba(59, 130, 246, 0.03);
+  }
+
+  .stack-category:nth-child(4) .stack-items {
+    background: rgba(34, 197, 94, 0.03);
+  }
+
+  .stack-category:nth-child(5) .stack-items {
+    background: rgba(249, 115, 22, 0.03);
   }
 
   .stack-item {
@@ -841,41 +1081,48 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .case-study-card {
-    background-color: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     color: inherit;
   }
 
   .case-study-card:hover {
-    border-color: var(--cyan);
-    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
   }
 
   .case-study-image {
     width: 100%;
-    height: 180px;
-    background-color: rgba(14, 165, 233, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(0, 0, 0, 0.25);
-    font-size: 0.8rem;
-    font-weight: 500;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
   }
 
-  .case-study-content {
-    padding: 1.5rem;
-    flex-grow: 1;
+  .case-study-card:hover .case-study-image {
+    opacity: 1;
+  }
+
+  .case-study-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+    transition: background 0.3s ease;
+  }
+
+  .case-study-card:hover .case-study-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
   }
 
   .case-study-label {
@@ -883,36 +1130,45 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #999999;
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 0.5rem;
   }
 
   .case-study-title {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    color: #000000;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-
-  .case-study-description {
-    font-size: 0.9rem;
-    color: #555555;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    flex-grow: 1;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0;
   }
 
   .case-study-metric {
-    font-size: 0.85rem;
-    color: var(--cyan);
+    align-self: flex-end;
+    background: rgba(14, 165, 233, 0.2);
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: #0EA5E9;
+    font-size: 0.9rem;
     font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .case-study-card:hover .case-study-metric {
+    background: rgba(14, 165, 233, 0.3);
+    transform: scale(1.05);
   }
 
   /* COMPARISON SECTION */
   .comparison-section {
     background-color: #000000;
     color: rgba(255, 255, 255, 0.7);
+  }
+
+  .comparison-intro {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    font-weight: 500;
   }
 
   .comparison-grid {
@@ -927,11 +1183,24 @@ import Layout from '../../layouts/Layout.astro';
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 8px;
+    position: relative;
+  }
+
+  .comparison-card-problem {
+    opacity: 0.7;
+    filter: grayscale(20%);
   }
 
   .comparison-card-cyan {
     background-color: rgba(14, 165, 233, 0.05);
-    border-color: var(--cyan);
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.1);
+  }
+
+  .comparison-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
   }
 
   .comparison-card h4 {
@@ -978,11 +1247,54 @@ import Layout from '../../layouts/Layout.astro';
     padding: 2.5rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  .commitment-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .commitment-card-1::before {
+    background-color: #22c55e; /* green */
+  }
+
+  .commitment-card-2::before {
+    background-color: #3b82f6; /* blue */
+  }
+
+  .commitment-card-3::before {
+    background-color: var(--cyan);
+  }
+
+  .commitment-card-4::before {
+    background-color: #8b5cf6; /* purple */
+  }
+
+  .commitment-card-5::before {
+    background-color: #f59e0b; /* orange */
+  }
+
+  .commitment-card-6::before {
+    background-color: #10b981; /* emerald */
   }
 
   .commitment-card:hover {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: var(--cyan);
+    transform: translateX(4px);
+  }
+
+  .commitment-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
   }
 
   .commitment-card h3 {
@@ -1016,11 +1328,19 @@ import Layout from '../../layouts/Layout.astro';
     padding: 2rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    text-align: center;
   }
 
   .engagement-card:hover {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: var(--cyan);
+    transform: translateY(-4px);
+  }
+
+  .engagement-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
   }
 
   .engagement-card h3 {
@@ -1047,24 +1367,36 @@ import Layout from '../../layouts/Layout.astro';
   .closing-section {
     text-align: center;
     padding: 6rem 6%;
-    background-color: #ffffff;
-    color: #333333;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(14, 165, 233, 0.1) 100%);
+    color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .closing-section h2 {
-    color: #000000;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 500;
   }
 
   .closing-section p {
-    color: #555555;
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
+  }
+
+  .closing-section .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+  }
+
+  .closing-section .btn-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
   }
 
   .cta-buttons {
@@ -1077,6 +1409,19 @@ import Layout from '../../layouts/Layout.astro';
   @media (max-width: 768px) {
     .hero h1 {
       font-size: 2.5rem;
+    }
+
+    .highlight-heading {
+      font-size: 1.5rem;
+    }
+
+    .highlight-statement {
+      font-size: 1.2rem;
+    }
+
+    .stat-value {
+      font-size: 3rem;
+      padding: 15px;
     }
 
     .capabilities-grid,
@@ -1095,6 +1440,10 @@ import Layout from '../../layouts/Layout.astro';
     }
 
     h2 {
+      font-size: 2.25rem;
+    }
+
+    .closing-section h2 {
       font-size: 2rem;
     }
 
@@ -1102,8 +1451,25 @@ import Layout from '../../layouts/Layout.astro';
       padding: 4rem 6%;
     }
 
-    .case-study-image {
-      height: 120px;
+    .case-study-card {
+      height: 250px;
+    }
+
+    .case-study-title {
+      font-size: 1.1rem;
+    }
+
+    .capability-icon {
+      height: 150px;
+      width: 150px;
+    }
+
+    .approach-image-mobile {
+      display: flex;
+    }
+
+    .approach-image {
+      display: none;
     }
 
     .hero-cta {
@@ -1112,6 +1478,15 @@ import Layout from '../../layouts/Layout.astro';
 
     .cta-buttons {
       flex-direction: column;
+    }
+
+    .reality-item {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .reality-icon {
+      font-size: 1.5rem;
     }
   }
 </style>
