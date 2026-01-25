@@ -52,12 +52,15 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     background: transparent;
     transition: all 0.3s ease;
   }
 
-  .nav-dot:hover .dot,
+  .nav-dot:hover .dot {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+
   .nav-dot.active .dot {
     background: #0EA5E9;
     border-color: #0EA5E9;
