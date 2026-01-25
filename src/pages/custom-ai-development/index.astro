@@ -1,508 +1,1083 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Custom AI Development | Intelio - Purpose-Built Software and AI Platforms" description="Custom AI software and platforms built from the ground up. Full-stack development you own and control. AI integrated where it creates leverage.">
-<main class="bg-white">
-  <!-- SECTION 1: HERO -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
-    <!-- Video Background -->
-    <video 
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      webkit-playsinline="true"
-      x5-playsinline="true"
-      class="absolute inset-0 w-full h-full object-cover"
-      style="min-width: 100%; min-height: 100%; width: auto; height: auto;"
-    >
-      <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
+<Layout title="Custom AI Development | Intelio">
+  <!-- HERO SECTION with EXISTING VIDEO -->
+  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4');">
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+      <source src="/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4" type="video/mp4">
     </video>
+    <div class="hero-content" style="position: relative; z-index: 1;">
+      <div class="hero-label">CUSTOM AI DEVELOPMENT</div>
+      <h1>Custom AI Development</h1>
+      <p class="hero-subtitle">Purpose-built platforms engineered for competitive advantage. Deal sourcing, system integration, and data infrastructure at the speed you need. Built specifically for how your business operates.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary">Build with us</button>
+        <button class="btn btn-secondary">Learn more →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION with IMAGE -->
+  <section class="intro-section light-bg">
+    <div class="intro-text">
+      <p class="intro-primary">Custom software becomes competitive advantage when it encodes your specific operational logic.</p>
+      <p>We architect and build production-grade systems. Data infrastructure, application logic, intelligent automation, user interfaces—engineered as integrated platforms designed for scale. AI integrated at the architectural level where it removes friction, improves decisions, or creates new capabilities.</p>
+    </div>
+    <div class="image-placeholder">
+      <div class="image-placeholder-text">
+        <p style="font-weight: 600;">ARCHITECTURE DIAGRAM</p>
+        <p style="font-size: 0.9rem;">System Overview</p>
+        <p style="font-size: 0.75rem; margin-top: 1rem; color: rgba(0, 0, 0, 0.2);">600x400px</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS SECTION -->
+  <section class="stats-section">
+    <div class="section-label">REAL OUTCOMES</div>
+    <h2>The impact of custom systems</h2>
     
-    <!-- Dark Overlay for Text Readability -->
-    <div class="absolute inset-0 bg-black/55 z-[1]"></div>
+    <div class="stats-callout">
+      <div class="stat-item">
+        <div class="stat-value">3-5x</div>
+        <div class="stat-label">Faster decision velocity with integrated automation</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">60%</div>
+        <div class="stat-label">Reduction in manual, repetitive work</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Code ownership. Zero vendor lock-in.</div>
+      </div>
+    </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 w-full">
-      <div class="max-w-3xl">
-        <!-- Label -->
-        <div class="mb-6">
-          <span class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase">
-            CUSTOM AI DEVELOPMENT
-          </span>
+    <p class="section-supporting-text">Organizations building custom systems create competitive advantage through operational logic generic platforms cannot capture. Systems that become so essential to how you work, switching to alternatives becomes impossible.</p>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section id="capabilities" class="capabilities-section">
+    <div class="section-label">WHAT WE BUILD</div>
+    <h2>Systems engineered from ground up</h2>
+    
+    <div class="capabilities-grid">
+      <!-- Full-Stack Systems -->
+      <div class="capability-card">
+        <div class="capability-icon">ICON 1</div>
+        <h3>Full-Stack Systems</h3>
+        <p>Complete production systems from database to user interface. Data models architected for scale. APIs designed for reliability and integration.</p>
+        <div class="capability-details">
+          <div class="detail-item"><span class="emphasis">Tech:</span> PostgreSQL, Supabase, Node.js, React, Vue</div>
+          <div class="detail-item"><span class="emphasis">Built for:</span> Operational platforms, customer applications, admin tooling</div>
         </div>
-        
-        <!-- Headline -->
-        <h1 class="text-5xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
-          Custom AI Development
-        </h1>
-        
-        <!-- Subhead -->
-        <p class="text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed">
-          Purpose-built software and AI-powered platforms. Full-stack development you own and control.
-        </p>
-        
-        <!-- CTA Button -->
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
-          Start a Project
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+      </div>
+
+      <!-- Intelligent Automation -->
+      <div class="capability-card">
+        <div class="capability-icon">ICON 2</div>
+        <h3>Intelligent Automation</h3>
+        <p>Systems with AI integrated at the architectural level. Language models process information. Machine learning predicts outcomes. Automation handles decisions.</p>
+        <div class="capability-details">
+          <div class="detail-item"><span class="emphasis">Tech:</span> Claude API, n8n, TensorFlow, scikit-learn</div>
+          <div class="detail-item"><span class="emphasis">Powers:</span> Deal matching, churn prediction, document intelligence</div>
+        </div>
+      </div>
+
+      <!-- SaaS & Product -->
+      <div class="capability-card">
+        <div class="capability-icon">ICON 3</div>
+        <h3>SaaS & Product Platforms</h3>
+        <p>Multi-tenant platforms engineered for scale, security, and efficient operations. Subscription infrastructure with billing and metering.</p>
+        <div class="capability-details">
+          <div class="detail-item"><span class="emphasis">Tech:</span> Scalable architecture, secure APIs, SOC 2 compliance</div>
+          <div class="detail-item"><span class="emphasis">Includes:</span> Billing, analytics, real-time dashboards</div>
+        </div>
+      </div>
+
+      <!-- Enterprise Infrastructure -->
+      <div class="capability-card">
+        <div class="capability-icon">ICON 4</div>
+        <h3>Enterprise Infrastructure</h3>
+        <p>Complex implementations connecting multiple systems, modernizing legacy architecture, and creating unified operational visibility across departments.</p>
+        <div class="capability-details">
+          <div class="detail-item"><span class="emphasis">Tech:</span> Data integration, API orchestration, migration</div>
+          <div class="detail-item"><span class="emphasis">Delivers:</span> Cross-system integration, legacy modernization</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: INTRO -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl text-gray-900 mb-8">
-        We Build Software From the Ground Up
-      </h2>
-      <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-        <p>
-          When off-the-shelf tools don't fit and internal resources can't scale, you need custom software built right—architected for production, engineered for ownership, and designed to evolve.
-        </p>
-        <p>
-          Intelio builds custom AI software and platforms for founders, product teams, and enterprises. Full-stack development from database to UI. AI integrated where it creates leverage. Complete code ownership from day one.
-        </p>
+  <!-- TECHNICAL APPROACH with ALTERNATING IMAGES -->
+  <section id="approach" class="approach-section">
+    <div class="section-label">OUR TECHNICAL APPROACH</div>
+    <h2>How we engineer custom systems</h2>
+    
+    <div class="approach-item">
+      <div class="approach-content">
+        <div class="approach-step">
+          <h3>01. Define the Problem</h3>
+          <p>Comprehensive discovery to understand what you're building, what outcomes matter, and what success looks like. We understand workflows, bottlenecks, decision points, and edge cases deeply. <span class="emphasis">Clear scope definition before development begins.</span></p>
+        </div>
       </div>
-      <div class="mt-10 p-6 bg-gray-50 rounded-lg border-l-4 border-blue-600">
-        <p class="text-lg font-semibold text-gray-900">
-          This isn't consulting. This isn't advice. It's engineering.
-        </p>
-      </div>
+      <div class="approach-image">IMAGE 1</div>
     </div>
-  </section>
 
-  <!-- SECTION 3: WHAT WE BUILD -->
-  <section class="py-32 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">WHAT WE BUILD</span>
+    <div class="approach-item approach-item-reverse">
+      <div class="approach-content">
+        <div class="approach-step">
+          <h3>02. Architect the System</h3>
+          <p>Complete system design—data models, API architecture, integration points, automation logic, user interfaces. Architecture designed for production: scalability, security, reliability. <span class="emphasis">You review and approve architecture before build.</span></p>
+        </div>
       </div>
+      <div class="approach-image">IMAGE 2</div>
+    </div>
+
+    <div class="approach-item">
+      <div class="approach-content">
+        <div class="approach-step">
+          <h3>03. Build in Iterations</h3>
+          <p>Iterative development with continuous visibility. Working systems delivered every sprint. Code reviews and testing built into every cycle. <span class="emphasis">No prototypes. Production-ready code.</span></p>
+        </div>
+      </div>
+      <div class="approach-image">IMAGE 3</div>
+    </div>
+
+    <div class="approach-item approach-item-reverse">
+      <div class="approach-content">
+        <div class="approach-step">
+          <h3>04. Deploy & Transition</h3>
+          <p>Deployment to your infrastructure with complete infrastructure code. Monitoring, logging, backup, disaster recovery. Comprehensive documentation. <span class="emphasis">Complete code ownership and IP transfer.</span></p>
+        </div>
+      </div>
+      <div class="approach-image">IMAGE 4</div>
+    </div>
+
+    <!-- TECHNICAL STACK -->
+    <div class="stack-section">
+      <h3 class="stack-title">Technical Capabilities & Stack</h3>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Card 1: Full-Stack Applications -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">Full-Stack Applications</h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-6">
-            Complete software systems engineered for production. APIs, data models, and interfaces—built to scale.
-          </p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-600">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Internal operations platforms</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Customer-facing web applications</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Data management systems</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Admin dashboards and tooling</span>
-            </li>
-          </ul>
-          <a href="/custom-ai-development/full-stack-systems" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 inline-flex items-center gap-2">
-            Learn more
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+      <div class="stack-category">
+        <h4>Architecture & Infrastructure</h4>
+        <div class="stack-items">
+          <div class="stack-item">PostgreSQL / Supabase</div>
+          <div class="stack-item">RESTful & GraphQL APIs</div>
+          <div class="stack-item">Docker & CI/CD</div>
+          <div class="stack-item">Vercel / Railway / AWS</div>
+          <div class="stack-item">SOC 2 Compliance</div>
+          <div class="stack-item">Infrastructure-as-Code</div>
         </div>
+      </div>
 
-        <!-- Card 2: AI-Powered Platforms -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">AI-Powered Platforms</h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-6">
-            Intelligent systems with AI at the core—not bolted on. Decision engines, automation platforms, and smart workflows.
-          </p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-600">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Deal-matching and recommendation engines</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Document processing and extraction systems</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Predictive analytics platforms</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>AI-assisted decision support tools</span>
-            </li>
-          </ul>
-          <a href="/custom-ai-development/ai-intelligence-integration" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 inline-flex items-center gap-2">
-            Learn more
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+      <div class="stack-category">
+        <h4>Application Development</h4>
+        <div class="stack-items">
+          <div class="stack-item">React / Vue / Astro</div>
+          <div class="stack-item">Node.js / Python</div>
+          <div class="stack-item">Real-Time Websockets</div>
+          <div class="stack-item">Responsive Design</div>
+          <div class="stack-item">Performance Optimization</div>
+          <div class="stack-item">Accessibility Standards</div>
         </div>
+      </div>
 
-        <!-- Card 3: SaaS & Product Development -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">SaaS & Product Development</h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-6">
-            Scalable products designed for growth. Customer-facing platforms that become recurring revenue assets.
-          </p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-600">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Multi-tenant SaaS platforms</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Subscription and billing systems</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Customer portals and dashboards</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Marketplace and two-sided platforms</span>
-            </li>
-          </ul>
-          <a href="/custom-ai-development/saas-product-development" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 inline-flex items-center gap-2">
-            Learn more
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+      <div class="stack-category">
+        <h4>AI & Intelligent Automation</h4>
+        <div class="stack-items">
+          <div class="stack-item">Claude API</div>
+          <div class="stack-item">Machine Learning Models</div>
+          <div class="stack-item">n8n Workflows</div>
+          <div class="stack-item">Document Intelligence</div>
+          <div class="stack-item">Predictive Analytics</div>
+          <div class="stack-item">Anomaly Detection</div>
         </div>
+      </div>
 
-        <!-- Card 4: Enterprise Systems -->
-        <div class="bg-white rounded-xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 ease-out">
-          <h3 class="text-2xl text-gray-900 mb-4">Enterprise Systems</h3>
-          <p class="text-base text-gray-600 leading-relaxed mb-6">
-            Complex, multi-system implementations for organizations operating at scale.
-          </p>
-          <ul class="space-y-3 mb-6 text-sm text-gray-600">
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Cross-department platforms</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Legacy system modernization</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Enterprise data layers</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-blue-600 mt-1">•</span>
-              <span>Custom integration infrastructure</span>
-            </li>
-          </ul>
-          <a href="/custom-ai-development/custom-enterprise-builds" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 inline-flex items-center gap-2">
-            Learn more
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
+      <div class="stack-category">
+        <h4>Integration & Data</h4>
+        <div class="stack-items">
+          <div class="stack-item">Salesforce</div>
+          <div class="stack-item">HubSpot / Dynamics</div>
+          <div class="stack-item">Power Platform</div>
+          <div class="stack-item">ETL Pipelines</div>
+          <div class="stack-item">Real-Time Analytics</div>
+          <div class="stack-item">Data Transformation</div>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h4>Microsoft Ecosystem</h4>
+        <div class="stack-items">
+          <div class="stack-item">Power Apps</div>
+          <div class="stack-item">Power Automate</div>
+          <div class="stack-item">Power BI</div>
+          <div class="stack-item">Dynamics 365</div>
+          <div class="stack-item">Logic Apps</div>
+          <div class="stack-item">Teams / SharePoint</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: ENGAGEMENT MODELS -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">ENGAGEMENT MODELS</span>
+  <!-- SUCCESS STORIES / CASE STUDIES -->
+  <section class="case-studies-section light-bg">
+    <div class="section-label">SUCCESS IN CUSTOM SYSTEMS</div>
+    <h2>Real outcomes from organizations we've built for</h2>
+    
+    <div class="case-studies-grid">
+      <a href="#" class="case-study-card">
+        <div class="case-study-image">IMAGE 1</div>
+        <div class="case-study-content">
+          <div class="case-study-label">INVESTMENT FIRM</div>
+          <div class="case-study-title">Deal matching system accelerates evaluation by 67%</div>
+          <div class="case-study-description">Built unified deal intelligence platform connecting brokers, automating underwriting, providing real-time visibility.</div>
+          <div class="case-study-metric">6-day reduction in cycle time →</div>
+        </div>
+      </a>
+
+      <a href="#" class="case-study-card">
+        <div class="case-study-image">IMAGE 2</div>
+        <div class="case-study-content">
+          <div class="case-study-label">SAAS COMPANY</div>
+          <div class="case-study-title">Retention intelligence closes 40% more deals</div>
+          <div class="case-study-description">Implemented AI-powered churn prediction and automated retention workflows. Increased deal flow 3x while maintaining quality.</div>
+          <div class="case-study-metric">40% more qualified deals →</div>
+        </div>
+      </a>
+
+      <a href="#" class="case-study-card">
+        <div class="case-study-image">IMAGE 3</div>
+        <div class="case-study-content">
+          <div class="case-study-label">PORTFOLIO FIRM</div>
+          <div class="case-study-title">Eliminates manual reporting overhead completely</div>
+          <div class="case-study-description">Automated reporting system generates portfolio performance reports on-demand. Reports that took 3-5 days now generate in minutes.</div>
+          <div class="case-study-metric">Zero manual effort →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY SYSTEMS MATTER -->
+  <section class="comparison-section">
+    <div class="section-label">WHY SYSTEMS MATTER</div>
+    <h2>The advantage of built systems</h2>
+    
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <h4>Off-The-Shelf Problem</h4>
+        <div class="comparison-item">
+          <div class="comparison-label">GENERIC OPTIMIZATION</div>
+          <div class="comparison-text">Optimized for broad use cases. You adapt your business to fit the software.</div>
+        </div>
+        <div class="comparison-item">
+          <div class="comparison-label">VENDOR DEPENDENCY</div>
+          <div class="comparison-text">Roadmap depends on vendor. New features = waiting or paying for customization.</div>
+        </div>
+        <div class="comparison-item">
+          <div class="comparison-label">COMPETITIVE PARITY</div>
+          <div class="comparison-text">Competitors use the same software. No competitive advantage in the platform itself.</div>
+        </div>
       </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1: Fixed-Scope Development -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-2">Fixed-Scope Development</h3>
-          <p class="text-sm text-gray-600 mb-6">Defined builds with clear outcomes</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
-              <p class="text-sm text-gray-700">MVP/internal tools</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
-              <p class="text-sm text-gray-700">One-time fee</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</p>
-              <p class="text-sm text-gray-700">8-16 weeks</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 2: Ongoing Product Development -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-          <h3 class="text-xl text-gray-900 mb-2">Ongoing Product Development</h3>
-          <p class="text-sm text-gray-600 mb-6">Continuous development for evolving products</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
-              <p class="text-sm text-gray-700">SaaS/scaling platforms</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
-              <p class="text-sm text-gray-700">Monthly retainer</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</p>
-              <p class="text-sm text-gray-700">Ongoing</p>
-            </div>
-          </div>
+      <div class="comparison-card comparison-card-cyan">
+        <h4>Custom Systems Advantage</h4>
+        <div class="comparison-item">
+          <div class="comparison-label">ENCODED LOGIC</div>
+          <div class="comparison-text">Your workflows and decision rules become system architecture—not configuration.</div>
         </div>
-
-        <!-- Card 3: Partnership Development -->
-        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 relative">
-          <div class="absolute top-4 right-4">
-            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wide text-blue-600 bg-blue-50 rounded-full">SELECTIVE</span>
-          </div>
-          <h3 class="text-xl text-gray-900 mb-2">Partnership Development</h3>
-          <p class="text-sm text-gray-600 mb-6">Selective, high-leverage engagements</p>
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Best For</p>
-              <p class="text-sm text-gray-700">Founder-led products</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Pricing</p>
-              <p class="text-sm text-gray-700">By invitation</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</p>
-              <p class="text-sm text-gray-700">Variable</p>
-            </div>
-          </div>
+        <div class="comparison-item">
+          <div class="comparison-label">COMPLETE OWNERSHIP</div>
+          <div class="comparison-text">You own code, infrastructure, IP. Your roadmap is your roadmap.</div>
+        </div>
+        <div class="comparison-item">
+          <div class="comparison-label">COMPETITIVE MOAT</div>
+          <div class="comparison-text">Systems encoding your specific logic create advantage competitors can't buy.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: OUR PROCESS -->
-  <section class="py-32 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="mb-16">
-        <span class="text-xs font-bold uppercase tracking-[0.08em] text-blue-600 mb-4 block">OUR PROCESS</span>
+  <!-- COMMITMENTS -->
+  <section class="commitments-section">
+    <div class="section-label">OUR COMMITMENTS</div>
+    <h2>What you can expect</h2>
+    
+    <div class="commitments-grid">
+      <div class="commitment-card">
+        <h3>Complete Code Ownership</h3>
+        <p>You own every line of code, every database schema, every API endpoint from day one. No licensing fees. No vendor lock-in. You evolve independently.</p>
       </div>
-      
-      <div class="space-y-12">
-        <!-- Step 01 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            01
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Define the Product</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We start with what you're building—the problem it solves, who it's for, and what success looks like.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              No assumptions. No templates. Just clarity.
-            </p>
-          </div>
-        </div>
 
-        <!-- Step 02 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            02
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Design & Architect</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We design the full system—data models, APIs, interfaces, and AI components.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You see the blueprint before we build.
-            </p>
-          </div>
-        </div>
+      <div class="commitment-card">
+        <h3>Production-Grade Engineering</h3>
+        <p>Production systems. Architecture designed for scale, security, and reliability. Code reviews, testing, documentation built into every cycle.</p>
+      </div>
 
-        <!-- Step 03 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            03
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Build in Iterations</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We build in weekly cycles with visible progress. Working software, not slide decks.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              Short loops. Fast feedback. No surprises.
-            </p>
-          </div>
-        </div>
+      <div class="commitment-card">
+        <h3>Integrated Intelligence</h3>
+        <p>AI embedded where it creates measurable leverage. Better decisions. Less manual work. Patterns humans would miss. Not AI for AI's sake.</p>
+      </div>
 
-        <!-- Step 04 -->
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-            04
-          </div>
-          <div class="flex-1">
-            <h3 class="text-2xl text-gray-900 mb-3">Deploy & Hand Off</h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-3">
-              We deploy to your infrastructure, document everything, and hand off complete ownership.
-            </p>
-            <p class="text-sm font-semibold text-gray-500 italic">
-              You own the code. You own the IP. No lock-in.
-            </p>
-          </div>
-        </div>
+      <div class="commitment-card">
+        <h3>Transparent Development</h3>
+        <p>Weekly progress visibility. Code reviews shared with stakeholders. Direct access to the team. Architecture decisions explained and documented.</p>
+      </div>
+
+      <div class="commitment-card">
+        <h3>Technical Partnership</h3>
+        <p>Beyond handoff. Available for architecture consultation, integration challenges, scaling decisions. Your system grows—we grow with it.</p>
+      </div>
+
+      <div class="commitment-card">
+        <h3>Scalable Architecture</h3>
+        <p>Built to handle growth. Database architecture that scales. APIs that support high throughput. Security architecture for enterprise compliance.</p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6: WHAT YOU GET -->
-  <section class="py-32 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
-        What You Get
-      </h2>
-      <ul class="space-y-6">
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Complete Code Ownership</h3>
-            <p class="text-base text-gray-600">You own every line of code, every database schema, and every API endpoint from day one.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Production-Grade Engineering</h3>
-            <p class="text-base text-gray-600">Built for scale, security, and reliability. Not prototypes. Not MVPs. Production systems.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">AI Where It Creates Leverage</h3>
-            <p class="text-base text-gray-600">AI integrated precisely where it removes manual work or improves decisions—not everywhere.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Transparent Development</h3>
-            <p class="text-base text-gray-600">Weekly progress updates, code reviews, and direct access to the team building your system.</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 mb-1">Flexible Engagement</h3>
-            <p class="text-base text-gray-600">Fixed-scope builds, ongoing development, or partnership models—we adapt to how you work.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <!-- ENGAGEMENT MODELS -->
+  <section class="engagement-section">
+    <div class="section-label">ENGAGEMENT MODELS</div>
+    <h2>How we structure partnerships</h2>
+    
+    <div class="engagement-grid">
+      <div class="engagement-card">
+        <h3>Fixed-Scope Development</h3>
+        <div class="engagement-detail">
+          <div class="comparison-label">BEST FOR</div>
+          <div class="comparison-text">New systems, major releases, internal tools.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">STRUCTURE</div>
+          <div class="comparison-text">Defined scope. Budget & timeline upfront.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">ENGAGEMENT</div>
+          <div class="comparison-text">Project-based. Payment upon completion.</div>
+        </div>
+      </div>
 
-  <!-- SECTION 7 & 8: WHO THIS IS FOR + FINAL CTA -->
-  <section class="py-32 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-5xl text-white mb-12">
-        Who This Is For
-      </h2>
-      <ul class="space-y-6 mb-16">
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Technical Founders</h3>
-            <p class="text-base text-gray-300">Building your first product or scaling beyond MVP</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Product Teams</h3>
-            <p class="text-base text-gray-300">Launching new products or building internal tools</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Enterprise Innovation Teams</h3>
-            <p class="text-base text-gray-300">Modernizing legacy systems or launching AI tools</p>
-          </div>
-        </li>
-        <li class="flex items-start gap-4">
-          <span class="text-blue-400 text-xl mt-1">•</span>
-          <div>
-            <h3 class="text-xl text-white mb-1">Operators Building Proprietary Tools</h3>
-            <p class="text-base text-gray-300">Turning operational advantage into software</p>
-          </div>
-        </li>
-      </ul>
+      <div class="engagement-card">
+        <h3>Ongoing Development</h3>
+        <div class="engagement-detail">
+          <div class="comparison-label">BEST FOR</div>
+          <div class="comparison-text">SaaS platforms, competitive products, evolving systems.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">STRUCTURE</div>
+          <div class="comparison-text">Continuous partnership. Cycles adapt to priorities.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">ENGAGEMENT</div>
+          <div class="comparison-text">Monthly retainer. Collaborative roadmap.</div>
+        </div>
+      </div>
 
-      <!-- Final CTA -->
-      <div class="text-center pt-12 border-t border-gray-700">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-          Ready to build?
-        </h2>
-        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 ease-out">
-          Start a Project
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+      <div class="engagement-card">
+        <h3>Strategic Partnership</h3>
+        <div class="engagement-detail">
+          <div class="comparison-label">BEST FOR</div>
+          <div class="comparison-text">Founder-led products, enterprise infrastructure, systems central to advantage.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">STRUCTURE</div>
+          <div class="comparison-text">High-leverage. Embedded technical strategy.</div>
+        </div>
+        <div class="engagement-detail">
+          <div class="comparison-label">ENGAGEMENT</div>
+          <div class="comparison-text">Custom terms. Flexible. Deep partnership.</div>
+        </div>
       </div>
     </div>
   </section>
-</main>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-section light-bg">
+    <h2 id="contact">Ready to build?</h2>
+    <p>Custom systems become the competitive advantage when they're built for your specific problem, your specific workflows, your specific logic. Every engagement begins with understanding—what you're building, what outcomes matter, what success looks like. Then engineering.</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary">Start a project</button>
+      <a href="/how-we-work" class="btn btn-secondary">Learn more about our approach →</a>
+    </div>
+  </section>
+</Layout>
 
 <style>
-  /* Video background mobile fixes for hero section */
-  section video {
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --cyan: #0EA5E9;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --border-light: rgba(255, 255, 255, 0.1);
+  }
+
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    padding: 8rem 6% 6rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    overflow: hidden;
+    background-color: var(--black);
+  }
+
+  .hero::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: 0;
   }
 
-  /* Ensure video containers work on mobile */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+  }
+
+  .hero-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  /* BUTTONS */
+  .btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+
+  .btn-primary {
+    background-color: var(--cyan);
+    color: var(--black);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--white);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--text-secondary);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 6%;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .light-bg {
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  .light-bg .section-label {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .light-bg h2,
+  .light-bg h3,
+  .light-bg h4 {
+    color: var(--black);
+  }
+
+  .light-bg p {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .emphasis {
+    color: var(--cyan);
+    font-weight: 500;
+  }
+
+  /* INTRO SECTION */
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .intro-text p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-primary {
+    font-size: 1.1rem !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    font-weight: 500 !important;
+  }
+
+  .image-placeholder {
+    background-color: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 8px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .image-placeholder-text {
+    text-align: center;
+  }
+
+  .image-placeholder-text p {
+    margin: 0.5rem 0;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  /* STATS SECTION */
+  .stats-callout {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .stat-item {
+    text-align: left;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--cyan);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .section-supporting-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 3rem;
+    max-width: 800px;
+  }
+
+  /* CAPABILITIES GRID */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .capability-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    padding: 2.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .capability-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+  }
+
+  .capability-icon {
+    background-color: rgba(14, 165, 233, 0.1);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+
+  .capability-card h3 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .capability-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .capability-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .detail-item {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 1rem;
+    border-left: 1px solid var(--border-light);
+  }
+
+  /* APPROACH SECTION */
+  .approach-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .approach-item-reverse {
+    direction: rtl;
+  }
+
+  .approach-item-reverse > * {
+    direction: ltr;
+  }
+
+  .approach-content {
+    order: 1;
+  }
+
+  .approach-image {
+    order: 2;
+    background-color: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 8px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  .approach-item-reverse .approach-image {
+    order: 1;
+  }
+
+  .approach-item-reverse .approach-content {
+    order: 2;
+  }
+
+  .approach-step {
+    margin-bottom: 2rem;
+  }
+
+  .approach-step h3 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .approach-step p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* STACK SECTION */
+  .stack-section {
+    margin-top: 3rem;
+  }
+
+  .stack-title {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+
+  .stack-category {
+    margin-bottom: 2rem;
+  }
+
+  .stack-category h4 {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .stack-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .stack-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+  }
+
+  .stack-item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: var(--cyan);
+    color: var(--white);
+  }
+
+  /* CASE STUDIES */
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .case-study-card {
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .case-study-card:hover {
+    border-color: var(--cyan);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .case-study-image {
+    width: 100%;
+    height: 180px;
+    background-color: rgba(14, 165, 233, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+  }
+
+  .case-study-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-study-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .case-study-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .case-study-description {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .case-study-metric {
+    font-size: 0.85rem;
+    color: var(--cyan);
+    font-weight: 500;
+  }
+
+  /* COMPARISON SECTION */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .comparison-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .comparison-card-cyan {
+    background-color: rgba(14, 165, 233, 0.05);
+    border-color: var(--cyan);
+  }
+
+  .comparison-card h4 {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .comparison-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* COMMITMENTS */
+  .commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .commitment-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    padding: 2.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .commitment-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--cyan);
+  }
+
+  .commitment-card h3 {
+    font-size: 1.125rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .commitment-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* ENGAGEMENT */
+  .engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .engagement-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .engagement-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--cyan);
+  }
+
+  .engagement-card h3 {
+    font-size: 1.125rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .engagement-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .engagement-detail:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* CLOSING */
+  .closing-section {
+    text-align: center;
+    padding: 6rem 6%;
+  }
+
+  .closing-section h2 {
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .closing-section p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* RESPONSIVE */
   @media (max-width: 768px) {
-    section video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .hero h1 {
+      font-size: 2.5rem;
     }
-  }
 
-  /* iOS Safari video fixes */
-  @supports (-webkit-touch-callout: none) {
-    section video {
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+    .capabilities-grid,
+    .comparison-grid,
+    .commitments-grid,
+    .engagement-grid,
+    .intro-section,
+    .approach-item,
+    .case-studies-grid,
+    .stats-callout {
+      grid-template-columns: 1fr;
+    }
+
+    .stack-items {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    section {
+      padding: 4rem 6%;
+    }
+
+    .case-study-image {
+      height: 120px;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .approach-item-reverse {
+      direction: ltr;
     }
   }
 </style>
-</Layout>
-

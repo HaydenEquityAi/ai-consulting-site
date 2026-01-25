@@ -366,7 +366,12 @@ export default function Homepage() {
 
             {/* Change */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 h-48 rounded-lg border border-indigo-500/30" />
+              <div 
+                className="h-48 rounded-lg border border-indigo-500/30 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/cool-intelio-image-11.jpg')`,
+                }}
+              />
               <h3 className="text-2xl font-light text-black">
                 Change that scales
               </h3>
