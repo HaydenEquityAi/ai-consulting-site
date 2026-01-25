@@ -70,7 +70,7 @@ export default function Homepage() {
       </section>
 
       {/* FEATURED CAPABILITIES SECTION */}
-      <section id="featured-capabilities" className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+      <section id="featured-capabilities" className="py-24 md:py-32 px-6 md:px-12 bg-black border-y border-white/10">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
             Featured Capabilities
@@ -205,7 +205,7 @@ export default function Homepage() {
       </section>
 
       {/* BUILT BY OPERATORS SECTION */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-black border-y border-white/10">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
             Our Philosophy
@@ -343,7 +343,7 @@ export default function Homepage() {
       </section>
 
       {/* CASE STUDIES SECTION */}
-      <section id="case-studies" className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+      <section id="case-studies" className="py-24 md:py-32 px-6 md:px-12 bg-black border-y border-white/10">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
             Success Stories
@@ -515,7 +515,7 @@ export default function Homepage() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-t border-white/10">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-black border-t border-white/10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-white">
             Ready to build something exceptional?
