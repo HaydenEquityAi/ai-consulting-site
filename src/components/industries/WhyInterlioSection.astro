@@ -37,21 +37,26 @@ const {
   .why-intelio-section {
     background: #ffffff;
     color: #000000;
-    padding: clamp(100px, 12vw, 160px) 24px;
+    padding: 0;
+    overflow: hidden;
   }
 
   .why-intelio-container {
-    max-width: 1400px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(60px, 8vw, 100px);
+    grid-template-columns: 45% 55%;
+    gap: 0;
     align-items: center;
+    max-width: 100%;
+    margin: 0;
+    min-height: 500px;
   }
 
   .why-intelio-image {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    height: 400px;
+    min-height: 500px;
+    background: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,6 +72,8 @@ const {
   .why-intelio-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: clamp(40px, 6vw, 60px);
     gap: 24px;
   }
 
@@ -102,12 +109,13 @@ const {
   @media (max-width: 1024px) {
     .why-intelio-container {
       grid-template-columns: 1fr;
-      gap: 48px;
+      min-height: auto;
     }
 
     .why-intelio-image {
       order: -1;
       height: 350px;
+      min-height: 350px;
     }
 
     .why-intelio-headline {
@@ -116,16 +124,17 @@ const {
   }
 
   @media (max-width: 768px) {
-    .why-intelio-section {
-      padding: clamp(80px, 10vw, 120px) 24px;
-    }
-
     .why-intelio-container {
-      gap: 32px;
+      grid-template-columns: 1fr;
     }
 
     .why-intelio-image {
       height: 280px;
+      min-height: 280px;
+    }
+
+    .why-intelio-content {
+      padding: clamp(20px, 4vw, 40px);
     }
 
     .why-intelio-headline {
