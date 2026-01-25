@@ -416,7 +416,12 @@ export default function Homepage() {
 
             {/* Case Study 2 */}
             <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
-              <div className="h-48 bg-gradient-to-br from-blue-500/20 to-indigo-500/20" />
+              <div 
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/intelio-healthcare-2.webp')`,
+                }}
+              />
               <div className="p-8">
                 <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">HEALTHCARE</span>
                 <h3 className="text-xl font-medium text-white mb-3 mt-2">
