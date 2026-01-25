@@ -13,73 +13,24 @@
       But most CRE firms are still running on spreadsheets, manual processes, and disconnected systems that can't keep up.
     </p>
 
-    <!-- Highlighted Quote Block -->
-    <div class="cre-challenge-quote-block">
-      <div class="cre-quote-accent-bar"></div>
-      <p class="cre-challenge-quote">
+    <!-- Highlight Box -->
+    <div class="cre-highlight-box">
+      <p class="cre-highlight-text">
         "The average CRE firm misses 30-40% of qualified deals because they can't evaluate and respond fast enough."
       </p>
     </div>
 
-    <!-- Challenge Items - Alternating Left/Right -->
-    <div class="cre-challenges-container">
-      <!-- Item 1: Left Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-left">
-        <div class="cre-challenge-accent-bar"></div>
-        <div class="cre-challenge-content">
-          <h3>Deal sourcing is fragmented</h3>
-          <p>across email, spreadsheets, and broker networks—making it impossible to track what's in your pipeline.</p>
-        </div>
-      </div>
-
-      <!-- Item 2: Right Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-right">
-        <div class="cre-challenge-content">
-          <h3>Underwriting takes too long</h3>
-          <p>because data lives in silos. Analysts spend hours copying numbers between systems instead of analyzing deals.</p>
-        </div>
-        <div class="cre-challenge-accent-bar"></div>
-      </div>
-
-      <!-- Item 3: Left Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-left">
-        <div class="cre-challenge-accent-bar"></div>
-        <div class="cre-challenge-content">
-          <h3>Portfolio performance is opaque</h3>
-          <p>because reporting requires manual data pulls from multiple sources, delaying critical decisions.</p>
-        </div>
-      </div>
-
-      <!-- Item 4: Right Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-right">
-        <div class="cre-challenge-content">
-          <h3>Investor reporting is reactive</h3>
-          <p>instead of proactive. You're building reports after questions are asked, not before they're needed.</p>
-        </div>
-        <div class="cre-challenge-accent-bar"></div>
-      </div>
-
-      <!-- Item 5: Left Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-left">
-        <div class="cre-challenge-accent-bar"></div>
-        <div class="cre-challenge-content">
-          <h3>Market intelligence is scattered</h3>
-          <p>across news feeds, broker updates, and internal notes—making it hard to spot opportunities.</p>
-        </div>
-      </div>
-
-      <!-- Item 6: Right Aligned -->
-      <div class="cre-challenge-item cre-challenge-item-right">
-        <div class="cre-challenge-content">
-          <h3>Team coordination breaks down</h3>
-          <p>when deal information lives in email threads and shared drives instead of a single source of truth.</p>
-        </div>
-        <div class="cre-challenge-accent-bar"></div>
-      </div>
+    <!-- Challenge List -->
+    <div class="cre-challenge-list-wrapper">
+      <ul class="cre-challenge-list">
+        <li><strong>Deal sourcing is fragmented</strong> across email, spreadsheets, and broker networks—making it impossible to track what's in your pipeline.</li>
+        <li><strong>Underwriting takes too long</strong> because data lives in silos. Analysts spend hours copying numbers between systems instead of analyzing deals.</li>
+        <li><strong>Portfolio performance is opaque</strong> because reporting requires manual data pulls from multiple sources, delaying critical decisions.</li>
+        <li><strong>Investor reporting is reactive</strong> instead of proactive. You're building reports after questions are asked, not before they're needed.</li>
+        <li><strong>Market intelligence is scattered</strong> across news feeds, broker updates, and internal notes—making it hard to spot opportunities.</li>
+        <li><strong>Team coordination breaks down</strong> when deal information lives in email threads and shared drives instead of a single source of truth.</li>
+      </ul>
     </div>
-
-    <!-- The Real Cost Stats -->
-    <h3 class="cre-stats-heading">The real cost</h3>
 
     <!-- Stat Cards -->
     <div class="cre-stat-cards">
@@ -138,95 +89,56 @@
     max-width: 900px;
   }
 
-  /* Quote Block */
-  .cre-challenge-quote-block {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin: 60px 0;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.02);
-    border-radius: 4px;
+  .cre-highlight-box {
+    background: rgba(14, 165, 233, 0.05);
+    border-left: 4px solid #0EA5E9;
+    padding: 32px;
+    margin-bottom: 48px;
   }
 
-  .cre-quote-accent-bar {
-    width: 8px;
-    height: 120px;
-    background: #0EA5E9;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  .cre-challenge-quote {
+  .cre-highlight-text {
     font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
     font-style: italic;
-    color: #000000;
     margin: 0;
-    font-weight: 400;
-    line-height: 1.8;
   }
 
-  /* Challenges Container */
-  .cre-challenges-container {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin: 60px 0;
+  .cre-challenge-list-wrapper {
+    margin-bottom: 64px;
   }
 
-  /* Challenge Item Base */
-  .cre-challenge-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
+  .cre-challenge-list {
+    list-style: none;
     padding: 0;
-  }
-
-  .cre-challenge-item-left {
-    flex-direction: row;
-  }
-
-  .cre-challenge-item-right {
-    flex-direction: row-reverse;
-  }
-
-  /* Challenge Accent Bar */
-  .cre-challenge-accent-bar {
-    width: 8px;
-    height: 140px;
-    background: #0EA5E9;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  /* Challenge Content */
-  .cre-challenge-content {
-    flex: 1;
-  }
-
-  .cre-challenge-content h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #000000;
-    margin: 0 0 12px 0;
-    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-
-  .cre-challenge-content p {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.7);
     margin: 0;
-    line-height: 1.7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  /* Stats Heading */
-  .cre-stats-heading {
-    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: clamp(28px, 4vw, 36px);
-    font-weight: 400;
+  .cre-challenge-list li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .cre-challenge-list li::before {
+    content: '−';
+    position: absolute;
+    left: 0;
+    color: #0EA5E9;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .cre-challenge-list li strong {
     color: #000000;
-    text-align: center;
-    margin: 80px 0 40px 0;
+    font-weight: 600;
   }
 
   .cre-stat-cards {
@@ -263,6 +175,10 @@
   }
 
   @media (max-width: 1024px) {
+    .cre-challenge-list {
+      grid-template-columns: 1fr;
+    }
+
     .cre-stat-cards {
       grid-template-columns: 1fr;
     }
@@ -273,48 +189,8 @@
       padding: clamp(30px, 4vw, 50px) 24px;
     }
 
-    .cre-challenge-quote-block {
-      flex-direction: column;
+    .cre-highlight-box {
       padding: 24px;
-      gap: 16px;
-    }
-
-    .cre-quote-accent-bar {
-      width: 100%;
-      height: 6px;
-      margin-bottom: 0;
-    }
-
-    .cre-challenges-container {
-      gap: 32px;
-      margin: 40px 0;
-    }
-
-    .cre-challenge-item {
-      flex-direction: column !important;
-      gap: 16px;
-    }
-
-    .cre-challenge-item-right {
-      flex-direction: column !important;
-    }
-
-    .cre-challenge-accent-bar {
-      width: 100%;
-      height: 4px;
-      margin-bottom: 0;
-    }
-
-    .cre-challenge-content h3 {
-      font-size: 16px;
-    }
-
-    .cre-challenge-content p {
-      font-size: 14px;
-    }
-
-    .cre-stats-heading {
-      margin: 60px 0 32px 0;
     }
 
     .cre-stat-card {
