@@ -126,10 +126,10 @@ export default function Homepage() {
                   <h3 className="text-2xl font-medium text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {capability.title}
                   </h3>
-                  <p className="text-gray-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-gray-200 text-sm mb-4">
                     {capability.desc}
                   </p>
-                  <div className="text-cyan-400 font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="text-cyan-400 font-medium text-sm flex items-center gap-2">
                     Learn more →
                   </div>
                 </div>
