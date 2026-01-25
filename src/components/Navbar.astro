@@ -57,21 +57,13 @@
           </svg>
         </button>
         
-        <!-- Industries - Expandable -->
+        <!-- Industries - Mega Menu Trigger -->
         <button class="sidebar-nav-item sidebar-nav-expandable" id="industries-toggle">
           <span class="sidebar-nav-label">Industries</span>
           <svg class="sidebar-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
-        <div class="sidebar-submenu" id="industries-submenu">
-          <a href="/industries/commercial-real-estate" class="sidebar-submenu-item">Commercial Real Estate</a>
-          <a href="/industries/professional-services" class="sidebar-submenu-item">Professional Services</a>
-          <a href="/industries/construction" class="sidebar-submenu-item">Construction</a>
-          <a href="/industries/healthcare" class="sidebar-submenu-item">Healthcare</a>
-          <a href="/industries/property-management" class="sidebar-submenu-item">Property Management</a>
-          <a href="/industries/financial-services" class="sidebar-submenu-item">Financial Services</a>
-        </div>
         
         <!-- Standard Links -->
         <a href="/how-we-work" class="sidebar-nav-item">How We Work</a>
@@ -207,6 +199,112 @@
         <div class="mega-menu-footer">
           <a href="/capabilities" class="mega-menu-link-arrow">
             Explore All Capabilities →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Industries Mega Menu - Connected to sidebar on the right -->
+  <div class="industries-mega-menu" id="industries-mega-menu">
+    <!-- Backdrop -->
+    <div class="mega-menu-backdrop" id="industries-mega-menu-backdrop" aria-hidden="true"></div>
+    
+    <!-- Menu Panel -->
+    <div class="mega-menu-panel">
+      <div class="mega-menu-content">
+        <h3 class="mega-menu-title">
+          Industries
+          <svg class="title-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </h3>
+        
+        <!-- Main Layout: 2 Columns (Industries Left, Featured Right) -->
+        <div class="mega-menu-main-layout">
+          
+          <!-- Left Side: Industries Grid -->
+          <div class="mega-menu-capabilities">
+            <div class="mega-menu-grid">
+              
+              <!-- Column 1: Real Estate & Property -->
+              <div class="mega-menu-column">
+                <h4 class="column-heading">Real Estate & Property</h4>
+                <ul class="column-links">
+                  <li><a href="/industries/commercial-real-estate">Commercial Real Estate</a></li>
+                  <li><a href="/industries/property-management">Property Management</a></li>
+                </ul>
+              </div>
+              
+              <!-- Column 2: Professional Services -->
+              <div class="mega-menu-column">
+                <h4 class="column-heading">Professional Services</h4>
+                <ul class="column-links">
+                  <li><a href="/industries/professional-services">Professional Services</a></li>
+                  <li><a href="/industries/financial-services">Financial Services</a></li>
+                </ul>
+              </div>
+              
+              <!-- Column 3: Construction & Healthcare -->
+              <div class="mega-menu-column">
+                <h4 class="column-heading">Construction & Healthcare</h4>
+                <ul class="column-links">
+                  <li><a href="/industries/construction">Construction</a></li>
+                  <li><a href="/industries/healthcare">Healthcare</a></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- Right Side: Featured Section -->
+          <div class="mega-menu-featured">
+            <h4 class="featured-heading">Featured</h4>
+            
+            <div class="featured-cards">
+              
+              <!-- Featured Card 1 -->
+              <div class="featured-card">
+                <h5 class="featured-card-title">Commercial Real Estate</h5>
+                <p class="featured-card-description">
+                  Portfolio management, tenant operations, and property intelligence
+                </p>
+                <a href="/industries/commercial-real-estate" class="featured-card-link">
+                  Learn more →
+                </a>
+              </div>
+              
+              <!-- Featured Card 2 -->
+              <div class="featured-card">
+                <h5 class="featured-card-title">Professional Services</h5>
+                <p class="featured-card-description">
+                  Client management, project delivery, and operational efficiency
+                </p>
+                <a href="/industries/professional-services" class="featured-card-link">
+                  Learn more →
+                </a>
+              </div>
+              
+              <!-- Featured Card 3 -->
+              <div class="featured-card">
+                <h5 class="featured-card-title">Healthcare & Wellness</h5>
+                <p class="featured-card-description">
+                  Patient management, care coordination, and operational workflows
+                </p>
+                <a href="/industries/healthcare" class="featured-card-link">
+                  Learn more →
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Footer -->
+        <div class="mega-menu-footer">
+          <a href="/industries" class="mega-menu-link-arrow">
+            Explore All Industries →
           </a>
         </div>
       </div>
@@ -681,6 +779,31 @@
   .capabilities-mega-menu.open {
     display: block;
   }
+  
+  /* ===== INDUSTRIES MEGA MENU ===== */
+  
+  .industries-mega-menu {
+    position: fixed;
+    top: 0;
+    left: 300px;  /* Start after sidebar width */
+    right: 0;
+    bottom: 0;
+    z-index: 1999;  /* Below sidebar (2000) but above backdrop (1500) */
+    display: none;
+    background: #FFFFFF;
+    overflow-y: auto;
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.3);
+    animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .industries-mega-menu.open {
+    display: block;
+  }
+  
+  /* When sidebar is closed, adjust positioning */
+  .navbar-sidebar:not(.open) ~ .industries-mega-menu {
+    left: 0;
+  }
 
   /* Mega Menu Panel - Connected to sidebar on the right */
   .mega-menu-panel {
@@ -721,7 +844,8 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
-  .capabilities-mega-menu.open .mega-menu-backdrop {
+  .capabilities-mega-menu.open .mega-menu-backdrop,
+  .industries-mega-menu.open .mega-menu-backdrop {
     opacity: 1;
     visibility: visible;
   }
@@ -912,7 +1036,7 @@
     }
   }
   
-  /* Active state for sidebar capabilities button */
+  /* Active state for sidebar capabilities and industries buttons */
   .sidebar-nav-item.active {
     color: #0EA5E9;
     border-bottom: 2px solid #0EA5E9;
@@ -930,7 +1054,8 @@
 
   /* Responsive Mega Menu */
   @media (max-width: 1024px) {
-    .capabilities-mega-menu {
+    .capabilities-mega-menu,
+    .industries-mega-menu {
       left: 280px;  /* Match sidebar width on tablet */
     }
     
@@ -948,7 +1073,8 @@
   }
 
   @media (max-width: 968px) {
-    .capabilities-mega-menu {
+    .capabilities-mega-menu,
+    .industries-mega-menu {
       left: 280px;
     }
     
@@ -968,7 +1094,8 @@
   }
 
   @media (max-width: 768px) {
-    .capabilities-mega-menu {
+    .capabilities-mega-menu,
+    .industries-mega-menu {
       left: 280px;  /* Match sidebar width on mobile */
     }
     
@@ -993,11 +1120,13 @@
   }
 
   @media (max-width: 600px) {
-    .capabilities-mega-menu {
+    .capabilities-mega-menu,
+    .industries-mega-menu {
       left: 100%;  /* Full width on small mobile */
     }
     
-    .navbar-sidebar:not(.open) ~ .capabilities-mega-menu {
+    .navbar-sidebar:not(.open) ~ .capabilities-mega-menu,
+    .navbar-sidebar:not(.open) ~ .industries-mega-menu {
       left: 0;
     }
     
@@ -1062,22 +1191,36 @@
     const capabilitiesMegaMenu = document.getElementById('capabilities-mega-menu');
     const megaMenuBackdrop = document.getElementById('mega-menu-backdrop');
     
+    // Industries Mega Menu - Declare early so it's available everywhere
+    const industriesToggle = document.getElementById('industries-toggle');
+    const industriesMegaMenu = document.getElementById('industries-mega-menu');
+    const industriesMegaMenuBackdrop = document.getElementById('industries-mega-menu-backdrop');
+    
     // Update mega menu position based on sidebar state
     function updateMegaMenuPosition() {
-      if (capabilitiesMegaMenu && sidebar) {
-        if (sidebar.classList.contains('open')) {
-          // Sidebar is open, position mega menu to the right
-          const sidebarWidth = sidebar.offsetWidth;
-          capabilitiesMegaMenu.style.left = sidebarWidth + 'px';
-        } else {
-          // Sidebar is closed, mega menu takes full width
-          capabilitiesMegaMenu.style.left = '0';
+      if (sidebar) {
+        const sidebarWidth = sidebar.offsetWidth;
+        const leftPosition = sidebar.classList.contains('open') ? sidebarWidth + 'px' : '0';
+        
+        if (capabilitiesMegaMenu) {
+          capabilitiesMegaMenu.style.left = leftPosition;
+        }
+        if (industriesMegaMenu) {
+          industriesMegaMenu.style.left = leftPosition;
         }
       }
     }
     
-    function openMegaMenu() {
-      if (capabilitiesMegaMenu) {
+    function openMegaMenu(menu, toggle) {
+      if (menu) {
+        // Close other mega menus first
+        if (capabilitiesMegaMenu && menu !== capabilitiesMegaMenu) {
+          closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+        }
+        if (industriesMegaMenu && menu !== industriesMegaMenu) {
+          closeMegaMenu(industriesMegaMenu, industriesToggle);
+        }
+        
         // Ensure sidebar is open first
         if (sidebar && !sidebar.classList.contains('open')) {
           sidebar.classList.add('open');
@@ -1086,18 +1229,18 @@
         }
         
         updateMegaMenuPosition();
-        capabilitiesMegaMenu.classList.add('open');
-        if (capabilitiesToggle) {
-          capabilitiesToggle.classList.add('active');
+        menu.classList.add('open');
+        if (toggle) {
+          toggle.classList.add('active');
         }
       }
     }
     
-    function closeMegaMenu() {
-      if (capabilitiesMegaMenu) {
-        capabilitiesMegaMenu.classList.remove('open');
-        if (capabilitiesToggle) {
-          capabilitiesToggle.classList.remove('active');
+    function closeMegaMenu(menu, toggle) {
+      if (menu) {
+        menu.classList.remove('open');
+        if (toggle) {
+          toggle.classList.remove('active');
         }
       }
     }
@@ -1147,8 +1290,9 @@
       if (sidebar) sidebar.classList.remove('open');
       if (backdrop) backdrop.classList.remove('active');
       document.body.style.overflow = '';
-      // Also close mega menu when sidebar closes
-      closeMegaMenu();
+      // Also close mega menus when sidebar closes
+      closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+      closeMegaMenu(industriesMegaMenu, industriesToggle);
       // Update mega menu position when sidebar closes
       updateMegaMenuPosition();
     }
@@ -1176,17 +1320,43 @@
         
         // Toggle menu
         if (capabilitiesMegaMenu.classList.contains('open')) {
-          closeMegaMenu();
+          closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
         } else {
           // Open sidebar if not open, then open mega menu
-          openMegaMenu();
+          openMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
         }
       });
     }
     
     if (megaMenuBackdrop) {
       megaMenuBackdrop.addEventListener('click', () => {
-        closeMegaMenu();
+        closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+        // Also close sidebar if clicking backdrop
+        if (sidebar && sidebar.classList.contains('open')) {
+          closeSidebar();
+        }
+      });
+    }
+    
+    // Industries Mega Menu Event Handlers
+    if (industriesToggle && industriesMegaMenu) {
+      industriesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Toggle menu
+        if (industriesMegaMenu.classList.contains('open')) {
+          closeMegaMenu(industriesMegaMenu, industriesToggle);
+        } else {
+          // Open sidebar if not open, then open mega menu
+          openMegaMenu(industriesMegaMenu, industriesToggle);
+        }
+      });
+    }
+    
+    if (industriesMegaMenuBackdrop) {
+      industriesMegaMenuBackdrop.addEventListener('click', () => {
+        closeMegaMenu(industriesMegaMenu, industriesToggle);
         // Also close sidebar if clicking backdrop
         if (sidebar && sidebar.classList.contains('open')) {
           closeSidebar();
@@ -1196,46 +1366,25 @@
     
     // Close mega menu on Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && capabilitiesMegaMenu && capabilitiesMegaMenu.classList.contains('open')) {
-        closeMegaMenu();
+      if (e.key === 'Escape') {
+        if (capabilitiesMegaMenu && capabilitiesMegaMenu.classList.contains('open')) {
+          closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+        }
+        if (industriesMegaMenu && industriesMegaMenu.classList.contains('open')) {
+          closeMegaMenu(industriesMegaMenu, industriesToggle);
+        }
       }
     });
-    
-    // Don't close mega menu when clicking links - let them navigate normally
-    // But prevent default if you want to keep it open (commented out for now)
-    // const megaMenuLinks = capabilitiesMegaMenu ? capabilitiesMegaMenu.querySelectorAll('a') : [];
-    // megaMenuLinks.forEach(link => {
-    //   link.addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     // Could load content dynamically here instead
-    //   });
-    // });
     
     // Close mega menu when clicking outside (on navbar backdrop)
     if (backdrop) {
       backdrop.addEventListener('click', () => {
-        closeMegaMenu();
+        closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+        closeMegaMenu(industriesMegaMenu, industriesToggle);
       });
     }
     
-    // Expandable menu items
-    const industriesToggle = document.getElementById('industries-toggle');
-    const industriesSubmenu = document.getElementById('industries-submenu');
-    
-    if (industriesToggle && industriesSubmenu) {
-      industriesToggle.addEventListener('click', () => {
-        const isOpen = industriesSubmenu.classList.contains('open');
-        const chevron = industriesToggle.querySelector('.sidebar-nav-chevron');
-        
-        if (isOpen) {
-          industriesSubmenu.classList.remove('open');
-          if (chevron) chevron.classList.remove('open');
-        } else {
-          industriesSubmenu.classList.add('open');
-          if (chevron) chevron.classList.add('open');
-        }
-      });
-    }
+    // Remove old Industries submenu functionality - now handled by mega menu above
     
     // Close sidebar when clicking a link (except Sign In button and Capabilities toggle)
     const sidebarLinks = document.querySelectorAll('.sidebar-nav-item[href], .sidebar-submenu-item, .sidebar-footer-item:not(#sidebar-signin-btn)');
