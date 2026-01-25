@@ -268,78 +268,95 @@ export default function AboutUs() {
       </section>
 
       {/* INDUSTRIES SECTION */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
-            Proven Track Record
-          </p>
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-white">
-            Built systems across industries
-          </h2>
-          <p className="text-gray-400 text-lg mb-16">
-            We've worked with 50+ firms across these sectors, building purpose-built systems that eliminate friction and create competitive advantage.
-          </p>
-
+          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Proven Track Record</p>
+          <h2 className="text-4xl md:text-5xl font-light mb-6">Built systems across industries</h2>
+          <p className="text-gray-400 text-lg mb-16">We've worked with 50+ firms across these sectors, building purpose-built systems that eliminate friction and create competitive advantage.</p>
+          
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">BLDG</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Commercial Real Estate
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Deal sourcing, underwriting automation, portfolio management, investor reporting
-              </p>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">HC</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Healthcare
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Patient management, care coordination, operational workflows, scheduling automation
-              </p>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">CS</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Professional Services
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Client management, project delivery, capacity planning, financial operations
-              </p>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">CONST</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Construction
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Project management, field operations, scheduling, supply chain integration
-              </p>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">PROP</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Property Management
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Tenant operations, maintenance workflows, financial management, reporting automation
-              </p>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
-              <div className="text-4xl mb-4">FIN</div>
-              <h3 className="text-lg font-medium text-white mb-2">
-                Financial Services
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Reporting automation, data consolidation, client management, operational efficiency
-              </p>
-            </div>
+            {[
+              { 
+                name: "Commercial Real Estate",
+                abbr: "BLDG",
+                items: ["Deal sourcing & pipeline management", "Underwriting automation", "Portfolio intelligence"],
+                image: "/logos/intelio-cool-pic-capital.png",
+                link: "/industries/commercial-real-estate"
+              },
+              { 
+                name: "Healthcare",
+                abbr: "HC",
+                items: ["Patient management systems", "Care coordination workflows", "Scheduling optimization"],
+                image: "/logos/intelio-healthcare-image-header.webp",
+                link: "/industries/healthcare"
+              },
+              { 
+                name: "Professional Services",
+                abbr: "CS",
+                items: ["Project delivery systems", "Capacity planning", "Financial operations"],
+                image: "/logos/intelio-energy-image-1.webp",
+                link: "/industries/professional-services"
+              },
+              { 
+                name: "Construction",
+                abbr: "CONST",
+                items: ["Project management automation", "Field operations tracking", "Schedule optimization"],
+                image: "/logos/intelio-construction-image.webp",
+                link: "/industries/construction"
+              },
+              { 
+                name: "Property Management",
+                abbr: "PROP",
+                items: ["Tenant operations management", "Maintenance workflow automation", "Financial reporting systems"],
+                image: "/logos/intelio-website-pic-dashboard.webp",
+                link: "/industries/property-management"
+              },
+              { 
+                name: "Financial Services",
+                abbr: "FIN",
+                items: ["Automated reporting", "Data consolidation & analytics", "Compliance management"],
+                image: "/logos/intelio-financial-services-1.webp",
+                link: "/industries/financial-services"
+              }
+            ].map((industry, idx) => (
+              <a 
+                key={idx} 
+                href={industry.link}
+                className="relative h-96 rounded-lg overflow-hidden group cursor-pointer transition-all hover:scale-105"
+              >
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url('${industry.image}')`,
+                  }}
+                />
+                
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-all" />
+                
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-between p-8 z-10">
+                  <div>
+                    <div className="text-4xl font-light text-cyan-400 mb-2">{industry.abbr}</div>
+                    <h3 className="text-2xl font-medium text-white group-hover:text-cyan-400 transition-colors">
+                      {industry.name}
+                    </h3>
+                  </div>
+                  
+                  <div>
+                    <ul className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity mb-4">
+                      {industry.items.map((item, i) => (
+                        <li key={i} className="text-gray-300 text-sm">{item}</li>
+                      ))}
+                    </ul>
+                    <div className="text-cyan-400 font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      Learn more →
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
