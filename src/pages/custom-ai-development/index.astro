@@ -4,11 +4,11 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="Custom AI Development | Intelio">
   <!-- HERO SECTION with EXISTING VIDEO -->
-  <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/logos/Abstract_Data_Visualization_Video_Generation.mp4');">
+  <section class="hero">
     <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
       <source src="/logos/Abstract_Data_Visualization_Video_Generation.mp4" type="video/mp4">
     </video>
-    <div class="hero-content" style="position: relative; z-index: 1;">
+    <div class="hero-content">
       <div class="hero-label">CUSTOM AI DEVELOPMENT</div>
       <h1>Custom AI Development</h1>
       <p class="hero-subtitle">Purpose-built platforms engineered for competitive advantage. Deal sourcing, system integration, and data infrastructure at the speed you need. Built specifically for how your business operates.</p>
@@ -20,9 +20,8 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- BLUE HIGHLIGHT SECTION -->
-  <section class="highlight-section light-bg">
+  <section class="highlight-section">
     <div class="highlight-content">
-      <h2 class="highlight-heading">What separates winners from the rest</h2>
       <p class="highlight-statement">The fastest organizations aren't using better tools. They're using systems built for their specific competitive advantages.</p>
     </div>
   </section>
@@ -47,25 +46,19 @@ import Layout from '../../layouts/Layout.astro';
   <section class="stats-section">
     <div class="section-label">REAL OUTCOMES</div>
     <h2>The Business Impact</h2>
-    <p class="stats-subheading">Organizations building custom systems create competitive advantage through operational logic generic platforms cannot capture.</p>
+    <p class="stats-intro">Organizations building custom systems create competitive advantage through operational logic generic platforms cannot capture.</p>
     
-    <div class="stats-callout">
+    <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-value-wrapper">
-          <div class="stat-value">3-5x</div>
-        </div>
+        <div class="stat-value">3-5x</div>
         <div class="stat-label">Faster decision velocity with integrated automation</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value-wrapper">
-          <div class="stat-value">60%</div>
-        </div>
+        <div class="stat-value">60%</div>
         <div class="stat-label">Reduction in manual, repetitive work</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value-wrapper">
-          <div class="stat-value">100%</div>
-        </div>
+        <div class="stat-value">100%</div>
         <div class="stat-label">Code ownership. Zero vendor lock-in.</div>
       </div>
     </div>
@@ -74,37 +67,57 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- THE REALITY SECTION -->
-  <section class="reality-section light-bg">
+  <section class="reality-section">
     <div class="section-label">THE REALITY</div>
     <h2>Why off-the-shelf platforms fail</h2>
     
-    <div class="reality-list">
-      <div class="reality-item">
-        <div class="reality-icon">⚠️</div>
-        <div class="reality-content">
-          <h3><strong>Every system feels generic</strong></h3>
-          <p>Built for everyone, optimized for nobody. You adapt your business to fit the software.</p>
+    <div class="reality-problems">
+      <div class="problem-item">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="problem-content">
+          <h4>Every system feels generic</h4>
+          <p>Built for everyone, optimized for nobody. You adapt your business to fit the software instead of software adapting to you.</p>
         </div>
       </div>
-      
-      <div class="reality-item">
-        <div class="reality-icon">⚠️</div>
-        <div class="reality-content">
-          <h3><strong>You're always dependent</strong></h3>
-          <p>Roadmap controlled by vendors. New features require waiting, customization, or migration.</p>
+
+      <div class="problem-item">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="problem-content">
+          <h4>You're always dependent</h4>
+          <p>Roadmap controlled by vendors. New features require waiting, customization costs, or painful migration to alternatives.</p>
         </div>
       </div>
-      
-      <div class="reality-item">
-        <div class="reality-icon">⚠️</div>
-        <div class="reality-content">
-          <h3><strong>Competitors use the same tools</strong></h3>
-          <p>Your advantage comes from how you use them, not from the platform itself.</p>
+
+      <div class="problem-item">
+        <div class="problem-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="15.5" cy="9.5" r="1.5" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z" stroke="currentColor" fill="none" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="problem-content">
+          <h4>Competitors use the same tools</h4>
+          <p>Your advantage comes from how you use them, not from the platform itself. Difficult to defend differentiation.</p>
         </div>
       </div>
     </div>
-    
-    <p class="reality-closing">This is why leading organizations build custom systems instead.</p>
+
+    <div class="reality-closing">
+      This is why leading organizations build custom systems instead. When your competitive advantage depends on unique workflows, domain expertise, or proprietary logic, a custom system isn't an option—it's a necessity.
+    </div>
   </section>
 
   <!-- WHAT WE BUILD -->
@@ -116,7 +129,16 @@ import Layout from '../../layouts/Layout.astro';
       <!-- Full-Stack Systems -->
       <div class="capability-card">
         <div class="capability-icon-wrapper">
-          <div class="capability-icon">ICON 1</div>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="7" height="7" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <rect x="14" y="3" width="7" height="7" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <rect x="3" y="14" width="7" height="7" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <rect x="14" y="14" width="7" height="7" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="10" y1="6.5" x2="14" y2="6.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="17.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="6.5" y1="10" x2="6.5" y2="14" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="17.5" y1="10" x2="17.5" y2="14" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
         </div>
         <div class="capability-title-border"></div>
         <h3>Full-Stack Systems</h3>
@@ -130,7 +152,18 @@ import Layout from '../../layouts/Layout.astro';
       <!-- Intelligent Automation -->
       <div class="capability-card">
         <div class="capability-icon-wrapper">
-          <div class="capability-icon">ICON 2</div>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="6" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="12" y1="2" x2="12" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="12" y1="18" x2="12" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="2" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="18" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="19.07" y1="4.93" x2="16.24" y2="7.76" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="7.76" y1="16.24" x2="4.93" y2="19.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
         <div class="capability-title-border"></div>
         <h3>Intelligent Automation</h3>
@@ -144,7 +177,12 @@ import Layout from '../../layouts/Layout.astro';
       <!-- SaaS & Product -->
       <div class="capability-card">
         <div class="capability-icon-wrapper">
-          <div class="capability-icon">ICON 3</div>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="3" y1="8" x2="21" y2="8" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="7" y1="12" x2="17" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="7" y1="16" x2="14" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
         <div class="capability-title-border"></div>
         <h3>SaaS & Product Platforms</h3>
@@ -158,7 +196,17 @@ import Layout from '../../layouts/Layout.astro';
       <!-- Enterprise Infrastructure -->
       <div class="capability-card">
         <div class="capability-icon-wrapper">
-          <div class="capability-icon">ICON 4</div>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="5" cy="5" r="2" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="19" cy="5" r="2" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="5" cy="19" r="2" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="19" cy="19" r="2" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="8.5" y1="7.5" x2="10.5" y2="10.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="13.5" y1="10.5" x2="15.5" y2="7.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="8.5" y1="16.5" x2="10.5" y2="13.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="13.5" y1="13.5" x2="15.5" y2="16.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
         </div>
         <div class="capability-title-border"></div>
         <h3>Enterprise Infrastructure</h3>
@@ -299,17 +347,15 @@ import Layout from '../../layouts/Layout.astro';
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 1</div>
         <div class="case-study-overlay">
-          <div class="case-study-label">INVESTMENT FIRM</div>
-          <h3 class="case-study-title">Deal matching system accelerates evaluation by 67%</h3>
-          <div class="case-study-metric">6-day reduction in cycle time →</div>
+          <h3>Deal matching system accelerates evaluation by 67%</h3>
+          <div class="case-study-metric">6-day reduction →</div>
         </div>
       </a>
 
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 2</div>
         <div class="case-study-overlay">
-          <div class="case-study-label">SAAS COMPANY</div>
-          <h3 class="case-study-title">Retention intelligence closes 40% more deals</h3>
+          <h3>Retention intelligence closes 40% more deals</h3>
           <div class="case-study-metric">40% more qualified deals →</div>
         </div>
       </a>
@@ -317,8 +363,7 @@ import Layout from '../../layouts/Layout.astro';
       <a href="#" class="case-study-card">
         <div class="case-study-image">IMAGE 3</div>
         <div class="case-study-overlay">
-          <div class="case-study-label">PORTFOLIO FIRM</div>
-          <h3 class="case-study-title">Eliminates manual reporting overhead completely</h3>
+          <h3>Eliminates manual reporting overhead completely</h3>
           <div class="case-study-metric">Zero manual effort →</div>
         </div>
       </a>
@@ -511,12 +556,12 @@ import Layout from '../../layouts/Layout.astro';
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 0;
+    z-index: 1;
   }
 
   .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 900px;
   }
 
@@ -563,12 +608,12 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .btn-primary {
-    background-color: var(--cyan);
-    color: var(--black);
+    background-color: #ffffff;
+    color: #000000;
   }
 
   .btn-primary:hover {
-    background-color: var(--white);
+    background-color: #f0f0f0;
   }
 
   .btn-secondary {
@@ -584,28 +629,24 @@ import Layout from '../../layouts/Layout.astro';
 
   /* HIGHLIGHT SECTION */
   .highlight-section {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));
     padding: 4rem 6%;
     text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .highlight-content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
-  .highlight-heading {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #000000;
-    margin-bottom: 1.5rem;
-  }
-
   .highlight-statement {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    color: #333333;
-    line-height: 1.6;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
   }
 
   /* SECTIONS */
@@ -717,55 +758,47 @@ import Layout from '../../layouts/Layout.astro';
 
   /* STATS SECTION */
   .stats-section {
-    background-color: #000000;
+    background-color: #000;
     color: rgba(255, 255, 255, 0.7);
   }
 
-  .stats-subheading {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+  .stats-intro {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 3rem;
-    max-width: 800px;
+    max-width: 700px;
     line-height: 1.7;
   }
 
-  .stats-callout {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 3rem;
-    margin: 3rem 0;
+  .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 3rem;
   }
 
   .stat-item {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-  }
-
-  .stat-value-wrapper {
-    margin-bottom: 1rem;
   }
 
   .stat-value {
     font-size: 4rem;
     font-weight: 400;
     color: var(--cyan);
-    line-height: 1;
-    background: linear-gradient(135deg, rgba(14,165,233,0.1), rgba(14,165,233,0.05));
-    padding: 20px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0.05));
+    padding: 2rem;
     border-radius: 8px;
-    display: inline-block;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    line-height: 1;
   }
 
   .stat-label {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7) !important;
-    line-height: 1.5;
-    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
   }
 
   .section-supporting-text {
@@ -778,48 +811,73 @@ import Layout from '../../layouts/Layout.astro';
 
   /* REALITY SECTION */
   .reality-section {
-    background-color: #ffffff;
-    color: #333333;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 6rem 6%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  .reality-list {
-    margin: 3rem 0;
-    display: flex;
-    flex-direction: column;
+  .reality-section .section-label {
+    color: #666;
+  }
+
+  .reality-section h2 {
+    color: #000;
+  }
+
+  .reality-problems {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
+    margin-top: 3rem;
   }
 
-  .reality-item {
+  .problem-item {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: flex-start;
   }
 
-  .reality-icon {
-    font-size: 2rem;
+  .problem-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    color: #666;
   }
 
-  .reality-content h3 {
-    font-size: 1.25rem;
-    color: #000000;
+  .problem-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .problem-content h4 {
+    font-size: 1.1rem;
+    color: #000;
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
 
-  .reality-content p {
-    color: #555555;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin: 0;
+  .problem-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
   }
 
   .reality-closing {
-    font-size: 1.1rem;
-    color: #000000;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-left: 3px solid #000;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    color: #000;
     font-weight: 500;
-    margin-top: 2rem;
-    text-align: center;
   }
 
   /* CAPABILITIES GRID */
@@ -852,23 +910,24 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .capability-icon-wrapper {
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .capability-icon {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0.1));
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0.05));
     border: 2px solid rgba(14, 165, 233, 0.3);
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+  }
+
+  .capability-icon-wrapper svg {
+    width: 70%;
+    height: 70%;
+    stroke: var(--cyan);
+    fill: none;
+    stroke-width: 1.5;
   }
 
   .capability-title-border {
@@ -1027,32 +1086,38 @@ import Layout from '../../layouts/Layout.astro';
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .stack-category:nth-child(1) .stack-items {
-    background: rgba(14, 165, 233, 0.03);
+    background: rgba(14, 165, 233, 0.05);
+    border-color: rgba(14, 165, 233, 0.2);
   }
 
   .stack-category:nth-child(2) .stack-items {
-    background: rgba(168, 85, 247, 0.03);
+    background: rgba(168, 85, 247, 0.05);
+    border-color: rgba(168, 85, 247, 0.2);
   }
 
   .stack-category:nth-child(3) .stack-items {
-    background: rgba(59, 130, 246, 0.03);
+    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(59, 130, 246, 0.2);
   }
 
   .stack-category:nth-child(4) .stack-items {
-    background: rgba(34, 197, 94, 0.03);
+    background: rgba(34, 197, 94, 0.05);
+    border-color: rgba(34, 197, 94, 0.2);
   }
 
   .stack-category:nth-child(5) .stack-items {
-    background: rgba(249, 115, 22, 0.03);
+    background: rgba(249, 115, 22, 0.05);
+    border-color: rgba(249, 115, 22, 0.2);
   }
 
   .stack-item {
-    background-color: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 6px;
@@ -1062,9 +1127,9 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .stack-item:hover {
-    background-color: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--cyan);
-    color: #ffffff;
+    color: white;
   }
 
   /* CASE STUDIES */
@@ -1082,29 +1147,22 @@ import Layout from '../../layouts/Layout.astro';
 
   .case-study-card {
     position: relative;
-    height: 300px;
+    height: 350px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
     text-decoration: none;
     color: inherit;
-  }
-
-  .case-study-card:hover {
-    transform: translateY(-4px);
   }
 
   .case-study-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
+    opacity: 0.85;
     transition: opacity 0.3s ease;
-  }
-
-  .case-study-card:hover .case-study-image {
-    opacity: 1;
   }
 
   .case-study-overlay {
@@ -1118,26 +1176,11 @@ import Layout from '../../layouts/Layout.astro';
     flex-direction: column;
     justify-content: space-between;
     background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
-    transition: background 0.3s ease;
   }
 
-  .case-study-card:hover .case-study-overlay {
-    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
-  }
-
-  .case-study-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.5rem;
-  }
-
-  .case-study-title {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #ffffff;
+  .case-study-overlay h3 {
+    font-size: 1.3rem;
+    color: white;
     line-height: 1.3;
     margin: 0;
   }
@@ -1145,17 +1188,20 @@ import Layout from '../../layouts/Layout.astro';
   .case-study-metric {
     align-self: flex-end;
     background: rgba(14, 165, 233, 0.2);
-    padding: 10px 15px;
+    backdrop-filter: blur(10px);
+    padding: 12px 18px;
     border-radius: 4px;
-    color: #0EA5E9;
-    font-size: 0.9rem;
+    color: var(--cyan);
     font-weight: 500;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(14, 165, 233, 0.3);
   }
 
-  .case-study-card:hover .case-study-metric {
-    background: rgba(14, 165, 233, 0.3);
-    transform: scale(1.05);
+  .case-study-card:hover .case-study-image {
+    opacity: 1;
+  }
+
+  .case-study-card:hover .case-study-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.95) 100%);
   }
 
   /* COMPARISON SECTION */
@@ -1242,13 +1288,13 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .commitment-card {
-    background-color: rgba(255, 255, 255, 0.02);
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
     border-radius: 8px;
+    padding-left: 2rem;
     transition: all 0.3s ease;
-    position: relative;
-    padding-left: 3rem;
   }
 
   .commitment-card::before {
@@ -1257,32 +1303,33 @@ import Layout from '../../layouts/Layout.astro';
     left: 0;
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 4px;
     border-radius: 8px 0 0 8px;
-  }
-
-  .commitment-card-1::before {
-    background-color: #22c55e; /* green */
-  }
-
-  .commitment-card-2::before {
-    background-color: #3b82f6; /* blue */
-  }
-
-  .commitment-card-3::before {
     background-color: var(--cyan);
   }
 
+  .commitment-card-1::before {
+    background: #22c55e;
+  }
+
+  .commitment-card-2::before {
+    background: #3b82f6;
+  }
+
+  .commitment-card-3::before {
+    background: var(--cyan);
+  }
+
   .commitment-card-4::before {
-    background-color: #8b5cf6; /* purple */
+    background: #ec4899;
   }
 
   .commitment-card-5::before {
-    background-color: #f59e0b; /* orange */
+    background: #f59e0b;
   }
 
   .commitment-card-6::before {
-    background-color: #10b981; /* emerald */
+    background: #8b5cf6;
   }
 
   .commitment-card:hover {
@@ -1365,27 +1412,22 @@ import Layout from '../../layouts/Layout.astro';
 
   /* CLOSING */
   .closing-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(14, 165, 233, 0.15) 100%);
     text-align: center;
     padding: 6rem 6%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(14, 165, 233, 0.1) 100%);
-    color: #ffffff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .closing-section h2 {
-    color: #ffffff;
-    margin-bottom: 1.5rem;
     font-size: 3rem;
-    font-weight: 500;
+    color: white;
+    margin-bottom: 2rem;
   }
 
   .closing-section p {
-    color: rgba(255, 255, 255, 0.9);
     font-size: 1.15rem;
-    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.8);
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 2rem;
     line-height: 1.7;
   }
 
@@ -1411,17 +1453,13 @@ import Layout from '../../layouts/Layout.astro';
       font-size: 2.5rem;
     }
 
-    .highlight-heading {
-      font-size: 1.5rem;
-    }
-
     .highlight-statement {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
     .stat-value {
       font-size: 3rem;
-      padding: 15px;
+      padding: 1.5rem;
     }
 
     .capabilities-grid,
@@ -1431,7 +1469,7 @@ import Layout from '../../layouts/Layout.astro';
     .intro-section,
     .approach-item,
     .case-studies-grid,
-    .stats-callout {
+    .stats-grid {
       grid-template-columns: 1fr;
     }
 
@@ -1452,7 +1490,7 @@ import Layout from '../../layouts/Layout.astro';
     }
 
     .case-study-card {
-      height: 250px;
+      height: 300px;
     }
 
     .case-study-title {
@@ -1480,13 +1518,15 @@ import Layout from '../../layouts/Layout.astro';
       flex-direction: column;
     }
 
-    .reality-item {
+    .problem-item {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
     }
 
-    .reality-icon {
-      font-size: 1.5rem;
+    .problem-icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
     }
   }
 </style>
