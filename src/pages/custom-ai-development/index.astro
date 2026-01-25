@@ -422,7 +422,6 @@ import Layout from '../../layouts/Layout.astro';
     align-items: center;
     border-bottom: 1px solid var(--border-light);
     overflow: hidden;
-    background-color: var(--black);
   }
 
   .hero::before {
@@ -433,16 +432,6 @@ import Layout from '../../layouts/Layout.astro';
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-  }
-
-  .hero video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: 0;
   }
 
@@ -457,21 +446,21 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5rem;
   }
 
   .hero h1 {
     font-size: 3.5rem;
     font-weight: 400;
-    color: var(--white);
+    color: #ffffff;
     line-height: 1.1;
     margin-bottom: 1rem;
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2rem;
     line-height: 1.6;
   }
@@ -506,7 +495,7 @@ import Layout from '../../layouts/Layout.astro';
   .btn-secondary {
     background-color: transparent;
     color: var(--white);
-    border: 1px solid var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .btn-secondary:hover {
@@ -517,26 +506,30 @@ import Layout from '../../layouts/Layout.astro';
   /* SECTIONS */
   section {
     padding: 6rem 6%;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .light-bg {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: #ffffff;
+    color: #333333;
   }
 
   .light-bg .section-label {
-    color: rgba(0, 0, 0, 0.5);
+    color: #666666;
   }
 
   .light-bg h2,
   .light-bg h3,
   .light-bg h4 {
-    color: var(--black);
+    color: #000000;
   }
 
-  .light-bg p {
-    color: rgba(0, 0, 0, 0.7);
+  .light-bg p,
+  .light-bg .intro-text p,
+  .light-bg .stat-label {
+    color: #333333;
   }
 
   .section-label {
@@ -544,14 +537,15 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 1rem;
+    display: block;
   }
 
   h2 {
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 0.5rem;
     line-height: 1.2;
   }
@@ -575,10 +569,12 @@ import Layout from '../../layouts/Layout.astro';
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    background-color: #ffffff;
+    color: #333333;
   }
 
   .intro-text p {
-    color: rgba(0, 0, 0, 0.7);
+    color: #333333;
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -586,19 +582,19 @@ import Layout from '../../layouts/Layout.astro';
 
   .intro-primary {
     font-size: 1.1rem !important;
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: #000000 !important;
     font-weight: 500 !important;
   }
 
   .image-placeholder {
     background-color: rgba(14, 165, 233, 0.1);
-    border: 1px solid rgba(14, 165, 233, 0.2);
+    border: 2px solid rgba(14, 165, 233, 0.3);
     border-radius: 8px;
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.4);
   }
 
   .image-placeholder-text {
@@ -607,13 +603,18 @@ import Layout from '../../layouts/Layout.astro';
 
   .image-placeholder-text p {
     margin: 0.5rem 0;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.4);
   }
 
   /* STATS SECTION */
+  .stats-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .stats-callout {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 3rem;
     margin: 3rem 0;
@@ -636,12 +637,13 @@ import Layout from '../../layouts/Layout.astro';
 
   .stat-label {
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7) !important;
     line-height: 1.4;
+    font-weight: 400;
   }
 
   .section-supporting-text {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
     line-height: 1.8;
     margin-top: 3rem;
@@ -649,6 +651,11 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   /* CAPABILITIES GRID */
+  .capabilities-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .capabilities-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -658,7 +665,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .capability-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -674,7 +681,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .capability-icon {
     background-color: rgba(14, 165, 233, 0.1);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: 6px;
     height: 100px;
     width: 100px;
@@ -682,18 +689,18 @@ import Layout from '../../layouts/Layout.astro';
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.3);
     font-size: 0.85rem;
   }
 
   .capability-card h3 {
     font-size: 1.25rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 1rem;
   }
 
   .capability-card p {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -708,12 +715,17 @@ import Layout from '../../layouts/Layout.astro';
 
   .detail-item {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.5);
     padding-left: 1rem;
-    border-left: 1px solid var(--border-light);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* APPROACH SECTION */
+  .approach-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .approach-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -743,7 +755,9 @@ import Layout from '../../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .approach-item-reverse .approach-image {
@@ -760,12 +774,12 @@ import Layout from '../../layouts/Layout.astro';
 
   .approach-step h3 {
     font-size: 1.25rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 0.75rem;
   }
 
   .approach-step p {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     line-height: 1.7;
   }
@@ -777,7 +791,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .stack-title {
     font-size: 1.25rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 2rem;
   }
 
@@ -787,7 +801,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .stack-category h4 {
     font-size: 1rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 0.75rem;
   }
 
@@ -799,21 +813,26 @@ import Layout from '../../layouts/Layout.astro';
 
   .stack-item {
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 6px;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease;
   }
 
   .stack-item:hover {
     background-color: rgba(255, 255, 255, 0.06);
     border-color: var(--cyan);
-    color: var(--white);
+    color: #ffffff;
   }
 
   /* CASE STUDIES */
+  .case-studies-section {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
   .case-studies-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -822,7 +841,7 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .case-study-card {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(0, 0, 0, 0.02);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -847,8 +866,9 @@ import Layout from '../../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.25);
     font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .case-study-content {
@@ -863,21 +883,21 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.5);
+    color: #999999;
     margin-bottom: 0.5rem;
   }
 
   .case-study-title {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--black);
+    color: #000000;
     margin-bottom: 0.75rem;
     line-height: 1.4;
   }
 
   .case-study-description {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.7);
+    color: #555555;
     line-height: 1.6;
     margin-bottom: 1rem;
     flex-grow: 1;
@@ -890,6 +910,11 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   /* COMPARISON SECTION */
+  .comparison-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .comparison-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -899,7 +924,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .comparison-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 8px;
   }
@@ -911,7 +936,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .comparison-card h4 {
     font-size: 1.1rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 1.5rem;
   }
 
@@ -924,17 +949,22 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 0.5rem;
   }
 
   .comparison-text {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
   }
 
   /* COMMITMENTS */
+  .commitments-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .commitments-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -944,7 +974,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .commitment-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -957,17 +987,22 @@ import Layout from '../../layouts/Layout.astro';
 
   .commitment-card h3 {
     font-size: 1.125rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 1rem;
   }
 
   .commitment-card p {
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     line-height: 1.7;
   }
 
   /* ENGAGEMENT */
+  .engagement-section {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   .engagement-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -977,7 +1012,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .engagement-card {
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -990,16 +1025,16 @@ import Layout from '../../layouts/Layout.astro';
 
   .engagement-card h3 {
     font-size: 1.125rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 1.5rem;
   }
 
   .engagement-detail {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .engagement-detail:last-child {
@@ -1012,15 +1047,18 @@ import Layout from '../../layouts/Layout.astro';
   .closing-section {
     text-align: center;
     padding: 6rem 6%;
+    background-color: #ffffff;
+    color: #333333;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .closing-section h2 {
-    color: var(--black);
+    color: #000000;
     margin-bottom: 1rem;
   }
 
   .closing-section p {
-    color: rgba(0, 0, 0, 0.7);
+    color: #555555;
     font-size: 1.05rem;
     margin-bottom: 2rem;
     max-width: 600px;
@@ -1074,10 +1112,6 @@ import Layout from '../../layouts/Layout.astro';
 
     .cta-buttons {
       flex-direction: column;
-    }
-
-    .approach-item-reverse {
-      direction: ltr;
     }
   }
 </style>

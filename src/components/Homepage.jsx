@@ -184,7 +184,7 @@ export default function Homepage() {
                 name: "Financial Services",
                 abbr: "FIN",
                 items: ["Automated reporting", "Data consolidation & analytics", "Compliance management"],
-                image: "/images/industry-financial-services.jpg",
+                image: "/logos/intelio-financial-services-1.webp",
                 link: "/industries/financial-services"
               }
             ].map((industry, idx) => (
