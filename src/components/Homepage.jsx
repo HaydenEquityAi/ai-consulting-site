@@ -1,10 +1,9 @@
-import React from 'react';
-
 export default function Homepage() {
   return (
-    <div className="bg-white">
-      {/* SECTION 1: HERO */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-32 pb-20 bg-black">
+    <div className="bg-white text-black">
+      {/* HERO SECTION */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-32 pb-20">
+        {/* Background video */}
         <div className="absolute inset-0 overflow-hidden">
           <video
             autoPlay
@@ -16,267 +15,530 @@ export default function Homepage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
         </div>
-        
+
+        {/* Content */}
         <div className="relative max-w-3xl text-center z-10">
           <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-6">
             Tech & AI at intelio
           </p>
-          <h1 className="text-5xl md:text-7xl font-light leading-tight text-white mb-8">
-            Intelligence that moves everything
+          <h1 className="text-5xl md:text-7xl font-light leading-tight mb-8 text-white">
+            intelligence that moves everything.
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12">
-            There's software. Then there's intelligence that reimagines and rewires organizations—powered by people, built with AI, and proven to create lasting value.
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+            There's software. Then there's intelligence that reimagines and rewires organizations - powered by people, built with AI, and proven to create lasting value.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <button className="px-8 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors">
-              Watch video
-            </button>
-            <button className="px-8 py-3 border border-white/30 text-white font-medium rounded hover:border-white/50 transition-colors">
-              Learn more
-            </button>
-          </div>
         </div>
       </section>
 
-      {/* SECTION 2: POSITIONING */}
+      {/* POSITIONING SECTION */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-white text-black border-t border-gray-200">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left: Core Statement */}
             <div>
-              <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-8">Who We Are</p>
-              <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">Intelligence architects.</h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                We architect, build, and operate custom software and AI systems designed specifically for how you work. Not generic platforms forced into your workflow. Purpose-built systems embedded into your operations that become impossible to replace.
-              </p>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Our philosophy: integrate rather than create, elevate rather than replace. The systems we build don't just solve problems—they create competitive moats.
+              <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight text-black">
+                intelio translates business problems into intelligent solutions—creating meaningful <span className="text-cyan-500">leverage</span>.
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Intelio architects, builds, and operates the custom software and AI systems that create sustainable leverage. We build purpose-built platforms from the ground up, architect intelligent automation across your operations, integrate disparate systems with measurable leverage in mind, and maintain the infrastructure we create.
               </p>
             </div>
+
+            {/* Right: Three Core Principles */}
             <div className="space-y-8">
               <div className="border-l-4 border-cyan-500 pl-6">
-                <h3 className="text-xl font-medium text-black mb-2">Integration Over Creation</h3>
-                <p className="text-gray-600">We connect what you have, elevate what exists. Faster ROI, lower risk.</p>
+                <h3 className="text-xl font-medium mb-2 text-black">Implementation Over Advisory</h3>
+                <p className="text-gray-600">
+                  We don't recommend. We build and operate. You get working systems, not PowerPoint decks.
+                </p>
               </div>
               <div className="border-l-4 border-cyan-500 pl-6">
-                <h3 className="text-xl font-medium text-black mb-2">Implementation Over Advisory</h3>
-                <p className="text-gray-600">We don't recommend. We build, operate, and deliver working systems.</p>
+                <h3 className="text-xl font-medium mb-2 text-black">Defensible Architecture</h3>
+                <p className="text-gray-600">
+                  High-switching-cost systems you own. Built for long-term ownership, not vendor lock-in.
+                </p>
               </div>
               <div className="border-l-4 border-cyan-500 pl-6">
-                <h3 className="text-xl font-medium text-black mb-2">Defensible Architecture</h3>
-                <p className="text-gray-600">You own it. No lock-in. Built for long-term ownership and competitive advantage.</p>
+                <h3 className="text-xl font-medium mb-2 text-black">Operational Dependency</h3>
+                <p className="text-gray-600">
+                  Systems so integrated into how you work that they become your operational foundation.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: FEATURED CAPABILITIES */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
+      {/* FEATURED CAPABILITIES SECTION */}
+      <section id="featured-capabilities" className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Featured Capabilities</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-16">AI built for your business</h2>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { title: "Custom AI Development", desc: "Purpose-built AI systems engineered for your specific workflows and competitive advantage." },
-              { title: "System Integration", desc: "Connect disparate systems into a unified platform that operates as one cohesive infrastructure." },
-              { title: "Workflow Automation", desc: "Intelligent automation that removes friction from your operations and accelerates decision-making." },
-              { title: "Enterprise Architecture", desc: "Strategic system design that scales with your business and evolves with your needs." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-cyan-500 hover:bg-cyan-500/5 transition-all">
-                <div className="w-full h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg mb-6"></div>
-                <h3 className="text-lg font-medium text-white mb-3">{item.title}</h3>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
+            Featured Capabilities
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-16 text-white">
+            AI built for your business
+          </h2>
 
-      {/* SECTION 4: INDUSTRIES */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Proven Track Record</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-6">Built systems across industries</h2>
-          <p className="text-gray-400 text-lg mb-16">We've worked with 50+ firms across these sectors, building purpose-built systems that eliminate friction and create competitive advantage.</p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "Commercial Real Estate", items: ["Deal sourcing & pipeline management", "Underwriting automation", "Portfolio intelligence"] },
-              { name: "Healthcare", items: ["Patient management systems", "Care coordination workflows", "Scheduling optimization"] },
-              { name: "Professional Services", items: ["Project delivery systems", "Capacity planning", "Financial operations"] },
-              { name: "Construction", items: ["Project management automation", "Field operations tracking", "Schedule optimization"] },
-              { name: "Property Management", items: ["Tenant operations management", "Maintenance workflow automation", "Financial reporting systems"] },
-              { name: "Financial Services", items: ["Automated reporting", "Data consolidation & analytics", "Compliance management"] }
-            ].map((industry, idx) => (
-              <div key={idx} className="border border-white/10 rounded-lg p-8 bg-white/2 hover:border-cyan-500 hover:bg-cyan-500/5 transition-all">
-                <h3 className="text-lg font-medium text-white mb-4">{industry.name}</h3>
-                <ul className="space-y-2">
-                  {industry.items.map((item, i) => (
-                    <li key={i} className="text-gray-400 text-sm pb-2 border-b border-white/5 last:border-0">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Capability 1 */}
+            <a href="/custom-ai-development" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
+              <h3 className="text-xl font-medium text-white mb-3">
+                Custom AI Development
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Purpose-built AI systems embedded into your workflows. Not generic platforms—intelligence designed for how you operate.
+              </p>
+              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
+            </a>
 
-      {/* SECTION 5: BUILT BY OPERATORS, FOR OPERATORS */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-black to-black/95 text-white">
-        <div className="max-w-5xl mx-auto">
-          {/* Intro */}
-          <div className="text-center mb-24">
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Our Philosophy</p>
-            <h2 className="text-4xl md:text-5xl font-light mb-6">Built by operators, for operators</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              We started as operators facing the same constraints you do. We built our way out. Now we build systems for operators who refuse to compromise.
-            </p>
-          </div>
+            {/* Capability 2 */}
+            <a href="/ai-integration-automation" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
+              <h3 className="text-xl font-medium text-white mb-3">
+                Automation & Integration
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Connect disparate systems, automate workflows, and orchestrate operations. Eliminate manual work at scale.
+              </p>
+              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
+            </a>
 
-          {/* Philosophy Cards: Build, Think, Prove */}
-          <div className="grid md:grid-cols-3 gap-8 mb-24">
-            {[
-              { label: "Build", title: "Systems, not advice", desc: "We architect, build, and operate real systems embedded in your operations. Not recommendations. Not consulting. Actual intelligence you own." },
-              { label: "Think", title: "Like operators", desc: "We understand the constraints. We know time is your scarcest resource. We build for defensibility, not just functionality." },
-              { label: "Prove", title: "Through results", desc: "We eat our own cooking. We built these systems for ourselves first. That's why they work—because they had to." }
-            ].map((card, idx) => (
-              <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-lg hover:border-cyan-500 hover:bg-cyan-500/5 transition-all">
-                <div className="text-xl font-light text-cyan-400 mb-3">{card.label}</div>
-                <h3 className="text-lg font-medium text-white mb-4">{card.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
+            {/* Capability 3 */}
+            <a href="/what-we-build" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
+              <h3 className="text-xl font-medium text-white mb-3">
+                Full-Stack Systems
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                End-to-end platforms from architecture through operations. Systems that become your competitive moat.
+              </p>
+              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
+            </a>
 
-          {/* Beliefs Section */}
-          <div className="mb-16">
-            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase text-center mb-6">We Believe In Building Differently</p>
-            <h3 className="text-3xl font-light text-center mb-16">Here's what we stand for</h3>
-            
-            <div className="grid md:grid-cols-2 gap-12">
-              {[
-                { title: "Systems Beat Advice", desc: "Advisory firms talk about problems. We solve them by building integrated systems that become your operational foundation. You don't need consulting—you need working infrastructure." },
-                { title: "Ownership Creates Loyalty", desc: "You own the systems we build. No subscriptions. No vendor lock-in. Long-term ownership means you're never trapped by your technology provider." },
-                { title: "Integration Beats Creation", desc: "Most firms want to build from scratch. We integrate with what you have, connect disparate systems, and elevate your existing infrastructure. That creates faster ROI." },
-                { title: "Thinking Deserves Premium Pricing", desc: "If a buyer isn't paying for thinking, they don't get to hear about intelligence. Premium pricing filters for serious operators who value strategic work, not tire-kickers." }
-              ].map((belief, idx) => (
-                <div key={idx}>
-                  <h4 className="text-lg font-medium text-white mb-3 flex items-center gap-3">
-                    <span className="text-cyan-400 text-2xl">→</span>
-                    {belief.title}
-                  </h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{belief.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: OUR APPROACH */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-white text-black border-t border-gray-200">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-8">Our Approach</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-4">There's no shortcut</h2>
-          <p className="text-gray-600 text-lg mb-16">It takes strategy, technology, and people moving together.</p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Strategy that reimagines", desc: "We help you reimagine business models to ensure technology serves your biggest opportunities—not the other way around." },
-              { title: "Technology that delivers", desc: "We build and embed the latest AI and tech solutions with your teams, driving value, speed, and measurable results." },
-              { title: "Change that scales", desc: "We partner with you to build the skills and momentum that drive lasting impact across your organization." }
-            ].map((approach, idx) => (
-              <div key={idx}>
-                <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg mb-6"></div>
-                <h3 className="text-xl font-light text-black mb-4">{approach.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{approach.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: CASE STUDIES */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">Tech & AI Case Studies</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-16">Ambition in action</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {[
-              { label: "Commercial Real Estate", title: "Regional investment firm unifies deal flow and accelerates evaluation by 67%", desc: "Built unified deal intelligence platform connecting broker networks and automating underwriting" },
-              { label: "Construction", title: "Construction firm automates project handoffs—reducing delays and rework", desc: "Implemented intelligent workflow automation across field operations and project coordination" },
-              { label: "Professional Services", title: "Advisory firm connects pipeline to capacity—delivering 6-week forward visibility", desc: "Created capacity intelligence system linking project pipeline to resource availability" },
-              { label: "Financial Services", title: "Financial services firm doubles reporting speed with automated data consolidation", desc: "Built automated reporting infrastructure consolidating data across multiple systems" }
-            ].map((study, idx) => (
-              <div key={idx} className="h-72 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 flex flex-col justify-end hover:translate-y-[-4px] transition-transform">
-                <p className="text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-2">{study.label}</p>
-                <h3 className="text-lg font-medium text-white mb-3">{study.title}</h3>
-                <p className="text-gray-400 text-sm">{study.desc}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <a href="#" className="px-6 py-2 border border-white/30 text-white font-medium rounded hover:border-white/50 transition-colors inline-block">
-              See all case studies
+            {/* Capability 4 */}
+            <a href="/how-we-work" className="border border-white/10 rounded-lg p-8 hover:border-cyan-500/50 transition-colors bg-white/5">
+              <h3 className="text-xl font-medium text-white mb-3">
+                Strategy & Implementation
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                AI strategy, technology assessment, and implementation management. We guide the journey from vision to reality.
+              </p>
+              <span className="text-cyan-400 text-sm font-medium">Learn more →</span>
             </a>
           </div>
         </div>
       </section>
 
-      {/* SECTION 8: ENGAGEMENT MODELS */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-black text-white">
+      {/* INDUSTRIES SECTION */}
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-white text-black border-t border-gray-200">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">How We Partner</p>
-          <h2 className="text-4xl md:text-5xl font-light mb-16">Flexible engagement models</h2>
-          
+          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-8">
+            Proven Track Record
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-black">
+            Built systems across industries
+          </h2>
+          <p className="text-gray-600 text-lg mb-16">
+            We've worked with 50+ firms across these sectors, building purpose-built systems that eliminate friction and create competitive advantage.
+          </p>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Build + Maintain", featured: false, benefits: ["Custom system development", "Knowledge transfer & training", "Ongoing support on retainer", "Full system ownership"] },
-              { title: "Build + Operate", featured: true, benefits: ["Custom system development", "Full operational management", "Continuous updates & improvements", "24/7 system monitoring"] },
-              { title: "Managed Systems", featured: false, benefits: ["End-to-end system management", "Strategic technology roadmap", "Dedicated operations team", "Performance optimization"] }
-            ].map((model, idx) => (
-              <div key={idx} className={`p-8 rounded-lg border transition-all ${model.featured ? 'border-cyan-500 bg-cyan-500/5' : 'border-white/10 bg-white/2'}`}>
-                <h3 className="text-lg font-medium text-white mb-4">{model.title}</h3>
-                <p className="text-gray-400 text-sm mb-6">
-                  {model.title === "Build + Maintain" && "We architect and build your systems, then transfer ownership. You maintain with our support as needed."}
-                  {model.title === "Build + Operate" && "We build and operate your systems. You focus on strategy while we handle infrastructure and maintenance."}
-                  {model.title === "Managed Systems" && "We take full responsibility for your tech stack. Enterprise-grade systems without building a tech team."}
-                </p>
-                <div className="space-y-3">
-                  {model.benefits.map((benefit, i) => (
-                    <div key={i} className="flex gap-3 text-sm text-gray-400">
-                      <span className="text-cyan-400 font-bold">+</span>
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+            <a href="/industries/commercial-real-estate" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">BLDG</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Commercial Real Estate
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Deal sourcing, underwriting automation, portfolio management, investor reporting
+              </p>
+            </a>
+
+            <a href="/industries/healthcare" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">HC</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Healthcare
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Patient management, care coordination, operational workflows, scheduling automation
+              </p>
+            </a>
+
+            <a href="/industries/professional-services" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">CS</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Professional Services
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Client management, project delivery, capacity planning, financial operations
+              </p>
+            </a>
+
+            <a href="/industries/construction" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">CONST</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Construction
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Project management, field operations, scheduling, supply chain integration
+              </p>
+            </a>
+
+            <a href="/industries/property-management" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">PROP</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Property Management
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Tenant operations, maintenance workflows, financial management, reporting automation
+              </p>
+            </a>
+
+            <a href="/industries/financial-services" className="border border-gray-200 rounded-lg p-8 hover:border-cyan-500/50 transition-colors">
+              <div className="text-4xl mb-4">FIN</div>
+              <h3 className="text-lg font-medium text-black mb-2">
+                Financial Services
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Reporting automation, data consolidation, client management, operational efficiency
+              </p>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* SECTION 9: FINAL CTA */}
+      {/* BUILT BY OPERATORS SECTION */}
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
+            Our Philosophy
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-16 text-white">
+            Built by operators, for operators
+          </h2>
+
+          {/* Philosophy Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:border-cyan-500/50 transition-colors">
+              <div className="text-3xl font-light text-cyan-400 mb-4">Build</div>
+              <h4 className="text-lg font-medium text-white mb-3">
+                Systems, not advice
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We architect, build, and operate real systems embedded in your operations. Not recommendations. Not consulting. Actual intelligence you own.
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:border-cyan-500/50 transition-colors">
+              <div className="text-3xl font-light text-cyan-400 mb-4">Think</div>
+              <h4 className="text-lg font-medium text-white mb-3">
+                Like operators
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We understand the constraints. We know time is your scarcest resource. We build for defensibility, not just functionality.
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-8 rounded-lg border border-white/10 hover:border-cyan-500/50 transition-colors">
+              <div className="text-3xl font-light text-cyan-400 mb-4">Prove</div>
+              <h4 className="text-lg font-medium text-white mb-3">
+                Through results
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We eat our own cooking. We built these systems for ourselves first. That's why they work—because they had to.
+              </p>
+            </div>
+          </div>
+
+          {/* Beliefs */}
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-xl font-medium text-white mb-4 flex items-start gap-3">
+                <span className="text-cyan-500 text-2xl">→</span>
+                Systems Beat Advice
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Advisory firms talk about problems. We solve them by building integrated systems that become your operational foundation. You don't need consulting—you need working infrastructure.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-medium text-white mb-4 flex items-start gap-3">
+                <span className="text-cyan-500 text-2xl">→</span>
+                Ownership Creates Loyalty
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                You own the systems we build. No subscriptions. No vendor lock-in. Long-term ownership means you're never trapped by your technology provider.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-medium text-white mb-4 flex items-start gap-3">
+                <span className="text-cyan-500 text-2xl">→</span>
+                Integration Beats Creation
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Most firms want to build from scratch. We integrate with what you have, connect disparate systems, and elevate your existing infrastructure. That creates faster ROI.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-medium text-white mb-4 flex items-start gap-3">
+                <span className="text-cyan-500 text-2xl">→</span>
+                Thinking Deserves Premium Pricing
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                If a buyer isn't paying for thinking, they don't get to hear about intelligence. Premium pricing filters for serious operators who value strategic work, not tire-kickers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR APPROACH SECTION */}
+      <section id="our-approach" className="py-24 md:py-32 px-6 md:px-12 bg-white text-black border-t border-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-8">
+            Our Approach
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-black">
+            There's no shortcut
+          </h2>
+          <p className="text-gray-600 text-lg mb-16">
+            It takes strategy, technology, and people moving together.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Strategy */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 h-48 rounded-lg border border-cyan-500/30" />
+              <h3 className="text-2xl font-light text-black">
+                Strategy that reimagines
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We help you reimagine business models to ensure technology serves your biggest opportunities—not the other way around.
+              </p>
+            </div>
+
+            {/* Technology */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 h-48 rounded-lg border border-blue-500/30" />
+              <h3 className="text-2xl font-light text-black">
+                Technology that delivers
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We build and embed the latest AI and tech solutions with your teams, driving value, speed, and measurable results.
+              </p>
+            </div>
+
+            {/* Change */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 h-48 rounded-lg border border-indigo-500/30" />
+              <h3 className="text-2xl font-light text-black">
+                Change that scales
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                We partner with you to build skills and momentum that drive lasting impact across your organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CASE STUDIES SECTION */}
+      <section id="case-studies" className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-y border-white/10">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase mb-8">
+            Success Stories
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-16 text-white">
+            Real outcomes from firms we work with
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Case Study 1 */}
+            <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
+              <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20" />
+              <div className="p-8">
+                <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">CRE FIRM</span>
+                <h3 className="text-xl font-medium text-white mb-3 mt-2">
+                  Regional investment firm unifies deal flow and accelerates evaluation by 67%
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Built a unified deal intelligence platform that connected broker networks, automated underwriting workflows, and provided real-time pipeline visibility.
+                </p>
+                <div className="mt-4 text-cyan-400 text-sm font-medium">Read case study →</div>
+              </div>
+            </a>
+
+            {/* Case Study 2 */}
+            <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
+              <div className="h-48 bg-gradient-to-br from-blue-500/20 to-indigo-500/20" />
+              <div className="p-8">
+                <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">HEALTHCARE</span>
+                <h3 className="text-xl font-medium text-white mb-3 mt-2">
+                  Healthcare organization reduces patient wait times by 45%
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Implemented intelligent scheduling and care coordination system that optimized patient flow and eliminated bottlenecks.
+                </p>
+                <div className="mt-4 text-cyan-400 text-sm font-medium">Read case study →</div>
+              </div>
+            </a>
+
+            {/* Case Study 3 */}
+            <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
+              <div className="h-48 bg-gradient-to-br from-indigo-500/20 to-purple-500/20" />
+              <div className="p-8">
+                <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">PROFESSIONAL SERVICES</span>
+                <h3 className="text-xl font-medium text-white mb-3 mt-2">
+                  Professional services firm improves project profitability by 32%
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Deployed resource optimization and project delivery platform that tracked utilization, forecasted capacity, and automated billing.
+                </p>
+                <div className="mt-4 text-cyan-400 text-sm font-medium">Read case study →</div>
+              </div>
+            </a>
+
+            {/* Case Study 4 */}
+            <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
+              <div className="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20" />
+              <div className="p-8">
+                <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">CONSTRUCTION</span>
+                <h3 className="text-xl font-medium text-white mb-3 mt-2">
+                  Construction company eliminates scheduling delays and improves on-time delivery
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Built integrated project management and field operations system that coordinated crews, tracked materials, and automated reporting.
+                </p>
+                <div className="mt-4 text-cyan-400 text-sm font-medium">Read case study →</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ENGAGEMENT MODELS SECTION */}
       <section className="py-24 md:py-32 px-6 md:px-12 bg-white text-black border-t border-gray-200">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-6">Ready to build something exceptional?</h2>
-          <p className="text-gray-600 text-lg mb-12 leading-relaxed">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-8">
+            How We Partner
+          </p>
+          <h2 className="text-4xl md:text-5xl font-light mb-16 text-black">
+            Flexibility built in
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Model 1 */}
+            <div className="border border-gray-200 rounded-lg p-8">
+              <h3 className="text-xl font-medium text-black mb-4">
+                Build + Maintain
+              </h3>
+              <p className="text-gray-600 text-sm mb-6">
+                We architect and build your systems, then transfer ownership to your team. You maintain with our support as needed.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Custom system development</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Knowledge transfer</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Ongoing support on retainer</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Full system ownership</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Model 2 */}
+            <div className="border border-cyan-500/50 rounded-lg p-8 bg-cyan-500/5">
+              <h3 className="text-xl font-medium text-black mb-4">
+                Build + Operate
+              </h3>
+              <p className="text-gray-600 text-sm mb-6">
+                We build and operate your systems, handling infrastructure, updates, and maintenance. You focus on strategy.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Custom system development</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Full operational management</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Continuous updates</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>24/7 system monitoring</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Model 3 */}
+            <div className="border border-gray-200 rounded-lg p-8">
+              <h3 className="text-xl font-medium text-black mb-4">
+                Managed Systems
+              </h3>
+              <p className="text-gray-600 text-sm mb-6">
+                We take full responsibility for your tech stack—architecture through operations. Enterprise-grade without building a tech team.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>End-to-end management</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Strategic roadmap</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Dedicated operations team</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">+</span>
+                  <span>Performance optimization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA SECTION */}
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 bg-opacity-50 border-t border-white/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 text-white">
+            Ready to build something exceptional?
+          </h2>
+          <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
             Let's talk about the systems that will become your competitive advantage. We'll explore your specific challenges, map the opportunity, and show you what's possible.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <button className="px-8 py-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors"
+            >
               Get in touch
-            </button>
-            <button className="px-8 py-3 border border-black text-black font-medium rounded hover:bg-gray-50 transition-colors">
+            </a>
+            <a
+              href="/case-studies"
+              className="inline-flex items-center justify-center px-8 py-3 border border-white text-white font-medium rounded hover:bg-white/10 transition-colors"
+            >
               See our work
-            </button>
+            </a>
           </div>
         </div>
       </section>
     </div>
   );
 }
-
