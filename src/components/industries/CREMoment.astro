@@ -1,0 +1,131 @@
+---
+// Moment section - Minimal headline + stat with image
+---
+
+<section class="cre-moment-section">
+  <div class="cre-moment-container">
+    
+    <!-- LEFT: FULL-HEIGHT IMAGE -->
+    <div class="cre-moment-image">
+      <img 
+        src="/logos/intelio-website-pic-dashboard.webp" 
+        alt="AI automation in CRE deal workflows"
+        class="cre-moment-img"
+      />
+    </div>
+    
+    <!-- RIGHT: HEADLINE + STAT ONLY -->
+    <div class="cre-moment-content">
+      <h2 class="cre-moment-headline">
+        The fastest CRE firms are automating underwriting—while you still copy numbers
+      </h2>
+      
+      <p class="cre-moment-stat">
+        Firms embedding AI into deal workflows close <strong>40% more deals</strong> and reduce underwriting time by <strong>60%</strong>.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  .cre-moment-section {
+    background: #ffffff;
+    color: #000000;
+    padding: 0;
+  }
+
+  .cre-moment-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 500px;
+  }
+
+  .cre-moment-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+
+  .cre-moment-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cre-moment-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: clamp(60px, 10vw, 100px);
+    max-width: 600px;
+  }
+
+  .cre-moment-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 32px 0;
+    color: #000000;
+  }
+
+  .cre-moment-stat {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .cre-moment-stat strong {
+    font-weight: 600;
+    color: #000000;
+  }
+
+  @media (max-width: 1024px) {
+    .cre-moment-container {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    
+    .cre-moment-image {
+      height: 350px;
+    }
+    
+    .cre-moment-content {
+      padding: clamp(40px, 8vw, 80px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-moment-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .cre-moment-image {
+      height: 280px;
+    }
+    
+    .cre-moment-content {
+      padding: clamp(30px, 6vw, 60px);
+    }
+    
+    .cre-moment-headline {
+      font-size: clamp(20px, 2.5vw, 28px);
+      margin-bottom: 24px;
+    }
+    
+    .cre-moment-stat {
+      font-size: 15px;
+    }
+  }
+</style>
+
