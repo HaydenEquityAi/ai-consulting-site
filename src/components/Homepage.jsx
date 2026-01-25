@@ -163,7 +163,7 @@ export default function Homepage() {
                 name: "Professional Services",
                 abbr: "CS",
                 items: ["Project delivery systems", "Capacity planning", "Financial operations"],
-                image: "/images/industry-professional-services.jpg",
+                image: "/logos/intelio-energy-image-1.webp",
                 link: "/industries/professional-services"
               },
               { 
