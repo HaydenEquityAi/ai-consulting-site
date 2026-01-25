@@ -12,12 +12,15 @@
     <div class="cre-capabilities-grid">
       <!-- Deal Sourcing -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Deal Sourcing</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-2.webp" alt="Deal Sourcing" />
+        </div>
+        <h3 class="cre-capability-title">Deal Sourcing</h3>
         <p class="cre-capability-description">
           Unified platform that aggregates deals from brokers, off-market sources, and your network into a single pipeline. Track deal status, source quality, and response times in real-time.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Broker network integration</li>
             <li>Deal pipeline tracking</li>
@@ -29,12 +32,15 @@
 
       <!-- Underwriting -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Underwriting</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-1.webp" alt="Underwriting" />
+        </div>
+        <h3 class="cre-capability-title">Underwriting</h3>
         <p class="cre-capability-description">
           Automated underwriting workflows that pull data from property records, market comps, and financial models—reducing analysis time from days to hours while improving accuracy.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Automated financial modeling</li>
             <li>Market comp analysis</li>
@@ -46,12 +52,15 @@
 
       <!-- Portfolio Analytics -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Portfolio Analytics</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-3.webp" alt="Portfolio Analytics" />
+        </div>
+        <h3 class="cre-capability-title">Portfolio Analytics</h3>
         <p class="cre-capability-description">
           Real-time portfolio performance tracking across all properties. Monitor occupancy, NOI, cap rates, and asset-level metrics in a single dashboard.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Portfolio-wide performance metrics</li>
             <li>Asset-level analytics</li>
@@ -63,12 +72,15 @@
 
       <!-- Investor Reporting -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Investor Reporting</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-4.webp" alt="Investor Reporting" />
+        </div>
+        <h3 class="cre-capability-title">Investor Reporting</h3>
         <p class="cre-capability-description">
           Automated investor reports that generate on-demand or on-schedule. Pull data from your portfolio systems and deliver formatted reports to investors without manual work.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Automated report generation</li>
             <li>Custom report templates</li>
@@ -80,12 +92,15 @@
 
       <!-- Buyer Profile Management -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Buyer Profile Management</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-5.webp" alt="Buyer Profile Management" />
+        </div>
+        <h3 class="cre-capability-title">Buyer Profile Management</h3>
         <p class="cre-capability-description">
           Centralized system for tracking buyer preferences, deal history, and relationship management. Match deals to buyers automatically based on criteria and past behavior.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Buyer preference tracking</li>
             <li>Deal matching algorithms</li>
@@ -97,12 +112,15 @@
 
       <!-- Market Intelligence -->
       <div class="cre-capability-card">
-        <h4 class="cre-capability-title">Market Intelligence</h4>
+        <div class="cre-capability-icon">
+          <img src="/images/icons/intelio-icon-6.webp" alt="Market Intelligence" />
+        </div>
+        <h3 class="cre-capability-title">Market Intelligence</h3>
         <p class="cre-capability-description">
           Aggregated market data, news, and trends that surface automatically. Get alerts on market shifts, new opportunities, and competitive intelligence relevant to your portfolio.
         </p>
-        <div class="cre-capability-includes">
-          <p class="cre-includes-label">Includes:</p>
+        <div class="cre-includes-section">
+          <strong>INCLUDES:</strong>
           <ul class="cre-includes-list">
             <li>Market trend analysis</li>
             <li>News and alert aggregation</li>
@@ -147,14 +165,16 @@
 
   .cre-capabilities-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-top: 24px;
   }
 
   .cre-capability-card {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 32px;
     background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 4px;
     transition: all 0.4s ease;
   }
 
@@ -163,59 +183,45 @@
     border-color: rgba(0, 0, 0, 0.2);
   }
 
-  .cre-capability-card:hover .cre-capability-title {
-    color: #000000;
+  .cre-capability-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
   }
 
-  .cre-capability-card:hover .cre-capability-description {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .cre-capability-card:hover .cre-includes-label {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .cre-capability-card:hover .cre-includes-list li {
-    color: rgba(0, 0, 0, 0.6);
+  .cre-capability-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .cre-capability-title {
     font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: clamp(24px, 3vw, 32px);
-    font-weight: 400;
-    line-height: 1.2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
     color: #000000;
-    margin-bottom: 16px;
-    transition: color 0.4s ease;
+    margin: 0 0 12px 0;
   }
 
   .cre-capability-description {
-    font-size: 16px;
-    line-height: 1.7;
-    color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 24px;
-    transition: color 0.4s ease;
-  }
-
-  .cre-capability-includes {
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    transition: border-color 0.4s ease;
-  }
-
-  .cre-capability-card:hover .cre-capability-includes {
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-
-  .cre-includes-label {
     font-size: 14px;
-    font-weight: 600;
+    line-height: 1.6;
     color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 12px;
+    margin: 0 0 16px 0;
+  }
+
+  .cre-includes-section {
+    margin-top: 16px;
+  }
+
+  .cre-includes-section strong {
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: color 0.4s ease;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
   }
 
   .cre-includes-list {
@@ -225,28 +231,23 @@
   }
 
   .cre-includes-list li {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 8px;
-    padding-left: 20px;
+    padding: 4px 0 4px 16px;
     position: relative;
-    transition: color 0.4s ease;
+    line-height: 1.5;
   }
 
   .cre-includes-list li::before {
-    content: '·';
+    content: "•";
     position: absolute;
     left: 0;
     color: #0EA5E9;
-    font-size: 20px;
-    line-height: 1;
   }
 
   @media (max-width: 1024px) {
     .cre-capabilities-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -255,8 +256,20 @@
       padding: clamp(20px, 3vw, 40px) 24px;
     }
 
-    .cre-capability-card {
-      padding: 24px;
+    .cre-capabilities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cre-capability-card h3 {
+      font-size: 15px;
+    }
+
+    .cre-capability-card p {
+      font-size: 13px;
+    }
+
+    .cre-includes-list li {
+      font-size: 12px;
     }
   }
 </style>
