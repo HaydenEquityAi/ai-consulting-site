@@ -80,26 +80,26 @@ export default function Homepage() {
               { 
                 title: "Custom AI Development", 
                 desc: "Purpose-built AI systems engineered for your specific workflows and competitive advantage.",
-                image: "/images/capability-ai-development.jpg",
+                video: "/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4",
                 link: "/custom-ai-development"
               },
               { 
                 title: "System Integration", 
                 desc: "Connect disparate systems into a unified platform that operates as one cohesive infrastructure.",
-                image: "/images/capability-integration.jpg",
+                video: "/logos/Abstract_Binary_Code_Visualization.mp4",
                 link: "/ai-integration-automation/system-integration"
               },
               { 
                 title: "Workflow Automation", 
                 desc: "Intelligent automation that removes friction from your operations and accelerates decision-making.",
-                image: "/images/capability-automation.jpg",
+                video: "/videos/system-integration-hero.mp4",
                 link: "/ai-integration-automation/workflow-automation"
               },
               { 
                 title: "Enterprise Architecture", 
                 desc: "Strategic system design that scales with your business and evolves with your needs.",
-                image: "/images/capability-enterprise.jpg",
-                link: "/custom-ai-development/enterprise-architecture"
+                video: "/logos/Enterprise_Technology_Hero_Section_Video.mp4",
+                link: "/custom-ai-development/custom-enterprise-builds"
               }
             ].map((capability, idx) => (
               <a 
@@ -107,13 +107,16 @@ export default function Homepage() {
                 href={capability.link}
                 className="relative h-80 rounded-lg overflow-hidden group cursor-pointer transition-all hover:scale-105"
               >
-                {/* Background Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-110"
-                  style={{
-                    backgroundImage: `url('${capability.image}')`,
-                  }}
-                />
+                {/* Background Video */}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
+                >
+                  <source src={capability.video} type="video/mp4" />
+                </video>
                 
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all" />
