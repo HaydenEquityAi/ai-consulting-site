@@ -121,7 +121,7 @@
   .cre-challenge-list li {
     position: relative;
     padding-left: 32px;
-    font-size: 16px;
+    font-size: 17px; /* Increased from 16px for better readability */
     line-height: 1.7;
     color: rgba(0, 0, 0, 0.7);
   }
@@ -137,6 +137,7 @@
   }
 
   .cre-challenge-list li strong {
+    font-size: 17px; /* Match parent font size */
     color: #000000;
     font-weight: 600;
   }
@@ -179,6 +180,14 @@
       grid-template-columns: 1fr;
     }
 
+    .cre-challenge-list li {
+      font-size: 16px; /* Slightly smaller on tablet */
+    }
+
+    .cre-challenge-list li strong {
+      font-size: 16px; /* Match tablet size */
+    }
+
     .cre-stat-cards {
       grid-template-columns: 1fr;
     }
@@ -187,6 +196,14 @@
   @media (max-width: 768px) {
     .cre-challenge-section {
       padding: clamp(20px, 3vw, 40px) 24px;
+    }
+
+    .cre-challenge-list li {
+      font-size: 15px; /* Original size on mobile for space efficiency */
+    }
+
+    .cre-challenge-list li strong {
+      font-size: 15px; /* Match mobile size */
     }
 
     .cre-highlight-box {
