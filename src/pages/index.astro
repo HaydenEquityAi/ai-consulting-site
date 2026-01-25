@@ -51,6 +51,21 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </section>
 
+<!-- INTELLIGENCE ARCHITECTS CARD SECTION -->
+<section class="intelligence-architects-section">
+  <div class="intelligence-architects-container">
+    <div class="intelligence-architects-card">
+      <span class="intelligence-architects-overline">INTELLIGENCE ARCHITECTS</span>
+      <h2 class="intelligence-architects-headline">
+        Custom AI development and intelligent automation for modern businesses.
+      </h2>
+      <p class="intelligence-architects-body">
+        Intelio architects, builds, and operates the custom software and AI systems that create sustainable leverage. We build purpose-built platforms from the ground up, architect intelligent automation across your operations, integrate disparate systems with measurable leverage in mind, and maintain the infrastructure we create. The result is software so essential to how you work that it becomes your competitive moat.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- OUR APPROACH SECTION -->
 <section id="our-approach" class="approach-section">
   <div class="approach-container">
@@ -565,6 +580,88 @@ import Layout from "../layouts/Layout.astro";
     margin-right: -50vw;
     /* Full-width background that extends edge-to-edge */
     /* Inner content remains constrained by Tailwind max-w-7xl class */
+  }
+
+  /* INTELLIGENCE ARCHITECTS CARD SECTION */
+  .intelligence-architects-section {
+    background: #0A0E1A;
+    padding: 100px 24px;
+    width: 100%;
+  }
+
+  .intelligence-architects-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .intelligence-architects-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .intelligence-architects-overline {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #0EA5E9;
+    margin-bottom: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .intelligence-architects-headline {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #000000;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+  }
+
+  .intelligence-architects-body {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .intelligence-architects-section {
+      padding: 80px 24px;
+    }
+    
+    .intelligence-architects-card {
+      padding: 48px;
+    }
+    
+    .intelligence-architects-headline {
+      font-size: 44px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .intelligence-architects-section {
+      padding: 60px 24px;
+    }
+    
+    .intelligence-architects-card {
+      padding: 36px;
+    }
+    
+    .intelligence-architects-headline {
+      font-size: 32px;
+    }
+    
+    .intelligence-architects-body {
+      font-size: 15px;
+    }
   }
 
   /* OUR APPROACH SECTION */
