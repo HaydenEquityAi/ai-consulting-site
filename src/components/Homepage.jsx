@@ -170,7 +170,7 @@ export default function Homepage() {
                 name: "Construction",
                 abbr: "CONST",
                 items: ["Project management automation", "Field operations tracking", "Schedule optimization"],
-                image: "/images/industry-construction.jpg",
+                image: "/logos/intelio-construction-image.webp",
                 link: "/industries/construction"
               },
               { 
