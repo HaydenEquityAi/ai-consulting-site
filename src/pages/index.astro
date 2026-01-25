@@ -51,10 +51,10 @@ import Layout from "../layouts/Layout.astro";
   </div>
 </section>
 
-<!-- INTELLIGENCE ARCHITECTS CARD SECTION -->
+<!-- INTELLIGENCE ARCHITECTS SECTION -->
 <section class="intelligence-architects-section">
   <div class="intelligence-architects-container">
-    <div class="intelligence-architects-card">
+    <div class="intelligence-architects-header">
       <span class="intelligence-architects-overline">INTELLIGENCE ARCHITECTS</span>
       <h2 class="intelligence-architects-headline">
         Custom AI development and intelligent automation for modern businesses.
@@ -582,23 +582,20 @@ import Layout from "../layouts/Layout.astro";
     /* Inner content remains constrained by Tailwind max-w-7xl class */
   }
 
-  /* INTELLIGENCE ARCHITECTS CARD SECTION */
+  /* INTELLIGENCE ARCHITECTS SECTION */
   .intelligence-architects-section {
-    background: #0A0E1A;
+    background: #000000;
     padding: 100px 24px;
     width: 100%;
   }
 
   .intelligence-architects-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
-  .intelligence-architects-card {
-    background: #FFFFFF;
-    border-radius: 12px;
-    padding: 60px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  .intelligence-architects-header {
+    text-align: center;
   }
 
   .intelligence-architects-overline {
@@ -607,27 +604,28 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #0EA5E9;
-    margin-bottom: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   .intelligence-architects-headline {
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(32px, 5vw, 48px);
     font-weight: 600;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: #000000;
+    color: #FFFFFF;
     line-height: 1.1;
-    margin: 0 0 24px 0;
+    margin: 0 auto 48px auto;
+    max-width: 900px;
   }
 
   .intelligence-architects-body {
     font-size: 16px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
-    letter-spacing: 0.3px;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 800px;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
@@ -637,22 +635,14 @@ import Layout from "../layouts/Layout.astro";
       padding: 80px 24px;
     }
     
-    .intelligence-architects-card {
-      padding: 48px;
-    }
-    
     .intelligence-architects-headline {
-      font-size: 44px;
+      font-size: 42px;
     }
   }
 
   @media (max-width: 600px) {
     .intelligence-architects-section {
       padding: 60px 24px;
-    }
-    
-    .intelligence-architects-card {
-      padding: 36px;
     }
     
     .intelligence-architects-headline {
