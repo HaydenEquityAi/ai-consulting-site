@@ -381,7 +381,12 @@ export default function Homepage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Case Study 1 */}
             <a href="/case-studies" className="border border-white/10 rounded-lg overflow-hidden hover:border-cyan-500/50 transition-colors bg-white/5">
-              <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20" />
+              <div 
+                className="h-48 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/logos/intelio-real-estate-1.webp')`,
+                }}
+              />
               <div className="p-8">
                 <span className="text-xs font-semibold tracking-widest text-cyan-400 uppercase">CRE FIRM</span>
                 <h3 className="text-xl font-medium text-white mb-3 mt-2">
