@@ -10,10 +10,10 @@ export default function Homepage() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover"
             src="/logos/Cinematic_Liquid_Metal_Wave_Animation.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         {/* Content */}
