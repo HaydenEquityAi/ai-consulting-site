@@ -98,7 +98,7 @@ export default function Homepage() {
               { 
                 title: "Enterprise Architecture", 
                 desc: "Strategic system design that scales with your business and evolves with your needs.",
-                video: "/logos/Enterprise_Technology_Hero_Section_Video.mp4",
+                video: "/logos/Cinematic_Cyan_Light_Wave_Video_Generation (1).mp4",
                 link: "/custom-ai-development/custom-enterprise-builds"
               }
             ].map((capability, idx) => (
