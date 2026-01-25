@@ -4,7 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Figtree', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'Figtree', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+        },
+      },
+      opacity: {
+        2: '0.02',
+        5: '0.05',
       },
     },
   },

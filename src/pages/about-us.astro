@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/AboutUs.jsx";
+
+const pageTitle = "About Us | Intelio - Intelligence Architects";
+const pageDescription = "Built by operators, for operators. We architect the systems that become your competitive moat. Real infrastructure that creates lasting advantage.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <AboutUs client:load />
+</Layout>
+
