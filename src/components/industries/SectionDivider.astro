@@ -1,8 +1,15 @@
 ---
 // Reusable section divider component
+// Supports white-to-black and black-to-black transitions
+
+interface Props {
+  variant?: 'default' | 'white-to-black';
+}
+
+const { variant = 'default' } = Astro.props;
 ---
 
-<div class="section-divider"></div>
+<div class={`section-divider ${variant === 'white-to-black' ? 'white-to-black' : ''}`}></div>
 
 <style>
   .section-divider {
@@ -12,9 +19,19 @@
     width: 100%;
   }
 
+  /* Divider after white section (intro) - visible dark line */
+  .section-divider.white-to-black {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+
   @media (max-width: 768px) {
     .section-divider {
       margin: 80px 0;
+    }
+
+    .section-divider.white-to-black {
+      margin: 0;
     }
   }
 </style>

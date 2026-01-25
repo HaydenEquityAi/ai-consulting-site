@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import CREHero from "../../components/industries/CREHero.astro";
+import IntroSection from "../../components/industries/IntroSection.astro";
 import CREChallenge from "../../components/industries/CREChallenge.astro";
 import CREApproach from "../../components/industries/CREApproach.astro";
 import CRECapabilities from "../../components/industries/CRECapabilities.astro";
@@ -17,7 +18,13 @@ const pageDescription = "AI-powered systems for commercial real estate deal sour
 <Layout title={pageTitle} description={pageDescription}>
   <main class="cre-industry-page">
     <CREHero />
-    <SectionDivider />
+    <IntroSection 
+      headline="Speed is competitive advantage in commercial real estate"
+      copy="Commercial real estate is a game of velocity. The fastest firms source more deals, underwrite faster, and close more transactions. But velocity alone isn't enough—you still need rigor, accuracy, and investor confidence.
+
+Most CRE firms face a painful tradeoff: move fast and risk quality, or maintain rigor and lose deals. Intelio eliminates this choice by building purpose-built systems that let you move at market speed without sacrificing accuracy or operational control."
+    />
+    <SectionDivider variant="white-to-black" />
     <CREChallenge />
     <SectionDivider />
     <CREApproach />
