@@ -1,0 +1,128 @@
+---
+// Final CTA section for CRE industry page
+---
+
+<section id="cta" class="cre-cta-section">
+  <div class="cre-cta-container">
+    <h2 class="cre-cta-headline">
+      Ready to move faster?
+    </h2>
+    <p class="cre-cta-description">
+      CRE is a game of speed and judgment. The firms that win are the ones that can evaluate deals faster, respond to opportunities quicker, and make decisions with better information. Let's build the systems that give you that advantage.
+    </p>
+    <div class="cre-cta-buttons">
+      <a href="/contact" class="cre-cta-button-primary">Schedule a Demo</a>
+      <a href="/resources" class="cre-cta-button-secondary">Download Platform Overview</a>
+    </div>
+    <p class="cre-cta-email">
+      Or email us at <a href="mailto:hello@intelio.com" class="cre-email-link">hello@intelio.com</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .cre-cta-section {
+    background: #000000;
+    padding: clamp(80px, 10vw, 120px) 24px;
+    text-align: center;
+  }
+
+  .cre-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cre-cta-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  .cre-cta-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+  }
+
+  .cre-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .cre-cta-button-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cre-cta-button-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+
+  .cre-cta-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cre-cta-button-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .cre-cta-email {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+
+  .cre-email-link {
+    color: #0EA5E9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .cre-email-link:hover {
+    color: #06b6d4;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .cre-cta-section {
+      padding: 60px 24px;
+    }
+
+    .cre-cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .cre-cta-button-primary,
+    .cre-cta-button-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+

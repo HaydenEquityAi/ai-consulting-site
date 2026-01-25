@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CREHero from "../../components/industries/CREHero.astro";
+import CREChallenge from "../../components/industries/CREChallenge.astro";
+import CREApproach from "../../components/industries/CREApproach.astro";
+import CRECapabilities from "../../components/industries/CRECapabilities.astro";
+import CREEngagementModels from "../../components/industries/CREEngagementModels.astro";
+import CRECaseStudies from "../../components/industries/CRECaseStudies.astro";
+import CRECta from "../../components/industries/CRECta.astro";
+import SectionDivider from "../../components/industries/SectionDivider.astro";
+import PageNavDots from "../../components/industries/PageNavDots.astro";
+
+const pageTitle = "Commercial Real Estate Software | Intelio";
+const pageDescription = "AI-powered systems for commercial real estate deal sourcing, underwriting automation, and portfolio management. Purpose-built for CRE operations.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="cre-industry-page">
+    <CREHero />
+    <SectionDivider />
+    <CREChallenge />
+    <SectionDivider />
+    <CREApproach />
+    <SectionDivider />
+    <CRECapabilities />
+    <SectionDivider />
+    <CREEngagementModels />
+    <SectionDivider />
+    <CRECaseStudies />
+    <SectionDivider />
+    <CRECta />
+    <PageNavDots />
+  </main>
+</Layout>
+
+<style>
+  .cre-industry-page {
+    background: #000000;
+    color: #FFFFFF;
+  }
+</style>
+

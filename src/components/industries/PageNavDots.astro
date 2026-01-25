@@ -1,0 +1,122 @@
+---
+// Fixed left-side navigation dots for page sections
+---
+
+<nav class="page-nav-dots" id="page-nav-dots">
+  <a href="#hero" class="nav-dot active" data-section="hero" aria-label="Go to hero section">
+    <span class="dot"></span>
+  </a>
+  <a href="#challenge" class="nav-dot" data-section="challenge" aria-label="Go to challenge section">
+    <span class="dot"></span>
+  </a>
+  <a href="#approach" class="nav-dot" data-section="approach" aria-label="Go to approach section">
+    <span class="dot"></span>
+  </a>
+  <a href="#capabilities" class="nav-dot" data-section="capabilities" aria-label="Go to capabilities section">
+    <span class="dot"></span>
+  </a>
+  <a href="#engagement" class="nav-dot" data-section="engagement" aria-label="Go to engagement models section">
+    <span class="dot"></span>
+  </a>
+  <a href="#case-studies" class="nav-dot" data-section="case-studies" aria-label="Go to case studies section">
+    <span class="dot"></span>
+  </a>
+  <a href="#cta" class="nav-dot" data-section="cta" aria-label="Go to CTA section">
+    <span class="dot"></span>
+  </a>
+</nav>
+
+<style>
+  .page-nav-dots {
+    position: fixed;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-dot .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-dot:hover .dot,
+  .nav-dot.active .dot {
+    background: #0EA5E9;
+    border-color: #0EA5E9;
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 768px) {
+    .page-nav-dots {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Update active dot based on scroll position
+  document.addEventListener('DOMContentLoaded', () => {
+    const sectionIds = ['hero', 'challenge', 'approach', 'capabilities', 'engagement', 'case-studies', 'cta'];
+    const navDots = document.querySelectorAll('.nav-dot');
+    
+    const updateActiveDot = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 3;
+      let activeSection = '';
+      
+      sectionIds.forEach((sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            activeSection = sectionId;
+          }
+        }
+      });
+      
+      if (activeSection) {
+        navDots.forEach(dot => {
+          dot.classList.remove('active');
+          if (dot.getAttribute('data-section') === activeSection) {
+            dot.classList.add('active');
+          }
+        });
+      }
+    };
+    
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+    
+    // Smooth scroll on click
+    navDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = dot.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>
+

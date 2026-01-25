@@ -1,0 +1,218 @@
+---
+// Hero section for Commercial Real Estate industry page
+---
+
+<section id="hero" class="cre-hero-section">
+  <!-- Top Navigation -->
+  <div class="cre-hero-nav">
+    <a href="/" class="cre-nav-button">← Back</a>
+    <a href="/case-studies" class="cre-nav-button">Case Studies</a>
+    <a href="/contact" class="cre-nav-button">Work With Us</a>
+  </div>
+
+  <div class="cre-hero-container">
+    <span class="cre-hero-label">COMMERCIAL REAL ESTATE</span>
+    <h1 class="cre-hero-headline">
+      Systems that move faster than your competition
+    </h1>
+    <p class="cre-hero-subheadline">
+      Deal sourcing, underwriting, and portfolio management at the speed you need. Built specifically for how CRE firms operate.
+    </p>
+    <div class="cre-hero-ctas">
+      <a href="/contact" class="cre-cta-primary">Schedule a Demo</a>
+      <a href="#capabilities" class="cre-cta-secondary">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="cre-scroll-indicator">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .cre-hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #000000;
+    padding: 120px 24px 80px 24px;
+    overflow: hidden;
+  }
+
+  .cre-hero-nav {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .cre-nav-button {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .cre-nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .cre-hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cre-hero-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+  }
+
+  .cre-hero-headline {
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+  }
+
+  .cre-hero-subheadline {
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+  }
+
+  .cre-hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cre-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cre-cta-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+
+  .cre-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cre-cta-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .cre-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(8px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cre-hero-section {
+      min-height: 80vh;
+      padding: 100px 24px 60px 24px;
+    }
+
+    .cre-hero-nav {
+      top: 16px;
+      right: 16px;
+      gap: 8px;
+    }
+
+    .cre-nav-button {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+
+    .cre-hero-ctas {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .cre-cta-primary,
+    .cre-cta-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Stop scroll indicator animation after first scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollIndicator = document.querySelector('.cre-scroll-indicator');
+    let hasScrolled = false;
+    
+    const handleScroll = () => {
+      if (!hasScrolled && window.scrollY > 50) {
+        hasScrolled = true;
+        if (scrollIndicator) {
+          scrollIndicator.style.animation = 'none';
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { once: false });
+  });
+</script>
+
