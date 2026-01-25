@@ -94,6 +94,13 @@
     
     <!-- Menu Panel -->
     <div class="mega-menu-panel">
+      <!-- Mobile Back Button -->
+      <button class="mega-menu-back-btn" id="capabilities-back-btn" aria-label="Back to menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span>Back</span>
+      </button>
       <div class="mega-menu-content">
         <h3 class="mega-menu-title">
           Capabilities
@@ -170,6 +177,13 @@
     
     <!-- Menu Panel -->
     <div class="mega-menu-panel">
+      <!-- Mobile Back Button -->
+      <button class="mega-menu-back-btn" id="industries-back-btn" aria-label="Back to menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span>Back</span>
+      </button>
       <div class="mega-menu-content">
         <h3 class="mega-menu-title">
           Industries
@@ -775,6 +789,46 @@
     overflow-y: auto;
   }
   
+  /* Mobile Back Button */
+  .mega-menu-back-btn {
+    display: none; /* Hidden on desktop by default */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 10;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s ease;
+  }
+  
+  .mega-menu-back-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  
+  .mega-menu-back-btn svg {
+    flex-shrink: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .mega-menu-back-btn {
+      display: flex; /* Show on mobile */
+    }
+    
+    .mega-menu-content {
+      padding-top: 16px; /* Reduce top padding since back button is there */
+    }
+  }
+  
   /* When sidebar is closed, adjust positioning */
   .navbar-sidebar:not(.open) ~ .capabilities-mega-menu {
     left: 0;
@@ -1049,11 +1103,21 @@
       gap: 40px;
     }
   }
+  
+  /* Mobile-specific: Mega menu should be full width and above sidebar */
+  @media (max-width: 768px) {
+    .capabilities-mega-menu,
+    .industries-mega-menu {
+      left: 0 !important;  /* Force full width on mobile */
+      z-index: 2001 !important;  /* Above sidebar */
+    }
+  }
 
   @media (max-width: 768px) {
     .capabilities-mega-menu,
     .industries-mega-menu {
-      left: 280px;  /* Match sidebar width on mobile */
+      left: 0;  /* Full width on mobile, appears on top of sidebar */
+      z-index: 2001;  /* Above sidebar (2000) */
     }
     
     .mega-menu-content {
@@ -1079,7 +1143,8 @@
   @media (max-width: 600px) {
     .capabilities-mega-menu,
     .industries-mega-menu {
-      left: 100%;  /* Full width on small mobile */
+      left: 0;  /* Full width on small mobile */
+      z-index: 2001;  /* Above sidebar */
     }
     
     .navbar-sidebar:not(.open) ~ .capabilities-mega-menu,
@@ -1153,17 +1218,37 @@
     const industriesMegaMenu = document.getElementById('industries-mega-menu');
     const industriesMegaMenuBackdrop = document.getElementById('industries-mega-menu-backdrop');
     
+    // Mobile back buttons
+    const capabilitiesBackBtn = document.getElementById('capabilities-back-btn');
+    const industriesBackBtn = document.getElementById('industries-back-btn');
+    
     // Update mega menu position based on sidebar state
     function updateMegaMenuPosition() {
       if (sidebar) {
+        const isMobile = window.innerWidth <= 768;
         const sidebarWidth = sidebar.offsetWidth;
-        const leftPosition = sidebar.classList.contains('open') ? sidebarWidth + 'px' : '0';
+        
+        // On mobile, mega menu should be full width (left: 0)
+        // On desktop, it should be positioned next to sidebar
+        const leftPosition = isMobile ? '0' : (sidebar.classList.contains('open') ? sidebarWidth + 'px' : '0');
         
         if (capabilitiesMegaMenu) {
           capabilitiesMegaMenu.style.left = leftPosition;
+          // On mobile, ensure it's above sidebar
+          if (isMobile) {
+            capabilitiesMegaMenu.style.zIndex = '2001';
+          } else {
+            capabilitiesMegaMenu.style.zIndex = '1999';
+          }
         }
         if (industriesMegaMenu) {
           industriesMegaMenu.style.left = leftPosition;
+          // On mobile, ensure it's above sidebar
+          if (isMobile) {
+            industriesMegaMenu.style.zIndex = '2001';
+          } else {
+            industriesMegaMenu.style.zIndex = '1999';
+          }
         }
       }
     }
@@ -1185,11 +1270,16 @@
           document.body.style.overflow = 'hidden';
         }
         
+        // Update position before opening
         updateMegaMenuPosition();
-        menu.classList.add('open');
-        if (toggle) {
-          toggle.classList.add('active');
-        }
+        
+        // Small delay to ensure position is updated
+        setTimeout(() => {
+          menu.classList.add('open');
+          if (toggle) {
+            toggle.classList.add('active');
+          }
+        }, 10);
       }
     }
     
@@ -1318,6 +1408,19 @@
         if (sidebar && sidebar.classList.contains('open')) {
           closeSidebar();
         }
+      });
+    }
+    
+    // Mobile back button handlers
+    if (capabilitiesBackBtn) {
+      capabilitiesBackBtn.addEventListener('click', () => {
+        closeMegaMenu(capabilitiesMegaMenu, capabilitiesToggle);
+      });
+    }
+    
+    if (industriesBackBtn) {
+      industriesBackBtn.addEventListener('click', () => {
+        closeMegaMenu(industriesMegaMenu, industriesToggle);
       });
     }
     
