@@ -1,0 +1,141 @@
+---
+// Why Intelio section - McKinsey-style image + copy layout
+// White background with image on left, content on right
+
+interface Props {
+  headline: string;
+  statText: string;
+  copyText: string;
+  imageUrl: string;
+  imageAlt: string;
+}
+
+const {
+  headline,
+  statText,
+  copyText,
+  imageUrl,
+  imageAlt,
+} = Astro.props;
+---
+
+<section class="why-intelio-section">
+  <div class="why-intelio-container">
+    <div class="why-intelio-image">
+      <img src={imageUrl} alt={imageAlt} />
+    </div>
+    
+    <div class="why-intelio-content">
+      <h2 class="why-intelio-headline">{headline}</h2>
+      <p class="why-intelio-stat" set:html={statText}></p>
+      <p class="why-intelio-copy">{copyText}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-intelio-section {
+    background: #ffffff;
+    color: #000000;
+    padding: clamp(100px, 12vw, 160px) 24px;
+  }
+
+  .why-intelio-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(60px, 8vw, 100px);
+    align-items: center;
+  }
+
+  .why-intelio-image {
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-intelio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .why-intelio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .why-intelio-headline {
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+  }
+
+  .why-intelio-stat {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .why-intelio-stat strong {
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .why-intelio-copy {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .why-intelio-container {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .why-intelio-image {
+      order: -1;
+      height: 350px;
+    }
+
+    .why-intelio-headline {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-intelio-section {
+      padding: clamp(80px, 10vw, 120px) 24px;
+    }
+
+    .why-intelio-container {
+      gap: 32px;
+    }
+
+    .why-intelio-image {
+      height: 280px;
+    }
+
+    .why-intelio-headline {
+      font-size: clamp(24px, 3vw, 32px);
+    }
+
+    .why-intelio-stat,
+    .why-intelio-copy {
+      font-size: 15px;
+    }
+  }
+</style>
+

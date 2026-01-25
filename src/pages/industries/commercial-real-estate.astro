@@ -5,6 +5,7 @@ import IntroSection from "../../components/industries/IntroSection.astro";
 import CREChallenge from "../../components/industries/CREChallenge.astro";
 import CREApproach from "../../components/industries/CREApproach.astro";
 import CRECapabilities from "../../components/industries/CRECapabilities.astro";
+import WhyInterlioSection from "../../components/industries/WhyInterlioSection.astro";
 import CREEngagementModels from "../../components/industries/CREEngagementModels.astro";
 import CRECaseStudies from "../../components/industries/CRECaseStudies.astro";
 import CRECta from "../../components/industries/CRECta.astro";
@@ -31,10 +32,18 @@ const pageDescription = "AI-powered systems for commercial real estate deal sour
     <CREApproach />
     <SectionDivider />
     <CRECapabilities />
+    <SectionDivider variant="white-to-black" />
+    <WhyInterlioSection
+      headline="Why Intelio for Commercial Real Estate"
+      statText="We've helped <strong>50+ commercial real estate firms</strong> build systems that eliminate operational friction and accelerate deal velocity."
+      copyText="Our systems are purpose-built specifically for how CRE teams operate—from sourcing through investor reporting. We don't force-fit generic software into your workflow. Every feature is engineered to eliminate friction, automate drudgery, and create competitive advantage."
+      imageUrl="/images/industries/cre/why-intelio.jpg"
+      imageAlt="Why Intelio for Commercial Real Estate"
+    />
+    <SectionDivider variant="white-to-black" />
+    <CRECaseStudies />
     <SectionDivider />
     <CREEngagementModels />
-    <SectionDivider />
-    <CRECaseStudies />
     <SectionDivider />
     <CRECta />
     <PageNavDots />
